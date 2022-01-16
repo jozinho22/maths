@@ -1,7 +1,7 @@
 .RelativeContainer {
     position: relative;
     /* refers to the Header */
-    margin-top: 80px;
+    padding-top: 80px;
     /* refers to the Footer */
     padding-bottom: 40px; 
     min-height: 100vh; 

@@ -24,10 +24,11 @@ function App() {
                   <div className={theme}>
                       <BrowserRouter>
                           <Header />
-                              <Routes>
+                              {/* <Routes>
                                   <Route exact path="/" component={Home} />
                                   <Route path="/error" component={Error} />
-                              </Routes>
+                              </Routes> */}
+                              <Home />
                           <Footer />
                       </BrowserRouter>
                   </div>
