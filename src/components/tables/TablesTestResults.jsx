@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 
 const TablesTestResults = ( ) => {
 
+    console.log('TablesTestResults')
+
     return (
         
         <Container className="RelativeContainer">

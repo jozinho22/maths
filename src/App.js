@@ -3,7 +3,6 @@ import './App.css';
 
 import Header from './components/general-content/Header';
 import Home from './components/home/Home';
-import TablesTestHome from './components/tables/TablesTestHome';
 import TablesTest from './components/tables/TablesTest';
 import TablesTestResults from './components/tables/TablesTestResults.jsx';
 
@@ -30,7 +29,6 @@ function App() {
                           <Header />
                               <Routes>
                                   <Route exact path="/" element={<Home />} />
-                                  <Route path="/test-home" element={<TablesTestHome />} />
                                   <Route path="/test" element={<TablesTest />} />
                                   <Route path="/test-results" element={<TablesTestResults />} />
                                   <Route path="/error" element={<Error />} />

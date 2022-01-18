@@ -32,7 +32,6 @@ const TablesTestQuestionDisplay =
         // reinit sinon conserve la valeur précédente
         setCheckedAnswerId(0); */
         
-        console.log('doNext')
         next();
     }
 

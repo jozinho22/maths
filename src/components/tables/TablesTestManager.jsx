@@ -1,30 +1,35 @@
 import React from 'react';
 import { Navigate } from 'react-router-dom';
 
+import TablesTestHome from './TablesTestHome';
 import '../general-content/Basic.css';
 
-const TablesTestManager = ({count, questions, user,
+import CustomLogger from '../general-content/CustomLogger';
+
+const TablesTestManager = ({count, questions, setQuestions, user, gameStarted, setGameStarted,
                             children}) => {
-                
-    console.log('count')
-    console.log(count)
-    console.log('questions.length')
-    console.log(questions.length)
+           
+    CustomLogger('gameStarted', gameStarted, 'TablesTestManager')
+    CustomLogger('count', count, 'TablesTestManager')
 
     return (
 
-        count < questions.length ? 
+        !gameStarted ?
 
-                children : 
+            <TablesTestHome setGameStarted={setGameStarted} setQuestions={setQuestions} /> :
 
-                    <Navigate
-                        to={{
-                        pathname: "/test-results",
-                        questions: questions,
-                        user: user
-                    }}
-                />           
-            );
+                count < questions.length ? 
+
+                        children : 
+
+                            <Navigate
+                                to={{
+                                pathname: "/test-results",
+                                questions: questions,
+                                user: user
+                            }}
+                        />           
+                    );
 }
  
 export default TablesTestManager;
