@@ -8,7 +8,7 @@ const Error = ( { message } ) => {
                     <p>Erreur...</p>
                     <br></br>
                     <Link 
-                        to="/home" >
+                        to="/" >
                         <Button className="BasicButton ReturnButton">
                             Retour au lobby
                         </Button>

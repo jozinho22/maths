@@ -33,6 +33,7 @@
 	background-color: var(--button-color);
     border-color: var(--button-color);
     color: var(--button-text-color);
+    margin-top: 35px;
 }
 
 .BasicButton:hover {
