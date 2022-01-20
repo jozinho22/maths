@@ -10,6 +10,24 @@
     margin-top: 20px;
 }
 
+@media (min-width : 768px) {
+    .QuestionContainer {
+        width: 30%;
+    }
+    .AnswersContainer {
+        width: 30%;
+    }
+}
+
+@media (min-width : 540px) {
+    .QuestionContainer {
+        width: 50%;
+    }
+    .AnswersInput {
+        width: 80%;
+    }
+}
+
 .QuestionContainer code {
     color: var(--question-code-color);
 }
@@ -26,5 +44,5 @@
 }
 
 .AnswersInput {
-    width: 60%;
+    width: 30%;
 }

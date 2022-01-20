@@ -2,15 +2,14 @@ import React from 'react';
 import { Navigate } from 'react-router-dom';
 
 import TablesTestHome from './TablesTestHome';
+import TablesTestResults from './TablesTestResults';
+
 import '../general-content/Basic.css';
 
 import CustomLogger from '../general-content/CustomLogger';
 
 const TablesTestManager = ({count, questions, setQuestions, user, gameStarted, setGameStarted,
                             children}) => {
-           
-    CustomLogger('gameStarted', gameStarted, 'TablesTestManager')
-    CustomLogger('count', count, 'TablesTestManager')
 
     return (
 
@@ -22,12 +21,9 @@ const TablesTestManager = ({count, questions, setQuestions, user, gameStarted, s
 
                         children : 
 
-                            <Navigate
-                                to={{
-                                pathname: "/test-results",
-                                questions: questions,
-                                user: user
-                            }}
+                            <TablesTestResults
+                                questions= {questions}
+                                user = {user}
                         />           
                     );
 }

@@ -3,6 +3,7 @@ import { Form, Container, Button, Table, Row, Col, Alert} from 'react-bootstrap'
 import Timer from './Timer';
 import '../general-content/Basic.css';
 import './TablesTestQuestionDisplay.css';
+import CustomLogger from '../general-content/CustomLogger';
 
 const TablesTestQuestionDisplay = 
         ({ questions, count, next, user, setUser, maxTime}) => {
@@ -16,35 +17,29 @@ const TablesTestQuestionDisplay =
     const [showRedAlert, setShowRedAlert] = React.useState(false);
 
     const doNext = () => {
-/*         let indexCheckedAnswer = questions[count].answers.findIndex(answer => answer.id === checkedAnswerId);
-        let checkedAnswer = questions[count].answers[indexCheckedAnswer];
 
-        if(checkedAnswer !== undefined) {
-            userSlice.checkedAnswers.push(checkedAnswer);
-            if(checkAnswerIsTrue(checkedAnswer.id)) {
+        let trueAnswer = questions[count].answer;
+
+        const userSlice = {...user};
+        var answer = {
+            input: inputText,
+            isTrue: false
+        }
+
+        if(answer.input !== undefined) {
+            if(answer.input == trueAnswer) {
                 userSlice.score += 1;
+                answer.isTrue = true;
             }
+            userSlice.answers.push(answer);
         } else {
-            userSlice.checkedAnswers.push(0);
+            userSlice.answers.push(0);
         }  
 
-        setUser(userSlice);
-        // reinit sinon conserve la valeur précédente
-        setCheckedAnswerId(0); */
-        
+        setUser(userSlice);        
         next();
     }
 
-    const handleCheck = (id) => {
-/*         setCheckedAnswerId(id);
- */    }
-
-    function checkAnswerIsTrue(id) {        
-/*         const answersSlice = [...questions[count].answers];
-        const index = answersSlice.findIndex(answer => answer.id === id);
-        return (answersSlice[index].isTrue); */
-    }
-    
     function setTimer(timeInSecondes) {
         if(timeInSecondes < 59) {
             setMinutes(0);
@@ -86,7 +81,7 @@ const TablesTestQuestionDisplay =
                         minutes={minutes}
                         setMinutes={setMinutes}
                         setEndTimer={setEndTimer} />
-                <Container className="QuestionContainer">    
+                <Container className="QuestionContainer" >    
                     <Row>
                         <Col>{questions[count].enounce}</Col>
                         <Col className="AnswersContainer">

@@ -1,13 +1,13 @@
 import React from 'react';
 import { MathJax, MathJaxContext } from "better-react-mathjax";
 
-const MathJaxDisplay = ({enounceModel}) => {
+const MathJaxDisplay = ({toShow}) => {
 
     return (
         
         <MathJaxContext>
-            <MathJax>
-                {enounceModel}
+            <MathJax dynamic hideUntilTypeset={ "every" } >
+                {toShow}
             </MathJax>
         </MathJaxContext>
     );

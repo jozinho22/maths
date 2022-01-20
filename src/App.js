@@ -30,10 +30,8 @@ function App() {
                               <Routes>
                                   <Route exact path="/" element={<Home />} />
                                   <Route path="/test" element={<TablesTest />} />
-                                  <Route path="/test-results" element={<TablesTestResults />} />
                                   <Route path="/error" element={<Error />} />
                               </Routes> 
-                              <Home />
                           <Footer />
                       </BrowserRouter>
                   </div>

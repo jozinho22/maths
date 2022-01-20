@@ -24,15 +24,11 @@ const TablesTestHome = ({setGameStarted, setQuestions}) => {
             console.log(typeof b)
             var enounceModel = "\\({" + a + "}\\times{"+ b + "} = \\)"; 
 
-/*             var enounceModel = "\\({" + randomInt1 + "}\\times{"+ randomInt2 + "} = \\)";
- */
-/*             var enounceModel = "\\({1}\\times{2} = \\)";
- */
-            console.log(enounceModel)
-
             var question = {
+                id: i,
+                enounceModel: enounceModel,
                 enounce: <MathJaxDisplay 
-                            enounceModel={enounceModel}/>
+                            toShow={enounceModel}/>
                            ,
                 answer: randomInt1*randomInt2
             }
@@ -41,8 +37,6 @@ const TablesTestHome = ({setGameStarted, setQuestions}) => {
             
         }
 
-
-        CustomLogger("randomQuestions", randomQuestions, 'TableTestHome')
         setQuestions(randomQuestions);
 
         return randomQuestions;

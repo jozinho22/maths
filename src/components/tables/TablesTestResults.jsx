@@ -1,14 +1,35 @@
-import { Container, Button } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Container, Button, Table } from 'react-bootstrap';
 
-const TablesTestResults = ( ) => {
+import TablesTestResultsList from './TablesTestResultsList';
 
-    console.log('TablesTestResults')
+import './TablesTestResults.css';
+
+const TablesTestResults = ( {questions, user}) => {
 
     return (
         
         <Container className="RelativeContainer">
-            <div className="ChocoTitle">Fini</div>
+            <div className="ChocoTitle">Résultats</div>
+
+            <Container className="ResultsContainer">
+
+                <Table className="TablesTestResults table-borderless">
+                    <tbody>
+                        {questions.map(question => (
+                            <TablesTestResultsList 
+                                key={question.id}
+                                question={question}
+                                answer={user.answers[question.id]}
+                            />
+                        ))}
+                    </tbody>
+                </Table>
+
+            </Container> 
+
+            <div className="ChocoTitle">Score : {user.score}/{questions.length}</div>
+ 
+
         </Container>  
     );
 }

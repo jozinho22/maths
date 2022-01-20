@@ -17,7 +17,7 @@ const TablesTest = () => {
         {
             name: '',
             score: 0,
-            checkedAnswers: []
+            answers: []
         }
     );
 

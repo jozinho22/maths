@@ -1,5 +1,7 @@
 import React from 'react';
 import { Navbar, Nav, DropdownButton, Dropdown, NavDropdown } from 'react-bootstrap';
+import { BootstrapSwitchButton } from 'bootstrap-switch-button-react';
+
 import { Link } from 'react-router-dom';
 import { Container } from 'react-bootstrap';
 
@@ -25,12 +27,13 @@ const Header = () => {
                 className="CustomDropdownButton" >
                 <Dropdown.Item className="Brazil" eventKey="Brazil" as="button" >Brazil</Dropdown.Item>
                 <Dropdown.Item className="Darcula" eventKey="Darcula" as="button" >Darcula</Dropdown.Item>
-                <Dropdown.Item className="Forest" eventKey="Forest" as="button" >Forest</Dropdown.Item>
-                <Dropdown.Item className="Shades" eventKey="Shades" as="button" >Shades</Dropdown.Item>
-                <Dropdown.Item className="Purple" eventKey="Purple" as="button" >Purple</Dropdown.Item>
-                <Dropdown.Item className="Bordeaux" eventKey="Bordeaux" as="button" >Bordeaux</Dropdown.Item>
-                <Dropdown.Item className="Africa" eventKey="Africa" as="button" >Africa</Dropdown.Item>
             </DropdownButton>
+         /*    <BootstrapSwitchButton 
+              checked={true} 
+              onstyle="outline-dark" 
+              offstyle="outline-light" 
+              style="border"/> */
+
         );
 
     }
