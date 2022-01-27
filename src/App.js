@@ -4,7 +4,7 @@ import './App.css';
 import Header from './components/general-content/Header';
 import Home from './components/home/Home';
 import TablesTest from './components/tables/TablesTest';
-import TablesTestResults from './components/tables/TablesTestResults.jsx';
+import TestPdf from './components/test-pdf/TestPdf.jsx';
 
 import Footer from './components/general-content/Footer';
 import Error from  './components/general-content/Error';
@@ -30,6 +30,7 @@ function App() {
                               <Routes>
                                   <Route exact path="/" element={<Home />} />
                                   <Route path="/test" element={<TablesTest />} />
+                                  <Route path="/test-pdf" element={<TestPdf />} />
                                   <Route path="/error" element={<Error />} />
                               </Routes> 
                           <Footer />

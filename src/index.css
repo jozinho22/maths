@@ -1,8 +1,6 @@
 body { 
   position:absolute; 
   top:0; bottom:0; right:0; left:0; 
-  min-height: 100vh;
-
   --choco-font-family:'choco', Fallback, sans-serif;
 
   /* different themes */
