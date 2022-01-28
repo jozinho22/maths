@@ -6,28 +6,8 @@ const Home = () => {
 
     return (
         <Container className="RelativeContainer">
-            <div className="ChocoTitle">Test</div>
-            <div className="ChocoTitle">Test</div>
-            <div className="ChocoTitle">Test</div>
-            <div className="ChocoTitle">Test</div>
-            <div className="ChocoTitle">Test</div>
-            <div className="ChocoTitle">Test</div>
-            <div className="ChocoTitle">Test</div>
-            <div className="ChocoTitle">Test</div>
-            <div className="ChocoTitle">Test</div>
-            <div className="ChocoTitle">Test</div>
-            <div className="ChocoTitle">Test</div>
-            <div className="ChocoTitle">Test</div>
-            <div className="ChocoTitle">Test</div>
-            <div className="ChocoTitle">Test</div>
-            <div className="ChocoTitle">Test</div>
-            <div className="ChocoTitle">Test</div>
-            <div className="ChocoTitle">Test</div>
-            <div className="ChocoTitle">Test</div>
-            <div className="ChocoTitle">Test</div>
-            <div className="ChocoTitle">Test</div>
-            <div className="ChocoTitle">Test</div>
-            <div className="ChocoTitle">Test</div>
+            <br/>
+            <h1> Bienvenue sur le site des maths pour tous !</h1>
 
         </Container>     
     );
