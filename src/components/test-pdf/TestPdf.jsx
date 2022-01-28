@@ -1,20 +1,11 @@
 import { Container } from 'react-bootstrap';
-import { Document, Page } from 'react-pdf';
 import PDF from "react-pdf-js";
-
 
 import { useState } from 'react';
 
-import SinglePagePDFViewer from "./single-page";
-import AllPagesPDFViewer from "./all-pages";
-
 import nbOr from "./nbOr.pdf";
 
-import "./TestPdf.css";
-
-
 const TestPdf = () => {
-
 
     const PDFViewer = () => {
         const [page, setPage] = useState(1);
@@ -49,7 +40,7 @@ const TestPdf = () => {
           pagination = renderPagination();
         }
         return (
-          <div style={{ height: "150px" }}>
+          <div>
             Page: {page} {pagination}
             <br />
             <PDF

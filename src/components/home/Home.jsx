@@ -7,6 +7,28 @@ const Home = () => {
     return (
         <Container className="RelativeContainer">
             <div className="ChocoTitle">Test</div>
+            <div className="ChocoTitle">Test</div>
+            <div className="ChocoTitle">Test</div>
+            <div className="ChocoTitle">Test</div>
+            <div className="ChocoTitle">Test</div>
+            <div className="ChocoTitle">Test</div>
+            <div className="ChocoTitle">Test</div>
+            <div className="ChocoTitle">Test</div>
+            <div className="ChocoTitle">Test</div>
+            <div className="ChocoTitle">Test</div>
+            <div className="ChocoTitle">Test</div>
+            <div className="ChocoTitle">Test</div>
+            <div className="ChocoTitle">Test</div>
+            <div className="ChocoTitle">Test</div>
+            <div className="ChocoTitle">Test</div>
+            <div className="ChocoTitle">Test</div>
+            <div className="ChocoTitle">Test</div>
+            <div className="ChocoTitle">Test</div>
+            <div className="ChocoTitle">Test</div>
+            <div className="ChocoTitle">Test</div>
+            <div className="ChocoTitle">Test</div>
+            <div className="ChocoTitle">Test</div>
+
         </Container>     
     );
 
