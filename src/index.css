@@ -3,12 +3,13 @@ body {
   top:0; bottom:0; right:0; left:0; 
   --choco-font-family:'choco', Fallback, sans-serif;
 
-  /* different themes */
-
+  --brazil-navbar-color:  #2e3235;
   --brazil-back-color:  rgb(201, 193, 85);
   --brazil-front-color:  #516ece;
   --brazil-title-color: rgb(78, 139, 70);
   --brazil-check-color: rgb(64, 112, 58);
+  --brazil-wrong-color: rgb(199, 37, 37);
+  --brazil-question-color: rgb(216, 117, 36);
   --brazil-button-text-color: var(--brazil-back-color);
   --brazil-button-color: var(--brazil-title-color);
   --brazil-button-hover-color:var(--brazil-check-color);
@@ -18,18 +19,6 @@ body {
   --brazil-reponses-code-color: #2a418b;
   --brazil-links-color: var(--brazil-back-color);
 
-  --darcula-back-color:  #343a40;
-  --darcula-front-color: grey;
-  --darcula-title-color: rgb(98, 72, 141);
-  --darcula-check-color: green;
-  --darcula-button-text-color: var(--darcula-front-color);
-  --darcula-button-color: var(--darcula-title-color);
-  --darcula-button-hover-color:  rgb(86, 62, 124);
-  --darcula-button-2-color: #A0522D;
-  --darcula-button-2-hover-color: #854223;
-  --darcula-question-code-color: #69341b;
-  --darcula-reponses-code-color: #A0522D;
-  --darcula-links-color: var(--darcula-button-2-color);
 
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',

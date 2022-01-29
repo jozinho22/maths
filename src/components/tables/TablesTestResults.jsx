@@ -9,8 +9,9 @@ const TablesTestResults = ( {questions, user}) => {
     return (
         
         <Container className="RelativeContainer">
-            <div className="ChocoTitle">Résultats</div>
-
+            <br></br>
+            <h1 style={{textDecoration: "underline"}}>Résultats</h1>
+            <br></br>
             <Container className="ResultsContainer">
 
                 <Table className="TablesTestResults table-borderless">
@@ -27,7 +28,8 @@ const TablesTestResults = ( {questions, user}) => {
 
             </Container> 
 
-            <div className="ChocoTitle">Score : {user.score}/{questions.length}</div>
+            <br></br>
+            <h2>Score : {user.score}/{questions.length}</h2>
  
 
         </Container>  

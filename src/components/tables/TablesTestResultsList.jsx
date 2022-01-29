@@ -13,23 +13,43 @@ const TablesTestResultsList = ({ question, answer }) => {
     var index = model.indexOf(equalsChar);
 
     var enounceWithUserInput = model.slice(0, index + 2) + answer.input + model.slice(index + 2);
-
-    var resultToShow = <MathJaxDisplay 
+    var answerToShow = <MathJaxDisplay 
                                     toShow={enounceWithUserInput}/>;
+
+    var enounceWithGoodAnswer = model.slice(0, index + 2) + question.answer + model.slice(index + 2);
+    var goodAnswerToShow = <MathJaxDisplay 
+                                    toShow={enounceWithGoodAnswer}/>;
 
     return (
             <tr>
-                <td style = {{width: "50%"}}>
-                    {resultToShow}   
+                <td className="AnswersResults">
+                    {answerToShow}   
                 </td>
-                <td>
+
+                <td className="IconsResults">
                 {
                 answer.input == '' ?
                     <BsQuestionLg className="QuestionIcon"/> 
                 : 
                     answer.isTrue ? 
                             <GiCheckMark className="CheckIcon"/> 
-                                : <GiCrossMark className="WrongIcon" /> 
+                                :  <GiCrossMark className="WrongIcon" />
+                }
+                </td>
+                
+                <td>
+                {
+                answer.input == '' ?
+                    <div className="GoodAnswerToDisplay">
+                        {goodAnswerToShow}
+                    </div>
+                : 
+                    answer.isTrue ? 
+                            ""
+                                : 
+                                    <div className="GoodAnswerToDisplay">
+                                       {goodAnswerToShow}
+                                    </div>
                 }
                 </td>
             </tr>

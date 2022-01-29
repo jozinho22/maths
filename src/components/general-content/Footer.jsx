@@ -6,7 +6,7 @@ import './Footer.css';
 const Footer = () => {
   
   return (
-    <Navbar className="CustomFooter" fixed="bottom" collapseOnSelect expand="lg" bg="dark" variant="dark">            
+    <Navbar className="CustomFooter" fixed="bottom" collapseOnSelect expand="lg">            
             <small className="CopyRight" > 
                 Copyright &copy; Jozinho {(new Date().getFullYear())}
             </small>

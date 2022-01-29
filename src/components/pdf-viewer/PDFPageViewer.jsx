@@ -4,8 +4,9 @@ import PDF from "react-pdf-js";
 import { useState } from 'react';
 
 import nbOr from "./nbOr.pdf";
+import './PDFPageViewer.css';
 
-const TestPdf = () => {
+const PDFPageViewer = () => {
 
     const PDFViewer = () => {
         const [page, setPage] = useState(1);
@@ -41,8 +42,10 @@ const TestPdf = () => {
         }
         return (
           <div>
-            Page: {page} {pagination}
-            <br />
+
+            Page: {page} of {pages} {pagination}
+            <br /><br />
+
             <PDF
               file={nbOr}
               page={page}
@@ -50,8 +53,12 @@ const TestPdf = () => {
                 console.log(pages);
                 setPages(pages);
                 setPage(1);
-              }}
-            />
+              }} />
+
+              <br /><br />
+              Page: {page} of {pages} {pagination}
+              <br /><br />
+
           </div>
         );
       };
@@ -59,11 +66,11 @@ const TestPdf = () => {
     return (
 
         <Container className="RelativeContainer">
-                <div className="ChocoTitle">TestPdf</div>
-                <PDFViewer />
+            <h1> Bienvenue sur le site des maths pour tous !</h1>
+            <PDFViewer />
         </Container>     
 
         );
     }
 
-export default TestPdf;
+export default PDFPageViewer;

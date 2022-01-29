@@ -10,7 +10,7 @@ const TablesTestHome = ({setGameStarted, setQuestions}) => {
 
 
     function createRandomQuestions() {
-        var nbQuestions = 2;
+        var nbQuestions = 5;
         var maxInt = 15;
         var randomQuestions = [];
         
@@ -18,14 +18,16 @@ const TablesTestHome = ({setGameStarted, setQuestions}) => {
             var randomInt1 = getRandomInt(maxInt);
             var randomInt2 = getRandomInt(maxInt);
 
-            var a = randomInt1.toString();
-            var b = randomInt2.toString();
+            var a = randomInt1;
+            var b = randomInt2;
            
             console.log(typeof b)
             var enounceModel = "\\({" + a + "}\\times{"+ b + "} = \\)"; 
 
             var question = {
                 id: i,
+                a: a,
+                b: b,
                 enounceModel: enounceModel,
                 enounce: <MathJaxDisplay 
                             toShow={enounceModel}/>

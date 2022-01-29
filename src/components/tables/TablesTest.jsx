@@ -9,7 +9,6 @@ import CustomLogger from '../general-content/CustomLogger';
 
 const TablesTest = () => {
 
-    const [maxTime, setMaxTime] =  React.useState(6000);
     const [gameStarted, setGameStarted] =  React.useState(false);
 
     const [count, setCount] = React.useState(0);
@@ -44,8 +43,7 @@ const TablesTest = () => {
                             count={count}
                             next={next} 
                             user={user}
-                            setUser={setUser}
-                            maxTime={maxTime} /> 
+                            setUser={setUser} /> 
             </Container>
 
         </TablesTestManager>

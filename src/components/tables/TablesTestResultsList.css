@@ -1,18 +1,34 @@
+.AnswersResults {
+    text-align: center;
+    width : 50%;
+}
+
+.IconsResults {
+    text-align: left;
+    width : 20%; 
+}
+
+.GoodAnswerToDisplay {
+    text-align: left;
+    color: green;
+    width: 30%;
+}
+
 .Icon {
+    position: relative;
     width: 30px;
     height: 30px;
 }
 
 .CheckIcon {
-    position: relative;
     color:  var(--check-color);
-    width: 30px;
-    height: 30px;
 }
 
-.CheckIcon {
-    position: relative;
-    color:  var(--check-color);
-    width: 30px;
-    height: 30px;
+.WrongIcon {
+    color:  var(--wrong-color);
 }
+
+.QuestionIcon {
+    color:  var(--question-color);
+}
+

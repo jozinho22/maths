@@ -6,7 +6,7 @@ import './TablesTestQuestionDisplay.css';
 import CustomLogger from '../general-content/CustomLogger';
 
 const TablesTestQuestionDisplay = 
-        ({ questions, count, next, user, setUser, maxTime}) => {
+        ({ questions, count, next, user, setUser}) => {
 
     // Timer
     const [endTimer, setEndTimer] = React.useState(false);
@@ -15,6 +15,8 @@ const TablesTestQuestionDisplay =
 
     const [inputText, setInputText] =  React.useState("");
     const [showRedAlert, setShowRedAlert] = React.useState(false);
+
+    var maxTime = 0;
 
     const doNext = () => {
 
@@ -33,7 +35,7 @@ const TablesTestQuestionDisplay =
             }
             userSlice.answers.push(answer);
         } else {
-            userSlice.answers.push(0);
+            userSlice.answers.push(null);
         }  
 
         setUser(userSlice);        
@@ -51,6 +53,15 @@ const TablesTestQuestionDisplay =
     // Timer
     React.useEffect(() => {
         setEndTimer(false);
+
+        maxTime = 10;
+        if(questions[count].a > 9) {
+            maxTime = maxTime + 20;
+        }
+        if(questions[count].b > 9) {
+            maxTime = maxTime + 20;
+        }
+
         setTimer(maxTime)
         if(endTimer) {
             doNext();
@@ -95,15 +106,14 @@ const TablesTestQuestionDisplay =
                                 </Form.Group>
                             </Form>
                         </Col>
-                    </Row>
+                    </Row>             
+                    <br />
+                    <Alert variant="danger" show={showRedAlert} style={ {width:"60%", margin:"auto"}} >
+                            <h3>Numbers only plz !!!</h3>
+                    </Alert> 
 
-                    <h1>{inputText}</h1>   
-             
                 </Container>
 
-                <Alert variant="danger" show={showRedAlert} >
-                        <h1>Numbers only plz !!!</h1>
-                </Alert> 
 
                 <Container className="ButtonPlacementQuestions">
                     <Button className="BasicButton ValidateButton" 

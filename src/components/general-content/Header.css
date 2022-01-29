@@ -1,26 +1,34 @@
-  .CustomHeader {
-    background-color : #343a40;
+  .CustomNav {
+    background-color : var(--navbar-color);
     border-bottom: 2px solid var(--front-color);
     height : 80px;
-  }
-
-  .CustomHeader a {
-    color: var(--links-color);
-  }
-  
-  .CustomButton {
     margin-left: auto;
     margin-right: auto;
   }
 
-  .ThemeChoice {
-    color: var(--front-color);
-    border-radius: 5px;
+  .CustomNav .navbar-brand {
+    margin-right: 0;
+    color: var(--links-color);
+    padding-left: 15px;
   }
 
-  .navbar-brand {
-    margin-right: 0;
+  .CustomNav .nav-link {
+    color: var(--links-color);
   }
+
+  .CustomNav .navbar-collapse {
+    background-color: var(--navbar-color);
+    margin-left: 50px;
+  }
+  
+  .CustomNav .dropdown-menu {
+    background-color : var(--navbar-color);
+  }
+
+  .CustomNav .dropdown-item {
+    color: var(--links-color);
+  }
+
 
   #dropdown-item-button, #dropdown-item-button:hover, #dropdown-item-button:focus {
     background-color: var(--back-color);
