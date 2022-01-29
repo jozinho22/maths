@@ -1,20 +1,18 @@
-import { Container, Button, Table } from 'react-bootstrap';
+import { Container, Button, Table, Col, Row } from 'react-bootstrap';
 
 import TablesTestResultsList from './TablesTestResultsList';
 
 import './TablesTestResults.css';
 
-const TablesTestResults = ( {questions, user}) => {
+const TablesTestResults = ( {questions, user, levels}) => {
 
     return (
         
         <Container className="RelativeContainer">
-            <br></br>
             <h1 style={{textDecoration: "underline"}}>Résultats</h1>
-            <br></br>
             <Container className="ResultsContainer">
 
-                <Table className="TablesTestResults table-borderless">
+                <Table className="TablesTestResults">
                     <tbody>
                         {questions.map(question => (
                             <TablesTestResultsList 
@@ -31,6 +29,19 @@ const TablesTestResults = ( {questions, user}) => {
             <br></br>
             <h2>Score : {user.score}/{questions.length}</h2>
  
+            <Container className="ButtonPlacement">
+            {
+                levels.map(level => ( 
+                    <Button 
+                        key={level.id}
+                        className={`${level.style} BasicButton`}
+                        /* onClick={() => launchGame(level.id)} */
+                        >
+                        Rejouer au niveau : {level.title}
+                    </Button>
+                ))
+            }
+            </Container>
 
         </Container>  
     );

@@ -10,9 +10,9 @@
   color: var(--brazil-front-color);
   --front-color: var(--brazil-front-color);
   --title-color: var(--brazil-title-color);
-  --check-color: var(--brazil-check-color);
-  --wrong-color: var(--brazil-wrong-color);
-  --question-color: var(--brazil-question-color);
+  --green-color: var(--brazil-green-color);
+  --orange-color: var(--brazil-orange-color);
+  --red-color: var(--brazil-red-color);
   --button-text-color: var(--brazil-button-text-color);
   --button-color: var(--brazil-button-color);
   --button-hover-color: var(--brazil-button-hover-color);

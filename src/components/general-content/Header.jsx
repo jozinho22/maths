@@ -2,20 +2,7 @@ import { Navbar, Nav, DropdownButton, Dropdown, NavDropdown } from 'react-bootst
 
 import './Header.css';
 
-const Header = () => {
-
-  var pdfItems = [];
-
-  var pdfNbOr = {
-    path: '/pdf-viewer/nbOr',
-    title: 'Le nombre d\'or'
-  }
-  var pdf2 = {
-    path: '/pdf-viewer/2',
-    title: 'Le nombre d\'or'
-  }
-
-  pdfItems.push(pdfNbOr, pdf2);
+const Header = ({pdfInfos}) => {
 
     return (
           <Navbar className="CustomNav" fixed="top" collapseOnSelect variant="dark" expand="lg">
@@ -28,8 +15,11 @@ const Header = () => {
                 <Nav.Link href="/tables-test">Réviser ses tables</Nav.Link>
 
                 <NavDropdown title="Cours/exercices en PDF" id="basic-nav-dropdown">
-                   {pdfItems.map(item => 
-                        <NavDropdown.Item href={item.path}>{item.title}</NavDropdown.Item>
+                   {pdfInfos.map(pdfInfo => 
+                        <NavDropdown.Item 
+                          key= {pdfInfo.id}
+                          href={`/pdf-viewer/${pdfInfo.relativePath}`}>{pdfInfo.title}
+                        </NavDropdown.Item>
                     )}
                 </NavDropdown>
 

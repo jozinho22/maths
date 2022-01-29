@@ -7,9 +7,9 @@ body {
   --brazil-back-color:  rgb(201, 193, 85);
   --brazil-front-color:  #516ece;
   --brazil-title-color: rgb(78, 139, 70);
-  --brazil-check-color: rgb(64, 112, 58);
-  --brazil-wrong-color: rgb(199, 37, 37);
-  --brazil-question-color: rgb(216, 117, 36);
+  --brazil-green-color: rgb(64, 112, 58);
+  --brazil-orange-color: rgb(216, 117, 36);
+  --brazil-red-color: rgb(199, 37, 37);
   --brazil-button-text-color: var(--brazil-back-color);
   --brazil-button-color: var(--brazil-title-color);
   --brazil-button-hover-color:var(--brazil-check-color);

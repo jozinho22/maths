@@ -5,6 +5,7 @@ import MathJaxDisplay from './MathJaxDisplay';
 import CustomLogger from '../general-content/CustomLogger';
 
 import './TablesTestResultsList.css';
+import { Col, Row } from 'react-bootstrap';
 
 const TablesTestResultsList = ({ question, answer }) => {
 
@@ -16,17 +17,17 @@ const TablesTestResultsList = ({ question, answer }) => {
     var answerToShow = <MathJaxDisplay 
                                     toShow={enounceWithUserInput}/>;
 
-    var enounceWithGoodAnswer = model.slice(0, index + 2) + question.answer + model.slice(index + 2);
+    var enounceWithGoodAnswer = model.slice(0, index + 2) + question.goodAnswer + model.slice(index + 2);
     var goodAnswerToShow = <MathJaxDisplay 
                                     toShow={enounceWithGoodAnswer}/>;
 
     return (
-            <tr>
-                <td className="AnswersResults">
+            <Row>
+                <Col className="AnswersResults">
                     {answerToShow}   
-                </td>
+                </Col>
 
-                <td className="IconsResults">
+                <Col className="IconsResults">
                 {
                 answer.input == '' ?
                     <BsQuestionLg className="QuestionIcon"/> 
@@ -35,9 +36,9 @@ const TablesTestResultsList = ({ question, answer }) => {
                             <GiCheckMark className="CheckIcon"/> 
                                 :  <GiCrossMark className="WrongIcon" />
                 }
-                </td>
+                </Col>
                 
-                <td>
+                <Col>
                 {
                 answer.input == '' ?
                     <div className="GoodAnswerToDisplay">
@@ -51,8 +52,8 @@ const TablesTestResultsList = ({ question, answer }) => {
                                        {goodAnswerToShow}
                                     </div>
                 }
-                </td>
-            </tr>
+                </Col>
+            </Row>
     );
 }
 

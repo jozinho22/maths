@@ -1,72 +1,53 @@
 import React from 'react';
 
 import { Container, Button } from 'react-bootstrap';
-import MathJaxDisplay from './MathJaxDisplay';
-import '../general-content/Basic.css';
 
 import CustomLogger from '../general-content/CustomLogger';
+import './TablesTestHome.css';
 
-const TablesTestHome = ({setGameStarted, setQuestions}) => {
+const TablesTestHome = ({levels,
+                         questionsByLevel,
+                         setQuestions, 
+                         user,
+                         setUser,
+                         setGameStarted
+                         }) => {
 
-
-    function createRandomQuestions() {
-        var nbQuestions = 5;
-        var maxInt = 15;
-        var randomQuestions = [];
-        
-        for (var i = 0; i < nbQuestions; i++) {
-            var randomInt1 = getRandomInt(maxInt);
-            var randomInt2 = getRandomInt(maxInt);
-
-            var a = randomInt1;
-            var b = randomInt2;
-           
-            console.log(typeof b)
-            var enounceModel = "\\({" + a + "}\\times{"+ b + "} = \\)"; 
-
-            var question = {
-                id: i,
-                a: a,
-                b: b,
-                enounceModel: enounceModel,
-                enounce: <MathJaxDisplay 
-                            toShow={enounceModel}/>
-                           ,
-                answer: randomInt1*randomInt2
-            }
-
-            randomQuestions.push(question); 
-            
-        }
-
-        setQuestions(randomQuestions);
-
-        return randomQuestions;
-    }
-
-    function getRandomInt(max) {
-        return Math.floor(Math.random() * max);
-    }
-
-    const launchGame = () => {
+    const launchGame = (levelId) => {
         console.log('Game started !!!!')
+
+        var userUpdate = {...user};
+        levels.map(level => {
+            if(levelId === level.id) {
+                userUpdate.levelId = levelId;
+            }
+        });
+
+        CustomLogger('levelId', levelId, 'HOME')
+        CustomLogger('questionsByLevel[levelId]', questionsByLevel[levelId], 'HOME')
+
+        setUser(userUpdate);
+        setQuestions(questionsByLevel[levelId]);
         setGameStarted(true);
     }
 
-    React.useEffect(() => {
-        createRandomQuestions();
-    }, []);
-
     return (
         <Container className="RelativeContainer">
-            <Container className="ButtonPlacement">
-                <Button className="BasicButton" onClick={launchGame}>
-                    Et c'est parti !
-                </Button>
-            </Container>
+            <h2>Quizz pour réviser ses tables de multiplication</h2>
+                {
+                    levels.map(level => (
+                        <Container key={level.id} 
+                                   className="ButtonPlacement">
+                            <Button 
+                                className={`${level.style} BasicButton`}
+                                onClick={() => launchGame(level.id)}>
+                                Niveau : {level.title}
+                            </Button>
+                        </Container>
+                    ))
+                }
         </Container>
     );
-
 }
 
 export default TablesTestHome;

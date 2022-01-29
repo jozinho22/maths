@@ -1,12 +1,11 @@
 import React from 'react';
 import { Form, Container, Button, Table, Row, Col, Alert} from 'react-bootstrap';
 import Timer from './Timer';
-import '../general-content/Basic.css';
 import './TablesTestQuestionDisplay.css';
 import CustomLogger from '../general-content/CustomLogger';
 
 const TablesTestQuestionDisplay = 
-        ({ questions, count, next, user, setUser}) => {
+        ({ questions, level, count, next, user, setUser}) => {
 
     // Timer
     const [endTimer, setEndTimer] = React.useState(false);
@@ -20,20 +19,20 @@ const TablesTestQuestionDisplay =
 
     const doNext = () => {
 
-        let trueAnswer = questions[count].answer;
+        let trueAnswer = questions[count].goodAnswer;
 
         const userSlice = {...user};
-        var answer = {
+        var userAnswer = {
             input: inputText,
             isTrue: false
         }
 
-        if(answer.input !== undefined) {
-            if(answer.input == trueAnswer) {
+        if(userAnswer.input !== undefined) {
+            if(userAnswer.input == trueAnswer) {
                 userSlice.score += 1;
-                answer.isTrue = true;
+                userAnswer.isTrue = true;
             }
-            userSlice.answers.push(answer);
+            userSlice.answers.push(userAnswer);
         } else {
             userSlice.answers.push(null);
         }  
@@ -84,47 +83,44 @@ const TablesTestQuestionDisplay =
     }, [inputText]);
 
     return (
-                <Container className ="Timer">
-                    <Timer 
-                        maxTime={maxTime}
-                        secondes={secondes}
-                        setSecondes={setSecondes} 
-                        minutes={minutes}
-                        setMinutes={setMinutes}
-                        setEndTimer={setEndTimer} />
-                <Container className="QuestionContainer" >    
-                    <Row>
-                        <Col>{questions[count].enounce}</Col>
-                        <Col className="AnswersContainer">
-                            <Form className="AnswersInput">
-                                <Form.Group>
-                                    <Form.Control 
-                                        type="text" 
-                                        placeholder="Entrez le résultat"
-                                        value={inputText}
-                                        onChange={e => setInputText(e.target.value)} />
-                                </Form.Group>
-                            </Form>
-                        </Col>
-                    </Row>             
-                    <br />
-                    <Alert variant="danger" show={showRedAlert} style={ {width:"60%", margin:"auto"}} >
-                            <h3>Numbers only plz !!!</h3>
-                    </Alert> 
-
-                </Container>
-
-
-                <Container className="ButtonPlacementQuestions">
-                    <Button className="BasicButton ValidateButton" 
-                            /* type="submit" */ 
-                            onClick={doNext}>
-                            Valider
-                    </Button>   
-                </Container>
+        <Container >
+            <Timer className ="Timer"
+                maxTime={maxTime}
+                secondes={secondes}
+                setSecondes={setSecondes} 
+                minutes={minutes}
+                setMinutes={setMinutes}
+                setEndTimer={setEndTimer} />
+            <Container className="QuestionContainer" >    
+                <Row>
+                    <Col>{questions[count].enounce}</Col>
+                    <Col className="AnswersContainer">
+                        <Form className="AnswersInput">
+                            <Form.Group>
+                                <Form.Control 
+                                    type="text" 
+                                    placeholder="Entrez le résultat"
+                                    value={inputText}
+                                    onChange={e => setInputText(e.target.value)} />
+                            </Form.Group>
+                        </Form>
+                    </Col>
+                </Row>             
+                <br />
+                <Alert variant="danger" show={showRedAlert} style={ {width:"60%", margin:"auto"}} >
+                        <h3>Numbers only plz !!!</h3>
+                </Alert> 
             </Container>
 
-        );
+            <Container className="ButtonPlacementQuestions">
+                <Button className="BasicButton ValidateButton" 
+                        /* type="submit" */ 
+                        onClick={doNext}>
+                        Valider
+                </Button>   
+            </Container>
+        </Container>
+    );
 }
 
 export default TablesTestQuestionDisplay;

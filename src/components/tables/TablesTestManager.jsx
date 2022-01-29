@@ -3,29 +3,45 @@ import { Navigate } from 'react-router-dom';
 
 import TablesTestHome from './TablesTestHome';
 import TablesTestResults from './TablesTestResults';
-
-import '../general-content/Basic.css';
-
 import CustomLogger from '../general-content/CustomLogger';
 
-const TablesTestManager = ({count, questions, setQuestions, user, gameStarted, setGameStarted,
+const TablesTestManager = ({count, 
+                            levels,
+                            questionsByLevel,
+                            questions, 
+                            setQuestions, 
+                            user, 
+                            setUser,
+                            gameStarted, 
+                            setGameStarted, 
                             children}) => {
+
+    CustomLogger('gameStarted', gameStarted, 'MANAGER')
+    CustomLogger('questionsByLevel', questionsByLevel, 'MANAGER')
+
+    CustomLogger('questions', questions, 'MANAGER')
 
     return (
 
         !gameStarted ?
 
-            <TablesTestHome setGameStarted={setGameStarted} setQuestions={setQuestions} /> :
+            <TablesTestHome 
+                levels={levels}
+                questionsByLevel={questionsByLevel}
+                setQuestions={setQuestions} 
+                user={user} 
+                setUser={setUser}
+                setGameStarted={setGameStarted} /> :
 
-                count < questions.length ? 
+                    count < questions.length ? 
 
-                        children : 
+                            children : 
 
-                            <TablesTestResults
-                                questions= {questions}
-                                user = {user}
-                        />           
-                    );
+                                <TablesTestResults
+                                    questions= {questions}
+                                    user = {user}
+                                    levels={levels} />           
+    );
 }
  
 export default TablesTestManager;

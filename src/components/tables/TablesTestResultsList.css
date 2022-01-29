@@ -10,25 +10,29 @@
 
 .GoodAnswerToDisplay {
     text-align: left;
-    color: green;
+    color: var(--green-color);
     width: 30%;
 }
 
 .Icon {
-    position: relative;
+    text-align: center;
     width: 30px;
     height: 30px;
 }
 
 .CheckIcon {
-    color:  var(--check-color);
-}
-
-.WrongIcon {
-    color:  var(--wrong-color);
+    color:  var(--green-color);
 }
 
 .QuestionIcon {
-    color:  var(--question-color);
+    color:  var(--orange-color);
+}
+
+.WrongIcon {
+    color:  var(--red-color);
+}
+
+Col {
+    border-width: 1px;
 }
 
