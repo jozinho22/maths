@@ -1,9 +1,8 @@
-@media (max-width: 600px) {
-    canvas {
-        width: 300px;
-    }
-}
-
 .Pagination {
     height: 100px;
+}
+
+canvas {
+    width: 100% !important;
+    height: 100% !important;
 }

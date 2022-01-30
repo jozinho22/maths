@@ -43,10 +43,11 @@ const TablesTestResultsList = ({ question, answer }) => {
                 answer.input == '' ?
                     <p>{goodAnswerToShow}</p> : 
                             answer.isTrue ? 
-                                "" : 
+                            <p style={{color: "var(--back-color)"}}>{goodAnswerToShow}</p> : 
                                     <p>{goodAnswerToShow}</p>
                 }
                 </Col>
+                <Col></Col>
             </Row>
     );
 }

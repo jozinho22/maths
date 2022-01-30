@@ -1,0 +1,24 @@
+.HomeContainer {
+    position: relative;
+    border-color: black;
+    background-color: var(--front-color);
+    border-radius: 10px;
+    color: var(--back-color);
+    font-size: x-large;
+    padding: 20px;
+    display: inline-block;
+    margin-top: 20px;
+    width: 60%;
+}
+
+@media (min-width : 768px) {
+    .QuestionContainer {
+        width: 40%;
+    }
+}
+
+@media (min-width : 1268px) {
+    .QuestionContainer {
+        width: 30%;
+    }
+}

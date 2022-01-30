@@ -3,19 +3,19 @@ function pdfViewerPagesBuilder() {
     var pdfItems = [];
 
     var pdfNbOr = {
-      id: 1,
+      id: 0,
       relativePath: 'nbOr',
       filePath: './files/nbOr.pdf',
       title: 'Le nombre d\'or'
     }
-    var pdfNbPi = {
-      id: 2,
-      relativePath: 'nbPi',
-      filePath: './files/nbPi.pdf',
-      title: 'Le nombre Pi'
+    var pdfExos1 = {
+      id: 1,
+      relativePath: 'exos1',
+      filePath: './files/exos1.pdf',
+      title: 'Feuille d\'exos 1'
     }
   
-    pdfItems.push(pdfNbOr, pdfNbPi);
+    pdfItems.push(pdfNbOr, pdfExos1);
 
     return pdfItems;
 

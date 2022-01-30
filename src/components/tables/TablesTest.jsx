@@ -54,7 +54,7 @@ const TablesTest = () => {
 
     function createQuestionsByLevel() {
 
-        var nbQuestions = 2;
+        var nbQuestions = 10;
         var randomQuestionsByLevelSlice = [];
         for (var i = 0; i < levels.length; i++) {
             var randomQuestions = [];

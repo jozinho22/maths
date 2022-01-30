@@ -16,7 +16,7 @@ const TablesTestResults = ({questions,
             <Container className="ResultsContainer">
 
                 <Table className="TablesTestResults">
-                    <tbody>
+                    <div>
                         {questions.map(question => (
                             <TablesTestResultsList 
                                 key={question.id}
@@ -24,7 +24,7 @@ const TablesTestResults = ({questions,
                                 answer={user.answers[question.id]}
                             />
                         ))}
-                    </tbody>
+                    </div>
                 </Table>
 
             </Container> 

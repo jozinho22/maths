@@ -25,6 +25,7 @@
     border-color: white;
     color: var(--back-color);
     margin: 20px;
+    padding: 10px;
 }
 
 .DefaultButton:hover {
@@ -60,9 +61,13 @@
         width: 60%;
     }
 }
+
 @media(min-width:1278px) {
     .RelativeContainer {
         width: 80%;
     }
 }
 
+.CenterText {
+    margin: auto;
+}

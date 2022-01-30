@@ -38,7 +38,7 @@ const PDFViewerPage = ( {pdfInfos} ) => {
 
           const NextButton = () => {
               return (
-                <Button className="BasicButton"
+                <Button className="DefaultButton"
                     onClick={() => {
                       let newPage = page + 1;
                       newPage = newPage > pages ? pages : newPage;
@@ -55,10 +55,8 @@ const PDFViewerPage = ( {pdfInfos} ) => {
                 <Col style={{textAlign:"right"}}>
                     <BackButton />
                 </Col>
-                <Col>
-                    <h2>
+                <Col className="CenterText">
                       Page: {page} / {pages} 
-                    </h2>
                 </Col>
                 <Col style={{textAlign:"left"}}>
                     <NextButton />
@@ -76,9 +74,7 @@ const PDFViewerPage = ( {pdfInfos} ) => {
         const Pagination = () => {
           return (
             <>   
-              <br /><br />
               {pagination}
-              <br /><br />
             </>
           )
         }
@@ -86,7 +82,8 @@ const PDFViewerPage = ( {pdfInfos} ) => {
         return (
           <>
             <Pagination />
-            <PDF
+            <PDF 
+              className="CustomCanevas"
               file={filePath}
               page={page}
               onDocumentComplete={pages => {
