@@ -7,19 +7,12 @@ import CustomLogger from '../general-content/CustomLogger';
 
 const TablesTestManager = ({count, 
                             levels,
-                            questionsByLevel,
                             questions, 
-                            setQuestions, 
                             user, 
-                            setUser,
+                            launchGame,
                             gameStarted, 
-                            setGameStarted, 
+                            reInit,
                             children}) => {
-
-    CustomLogger('gameStarted', gameStarted, 'MANAGER')
-    CustomLogger('questionsByLevel', questionsByLevel, 'MANAGER')
-
-    CustomLogger('questions', questions, 'MANAGER')
 
     return (
 
@@ -27,11 +20,7 @@ const TablesTestManager = ({count,
 
             <TablesTestHome 
                 levels={levels}
-                questionsByLevel={questionsByLevel}
-                setQuestions={setQuestions} 
-                user={user} 
-                setUser={setUser}
-                setGameStarted={setGameStarted} /> :
+                launchGame={launchGame} /> :
 
                     count < questions.length ? 
 
@@ -40,7 +29,8 @@ const TablesTestManager = ({count,
                                 <TablesTestResults
                                     questions= {questions}
                                     user = {user}
-                                    levels={levels} />           
+                                    levels={levels}
+                                    reInit={reInit} />           
     );
 }
  

@@ -4,7 +4,10 @@ import TablesTestResultsList from './TablesTestResultsList';
 
 import './TablesTestResults.css';
 
-const TablesTestResults = ( {questions, user, levels}) => {
+const TablesTestResults = ({questions, 
+                            user, 
+                            levels,
+                            reInit}) => {
 
     return (
         
@@ -26,21 +29,26 @@ const TablesTestResults = ( {questions, user, levels}) => {
 
             </Container> 
 
-            <br></br>
             <h2>Score : {user.score}/{questions.length}</h2>
- 
+            <br></br>
+            <h2>Une autre ?</h2>
             <Container className="ButtonPlacement">
-            {
-                levels.map(level => ( 
-                    <Button 
-                        key={level.id}
-                        className={`${level.style} BasicButton`}
-                        /* onClick={() => launchGame(level.id)} */
-                        >
-                        Rejouer au niveau : {level.title}
-                    </Button>
-                ))
-            }
+                <Row>
+                {
+                    levels.map(level => (
+                        <Col>
+                            <Button 
+                                key={level.id}
+                                className={`${level.style} DefaultButton`}
+                                onClick={() => reInit(level.id)} >
+                                Rejouer au niveau : {level.title}
+                            </Button>
+                        </Col>
+                        
+                    ))
+                }
+                </Row> 
+
             </Container>
 
         </Container>  

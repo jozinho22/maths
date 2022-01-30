@@ -4,21 +4,25 @@
 
 .Brazil {
   background: var(--brazil-back-color);
-  --navbar-color : var(--brazil-navbar-color);
   background-size: auto;
+
+  --navbar-color : var(--brazil-navbar-color);
+
   --back-color: var(--brazil-back-color);
   color: var(--brazil-front-color);
+
   --front-color: var(--brazil-front-color);
-  --title-color: var(--brazil-title-color);
+
   --green-color: var(--brazil-green-color);
   --orange-color: var(--brazil-orange-color);
   --red-color: var(--brazil-red-color);
+  --blue-color: var(--brazil-blue-color);
+
+  --green-hover-color: var(--brazil-green-hover-color);
+  --orange-hover-color: var(--brazil-orange-hover-color);
+  --red-hover-color: var(--brazil-red-hover-color);
+  --blue-hover-color: var(--brazil-blue-hover-color);
+
   --button-text-color: var(--brazil-button-text-color);
-  --button-color: var(--brazil-button-color);
-  --button-hover-color: var(--brazil-button-hover-color);
-  --button-2-color: var(--brazil-button-2-color);
-  --button-2-hover-color: var(--brazil-button-2-hover-color);
-  --question-code-color: var(--brazil-question-code-color);
-  --reponses-code-color: var(--brazil-reponses-code-color);
-  --links-color: var(--brazil-links-color);
+
 }

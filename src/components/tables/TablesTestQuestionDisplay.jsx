@@ -5,7 +5,7 @@ import './TablesTestQuestionDisplay.css';
 import CustomLogger from '../general-content/CustomLogger';
 
 const TablesTestQuestionDisplay = 
-        ({ questions, level, count, next, user, setUser}) => {
+        ({ questions, count, next, user, setUser}) => {
 
     // Timer
     const [endTimer, setEndTimer] = React.useState(false);
@@ -13,7 +13,12 @@ const TablesTestQuestionDisplay =
     const [secondes, setSecondes] =  React.useState(0);
 
     const [inputText, setInputText] =  React.useState("");
-    const [showRedAlert, setShowRedAlert] = React.useState(false);
+    const [redAlert, setRedAlert] = React.useState(
+        {
+            show: false,
+            message : ''
+        }
+    );
 
     var maxTime = 0;
 
@@ -67,20 +72,87 @@ const TablesTestQuestionDisplay =
         }
 
     }, [endTimer, count]);
-    
-    // A chaque question
+
+    function updateRedAlertMessage(show, message) {
+        let alertUpdate = {...redAlert};
+        alertUpdate.show = show;
+        alertUpdate.message = message;
+        setRedAlert(alertUpdate);
+    }
+
+    // Réinit pour chaque question
     React.useEffect(() => {
         setInputText("");
-        setShowRedAlert(false); 
+        updateRedAlertMessage(false, '');
     }, [count]);
     
     // Gestion de l'alerte rouge !!!
     React.useEffect(() => {
-        setShowRedAlert(false); 
-        if(isNaN(inputText)) {
-            setShowRedAlert(true);
+        if(parseInt(inputText) > 10000) {
+            if(parseInt(inputText) > 100000) {
+                setInputText(inputText.slice(0, inputText.length-1))
+            }
+            var message = 'Je pense que ça va non ?';
+            updateRedAlertMessage(true, message);
+        } else {
+            updateRedAlertMessage(false, '');
         }
     }, [inputText]);
+
+    const handleKeyboardInput = (keyboardInput) => {
+        if(!isNaN(keyboardInput)) {
+            setInputText(inputText + keyboardInput)
+            if(inputText === '' && keyboardInput === 0) {
+                updateRedAlertMessage(true, 'Très drôle...');
+                setInputText(inputText.slice(0, inputText.length-1));
+            }
+        } else if(keyboardInput === 'C') {
+            setInputText("")
+        } else if(keyboardInput === '<') {
+            setInputText(inputText.slice(0, inputText.length - 1))
+        }
+    }
+
+    // pb : le clavier se met a jour toutes les secondes;....
+    const CiferKeyboard = () => {
+        var row1 = [1, 2, 3];
+        var row2 = [4, 5, 6];
+        var row3 = [7, 8, 9];
+        var row4 = ['C', 0, '<'];
+
+        var rows = [row1, row2, row3, row4];
+        return (
+            <Container className="CiferKeyboard">
+            {
+                rows.map(row => (
+                    <Row>
+                        {row.map(cifer =>(  
+                            <Col>
+                                <Button 
+                                    className="GreenButton"
+                                    onClick={() => handleKeyboardInput(cifer)}>
+                                    {cifer}
+                                </Button>
+                            </Col>  
+                        ))}
+                    </Row>
+                ))
+            }
+            </Container> 
+        );
+
+    }
+
+    const RedAlert = () => {
+        return (
+            <Container className="Alert" >
+                {redAlert.show === true ?
+                    <div>{redAlert.message}</div> :
+                        <></>
+                }
+            </Container> 
+        );
+    }
 
     return (
         <Container >
@@ -93,27 +165,19 @@ const TablesTestQuestionDisplay =
                 setEndTimer={setEndTimer} />
             <Container className="QuestionContainer" >    
                 <Row>
-                    <Col>{questions[count].enounce}</Col>
-                    <Col className="AnswersContainer">
-                        <Form className="AnswersInput">
-                            <Form.Group>
-                                <Form.Control 
-                                    type="text" 
-                                    placeholder="Entrez le résultat"
-                                    value={inputText}
-                                    onChange={e => setInputText(e.target.value)} />
-                            </Form.Group>
-                        </Form>
+                    <Col className="Enounce">
+                        {questions[count].enounce}
                     </Col>
-                </Row>             
-                <br />
-                <Alert variant="danger" show={showRedAlert} style={ {width:"60%", margin:"auto"}} >
-                        <h3>Numbers only plz !!!</h3>
-                </Alert> 
+                    <Col className="AnswerDisplay">
+                        {inputText}
+                    </Col>
+                </Row>  
+                <RedAlert />
+                <CiferKeyboard /> 
             </Container>
 
-            <Container className="ButtonPlacementQuestions">
-                <Button className="BasicButton ValidateButton" 
+            <Container className="ButtonPlacement">
+                <Button className="DefaultButton" 
                         /* type="submit" */ 
                         onClick={doNext}>
                         Valider

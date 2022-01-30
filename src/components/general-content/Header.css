@@ -8,12 +8,8 @@
 
   .CustomNav .navbar-brand {
     margin-right: 0;
-    color: var(--links-color);
+    color: var(--back-color);
     padding-left: 15px;
-  }
-
-  .CustomNav .nav-link {
-    color: var(--links-color);
   }
 
   .CustomNav .navbar-collapse {
@@ -26,40 +22,5 @@
   }
 
   .CustomNav .dropdown-item {
-    color: var(--links-color);
-  }
-
-
-  #dropdown-item-button, #dropdown-item-button:hover, #dropdown-item-button:focus {
-    background-color: var(--back-color);
-    color: var(--front-color);
-  }
-
-  #dropdown-item-button, #dropdown-item-button:focus {
-    border-color: var(--back-color);
-  }
-
-  #dropdown-item-button:hover {
-    border-color: var(--front-color);
-  }
-
-  .dropdown-menu {
-    padding: 0;
-  }
-
-  .PullRight {
-    margin-left: auto;
-    margin-right: 20px;   
-    width: 35px;
-    height: 35px;
-  }
-
-  .Offset {
-    margin-right: 50px;
-  }
-
-  @media(max-width:768px) {
-    .Offset {
-        margin-right: 30px;
-    }
+    color: var(--back-color);
   }

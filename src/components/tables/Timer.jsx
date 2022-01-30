@@ -29,8 +29,8 @@ const Timer = ({maxTime, secondes, setSecondes, minutes, setMinutes, setEndTimer
     return (
         <div>
         { minutes === 0 && secondes === 0 ? 
-                <h1>t</h1> : 
-                    <h1> temps restant : {minutes} :{secondes < 10 ?  `0${secondes}` : secondes}</h1> 
+                <h3>t</h3> : 
+                    <h3> temps restant : {minutes} :{secondes < 10 ?  `0${secondes}` : secondes}</h3> 
         }
         </div>
     )

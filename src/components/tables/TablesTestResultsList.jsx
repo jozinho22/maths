@@ -38,19 +38,13 @@ const TablesTestResultsList = ({ question, answer }) => {
                 }
                 </Col>
                 
-                <Col>
+                <Col className="GoodAnswerToDisplay">
                 {
                 answer.input == '' ?
-                    <div className="GoodAnswerToDisplay">
-                        {goodAnswerToShow}
-                    </div>
-                : 
-                    answer.isTrue ? 
-                            ""
-                                : 
-                                    <div className="GoodAnswerToDisplay">
-                                       {goodAnswerToShow}
-                                    </div>
+                    <p>{goodAnswerToShow}</p> : 
+                            answer.isTrue ? 
+                                "" : 
+                                    <p>{goodAnswerToShow}</p>
                 }
                 </Col>
             </Row>

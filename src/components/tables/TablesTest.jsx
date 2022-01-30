@@ -6,44 +6,46 @@ import TablesTestManager from './TablesTestManager';
 import MathJaxDisplay from './MathJaxDisplay';
 
 import CustomLogger from '../general-content/CustomLogger';
+import { GiLaurelCrown } from 'react-icons/gi';
 
 const TablesTest = () => {
 
     const [gameStarted, setGameStarted] =  React.useState(false);
 
     const [count, setCount] = React.useState(0);
-    const [user, setUser] = React.useState(
-        {
-            name: '',
-            levelId: 1,
-            score: 0,
-            answers: []
-        }
-    );
+    const [user, setUser] = React.useState(initUser());
+    const [questions, setQuestions]= React.useState([]);
 
     var levels = createLevels();
     var questionsByLevel = createQuestionsByLevel();
-    const [questions, setQuestions]= React.useState([]);
+
+    function initUser() {
+        return {
+            name: '',
+            score: 0,
+            answers: []
+        }
+    }
 
     function createLevels() {
         var levelSlice = [];
         var easyLevel = {
-            id: 1,
+            id: 0,
             title: "newb",
             maxInt: 9,
-            style: "EasyLevel"
+            style: "GreenButton"
         }
         var mediumLevel = {
-            id: 2,
+            id: 1,
             title: "je gère",
             maxInt: 20,
-            style: "MediumLevel"
+            style: "OrangeButton"
         }
         var warriorLevel = {
-            id: 3,
+            id: 2,
             title: "math warrior",
             maxInt: 99,
-            style: "WarriorLevel"
+            style: "RedButton"
         }
         
         levelSlice.push(easyLevel, mediumLevel, warriorLevel);
@@ -72,12 +74,10 @@ const TablesTest = () => {
                     goodAnswer: a*b
                 }
                 randomQuestions.push(question);
-                CustomLogger('randomQuestions',randomQuestions, 'createQuestionsByLevel')
             }
             randomQuestionsByLevelSlice.push(randomQuestions); 
         }
-        
-        CustomLogger('randomQuestionsByLevelSlice',randomQuestionsByLevelSlice, 'createQuestionsByLevel')
+
         return randomQuestionsByLevelSlice;
     }
 
@@ -85,8 +85,24 @@ const TablesTest = () => {
         return Math.floor(Math.random() * max);
     }
 
+    function initQuestions() {
+        return createQuestionsByLevel();
+    }
+
     const next = () => {
         setCount (count + 1);
+    }
+
+    const reInit = (levelId) => {
+        setCount(0);
+        setUser(initUser());
+        setQuestions(initQuestions());
+        launchGame(levelId);
+    }
+
+    const launchGame = (levelId) => {
+        setQuestions(questionsByLevel[levelId]);
+        setGameStarted(true);
     }
 
     return (
@@ -94,13 +110,11 @@ const TablesTest = () => {
         <TablesTestManager
                     count={count} 
                     levels={levels}
-                    questionsByLevel={questionsByLevel}
                     questions={questions}
-                    setQuestions={setQuestions}
                     user={user} 
-                    setUser={setUser}
+                    launchGame={launchGame}
                     gameStarted={gameStarted}
-                    setGameStarted={setGameStarted} >
+                    reInit={reInit}>
     
             <Container className="RelativeContainer">
                 <TablesTestQuestionDisplay 

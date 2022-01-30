@@ -4,21 +4,21 @@ body {
   --choco-font-family:'choco', Fallback, sans-serif;
 
   --brazil-navbar-color:  #2e3235;
+
   --brazil-back-color:  rgb(201, 193, 85);
   --brazil-front-color:  #516ece;
-  --brazil-title-color: rgb(78, 139, 70);
+
   --brazil-green-color: rgb(64, 112, 58);
   --brazil-orange-color: rgb(216, 117, 36);
   --brazil-red-color: rgb(199, 37, 37);
-  --brazil-button-text-color: var(--brazil-back-color);
-  --brazil-button-color: var(--brazil-title-color);
-  --brazil-button-hover-color:var(--brazil-check-color);
-  --brazil-button-2-color:  #516ece;
-  --brazil-button-2-hover-color: rgb(63, 73, 158);
-  --brazil-question-code-color:rgb(179, 175, 175);
-  --brazil-reponses-code-color: #2a418b;
-  --brazil-links-color: var(--brazil-back-color);
+  --brazil-blue-color: rgb(52, 88, 165);
 
+  --brazil-green-hover-color: rgb(60, 100, 55);
+  --brazil-orange-hover-color: rgb(199, 121, 57);
+  --brazil-red-hover-color: rgb(182, 45, 45);
+  --brazil-blue-hover-color: rgb(54, 78, 131);
+
+  --brazil-button-text-color: var(--brazil-back-color);
 
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',

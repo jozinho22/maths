@@ -4,27 +4,46 @@
     background-color: var(--front-color);
     border-radius: 10px;
     color: var(--back-color);
-    font-size: 35px;
+    font-size: x-large;
     padding: 20px;
     display: inline-block;
     margin-top: 20px;
 }
 
+.QuestionContainer .col {
+    padding-left: 2px;
+    padding-right: 0px;
+
+}
 @media (min-width : 768px) {
     .QuestionContainer {
-        width: 30%;
+        width: 40%;
     }
-    .AnswersContainer {
-        width: 30%;
+/*     .AnswersContainer {
+        width: 80%;
+    } */
+    .Alert {
+        font-size: xx-large;
+        position: absolute;
+    }
+    .CiferKeyboard {
+        width: 100%;
     }
 }
 
-@media (min-width : 540px) {
+@media (min-width : 1268px) {
     .QuestionContainer {
-        width: 50%;
+        width: 30%;
     }
-    .AnswersInput {
+/*     .AnswersContainer {
         width: 80%;
+    } */
+    .Alert {
+        font-size: xx-large;
+        position: absolute;
+    }
+    .CiferKeyboard {
+        width: 100%;
     }
 }
 
@@ -40,9 +59,24 @@
 
 .AnswersContainer {
     display: flex;
-    align-items: center;
+    font-size: small;
 }
 
-.AnswersInput {
+.Enounce {
+    margin-left: 40px;
+}
+
+.AnswerDisplay {
     width: 30%;
+    text-align: center;
+}
+
+.CiferKeyboard {
+    margin-top: 30px;
+    width: 60%;
+}
+
+.Alert {
+    color: red;
+    font-size: large;
 }

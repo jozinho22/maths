@@ -25,7 +25,7 @@ const PDFViewerPage = ( {pdfInfos} ) => {
 
           const BackButton = () => {
             return (
-              <Button className="BasicButton"
+              <Button className="DefaultButton"
                   onClick={() => {
                     let newPage = page - 1;
                     newPage = newPage > 0 ? newPage : 1;
