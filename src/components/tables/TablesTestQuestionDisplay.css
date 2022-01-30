@@ -4,10 +4,12 @@
     background-color: var(--front-color);
     border-radius: 10px;
     color: var(--back-color);
-    font-size: x-large;
+    font-size: small;
     padding: 20px;
     display: inline-block;
     margin-top: 20px;
+    font-family: var(--celtic-font);
+    width: 60%;
 }
 
 .QuestionContainer .col {
@@ -17,11 +19,9 @@
 }
 @media (min-width : 768px) {
     .QuestionContainer {
-        width: 40%;
+        width: 60%;
+        font-size: x-large;
     }
-/*     .AnswersContainer {
-        width: 80%;
-    } */
     .Alert {
         font-size: xx-large;
         position: absolute;
@@ -33,11 +33,9 @@
 
 @media (min-width : 1268px) {
     .QuestionContainer {
-        width: 30%;
+        width: 50%;
+        font-size: large;
     }
-/*     .AnswersContainer {
-        width: 80%;
-    } */
     .Alert {
         font-size: xx-large;
         position: absolute;
@@ -55,15 +53,6 @@
     position: relative;
     margin-top: 35px;
     height: 60px;
-}
-
-.AnswersContainer {
-    display: flex;
-    font-size: small;
-}
-
-.Enounce {
-    margin-left: 40px;
 }
 
 .AnswerDisplay {

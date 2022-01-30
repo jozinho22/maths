@@ -4,6 +4,7 @@
     height : 80px;
     margin-left: auto;
     margin-right: auto;
+    font-family: var(--celtic-font);
   }
 
   .CustomNav .navbar-brand {
@@ -12,9 +13,12 @@
     padding-left: 15px;
   }
 
+  .CustomNav .nav-link {
+    padding-left: 40px !important;
+  }
+
   .CustomNav .navbar-collapse {
     background-color: var(--navbar-color);
-    margin-left: 50px;
   }
   
   .CustomNav .dropdown-menu {
@@ -22,5 +26,5 @@
   }
 
   .CustomNav .dropdown-item {
-    color: var(--back-color);
+    color: var(--back-color) ;
   }

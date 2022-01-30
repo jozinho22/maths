@@ -14,6 +14,7 @@ import Error from  './components/general-content/Error';
 import ThemeContext from './components/context/ThemeContext';
 
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { Container } from 'react-bootstrap';
 
 function App() {
 
@@ -34,17 +35,17 @@ function App() {
                     <BrowserRouter>
 
                         <Header pdfInfos={pdfInfos}/>
-
-                        <Routes>
-                            <Route exact path="/" element={<Home />} />
-                            <Route path="/tables-test" element={<TablesTest />} />
-                            <Route path="/pdf-viewer" element={<PDFViewerHome />} />
-                            <Route 
-                                path="/pdf-viewer/:relativePath" 
-                                element={<PDFViewerPage pdfInfos={pdfInfos} />} />
-                            <Route path="*" element={<Error />} />
-                        </Routes> 
-
+                        <Container className="RelativeContainer">
+                            <Routes>
+                                <Route exact path="/" element={<Home />} />
+                                <Route path="/tables-test" element={<TablesTest />} />
+                                <Route path="/pdf-viewer" element={<PDFViewerHome />} />
+                                <Route 
+                                    path="/pdf-viewer/:relativePath" 
+                                    element={<PDFViewerPage pdfInfos={pdfInfos} />} />
+                                <Route path="*" element={<Error />} />
+                            </Routes> 
+                        </Container>
                         <Footer />
 
                       </BrowserRouter>

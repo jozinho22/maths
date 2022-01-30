@@ -1,5 +1,4 @@
 import React from 'react';
-
 import { Container, Button } from 'react-bootstrap';
 
 import CustomLogger from '../general-content/CustomLogger';
@@ -9,7 +8,7 @@ const TablesTestHome = ({levels,
                          }) => {
 
     return (
-        <Container className="RelativeContainer">
+        <>
             <h2>Quizz pour réviser ses tables de multiplication</h2>
                 {
                     levels.map(level => (
@@ -23,7 +22,7 @@ const TablesTestHome = ({levels,
                         </Container>
                     ))
                 }
-        </Container>
+        </>
     );
 }
 

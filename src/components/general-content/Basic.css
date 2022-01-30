@@ -1,11 +1,12 @@
 .RelativeContainer {
-    width: 80%;
     position: relative;
     /* refers to the Header */
     padding-top: 100px;
     /* refers to the Footer */
     padding-bottom: 40px; 
     min-height: 100vh; 
+    font-family: var(--celtic-font);
+
 }
 
 .LoadingSpinner {
@@ -17,7 +18,6 @@
 
 .ButtonPlacement {
     padding-top: 10px;
-    padding-bottom: 20px;
 }
 
 .DefaultButton {

@@ -97,11 +97,7 @@ const PDFViewerPage = ( {pdfInfos} ) => {
       };
 
     return (
-
-        <Container className="RelativeContainer">
             <PDFViewer />
-        </Container>     
-
         );
     }
 

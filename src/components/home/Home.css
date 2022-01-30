@@ -12,13 +12,18 @@
 }
 
 @media (min-width : 768px) {
-    .QuestionContainer {
+    .HomeContainer {
         width: 40%;
     }
 }
 
 @media (min-width : 1268px) {
-    .QuestionContainer {
+    .HomeContainer {
         width: 30%;
     }
 }
+
+/* .RandomMathRender {
+    position: relative;
+    height: 300px;
+} */

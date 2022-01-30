@@ -2,6 +2,7 @@ body {
   position:absolute; 
   top:0; bottom:0; right:0; left:0; 
   --choco-font-family:'choco', Fallback, sans-serif;
+  --celtic-font:'celtic', Fallback, sans-serif;
 
   --brazil-navbar-color:  #2e3235;
 
@@ -38,3 +39,11 @@ code {
   font-weight: normal; 
   src: local('Myriad Pro Regular'), url('./fonts/choco.otf') format('truetype');
 }
+
+@font-face {
+  font-family: 'celtic';
+  font-style: normal;
+  font-weight: normal; 
+  src: local('Myriad Pro Regular'), url('./fonts/celtic.otf') format('truetype');
+}
+

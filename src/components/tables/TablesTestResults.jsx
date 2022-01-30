@@ -11,12 +11,19 @@ const TablesTestResults = ({questions,
 
     return (
         
-        <Container className="RelativeContainer">
+        <>
             <h1 style={{textDecoration: "underline"}}>Résultats</h1>
             <Container className="ResultsContainer">
 
                 <Table className="TablesTestResults">
-                    <div>
+                    <thead>
+                        <tr>
+                            <th>Vous avez répondu</th>
+                            <th>Résultat</th>
+                            <th>La bonne réponse</th>
+                        </tr>
+                    </thead>
+                    <tbody>
                         {questions.map(question => (
                             <TablesTestResultsList 
                                 key={question.id}
@@ -24,7 +31,7 @@ const TablesTestResults = ({questions,
                                 answer={user.answers[question.id]}
                             />
                         ))}
-                    </div>
+                    </tbody>
                 </Table>
 
             </Container> 
@@ -51,7 +58,7 @@ const TablesTestResults = ({questions,
 
             </Container>
 
-        </Container>  
+        </>  
     );
 }
 

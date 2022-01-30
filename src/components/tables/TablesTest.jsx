@@ -1,12 +1,9 @@
 import React from 'react';
-import { Container } from 'react-bootstrap';
 
 import TablesTestQuestionDisplay from './TablesTestQuestionDisplay';
 import TablesTestManager from './TablesTestManager';
-import MathJaxDisplay from './MathJaxDisplay';
 
 import CustomLogger from '../general-content/CustomLogger';
-import { GiLaurelCrown } from 'react-icons/gi';
 
 const TablesTest = () => {
 
@@ -62,15 +59,13 @@ const TablesTest = () => {
                 var a = getRandomInt(levels[i].maxInt);
                 var b = getRandomInt(levels[i].maxInt);
 
-                var enounceModel = "\\({" + a + "}\\times{"+ b + "} = \\)"; 
+                var enounce = a + " x " + b + " = "; 
     
                 var question = {
                     id: j,
                     a: a,
                     b: b,
-                    enounceModel: enounceModel,
-                    enounce: <MathJaxDisplay 
-                                toShow={enounceModel}/>,
+                    enounce: enounce,
                     goodAnswer: a*b
                 }
                 randomQuestions.push(question);
@@ -116,14 +111,12 @@ const TablesTest = () => {
                     gameStarted={gameStarted}
                     reInit={reInit}>
     
-            <Container className="RelativeContainer">
-                <TablesTestQuestionDisplay 
-                            questions={questions}
-                            count={count}
-                            next={next} 
-                            user={user}
-                            setUser={setUser} /> 
-            </Container>
+            <TablesTestQuestionDisplay 
+                        questions={questions}
+                        count={count}
+                        next={next} 
+                        user={user}
+                        setUser={setUser} /> 
 
         </TablesTestManager>
             

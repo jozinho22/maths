@@ -3,21 +3,29 @@
     width : 50%;
 }
 
-.IconsResults {
-    text-align: left;
-    width : 20%; 
-}
-
 .GoodAnswerToDisplay {
-    text-align: left;
+    text-align: center;
     color: var(--green-color);
-    width: 30%;
 }
 
 .Icon {
     text-align: center;
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
+}
+
+@media (min-width: 768px) {
+    .Icon {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@media (min-width: 1268px) {
+    .Icon {
+        width: 35px;
+        height: 35px;
+    }  
 }
 
 .CheckIcon {

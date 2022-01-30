@@ -1,5 +1,5 @@
 import React from 'react';
-import { Form, Container, Button, Table, Row, Col, Alert} from 'react-bootstrap';
+import { Container, Button, Row, Col } from 'react-bootstrap';
 import Timer from './Timer';
 import './TablesTestQuestionDisplay.css';
 import CustomLogger from '../general-content/CustomLogger';
@@ -32,15 +32,16 @@ const TablesTestQuestionDisplay =
             isTrue: false
         }
 
-        if(userAnswer.input !== undefined) {
-            if(userAnswer.input == trueAnswer) {
+        var userInputNumber = parseInt(userAnswer.input);
+
+        if(userAnswer.input !== '') {
+            if(userInputNumber === trueAnswer) {
                 userSlice.score += 1;
                 userAnswer.isTrue = true;
             }
-            userSlice.answers.push(userAnswer);
-        } else {
-            userSlice.answers.push(null);
-        }  
+        }
+        
+        userSlice.answers.push(userAnswer);
 
         setUser(userSlice);        
         next();
@@ -100,13 +101,6 @@ const TablesTestQuestionDisplay =
     }, [inputText]);
 
     const handleKeyboardInput = (keyboardInput) => {
-        console.log('keyboardInput')
-        console.log(typeof keyboardInput)
-        console.log(keyboardInput)
-        console.log('inputText')
-        console.log(typeof inputText)
-        console.log(inputText)
-
         if(!isNaN(keyboardInput)) {
             if(inputText === '0' && keyboardInput === 0) {
                 updateRedAlertMessage(true, 'Très drôle...');
@@ -162,7 +156,7 @@ const TablesTestQuestionDisplay =
     }
 
     return (
-        <Container >
+        <>
             <Timer className ="Timer"
                 maxTime={maxTime}
                 secondes={secondes}
@@ -190,7 +184,7 @@ const TablesTestQuestionDisplay =
                         Valider
                 </Button>   
             </Container>
-        </Container>
+        </>
     );
 }
 
