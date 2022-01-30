@@ -100,11 +100,18 @@ const TablesTestQuestionDisplay =
     }, [inputText]);
 
     const handleKeyboardInput = (keyboardInput) => {
+        console.log('keyboardInput')
+        console.log(typeof keyboardInput)
+        console.log(keyboardInput)
+        console.log('inputText')
+        console.log(typeof inputText)
+        console.log(inputText)
+
         if(!isNaN(keyboardInput)) {
-            setInputText(inputText + keyboardInput)
-            if(inputText === '' && keyboardInput === 0) {
+            if(inputText === '0' && keyboardInput === 0) {
                 updateRedAlertMessage(true, 'Très drôle...');
-                setInputText(inputText.slice(0, inputText.length-1));
+            } else {
+                setInputText(inputText + keyboardInput)
             }
         } else if(keyboardInput === 'C') {
             setInputText("")

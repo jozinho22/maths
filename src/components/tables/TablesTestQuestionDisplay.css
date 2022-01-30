@@ -79,4 +79,5 @@
 .Alert {
     color: red;
     font-size: large;
+    position: absolute;
 }
