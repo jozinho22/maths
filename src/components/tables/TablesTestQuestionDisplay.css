@@ -7,9 +7,9 @@
     font-size: small;
     padding: 20px;
     display: inline-block;
-    margin-top: 20px;
+    margin-top: 10px;
     font-family: var(--celtic-font);
-    width: 80%;
+    width: 60%;
 }
 
 .QuestionContainer .col {
@@ -23,7 +23,7 @@
         font-size: x-large;
     }
     .Alert {
-        font-size: xx-large;
+        font-size: large;
         position: absolute;
     }
     .CiferKeyboard {
@@ -33,11 +33,11 @@
 
 @media (min-width : 1268px) {
     .QuestionContainer {
-        width: 70%;
-        font-size: large;
+        width: 30%;
+        font-size: x-large;
     }
     .Alert {
-        font-size: xx-large;
+        font-size: small;
         position: absolute;
     }
     .CiferKeyboard {
@@ -61,7 +61,7 @@
 }
 
 .CiferKeyboard {
-    margin-top: 30px;
+    margin-top: 50px;
     width: 70%;
 }
 
@@ -69,4 +69,5 @@
     color: red;
     font-size: large;
     position: absolute;
+    margin-top: 10px;
 }

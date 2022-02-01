@@ -59,12 +59,12 @@ const TablesTestQuestionDisplay =
     React.useEffect(() => {
         setEndTimer(false);
 
-        maxTime = 10;
+        maxTime = 10;        
         if(questions[count].a > 9) {
-            maxTime = maxTime + 20;
+            maxTime = maxTime + 30;
         }
         if(questions[count].b > 9) {
-            maxTime = maxTime + 20;
+            maxTime = maxTime + 30;
         }
 
         setTimer(maxTime)
@@ -116,23 +116,55 @@ const TablesTestQuestionDisplay =
 
     // pb : le clavier se met a jour toutes les secondes;....
     const CiferKeyboard = () => {
-        var row1 = [1, 2, 3];
+/*         var row1 = [1, 2, 3];
         var row2 = [4, 5, 6];
         var row3 = [7, 8, 9];
         var row4 = ['C', 0, '<'];
 
-        var rows = [row1, row2, row3, row4];
+        var rows = [row1, row2, row3, row4]; */
+
+        var rows = [];
+        var index = 0;
+        for(var k = 0; k < 3; k++) {
+            var cols = [];
+            for(var l = 0; l < 3; l++) {
+                var col = {id: 'col' + index, cifer: index + 1};
+                cols.push(col);
+                index++;
+            }
+            rows.push({id: 'row' + k, cols: cols});
+        }
+       
+        rows.push(
+            {
+                id: 'row' + 4, 
+                cols: [
+                        {
+                            id: 'col' + index++, 
+                            cifer: 'C'
+                        },
+                        {
+                            id: 'col' + index++, 
+                            cifer: 0
+                        },
+                        {
+                            id: 'col' + index++, 
+                            cifer: '<'
+                        }
+                    ]
+            }
+        );
         return (
             <Container className="CiferKeyboard">
             {
                 rows.map(row => (
-                    <Row>
-                        {row.map(cifer =>(  
-                            <Col>
+                    <Row key={row.id}>
+                        {row.cols.map(col =>(  
+                            <Col key={col.id}>
                                 <Button 
                                     className="GreenButton"
-                                    onClick={() => handleKeyboardInput(cifer)}>
-                                    {cifer}
+                                    onClick={() => handleKeyboardInput(col.cifer)}>
+                                    {col.cifer}
                                 </Button>
                             </Col>  
                         ))}
@@ -157,13 +189,13 @@ const TablesTestQuestionDisplay =
 
     return (
         <>
-            <Timer className ="Timer"
+{/*             <Timer className ="Timer"
                 maxTime={maxTime}
                 secondes={secondes}
                 setSecondes={setSecondes} 
                 minutes={minutes}
                 setMinutes={setMinutes}
-                setEndTimer={setEndTimer} />
+                setEndTimer={setEndTimer} /> */}
             <Container className="QuestionContainer" >    
                 <Row>
                     <Col className="Enounce">

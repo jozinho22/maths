@@ -1,12 +1,13 @@
 .HomeContainer {
-    position: relative;
-    border-color: black;
+    position: absolute;
+    top: 50%; /* Position Y halfway in */
+    left: 50%; /* Position X halfway in */
+    transform: translate(-50%,-50%); /* Move it halfway back(x,y) */
     background-color: var(--front-color);
     border-radius: 10px;
     color: var(--back-color);
-    font-size: x-large;
-    padding: 20px;
-    display: inline-block;
+    font-size: xx-large;
+    padding: 50px;
     margin-top: 20px;
     width: 60%;
 }

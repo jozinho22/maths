@@ -25,7 +25,7 @@
     border-color: white;
     color: var(--back-color);
     margin: 20px;
-    padding: 10px;
+    padding: 25px;
 }
 
 .DefaultButton:hover {
