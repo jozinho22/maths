@@ -1,3 +1,19 @@
 .MathJaxDisplay {
     padding: 10px;
 }
+
+@media (min-width: 768px) {
+    mjx-math {
+        font-size: x-large;
+    }
+}
+
+@media (min-width: 1268px) {
+    mjx-math {
+        font-size: xx-large;
+    } 
+}
+
+mjx-math {
+    font-size: large;
+}

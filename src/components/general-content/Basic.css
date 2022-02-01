@@ -6,7 +6,6 @@
     padding-bottom: 40px; 
     min-height: 100vh; 
     font-family: var(--celtic-font);
-
 }
 
 .LoadingSpinner {
@@ -25,7 +24,7 @@
     border-color: white;
     color: var(--back-color);
     margin: 20px;
-    padding: 25px;
+    padding: 20px;
 }
 
 .DefaultButton:hover {
