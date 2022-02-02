@@ -6,18 +6,18 @@
     padding-bottom: 40px; 
     min-height: 100vh; 
     font-family: var(--celtic-font);
-    font-size: large;
+    font-size: small;
  }
 
  @media (min-width: 768px) {
     .RelativeContainer {
-        font-size: x-large;
+        font-size: large;
     }
  }
 
  @media (min-width: 1268px) {
     .RelativeContainer {
-        font-size: xx-large;
+        font-size: x-large;
     }
 }
 
@@ -37,7 +37,22 @@
     border-color: white;
     color: var(--back-color);
     margin: 20px;
-    padding: 20px;
+    padding: 15px;
+    font-size: small;
+}
+
+@media (min-width: 768px) {
+    .DefaultButton {
+        font-size: large;
+        margin: 25px;
+        padding: 20px;
+    }
+ }
+
+ @media (min-width: 1268px) {
+    .DefaultButton {
+        font-size: x-large;
+    }
 }
 
 .DefaultButton:hover {

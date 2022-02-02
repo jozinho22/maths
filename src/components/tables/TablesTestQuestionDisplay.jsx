@@ -189,13 +189,13 @@ const TablesTestQuestionDisplay =
 
     return (
         <>
-{/*             <Timer className ="Timer"
+            <Timer className ="Timer"
                 maxTime={maxTime}
                 secondes={secondes}
                 setSecondes={setSecondes} 
                 minutes={minutes}
                 setMinutes={setMinutes}
-                setEndTimer={setEndTimer} /> */}
+                setEndTimer={setEndTimer} />
             <Container className="QuestionContainer" >    
                 <Row>
                     <Col className="Enounce">

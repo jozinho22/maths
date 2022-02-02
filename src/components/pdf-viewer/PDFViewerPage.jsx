@@ -11,21 +11,24 @@ const PDFViewerPage = ( {pdfInfos} ) => {
 
     var {relativePath} = useParams();
 
-    console.log('getPdfResouce')
-    console.log(pdfInfos)
-    console.log(relativePath)
-
     var filePath = getPdfResouce(pdfInfos, relativePath);
 
     const PDFViewer = () => {
         const [page, setPage] = useState(1);
         const [pages, setPages] = useState(1);
       
+        var opacityClass = "";
+
         const renderPagination = () => {
 
-          const BackButton = () => {
+          const BackButton = ({opacity}) => {
+
+            if(opacity) {
+              opacityClass = "Opacity";
+            }
+
             return (
-              <Button className="DefaultButton"
+              <Button className={`DefaultButton ${opacityClass}`}
                   onClick={() => {
                     let newPage = page - 1;
                     newPage = newPage > 0 ? newPage : 1;
@@ -38,7 +41,7 @@ const PDFViewerPage = ( {pdfInfos} ) => {
 
           const NextButton = () => {
               return (
-                <Button className="DefaultButton"
+                <Button className={`DefaultButton ${opacityClass}`}
                     onClick={() => {
                       let newPage = page + 1;
                       newPage = newPage > pages ? pages : newPage;
@@ -53,13 +56,19 @@ const PDFViewerPage = ( {pdfInfos} ) => {
             <Container className="Pagination">
               <Row>
                 <Col style={{textAlign:"right"}}>
-                    <BackButton />
+                    {pages > 1 ?
+                      <BackButton /> : 
+                        <BackButton opacity={true} />
+                    }
                 </Col>
                 <Col className="CenterText">
                       Page: {page} / {pages} 
                 </Col>
                 <Col style={{textAlign:"left"}}>
-                    <NextButton />
+                    {pages > 1 ?
+                      <NextButton /> : 
+                        <NextButton opacity={true} />
+                    }
                 </Col>
               </Row>
             </Container>
@@ -87,7 +96,6 @@ const PDFViewerPage = ( {pdfInfos} ) => {
               file={filePath}
               page={page}
               onDocumentComplete={pages => {
-                console.log(pages);
                 setPages(pages);
                 setPage(1);
               }} />

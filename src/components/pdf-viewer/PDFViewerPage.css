@@ -6,3 +6,7 @@ canvas {
     width: 100% !important;
     height: 100% !important;
 }
+
+.Opacity {
+    opacity: 0.5;
+}
