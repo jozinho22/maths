@@ -7,6 +7,10 @@
     font-family: var(--celtic-font);
   }
 
+  .CustomNav .navbar-nav {
+    padding: 15px;
+  }
+
   .CustomNav .navbar-brand {
     margin-right: 0;
     color: var(--back-color);
@@ -27,4 +31,5 @@
 
   .CustomNav .dropdown-item {
     color: var(--back-color) ;
+    padding: 10px;
   }

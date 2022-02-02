@@ -4,16 +4,16 @@
 
 @media (min-width: 768px) {
     mjx-math {
-        font-size: x-large;
+        font-size: large !important;
     }
 }
 
 @media (min-width: 1268px) {
     mjx-math {
-        font-size: xx-large;
+        font-size: x-large !important;
     } 
 }
 
 mjx-math {
-    font-size: large;
+    font-size: xx-large !important;
 }

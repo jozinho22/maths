@@ -6,8 +6,11 @@
     padding-bottom: 40px; 
     min-height: 100vh; 
     font-family: var(--celtic-font);
-}
+ }
 
+ .CelticFont {
+    font-family: var(--celtic-font);
+ }
 .LoadingSpinner {
     position: relative; /* or absolute */
     top: 150px;
@@ -53,18 +56,6 @@
 
 .RedButton:hover {
     background-color: var(--red-hover-color);
-}
-
-@media(min-width:768px) {
-    .RelativeContainer {
-        width: 60%;
-    }
-}
-
-@media(min-width:1278px) {
-    .RelativeContainer {
-        width: 80%;
-    }
 }
 
 .CenterText {

@@ -1,4 +1,4 @@
-.HomeContainer {
+.HomeTitleContainer {
     position: absolute;
     top: 50%; /* Position Y halfway in */
     left: 50%; /* Position X halfway in */
@@ -10,21 +10,17 @@
     padding: 50px;
     margin-top: 20px;
     width: 60%;
+    z-index: 1;
 }
 
 @media (min-width : 768px) {
-    .HomeContainer {
+    .HomeTitleContainer {
         width: 40%;
     }
 }
 
 @media (min-width : 1268px) {
-    .HomeContainer {
+    .HomeTitleContainer {
         width: 30%;
     }
 }
-
-/* .RandomMathRender {
-    position: relative;
-    height: 300px;
-} */
