@@ -13,6 +13,7 @@ const Header = ({pdfInfos}) => {
               <Nav>
 
                 <Nav.Link href="/tables-test">Réviser ses tables</Nav.Link>
+                <Nav.Link href="/charts">Fonctions usuelles</Nav.Link>
 
                 <NavDropdown title="Cours/exercices en PDF" id="basic-nav-dropdown">
                    {pdfInfos.map(pdfInfo => 

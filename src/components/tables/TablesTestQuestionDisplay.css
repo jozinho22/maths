@@ -65,7 +65,7 @@
 
 .Alert {
     color: red;
-    font-size: large;
+    font-size: small;
     position: absolute;
     margin-top: 10px;
 }

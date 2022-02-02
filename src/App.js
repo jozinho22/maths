@@ -6,6 +6,7 @@ import './components/general-content/Basic.css';
 import Header from './components/general-content/Header';
 import Home from './components/home/Home';
 import TablesTest from './components/tables/TablesTest';
+import Charts from './components/charts/Charts';
 import PDFViewerPage from './components/pdf-viewer/PDFViewerPage';
 import PDFViewerHome from './components/pdf-viewer/PDFViewerHome';
 import pdfViewerPagesBuilder from './components/pdf-viewer/pdfViewerPagesBuilder';
@@ -39,6 +40,7 @@ function App() {
                             <Routes>
                                 <Route exact path="/" element={<Home />} />
                                 <Route path="/tables-test" element={<TablesTest />} />
+                                <Route path="/charts" element={<Charts />} />
                                 <Route path="/pdf-viewer" element={<PDFViewerHome />} />
                                 <Route 
                                     path="/pdf-viewer/:relativePath" 
