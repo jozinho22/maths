@@ -1,11 +1,25 @@
 .AnswersResults {
     text-align: center;
     width : 50%;
+    font-size: x-small;
 }
 
 .GoodAnswerToDisplay {
     text-align: center;
     color: var(--green-color);
+    font-size: x-small;
+}
+
+@media (min-width: 360px) {
+    .AnswersResults, .GoodAnswerToDisplay {
+        font-size: small;
+    }
+}
+
+@media (min-width: 768px) {
+    .AnswersResults, .GoodAnswerToDisplay {
+        font-size: large;
+    }
 }
 
 .Icon {

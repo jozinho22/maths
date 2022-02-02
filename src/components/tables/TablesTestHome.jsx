@@ -12,8 +12,7 @@ const TablesTestHome = ({levels,
             <h2>Quizz pour réviser ses tables de multiplication</h2>
                 {
                     levels.map(level => (
-                        <Container key={level.id} 
-                                   className="ButtonPlacement">
+                        <Container key={level.id} >
                             <Button 
                                 className={`${level.style} DefaultButton`}
                                 onClick={() => launchGame(level.id)}>

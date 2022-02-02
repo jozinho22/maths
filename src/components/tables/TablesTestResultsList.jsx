@@ -7,10 +7,7 @@ import './TablesTestResultsList.css';
 
 const TablesTestResultsList = ({ question, answer }) => {
 
-    var answerToShow = question.enounce + answer.input;
-    if(answer.input !== '') {
-        answerToShow = answerToShow + ' ';
-    }
+    var answerToShow = question.enounce;
     var goodAnswerToShow = question.goodAnswer;
 
     return (
@@ -31,11 +28,7 @@ const TablesTestResultsList = ({ question, answer }) => {
                 </td>
                 <td className="GoodAnswerToDisplay">
                 {
-                answer.input == '' ?
-                    <p>{goodAnswerToShow}</p> : 
-                            answer.isTrue ? 
-                            <p style={{color: "var(--back-color)"}}>{goodAnswerToShow}</p> : 
-                                    <p>{goodAnswerToShow}</p>
+                    <p style={{color: "var(--green-color)"}}>{goodAnswerToShow}</p> 
                 }
                 </td>
             </tr>

@@ -12,7 +12,7 @@ const TablesTestResults = ({questions,
     return (
         
         <>
-            <h1 style={{textDecoration: "underline"}}>Résultats</h1>
+            <h2 style={{textDecoration: "underline"}}>Résultats</h2>
             <Container className="ResultsContainer">
 
                 <Table className="TablesTestResults">
@@ -36,10 +36,10 @@ const TablesTestResults = ({questions,
 
             </Container> 
 
-            <h2>Score : {user.score}/{questions.length}</h2>
+            <h3 style={{textDecoration: "underline"}}>Score : {user.score}/{questions.length}</h3>
             <br></br>
-            <h2>Une autre ?</h2>
-            <Container className="ButtonPlacement">
+            <h3>Une autre ?</h3>
+            <Container>
                 <Row>
                 {
                     levels.map(level => (

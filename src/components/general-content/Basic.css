@@ -1,7 +1,7 @@
 .RelativeContainer {
     position: relative;
-    /* refers to the Header (80px) + 20px */
-    padding-top: 100px;
+    /* refers to the Header (100px) + 40px */
+    padding-top: 140px;
     /* refers to the Footer (40px) + 20px */
     padding-bottom: 60px; 
     min-height: 100vh; 
@@ -12,6 +12,7 @@
  @media (min-width: 360px) {
     .RelativeContainer {
         font-size: small;
+        padding-top: 120px;
     }
  }
 
@@ -28,25 +29,19 @@
     background-color: var(--back-color);
 }
 
-.BottomButtonPlacement {
-    margin-bottom: 40px; 
-}
-
 .DefaultButton {
 	background-color: var(--blue-color);
     border-color: white;
     color: var(--back-color);
     margin-top: 20px;
     margin-bottom: 20px;
-    padding: 10px;
-    font-size: x-small;
+    padding: 15px;
+    font-size: small;
 }
 
 
 @media (min-width: 360px) {
     .DefaultButton {
-        padding: 0px;
-        font-size: small;
         margin-top: 20px;
         margin-bottom: 20px;
     }
@@ -55,7 +50,7 @@
 @media (min-width: 768px) {
     .DefaultButton {
         font-size: large;
-        margin-top: 20px;
+        margin-top: 40px;
         margin-bottom: 20px;
         padding: 20px;
     }

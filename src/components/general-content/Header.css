@@ -1,7 +1,6 @@
   .CustomNav {
     background-color : var(--navbar-color);
     border-bottom: 2px solid var(--front-color);
-    height : 80px;
     margin-left: auto;
     margin-right: auto;
     font-family: var(--celtic-font);

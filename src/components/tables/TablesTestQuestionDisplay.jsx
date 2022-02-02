@@ -51,7 +51,7 @@ const TablesTestQuestionDisplay =
         if(timeInSecondes < 59) {
             setMinutes(0);
         } else {
-            setMinutes(timeInSecondes / 60);
+            setMinutes(Math.floor(timeInSecondes / 60));
         }
         setSecondes(timeInSecondes % 60);  
     }
@@ -59,13 +59,15 @@ const TablesTestQuestionDisplay =
     React.useEffect(() => {
         setEndTimer(false);
 
-        maxTime = 10;        
+        maxTime = 10;
         if(questions[count].a > 9) {
             maxTime = maxTime + 30;
         }
         if(questions[count].b > 9) {
             maxTime = maxTime + 30;
         }
+
+        console.log(maxTime)
 
         setTimer(maxTime)
         if(endTimer) {
