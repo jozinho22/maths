@@ -3,10 +3,43 @@
 }
 
 canvas {
+    padding: 20px;
     width: 100% !important;
     height: 100% !important;
+}
+
+@media (min-width: 768px) {
+    canvas {
+        width: 90% !important;
+    }
+}
+
+@media (min-width: 1268px) {
+    canvas {
+        width: 80% !important;
+    }  
 }
 
 .Opacity {
     opacity: 0.5;
 }
+
+.Hidden {
+    opacity: 0;
+}
+
+.SwitchButton {
+    padding: 20px;
+    position: relative;
+    top: 20px;
+    right: 20px;
+}
+
+.SwitchButton .btn-primary {
+    background-color: var(--blue-color);
+}
+
+.SwitchButton .btn-success {
+    background-color: var(--green-color);
+}
+

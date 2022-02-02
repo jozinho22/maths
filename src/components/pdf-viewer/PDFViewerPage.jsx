@@ -1,4 +1,6 @@
 import { Container, Button, Row, Col } from 'react-bootstrap';
+import BootstrapSwitchButton from 'bootstrap-switch-button-react'
+
 import PDF from "react-pdf-js";
 
 import { useState } from 'react';
@@ -14,12 +16,32 @@ const PDFViewerPage = ( {pdfInfos} ) => {
     var filePath = getPdfResouce(pdfInfos, relativePath);
 
     const PDFViewer = () => {
+
         const [page, setPage] = useState(1);
         const [pages, setPages] = useState(1);
-      
+        const [pagesList, setPagesList] = useState([]);
+        console.log(pagesList)
+
+        const [pageByPageDocument, setPageByPageDocument] = useState(true);
+
+        function switchView() {
+          setPageByPageDocument(!pageByPageDocument);
+          
+          var list = [];
+          for(var k = 0; k < pages; k++) {
+            list.push(
+              {
+                id: k,
+                pageNumber: k + 1
+              }
+            );
+          }
+          setPagesList(list);
+        }
+
         var opacityClass = "";
 
-        const renderPagination = () => {
+        const PaginationPageByPage = () => {
 
           const BackButton = ({opacity}) => {
 
@@ -62,7 +84,7 @@ const PDFViewerPage = ( {pdfInfos} ) => {
                     }
                 </Col>
                 <Col className="CenterText">
-                      Page: {page} / {pages} 
+                      Page : {page} / {pages} 
                 </Col>
                 <Col style={{textAlign:"left"}}>
                     {pages > 1 ?
@@ -75,32 +97,68 @@ const PDFViewerPage = ( {pdfInfos} ) => {
           );
         }
 
-        let pagination = null;
-        if (pages) {
-          pagination = renderPagination();
-        }
+        const PaginationFullDocument = () => {
 
-        const Pagination = () => {
-          return (
-            <>   
-              {pagination}
-            </>
+          return(
+            <Container className="Pagination">
+              <Row>
+
+                <Col>
+                  <Button className="DefaultButton Hidden" />
+                </Col>
+                <Col className="CenterText">
+                  Pages : {pages} 
+                </Col>
+                <Col>
+                  <Button className="DefaultButton Hidden" />
+                </Col>
+              </Row>
+            </Container>
           )
         }
 
         return (
-          <>
-            <Pagination />
-            <PDF 
-              className="CustomCanevas"
-              file={filePath}
-              page={page}
-              onDocumentComplete={pages => {
-                setPages(pages);
-                setPage(1);
-              }} />
-            <Pagination />
-          </>
+          <> 
+              
+              <Container className="SwitchButton">
+                <BootstrapSwitchButton 
+                  size="lg" 
+                  onlabel='Page par page'
+                  onstyle='primary'
+                  offlabel='Document complet'
+                  offstyle='success'
+                  style='w-50 mx-3'
+                  onChange={() => switchView()} />  
+              </Container>
+        
+              {
+                pageByPageDocument ?
+                  <>
+                    <PaginationPageByPage />
+                    <PDF 
+                    className="CustomCanevas"
+                    file={filePath}
+                    page={page}
+                    onDocumentComplete={pages => {
+                      setPage(1);
+                      setPages(pages);
+                    }} />
+                    <PaginationPageByPage />
+                  </> :
+                    <>
+                      <PaginationFullDocument />
+                      {
+                        pagesList.map(item => (
+                          <PDF 
+                            key={item.id}
+                            className="CustomCanevas"
+                            file={filePath}
+                            page={item.pageNumber} />
+                        ))
+                      }
+                    </>
+                }
+          </>     
         );
       };
 
