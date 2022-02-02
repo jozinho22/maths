@@ -29,10 +29,38 @@ canvas {
 }
 
 .SwitchButton {
-    padding: 20px;
     position: relative;
-    top: 20px;
-    right: 20px;
+}
+
+.SwitchButton .btn-lg {
+    font-size: xx-small !important;
+}
+
+@media (min-width: 360px) {
+    .SwitchButton {
+        padding: 30px;
+    }
+    .SwitchButton .btn-lg {
+        font-size: small !important;
+    }
+}
+
+@media (min-width: 768px) {
+    .SwitchButton {
+        padding: 40px;
+    }
+    .SwitchButton .btn-lg {
+        font-size: medium !important;
+    }
+}
+
+@media (min-width: 1268px) {
+    .SwitchButton {
+        padding: 50px;
+    }
+    .SwitchButton .btn-lg {
+        font-size: large !important;
+    }
 }
 
 .SwitchButton .btn-primary {

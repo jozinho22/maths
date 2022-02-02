@@ -1,12 +1,18 @@
 .RelativeContainer {
     position: relative;
-    /* refers to the Header */
+    /* refers to the Header (80px) + 20px */
     padding-top: 100px;
-    /* refers to the Footer */
-    padding-bottom: 40px; 
+    /* refers to the Footer (40px) + 20px */
+    padding-bottom: 60px; 
     min-height: 100vh; 
     font-family: var(--celtic-font);
-    font-size: small;
+    font-size: x-small;
+ }
+
+ @media (min-width: 360px) {
+    .RelativeContainer {
+        font-size: small;
+    }
  }
 
  @media (min-width: 768px) {
@@ -15,12 +21,6 @@
     }
  }
 
- @media (min-width: 1268px) {
-    .RelativeContainer {
-        font-size: x-large;
-    }
-}
-
 .LoadingSpinner {
     position: relative; /* or absolute */
     top: 150px;
@@ -28,32 +28,38 @@
     background-color: var(--back-color);
 }
 
-.ButtonPlacement {
-    padding-top: 10px;
+.BottomButtonPlacement {
+    margin-bottom: 40px; 
 }
 
 .DefaultButton {
 	background-color: var(--blue-color);
     border-color: white;
     color: var(--back-color);
-    margin: 20px;
-    padding: 15px;
-    font-size: small;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+    font-size: x-small;
 }
+
+
+@media (min-width: 360px) {
+    .DefaultButton {
+        padding: 0px;
+        font-size: small;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+ }
 
 @media (min-width: 768px) {
     .DefaultButton {
         font-size: large;
-        margin: 25px;
+        margin-top: 20px;
+        margin-bottom: 20px;
         padding: 20px;
     }
  }
-
- @media (min-width: 1268px) {
-    .DefaultButton {
-        font-size: x-large;
-    }
-}
 
 .DefaultButton:hover {
     background-color: var(--blue-hover-color);

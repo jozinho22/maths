@@ -50,7 +50,7 @@ const PDFViewerPage = ( {pdfInfos} ) => {
             }
 
             return (
-              <Button className={`DefaultButton ${opacityClass}`}
+              <Button className={`DefaultButton BottomButtonPlacement ${opacityClass}`}
                   onClick={() => {
                     let newPage = page - 1;
                     newPage = newPage > 0 ? newPage : 1;
@@ -63,7 +63,7 @@ const PDFViewerPage = ( {pdfInfos} ) => {
 
           const NextButton = () => {
               return (
-                <Button className={`DefaultButton ${opacityClass}`}
+                <Button className={`DefaultButton BottomButtonPlacement ${opacityClass}`}
                     onClick={() => {
                       let newPage = page + 1;
                       newPage = newPage > pages ? pages : newPage;
