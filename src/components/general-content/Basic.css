@@ -1,7 +1,7 @@
 .RelativeContainer {
     position: relative;
     /* refers to the Header (100px) + 40px */
-    padding-top: 140px;
+    padding-top: 80px;
     /* refers to the Footer (40px) + 20px */
     padding-bottom: 60px; 
     min-height: 100vh; 
@@ -35,6 +35,8 @@
     color: var(--back-color);
     margin-top: 20px;
     margin-bottom: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
     padding: 15px;
     font-size: small;
 }

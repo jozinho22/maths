@@ -45,7 +45,7 @@ const TablesTestResults = ({questions,
                     levels.map(level => (
                         <Col key={level.id} >
                             <Button 
-                                className={`${level.style} DefaultButton`}
+                                className={`${level.bStyle}Button DefaultButton`}
                                 onClick={() => reInit(level.id)} >
                                 Rejouer au niveau : {level.title}
                             </Button>

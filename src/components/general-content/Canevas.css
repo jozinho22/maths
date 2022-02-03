@@ -1,0 +1,17 @@
+canvas {
+    padding: 20px;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+@media (min-width: 768px) {
+    canvas {
+        width: 80% !important;
+    }
+}
+
+@media (min-width: 1268px) {
+    canvas {
+        width: 70% !important;
+    }  
+}

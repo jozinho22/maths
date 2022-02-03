@@ -32,13 +32,13 @@ const Home = () => {
     var circleArea = "\\(S_{cercle} = \\pi r^2\\)"
     var circlePerim = "\\(P_{cercle} = 2\\pi r\\)"
     var cosAPlusB = "\\(cos(a+b) = cos(a)cos(b) - sin(a)sin(b)\\)"
-    var dUdivV = "\\(\\frac{d(\\frac{u}{v})}{dx} = \\frac{1}{v^2} (\\frac{d(u)}{dx} - \\frac{d(v)}{dx})\\)";
+    var dUdivV = "\\(\\frac{d(\\frac{u(x)}{v(x)})}{dx} = \\frac{1}{v^2} (\\frac{d(u)}{dx} v(x) - \\frac{d(v)}{dx} u(x))\\)";
     var phi2 = "\\(\\phi^2 = 2\\phi + 1\\)"
 
     return (
         <Container className="HomeContainer">
-            <Container className="HomeTitleContainer CelticFont">
-                <h3>Maths pour tous</h3>
+            <Container className="HomeTitleContainer">
+                <p>Maths pour tous</p>
             </Container>
 
             <Row>

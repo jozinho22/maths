@@ -6,21 +6,25 @@
     background-color: var(--front-color);
     border-radius: 10px;
     color: var(--back-color);
-    font-size: xx-large;
-    padding: 50px;
+    font-size: small;
+    padding: 30px;
     margin-top: 20px;
-    width: 60%;
+    width: 40%;
     z-index: 1;
 }
 
 @media (min-width : 768px) {
     .HomeTitleContainer {
         width: 40%;
+        font-size: medium;
+        padding: 40px;
     }
 }
 
 @media (min-width : 1268px) {
     .HomeTitleContainer {
         width: 30%;
+        font-size: large;
+        padding: 50px;
     }
 }

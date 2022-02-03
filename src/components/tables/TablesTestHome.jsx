@@ -14,7 +14,7 @@ const TablesTestHome = ({levels,
                     levels.map(level => (
                         <Container key={level.id} >
                             <Button 
-                                className={`${level.style} DefaultButton`}
+                                className={`${level.bStyle}Button DefaultButton`}
                                 onClick={() => launchGame(level.id)}>
                                 Niveau : {level.title}
                             </Button>

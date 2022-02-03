@@ -18,4 +18,20 @@ mjx-math {
     } 
 }
 
+.DefaultMathJax {
+    color: var(--blue-color);
+}
+
+.GreenMathJax {
+    color: var(--green-color);
+}
+
+.OrangeMathJax {
+    color: var(--orange-color);
+}
+
+.RedMathJax {
+    color: var(--red-color);
+}
+
 

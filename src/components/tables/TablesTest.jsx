@@ -30,19 +30,19 @@ const TablesTest = () => {
             id: 0,
             title: "newb",
             maxInt: 9,
-            style: "GreenButton"
+            bStyle: "Green"
         }
         var mediumLevel = {
             id: 1,
             title: "je gère",
             maxInt: 20,
-            style: "OrangeButton"
+            bStyle: "Orange"
         }
         var warriorLevel = {
             id: 2,
             title: "math warrior",
             maxInt: 99,
-            style: "RedButton"
+            bStyle: "Red"
         }
         
         levelSlice.push(easyLevel, mediumLevel, warriorLevel);

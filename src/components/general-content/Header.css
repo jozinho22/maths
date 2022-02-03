@@ -16,8 +16,15 @@
     padding-left: 15px;
   }
 
+/*   @media (min-width: 360px) {
+    .CustomNav .nav-link {
+      font-size: medium !important;
+    }
+  } */
+
   .CustomNav .nav-link {
     padding-left: 40px !important;
+    font-size: small !important;
   }
 
   .CustomNav .navbar-collapse {

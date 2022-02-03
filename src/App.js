@@ -2,11 +2,12 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import './components/general-content/Basic.css';
+import './components/general-content/Canevas.css';
 
 import Header from './components/general-content/Header';
 import Home from './components/home/Home';
 import TablesTest from './components/tables/TablesTest';
-import Charts from './components/charts/Charts';
+import Charts from './components/usual-functions/Charts';
 import PDFViewerPage from './components/pdf-viewer/PDFViewerPage';
 import PDFViewerHome from './components/pdf-viewer/PDFViewerHome';
 import pdfViewerPagesBuilder from './components/pdf-viewer/pdfViewerPagesBuilder';
