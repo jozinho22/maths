@@ -134,20 +134,20 @@ const Charts = () => {
         return graphTitle;
     }
 
-    const lowScale = () => {
+    const lowScale = (min, lowinBy) => {
    
-        if(scale <= 1) {
+        if(scale <= min) {
             return scale;
         } else {
-            setScale(scale / 10);
+            setScale(scale / lowinBy);
         }
     }
 
-    const raiseScale = () => {
-        if(scale > 100) {
+    const raiseScale = (max, raisinBy) => {
+        if(scale > max) {
             return scale;
         } else {
-            setScale(scale * 10);
+            setScale(scale * raisinBy);
         }
     }
 
@@ -216,13 +216,13 @@ const Charts = () => {
                     Echelle
                     <Button 
                         className="DefaultButton MiniButton"
-                        onClick={() => lowScale()}>
+                        onClick={() => lowScale(1, 10)}>
                         -
                     </Button>
                     {scale}
                     <Button 
                         className="DefaultButton MiniButton"
-                        onClick={() => raiseScale()}>
+                        onClick={() => raiseScale(100, 10)}>
                         +
                     </Button>
                 </Col>

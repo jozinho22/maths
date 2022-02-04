@@ -7,7 +7,9 @@ function getPdfResouce(pdfInfos, relativePath) {
       }
     }
 
-    return pdfInfos[id].pdfFile;
+    if(id !== undefined) {
+      return pdfInfos[id].pdfFile;
+    }
 }
 
 export default getPdfResouce;

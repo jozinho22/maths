@@ -2,7 +2,7 @@ import nbOr from './files/nbOr.pdf';
 import exos1 from './files/exos1.pdf';
 import base from './files/base.pdf';
 
-function pdfViewerPagesBuilder() {
+function pdfCoursesBuilder() {
 
     var pdfItems = [];
 
@@ -34,4 +34,4 @@ function pdfViewerPagesBuilder() {
 
 }
 
-export default pdfViewerPagesBuilder;
+export default pdfCoursesBuilder;

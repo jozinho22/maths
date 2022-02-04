@@ -11,7 +11,9 @@ import TablesTest from './components/tables/TablesTest';
 import Charts from './components/usual-functions/Charts';
 import PDFViewerPage from './components/pdf-viewer/PDFViewerPage';
 import PDFViewerHome from './components/pdf-viewer/PDFViewerHome';
-import pdfViewerPagesBuilder from './components/pdf-viewer/pdfViewerPagesBuilder';
+import pdfCoursesBuilder from './components/pdf-viewer/pdfCoursesBuilder';
+import pdfAlbumsBuilder from './components/pdf-viewer/pdfAlbumsBuilder';
+
 import Footer from './components/general-content/Footer';
 import Error from  './components/general-content/Error';
 import ThemeContext from './components/context/ThemeContext';
@@ -28,8 +30,10 @@ function App() {
     updateTheme: setTheme
   };
 
-  var pdfInfos = pdfViewerPagesBuilder();
-  console.log(pdfInfos)
+  var pdfCoursesInfos = pdfCoursesBuilder();
+  console.log(pdfCoursesInfos)
+  var pdfAlbumsInfos = pdfAlbumsBuilder();
+  console.log(pdfAlbumsInfos)
 
   return (
         <div className="App">
@@ -37,7 +41,9 @@ function App() {
                 <div className={theme}>
                     <BrowserRouter>
 
-                        <Header pdfInfos={pdfInfos}/>
+                        <Header 
+                            pdfCoursesInfos={pdfCoursesInfos}
+                            pdfAlbumsInfos={pdfAlbumsInfos} />
                         <Container className="RelativeContainer">
                             <Routes>
                                 <Route exact path="/" element={<Home />} />
@@ -46,7 +52,7 @@ function App() {
                                 <Route path="/pdf-viewer" element={<PDFViewerHome />} />
                                 <Route 
                                     path="/pdf-viewer/:relativePath" 
-                                    element={<PDFViewerPage pdfInfos={pdfInfos} />} />
+                                    element={<PDFViewerPage pdfInfos={pdfAlbumsInfos} />} />
                                 <Route path="*" element={<Error />} />
                             </Routes> 
                         </Container>
