@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import './components/general-content/Basic.css';
 import './components/general-content/Canevas.css';
+import './components/general-content/Alert.css';
 
 import Header from './components/general-content/Header';
 import Home from './components/home/Home';

@@ -8,30 +8,66 @@ import './Charts.css';
 
 const Charts = () => {
 
+    const getFunctionColor = (id) => {
+        var modulo = 3;
+        if(id % modulo === 0) {
+            return "Default";
+        } else if(id % modulo === 1) {
+            return "Green";
+        } else if(id % modulo === 2) {
+            return "Red";
+        } 
+    } 
+
+    var i = 0;
     var usualFunctions = [
         {
-            id: 0,
+            id: i,
             mathJaxTitle: "\\(x^2 \\)",
-            color: "Default",
+            color: getFunctionColor(i++),
             formula: (x) => {return x*x}
         },
         {
-            id: 1,
+            id: i,
             mathJaxTitle: "\\(x^3 \\)",
-            color: "Green",
+            color: getFunctionColor(i++),
             formula: (x) => {return x*x*x}
         },
         {
-            id: 2,
+            id: i,
             mathJaxTitle: "\\(\\sqrt(x) \\)",
-            color: "Orange",
+            color: getFunctionColor(i++),
             formula: (x) => {return Math.sqrt(x)}
         },
         {
-            id: 3,
+            id: i,
             mathJaxTitle: "\\(e^x \\)",
-            color: "Red",
+            color: getFunctionColor(i++),
             formula: (x) => {return Math.exp(x)}
+        },
+        {
+            id: i,
+            mathJaxTitle: "\\(ln(x) \\)",
+            color: getFunctionColor(i++),
+            formula: (x) => {return Math.log(x)}
+        },
+        {
+            id: i,
+            mathJaxTitle: "\\(\\frac{1}{x} \\)",
+            color: getFunctionColor(i++),
+            formula: (x) => {return 1 / x}
+        },
+        {
+            id: i,
+            mathJaxTitle: "\\(\\cos(x) \\)",
+            color: getFunctionColor(i++),
+            formula: (x) => {return Math.cos(x)}
+        },
+        {
+            id: i,
+            mathJaxTitle: "\\(\\sin(x) \\)",
+            color: getFunctionColor(i++),
+            formula: (x) => {return Math.sin(x)}
         }
 
     ];
@@ -51,7 +87,7 @@ const Charts = () => {
         const xAxis = [];
         const yAxis = [];
 
-        for(var k = -scale; k <= scale; k++) {
+        for(var k = -scale; k <= scale; k = k + step) {
             xAxis.push(k);
             yAxis.push(f.formula(k));
         } 
@@ -64,19 +100,25 @@ const Charts = () => {
                         {
                             data: yAxis,
                             backgroundColor: [
-                                f.color
+                                f.color === 'Default' ? 'blue' : f.color
                             ],
                             borderColor: [
-                                f.color
+                                f.color === 'Default' ? 'blue' : f.color
                             ],
-                            borderWidth: 1
+                            borderWidth: 0.2
                         }
                     ]
             }
         );
     }, [f, scale, step]);
 
-    
+    // Gestion de l'alerte rouge !!!
+    React.useEffect(() => {
+        if(step > scale) {
+            lowStep();
+        } 
+    }, [scale, step]);
+
     const options = {
         maintainAspectRatio: true,
         responsive: true, 
@@ -89,12 +131,12 @@ const Charts = () => {
         var eqIndex = title.indexOf("(");
         var graphTitle = title.slice(0, eqIndex + 1) + "f(x) = " + title.slice(eqIndex + 1);
 
-        console.log(graphTitle)
         return graphTitle;
     }
 
     const lowScale = () => {
-        if(scale === 0.1) {
+   
+        if(scale <= 1) {
             return scale;
         } else {
             setScale(scale / 10);
@@ -102,7 +144,7 @@ const Charts = () => {
     }
 
     const raiseScale = () => {
-        if(scale === 100) {
+        if(scale > 100) {
             return scale;
         } else {
             setScale(scale * 10);
@@ -110,22 +152,33 @@ const Charts = () => {
     }
 
     const lowStep = () => {
-        if(step === 0.1) {
-            return step;
-        } else {
-            setStep(step - 0.1);
-        }
+        if(step > 0.25) {
+            if(step <= 1) {
+                setStep(step / 2);
+            } else {
+                setStep(step / 10);
+            }
+        } 
     }
 
     const raiseStep = () => {
-        if(step === 1) {
-            return step;
-        } else {
-            setStep(step + 0.1);
+        if(step === scale) {
+
         }
+        if(step < 10) {
+            if(step >= 1) {
+                setStep(step * 10);
+            } else {
+                setStep(step * 2);
+            }
+        } 
     }
 
-    console.log(data)
+    console.log(0 % 4)
+    console.log(1 % 4)
+    console.log(2 % 4)
+    console.log(3 % 4)
+
 
     function isEmpty(obj) {
         return Object.keys(obj).length === 0;
@@ -148,42 +201,46 @@ const Charts = () => {
             {!isEmpty(data) ?
                 <>
                     <MathJaxDisplay 
-                    toShow={getGraphTitle(f.mathJaxTitle)} 
-                    color={f.color}/>
+                        toShow={getGraphTitle(f.mathJaxTitle)} 
+                        color={f.color}/>
                 
                     <Line
                         className="CustomChart" data={data} options={options} />
-                    <Container className="Scale" >
-                        Echelle
-                        <Button 
-                            className="DefaultButton"
-                            onClick={() => lowScale()}>
-                            -
-                        </Button>
-                        {scale}
-                        <Button 
-                            className="DefaultButton"
-                            onClick={() => raiseScale()}>
-                            +
-                        </Button>
-                    </Container>
-                    <Container className="Steps" >
-                        Pas
-                        <Button 
-                            className="DefaultButton"
-                            onClick={() => lowStep()}>
-                            -
-                        </Button>
-                        {step}
-                        <Button 
-                            className="DefaultButton"
-                            onClick={() => raiseStep()}>
-                            +
-                        </Button>
-                    </Container> 
+
+                    
                 </>
                 : <></>
-            }  
+            }
+            <Row>
+                <Col>
+                    Echelle
+                    <Button 
+                        className="DefaultButton MiniButton"
+                        onClick={() => lowScale()}>
+                        -
+                    </Button>
+                    {scale}
+                    <Button 
+                        className="DefaultButton MiniButton"
+                        onClick={() => raiseScale()}>
+                        +
+                    </Button>
+                </Col>
+                <Col>
+                    Pas
+                    <Button 
+                        className="DefaultButton MiniButton"
+                        onClick={() => lowStep()}>
+                        -
+                    </Button>
+                    {step}
+                    <Button 
+                        className="DefaultButton MiniButton"
+                        onClick={() => raiseStep()}>
+                        +
+                    </Button> 
+                </Col> 
+            </Row>
         </>
     );
 }

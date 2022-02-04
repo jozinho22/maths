@@ -1,16 +1,7 @@
-/* .UsualFunctionsButton, .Scale {
-    position: relative;
-}
- */
 @media (min-width: 360px) {
-    .UsualFunctionsButton, .Scale {
+    .UsualFunctionsButton {
         position: fixed;
         right: 5%;
-    }
-    .UsualFunctionsButton {
-        width: 10%;
-    }
-    .Scale {
         width: 20%;
     }
 

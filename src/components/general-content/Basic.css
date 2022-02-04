@@ -12,13 +12,13 @@
  @media (min-width: 360px) {
     .RelativeContainer {
         font-size: small;
-        padding-top: 120px;
     }
  }
 
  @media (min-width: 768px) {
     .RelativeContainer {
         font-size: large;
+        padding-top: 120px;
     }
  }
 
@@ -62,6 +62,11 @@
     background-color: var(--blue-hover-color);
  }
 
+ .MiniButton {
+     padding: 5px;
+     font-size: x-small;
+     margin: 20px;
+ }
 .GreenButton {
     background-color: var(--green-color);
 }

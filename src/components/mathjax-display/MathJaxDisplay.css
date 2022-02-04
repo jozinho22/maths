@@ -18,19 +18,19 @@ mjx-math {
     } 
 }
 
-.DefaultMathJax {
+.DefaultMathJaxText {
     color: var(--blue-color);
 }
 
-.GreenMathJax {
+.GreenMathJaxText {
     color: var(--green-color);
 }
 
-.OrangeMathJax {
+.OrangeMathJaxText {
     color: var(--orange-color);
 }
 
-.RedMathJax {
+.RedMathJaxText {
     color: var(--red-color);
 }
 
