@@ -15,3 +15,9 @@
     margin-top: 0px;
     padding: 0px;
 }
+
+.GraphTitle {
+    padding: 20px;
+    width: 100% !important;
+    height: 100% !important;
+}

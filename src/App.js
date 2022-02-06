@@ -8,7 +8,7 @@ import './components/general-content/Alert.css';
 import Header from './components/general-content/Header';
 import Home from './components/home/Home';
 import TablesTest from './components/tables/TablesTest';
-import Charts from './components/usual-functions/Charts';
+import Charts from './components/usual-functions/UsualFunctions';
 import PDFViewerPage from './components/pdf-viewer/PDFViewerPage';
 import PDFViewerHome from './components/pdf-viewer/PDFViewerHome';
 import pdfCoursesBuilder from './components/pdf-viewer/pdfCoursesBuilder';
