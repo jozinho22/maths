@@ -32,7 +32,10 @@ const Home = () => {
     var circleArea = "\\(S_{cercle} = \\pi r^2\\)"
     var circlePerim = "\\(P_{cercle} = 2\\pi r\\)"
     var cosAPlusB = "\\(cos(a+b) = cos(a)cos(b) - sin(a)sin(b)\\)"
-    var dUdivV = "\\(\\frac{u}{v}' = \\frac{u' v - v' u}{v^2}\\)";
+    var dUdivV = "\\((\\frac{u}{v})' = \\frac{u' v - v' u}{v^2}\\)";
+    var dUplusV = "\\((u+v)' = u' + v' \\)";
+    var dUV = "\\((uv)' = u'v + v'u \\)";
+
     var phi2 = "\\(\\phi^2 = 2\\phi + 1\\)"
 
     return (
@@ -58,8 +61,8 @@ const Home = () => {
                 <Col><MathJaxDisplay toShow={intSqrtX2Minus1} /></Col>
                 <Col><MathJaxDisplay toShow={sinCos} /></Col>
                 <Col><MathJaxDisplay toShow={powPowPow} /></Col>
-{/*                 <Col><MathJaxDisplay toShow={cosAPlusB} /></Col>
- */}                <Col><MathJaxDisplay toShow={dExpX} /></Col>
+                <Col><MathJaxDisplay toShow={cosAPlusB} /></Col>
+                <Col><MathJaxDisplay toShow={dExpX} /></Col>
                 <Col><MathJaxDisplay toShow={dX3} /></Col>
                 <Col><MathJaxDisplay toShow={coneVolume} /></Col>
                 <Col><MathJaxDisplay toShow={dsin} /></Col>
@@ -68,6 +71,9 @@ const Home = () => {
                 <Col><MathJaxDisplay toShow={dUdivV} /></Col>
                 <Col><MathJaxDisplay toShow={phi2} /></Col>
                 <Col><MathJaxDisplay toShow={sphVolume} /></Col>
+                <Col><MathJaxDisplay toShow={dUV} /></Col>
+                <Col><MathJaxDisplay toShow={dUplusV} /></Col>
+
             </Row>  
         </Container>
     );

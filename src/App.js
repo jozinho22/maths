@@ -8,7 +8,8 @@ import './components/general-content/Alert.css';
 import Header from './components/general-content/Header';
 import Home from './components/home/Home';
 import TablesTest from './components/tables/TablesTest';
-import Charts from './components/usual-functions/UsualFunctions';
+import UsualFunctions from './components/usual-functions/UsualFunctions';
+
 import PDFViewerPage from './components/pdf-viewer/PDFViewerPage';
 import PDFViewerHome from './components/pdf-viewer/PDFViewerHome';
 import pdfResourceBuilder from './components/pdf-viewer/pdfResourceBuilder';
@@ -57,7 +58,7 @@ function App() {
                             <Routes>
                                 <Route exact path="/" element={<Home />} />
                                 <Route path="/tables-test" element={<TablesTest />} />
-                                <Route path="/charts" element={<Charts />} />
+                                <Route path="/usual-functions" element={<UsualFunctions />} />
                                 <Route path="/pdf-viewer" element={<PDFViewerHome />} />
                                 <Route 
                                     path="/pdf-viewer/:relativePath" 
