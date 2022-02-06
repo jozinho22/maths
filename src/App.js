@@ -11,8 +11,7 @@ import TablesTest from './components/tables/TablesTest';
 import Charts from './components/usual-functions/UsualFunctions';
 import PDFViewerPage from './components/pdf-viewer/PDFViewerPage';
 import PDFViewerHome from './components/pdf-viewer/PDFViewerHome';
-import pdfCoursesBuilder from './components/pdf-viewer/pdfCoursesBuilder';
-import pdfAlbumsBuilder from './components/pdf-viewer/pdfAlbumsBuilder';
+import pdfResourceBuilder from './components/pdf-viewer/pdfResourceBuilder';
 
 import Footer from './components/general-content/Footer';
 import Error from  './components/general-content/Error';
@@ -30,10 +29,19 @@ function App() {
     updateTheme: setTheme
   };
 
-  var pdfCoursesInfos = pdfCoursesBuilder();
-  console.log(pdfCoursesInfos)
-  var pdfAlbumsInfos = pdfAlbumsBuilder();
-  console.log(pdfAlbumsInfos)
+  var pdfInfos = pdfResourceBuilder();
+
+/*   var pdfCoursesInfos = [];
+  var pdfAlbumsInfos = [];
+
+  for(var k = 0; k < pdfInfos.length; k++) {
+      console.log(pdfInfos[k].relativePath)
+      if(pdfInfos[k].filePath.startsWith('./courses')) {
+        pdfCoursesInfos.push(pdfInfos[k]);
+      } else if(pdfInfos[k].filePath.startsWith('./albums')) {
+        pdfAlbumsInfos.push(pdfInfos[k]);
+      }
+  } */
 
   return (
         <div className="App">
@@ -42,8 +50,9 @@ function App() {
                     <BrowserRouter>
 
                         <Header 
-                            pdfCoursesInfos={pdfCoursesInfos}
-                            pdfAlbumsInfos={pdfAlbumsInfos} />
+                            /* pdfAlbumsInfos={pdfAlbumsInfos}
+                            pdfCoursesInfos={pdfCoursesInfos}  */
+                            pdfInfos={pdfInfos} />
                         <Container className="RelativeContainer">
                             <Routes>
                                 <Route exact path="/" element={<Home />} />
@@ -52,7 +61,7 @@ function App() {
                                 <Route path="/pdf-viewer" element={<PDFViewerHome />} />
                                 <Route 
                                     path="/pdf-viewer/:relativePath" 
-                                    element={<PDFViewerPage pdfInfos={pdfAlbumsInfos} />} />
+                                    element={<PDFViewerPage pdfInfos={pdfInfos} />} />
                                 <Route path="*" element={<Error />} />
                             </Routes> 
                         </Container>

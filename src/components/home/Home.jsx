@@ -32,7 +32,7 @@ const Home = () => {
     var circleArea = "\\(S_{cercle} = \\pi r^2\\)"
     var circlePerim = "\\(P_{cercle} = 2\\pi r\\)"
     var cosAPlusB = "\\(cos(a+b) = cos(a)cos(b) - sin(a)sin(b)\\)"
-    var dUdivV = "\\(\\frac{d(\\frac{u(x)}{v(x)})}{dx} = \\frac{1}{v^2} (\\frac{d(u)}{dx} v(x) - \\frac{d(v)}{dx} u(x))\\)";
+    var dUdivV = "\\(\\frac{u}{v}' = \\frac{u' v - v' u}{v^2}\\)";
     var phi2 = "\\(\\phi^2 = 2\\phi + 1\\)"
 
     return (

@@ -38,4 +38,17 @@
   .CustomNav .dropdown-item {
     color: var(--back-color) ;
     padding: 10px;
+    font-size: x-small;
+    width: 50%;
+    display: inline-block;
+    text-align: center;
+  }
+
+  @media (min-width: 768px) {
+    .CustomNav .dropdown-item {
+      font-size: small;
+      width: 100%;
+      display: block;
+      text-align: left;
+    }
   }
