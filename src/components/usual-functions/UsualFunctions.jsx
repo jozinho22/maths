@@ -1,6 +1,6 @@
 import React from "react";
-import { Container, Row, Col, Button } from "react-bootstrap";
-import { LineChart, XAxis, YAxis, ReferenceLine, ResponsiveContainer, Tooltip, CartesianGrid, Line } from 'recharts';
+import { Container, Button } from "react-bootstrap";
+import { LineChart, XAxis, YAxis, ReferenceLine, ResponsiveContainer, Tooltip, Line } from 'recharts';
 
 import MathJaxDisplay from '../mathjax-display/MathJaxDisplay';
 import buildUsualFunctions from "./buildUsualFunctions";
@@ -16,7 +16,6 @@ const UsualFunctions2 = () => {
 /*     'basis' | 'basisClosed' | 'basisOpen' | 'linear' | 'linearClosed' | 'natural' | 'monotoneX' | 'monotoneY' | 'monotone' | 'step' | 'stepBefore' | 'stepAfter' | CurveFactory;
  */
     const type = "natural";
-    const width = 500;
 
     React.useEffect(() => {
 
@@ -123,6 +122,7 @@ const UsualFunctions2 = () => {
                                 interval={f.xInterval} />
                             <YAxis 
                                  />
+                            <Tooltip /> 
                             <ReferenceLine x={0} />
                             <ReferenceLine y={0} />
                         </LineChart>

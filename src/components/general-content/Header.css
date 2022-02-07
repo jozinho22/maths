@@ -6,9 +6,9 @@
     font-family: var(--celtic-font);
   }
 
-/*   .CustomNav .navbar-nav {
-    padding: 15px;
-  } */
+  .CustomNav .navbar-nav {
+    padding: 20px;
+  }
 
   .CustomNav .navbar-brand {
     margin-right: 0;
@@ -23,6 +23,7 @@
 
   .CustomNav .navbar-collapse {
     background-color: var(--navbar-color);
+    margin-top: 5px;
   }
   
   .CustomNav .dropdown-menu {
