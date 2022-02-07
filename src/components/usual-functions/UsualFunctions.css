@@ -1,4 +1,4 @@
-@media (min-width: 360px) {
+@media (min-width: 600px) {
     .UsualFunctionsButton {
         position: fixed;
         right: 5%;
@@ -16,12 +16,6 @@
     padding: 0px;
 }
 
-.GraphTitle {
-    padding: 20px;
-    width: 100% !important;
-    height: 100% !important;
-}
-
 .FunctionAttributes {
     padding: 20px;
     width: 100% !important;
@@ -32,4 +26,48 @@
     text-decoration: underline;
     color: black;
     padding-top: 10px;
+}
+
+.Graph {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 12px;
+}
+
+.GraphTitle {
+    padding: 20px;
+    width: 70%;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.recharts-wrapper {
+    height: 100% !important;
+    width : 100% !important;
+    position: absolute;
+}
+
+.recharts-surface {
+    height: 100% !important;
+    width : 100% !important;
+}
+
+@media (min-width: 360px) {
+    .recharts-wrapper {
+        height: 80% !important;
+        width : 80% !important;
+    }
+}
+
+@media (min-width: 768px) {
+    .recharts-wrapper {
+        height: 70% !important;
+        width : 70% !important;
+    }
+}
+
+@media (min-width: 1268px) {
+    .recharts-wrapper {
+        height: 60% !important; 
+        width : 60% !important;
+    }
 }

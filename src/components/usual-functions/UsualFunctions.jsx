@@ -27,7 +27,7 @@ const UsualFunctions2 = () => {
             mathJaxTitle: "x^2",
             color: getFunctionColor(i),
             formula: (x) => {return x*x},
-            definition: "\\(\\xi = \\mathbb{R} = ]-\\infty, +\\infty[ \\)",
+            definition: "\\(\\xi = \\mathbb{R} = ]-\\infty; +\\infty[ \\)",
             derivative: "2x",
             primitive: "\\frac{x^3}{3} + K",
             limits: [
@@ -53,7 +53,7 @@ const UsualFunctions2 = () => {
             mathJaxTitle: "x^3",
             color: getFunctionColor(i),
             formula: (x) => {return x*x*x},
-            definition: "\\(\\xi = \\mathbb{R} = ]-\\infty, +\\infty[ \\)",
+            definition: "\\(\\xi = \\mathbb{R} = ]-\\infty; +\\infty[ \\)",
             derivative: "3x^2",
             primitive: "\\frac{x^4}{4} + K",
             limits: [
@@ -79,7 +79,7 @@ const UsualFunctions2 = () => {
             mathJaxTitle: "\\sqrt(x)",
             color: getFunctionColor(i),
             formula: (x) => {return Math.sqrt(x)},
-            definition: "\\(\\xi = \\mathbb{R^+} = [ 0, +\\infty[ \\)",
+            definition: "\\(\\xi = \\mathbb{R^+} = [ 0 ; +\\infty[ \\)",
             derivative: "\\frac{1}{2\\sqrt{x}}",
             primitive: "\\frac{2x^{\\frac{3}{2}}}{3} + K",
             limits: [
@@ -101,7 +101,7 @@ const UsualFunctions2 = () => {
             mathJaxTitle: "e^x",
             color: getFunctionColor(i),
             formula: (x) => {return Math.exp(x)},
-            definition: "\\(\\xi = \\mathbb{R} = ]-\\infty, +\\infty[ \\)",
+            definition: "\\(\\xi = \\mathbb{R} = ]-\\infty ; +\\infty[ \\)",
             derivative: "e^x",
             primitive: "e^x+ K",
             limits: [
@@ -127,13 +127,13 @@ const UsualFunctions2 = () => {
             mathJaxTitle: "ln(x)",
             color: getFunctionColor(i),
             formula: (x) => {return Math.log(x)},
-            definition: "\\(\\xi = \\mathbb{R^{+*}} = ] 0, +\\infty[ \\)",
+            definition: "\\(\\xi = \\mathbb{R^{+*}} = ] 0 ; +\\infty[ \\)",
             derivative: "\\frac{1}{x}",
             primitive: "x(ln(x) - 1) + K",
             limits: [
                 {
                     id: j++,
-                    where: "0",
+                    where: "0^+",
                     value: "-\\infty"
                 },
                 {
@@ -154,29 +154,29 @@ const UsualFunctions2 = () => {
             mathJaxTitle: "\\frac{1}{x}",
             color: getFunctionColor(i),
             formula: (x) => {return 1 / x},
-            definition: "\\(\\xi = \\mathbb{R} - \\{0\\} = \\mathbb{R^{*}} =  ]-\\infty, 0[\\bigcup] 0, +\\infty[ \\)",
+            definition: "\\(\\xi = \\mathbb{R} - \\{0\\} = \\mathbb{R^{*}} =  ]-\\infty ; 0[\\bigcup] 0 ; +\\infty[ \\)",
             derivative: "-\\frac{1}{x^2}",
             primitive: "ln(|x|) + K",
             limits: [
                 {
                     id: j++,
                     where: "-\\infty",
-                    value: "0_{-}"
+                    value: "0^{-}"
                 },
                 {
                     id: j++,
-                    where: "0_{-}",
+                    where: "0^{-}",
                     value: "-\\infty"
                 },
                 {
                     id: j++,
-                    where: "0_{+}",
+                    where: "0^{+}",
                     value: "+\\infty"
                 },
                 {
                     id: j++,
                     where: "+\\infty",
-                    value: "0_{+}"
+                    value: "0^{+}"
                 }
             ],
             scale : 100,
@@ -190,7 +190,7 @@ const UsualFunctions2 = () => {
             mathJaxTitle: "cos(x)",
             color: getFunctionColor(i),
             formula: (x) => {return Math.cos(x)},
-            definition: "\\(\\xi = \\mathbb{R} = ]-\\infty, +\\infty[ \\)",
+            definition: "\\(\\xi = \\mathbb{R} = ]-\\infty ; +\\infty[ \\)",
             derivative: "-sin(x)",
             primitive: "sin(x) + K",
             type: 'trigo',
@@ -204,7 +204,7 @@ const UsualFunctions2 = () => {
             mathJaxTitle: "sin(x)",
             color: getFunctionColor(i),
             formula: (x) => {return Math.sin(x)},
-            definition: "\\(\\xi = \\mathbb{R} = ]-\\infty, +\\infty[ \\)",
+            definition: "\\(\\xi = \\mathbb{R} = ]-\\infty ; +\\infty[ \\)",
             derivative: "cos(x)",
             primitive: "-cos(x) + K",
             type: 'trigo',
@@ -212,7 +212,21 @@ const UsualFunctions2 = () => {
             step : 1/4,
             height: 150,
             xInterval: 1
-        }
+        },
+        /* {
+            id: ++i,
+            mathJaxTitle: "tan(x)",
+            color: getFunctionColor(i),
+            formula: (x) => {return Math.tan(x)},
+            definition: "\\(\\xi = ]-\\frac{\\pi}{2} + k\\pi ; \\frac{\\pi}{2} + k\\pi [ \\)",
+            derivative: "1 + tan(x)",
+            primitive: "-ln(|cos(x)|) + K",
+            type: 'trigo',
+            scale : 20,
+            step : 1/36,
+            height: 150,
+            xInterval: 1
+        } */
 
     ];
 
@@ -220,11 +234,6 @@ const UsualFunctions2 = () => {
     const [fData, setFData] = React.useState({});
 
     const type = "monotone";
-    const styles = {
-        fontFamily: "sans-serif",
-        textAlign: "center",
-        fontSize: 12
-      };
 
     React.useEffect(() => {
 
@@ -246,6 +255,7 @@ const UsualFunctions2 = () => {
         var datas = []
         for(var k = -it; k <= it; k++) {
 
+            console.log(xTrigo)
             if(f.type === 'trigo') {
                 let d = {
                     x: (xTrigo === 0) ? 0 : xTrigo +'π',
@@ -327,7 +337,7 @@ const UsualFunctions2 = () => {
                             color={f.color}/>    
                     </Container>
                     
-                    <div style={styles}>
+                    <div className="Graph">
                         <LineChart
                             width={500}
                             height={f.height}
