@@ -21,3 +21,15 @@
     width: 100% !important;
     height: 100% !important;
 }
+
+.FunctionAttributes {
+    padding: 20px;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.FunctionAttributesTitle {
+    text-decoration: underline;
+    color: black;
+    padding-top: 10px;
+}
