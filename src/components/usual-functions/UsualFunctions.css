@@ -1,7 +1,7 @@
 @media (min-width: 600px) {
     .UsualFunctionsButton {
         position: fixed;
-        right: 5%;
+        right: 0%;
         width: 20%;
     }
 
@@ -30,44 +30,48 @@
 
 .Graph {
     font-family: 'Times New Roman', Times, serif;
-    font-size: 12px;
+    font-size: small;
 }
 
 .GraphTitle {
-    padding: 20px;
-    width: 70%;
-    width: 100% !important;
-    height: 100% !important;
+    padding-bottom: 20px;
 }
 
-.recharts-wrapper {
+/* .recharts-wrapper {
     height: 100% !important;
     width : 100% !important;
     position: absolute;
+    margin: 0 auto;
 }
 
 .recharts-surface {
     height: 100% !important;
     width : 100% !important;
-}
+} */
 
-@media (min-width: 360px) {
+/* @media (min-width: 360px) {
     .recharts-wrapper {
         height: 80% !important;
         width : 80% !important;
     }
 }
-
+ */
 @media (min-width: 768px) {
-    .recharts-wrapper {
+/*     .recharts-wrapper {
         height: 70% !important;
         width : 70% !important;
+    } */
+    .Graph {
+        font-size: large;
     }
 }
 
 @media (min-width: 1268px) {
-    .recharts-wrapper {
+/*     .recharts-wrapper {
         height: 60% !important; 
         width : 60% !important;
+    } */
+    .Graph {
+        font-size: x-large;
     }
 }

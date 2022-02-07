@@ -9,7 +9,7 @@ const TablesTestHome = ({levels,
 
     return (
         <>
-            <h2>Quizz pour réviser ses tables de multiplication</h2>
+            <h3>Quizz pour réviser ses tables de multiplication</h3>
                 {
                     levels.map(level => (
                         <Container key={level.id} >

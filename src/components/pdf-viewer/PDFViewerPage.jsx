@@ -179,9 +179,9 @@ const PDFViewerPage = ( {pdfInfos} ) => {
               <Container className="SwitchButton">
                 <BootstrapSwitchButton 
                   size="lg" 
-                  onlabel='Page par page'
+                  onlabel={`Page par page`}
                   onstyle='primary'
-                  offlabel={`${step} pages par ${step} pages`}
+                  offlabel={`Par ${step} pages`}
                   offstyle='success'
                   style='w-50 mx-3'
                   onChange={() => switchView()} />  

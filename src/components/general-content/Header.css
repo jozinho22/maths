@@ -6,21 +6,15 @@
     font-family: var(--celtic-font);
   }
 
-  .CustomNav .navbar-nav {
+/*   .CustomNav .navbar-nav {
     padding: 15px;
-  }
+  } */
 
   .CustomNav .navbar-brand {
     margin-right: 0;
     color: var(--back-color);
     padding-left: 15px;
   }
-
-/*   @media (min-width: 360px) {
-    .CustomNav .nav-link {
-      font-size: medium !important;
-    }
-  } */
 
   .CustomNav .nav-link {
     padding-left: 40px !important;
@@ -38,7 +32,7 @@
   .CustomNav .dropdown-item {
     color: var(--back-color) ;
     padding: 10px;
-    font-size: x-small;
+    font-size: xx-small;
     width: 50%;
     display: inline-block;
     text-align: center;
