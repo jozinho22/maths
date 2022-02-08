@@ -12,12 +12,6 @@ mjx-math {
     }
 }
 
-@media (min-width: 1268px) {
-    mjx-math {
-        font-size: xx-large !important;
-    } 
-}
-
 .DefaultMathJaxText {
     color: var(--blue-color);
 }

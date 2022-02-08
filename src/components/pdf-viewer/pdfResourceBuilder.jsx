@@ -1,6 +1,4 @@
-import nbOr from './courses/nbOr.pdf';
-import exos1 from './courses/exos1.pdf';
-import base from './courses/base.pdf';
+import produitEnCroix from './courses/produitEnCroix.pdf';
 
 import aspirisouffle from './albums/aspirisouffle.pdf'; 
 import bigBang from './albums/bigBang.pdf'; 
@@ -22,32 +20,16 @@ function pdfResourceBuilder() {
     var pdfItems = [];
     var i = 0;
 
-    var pdfNbOr = {
+    var pdfProduitEnCroix = {
       id: i++,
-      relativePath: 'nbOr',
-      filePath: './courses/nbOr.pdf',
-      title: 'Le nombre d\'or',
-      pdfFile : nbOr
-    }
-    var pdfExos1 = {
-      id: i++,
-      relativePath: 'exos1',
-      filePath: './courses/exos1.pdf',
-      title: 'Feuille d\'exos 1',
-      pdfFile : exos1
-    }
-    var pdfBase = {
-      id: i++,
-      relativePath: 'base',
-      filePath: './courses/base.pdf',
-      title: 'Test 1 feuille',
-      pdfFile : base
+      relativePath: 'produit-en-croix',
+      filePath: './courses/produitEnCroix.pdf',
+      title: 'Le produit en croix',
+      pdfFile : produitEnCroix
     }
 
     pdfItems.push(
-      pdfNbOr,
-      pdfExos1,
-      pdfBase
+      pdfProduitEnCroix
     );
 
     var pdfAspi = {

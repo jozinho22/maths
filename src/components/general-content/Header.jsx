@@ -23,18 +23,26 @@ const Header = ({pdfInfos}) => {
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
               <Nav>
+                <NavDropdown title="Divers" id="basic-nav-dropdown">
+                      <NavDropdown.Item 
+                          href="/tables-test">
+                            Réviser ses tables
+                      </NavDropdown.Item>
+                      <NavDropdown.Item 
+                          href="/usual-functions">
+                            Fonctions usuelles
+                      </NavDropdown.Item>
+                </NavDropdown>
 
-                <Nav.Link href="/tables-test">Réviser ses tables</Nav.Link>
-                <Nav.Link href="/usual-functions">Fonctions usuelles</Nav.Link>
-
-                {/* <NavDropdown title="Cours/exercices en PDF" id="basic-nav-dropdown">
+                <NavDropdown title="Cours/exercices en PDF" id="basic-nav-dropdown">
                    {pdfCoursesInfos.map(pdfInfo => 
                         <NavDropdown.Item 
                           key= {pdfInfo.id}
-                          href={`/pdf-viewer/${pdfInfo.relativePath}`}>{pdfInfo.title}
+                          href={`/pdf-viewer/${pdfInfo.relativePath}`}>
+                            {pdfInfo.title}
                         </NavDropdown.Item>
                     )}
-                </NavDropdown> */}
+                </NavDropdown>
                 <NavDropdown title="BD de Jean-Pierre Petit" id="basic-nav-dropdown">
                    {pdfAlbumsInfos.map(pdfInfo => 
                         <NavDropdown.Item 

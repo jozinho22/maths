@@ -32,18 +32,6 @@ function App() {
 
   var pdfInfos = pdfResourceBuilder();
 
-/*   var pdfCoursesInfos = [];
-  var pdfAlbumsInfos = [];
-
-  for(var k = 0; k < pdfInfos.length; k++) {
-      console.log(pdfInfos[k].relativePath)
-      if(pdfInfos[k].filePath.startsWith('./courses')) {
-        pdfCoursesInfos.push(pdfInfos[k]);
-      } else if(pdfInfos[k].filePath.startsWith('./albums')) {
-        pdfAlbumsInfos.push(pdfInfos[k]);
-      }
-  } */
-
   return (
         <div className="App">
             <ThemeContext.Provider value={themeContext} >
@@ -51,8 +39,6 @@ function App() {
                     <BrowserRouter>
 
                         <Header 
-                            /* pdfAlbumsInfos={pdfAlbumsInfos}
-                            pdfCoursesInfos={pdfCoursesInfos}  */
                             pdfInfos={pdfInfos} />
                         <Container className="RelativeContainer">
                             <Routes>

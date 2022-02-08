@@ -25,125 +25,115 @@ const PDFViewerPage = ( {pdfInfos} ) => {
 
         const [pageByPageDocument, setPageByPageDocument] = useState(true);
         const [beginIndex, setBeginIndex] = useState(0);
-        const step = 10;
-
-        var opacityClass = "Opacity";
+        const step = 5;
 
         const PaginationPageByPage = () => {
 
-          const BackButton = ({opacity}) => {
+            const BackButton = ({disabled}) => {
+                return (
+                  <Button 
+                      className="DefaultButton"
+                      disabled={disabled}                 
+                      onClick={() => {
+                        setPage(page - 1 > 0 ? page - 1 : 1);
+                      }} >
+                    Prev
+                  </Button>
+              );
+            }
+
+            const NextButton = ({disabled}) => {
+                return (
+                  <Button 
+                      className="DefaultButton"
+                      disabled={disabled}
+                      onClick={() => {
+                        setPage(page + 1 > pages ? pages : page + 1);
+                      }} >
+                    Next
+                  </Button>
+                );
+            }
 
             return (
-              <Button className={`DefaultButton ${opacity ? opacityClass : ''}`}
-                  onClick={() => {
-                    let newPage = page - 1;
-                    newPage = newPage > 0 ? newPage : 1;
-                    setPage(newPage);
-                  }} >
-                  Prev
-              </Button>
+              <Row>
+                <Col style={{textAlign:"right"}}>
+                    {pages > 1 && page > 1 ?
+                      <BackButton /> : 
+                        <BackButton disabled={true} />
+                    }
+                </Col>
+                <Col className="CenterText">
+                      Page : {page} / {pages} 
+                </Col>
+                <Col style={{textAlign:"left"}}>
+                    {pages > 1 && page < pages ?
+                      <NextButton /> : 
+                        <NextButton disabled={true} />
+                    }
+                </Col>
+              </Row>
             );
-          }
-
-          const NextButton = ({opacity}) => {
-              return (
-                <Button className={`DefaultButton ${opacity ? opacityClass : ''}`}
-                    onClick={() => {
-                      let newPage = page + 1;
-                      newPage = newPage > pages ? pages : newPage;
-                      setPage(newPage);
-                    }} >
-                    Next
-                </Button>
-              );
-          }
-
-          return (
-            <Row>
-              <Col style={{textAlign:"right"}}>
-                  {pages > 1 && page > 1 ?
-                    <BackButton /> : 
-                      <BackButton opacity={true} />
-                  }
-              </Col>
-              <Col className="CenterText">
-                    Page : {page} / {pages} 
-              </Col>
-              <Col style={{textAlign:"left"}}>
-                  {pages > 1 && page < pages ?
-                    <NextButton /> : 
-                      <NextButton opacity={true} />
-                  }
-              </Col>
-            </Row>
-          );
         }
 
         const PaginationFullDocument = () => {
 
-          const BackButton = ({opacity}) => {
+            const BackButton = ({disabled}) => {
+              return (
+                <Button 
+                    className="DefaultButton"
+                    disabled={disabled} 
+                    onClick={() => {
+                      if(beginIndex >= step) {
+                        addPagesToList(beginIndex - step);
+                      }
+                    }} >
+                  Prev
+                </Button>
+              );
+            }
 
-            if(opacity) {
-              opacityClass = "Opacity";
+            const NextButton = ({disabled}) => {
+                return (
+                  <Button 
+                      className="DefaultButton"
+                      disabled={disabled}
+                      onClick={() => {
+                        if(beginIndex < pages) {
+                          addPagesToList(beginIndex + step);
+                        }
+                      }} >
+                    Next
+                  </Button>
+                );
             }
 
             return (
-              <Button className={`DefaultButton ${opacity ? opacityClass : ''}`}
-                  onClick={() => {
-                    console.log('beginIndex')
-                    console.log(beginIndex)
-                    if(beginIndex >= step) {
-                      addPagesToList(beginIndex - step);
-                      setBeginIndex(beginIndex - step);
+              <Row>
+                <Col style={{textAlign:"right"}}>
+                    {beginIndex > 0 ?
+                      <BackButton /> : 
+                        <BackButton disabled={true} />
                     }
-                  }} >
-                  Prev
-              </Button>
+                </Col>
+                <Col className="CenterText">
+                      <p>Pages : 
+                      {beginIndex > pages ? 
+                        pages : 
+                            (beginIndex + 1) 
+                            + ' - ' 
+                            + ((beginIndex + step) < pages ? (beginIndex + step) : pages)
+                      } 
+                        / {pages} </p>
+                </Col>
+                <Col style={{textAlign:"left"}}>
+                    {beginIndex + step < pages ?
+                      <NextButton /> : 
+                        <NextButton disabled={true} />
+                    }
+                </Col>
+              </Row>
             );
-          }
-
-          const NextButton = ({opacity}) => {
-              return (
-                <Button className={`DefaultButton ${opacity ? opacityClass : ''}`}
-                    onClick={() => {
-                      console.log('beginIndex')
-                      console.log(beginIndex)
-                      if(beginIndex < pages) {
-                        addPagesToList(beginIndex + step);
-                        setBeginIndex(beginIndex + step);
-                      }
-                    }} >
-                    Next
-                </Button>
-              );
-          }
-
-          return (
-            <Row>
-              <Col style={{textAlign:"right"}}>
-                  {beginIndex > 0 ?
-                    <BackButton /> : 
-                      <BackButton opacity={true} />
-                  }
-              </Col>
-              <Col className="CenterText">
-                    Pages : 
-                    {beginIndex > pages ? 
-                      pages : 
-                        beginIndex + step < pages ?
-                          beginIndex + ' - ' + (beginIndex + step) :
-                            beginIndex + ' - ' + (pages)
-                    } 
-                      / {pages} 
-              </Col>
-              <Col style={{textAlign:"left"}}>
-                  {beginIndex < pages ?
-                    <NextButton /> : 
-                      <NextButton opacity={true} />
-                  }
-              </Col>
-            </Row>
-          );
         }
 
         function addPagesToList(begin) {
@@ -165,13 +155,16 @@ const PDFViewerPage = ( {pdfInfos} ) => {
 
         function switchView() {
           if(pageByPageDocument) {
-            addPagesToList(beginIndex);
+            addPagesToList(findClosest(page));
+          } else {
+            setPage(beginIndex);
           }
           setPageByPageDocument(!pageByPageDocument);
         }
 
-        console.log('beginIndex')
-        console.log(beginIndex)
+        function findClosest(page) {  
+            return page - (page % step);
+        }
 
         return (
           <> 
@@ -179,13 +172,14 @@ const PDFViewerPage = ( {pdfInfos} ) => {
               <Container className="SwitchButton">
                 <BootstrapSwitchButton 
                   size="lg" 
-                  onlabel={`Page par page`}
+                  onlabel={`Par ${step} pages`}
                   onstyle='primary'
-                  offlabel={`Par ${step} pages`}
+                  offlabel={`Page par page`}
                   offstyle='success'
                   style='w-50 mx-3'
                   onChange={() => switchView()} />  
               </Container>
+
               {    
                   pageByPageDocument ?
 
@@ -196,7 +190,7 @@ const PDFViewerPage = ( {pdfInfos} ) => {
                         file={filePath}
                         page={page}
                         onDocumentComplete={pages => {
-                          setPage(1);
+                          setPage(beginIndex + 1);
                           setPages(pages);
                         }} />
                       <PaginationPageByPage />

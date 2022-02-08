@@ -38,7 +38,7 @@ const buildUsualFunctions = () => {
                 ],
                 scale : 10,
                 step : 1,
-                height: 300,
+                width: 200,
                 xInterval: 4,
                 aspect: 1
             },
@@ -65,7 +65,7 @@ const buildUsualFunctions = () => {
                 ],
                 scale : 10,
                 step : 1,
-                height: 400,
+                width: 200,
                 xInterval: 1,
                 aspect: 1
             },
@@ -87,7 +87,7 @@ const buildUsualFunctions = () => {
                 ],
                 scale : 100,
                 step : 1,
-                height: 200,
+                width: 150,
                 xInterval: 9,
                 beginAtZero: true,
                 aspect: 2
@@ -115,7 +115,7 @@ const buildUsualFunctions = () => {
                 ],
                 scale : 3,
                 step : 1,
-                height: 300,
+                width: 200,
                 xInterval: 1,
                 aspect: 1
             },
@@ -141,7 +141,7 @@ const buildUsualFunctions = () => {
                 ],
                 scale : 10,
                 step : 0.1,
-                height: 200,
+                width: 150,
                 xInterval: 10,
                 beginAtZero: true,
                 exclude: 0,
@@ -179,7 +179,7 @@ const buildUsualFunctions = () => {
                 ],
                 scale : 100,
                 step : 1,
-                height: 300,
+                width: 150,
                 xInterval: 9,
                 exclude: 0,
                 aspect: 1
@@ -195,9 +195,9 @@ const buildUsualFunctions = () => {
                 type: 'trigo',
                 scale : 2,
                 step : 1/4,
-                height: 150,
+                width: 200,
                 xInterval: 1,
-                aspect: 4
+                aspect: 3
             },
             {
                 id: ++i,
@@ -210,9 +210,9 @@ const buildUsualFunctions = () => {
                 type: 'trigo',
                 scale : 2,
                 step : 1/4,
-                height: 150,
+                width: 200,
                 xInterval: 1,
-                aspect: 4
+                aspect: 3
             }
         ]
 }

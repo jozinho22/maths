@@ -5,8 +5,6 @@
 
 .FunctionAttributes {
     padding: 20px;
-    width: 100% !important;
-    height: 100% !important;
 }
 
 @media (min-width: 1268px) {
@@ -37,6 +35,12 @@
     padding: 10px;
 }
 
+.recharts-surface {
+    position: absolute;
+    left: 50%; /* Position X halfway in */
+    transform: translate(-50%,0%); /* Move it halfway back(x,y) */
+} 
+
 @media (min-width: 300px) {
     .Graph {
         font-size: large;
@@ -57,11 +61,11 @@
     .recharts-wrapper {
         height: 80% !important;
         width : 80% !important;
-        position: absolute;
-        margin: 0 auto;
     } 
     .recharts-surface {
         height: 80% !important;
         width : 80% !important;
+        position: relative;
+        transform: translate(-30%,0%); /* Move it halfway back(x,y) */
     }
 }

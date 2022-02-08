@@ -108,8 +108,7 @@ const UsualFunctions2 = () => {
                         aspect={f.aspect} 
                         className="Graph">
                         <LineChart
-/*                             width={width}
- */                            height={f.height}
+                            width={f.width}
                             data={fData}
                             margin={{ top: 5, right: 20, bottom: 5, left: 0 }} >
                             <Line 
