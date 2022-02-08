@@ -1,6 +1,9 @@
 import React from 'react';
 import { Container, Button, Row, Col } from 'react-bootstrap';
 import Timer from './Timer';
+import Alert from '../general-content/alert/Alert';
+import { updateAlert, reInitAlert } from '../general-content/alert/alertFunctions';
+
 import './TablesTestQuestionDisplay.css';
 import CustomLogger from '../general-content/CustomLogger';
 
@@ -13,7 +16,7 @@ const TablesTestQuestionDisplay =
     const [secondes, setSecondes] =  React.useState(0);
 
     const [inputText, setInputText] =  React.useState("");
-    const [redAlert, setRedAlert] = React.useState(
+    const [alert, setAlert] = React.useState(
         {
             show: false,
             message : ''
@@ -76,17 +79,10 @@ const TablesTestQuestionDisplay =
 
     }, [endTimer, count]);
 
-    function updateRedAlertMessage(show, message) {
-        let alertUpdate = {...redAlert};
-        alertUpdate.show = show;
-        alertUpdate.message = message;
-        setRedAlert(alertUpdate);
-    }
-
     // Réinit pour chaque question
     React.useEffect(() => {
         setInputText("");
-        updateRedAlertMessage(false, '');
+        setAlert(reInitAlert());
     }, [count]);
     
     // Gestion de l'alerte rouge !!!
@@ -96,16 +92,17 @@ const TablesTestQuestionDisplay =
                 setInputText(inputText.slice(0, inputText.length-1))
             }
             var message = 'Je pense que ça va non ?';
-            updateRedAlertMessage(true, message);
+            setAlert(updateAlert(true, message));
         } else {
-            updateRedAlertMessage(false, '');
+            setAlert(reInitAlert());
         }
     }, [inputText]);
 
     const handleKeyboardInput = (keyboardInput) => {
         if(!isNaN(keyboardInput)) {
             if(inputText === '0' && keyboardInput === 0) {
-                updateRedAlertMessage(true, 'Très drôle...');
+                console.log( 'if(inputText ===  && keyboardInput === 0)')
+                setAlert(updateAlert(true, 'Très drôle...'))
             } else {
                 setInputText(inputText + keyboardInput)
             }
@@ -118,12 +115,6 @@ const TablesTestQuestionDisplay =
 
     // pb : le clavier se met a jour toutes les secondes;....
     const CiferKeyboard = () => {
-/*         var row1 = [1, 2, 3];
-        var row2 = [4, 5, 6];
-        var row3 = [7, 8, 9];
-        var row4 = ['C', 0, '<'];
-
-        var rows = [row1, row2, row3, row4]; */
 
         var rows = [];
         var index = 0;
@@ -178,17 +169,6 @@ const TablesTestQuestionDisplay =
 
     }
 
-    const RedAlert = () => {
-        return (
-            <Container className="Alert" >
-                {redAlert.show === true ?
-                    <div>{redAlert.message}</div> :
-                        <></>
-                }
-            </Container> 
-        );
-    }
-
     return (
         <>
             <Timer className ="Timer"
@@ -207,7 +187,10 @@ const TablesTestQuestionDisplay =
                         {inputText}
                     </Col>
                 </Row>  
-                <RedAlert />
+                <Alert 
+                    show={alert.show}
+                    message={alert.message}
+                    component="TablesTestQuestionDisplay" />
                 <CiferKeyboard /> 
             </Container>
 

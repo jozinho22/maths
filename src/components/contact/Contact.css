@@ -1,0 +1,82 @@
+/* .form-group {
+    margin-bottom: 0px;
+}
+
+.form-control {
+    background : rgb(212, 209, 209);
+}
+
+.input-group-text {
+    background : rgb(230, 230, 230);
+} */
+
+.Form {
+    text-align: center;
+    font-size: small;
+    width: 100%;
+}
+
+.form-control {
+    font-size: small;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.ContactType, .FirstName, .LastName, .Email {
+    padding-top: 20px;
+    width: 80%;
+    text-align: left;
+}
+
+.Subject, .Message  {
+    padding-top: 20px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.Subject {
+    width: 60%;
+    padding-top: 20px;
+}
+
+.Message {
+    width: 80%;
+}
+
+.ContactButton {
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .Form {
+        font-size: medium;
+    }
+}
+
+@media (min-width: 1268px) {
+    .Form {
+        font-size: large;
+    }
+    .ContactType, .FirstName, .LastName, .Email {
+        padding-top: 20px;
+        width: 80%;
+    }
+    
+    .ContactType, .LastName {
+        margin-left:  auto;
+    }
+
+    .Subject, .Message  {
+        padding-top: 20px;
+        width: 50%;
+        margin: 0 auto;
+    }
+    
+    .Subject {
+        padding-top: 40px;
+    }
+
+    .form-control {
+        font-size: medium;
+    }
+}
+

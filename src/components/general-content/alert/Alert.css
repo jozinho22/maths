@@ -1,0 +1,31 @@
+.DefaultAlert {
+    font-size: small;
+    color: red;
+    font-family: fantasy;
+}
+
+.TablesTestQuestionDisplayAlert {
+    position: absolute;
+    margin-top: 10px;
+    left: 0; 
+    right: 0; 
+}
+
+.ContactAlert {
+    position: absolute;
+    margin-top: 0px;
+    display: inline-block;
+    margin-left: 20px;
+}
+
+@media (min-width : 768px) {
+    .DefaultAlert {
+        font-size: medium;
+    }
+}
+
+@media (min-width : 1268px) {
+    .DefaultAlert {
+        font-size: large;
+    }
+}

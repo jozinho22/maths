@@ -10,4 +10,12 @@
     color: grey;
   }
 
-  
+  .Contact {
+    position : absolute;
+    right: 0;
+    margin-right: 30px;
+    color: var(--back-color);
+    width: 30px;
+    height: 30px;
+    bottom: 5px;
+  }

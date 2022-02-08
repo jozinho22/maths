@@ -17,14 +17,11 @@
     padding-right: 0px;
 
 }
+
 @media (min-width : 450px) {
     .QuestionContainer {
         width: 400px;
         font-size: medium;
-    }
-    .Alert {
-        font-size: medium;
-        position: absolute;
     }
     .CiferKeyboard {
         width: 150px;
@@ -37,10 +34,6 @@
 @media (min-width : 768px) {
     .QuestionContainer {
         font-size: large;
-    }
-    .Alert {
-        font-size: large;
-        position: absolute;
     }
     .Enounce, .AnswerDisplay {
         font-size: large;
