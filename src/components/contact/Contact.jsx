@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container, Form, FormControl, InputGroup, Button, Col, Row } from 'react-bootstrap';
 import Alert from '../general-content/alert/Alert';
+import ContactManager from './ContactManager';
 import { updateAlert, reInitAlert } from '../general-content/alert/alertFunctions';
 /* import { SMTPClient } from 'emailjs';
  */
@@ -127,8 +128,12 @@ const Contact = () => {
     }); */
 
     const templateParams = {
-        name: 'James',
-        notes: 'Check this out!'
+        firstName: firstName,
+        lastName: lastName,
+        email: email,
+        contactType: contactType,
+        subject: subject,
+        message: message
     };
 
     const sendEmail = () => {
@@ -138,14 +143,24 @@ const Contact = () => {
             templateParams, 
             'user_F9hDnNvI0w5QkE97hKg5n')
             .then((response) => {
+                if(response.ok) {
+                    setIsLoading(true);
+                }
                 console.log('SUCCESS!', response.status, response.text);
+                return true;
             }, (err) => {
                 console.log('FAILED...', err);
+            }
+            ).then((ok) => {
+                if(ok) {
+                    setSuccess(true);
+                }
             });
     }
     
     return (
 
+    <ContactManager isLoading={isLoading} success={success}>
          <Form className="Form">
             <Row>
                 <Col>
@@ -252,6 +267,7 @@ const Contact = () => {
                 className="DefaultButton ContactButton"
                 onClick={(client) => sendEmail(client)}>Merci !</Button>
         </Form>
+    </ContactManager>
     );
 }
 
