@@ -22,7 +22,7 @@ function pdfResourceBuilder() {
 
     var pdfProduitEnCroix = {
       id: i++,
-      relativePath: 'produit-en-croix',
+      type: 'courses',
       filePath: './courses/produitEnCroix.pdf',
       title: 'Le produit en croix',
       pdfFile : produitEnCroix
@@ -34,98 +34,98 @@ function pdfResourceBuilder() {
 
     var pdfAspi = {
       id: i++,
-      relativePath: 'aspirisouffle',
+      type: 'albums',
       filePath: './albums/aspirisouffle.pdf',
       title: 'L\'aspirisouffle',
       pdfFile : aspirisouffle
     }
     var pdfBigBang = {
       id: i++,
-      relativePath: 'big-bang',
+      type: 'albums',
       filePath: './albums/bigBang.pdf',
       title: 'Le Big Bang',
       pdfFile : bigBang
     }
     var pdfChrono = {
       id: i++,
-      relativePath: 'chronologicon',
+      type: 'albums',
       filePath: './albums/chronologicon.pdf',
       title: 'Le chronologicon',
       pdfFile : chronologicon
     }
     var pdfEco = {
       id: i++,
-      relativePath: 'economicon',
+      type: 'albums',
       filePath: './albums/economicon.pdf',
       title: 'L\' économicon',
       pdfFile : economicon
     }
     var pdfEnerg = {
       id: i++,
-      relativePath: 'energetiquement-votre',
+      type: 'albums',
       filePath: './albums/energetiquementVotre.pdf',
       title: 'Ènergetiquement Vôtre',
       pdfFile : energetiquementVotre
     }
     var pdfGeo = {
       id: i++,
-      relativePath: 'geometricon',
+      type: 'albums',
       filePath: './albums/geometricon.pdf',
       title: 'Le géometricon',
       pdfFile : geometricon
     }
     var pdfJoyeuseApo = {
       id: i++,
-      relativePath: 'joyeuse-apocalypse',
+      type: 'albums',
       filePath: './albums/joyeuseApo.pdf',
       title: 'Joyeuse apocalypse',
       pdfFile : joyeuseApo
     }
     var pdfMecaVol = {
       id: i++,
-      relativePath: 'mecavol',
+      type: 'albums',
       filePath: './albums/mecavol.pdf',
       title: 'Mécavol',
       pdfFile : mecavol
     }
     var pdfMilleEtUneNuits = {
       id: i++,
-      relativePath: 'mille-et-une-nuits-scientifiques',
+      type: 'albums',
       filePath: './albums/milleEtUnenuits.pdf',
       title: 'Les 1001 nuits scientifiques',
       pdfFile : milleEtUnenuits
     }
     var pdfMurSilence = {
       id: i++,
-      relativePath: 'le-mur-du-silence',
+      type: 'albums',
       filePath: './albums/murDuSilence.pdf',
       title: 'Le mur du silence',
       pdfFile : murDuSilence
     }
     var pdfPourQqesAmperes = {
       id: i++,
-      relativePath: 'pour-quelques-amperes-de-plus',
+      type: 'albums',
       filePath: './albums/pourQqesAmperesDePlus.pdf',
       title: 'Pour quelques ampères de plus',
       pdfFile : pourQqesAmperesDePlus
     }
     var pdfTopo = {
       id: i++,
-      relativePath: 'le-topologicon',
+      type: 'albums',
       filePath: './albums/topologicon.pdf',
       title: 'Le topologicon',
       pdfFile : topologicon
     }
     var pdfToutEstRelatif = {
       id: i++,
-      relativePath: 'tout-est-relatif',
+      type: 'albums',
       filePath: './albums/toutEstRelatif.pdf',
       title: 'Tout est relatif',
       pdfFile : toutEstRelatif
     }
     var pdfTrouNoir = {
       id: i++,
-      relativePath: 'le-trou-noir',
+      type: 'albums',
       filePath: './albums/trouNoir.pdf',
       title: 'Le trou noir',
       pdfFile : trouNoir

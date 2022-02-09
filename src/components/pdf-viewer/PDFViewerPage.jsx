@@ -1,21 +1,13 @@
+import { useState } from 'react';
+
 import { Container, Button, Row, Col } from 'react-bootstrap';
 import BootstrapSwitchButton from 'bootstrap-switch-button-react'
 
 import PDF from "react-pdf-js";
 
-import { useState } from 'react';
-import { useParams } from 'react-router-dom';
-import getPdfResouce from './getPdfResouce';
-
 import './PDFViewerPage.css';
-import CustomSpinner from '../general-content/CustomSpinner';
 
-
-const PDFViewerPage = ( {pdfInfos} ) => {
-
-    var {relativePath} = useParams();
-
-    var filePath = getPdfResouce(pdfInfos, relativePath);
+const PDFViewerPage = ( { pdfItem } ) => {
 
     const PDFViewer = () => {
 
@@ -168,7 +160,7 @@ const PDFViewerPage = ( {pdfInfos} ) => {
 
         return (
           <> 
-              
+              <h3 className="PdfTitle Underline">{pdfItem.title}</h3>
               <Container className="SwitchButton">
                 <BootstrapSwitchButton 
                   size="lg" 
@@ -187,7 +179,7 @@ const PDFViewerPage = ( {pdfInfos} ) => {
                       <PaginationPageByPage />
                       <PDF 
                         className="CustomCanevas"
-                        file={filePath}
+                        file={pdfItem.pdfFile}
                         page={page}
                         onDocumentComplete={pages => {
                           setPage(beginIndex + 1);
@@ -203,7 +195,7 @@ const PDFViewerPage = ( {pdfInfos} ) => {
                             <PDF 
                               key={item.id}
                               className="CustomCanevas"
-                              file={filePath}
+                              file={pdfItem.pdfFile}
                               page={item.pageNumber}
                               onDocumentComplete={() => {
                               }} />

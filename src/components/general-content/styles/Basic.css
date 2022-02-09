@@ -41,13 +41,14 @@
     margin-bottom: 20px;
     margin-left: 10px;
     margin-right: 10px;
-    padding: 15px;
+    padding: 5px;
     font-size: small;
 }
 
 
 @media (min-width: 360px) {
     .DefaultButton {
+        padding: 10px;
         margin-top: 25px;
         margin-bottom: 25px;
     }
@@ -58,16 +59,14 @@
         font-size: large;
         margin-top: 20px;
         margin-bottom: 20px;
-        padding: 20px;
     }
  }
 
- @media (min-width: 768px) {
+ @media (min-width: 1268px) {
     .DefaultButton {
         font-size: large;
-        margin-top: 25px;
-        margin-bottom: 25px;
-        padding: 20px;
+        margin-top: 20px;
+        margin-bottom: 20px;
     }
  }
 
@@ -110,4 +109,8 @@
 
 .Hidden {
     display: none;
+}
+
+.Underline {
+    text-decoration: underline;
 }
