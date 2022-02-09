@@ -13,7 +13,7 @@ const Footer = ( { setComponent } ) => {
             </small>
             <RiMailSendLine 
               className="Contact"
-              onClick={() => setComponent(<Contact />)} />
+              onClick={() => setComponent(<Contact setComponent={setComponent} />)} />
     </Navbar>
   );
 }

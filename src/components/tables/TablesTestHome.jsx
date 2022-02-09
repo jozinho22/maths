@@ -10,13 +10,13 @@ const TablesTestHome = ({levels,
 
     return (
         <>
-            <h3>Quizz pour réviser ses tables de multiplication</h3>
+            <h3 className="Underline">Quizz pour réviser ses tables de multiplication</h3>
             <Container className="TablesTestHomeButtonContainer"  >
                 {
                     levels.map(level => (
                         <div key={level.id}>
                             <Button   
-                                className={`${level.bStyle}Button DefaultButton TablesTestHomeButton`}
+                                className={`${level.bStyle}Button TablesTestHomeButton DefaultButton`}
                                 onClick={() => launchGame(level.id)}>
                                 Niveau : {level.title}
                             </Button>

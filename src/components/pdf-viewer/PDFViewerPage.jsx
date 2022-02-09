@@ -6,6 +6,7 @@ import BootstrapSwitchButton from 'bootstrap-switch-button-react'
 import PDF from "react-pdf-js";
 
 import './PDFViewerPage.css';
+import './styles/Canevas.css';
 
 const PDFViewerPage = ( { pdfItem } ) => {
 

@@ -1,8 +1,8 @@
 import React from 'react';
 import { Container, Button, Row, Col } from 'react-bootstrap';
 import Timer from './Timer';
-import Alert from '../general-content/alert/Alert';
-import { updateAlert, reInitAlert } from '../general-content/alert/alertFunctions';
+import Alert from '../alert/Alert';
+import { updateAlert, reInitAlert } from '../alert/alertFunctions';
 
 import './TablesTestQuestionDisplay.css';
 import CustomLogger from '../general-content/CustomLogger';

@@ -1,15 +1,13 @@
 import React from 'react';
 import { Container, Form, FormControl, InputGroup, Button, Col, Row } from 'react-bootstrap';
-import Alert from '../general-content/alert/Alert';
+import Alert from '../alert/Alert';
 import ContactManager from './ContactManager';
-import { updateAlert, reInitAlert } from '../general-content/alert/alertFunctions';
-/* import { SMTPClient } from 'emailjs';
- */
+import { updateAlert, reInitAlert } from '../alert/alertFunctions';
 import emailjs from 'emailjs-com';
 
 import './Contact.css';
 
-const Contact = () => {
+const Contact = ( {setComponent} ) => {
 
     const [contactType, setContactType] =  React.useState();
     const [firstName, setFirstName] =  React.useState("");
@@ -35,6 +33,7 @@ const Contact = () => {
     const [captchaText, setCaptchaText] = React.useState("");
 
     const [success, setSuccess] = React.useState(false);
+    const [error, setError] = React.useState(false);
     const [isLoading, setIsLoading] = React.useState(false);
 
     // init one time
@@ -120,13 +119,6 @@ const Contact = () => {
         }
     }, [message]);
 
-/*     const client = new SMTPClient({
-        user: 'josselin.douineau.1987@gmail.com',
-        password: 'uanwsdghsbgwjglw',
-        host: 'smtp.gmail.com',
-        ssl: true,
-    }); */
-
     const templateParams = {
         firstName: firstName,
         lastName: lastName,
@@ -146,10 +138,9 @@ const Contact = () => {
                 if(response.ok) {
                     setIsLoading(true);
                 }
-                console.log('SUCCESS!', response.status, response.text);
                 return true;
             }, (err) => {
-                console.log('FAILED...', err);
+                setError(true);
             }
             ).then((ok) => {
                 if(ok) {
@@ -160,7 +151,7 @@ const Contact = () => {
     
     return (
 
-    <ContactManager isLoading={isLoading} success={success}>
+    <ContactManager isLoading={isLoading} success={success} error={error} setComponent={setComponent} >
          <Form className="Form">
             <Row>
                 <Col>

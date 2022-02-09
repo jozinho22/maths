@@ -1,15 +1,23 @@
 import React from 'react';
-import SendSuccess from './SendSuccess';
+import SendResult from './SendResult';
 import CustomSpinner from '../general-content/CustomSpinner';
 
-const ContactManager = ({success, isLoading, children}) => {
+import CustomLogger from '../general-content/CustomLogger'
+const ContactManager = ({success, isLoading, error, setComponent, children}) => {
+
+    CustomLogger('success', success, 'ContactManager')
+    CustomLogger('error', error, 'ContactManager')
+    CustomLogger('isLoading', isLoading, 'ContactManager')
 
     return (
-                success ?
-                    <SendSuccess /> :   
-                        isLoading ?
-                            <CustomSpinner /> :  
-                                children
+                isLoading ?
+                    <CustomSpinner /> : 
+                        success || error ?
+                            <SendResult 
+                                success={success}
+                                error={error}
+                                setComponent={setComponent} /> :  
+                                    children
             );
 }
  
