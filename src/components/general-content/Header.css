@@ -1,50 +1,11 @@
-  .CustomNav {
-    background-color : var(--navbar-color);
-    border-bottom: 2px solid var(--front-color);
-    margin-left: auto;
-    margin-right: auto;
-    font-family: var(--celtic-font);
-  }
+.CustomHeader {
+  border-bottom: 4px solid var(--front-color);
+}
 
-  .CustomNav .navbar-nav {
+.CustomHeader .navbar-nav {
     padding: 20px;
-  }
+}
 
-  .CustomNav .navbar-brand {
-    margin-right: 0;
-    color: var(--back-color);
-    padding-left: 15px;
-  }
-
-  .CustomNav .nav-link {
-    padding-left: 40px !important;
-    font-size: small !important;
-  }
-
-  .CustomNav .navbar-collapse {
-    background-color: var(--navbar-color);
-    margin-top: 5px;
-  }
-  
-  .CustomNav .dropdown-menu {
-    background-color : var(--navbar-color);
-    left:50%;
-    transform: translateX(-40%);
-  }
-
-  .CustomNav .dropdown-item {
-    color: var(--back-color) ;
-    padding: 10px;
-    font-size: xx-small;
-    width: 50%;
-    display: inline-block;
-    text-align: center;
-  }
-
-  @media (min-width: 768px) {
-    .CustomNav .dropdown-item {
-      font-size: small;
-      width: 100%;
-      display: block;
-    }
-  }
+/* .CustomHeader .nav-toggler {
+  margin-right: 40px !important;
+} */

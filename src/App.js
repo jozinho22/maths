@@ -6,6 +6,8 @@ import './components/general-content/styles/Basic.css';
 import './components/alert/Alert.css';
 
 import ThemeContext from './components/context/ThemeContext';
+import FontContext from './components/context/FontContext';
+
 import pdfResourceBuilder from './components/pdf-viewer/pdfResourceBuilder';
 
 import Header from './components/general-content/Header';
@@ -21,6 +23,15 @@ function App() {
     updateTheme: setTheme
   };
 
+  const [font, setFont] = React.useState("Celtic");
+
+  const fontContext = {
+    font: font,
+    updateFont: setFont
+  };
+
+  console.log(theme)
+  console.log(font)
   const [component, setComponent] = React.useState(<Home />);
 
   var pdfItems = pdfResourceBuilder();
@@ -28,7 +39,8 @@ function App() {
   return (
         <div className="App">
             <ThemeContext.Provider value={themeContext} >
-                <div className={theme}>
+            <FontContext.Provider value={fontContext} >
+                <div className={`${theme} ${font}`}>
                     <Header 
                         pdfItems={pdfItems}
                         setComponent={setComponent} />
@@ -39,6 +51,7 @@ function App() {
                     <Footer 
                         setComponent={setComponent} />
                 </div>
+          </FontContext.Provider>
           </ThemeContext.Provider>
       </div>
   );

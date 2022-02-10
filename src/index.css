@@ -1,36 +1,13 @@
 body { 
   position:absolute; 
   top:0; bottom:0; right:0; left:0; 
-  --choco-font-family:'choco', Fallback, sans-serif;
-  --celtic-font:'celtic', Fallback, sans-serif;
-
-  --brazil-navbar-color:  #2e3235;
-
-  --brazil-back-color:  rgb(201, 193, 85);
-  --brazil-front-color:  #516ece;
-
-  --brazil-green-color: rgb(64, 112, 58);
-  --brazil-orange-color: rgb(216, 117, 36);
-  --brazil-red-color: rgb(199, 37, 37);
-  --brazil-blue-color: rgb(52, 88, 165);
-
-  --brazil-green-hover-color: rgb(60, 100, 55);
-  --brazil-orange-hover-color: rgb(199, 121, 57);
-  --brazil-red-hover-color: rgb(182, 45, 45);
-  --brazil-blue-hover-color: rgb(54, 78, 131);
-
-  --brazil-button-text-color: var(--brazil-back-color);
-
   margin: 0;
+
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
 @font-face {
@@ -46,4 +23,3 @@ code {
   font-weight: normal; 
   src: local('Myriad Pro Regular'), url('./fonts/celtic.otf') format('truetype');
 }
-

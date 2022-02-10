@@ -19,6 +19,7 @@
     "react-router-dom": "^6.2.1",
     "react-scripts": "5.0.0",
     "react-simple-captcha": "^8.2.6",
+    "react-three-fiber": "^6.0.13",
     "recharts": "^2.1.8",
     "rsuite": "^5.5.2",
     "web-vitals": "^2.1.3"

@@ -4,6 +4,7 @@ import TablesTest from '../tables/TablesTest';
 import UsualFunctions from '../usual-functions/UsualFunctions';
 import PDFViewerPage from '../pdf-viewer/PDFViewerPage';
 
+import './Nav.css';
 import './Header.css';
 
 const Header = ({ pdfItems, setComponent }) => {
@@ -37,7 +38,7 @@ const Header = ({ pdfItems, setComponent }) => {
     }
 
     return (
-          <Navbar className="CustomNav" fixed="top" collapseOnSelect variant="dark" expand="lg">
+          <Navbar className="CustomHeader CustomNav" fixed="top" collapseOnSelect variant="dark" expand="lg">
 
               <Navbar.Brand href="/">Maths pour tous</Navbar.Brand>
               <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -87,6 +88,13 @@ const Header = ({ pdfItems, setComponent }) => {
                                 setComponent(<UsualFunctions />);
                               }} >
                                 Fonctions usuelles
+                          </NavDropdown.Item>
+                          <NavDropdown.Item 
+                              onClick={() => {
+                                unCollapse();
+                                setComponent(<UsualFunctions />);
+                              }} >
+                                Formes
                           </NavDropdown.Item>
                       </NavDropdown>
                   </Nav>

@@ -1,28 +1,50 @@
 .App {
   text-align: center;
+  --choco-font:'choco', Fallback, sans-serif;
+  --celtic-font:'celtic', Fallback, sans-serif;
 }
 
 .Brazil {
-  background: var(--brazil-back-color);
+  background: var(--back-color);
   background-size: auto;
 
-  --navbar-color : var(--brazil-navbar-color);
+  color: var(--front-color);  
+  --navbar-color:  #2e3235;
+  --back-color:  rgb(201, 193, 85);
+  --front-color:  #516ece;
 
-  --back-color: var(--brazil-back-color);
-  color: var(--brazil-front-color);
+  --green-color: rgb(64, 112, 58);
+  --orange-color: rgb(167, 90, 27);
+  --red-color: rgb(199, 37, 37);
+  --blue-color: rgb(52, 88, 165);
+  --grey-color: rgb(117, 118, 119);
 
-  --front-color: var(--brazil-front-color);
+  --green-hover-color: rgb(60, 100, 55);
+  --orange-hover-color: rgb(145, 78, 24);
+  --red-hover-color: rgb(182, 45, 45);
+  --blue-hover-color: rgb(54, 78, 131);
 
-  --green-color: var(--brazil-green-color);
-  --orange-color: var(--brazil-orange-color);
-  --red-color: var(--brazil-red-color);
-  --blue-color: var(--brazil-blue-color);
+  --button-text-color: var(--back-color);
+}
 
-  --green-hover-color: var(--brazil-green-hover-color);
-  --orange-hover-color: var(--brazil-orange-hover-color);
-  --red-hover-color: var(--brazil-red-hover-color);
-  --blue-hover-color: var(--brazil-blue-hover-color);
+.Celtic {
+  font-family: var(--celtic-font);
+}
 
-  --button-text-color: var(--brazil-button-text-color);
+.Choco {
+  font-family: var(--choco-font);
+}
 
+@font-face {
+  font-family: 'choco';
+  font-style: normal;
+  font-weight: normal; 
+  src: local('Myriad Pro Regular'), url('./fonts/choco.otf') format('truetype');
+}
+
+@font-face {
+  font-family: 'celtic';
+  font-style: normal;
+  font-weight: normal; 
+  src: local('Myriad Pro Regular'), url('./fonts/celtic.otf') format('truetype');
 }

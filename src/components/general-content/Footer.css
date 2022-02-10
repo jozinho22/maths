@@ -1,22 +1,45 @@
   .CustomFooter {
-    background-color : var(--navbar-color);
-    border-top: 2px solid var(--front-color);
-    color: cornsilk;
-    height: 40px;
+    border-top: 4px solid var(--front-color);
+    height: 100px;
   }
 
+  @media (min-width: 1268px) {
+    .CustomFooter {
+      height: 60px;
+    }
+  }
+
+ /*  .CustomFooter .nav-toggler {
+    margin-left: 40px !important;
+  } */
+
   .CopyRight {
-    width: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: small;
     color: grey;
   }
 
-  .Contact {
+  .ContactIcon {
     position : absolute;
     right: 0;
     margin-right: 30px;
     color: var(--back-color);
     width: 30px;
     height: 30px;
+    cursor: pointer;
+  }
+
+  .QuestionIcon {
+    position : absolute;
+    left: 0;
+    margin-left: 30px;
+    color: var(--grey-color);
+    width: 30px;
+    height: 30px;
     bottom: 5px;
     cursor: pointer;
   }
+
