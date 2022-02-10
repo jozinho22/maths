@@ -43,24 +43,6 @@ const Header = ({ pdfItems, setComponent }) => {
               <Navbar.Toggle aria-controls="basic-navbar-nav" />
               <Navbar.Collapse id="responsive-navbar-nav" >
                   <Nav>
-
-                      <NavDropdown title="Divers" id="basic-nav-dropdown">
-                          <NavDropdown.Item 
-                              onClick={() =>{
-                                unCollapse();
-                                setComponent(<TablesTest />);
-                              }} >
-                                Réviser ses tables
-                          </NavDropdown.Item>
-                          <NavDropdown.Item 
-                              onClick={() => {
-                                unCollapse();
-                                setComponent(<UsualFunctions />);
-                              }} >
-                                Fonctions usuelles
-                          </NavDropdown.Item>
-                      </NavDropdown>
-
                       <NavDropdown title="Cours/exercices en PDF" id="basic-nav-dropdown">
                           {pdfCoursesItems.map(pdfItem => 
                               <NavDropdown.Item 
@@ -76,7 +58,6 @@ const Header = ({ pdfItems, setComponent }) => {
                               </NavDropdown.Item>
                             )}
                       </NavDropdown>
-
                       <NavDropdown title="BDs de Jean-Pierre Petit" id="basic-nav-dropdown">
                           {pdfAlbumsItems.map(pdfItem => 
                               <NavDropdown.Item 
@@ -91,6 +72,22 @@ const Header = ({ pdfItems, setComponent }) => {
                                   {pdfItem.title}
                               </NavDropdown.Item>
                             )}
+                      </NavDropdown>
+                      <NavDropdown title="Divers" id="basic-nav-dropdown">
+                          <NavDropdown.Item 
+                              onClick={() =>{
+                                unCollapse();
+                                setComponent(<TablesTest />);
+                              }} >
+                                Réviser ses tables
+                          </NavDropdown.Item>
+                          <NavDropdown.Item 
+                              onClick={() => {
+                                unCollapse();
+                                setComponent(<UsualFunctions />);
+                              }} >
+                                Fonctions usuelles
+                          </NavDropdown.Item>
                       </NavDropdown>
                   </Nav>
               </Navbar.Collapse>

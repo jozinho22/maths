@@ -1,4 +1,5 @@
 import produitEnCroix from './courses/produitEnCroix.pdf';
+import produitEnCroixWithAnswers from './courses/produitEnCroix-rep.pdf';
 
 import aspirisouffle from './albums/aspirisouffle.pdf'; 
 import bigBang from './albums/bigBang.pdf'; 
@@ -25,7 +26,8 @@ function pdfResourceBuilder() {
       type: 'courses',
       filePath: './courses/produitEnCroix.pdf',
       title: 'Le produit en croix',
-      pdfFile : produitEnCroix
+      pdfFile : produitEnCroix,
+      pdfFileWithAnswers : produitEnCroixWithAnswers
     }
 
     pdfItems.push(

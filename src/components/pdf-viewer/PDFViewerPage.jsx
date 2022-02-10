@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React from 'react';
 
 import { Container, Button, Row, Col } from 'react-bootstrap';
 import BootstrapSwitchButton from 'bootstrap-switch-button-react'
@@ -12,12 +12,14 @@ const PDFViewerPage = ( { pdfItem } ) => {
 
     const PDFViewer = () => {
 
-        const [page, setPage] = useState(1);
-        const [pages, setPages] = useState(1);
-        const [pagesList, setPagesList] = useState([]);
+        const [page, setPage] = React.useState(1);
+        const [pages, setPages] = React.useState(1);
+        const [pagesList, setPagesList] = React.useState([]);
 
-        const [pageByPageDocument, setPageByPageDocument] = useState(true);
-        const [beginIndex, setBeginIndex] = useState(0);
+        const [pageByPageDocument, setPageByPageDocument] = React.useState(true);
+        const [beginIndex, setBeginIndex] = React.useState(0);
+
+        const [withAnswers, setWithAnswers] = React.useState(false);
         const step = 5;
 
         const PaginationPageByPage = () => {
@@ -147,12 +149,12 @@ const PDFViewerPage = ( { pdfItem } ) => {
         }
 
         function switchView() {
-          if(pageByPageDocument) {
-            addPagesToList(findClosest(page));
-          } else {
-            setPage(beginIndex);
-          }
-          setPageByPageDocument(!pageByPageDocument);
+            if(pageByPageDocument) {
+                addPagesToList(findClosest(page));
+            } else {
+                setPage(beginIndex);
+            }
+            setPageByPageDocument(!pageByPageDocument);
         }
 
         function findClosest(page) {  
@@ -163,15 +165,30 @@ const PDFViewerPage = ( { pdfItem } ) => {
           <> 
               <h3 className="PdfTitle Underline">{pdfItem.title}</h3>
               <Container className="SwitchButton">
-                <BootstrapSwitchButton 
-                  size="lg" 
-                  onlabel={`Par ${step} pages`}
-                  onstyle='primary'
-                  offlabel={`Page par page`}
-                  offstyle='success'
-                  style='w-50 mx-3'
-                  onChange={() => switchView()} />  
+                  <BootstrapSwitchButton 
+                    size="lg" 
+                    onlabel={`Par ${step} pages`}
+                    onstyle='primary'
+                    offlabel={`Page par page`}
+                    offstyle='warning'
+                    style='w-50 mx-3'
+                    onChange={() => switchView()} />  
               </Container>
+
+              {
+                pdfItem.type === 'courses' ?
+                    <Container className="SwitchButton">
+                      <BootstrapSwitchButton 
+                        size="lg" 
+                        onlabel={`Masquer les réponses`}
+                        onstyle='success'
+                        offlabel={`Afficher les réponses`}
+                        offstyle='danger'
+                        style='w-50 mx-3'
+                        onChange={() => setWithAnswers(!withAnswers)} />  
+                </Container>
+                        :<></>
+              }
 
               {    
                   pageByPageDocument ?
@@ -180,7 +197,7 @@ const PDFViewerPage = ( { pdfItem } ) => {
                       <PaginationPageByPage />
                       <PDF 
                         className="CustomCanevas"
-                        file={pdfItem.pdfFile}
+                        file={!withAnswers ? pdfItem.pdfFile : pdfItem.pdfFileWithAnswers}
                         page={page}
                         onDocumentComplete={pages => {
                           setPage(beginIndex + 1);
@@ -196,7 +213,7 @@ const PDFViewerPage = ( { pdfItem } ) => {
                             <PDF 
                               key={item.id}
                               className="CustomCanevas"
-                              file={pdfItem.pdfFile}
+                              file={!withAnswers ? pdfItem.pdfFile : pdfItem.pdfFileWithAnswers}
                               page={item.pageNumber}
                               onDocumentComplete={() => {
                               }} />

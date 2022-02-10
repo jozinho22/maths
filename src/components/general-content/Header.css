@@ -28,6 +28,8 @@
   
   .CustomNav .dropdown-menu {
     background-color : var(--navbar-color);
+    left:50%;
+    transform: translateX(-40%);
   }
 
   .CustomNav .dropdown-item {

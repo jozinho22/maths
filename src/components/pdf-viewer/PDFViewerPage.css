@@ -16,33 +16,34 @@
 
 .SwitchButton .btn-lg {
     font-size: xx-small !important;
-    height: 50px;
+    border-color: white;
 }
 
 @media (min-width: 360px) {
     .SwitchButton {
-        padding: 10px;
+        padding-top: 10px;
+    }
+    .SwitchButton .btn-lg {
+        font-size: x-small !important;
+    }
+}
+
+@media (min-width: 768px) {
+    .SwitchButton {
+        padding-top: 20px;
+        width: 70%;
     }
     .SwitchButton .btn-lg {
         font-size: small !important;
     }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1268px) {
     .SwitchButton {
-        padding: 20px;
+        padding-top: 30px;
     }
     .SwitchButton .btn-lg {
         font-size: medium !important;
-    }
-}
-
-@media (min-width: 1268px) {
-    .SwitchButton {
-        padding: 30px;
-    }
-    .SwitchButton .btn-lg {
-        font-size: large !important;
     }
 }
 
@@ -50,7 +51,15 @@
     background-color: var(--blue-color);
 }
 
+.SwitchButton .btn-warning {
+    background-color: var(--orange-color);
+}
+
 .SwitchButton .btn-success {
     background-color: var(--green-color);
+}
+
+.SwitchButton .btn-danger {
+    background-color: var(--green-hover-color);
 }
 
