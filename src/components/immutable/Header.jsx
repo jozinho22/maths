@@ -31,10 +31,10 @@ const Header = ({ pdfItems, setComponent }) => {
     }
 
     const findPdfItemById = (id) => {
-      console.log(id)
-      console.log(pdfItems[id])
+        console.log(id)
+        console.log(pdfItems[id])
 
-      return pdfItems[id];
+        return pdfItems[id];
     }
 
     return (
@@ -89,13 +89,13 @@ const Header = ({ pdfItems, setComponent }) => {
                               }} >
                                 Fonctions usuelles
                           </NavDropdown.Item>
-                          <NavDropdown.Item 
+                          {/* <NavDropdown.Item 
                               onClick={() => {
                                 unCollapse();
                                 setComponent(<UsualFunctions />);
                               }} >
                                 Formes
-                          </NavDropdown.Item>
+                          </NavDropdown.Item> */}
                       </NavDropdown>
                   </Nav>
               </Navbar.Collapse>

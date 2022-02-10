@@ -1,7 +1,10 @@
 .App {
   text-align: center;
-  --choco-font:'choco', Fallback, sans-serif;
-  --celtic-font:'celtic', Fallback, sans-serif;
+  --dragon-font:'dragon', Fallback, sans-serif;
+  --gothic-font:'gothic', Fallback, sans-serif;
+  --black-chancery-font:'black-chancery', Fallback, sans-serif;
+  --x-mas-font:'x-mas', Fallback, sans-serif;
+  --arabic-font: 'arabic', Fallback, sans-serif;
 }
 
 .Brazil {
@@ -27,24 +30,58 @@
   --button-text-color: var(--back-color);
 }
 
-.Celtic {
-  font-family: var(--celtic-font);
+.Dragon {
+  font-family: var(--dragon-font);
 }
 
-.Choco {
-  font-family: var(--choco-font);
+.Gothic {
+  font-family: var(--gothic-font);
+}
+
+.BlackChancery {
+  font-family: var(--black-chancery-font);
+}
+
+.Christmas {
+  font-family: var(--x-mas-font);
+}
+
+.Arabic {
+  font-family: var(--arabic-font);
+}
+
+
+@font-face {
+  font-family: 'dragon';
+  font-style: normal;
+  font-weight: normal; 
+  src: local('Dragon'), url('./fonts/dragon.ttf') format('truetype');
 }
 
 @font-face {
-  font-family: 'choco';
+  font-family: 'gothic';
   font-style: normal;
   font-weight: normal; 
-  src: local('Myriad Pro Regular'), url('./fonts/choco.otf') format('truetype');
+  src: local('Gothic'), url('./fonts/gothic.ttf') format('truetype');
 }
 
 @font-face {
-  font-family: 'celtic';
+  font-family: 'black-chancery';
   font-style: normal;
   font-weight: normal; 
-  src: local('Myriad Pro Regular'), url('./fonts/celtic.otf') format('truetype');
+  src: local('Black Chancery'), url('./fonts/black-chancery.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'x-mas';
+  font-style: normal;
+  font-weight: normal; 
+  src: local('Happy Christmas'), url('./fonts/x-mas.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'arabic';
+  font-style: normal;
+  font-weight: normal; 
+  src: local('Arabic'), url('./fonts/arabic.ttf') format('truetype');
 }

@@ -10,9 +10,9 @@ import FontContext from './components/context/FontContext';
 
 import pdfResourceBuilder from './components/pdf-viewer/pdfResourceBuilder';
 
-import Header from './components/general-content/Header';
+import Header from './components/immutable/Header';
 import Home from './components/home/Home';
-import Footer from './components/general-content/Footer';
+import Footer from './components/immutable/Footer';
 
 function App() {
 
@@ -23,7 +23,7 @@ function App() {
     updateTheme: setTheme
   };
 
-  const [font, setFont] = React.useState("Celtic");
+  const [font, setFont] = React.useState("Dragon");
 
   const fontContext = {
     font: font,

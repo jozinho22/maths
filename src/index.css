@@ -9,17 +9,3 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
-@font-face {
-  font-family: 'choco';
-  font-style: normal;
-  font-weight: normal; 
-  src: local('Myriad Pro Regular'), url('./fonts/choco.otf') format('truetype');
-}
-
-@font-face {
-  font-family: 'celtic';
-  font-style: normal;
-  font-weight: normal; 
-  src: local('Myriad Pro Regular'), url('./fonts/celtic.otf') format('truetype');
-}
