@@ -23,12 +23,23 @@ function App() {
     updateTheme: setTheme
   };
 
-  const [font, setFont] = React.useState("Dragon");
+  const [font, setFont] = React.useState("Dragons");
 
   const fontContext = {
     font: font,
     updateFont: setFont
   };
+
+/*   React.useEffect(() => {
+    var today = new Date();
+    console.log(today.getDay())
+    console.log(today.getMonth())
+    console.log(today.getFullYear())
+
+    if(new today.getDay() === 25 && today.getMonth === 12) {
+      setFont("Xmas")
+    }
+  }) */
 
   console.log(theme)
   console.log(font)

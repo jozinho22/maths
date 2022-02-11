@@ -18,6 +18,18 @@ const Footer = ( { setComponent } ) => {
     updateFont(event); 
   }
 
+  var id = -1;
+  var fonts = [{id: ++id, name: 'Aladdin'},
+               {id: ++id, name: 'Arabic'},
+               {id: ++id, name: 'BlackChancery'},
+               {id: ++id, name: 'Celtic'},
+               {id: ++id, name: 'Chinese'},
+               {id: ++id, name: 'Dragons'},
+               {id: ++id, name: 'Gothic'},
+               {id: ++id, name: 'Indian'},
+               {id: ++id, name: 'Western'},
+               {id: ++id, name: 'Xmas'}]
+
   return (
         <Navbar className="CustomFooter CustomNav" fixed="bottom" collapseOnSelect variant="dark" expand="lg">   
             {/* <FaQuestion 
@@ -28,32 +40,16 @@ const Footer = ( { setComponent } ) => {
                     <NavDropdown drop="up"
                         title="Changer la police" 
                         id="basic-nav-nav"
-                        onSelect={changeFont} >                        
-                        <NavDropdown.Item 
-                            className="Dragon"
-                            eventKey="Dragon">
-                            Celtic
-                        </NavDropdown.Item>
-                        <NavDropdown.Item 
-                            className="Gothic"
-                            eventKey="Gothic">
-                            Gothic
-                        </NavDropdown.Item>    
-                        <NavDropdown.Item 
-                            className="BlackChancery"
-                            eventKey="BlackChancery">
-                            BlackChancery
-                        </NavDropdown.Item>   
-                        <NavDropdown.Item 
-                            className="Christmas"
-                            eventKey="Christmas">
-                            Christmas
-                        </NavDropdown.Item> 
-                        <NavDropdown.Item 
-                            className="Arabic"
-                            eventKey="Arabic">
-                            Arabic
-                        </NavDropdown.Item>               
+                        onSelect={changeFont} >   
+                        {
+                            fonts.map(font => (
+                                <NavDropdown.Item key={font.id}
+                                    className={font.name}
+                                    eventKey={font.name}>
+                                    {font.name}
+                                </NavDropdown.Item>
+                            ))
+                        }                         
                     </NavDropdown>
                 </Nav>
             </Navbar.Collapse>        

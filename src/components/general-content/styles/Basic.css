@@ -16,7 +16,7 @@
 
  @media (min-width: 768px) {
     .RelativeContainer {
-        font-size: xx-large;
+        font-size: medium;
         padding-top: 80px;
     }
  }
@@ -24,6 +24,13 @@
  @media (min-width: 1000px) {
     .RelativeContainer {
         padding-top: 140px;
+    }
+ }
+
+ @media (min-width: 1268px) {
+    .RelativeContainer {
+        font-size: large;
+        padding-top: 80px;
     }
  }
 
