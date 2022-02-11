@@ -43,7 +43,7 @@
 
 .Brazil {
   background: var(--back-color);
-  color: var(--front-color);  
+  color: var(--dark-color); 
   /* --navbar-color:  #2e3235; */
   --navbar-color: var(--green-color);
   --back-color: var(--yellow-color);
