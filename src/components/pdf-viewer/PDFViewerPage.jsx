@@ -163,7 +163,7 @@ const PDFViewerPage = ( { pdfItem } ) => {
 
         return (
           <> 
-              <h3 className="PdfTitle Underline">{pdfItem.title}</h3>
+              <h3 className="Title">{pdfItem.title}</h3>
               <Container className="SwitchButton">
                   <BootstrapSwitchButton 
                     size="lg" 

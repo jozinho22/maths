@@ -1,5 +1,5 @@
 import { GiCheckMark , GiCrossMark} from 'react-icons/gi';
-import { BsQuestionLg } from 'react-icons/bs';
+import { FaQuestion } from 'react-icons/fa';
 
 import CustomLogger from '../general-content/CustomLogger';
 
@@ -10,26 +10,25 @@ const TablesTestResultsList = ({ question, answer }) => {
     var answerToShow = question.enounce;
     var goodAnswerToShow = question.goodAnswer;
 
+    console.log(answer.input === '')
+
     return (
             <tr>
                 <td className="AnswersResults">
                     {answerToShow} 
- 
                 </td>
                 <td>
                 {
-                    answer.input == '' ?
-                        <BsQuestionLg className="QuestionIcon Icon"/> 
-                    : 
-                        answer.isTrue ? 
-                                <GiCheckMark className="CheckIcon Icon"/> 
-                                    :  <GiCrossMark className="WrongIcon Icon" />
+                    answer.input === '' ?
+                        <FaQuestion className="QuestionIcon Icon" /> 
+                            : 
+                                answer.isTrue ? 
+                                        <GiCheckMark className="CheckIcon Icon" /> 
+                                            :  <GiCrossMark className="WrongIcon Icon" />
                 } 
                 </td>
                 <td className="GoodAnswerToDisplay">
-                {
-                    <p style={{color: "var(--green-color)"}}>{goodAnswerToShow}</p> 
-                }
+                    {goodAnswerToShow}
                 </td>
             </tr>
     );

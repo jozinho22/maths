@@ -34,7 +34,7 @@ const TablesTestQuestionDisplay =
             input: inputText,
             isTrue: false
         }
-
+  
         var userInputNumber = parseInt(userAnswer.input);
 
         if(userAnswer.input !== '') {
@@ -70,8 +70,6 @@ const TablesTestQuestionDisplay =
             maxTime = maxTime + 30;
         }
 
-        console.log(maxTime)
-
         setTimer(maxTime)
         if(endTimer) {
             doNext();
@@ -101,7 +99,6 @@ const TablesTestQuestionDisplay =
     const handleKeyboardInput = (keyboardInput) => {
         if(!isNaN(keyboardInput)) {
             if(inputText === '0' && keyboardInput === 0) {
-                console.log( 'if(inputText ===  && keyboardInput === 0)')
                 setAlert(updateAlert(true, 'Très drôle...'))
             } else {
                 setInputText(inputText + keyboardInput)

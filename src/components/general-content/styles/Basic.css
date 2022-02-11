@@ -6,9 +6,17 @@
     font-size: x-small;
  }
 
+.Title {
+    font-size: small;
+    padding-bottom: 20px;
+}
+
  @media (min-width: 360px) {
     .RelativeContainer {
         font-size: small;
+    }
+    .Title {
+        font-size: medium;
     }
  }
 
@@ -16,6 +24,9 @@
     .RelativeContainer {
         font-size: medium;
         padding-top: 80px;
+    }
+    .Title {
+        font-size: large;
     }
  }
 
@@ -29,7 +40,12 @@
     .RelativeContainer {
         font-size: large;
     }
+    .Title {
+        font-size: x-large;
+    }
  }
+
+
 
 .LoadingSpinner {
     position: relative; /* or absolute */
@@ -116,4 +132,8 @@
 
 .Underline {
     text-decoration: underline;
+}
+
+.Clickable {
+    cursor: pointer;
 }

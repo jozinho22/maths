@@ -10,29 +10,84 @@
   --indian-font:'indian', Fallback, sans-serif;
   --western-font:'western', Fallback, sans-serif;
   --x-mas-font:'x-mas', Fallback, sans-serif;
+
+  background-size: auto;
+
+  --blue-color: rgb(35, 73, 155);
+  --dark-color: rgb(47, 49, 53);
+  --green-color: rgb(64, 112, 58);
+  --grey-light-color: rgb(179, 178, 177);
+  --grey-color: rgb(117, 118, 119);
+  --grey-dark-color: rgb(77, 78, 78);
+  --orange-color: rgb(167, 90, 27);
+  --purple-color: rgb(162, 32, 173);
+  --red-color: rgb(177, 34, 34);
+  --yellow-color: rgb(201, 193, 85);
+
+  --blue-hover-color: rgb(54, 78, 131);
+  --green-hover-color: rgb(60, 100, 55);
+  --orange-hover-color: rgb(145, 78, 24);
+  --red-hover-color: rgb(182, 45, 45);
+}
+
+.Algeria {
+  background: var(--back-color);
+  color: var(--front-color); 
+  --navbar-color: var(--green-color);
+  --back-color: var(--grey-light-color);
+  --front-color: var(--red-color);
+  --button-text-color: var(--back-color);
+  --simple-text-color: var(--dark-color);
+  --links-color: var(--back-color);
 }
 
 .Brazil {
   background: var(--back-color);
-  background-size: auto;
-
   color: var(--front-color);  
-  --navbar-color:  #2e3235;
-  --back-color:  rgb(201, 193, 85);
-  --front-color:  #516ece;
-
-  --green-color: rgb(64, 112, 58);
-  --orange-color: rgb(167, 90, 27);
-  --red-color: rgb(199, 37, 37);
-  --blue-color: rgb(52, 88, 165);
-  --grey-color: rgb(117, 118, 119);
-
-  --green-hover-color: rgb(60, 100, 55);
-  --orange-hover-color: rgb(145, 78, 24);
-  --red-hover-color: rgb(182, 45, 45);
-  --blue-hover-color: rgb(54, 78, 131);
-
+  /* --navbar-color:  #2e3235; */
+  --navbar-color: var(--green-color);
+  --back-color: var(--yellow-color);
+  --front-color: var(--blue-color);
   --button-text-color: var(--back-color);
+  --simple-text-color: var(--dark-color);
+  --links-color: var(--back-color);
+}
+
+.Darcula {
+  background: var(--back-color);
+  color: var(--grey-color); 
+  --navbar-color: var(--dark-color);
+  --back-color: var(--dark-color);
+  --front-color: var(--grey-dark-color);
+  --button-text-color: var(--grey-color);
+  --simple-text-color: var(--grey-color);
+  --links-color: var(--purple-color);
+}
+
+.France {
+  background: var(--back-color);
+  color: var(--dark-color); 
+  --navbar-color: var(--blue-color);
+  --back-color: var(--grey-light-color);
+  --front-color: var(--red-color);
+  --button-text-color: var(--back-color);
+  --simple-text-color: var(--dark-color);
+  --links-color: var(--back-color);
+}
+
+.Senegal {
+  background: var(--back-color);
+  color: var(--front-color); 
+  --navbar-color: var(--green-color);
+  --back-color: var(--yellow-color);
+  --front-color: var(--red-color);
+  --button-text-color: var(--back-color);
+  --simple-text-color: var(--dark-color);
+  --links-color: var(--back-color);
+}
+
+#theme-dropdown-item {
+  color: black;
 }
 
 .Aladdin {

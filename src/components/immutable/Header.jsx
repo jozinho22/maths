@@ -1,5 +1,6 @@
 import React from 'react';
-import { Navbar, Nav, DropdownButton, Dropdown, NavDropdown, Row, Col } from 'react-bootstrap';
+import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
+import Home from '../home/Home';
 import TablesTest from '../tables/TablesTest';
 import UsualFunctions from '../usual-functions/UsualFunctions';
 import PDFViewerPage from '../pdf-viewer/PDFViewerPage';
@@ -31,75 +32,76 @@ const Header = ({ pdfItems, setComponent }) => {
     }
 
     const findPdfItemById = (id) => {
-        console.log(id)
-        console.log(pdfItems[id])
-
         return pdfItems[id];
     }
 
     return (
-          <Navbar className="CustomHeader CustomNav" fixed="top" collapseOnSelect variant="dark" expand="lg">
+            <Navbar className="CustomNav CustomHeader" fixed="top" collapseOnSelect variant="dark" expand="lg">
 
-              <Navbar.Brand href="/">Maths pour tous</Navbar.Brand>
-              <Navbar.Toggle aria-controls="basic-navbar-nav" />
-              <Navbar.Collapse id="responsive-navbar-nav" >
-                  <Nav>
-                      <NavDropdown title="Cours/exercices en PDF" id="basic-nav-dropdown">
-                          {pdfCoursesItems.map(pdfItem => 
-                              <NavDropdown.Item 
-                                  key= {pdfItem.id}
-                                  onClick={() => {
-                                      unCollapse();
-                                      setComponent(
-                                        <PDFViewerPage 
-                                          pdfItem={findPdfItemById(pdfItem.id)} />
-                                      );
-                                  }} >
-                                  {pdfItem.title}
-                              </NavDropdown.Item>
-                            )}
-                      </NavDropdown>
-                      <NavDropdown title="BDs de Jean-Pierre Petit" id="basic-nav-dropdown">
-                          {pdfAlbumsItems.map(pdfItem => 
-                              <NavDropdown.Item 
-                                  key= {pdfItem.id}
-                                  onClick={() => {
-                                      unCollapse();
-                                      setComponent(
-                                        <PDFViewerPage 
-                                          pdfItem={findPdfItemById(pdfItem.id)} />
-                                      );
-                                  }} >
-                                  {pdfItem.title}
-                              </NavDropdown.Item>
-                            )}
-                      </NavDropdown>
-                      <NavDropdown title="Divers" id="basic-nav-dropdown">
-                          <NavDropdown.Item 
-                              onClick={() =>{
-                                unCollapse();
-                                setComponent(<TablesTest />);
-                              }} >
-                                Réviser ses tables
-                          </NavDropdown.Item>
-                          <NavDropdown.Item 
-                              onClick={() => {
-                                unCollapse();
-                                setComponent(<UsualFunctions />);
-                              }} >
-                                Fonctions usuelles
-                          </NavDropdown.Item>
-                          {/* <NavDropdown.Item 
-                              onClick={() => {
-                                unCollapse();
-                                setComponent(<UsualFunctions />);
-                              }} >
-                                Formes
-                          </NavDropdown.Item> */}
-                      </NavDropdown>
-                  </Nav>
-              </Navbar.Collapse>
-          </Navbar>
+                <Navbar.Brand 
+                    className="Clickable"
+                    onClick={() => setComponent(<Home />)}>
+                    Maths pour tous
+                </Navbar.Brand>
+                <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                <Navbar.Collapse id="responsive-navbar-nav" >
+                    <Nav>
+                        <NavDropdown title="Cours/exercices en PDF" id="basic-nav-dropdown">
+                            {pdfCoursesItems.map(pdfItem => 
+                                <NavDropdown.Item 
+                                    key= {pdfItem.id}
+                                    onClick={() => {
+                                        unCollapse();
+                                        setComponent(
+                                            <PDFViewerPage 
+                                            pdfItem={findPdfItemById(pdfItem.id)} />
+                                        );
+                                    }} >
+                                    {pdfItem.title}
+                                </NavDropdown.Item>
+                                )}
+                        </NavDropdown>
+                        <NavDropdown title="BDs de Jean-Pierre Petit" id="basic-nav-dropdown">
+                            {pdfAlbumsItems.map(pdfItem => 
+                                <NavDropdown.Item 
+                                    key= {pdfItem.id}
+                                    onClick={() => {
+                                        unCollapse();
+                                        setComponent(
+                                            <PDFViewerPage 
+                                            pdfItem={findPdfItemById(pdfItem.id)} />
+                                        );
+                                    }} >
+                                    {pdfItem.title}
+                                </NavDropdown.Item>
+                                )}
+                        </NavDropdown>
+                        <NavDropdown title="Divers" id="basic-nav-dropdown">
+                            <NavDropdown.Item 
+                                onClick={() =>{
+                                    unCollapse();
+                                    setComponent(<TablesTest />);
+                                }} >
+                                    Réviser ses tables
+                            </NavDropdown.Item>
+                            <NavDropdown.Item 
+                                onClick={() => {
+                                    unCollapse();
+                                    setComponent(<UsualFunctions />);
+                                }} >
+                                    Fonctions usuelles
+                            </NavDropdown.Item>
+                            {/* <NavDropdown.Item 
+                                onClick={() => {
+                                    unCollapse();
+                                    setComponent(<UsualFunctions />);
+                                }} >
+                                    Formes
+                            </NavDropdown.Item> */}
+                        </NavDropdown>
+                    </Nav>
+                </Navbar.Collapse>
+            </Navbar>
         );
     }
     

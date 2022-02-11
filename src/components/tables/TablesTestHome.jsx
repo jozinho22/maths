@@ -10,7 +10,7 @@ const TablesTestHome = ({levels,
 
     return (
         <>
-            <h3 className="Underline">Jeu pour réviser ses tables de multiplication</h3>
+            <p className="Title">Jeu pour réviser ses tables de multiplication</p>
             <Container className="TablesTestHomeButtonContainer"  >
                 {
                     levels.map(level => (

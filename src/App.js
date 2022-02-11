@@ -41,8 +41,6 @@ function App() {
     }
   }) */
 
-  console.log(theme)
-  console.log(font)
   const [component, setComponent] = React.useState(<Home />);
 
   var pdfItems = pdfResourceBuilder();

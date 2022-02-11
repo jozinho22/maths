@@ -12,7 +12,7 @@ const TablesTestResults = ({questions,
     return (
         
         <>
-            <h2 style={{textDecoration: "underline"}}>Résultats</h2>
+            <p className="Title">Résultats</p>
             <Container className="ResultsContainer">
 
                 <Table className="TablesTestResults">
@@ -36,7 +36,7 @@ const TablesTestResults = ({questions,
 
             </Container> 
 
-            <h3 style={{textDecoration: "underline"}}>Score : {user.score}/{questions.length}</h3>
+            <p className="Title">Score : {user.score}/{questions.length}</p>
             <br></br>
             <h3>Une autre ?</h3>
             <Container>
