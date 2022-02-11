@@ -1,8 +1,6 @@
 .RelativeContainer {
     position: relative;
-    /* refers to the Header (100px) + 40px */
-    padding-top: 140px;
-    /* refers to the Footer (100px) + 20px */
+    padding-top: 80px;
     padding-bottom: 120px; 
     min-height: 100vh; 
     font-size: x-small;
@@ -30,7 +28,6 @@
  @media (min-width: 1268px) {
     .RelativeContainer {
         font-size: large;
-        padding-top: 80px;
     }
  }
 
