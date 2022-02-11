@@ -54,7 +54,7 @@ const Header = ({ pdfItems, setComponent }) => {
                                         unCollapse();
                                         setComponent(
                                             <PDFViewerPage 
-                                            pdfItem={findPdfItemById(pdfItem.id)} />
+                                                pdfItem={findPdfItemById(pdfItem.id)} />
                                         );
                                     }} >
                                     {pdfItem.title}
