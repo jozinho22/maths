@@ -1,14 +1,14 @@
-.InColumnButton {
+/* .InColumnButton {
     margin-top: 0px;
     padding: 0px;
 }
-
+ */
 .FunctionAttributes {
     padding: 20px;
 }
 
 @media (min-width: 1268px) {
-    .UsualFunctionsButton {
+    .UsualFunctionsButtonsContainer {
         position: fixed;
         right: 0%;
         width: 20%;

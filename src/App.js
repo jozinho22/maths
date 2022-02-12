@@ -14,6 +14,7 @@ import FontContext from './components/context/FontContext';
 import pdfResourceBuilder from './components/pdf-viewer/pdfResourceBuilder';
 
 import Header from './components/immutable/Header';
+import ProgrammationBasics from './components/code/ProgrammationBasics'
 import Home from './components/home/Home';
 import Footer from './components/immutable/Footer';
 
@@ -35,7 +36,7 @@ function App() {
         updateFont: setFont
     };
 
-    const [component, setComponent] = React.useState( < Home /> );
+    const [component, setComponent] = React.useState( <Home /> );
 
     var pdfItems = pdfResourceBuilder();
 

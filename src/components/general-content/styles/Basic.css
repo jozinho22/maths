@@ -1,59 +1,70 @@
 .RelativeContainer {
     position: relative;
     padding-top: 80px;
-    padding-bottom: 120px; 
-    min-height: 100vh; 
+    padding-bottom: 120px;
+    min-height: 100vh;
     font-size: x-small;
- }
-
-.Title {
-    font-size: small;
-    padding-bottom: 20px;
 }
 
- @media (min-width: 360px) {
+.Title, .Title1 {
+    text-decoration: underline;
+}
+
+.Title {
+   font-size: small; 
+   padding-bottom: 20px;
+}
+
+.Title1 {
+   text-align: left;
+   padding-bottom: 5px;
+}
+
+@media (min-width: 360px) {
     .RelativeContainer {
         font-size: small;
     }
+
     .Title {
         font-size: medium;
     }
- }
+}
 
- @media (min-width: 768px) {
+@media (min-width: 768px) {
     .RelativeContainer {
         font-size: medium;
         padding-top: 80px;
     }
+
     .Title {
         font-size: large;
     }
- }
+}
 
- @media (min-width: 1000px) {
+@media (min-width: 1000px) {
     .RelativeContainer {
         padding-top: 140px;
     }
- }
+}
 
- @media (min-width: 1268px) {
+@media (min-width: 1268px) {
     .RelativeContainer {
         font-size: large;
     }
+
     .Title {
         font-size: x-large;
     }
- }
-
-
+}
 
 .LoadingSpinner {
-    position: relative; /* or absolute */
+    position: relative;
+    /* or absolute */
     color: var(--front-color);
 }
 
 .DefaultButton {
-	background-color: var(--blue-color);
+    background-color: var(--blue-color);
     border-color: white;
     color: var(--back-color);
     margin-top: 20px;
@@ -71,7 +82,7 @@
         margin-top: 25px;
         margin-bottom: 25px;
     }
- }
+}
 
 @media (min-width: 768px) {
     .DefaultButton {
@@ -79,25 +90,26 @@
         margin-top: 20px;
         margin-bottom: 20px;
     }
- }
+}
 
- @media (min-width: 1268px) {
+@media (min-width: 1268px) {
     .DefaultButton {
         font-size: large;
         margin-top: 20px;
         margin-bottom: 20px;
     }
- }
+}
 
 .DefaultButton:hover {
     background-color: var(--blue-hover-color);
- }
+}
 
- .MiniButton {
-     padding: 5px;
-     font-size: x-small;
-     margin: 20px;
- }
+.MiniButton {
+    padding: 5px;
+    font-size: x-small;
+    margin: 20px;
+}
+
 .GreenButton {
     background-color: var(--green-color);
 }

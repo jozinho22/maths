@@ -1,6 +1,8 @@
 import React from 'react';
 import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
 import Home from '../home/Home';
+import ProgrammationBasics from '../code/ProgrammationBasics';
+
 import TablesTest from '../tables/TablesTest';
 import UsualFunctions from '../usual-functions/UsualFunctions';
 import PDFViewerPage from '../pdf-viewer/PDFViewerPage';
@@ -46,21 +48,16 @@ const Header = ({ pdfItems, setComponent }) => {
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav" >
                     <Nav>
-                        <NavDropdown title="Cours/exercices en PDF" id="basic-nav-dropdown">
-                            {pdfCoursesItems.map(pdfItem => 
-                                <NavDropdown.Item 
-                                    key= {pdfItem.id}
-                                    onClick={() => {
-                                        unCollapse();
-                                        setComponent(
-                                            <PDFViewerPage 
-                                                pdfItem={findPdfItemById(pdfItem.id)} />
-                                        );
-                                    }} >
-                                    {pdfItem.title}
-                                </NavDropdown.Item>
-                                )}
-                        </NavDropdown>
+                        {/*<NavDropdown title="Cours/exercices" id="basic-nav-dropdown">
+                             <NavDropdown.Item 
+                                onClick={() => {
+                                    unCollapse();
+                                    setComponent(<ProgrammationBasics />);
+                                }} >
+                                Bases de la programmation
+                            </NavDropdown.Item> 
+
+                        </NavDropdown>*/}
                         <NavDropdown title="BDs de Jean-Pierre Petit" id="basic-nav-dropdown">
                             {pdfAlbumsItems.map(pdfItem => 
                                 <NavDropdown.Item 
@@ -76,27 +73,27 @@ const Header = ({ pdfItems, setComponent }) => {
                                 </NavDropdown.Item>
                                 )}
                         </NavDropdown>
-                        <NavDropdown title="Divers" id="basic-nav-dropdown">
+                        <NavDropdown title="Modules" id="basic-nav-dropdown">
                             <NavDropdown.Item 
                                 onClick={() =>{
                                     unCollapse();
                                     setComponent(<TablesTest />);
                                 }} >
-                                    Réviser ses tables
+                                Réviser ses tables
                             </NavDropdown.Item>
                             <NavDropdown.Item 
                                 onClick={() => {
                                     unCollapse();
                                     setComponent(<UsualFunctions />);
                                 }} >
-                                    Fonctions usuelles
+                                Fonctions usuelles
                             </NavDropdown.Item>
                             {/* <NavDropdown.Item 
                                 onClick={() => {
                                     unCollapse();
                                     setComponent(<UsualFunctions />);
                                 }} >
-                                    Formes
+                                Formes
                             </NavDropdown.Item> */}
                         </NavDropdown>
                     </Nav>

@@ -83,7 +83,7 @@ const UsualFunctions2 = () => {
 
     return(
         <>
-            <Container className="UsualFunctionsButton">
+            <Container className="UsualFunctionsButtonsContainer">
                 {
                     usualFunctions.map(f => (
                         <Button key={f.id}
