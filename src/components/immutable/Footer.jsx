@@ -55,7 +55,7 @@ const Footer = ( { setComponent } ) => {
                 expand="lg">   
                 {/* <FaQuestion 
                     className="QuestionIcon" /> */} 
-                <Navbar.Toggle expand="true" aria-controls="basic-nav-nav"/>
+                <Navbar.Toggle aria-controls="basic-nav-nav"/>
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav>
                         <NavDropdown 

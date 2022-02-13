@@ -26,6 +26,8 @@ const Contact = ( {setComponent} ) => {
     var maxSubject = 40;
     
     const [messageAlert, setMessageAlert] = React.useState({show: false, message: ''});
+    const [fieldsAlert, setFieldsAlert] = React.useState({show: false, message: ''});
+
     const [nbLines, setNbLines] = React.useState(4);
     const maxLength = 500;
 
@@ -129,7 +131,8 @@ const Contact = ( {setComponent} ) => {
     };
 
     const sendEmail = () => {
-        emailjs.send(
+        if(verifyFields()) {
+            emailjs.send(
             'service_oo4q3ja',
             'template_ts3dgfe', 
             templateParams, 
@@ -147,6 +150,17 @@ const Contact = ( {setComponent} ) => {
                     setSuccess(true);
                 }
             });
+        }
+    }
+
+    const verifyFields = () => {
+        if(firstName === '' || lastName === '' || email === '' 
+            || firstName === '' || subject === '' || message ==='') {
+                setFieldsAlert(updateAlert(true, 'Tous les champs doivent être remplis !!!'));
+                return false;
+        } else {
+            return true;
+        }
     }
     
     return (
@@ -256,7 +270,11 @@ const Contact = ( {setComponent} ) => {
             </Form.Group>
             <Button 
                 className="DefaultButton ContactButton"
-                onClick={(client) => sendEmail(client)}>Merci !</Button>
+                onClick={(client) => sendEmail(client)}>Merci !
+            </Button>
+            <Alert 
+                show={fieldsAlert.show}
+                message={fieldsAlert.message} />
         </Form>
     </ContactManager>
     );

@@ -87,7 +87,7 @@ const UsualFunctions2 = () => {
                 {
                     usualFunctions.map(f => (
                         <Button key={f.id}
-                            className={`DefaultButton InColumnButton ${f.color}Button`}
+                            className={`DefaultButton UsualFunctionsButton ${f.color}Button`}
                             onClick={() => setF(usualFunctions[f.id])} >
                             <MathJaxDisplay toShow={getButtonTitle(f.mathJaxTitle)} />
                         </Button>
@@ -172,7 +172,7 @@ const UsualFunctions2 = () => {
                    
                     </Container>
                 </>
-                : <p>Choisissez une fonction à afficher</p>
+                : <p className="Title">Choisissez une fonction à afficher</p>
             }
         </>
     );

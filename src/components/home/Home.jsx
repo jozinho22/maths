@@ -1,7 +1,8 @@
-import './Home.css';
 import { Container, Row, Col } from 'react-bootstrap';
 import MathJaxDisplay from '../mathjax-display/MathJaxDisplay';
 import buildFunctionsExpressions from './buildFunctionsExpressions';
+
+import './Home.css';
 
 const Home = () => {
 

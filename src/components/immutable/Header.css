@@ -1,5 +1,5 @@
 .CustomHeader {
-  border-bottom: 4px solid var(--front-color);
+    border-bottom: 4px solid var(--front-color);
 }
 
 .CustomHeader .navbar-nav {
@@ -7,5 +7,5 @@
 }
 
 .CustomHeader .navbar-toggler {
-  margin-right: 20px;
+    margin-right: 20px;
 } 

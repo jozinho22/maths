@@ -9,7 +9,8 @@ const PaginationPageByPage = ( {page, pages, setPage} ) => {
                 className="DefaultButton"
                 disabled={disabled}                 
                 onClick={() => {
-                setPage(page - 1 > 0 ? page - 1 : 1);
+                    /* setPage(page - 1 > 0 ? page - 1 : 1); */
+                    setPage(page - 1);
                 }} >
                 Prev
             </Button>
@@ -22,7 +23,8 @@ const PaginationPageByPage = ( {page, pages, setPage} ) => {
                 className="DefaultButton"
                 disabled={disabled}
                 onClick={() => {
-                    setPage(page + 1 > pages ? pages : page + 1);
+                    /* setPage(page + 1 > pages ? pages : page + 1); */
+                    setPage(page + 1);
                 }} >
                 Next
             </Button>
@@ -32,21 +34,13 @@ const PaginationPageByPage = ( {page, pages, setPage} ) => {
     return (
         <Row>
             <Col style={{textAlign:"right"}}>
-                {
-                    pages > 1 && page > 1 ?
-                        <BackButton /> : 
-                            <BackButton disabled={true} />
-                }
+                <BackButton disabled={ !(pages > 1 && page > 1) } /> 
             </Col>
             <Col className="CenterText">
                 Page : {page} / {pages} 
             </Col>
             <Col style={{textAlign:"left"}}>
-                {
-                    pages > 1 && page < pages ?
-                        <NextButton /> : 
-                            <NextButton disabled={true} />
-                }
+                <NextButton disabled={ !(pages > 1 && page < pages) } />  
             </Col>
         </Row>
     );

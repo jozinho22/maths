@@ -1,16 +1,18 @@
 .RelativeContainer {
     position: relative;
-    padding-top: 80px;
-    padding-bottom: 120px;
+    padding-top: calc(var(--customheader-height) + 20px);
+    padding-bottom: calc(var(--customfooter-height) + 20px);
     min-height: 100vh;
     font-size: x-small;
 }
 
 .Title, .Title1 {
+    position: relative;
     text-decoration: underline;
 }
 
 .Title {
+   padding-top: 20px;
    font-size: small; 
    padding-bottom: 20px;
 }
@@ -20,40 +22,22 @@
    padding-bottom: 5px;
 }
 
-@media (min-width: 360px) {
+@media (min-width: 768px) {
     .RelativeContainer {
         font-size: small;
     }
-
     .Title {
         font-size: medium;
-    }
-}
-
-@media (min-width: 768px) {
-    .RelativeContainer {
-        font-size: medium;
-        padding-top: 80px;
-    }
-
-    .Title {
-        font-size: large;
-    }
-}
-
-@media (min-width: 1000px) {
-    .RelativeContainer {
-        padding-top: 140px;
     }
 }
 
 @media (min-width: 1268px) {
     .RelativeContainer {
-        font-size: large;
+        font-size: medium;
     }
 
     .Title {
-        font-size: x-large;
+        font-size: large;
     }
 }
 
@@ -72,7 +56,7 @@
     margin-left: 10px;
     margin-right: 10px;
     padding: 10px;
-    font-size: small;
+    font-size: x-small;
 }
 
 
@@ -86,7 +70,7 @@
 
 @media (min-width: 768px) {
     .DefaultButton {
-        font-size: large;
+        font-size: small;
         margin-top: 20px;
         margin-bottom: 20px;
     }
@@ -94,7 +78,7 @@
 
 @media (min-width: 1268px) {
     .DefaultButton {
-        font-size: large;
+        font-size: medium;
         margin-top: 20px;
         margin-bottom: 20px;
     }

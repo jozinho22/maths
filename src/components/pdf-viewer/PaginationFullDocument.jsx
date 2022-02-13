@@ -4,16 +4,16 @@ const PaginationFullDocument = ({pages, beginIndex, step, addPagesToList}) => {
 
     const BackButton = ({disabled}) => {
         return (
-        <Button 
-            className="DefaultButton"
-            disabled={disabled} 
-            onClick={() => {
-                if(beginIndex >= step) {
-                    addPagesToList(beginIndex - step);
-                }
-            }} >
-            Prev
-        </Button>
+            <Button 
+                className="DefaultButton"
+                disabled={disabled} 
+                onClick={() => {
+                    if(beginIndex >= step) {
+                        addPagesToList(beginIndex - step);
+                    }
+                }} >
+                Prev
+            </Button>
         );
     }
 
@@ -35,10 +35,7 @@ const PaginationFullDocument = ({pages, beginIndex, step, addPagesToList}) => {
     return (
         <Row>
             <Col style={{textAlign:"right"}}>
-                {beginIndex > 0 ?
-                    <BackButton /> : 
-                    <BackButton disabled={true} />
-                }
+                <BackButton disabled={ !(beginIndex > 0) } /> 
             </Col>
             <Col className="CenterText">
                 <p>Pages : 
@@ -52,11 +49,7 @@ const PaginationFullDocument = ({pages, beginIndex, step, addPagesToList}) => {
                 / {pages} </p>
             </Col>
             <Col style={{textAlign:"left"}}>
-                {
-                    beginIndex + step < pages ?
-                        <NextButton /> : 
-                            <NextButton disabled={true} />
-                }
+                <NextButton disabled={ !(beginIndex + step < pages) } /> 
             </Col>
         </Row>
     );

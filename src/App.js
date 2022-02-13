@@ -1,24 +1,27 @@
 import React from 'react';
-import { Container } from 'react-bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './App.css';
-import './components/immutable/Fonts.css';
-import './components/immutable/Themes.css';
 
-import './components/general-content/styles/Basic.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './components/immutable/styles/Fonts.css';
+import './components/immutable/styles/Themes.css';
+import './components/immutable/styles/Commons.css';
 import './components/alert/Alert.css';
+import './App.css';
+
+import { Container } from 'react-bootstrap';
 
 import ThemeContext from './components/context/ThemeContext';
 import FontContext from './components/context/FontContext';
 
 import pdfResourceBuilder from './components/pdf-viewer/pdfResourceBuilder';
+import { processNavBarTouch } from './components/immutable/navbarProcesses';
 
 import Header from './components/immutable/Header';
-import ProgrammationBasics from './components/code/ProgrammationBasics'
 import Home from './components/home/Home';
-import Footer from './components/immutable/Footer';
+import ProgrammationBasics from './components/prog-basics/ProgrammationBasics'
 
+import Footer from './components/immutable/Footer';
 import CustomSpinner from './components/general-content/CustomSpinner';
+
 
 function App() {
 
@@ -40,17 +43,28 @@ function App() {
 
     var pdfItems = pdfResourceBuilder();
 
+    const [dimensions, setDimensions] = React.useState(
+        [{class: 'CustomHeader', height: ''}, {class: 'CustomFooter', height: ''},{class: 'Title', height: ''}]
+    );
+
+    React.useEffect(() => {
+        processNavBarTouch(dimensions);
+    }, [dimensions]);
+
     return ( 
         <div className = "App" >
-            <ThemeContext.Provider value = { themeContext } >
-            <FontContext.Provider value = { fontContext } >
-                <div className = { `${theme} ${font}` } >
-                <Header pdfItems = { pdfItems }
-                    setComponent = { setComponent } /> 
-                <Container className = "RelativeContainer" > 
-                    {component} 
-                </Container> 
-                <Footer setComponent = { setComponent }/> 
+            <ThemeContext.Provider value = {themeContext} >
+            <FontContext.Provider value = {fontContext} >
+                <div className = {`${theme} ${font}`} >
+                    <Header 
+                        pdfItems = {pdfItems}
+                        setComponent = {setComponent}
+                        setDimensions = {setDimensions} /> 
+                    <Container className = "RelativeContainer" > 
+                        {component} 
+                    </Container> 
+                    <Footer 
+                        setComponent = {setComponent}/> 
                 </div> 
             </FontContext.Provider> 
             </ThemeContext.Provider> 

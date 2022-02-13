@@ -1,6 +1,13 @@
 .ProgrammationBasicsContainer {
-    width: 60%;
+    position: relative;
+    margin-bottom: 20px;
+    width: 80%;
 }
+
+/* @media (min-width: 360px) {
+   .ProgrammationBasicsContainer {
+    } 
+} */
 
 .ProgrammationBasicsContainer a {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
@@ -10,32 +17,42 @@
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     text-align: left;
     white-space: pre-line;
+    
+}
+
+.ProgrammationBasicsContainer > p, a {
+    font-size: small;
+}
+
+@media (min-width: 768px) {
+   .ProgrammationBasicsContainer > p, a {
+       font-size: medium;
+    } 
+}
+
+@media (min-width: 768px) {
+   .ProgrammationBasicsContainer > p, a {
+        font-size: large;
+    } 
 }
 
 .CodeContainer {
     background-color: var(--grey-light-color);
     border-radius: 10px;
-    font-size: small;
     padding: 30px;
     margin-top: 40px;
     margin-bottom: 40px;
-    width: 80%;
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+   .CodeContainer {
+        width: 80%;
+    } 
 }
 
 .Code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
     white-space: pre-wrap;
     text-align: left;
-}
-
-@media (min-width: 1268px) {
-    .ChaptersMenuContainer {
-        position: fixed;
-        left: 0%;
-        width: 20%;
-    }
-
-    .InColumnButton {
-        margin-top: 10px;
-    }
 }

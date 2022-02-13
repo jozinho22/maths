@@ -3,19 +3,10 @@
     padding: 25px;
 }
 
-@media (min-width : 450px) {
-    .TablesTestHomeButtonContainer {
-        padding-top: 25px;
-    }
-}
-
 @media (min-width : 768px) {
     .TablesTestHomeButton {
         margin: 20px;
         padding: 25px;
-    }
-    .TablesTestHomeButtonContainer {
-        padding-top: 30px;
     }
 }
 

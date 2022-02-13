@@ -1,17 +1,19 @@
 import React from 'react';
 import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
 import Home from '../home/Home';
-import ProgrammationBasics from '../code/ProgrammationBasics';
+import ProgrammationBasics from '../prog-basics/ProgrammationBasics';
+import { setDimensionsOnToggle } from './navbarProcesses';
 
-import TablesTest from '../tables/TablesTest';
+import TablesTest from '../tables-test/TablesTest';
 import UsualFunctions from '../usual-functions/UsualFunctions';
 import PDFViewerPage from '../pdf-viewer/PDFViewerPage';
 
 import './Nav.css';
 import './Header.css';
 
-const Header = ({ pdfItems, setComponent }) => {
+const Header = ({ pdfItems, setComponent, setDimensions }) => {
 
+    const [showToggle, setShowToggle] = React.useState(false);
     var pdfCoursesItems = []
     var pdfAlbumsItems = []
 
@@ -23,23 +25,21 @@ const Header = ({ pdfItems, setComponent }) => {
         }
     }
 
-    const unCollapse = () => {
-
-        const navToggle = document.getElementById('responsive-navbar-nav');
-        const navLinks = document.querySelectorAll('.dropdown-item')
-
-        navLinks.forEach((l) => {
-          l.addEventListener('click', () => { navToggle.classList.remove('show'); })
-        });
-    }
-
     const findPdfItemById = (id) => {
         return pdfItems[id];
     }
 
     return (
-            <Navbar className="CustomNav CustomHeader" fixed="top" collapseOnSelect variant="dark" expand="lg">
-
+            <Navbar 
+                className="CustomNav CustomHeader" 
+                fixed="top" 
+                expanded={showToggle}
+                onToggle={() => {
+                    setShowToggle(!showToggle);
+                    setDimensions(setDimensionsOnToggle());
+                }}
+                variant="dark" 
+                expand="lg">
                 <Navbar.Brand 
                     className="Clickable"
                     onClick={() => setComponent(<Home />)}>
@@ -51,7 +51,7 @@ const Header = ({ pdfItems, setComponent }) => {
                         {/*<NavDropdown title="Cours/exercices" id="basic-nav-dropdown">
                              <NavDropdown.Item 
                                 onClick={() => {
-                                    unCollapse();
+                                    setShowToggle(false);
                                     setComponent(<ProgrammationBasics />);
                                 }} >
                                 Bases de la programmation
@@ -63,7 +63,7 @@ const Header = ({ pdfItems, setComponent }) => {
                                 <NavDropdown.Item 
                                     key= {pdfItem.id}
                                     onClick={() => {
-                                        unCollapse();
+                                        setShowToggle(false);
                                         setComponent(
                                             <PDFViewerPage 
                                             pdfItem={findPdfItemById(pdfItem.id)} />
@@ -76,22 +76,22 @@ const Header = ({ pdfItems, setComponent }) => {
                         <NavDropdown title="Modules" id="basic-nav-dropdown">
                             <NavDropdown.Item 
                                 onClick={() =>{
-                                    unCollapse();
+                                    setShowToggle(false);
                                     setComponent(<TablesTest />);
                                 }} >
                                 Réviser ses tables
                             </NavDropdown.Item>
                             <NavDropdown.Item 
                                 onClick={() => {
-                                    unCollapse();
+                                    setShowToggle(false);
                                     setComponent(<UsualFunctions />);
                                 }} >
                                 Fonctions usuelles
                             </NavDropdown.Item>
                             {/* <NavDropdown.Item 
                                 onClick={() => {
-                                    unCollapse();
-                                    setComponent(<UsualFunctions />);
+                                    setShowToggle(false);
+                                    setComponent(<Shapes />);
                                 }} >
                                 Formes
                             </NavDropdown.Item> */}
