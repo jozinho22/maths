@@ -1,6 +1,6 @@
 .RelativeContainer {
     position: relative;
-    padding-top: calc(var(--customheader-height) + 20px);
+    padding-top: calc(var(--customheader-height));
     padding-bottom: calc(var(--customfooter-height) + 20px);
     min-height: 100vh;
     font-size: x-small;
@@ -27,6 +27,7 @@
 @media (min-width: 768px) {
     .RelativeContainer {
         font-size: small;
+        padding-top: calc(var(--customheader-height) + 20px);
     }
     .Title {
         font-size: medium;

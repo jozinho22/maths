@@ -1,0 +1,39 @@
+.CoursesContainer {
+    position: relative;
+    margin-bottom: 20px;
+    width: 80%;
+}
+
+/* @media (min-width: 360px) {
+   .ProgrammationBasicsContainer {
+    } 
+} */
+
+.CoursesContainer a {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.CoursesContainer p {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: justify;
+    white-space: pre-line;
+}
+
+.CoursesContainer > p, a {
+    font-size: small;
+}
+
+@media (min-width: 768px) {
+   .CoursesContainer > p, a {
+       font-size: medium;  
+    } 
+}
+
+@media (min-width: 1268px) {
+   .CoursesContainer > p, a {
+        font-size: large;
+    } 
+    .CoursesContainer {
+        width: 60%;
+    }
+}

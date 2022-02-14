@@ -1,0 +1,22 @@
+.CodeContainer {
+    background-color: var(--grey-light-color);
+    border-radius: 10px;
+    padding: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+   .CodeContainer {
+        width: 80%;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    } 
+}
+
+.Code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+    white-space: pre-wrap;
+    text-align: left;
+}

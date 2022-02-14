@@ -1,17 +1,17 @@
 import React from 'react';
 import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
 import Home from '../home/Home';
-import ProgrammationBasics from '../prog-basics/ProgrammationBasics';
-import { setDimensionsOnToggle } from './navbarProcesses';
+import ProgrammationBasics from '../courses/prog-basics/ProgrammationBasics';
+import Shapes from '../courses/shapes/Shapes';
+import UsualFunctions from '../usual-functions/UsualFunctions';
 
 import TablesTest from '../tables-test/TablesTest';
-import UsualFunctions from '../usual-functions/UsualFunctions';
 import PDFViewerPage from '../pdf-viewer/PDFViewerPage';
 
 import './Nav.css';
 import './Header.css';
 
-const Header = ({ pdfItems, setComponent, setDimensions }) => {
+const Header = ({ pdfItems, setComponent }) => {
 
     const [showToggle, setShowToggle] = React.useState(false);
     var pdfCoursesItems = []
@@ -29,6 +29,10 @@ const Header = ({ pdfItems, setComponent, setDimensions }) => {
         return pdfItems[id];
     }
 
+    const goTo = (component) => {
+        setShowToggle(false);
+        setComponent(component);
+    }
     return (
             <Navbar 
                 className="CustomNav CustomHeader" 
@@ -36,7 +40,6 @@ const Header = ({ pdfItems, setComponent, setDimensions }) => {
                 expanded={showToggle}
                 onToggle={() => {
                     setShowToggle(!showToggle);
-                    setDimensions(setDimensionsOnToggle());
                 }}
                 variant="dark" 
                 expand="lg">
@@ -48,23 +51,33 @@ const Header = ({ pdfItems, setComponent, setDimensions }) => {
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav" >
                     <Nav>
-                        {/*<NavDropdown title="Cours/exercices" id="basic-nav-dropdown">
+                        {/* <NavDropdown title="Cours/exercices" id="basic-nav-dropdown">
                              <NavDropdown.Item 
                                 onClick={() => {
-                                    setShowToggle(false);
-                                    setComponent(<ProgrammationBasics />);
+                                    goTo(<ProgrammationBasics />);
                                 }} >
                                 Bases de la programmation
                             </NavDropdown.Item> 
+                            <NavDropdown.Item 
+                                onClick={() => {
+                                    goTo(<Shapes />);
+                                }} >
+                                Les formes
+                            </NavDropdown.Item> 
+                            <NavDropdown.Item 
+                                onClick={() => {
+                                    goTo(<UsualFunctions />);
+                                }} >
+                                Fonctions usuelles
+                            </NavDropdown.Item>
 
-                        </NavDropdown>*/}
+                        </NavDropdown> */}
                         <NavDropdown title="BDs de Jean-Pierre Petit" id="basic-nav-dropdown">
                             {pdfAlbumsItems.map(pdfItem => 
                                 <NavDropdown.Item 
                                     key= {pdfItem.id}
                                     onClick={() => {
-                                        setShowToggle(false);
-                                        setComponent(
+                                        goTo(
                                             <PDFViewerPage 
                                             pdfItem={findPdfItemById(pdfItem.id)} />
                                         );
@@ -73,28 +86,13 @@ const Header = ({ pdfItems, setComponent, setDimensions }) => {
                                 </NavDropdown.Item>
                                 )}
                         </NavDropdown>
-                        <NavDropdown title="Modules" id="basic-nav-dropdown">
+                        <NavDropdown title="Jeux" id="basic-nav-dropdown">
                             <NavDropdown.Item 
                                 onClick={() =>{
-                                    setShowToggle(false);
-                                    setComponent(<TablesTest />);
+                                    goTo(<TablesTest />);
                                 }} >
                                 Réviser ses tables
                             </NavDropdown.Item>
-                            <NavDropdown.Item 
-                                onClick={() => {
-                                    setShowToggle(false);
-                                    setComponent(<UsualFunctions />);
-                                }} >
-                                Fonctions usuelles
-                            </NavDropdown.Item>
-                            {/* <NavDropdown.Item 
-                                onClick={() => {
-                                    setShowToggle(false);
-                                    setComponent(<Shapes />);
-                                }} >
-                                Formes
-                            </NavDropdown.Item> */}
                         </NavDropdown>
                     </Nav>
                 </Navbar.Collapse>

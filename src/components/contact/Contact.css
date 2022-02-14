@@ -1,15 +1,3 @@
-/* .form-group {
-    margin-bottom: 0px;
-}
-
-.form-control {
-    background : rgb(212, 209, 209);
-}
-
-.input-group-text {
-    background : rgb(230, 230, 230);
-} */
-
 .ContactForm {
     text-align: center;
     font-size: small;
@@ -21,13 +9,9 @@
 }
 
 .ContactType, .FirstName, .LastName, .Email, .Subject, .Message  {
-    padding-top: 20px;
+    padding-top: 10px;
     text-align: center;
     margin: 0 auto;
-}
-
-.FirstName, .LastName {
-    padding-top: 0px;
 }
 
 .Subject, .Message {
@@ -37,13 +21,17 @@
 .ContactButton {
     text-align: center;
     margin-bottom: 0px;
-    margin-top: 20px;
+    margin-top: 0px;
 }
 
 @media (min-width: 768px) {
     .ContactForm {
         font-size: medium;
         margin-top: -30px;
+    }
+
+    .ContactType, .FirstName, .LastName, .Email, .Subject, .Message  {
+        padding-top: 30px;
     }
 
     .InfosContainer {
@@ -97,24 +85,32 @@
 
 .ContactForm a {
     margin: 10px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 .ContactForm .input-group {
-    padding-top: 20px;
     width: 40%;
     text-align: center;
     margin: 0 auto;
 }
 
 .ContactForm canvas {
-    width: 60% !important;
+    width: 40% !important;
+    padding: 0px !important;
+    padding-top: 20px !important;
 }
 
 @media (min-width: 768px) {
     .ContactForm canvas {
-        width: 30% !important;
+        width: 20% !important;
     }
     .ContactForm .input-group {
         width: 20%;
+    }
+}
+
+@media (min-width: 1268px) {
+    .ContactForm canvas {
+        width: 15% !important;
     }
 }

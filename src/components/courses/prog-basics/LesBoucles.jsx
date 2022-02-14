@@ -146,7 +146,7 @@ const LesBoucles = () => {
                         ))
                     }
             </Code>
-            <p className="Title1">a-b) Les boucles do...while </p>
+            <p className="Title1">a-2) Les boucles do...while </p>
             <Code>
                 {boucleDoWhile.toString()}
             </Code>

@@ -176,8 +176,7 @@ const Contact = ( {setComponent} ) => {
         success={success} 
         error={error} 
         setComponent={setComponent} >
-         <p className="Title">Contact</p>
-         <Form className="ContactForm">
+        <Form className="ContactForm">
             <Container className="InfosContainer">
                 <Row>
                     <Col>
@@ -296,7 +295,7 @@ const Contact = ( {setComponent} ) => {
                     </Button>
                 </Container>
                     :   <Button 
-                            className="DefaultButton ContactButton"
+                            className="ContactButton DefaultButton"
                             onClick={(client) => sendEmail(client)}>Merci !
                         </Button>
             }

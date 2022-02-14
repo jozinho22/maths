@@ -1,20 +1,6 @@
-import React from 'react';
-import { Container, Button, Row, Col } from 'react-bootstrap';
+import {Row, Col, Button} from 'react-bootstrap';
 
-import getChapters from './getChapters';
-
-import './ProgrammationBasics.css';
-
-const Code = () => {
-
-    var jsLink = "https://developer.mozilla.org/en-US/docs/Web/JavaScript";
-    var chapters = getChapters();
-
-    const [count, setCount] = React.useState(0);
-
-    console.log(count);
-
-    const NavigationButtons = () => {
+const NavigationButtons = ( {chapters, count, setCount} ) => {
         return (
             <Row>
                 <Col style={{textAlign:"right"}}>
@@ -47,23 +33,6 @@ const Code = () => {
                 </Col>
             </Row>
         );
-    }
-
-    return (
-            <>
-                <p className="Title">Bases de la programmation</p>
-                <Container className="ProgrammationBasicsContainer">   
-                    {chapters[count].component} 
-                    <NavigationButtons />    
-                    <a href={jsLink} target="_blank">
-                        La documentation complète de javascript ici
-                    </a>              
-                </Container>
-                
-              
-            </>
-            );
-
 }
 
-export default Code;
+export default NavigationButtons;

@@ -94,7 +94,7 @@ function pdfResourceBuilder() {
       id: i++,
       type: 'albums',
       filePath: './albums/milleEtUnenuits.pdf',
-      title: 'Les 1001 nuits scientifiques',
+      title: 'Les 1001 nuits...',
       pdfFile : milleEtUnenuits
     }
     var pdfMurSilence = {
@@ -108,7 +108,7 @@ function pdfResourceBuilder() {
       id: i++,
       type: 'albums',
       filePath: './albums/pourQqesAmperesDePlus.pdf',
-      title: 'Pour quelques ampères de plus',
+      title: 'Pour quelques ampères...',
       pdfFile : pourQqesAmperesDePlus
     }
     var pdfTopo = {

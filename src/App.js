@@ -13,15 +13,14 @@ import ThemeContext from './components/context/ThemeContext';
 import FontContext from './components/context/FontContext';
 
 import pdfResourceBuilder from './components/pdf-viewer/pdfResourceBuilder';
-import { processNavBarTouch } from './components/immutable/navbarProcesses';
+import initDimensions from './components/immutable/initDimensions';
 
 import Header from './components/immutable/Header';
 import Home from './components/home/Home';
-import ProgrammationBasics from './components/prog-basics/ProgrammationBasics'
+import ProgrammationBasics from './components/courses/prog-basics/ProgrammationBasics'
+import Shapes from './components/courses/shapes/Shapes'
 
 import Footer from './components/immutable/Footer';
-import CustomSpinner from './components/general-content/CustomSpinner';
-
 
 function App() {
 
@@ -39,17 +38,13 @@ function App() {
         updateFont: setFont
     };
 
-    const [component, setComponent] = React.useState( <ProgrammationBasics /> );
+    const [component, setComponent] = React.useState( <Shapes /> );
 
     var pdfItems = pdfResourceBuilder();
 
-    const [dimensions, setDimensions] = React.useState(
-        [{className: 'CustomHeader', height: ''}, {className: 'CustomFooter', height: ''}]
-    );
-
     React.useEffect(() => {
-        processNavBarTouch(dimensions);
-    }, [dimensions]);
+        initDimensions();
+    }, []);
 
     return ( 
         <div className = "App" >
@@ -58,13 +53,12 @@ function App() {
                 <div className = {`${theme} ${font}`} >
                     <Header 
                         pdfItems = {pdfItems}
-                        setComponent = {setComponent}
-                        setDimensions = {setDimensions} /> 
+                        setComponent = {setComponent} /> 
                     <Container className = "RelativeContainer" > 
                         {component} 
                     </Container> 
                     <Footer 
-                        setComponent = {setComponent}/> 
+                        setComponent = {setComponent} /> 
                 </div> 
             </FontContext.Provider> 
             </ThemeContext.Provider> 
