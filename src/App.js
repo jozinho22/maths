@@ -39,12 +39,12 @@ function App() {
         updateFont: setFont
     };
 
-    const [component, setComponent] = React.useState( <Home /> );
+    const [component, setComponent] = React.useState( <ProgrammationBasics /> );
 
     var pdfItems = pdfResourceBuilder();
 
     const [dimensions, setDimensions] = React.useState(
-        [{class: 'CustomHeader', height: ''}, {class: 'CustomFooter', height: ''},{class: 'Title', height: ''}]
+        [{className: 'CustomHeader', height: ''}, {className: 'CustomFooter', height: ''}]
     );
 
     React.useEffect(() => {

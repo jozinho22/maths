@@ -1,13 +1,11 @@
-import { Container } from "react-bootstrap";
-
 import './Alert.css';
 
-const Alert = ({show, message, component}) => {
+const Alert = ({show, message, component, color}) => {
  
     return (
         <>
             {show === true ?
-                <div className={`${component}Alert DefaultAlert`}>{message}</div> :
+                <div className={`${component}Alert ${color}Alert DefaultAlert`}>{message}</div> :
                     <></>
             }
         </>

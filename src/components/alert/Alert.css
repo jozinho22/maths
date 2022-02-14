@@ -1,7 +1,11 @@
 .DefaultAlert {
     font-size: small;
-    color: red;
+    color: var(--red-color);
     font-family: fantasy;
+}
+
+.GreenAlert {
+    color: var(--green-color);
 }
 
 .TablesTestQuestionDisplayAlert {

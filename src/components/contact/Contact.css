@@ -10,37 +10,28 @@
     background : rgb(230, 230, 230);
 } */
 
-.Form {
+.ContactForm {
     text-align: center;
     font-size: small;
     width: 100%;
 }
 
-.form-control {
-    font-size: small;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: var(--grey-light-color);
-}
-
-.ContactType, .FirstName, .LastName, .Email {
-    padding-top: 20px;
+.InfosContainer {
     width: 80%;
-    text-align: left;
 }
 
-.Subject, .Message  {
+.ContactType, .FirstName, .LastName, .Email, .Subject, .Message  {
     padding-top: 20px;
     text-align: center;
     margin: 0 auto;
 }
 
-.Subject {
-    width: 60%;
-    padding-top: 20px;
+.FirstName, .LastName {
+    padding-top: 0px;
 }
 
-.Message {
-    width: 80%;
+.Subject, .Message {
+    width: 60%;
 }
 
 .ContactButton {
@@ -50,33 +41,27 @@
 }
 
 @media (min-width: 768px) {
-    .Form {
+    .ContactForm {
         font-size: medium;
         margin-top: -30px;
+    }
+
+    .InfosContainer {
+        width: 60%;
+    }
+
+    .Subject, .Message  {
+        width: 40%;
     }
 }
 
 @media (min-width: 1268px) {
-    .Form {
+    .ContactForm {
         font-size: large;
     }
-    .ContactType, .FirstName, .LastName, .Email {
-        padding-top: 20px;
-        width: 80%;
-    }
-    
-    .ContactType, .LastName {
-        margin-left:  auto;
-    }
 
-    .Subject, .Message  {
-        padding-top: 20px;
-        width: 50%;
-        margin: 0 auto;
-    }
-    
-    .Subject {
-        padding-top: 40px;
+    .ContactType, .FirstName, .LastName, .Email {
+        width: 80%;
     }
 
     .form-control {
@@ -90,4 +75,46 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.form-control {
+    font-size: small;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: var(--grey-light-color);
+}
+
+.form-control:active {
+    background-color: var(--grey-light-color);
+}
+
+.form-control:focus {
+    background-color: var(--grey-light-color);
+}
+
+.form-control:hover {
+    background-color: var(--grey-light-color);
+}
+
+.ContactForm a {
+    margin: 10px;
+}
+
+.ContactForm .input-group {
+    padding-top: 20px;
+    width: 40%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.ContactForm canvas {
+    width: 60% !important;
+}
+
+@media (min-width: 768px) {
+    .ContactForm canvas {
+        width: 30% !important;
+    }
+    .ContactForm .input-group {
+        width: 20%;
+    }
 }

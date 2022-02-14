@@ -20,6 +20,8 @@
 .Title1 {
    text-align: left;
    padding-bottom: 5px;
+   text-decoration: underline;
+   font-weight: bold;
 }
 
 @media (min-width: 768px) {

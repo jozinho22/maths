@@ -1,14 +1,16 @@
-const updateAlert = (show, message) => {
-    let alertUpdate = {...alert};
+const updateAlert = (show, message, color) => {
+    let alertUpdate = {};
     alertUpdate.show = show;
     alertUpdate.message = message;
+    alertUpdate.color = color;
     return alertUpdate;
 }
 
 const reInitAlert = () => {
-    let alertUpdate = {...alert};
+    let alertUpdate = {};
     alertUpdate.show = false;
     alertUpdate.message = '';
+    alertUpdate.color = '';
     return alertUpdate;
 }
 

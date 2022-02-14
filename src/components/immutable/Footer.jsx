@@ -60,7 +60,7 @@ const Footer = ( { setComponent } ) => {
                     <Nav>
                         <NavDropdown 
                             drop="up"
-                            title="Changer la police" 
+                            title="Fonts" 
                             id="basic-nav-nav"
                             onSelect={changeFont} >   
                             {
@@ -75,7 +75,7 @@ const Footer = ( { setComponent } ) => {
                         </NavDropdown>
                         <NavDropdown 
                             drop="up"
-                            title="Changer le thème" 
+                            title="Themes" 
                             id="theme-dropdown-menu"
                             onSelect={changeTheme} >   
                             {

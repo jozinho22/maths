@@ -4,19 +4,18 @@ import Alert from '../alert/Alert';
 import ContactManager from './ContactManager';
 import { updateAlert, reInitAlert } from '../alert/alertFunctions';
 import emailjs from 'emailjs-com';
+import { loadCaptchaEnginge, LoadCanvasTemplate, validateCaptcha } from 'react-simple-captcha';
 
 import './Contact.css';
 
 const Contact = ( {setComponent} ) => {
 
-    const [contactType, setContactType] =  React.useState();
+    const [contactType, setContactType] =  React.useState("");
     const [firstName, setFirstName] =  React.useState("");
     const [lastName, setLastName] =  React.useState("");
     const [email, setEmail] =  React.useState("");
     const [subject, setSubject] =  React.useState("");
     const [message, setMessage] =  React.useState("");
-
-    const alertTarget = React.useRef(null);
 
     const [firstNameAlert, setFirstNameAlert] = React.useState({show: false, message: ''});
     const [lastNameAlert, setLastNameAlert] = React.useState({show: false, message: ''});
@@ -26,12 +25,12 @@ const Contact = ( {setComponent} ) => {
     var maxSubject = 40;
     
     const [messageAlert, setMessageAlert] = React.useState({show: false, message: ''});
-    const [fieldsAlert, setFieldsAlert] = React.useState({show: false, message: ''});
+    const [globalAlert, setGlobalAlert] = React.useState({show: false, message: '', color: ''});
 
     const [nbLines, setNbLines] = React.useState(4);
     const maxLength = 500;
 
-    const [captchaOK, setCaptchaOK] = React.useState(false);
+    const [captchaOk, setCaptchaOk] = React.useState(false);
     const [captchaText, setCaptchaText] = React.useState("");
 
     const [success, setSuccess] = React.useState(false);
@@ -40,43 +39,38 @@ const Contact = ( {setComponent} ) => {
 
     // init one time
     React.useEffect(() => {
-        setContactType("DEVELOPER");
-        if(process.env.NODE_ENV ==='development') {
+        if(process.env.NODE_ENV === 'development') {
+            setContactType("other");
             setFirstName("Joss");
             setLastName("Joss");
             setEmail("Joss@example.com");
             setSubject("C'est un test");
             setMessage("Un test pour le plaisir ");
         }
+        loadCaptchaEnginge(6); 
     }, []);
 
      // Prénom
     React.useEffect(() => {
-
         if(firstName.length > maxName - 1) {
             setFirstNameAlert(updateAlert(true, 'trop long !!!'));
         } else {
             setFirstNameAlert(reInitAlert());
         }
-
     }, [firstName]);
 
     // Nom
     React.useEffect(() => {
-
         if(lastName.length > maxName - 1) {
             setLastNameAlert(updateAlert(true, 'really bro ?'));
         } else {
             setLastNameAlert(reInitAlert());
         }
-
     }, [lastName]);
 
     // Email
     React.useEffect(() => {
-
         let validEmail = false;
-   
         if(email.indexOf('@') !== -1) {
             let atIndex = email.indexOf('@');
             let suffix = email.slice(atIndex + 1);
@@ -96,18 +90,15 @@ const Contact = ( {setComponent} ) => {
         } else {
             setEmailAlert(reInitAlert());
         }
-
     }, [email]); 
 
     // Sujet
     React.useEffect(() => {
-
         if(subject.length > maxSubject) {
             setSubjectAlert(updateAlert(true, 'Oula pas un roman ici svp...'));
         } else {
             setSubjectAlert(reInitAlert());
         }
-
     }, [subject]);
 
     // Hauteur de la zone de texte
@@ -121,6 +112,19 @@ const Contact = ( {setComponent} ) => {
         }
     }, [message]);
 
+    const verifyCaptcha = () => {
+        let user_captcha_value = document.getElementById('user_captcha_input').value;
+        console.log(user_captcha_value)
+        if (validateCaptcha(user_captcha_value, false) === true) {
+            console.log('OK')
+            setCaptchaOk(true);
+            setGlobalAlert(updateAlert(true, 'captcha verifié !', "Green"));
+        } else {
+            setCaptchaOk(false);
+            setGlobalAlert(updateAlert(true, 'Non !'))
+        }
+    }
+
     const templateParams = {
         firstName: firstName,
         lastName: lastName,
@@ -133,30 +137,32 @@ const Contact = ( {setComponent} ) => {
     const sendEmail = () => {
         if(verifyFields()) {
             emailjs.send(
-            'service_oo4q3ja',
-            'template_ts3dgfe', 
-            templateParams, 
-            'user_F9hDnNvI0w5QkE97hKg5n')
-            .then((response) => {
-                if(response.ok) {
-                    setIsLoading(true);
+                'service_oo4q3ja',
+                'template_ts3dgfe', 
+                templateParams, 
+                'user_F9hDnNvI0w5QkE97hKg5n')
+                .then((response) => {
+                    if(response.ok) {
+                        setIsLoading(true);
+                    }
+                    return true;
+                }, (err) => {
+                    setError(true);
+                    console.log(err)
                 }
-                return true;
-            }, (err) => {
-                setError(true);
-            }
-            ).then((ok) => {
-                if(ok) {
-                    setSuccess(true);
+                ).then((ok) => {
+                    if(ok) {
+                        setSuccess(true);
+                    }
                 }
-            });
+            );
         }
     }
 
     const verifyFields = () => {
-        if(firstName === '' || lastName === '' || email === '' 
+        if(firstName === '' || lastName === '' || email === '' || contactType === ''
             || firstName === '' || subject === '' || message ==='') {
-                setFieldsAlert(updateAlert(true, 'Tous les champs doivent être remplis !!!'));
+                setGlobalAlert(updateAlert(true, 'Tous les champs doivent être remplis !!!'));
                 return false;
         } else {
             return true;
@@ -165,81 +171,87 @@ const Contact = ( {setComponent} ) => {
     
     return (
 
-    <ContactManager isLoading={isLoading} success={success} error={error} setComponent={setComponent} >
-         <Form className="Form">
-            <Row>
-                <Col>
-                    <Form.Group className="FirstName" >
-                        <Form.Label>
-                            Prénom
-                            <Alert 
-                                show={firstNameAlert.show}
-                                message={firstNameAlert.message}
-                                component="Contact" />
-                        </Form.Label>
-                        <FormControl
-                            value={firstName} 
-                            onChange={e => {
-                                if(firstName.length < maxName) {
-                                    setFirstName(e.target.value)
-                                } else {
-                                    setFirstName(e.target.value.slice(0, e.target.value.length - 1))
-                                }
-                            }} />
-                     </Form.Group>
-                </Col>
-                <Col>
-                    <Form.Group className="LastName" >
-                        <Form.Label>
-                            Nom
-                            <Alert 
-                                show={lastNameAlert.show}
-                                message={lastNameAlert.message}
-                                component="Contact" />
-                        </Form.Label>
-                        <FormControl
-                            value={lastName} 
-                            onChange={e => {
-                                if(lastName.length < maxName) {
-                                    setLastName(e.target.value);
-                                } else {
-                                    setLastName(e.target.value.slice(0, e.target.value.length - 1))
-                                }
-                            }} />
-                    </Form.Group>
-                </Col>
-            </Row>
-            <Row>
-                <Col>
-                    <Form.Group className="Email" id="emailForm">
-                        <Form.Label>
-                            @
-                            <Alert 
-                                show={emailAlert.show}
-                                message={emailAlert.message}
-                                component="Contact" />
-                        </Form.Label>
-                        <FormControl
-                            value={email} 
-                            onChange={e => setEmail(e.target.value)} />
-                    </Form.Group>
-                </Col>
-                <Col>
-                    <Form.Group className="ContactType">
-                        <Form.Label>Vous êtes ?</Form.Label>
-                        <Form.Control 
-                            value={contactType} 
-                            as="select" 
-                            onChange={e => setContactType(e.target.value)}>
-                            <option value="student">un élève</option>
-                            <option value="teacher">un professeur</option>
-                            <option value="company">une société</option>
-                            <option value="other">autre</option >
-                        </Form.Control>
-                    </Form.Group>
-                </Col>
-            </Row>
-
+    <ContactManager 
+        isLoading={isLoading} 
+        success={success} 
+        error={error} 
+        setComponent={setComponent} >
+         <p className="Title">Contact</p>
+         <Form className="ContactForm">
+            <Container className="InfosContainer">
+                <Row>
+                    <Col>
+                        <Form.Group className="FirstName" >
+                            <Form.Label>
+                                Prénom
+                                <Alert 
+                                    show={firstNameAlert.show}
+                                    message={firstNameAlert.message}
+                                    component="Contact" />
+                            </Form.Label>
+                            <FormControl
+                                value={firstName} 
+                                onChange={e => {
+                                    if(firstName.length < maxName) {
+                                        setFirstName(e.target.value)
+                                    } else {
+                                        setFirstName(e.target.value.slice(0, e.target.value.length - 1))
+                                    }
+                                }} />
+                        </Form.Group>
+                    </Col>
+                    <Col>
+                        <Form.Group className="LastName" >
+                            <Form.Label>
+                                Nom
+                                <Alert 
+                                    show={lastNameAlert.show}
+                                    message={lastNameAlert.message}
+                                    component="Contact" />
+                            </Form.Label>
+                            <FormControl
+                                value={lastName} 
+                                onChange={e => {
+                                    if(lastName.length < maxName) {
+                                        setLastName(e.target.value);
+                                    } else {
+                                        setLastName(e.target.value.slice(0, e.target.value.length - 1))
+                                    }
+                                }} />
+                        </Form.Group>
+                    </Col>
+                </Row>
+                <Row>
+                    <Col>
+                        <Form.Group className="Email">
+                            <Form.Label>
+                                @
+                                <Alert 
+                                    show={emailAlert.show}
+                                    message={emailAlert.message}
+                                    component="Contact" />
+                            </Form.Label>
+                            <FormControl
+                                value={email} 
+                                onChange={e => setEmail(e.target.value)} />
+                        </Form.Group>
+                    </Col>
+                    <Col>
+                        <Form.Group className="ContactType">
+                            <Form.Label>Vous êtes ?</Form.Label>
+                            <Form.Control 
+                                value={contactType} 
+                                as="select" 
+                                onChange={e => setContactType(e.target.value)}>
+                                <option value="student">un élève</option>
+                                <option value="teacher">un professeur</option>
+                                <option value="company">une société</option>
+                                <option value="other">autre</option >
+                            </Form.Control>
+                        </Form.Group>
+                    </Col>
+                </Row>
+            </Container>
             <Form.Group className="Subject" >
                 <Form.Label>
                     Sujet
@@ -268,13 +280,32 @@ const Contact = ( {setComponent} ) => {
                     value={message}
                     onChange={e => setMessage(e.target.value)} />
             </Form.Group>
-            <Button 
-                className="DefaultButton ContactButton"
-                onClick={(client) => sendEmail(client)}>Merci !
-            </Button>
+        
+            {captchaOk === false ?
+                <Container className="CaptchaContainer">
+                    <LoadCanvasTemplate />
+                    <InputGroup>
+                        <FormControl id="user_captcha_input"
+                            value={captchaText} 
+                            onChange={e => setCaptchaText(e.target.value)} />
+                    </InputGroup>
+                    <Button 
+                        className="DefaultButton" 
+                        onClick={() => verifyCaptcha()} >
+                        vérifier
+                    </Button>
+                </Container>
+                    :   <Button 
+                            className="DefaultButton ContactButton"
+                            onClick={(client) => sendEmail(client)}>Merci !
+                        </Button>
+            }
+
             <Alert 
-                show={fieldsAlert.show}
-                message={fieldsAlert.message} />
+                show={globalAlert.show}
+                message={globalAlert.message}
+                color={globalAlert.color} />
+
         </Form>
     </ContactManager>
     );
