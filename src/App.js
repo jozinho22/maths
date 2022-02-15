@@ -19,6 +19,7 @@ import Header from './components/immutable/Header';
 import Home from './components/home/Home';
 import ProgrammationBasics from './components/courses/prog-basics/ProgrammationBasics';
 import Shapes from './components/courses/shapes/Shapes';
+import LeProduitEnCroix from './components/courses/cross-product/LeProduitEnCroix';
 
 import Footer from './components/immutable/Footer';
 
@@ -38,7 +39,7 @@ function App() {
         updateFont: setFont
     };
 
-    const [component, setComponent] = React.useState( <Home /> );
+    const [component, setComponent] = React.useState( <LeProduitEnCroix /> );
 
     var pdfItems = pdfResourceBuilder();
 

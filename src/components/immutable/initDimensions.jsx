@@ -11,8 +11,6 @@ const initDimensions = () => {
         document.documentElement.style.setProperty(`--${property}-height`, dim.height + 'px');
     }
 
-    console.log(dimensions)
-
     return dimensions;
 }
 

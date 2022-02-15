@@ -6,7 +6,7 @@ import './MathJaxDisplay.css';
 const MathJaxDisplay = ({toShow, color}) => {
 
     return (
-        <Container className={`MathJaxDisplay ${color}MathJaxText`}>      
+        <Container className={`MathJaxDisplayContainer ${color}MathJaxText`}>      
             <MathJaxContext>
                 <MathJax dynamic hideUntilTypeset={ "every" } >
                     {toShow}
