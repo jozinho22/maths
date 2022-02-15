@@ -23,10 +23,20 @@
     font-size: small;
 }
 
+.CoursesContainer img {
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 40px;
+}
+
 @media (min-width: 768px) {
    .CoursesContainer > p, a {
        font-size: medium;  
     } 
+    .CoursesContainer img {
+        width: 60%;
+    }
 }
 
 @media (min-width: 1268px) {

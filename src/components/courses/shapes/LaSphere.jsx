@@ -2,9 +2,10 @@ import { Container } from 'react-bootstrap';
 import GenericShape from './GenericShape';
 import ShapeType from './ShapeType';
 
-import sphereCalculus from './assets/sphereCalculus.png';
+import sphereVolCalculus from './assets/sphereVolCalculus.png';
 
 import MathJaxDisplay from '../../mathjax-display/MathJaxDisplay';
+
 const LaSphere = () => {
 
     var sphVolume = "\\(V_{sphere} = \\frac{4}{3}\\pi r^3\\)";
@@ -13,31 +14,23 @@ const LaSphere = () => {
     var sphDoubleVolumeDev = "\\(V_{sphere} = \\frac{4}{3}\\pi 2^3 r^3\\)";
     var sphDoubleVolumeDev2 = "\\(V_{sphere} = \\frac{4}{3} 8\\pi r^3\\)";
 
-    var pyth = "\\(R^2 = h^2 + r^2 \\)";
-    var rfH = "\\(r = \\sqrt{R^2 - h^2} \\)";
-    var circleAreaR = "\\(S_{cercle(r)} = \\pi r^2\\)"
-    var circleAreaH = "\\(S_{cercle(h)} = \\pi (R^2 - h^2)\\)"
+    var circleAreaR = "\\(S_{cercle(x)} = \\pi x^2\\)"
 
-    var circleDemiVolH = "\\(V_{\\frac{1}{2}sphere(h)} = \\int S_{cercle}(h) dh \\)"
-    var circleDemiVolH2 = "\\(V_{\\frac{1}{2}sphere(h)} = \\int_0^R \\pi(R^2 - h^2) dh \\)"
-    var circleDemiVolH3 = "\\(V_{\\frac{1}{2}sphere(h)} = \\pi \\left[ R^2 - \\frac{h^3}{3} \\right]_0^R \\)"
-    var circleDemiVolH4 = "\\(V_{\\frac{1}{2}sphere(h)} = \\pi R^2 \\left[ 1 - \\frac{h}{3} \\right]_0^R \\)"
-    var circleDemiVolH5 = "\\(V_{\\frac{1}{2}sphere(h)} = \\pi R^2 \\left[ \\frac{2}{3} h \\right]_0^R \\)"
+    var pyth = "\\(R^2 = y^2 + r^2 \\)";
+    var rfH = "\\(x = \\sqrt{R^2 - y^2} \\)";
+    
+    var circleAreaH = "\\(S_{cercle(y)} = \\pi \\sqrt{(R^2 - y^2)^2}\\)"
+    var circleAreaH2 = "\\(S_{cercle(y)} = \\pi (R^2 - x^2)\\)"
 
-    var circleDemiVolH6 = "\\(V_{\\frac{1}{2}sphere(h)} = \\frac{2}{3} \\pi R^3  \\)"
-    var circleVolH = "\\(V_{sphere(h)} = \\frac{4}{3} \\pi R^3  \\)"
-
-    var circlePerimR = "\\(P_{cercle}(r) = 2\\pi r\\)"
-    var circlePerimH = "\\(P_{cercle}(h) = 2\\pi \\sqrt{R^2 - h^2}\\)"
-
-    var circleDemiAreaH = "\\(S_{\\frac{1}{2}sphere(h)} = \\int P_{cercle}(h) dh \\)"
-    var circleDemiAreaH2 = "\\(S_{\\frac{1}{2}sphere(h)} = \\int_0^R 2\\pi \\sqrt{R^2 - h^2} dh \\)"
-    var circleDemiAreaH3 = "\\(S_{\\frac{1}{2}sphere(h)} = 2\\pi \\left[ - \\frac{h}{\\sqrt{R^2 - h^2}} \\right]_0^R \\)"
-    var circleDemiAreaH4 = "\\(S_{\\frac{1}{2}sphere(h)} = 2\\pi \\left[ - \\frac{h}{\\sqrt{R^2 - h^2}} \\frac{\\sqrt{R^2 + h^2}}{\\sqrt{R^2 + h^2}} \\right]_0^R \\)"
-    var circleDemiAreaH5 = "\\(S_{\\frac{1}{2}sphere(h)} = 2\\pi \\left[ - \\frac{h \\sqrt{R^2 + h^2}}{\\sqrt{R^4 + h^4}} \\right]_0^R \\)"
-    var circleDemiAreaH6 = "\\(S_{\\frac{1}{2}sphere(h)} = 2\\pi \\left( - \\frac{R \\sqrt{2R^2}}{\\sqrt{2R^4}} \\right) \\)"
-    var circleDemiAreaH7 = "\\(S_{\\frac{1}{2}sphere(h)} = 2\\pi \\left( - \\frac{R \\sqrt{2R^2}}{\\sqrt{2R^4}} \\right) \\)"
-
+    var dV = "\\(dV_{\\frac{1}{2}sphere(y)} = S_{cercle(y)} dy\\)"
+    var circleDemiVolH = "\\(V_{\\frac{1}{2}sphere(y)} = \\int_0^R S_{cercle}(y) dy \\)"
+    var circleDemiVolH2 = "\\(V_{\\frac{1}{2}sphere(y)} = \\int_0^R \\pi(R^2 - y^2) dy \\)"
+    var circleDemiVolH3 = "\\(V_{\\frac{1}{2}sphere(y)} = \\pi \\left[ R^2 - \\frac{y^3}{3} \\right]_0^R \\)"
+    var circleDemiVolH4 = "\\(V_{\\frac{1}{2}sphere(y)} = \\pi R^2 \\left[ 1 - \\frac{y}{3} \\right]_0^R \\)"
+    var circleDemiVolH5 = "\\(V_{\\frac{1}{2}sphere(y)} = \\pi R^2 \\left[ \\frac{2}{3} y \\right]_0^R \\)"
+    var circleDemiVolH6 = "\\(V_{\\frac{1}{2}sphere(y)} = \\pi R^2 (\\frac{2}{3} R - \\frac{2}{3} \\times 0 ) \\)"
+    var circleDemiVolH7 = "\\(V_{\\frac{1}{2}sphere(y)} = \\frac{2}{3} \\pi R^3  \\)"
+    var circleVolH = "\\(V_{sphere(y)} = \\frac{4}{3} \\pi R^3  \\)"
 
     return (
         <>
@@ -62,50 +55,43 @@ const LaSphere = () => {
                     type={ShapeType.SPHERE}
                     dimension={1} /> 
             </Container>
-            <p>Calculons avec une méthode d'intégration le volume da la sphère
+            <p>Calculons avec une méthode d'intégration le volume de la sphère.
                 {"\n"}
                 Par facilité, nous allons d'abord calculer le demi-volume.
             </p>
-            <img src={sphereCalculus} alt="Logo" />
+            <img src={sphereVolCalculus} alt="Logo" />
             <p>
                 La surface du cercle est égale à 
             </p>
             <MathJaxDisplay toShow={circleAreaR}/>
             <p>
-                Exprimons tout d'abord r en fonction de h
+                Exprimons tout d'abord x en fonction de y.
                 {"\n"}
-                On a :
+                On a avec le théorème de Pythagore:
             </p>
             <MathJaxDisplay toShow={pyth}/>
             <MathJaxDisplay toShow={rfH}/>
             <p>
-                Soit la nouvelle surface du cercle en fonction de h
+                Soit la nouvelle surface du cercle en fonction de y
             </p>
             <MathJaxDisplay toShow={circleAreaH}/>
-
+            <MathJaxDisplay toShow={circleAreaH2}/>
+            <p>
+                On va maintenant intégrer cette surface sur toute la longueur y, en ajoutant tous éléments dv jusque R.
+            </p>
+            <MathJaxDisplay toShow={dV}/>
             <MathJaxDisplay toShow={circleDemiVolH}/>
             <MathJaxDisplay toShow={circleDemiVolH2}/>
             <MathJaxDisplay toShow={circleDemiVolH3}/>
             <MathJaxDisplay toShow={circleDemiVolH4}/>
             <MathJaxDisplay toShow={circleDemiVolH5}/>
             <MathJaxDisplay toShow={circleDemiVolH6}/>
+            <MathJaxDisplay toShow={circleDemiVolH7}/>
+
             <p>
                 On a alors pour la sphère complète :
             </p>
             <MathJaxDisplay toShow={circleVolH}/>
-            <p>
-                On peut faire la même chose pour calculer la surface.
-                {"\n"}
-                On prendra non plus la surface du cercle mais son périmètre
-            </p>
-            <MathJaxDisplay toShow={circlePerimR}/>
-            <MathJaxDisplay toShow={circlePerimH}/>
-            <MathJaxDisplay toShow={circleDemiAreaH}/>
-            <MathJaxDisplay toShow={circleDemiAreaH2}/>
-            <MathJaxDisplay toShow={circleDemiAreaH3}/>
-            <MathJaxDisplay toShow={circleDemiAreaH4}/>
-            <MathJaxDisplay toShow={circleDemiAreaH5}/>
-            <MathJaxDisplay toShow={circleDemiAreaH6}/>
 
         </>
     )

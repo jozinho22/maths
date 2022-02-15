@@ -38,7 +38,7 @@ function App() {
         updateFont: setFont
     };
 
-    const [component, setComponent] = React.useState( <Home /> );
+    const [component, setComponent] = React.useState( <Shapes /> );
 
     var pdfItems = pdfResourceBuilder();
 
