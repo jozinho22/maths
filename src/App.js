@@ -17,8 +17,8 @@ import initDimensions from './components/immutable/initDimensions';
 
 import Header from './components/immutable/Header';
 import Home from './components/home/Home';
-import ProgrammationBasics from './components/courses/prog-basics/ProgrammationBasics'
-import Shapes from './components/courses/shapes/Shapes'
+import ProgrammationBasics from './components/courses/prog-basics/ProgrammationBasics';
+import Shapes from './components/courses/shapes/Shapes';
 
 import Footer from './components/immutable/Footer';
 
@@ -38,7 +38,7 @@ function App() {
         updateFont: setFont
     };
 
-    const [component, setComponent] = React.useState( <Shapes /> );
+    const [component, setComponent] = React.useState( <Home /> );
 
     var pdfItems = pdfResourceBuilder();
 

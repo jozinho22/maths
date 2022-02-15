@@ -18,15 +18,15 @@ const Code = () => {
             <>
                 <p className="Title">Bases de la programmation</p>
                 <Container className="CoursesContainer">   
-                    {chapters[count].component} 
-                    <NavigationButtons 
-                        chapters={chapters}
-                        count={count}
-                        setCount={setCount} />    
-                    <a href={jsLink} target="_blank">
-                        La documentation complète de javascript ici
-                    </a>              
+                    {chapters[count].component}           
                 </Container>
+                <NavigationButtons 
+                    chapters={chapters}
+                    count={count}
+                    setCount={setCount} />    
+                <a href={jsLink} target="_blank">
+                    La documentation complète de javascript ici
+                </a>  
             </>
             );
 

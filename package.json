@@ -23,7 +23,6 @@
     "react-simple-captcha": "^8.2.6",
     "react-three-fiber": "^6.0.13",
     "recharts": "^2.1.8",
-    "rsuite": "^5.5.2",
     "three": "^0.137.5",
     "web-vitals": "^2.1.3"
   },

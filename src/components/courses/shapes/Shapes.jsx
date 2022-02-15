@@ -16,12 +16,12 @@ const Shapes = () => {
         <>
             <p className="Title">Les formes</p>
             <Container className="CoursesContainer">   
-                {chapters[count].component} 
-                <NavigationButtons 
-                        chapters={chapters}
-                        count={count}
-                        setCount={setCount} />                
+                {chapters[count].component}             
             </Container>
+            <NavigationButtons 
+                chapters={chapters}
+                count={count}
+                setCount={setCount} />
         </>
     )
 
