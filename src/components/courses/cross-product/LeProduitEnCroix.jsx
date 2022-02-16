@@ -43,8 +43,8 @@ const LeProduitEnCroix = () => {
             <p>On multiplie les deux membres par le même nombre d</p>
             <MathJaxDisplay toShow={adEqucbdd}/>
             <MathJaxDisplay toShow={adcb}/>
-            <MathJaxDisplay toShow={adEqubc}/>
             <p>On retrouve bien notre équation de départ </p>
+            <MathJaxDisplay toShow={adEqubc}/>
 
             <p className="Title1">c) Application</p>
             <p className="Underline">Exo 1</p>
