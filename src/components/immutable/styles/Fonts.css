@@ -1,34 +1,25 @@
 .App {
-    --aladdin-font: 'aladdin', Fallback, sans-serif;
     --arabic-font: 'arabic', Fallback, sans-serif;
     --black-chancery-font: 'black-chancery', Fallback, sans-serif;
-    --celtic-font: 'celtic', Fallback, sans-serif;
     --chinese-font: 'chinese', Fallback, sans-serif;
     --dragons-font: 'dragons', Fallback, sans-serif;
     --gothic-font: 'gothic', Fallback, sans-serif;
     --indian-font: 'indian', Fallback, sans-serif;
-    --western-font: 'western', Fallback, sans-serif;
-    --x-mas-font: 'x-mas', Fallback, sans-serif;
+    --scribe-font: 'scribe', Fallback, sans-serif;
+    --xfiles-font: 'x-files', Fallback, sans-serif;
+    --xmas-font: 'x-mas', Fallback, sans-serif;
+
 }
 
 #theme-dropdown-item {
     color: black;
 }
 
-.Aladdin {
-    font-family: var(--aladdin-font);
-}
-
 .Arabic {
     font-family: var(--arabic-font);
 }
-
 .BlackChancery {
     font-family: var(--black-chancery-font);
-}
-
-.Celtic {
-    font-family: var(--celtic-font);
 }
 
 .Chinese {
@@ -47,27 +38,23 @@
     font-family: var(--indian-font);
 }
 
-.Western {
-    font-family: var(--western-font);
+.Scribe {
+    font-family: var(--scribe-font);
+}
+
+.Xfiles {
+    font-family: var(--xfiles-font);
 }
 
 .Xmas {
-    font-family: var(--x-mas-font);
-}
-
-@font-face {
-    font-family: 'aladdin';
-    font-style: normal;
-    font-weight: normal;
-    size-adjust: 200%;
-    src: local('Aladdin'), url('./fonts/aladdin.otf') format('opentype');
+    font-family: var(--xmas-font);
 }
 
 @font-face {
     font-family: 'arabic';
     font-style: normal;
     font-weight: normal;
-    size-adjust: 300%;
+    size-adjust: 180%;
     src: local('Arabic'), url('./fonts/arabic.ttf') format('truetype');
 }
 
@@ -80,18 +67,10 @@
 }
 
 @font-face {
-    font-family: 'celtic';
-    font-style: normal;
-    font-weight: normal;
-    size-adjust: 150%;
-    src: local('Celtic'), url('./fonts/celtic.ttf') format('truetype');
-}
-
-@font-face {
     font-family: 'chinese';
     font-style: normal;
     font-weight: normal;
-    size-adjust: 300%;
+    size-adjust: 250%;
     src: local('Chinese'), url('./fonts/chinese.ttf') format('truetype');
 }
 
@@ -106,7 +85,7 @@
     font-family: 'gothic';
     font-style: normal;
     font-weight: normal;
-    size-adjust: 250%;
+    size-adjust: 200%;
     src: local('Gothic'), url('./fonts/gothic.ttf') format('truetype');
 }
 
@@ -114,22 +93,30 @@
     font-family: 'indian';
     font-style: normal;
     font-weight: normal;
-    size-adjust: 250%;
+    size-adjust: 180%;
     src: local('Indian'), url('./fonts/indian.ttf') format('truetype');
 }
 
 @font-face {
-    font-family: 'western';
+    font-family: 'scribe';
     font-style: normal;
     font-weight: normal;
-    size-adjust: 200%;
-    src: local('Western'), url('./fonts/western.ttf') format('truetype');
+    size-adjust: 180%;
+    src: local('Scribe'), url('./fonts/scribe.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'x-files';
+    font-style: normal;
+    font-weight: normal;
+    size-adjust: 150%;
+    src: local('X-files'), url('./fonts/x-files.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'x-mas';
     font-style: normal;
     font-weight: normal;
-    size-adjust: 200%;
-    src: local('Happy Christmas'), url('./fonts/x-mas.ttf') format('truetype');
+    size-adjust: 220%;
+    src: local('Xmas'), url('./fonts/x-mas.otf') format('opentype');
 }

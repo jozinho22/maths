@@ -1,11 +1,11 @@
 import { Container } from 'react-bootstrap';
-import GenericShape from './GenericShape';
-import ShapeType from './ShapeType';
+import GenericShape from '../GenericShape';
+import ShapeType from '../ShapeType';
 
-import sphereVolCalculus from './assets/sphereVolCalculus.png';
-import sphereAreaCalculus from './assets/sphereAreaCalculus.png';
+import sphereVolCalculus from '../assets/sphereVolCalculus.png';
+import sphereAreaCalculus from '../assets/sphereAreaCalculus.png';
 
-import MathJaxDisplay from '../../mathjax-display/MathJaxDisplay';
+import MathJaxDisplay from '../../../mathjax-display/MathJaxDisplay';
 
 const LaSphere = () => {
     var vDemiSphereY = "V(y)_{\\frac{1}{2}}";
@@ -28,7 +28,7 @@ const LaSphere = () => {
 
     var dVsphere = "\\(" + vDemiSphereY + " = V(y)_{\\frac{1}{2}sphere}\\)"
     var dV = "\\(d(" + vDemiSphereY + ") = S(y) dy\\)"
-    var intDv = "\\(\\int d(" + vDemiSphereY + ") = \\int S(y) dy\\)"
+    var intDv = "\\(\\int_0^R d(" + vDemiSphereY + ") = \\int_0^R S(y) dy\\)"
 
     var circleDemiVol = "\\(" + vDemiSphereY + " = \\int_0^R S(y) dy \\)"
     var circleDemiVol2 = "\\(" + vDemiSphereY + " = \\int_0^R \\pi(R^2 - y^2) dy \\)"
@@ -47,7 +47,7 @@ const LaSphere = () => {
     var dlfTheta = "\\(dl = R d\\theta \\)"
     var dSdemiSphere = "\\(" + sDemiSphereY + " = S(y)_{\\frac{1}{2}}cercle\\)"
     var dS = "\\(" + sDemiSphereY + " = P(y) dl\\)"
-    var intDS = "\\(\\int ("+ sDemiSphereY + ") = \\int P(y) dl\\)"
+    var intDS = "\\(\\int_0^{\\frac{\\pi}{2}} ("+ sDemiSphereY + ") = \\int_0^{\\frac{\\pi}{2}} P(y) dl\\)"
 
     var circleDemiArea = "\\("+ sDemiSphereY + " = \\int_0^{\\frac{\\pi}{2}} P_{cercle}(y) dl \\)"
     var circleDemiArea2 = "\\("+ sDemiSphereY + " = \\int_0^{\\frac{\\pi}{2}} 2\\pi \\sqrt{R^2 - y^2} dl \\)"
@@ -85,7 +85,7 @@ const LaSphere = () => {
                 <GenericShape 
                     className="ShapesContainer"
                     type={ShapeType.SPHERE}
-                    dimension={1} /> 
+                    dimensions={1} /> 
             </Container>
             <p>Calculons avec une méthode d'intégration le volume de la sphère.
                 {"\n"}

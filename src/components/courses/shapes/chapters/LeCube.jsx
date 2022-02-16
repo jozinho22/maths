@@ -1,9 +1,9 @@
 import { Container } from 'react-bootstrap';
-import MathJaxDisplay from '../../mathjax-display/MathJaxDisplay';
+import MathJaxDisplay from '../../../mathjax-display/MathJaxDisplay';
 
-import GenericShape from './GenericShape';
-import ShapeType from './ShapeType';
-import squareVolCalculus from './assets/squareVolCalculus.png';
+import GenericShape from '../GenericShape';
+import ShapeType from '../ShapeType';
+import squareVolCalculus from '../assets/squareVolCalculus.png';
 
 const LeCube = () => {
 
@@ -17,7 +17,7 @@ const LeCube = () => {
     var vCarre2 = "\\(V_{carre(p)} = c^2 \\left[ p \\right]_0^c \\)";
     var vCarre3 = "\\(V_{carre(p)} = c^2 (c - 0) \\)";
     var vCarre4 = "\\(V_{carre(p)} = c^2 c \\)";
-    var vCarre4 = "\\(V_{carre(p)} = c^3 \\)";
+    var vCarre5 = "\\(V_{carre(p)} = c^3 \\)";
 
     return (
         <>
@@ -39,7 +39,7 @@ const LeCube = () => {
                 <GenericShape 
                     className="ShapesContainer"
                     type={ShapeType.CUBE}
-                    dimension={1.5} /> 
+                    dimensions={1.5} /> 
             </Container>
 
             <p>Intégrons notre volume à partir d'un côté pour voir si nosu retombons bien sur nos pattes</p>
@@ -52,6 +52,7 @@ const LeCube = () => {
             <MathJaxDisplay toShow={vCarre2}/>
             <MathJaxDisplay toShow={vCarre3}/>
             <MathJaxDisplay toShow={vCarre4}/>
+            <MathJaxDisplay toShow={vCarre5}/>
             <p>
                 Tout est OK !
             </p>

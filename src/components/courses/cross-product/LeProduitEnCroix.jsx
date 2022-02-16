@@ -11,6 +11,8 @@ const LeProduitEnCroix = () => {
     var adEqucbdd = "\\(ad = \\frac{cb}{d}\\)";
     var adcb = "\\(ad = cb\\)";
 
+    window.scrollTo(0, 0);
+
     return (
         <Container className="CoursesContainer">   
             <p className="Title">Le produit en croix</p>

@@ -1,6 +1,6 @@
 import { Container } from 'react-bootstrap';
 
-import Code from './Code';
+import Code from '../Code';
 
 const LesBoucles = () => {
 

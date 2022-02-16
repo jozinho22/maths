@@ -33,6 +33,13 @@ const Header = ({ pdfItems, setComponent }) => {
         setShowToggle(false);
         setComponent(component);
     }
+
+    function css_text(x) { return x.cssText; }
+    var file = document.getElementById('css');
+    console.log(file)
+    var content = Array.prototype.map.call(file.sheet.cssRules, css_text).join('\n');
+    console.log(content)
+
     return (
             <Navbar 
                 className="CustomNav CustomHeader" 

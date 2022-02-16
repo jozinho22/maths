@@ -35,14 +35,15 @@
     --button-text-color: var(--back-color);
 
     color: var(--dark-color); 
-    /* --navbar-color:  #2e3235; */
     --navbar-color: var(--green-color);
     --back-color: var(--yellow-color);
     --front-color: var(--blue-color);
     --simple-text-color: var(--dark-color);
 }
 
+
 .Darcula {
+    /* Le seul à avoir un début différent...*/
     background: var(--back-color);
     --links-color: var(--purple-color);
     --button-text-color: var(--grey-color);
@@ -52,6 +53,18 @@
     --back-color: var(--dark-color);
     --front-color: var(--grey-dark-color);
     --simple-text-color: var(--grey-color);
+}
+
+.Germany {
+    background: var(--back-color);
+    --links-color: var(--back-color);
+    --button-text-color: var(--back-color);
+
+    color: var(--grey-color); 
+    --navbar-color: var(--dark-color);
+    --back-color: var(--yellow-color);
+    --front-color: var(--red-color);
+    --simple-text-color: var(--dark-color);
 }
 
 .France {

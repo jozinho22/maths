@@ -1,11 +1,12 @@
 import React from 'react';
 import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
 import { RiMailSendLine } from 'react-icons/ri';
-import { FaQuestion } from 'react-icons/fa';
 
 import ThemeContext from '../context/ThemeContext'
 import FontContext from '../context/FontContext'
 import Contact from '../contact/Contact';
+import getFonts from './styles/getFonts'
+import getThemes from './styles/getThemes'
 import './Nav.css';
 import './Footer.css';
 
@@ -23,28 +24,8 @@ const Footer = ( { setComponent } ) => {
         updateFont(event); 
     }
 
-    var j = -1;
-    var themes = [
-                    {id: ++j, name: 'Algeria'},
-                    {id: ++j, name: 'Brazil'},
-                    {id: ++j, name: 'Darcula'},
-                    {id: ++j, name: 'France'},
-                    {id: ++j, name: 'Senegal'}
-                ];
-
-    var k = -1;
-    var fonts = [
-                    {id: ++k, name: 'Aladdin'},
-                    {id: ++k, name: 'Arabic'},
-                    {id: ++k, name: 'BlackChancery'},
-                    {id: ++k, name: 'Celtic'},
-                    {id: ++k, name: 'Chinese'},
-                    {id: ++k, name: 'Dragons'},
-                    {id: ++k, name: 'Gothic'},
-                    {id: ++k, name: 'Indian'},
-                    {id: ++k, name: 'Western'},
-                    {id: ++k, name: 'Xmas'}
-                ];
+    var themes = getThemes();
+    var fonts = getFonts();
 
     return (
             <Navbar 

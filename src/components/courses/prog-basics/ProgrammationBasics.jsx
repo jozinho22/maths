@@ -1,8 +1,8 @@
 import React from 'react';
-import { Container, Button, Row, Col } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
 
 import NavigationButtons from '../NavigationButtons';
-import getChapters from './getChapters';
+import getChapters from './chapters/getChapters';
 
 import '../Courses.css';
 import './ProgrammationBasics.css';
@@ -14,6 +14,8 @@ const Code = () => {
 
     const [count, setCount] = React.useState(0);
 
+    window.scrollTo(0, 0);
+    
     return (
             <>
                 <p className="Title">Bases de la programmation</p>
