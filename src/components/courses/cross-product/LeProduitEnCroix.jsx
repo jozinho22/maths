@@ -171,7 +171,7 @@ const LeProduitEnCroix = () => {
                 <Button 
                     className="GreenButton DefaultButton"
                     onClick={() => showAnswer(0)}>
-                    Afficher les réponses
+                    {showAnswers[0].show ? 'Masquer les réponses' : 'Afficher les réponses'}
                 </Button>
                 <Container className={`CoursesAnswers ${showAnswers[0].show ? '' : "Hidden"}`} >
                     <MathJaxDisplay toShow={answerExo1}/>
@@ -193,7 +193,7 @@ const LeProduitEnCroix = () => {
                 <Button 
                     className="GreenButton DefaultButton"
                     onClick={() => showAnswer(1)}>
-                    Afficher les réponses
+                    {showAnswers[1].show ? 'Masquer les réponses' : 'Afficher les réponses'}
                 </Button>
                 <Container className={`CoursesAnswers ${showAnswers[1].show ? '' : "Hidden"}`} >
                     <p>Paris-Rennes fait environ 350 km.</p>
@@ -209,7 +209,7 @@ const LeProduitEnCroix = () => {
                 <Button 
                     className="GreenButton DefaultButton"
                     onClick={() => showAnswer(2)}>
-                    Afficher les réponses
+                    {showAnswers[2].show ? 'Masquer les réponses' : 'Afficher les réponses'}
                 </Button>
                 <Container className={`CoursesAnswers ${showAnswers[2].show ? '' : "Hidden"}`} >
                     <p>Pour un aller seulement</p>
