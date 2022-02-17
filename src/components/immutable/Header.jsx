@@ -1,9 +1,10 @@
 import React from 'react';
 import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
 import Home from '../home/Home';
-import ProgrammationBasics from '../courses/prog-basics/ProgrammationBasics';
-import Shapes from '../courses/shapes/Shapes';
+import Programmation from '../courses/prog/LaProgrammation';
+import Shapes from '../courses/shapes/LesFormes';
 import UsualFunctions from '../usual-functions/UsualFunctions';
+import LeProduitEnCroix from '../courses/cross-product/LeProduitEnCroix';
 
 import TablesTest from '../tables-test/TablesTest';
 import PDFViewerPage from '../pdf-viewer/PDFViewerPage';
@@ -14,16 +15,6 @@ import './Header.css';
 const Header = ({ pdfItems, setComponent }) => {
 
     const [showToggle, setShowToggle] = React.useState(false);
-    var pdfCoursesItems = []
-    var pdfAlbumsItems = []
-
-    for(var k = 0; k < pdfItems.length; k++) {
-        if(pdfItems[k].type === 'courses') {
-            pdfCoursesItems.push(pdfItems[k]);
-        } else if(pdfItems[k].type === 'albums') {
-            pdfAlbumsItems.push(pdfItems[k]);
-        }
-    }
 
     const findPdfItemById = (id) => {
         return pdfItems[id];
@@ -33,12 +24,6 @@ const Header = ({ pdfItems, setComponent }) => {
         setShowToggle(false);
         setComponent(component);
     }
-
-    function css_text(x) { return x.cssText; }
-    var file = document.getElementById('css');
-    console.log(file)
-    var content = Array.prototype.map.call(file.sheet.cssRules, css_text).join('\n');
-    console.log(content)
 
     return (
             <Navbar 
@@ -58,10 +43,10 @@ const Header = ({ pdfItems, setComponent }) => {
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav" >
                     <Nav>
-                        {/* <NavDropdown title="Cours/exercices" id="basic-nav-dropdown">
-                             <NavDropdown.Item 
+                        <NavDropdown title="Cours/exercices" id="basic-nav-dropdown">
+                             {/* <NavDropdown.Item 
                                 onClick={() => {
-                                    goTo(<ProgrammationBasics />);
+                                    goTo(<Programmation />);
                                 }} >
                                 Bases de la programmation
                             </NavDropdown.Item> 
@@ -70,17 +55,22 @@ const Header = ({ pdfItems, setComponent }) => {
                                     goTo(<Shapes />);
                                 }} >
                                 Les formes
-                            </NavDropdown.Item> 
+                            </NavDropdown.Item> */} 
                             <NavDropdown.Item 
                                 onClick={() => {
                                     goTo(<UsualFunctions />);
                                 }} >
                                 Fonctions usuelles
                             </NavDropdown.Item>
-
-                        </NavDropdown> */}
+                            <NavDropdown.Item 
+                                onClick={() => {
+                                    goTo(<LeProduitEnCroix />);
+                                }} >
+                                Règle de 3
+                            </NavDropdown.Item>
+                        </NavDropdown> 
                         <NavDropdown title="BDs de Jean-Pierre Petit" id="basic-nav-dropdown">
-                            {pdfAlbumsItems.map(pdfItem => 
+                            {pdfItems.map(pdfItem => 
                                 <NavDropdown.Item 
                                     key= {pdfItem.id}
                                     onClick={() => {

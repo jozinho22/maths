@@ -37,7 +37,7 @@ const PaginationPageByPage = ( {page, pages, setPage} ) => {
                 <BackButton disabled={ !(pages > 1 && page > 1) } /> 
             </Col>
             <Col className="CenterText">
-                Page : {page} / {pages} 
+                page : {page} / {pages} 
             </Col>
             <Col style={{textAlign:"left"}}>
                 <NextButton disabled={ !(pages > 1 && page < pages) } />  

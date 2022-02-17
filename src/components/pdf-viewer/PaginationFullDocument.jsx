@@ -38,7 +38,7 @@ const PaginationFullDocument = ({pages, beginIndex, step, addPagesToList}) => {
                 <BackButton disabled={ !(beginIndex > 0) } /> 
             </Col>
             <Col className="CenterText">
-                <p>Pages : 
+                <p>pages : 
                 {
                     beginIndex > pages ? 
                         pages : 

@@ -5,26 +5,24 @@ const NavigationButtons = ( {chapters, count, setCount} ) => {
             <Row>
                 <Col style={{textAlign:"right"}}>
                     {
-                         count > 0 ?  
+                         count >= 0 ?  
                             <Button 
-                                className="DefaultButton BlueButton"
-                                onClick={() => {setCount(count - 1)}}
-                                disabled={ !(chapters.length > 1 && count > 0) } >
-                                {chapters[count - 1].name}
+                                className="DefaultButton"
+                                onClick={() => {setCount(count >= 0 ? count - 1 : -1)}} >
+                                {count > 0 ? chapters[count - 1].name : 'Sommaire'}
                             </Button> 
                                 : ''
                     } 
                 </Col>
                 <Col className="CenterText">
-                    Page : {count + 1} / {chapters.length} 
+                    chapitre : {count + 1} / {chapters.length} 
                 </Col>
                 <Col style={{textAlign:"left"}}>
                     {
                         count < chapters.length - 1 ?
                             <Button 
-                                className="DefaultButton BlueButton"
-                                onClick={() => {setCount(count + 1)}}
-                                disabled={ !(chapters.length > 1 && count < chapters.length) } >
+                                className="DefaultButton"
+                                onClick={() => {setCount(count + 1)}} >
                                 {chapters[count + 1].name}
                             </Button>
                                 : ''

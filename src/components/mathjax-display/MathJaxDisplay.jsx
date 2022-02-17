@@ -15,7 +15,7 @@ const MathJaxDisplay = ({toShow, color}) => {
                     }
 
     return (
-        <Container className={`MathJaxDisplayContainer ${color}MathJaxText`}>      
+        <Container className={`MathJaxDisplayContainer ${color ? color + "MathJaxText" : '' }`}>      
             <MathJaxContext config={config}>
                 <MathJax dynamic hideUntilTypeset={ "every" } >
                     {toShow}

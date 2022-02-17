@@ -152,7 +152,7 @@ const TablesTestQuestionDisplay =
                         {row.cols.map(col =>(  
                             <Col key={col.id}>
                                 <Button 
-                                    className="GreenButton"
+                                    className="KeyboardButton"
                                     onClick={() => handleKeyboardInput(col.cifer)}>
                                     {col.cifer}
                                 </Button>

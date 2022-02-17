@@ -1,6 +1,3 @@
-import produitEnCroix from './courses/produitEnCroix.pdf';
-import produitEnCroixWithAnswers from './courses/produitEnCroix-rep.pdf';
-
 import aspirisouffle from './albums/aspirisouffle.pdf'; 
 import bigBang from './albums/bigBang.pdf'; 
 import chronologicon from './albums/chronologicon.pdf';
@@ -20,19 +17,6 @@ function pdfResourceBuilder() {
 
     var pdfItems = [];
     var i = 0;
-
-    var pdfProduitEnCroix = {
-      id: i++,
-      type: 'courses',
-      filePath: './courses/produitEnCroix.pdf',
-      title: 'Le produit en croix',
-      pdfFile : produitEnCroix,
-      pdfFileWithAnswers : produitEnCroixWithAnswers
-    }
-
-    pdfItems.push(
-      pdfProduitEnCroix
-    );
 
     var pdfAspi = {
       id: i++,

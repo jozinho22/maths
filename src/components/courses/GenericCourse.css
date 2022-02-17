@@ -19,7 +19,7 @@
     white-space: pre-line;
 }
 
-.CoursesContainer > p, a {
+.CoursesContainer p, a {
     font-size: small;
 }
 
@@ -31,7 +31,7 @@
 }
 
 @media (min-width: 768px) {
-   .CoursesContainer > p, a {
+   .CoursesContainer p, a {
        font-size: medium;  
     } 
     .CoursesContainer img {
@@ -40,7 +40,7 @@
 }
 
 @media (min-width: 1268px) {
-   .CoursesContainer > p, a {
+   .CoursesContainer p, a {
         font-size: large;
     } 
     .CoursesContainer {
@@ -50,4 +50,8 @@
 
 .TextureCopyRight {
     font-family: 'Times New Roman', Times, serif;
+}
+
+.CoursesAnswers {
+    color: var(--green-color);
 }

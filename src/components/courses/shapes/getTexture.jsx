@@ -1,27 +1,22 @@
 import ShapeType from './ShapeType';
-
 import aquarelle from "./assets/textures/aquarelle.jpg";
 import basket from "./assets/textures/basket.jpg";
-
 import bricks from "./assets/textures/bricks.jpg";
 import carrelage from "./assets/textures/carrelage.jpg";
 import chess from "./assets/textures/chess.jpg";
+import danger from "./assets/textures/danger.jpg";
+import danger2 from "./assets/textures/danger2.jpg";
 import earth from "./assets/textures/earth.jpg";
-import earthquake from "./assets/textures/earthquake.jpg";
 import eye from "./assets/textures/eye.jpg";
-import grass from "./assets/textures/grass.jpg";
 import mario from "./assets/textures/mario.jpg";
 import metal from "./assets/textures/metal.jpg";
 import metal2 from "./assets/textures/metal2.jpg";
 import moon from "./assets/textures/moon.jpg";
-import paper from "./assets/textures/paper.jpg";
 import sand from "./assets/textures/sand.jpg";
 import sealedbox from "./assets/textures/sealedbox.jpg";
-
-import soccer from "./assets/textures/soccer.jpg";
 import stars from "./assets/textures/stars.jpg";
-import tablette from "./assets/textures/tablette.jpg";
 import wood from "./assets/textures/wood.jpg";
+
 import woody from "./assets/textures/woody.jpg";
 
 const getTexture = ( type, prez ) => {
@@ -38,7 +33,7 @@ const getTexture = ( type, prez ) => {
         case ShapeType.CYLINDER:
             return prez ? metal : metal2;
         case ShapeType.TRIANGLE:
-            return prez ? paper : earthquake;
+            return prez ? stars : wood;
         case ShapeType.CONE:
             return prez ? sand : carrelage;
         case ShapeType.PYRAMIDE:

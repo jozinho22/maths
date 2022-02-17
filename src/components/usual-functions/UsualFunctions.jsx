@@ -126,18 +126,7 @@ const UsualFunctions2 = () => {
                             <ReferenceLine y={0} />
                         </LineChart>
                     </ResponsiveContainer>
-{/*                     <Button onClick={() => {
-                        var newScale = f.scale*2;
-                        var newF = {...f};
-                        newF.scale = newScale;
-                        setF(newF);
-                    }}>Up</Button>
-                    <Button onClick={() => {
-                        var newScale = f.scale/2;
-                        var newF = {...f};
-                        newF.scale = newScale;
-                        setF(newF);
-                    }}>Down</Button> */}
+
                     <Container className="FunctionAttributes">
                         <p className="FunctionAttributesTitle">Définie sur</p> 
                         <MathJaxDisplay 

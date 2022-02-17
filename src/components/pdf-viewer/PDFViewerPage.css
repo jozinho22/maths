@@ -1,11 +1,3 @@
-.Opacity {
-    opacity: 0.5;
-}
-
-.Hidden {
-    opacity: 0;
-}
-
 .SwitchButton {
     position: relative;
 }
