@@ -39,7 +39,7 @@ function App() {
         updateFont: setFont
     };
 
-    const [component, setComponent] = React.useState( <LeProduitEnCroix /> );
+    const [component, setComponent] = React.useState( <Home /> );
 
     var pdfItems = pdfResourceBuilder();
 
