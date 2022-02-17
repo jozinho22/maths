@@ -91,6 +91,11 @@
     background-color: var(--blue-hover-color);
 }
 
+.DefaultButton:focus {
+    background-color: var(--blue-hover-color);
+    border-width: 0px;
+}
+
 .MiniButton {
     padding: 5px;
     font-size: x-small;
