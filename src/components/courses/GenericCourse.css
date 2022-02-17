@@ -55,3 +55,9 @@
 .CoursesAnswers {
     color: var(--green-color);
 }
+
+.Focus{
+    border-width: 1px;
+    border-style: solid;
+    border-color: var(--front-color);
+}

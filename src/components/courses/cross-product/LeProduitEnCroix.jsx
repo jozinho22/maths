@@ -9,7 +9,6 @@ const LeProduitEnCroix = () => {
     var abcdBase = "\\(\\frac{a}{b} = \\frac{c}{d}\\)";
     var adEqubc = "\\(ad = bc\\)";
 
-
     /* [a, d], [b, c]*/
     const [abcd, setABCD] = React.useState([['20', '2'], ['10', '4']]);
     var cross = "\\(\\frac{" + abcd[0][0] + "}{" + abcd[1][0] 
@@ -18,6 +17,11 @@ const LeProduitEnCroix = () => {
     const [abcd2, setABCD2] = React.useState([['a', 'd'], ['c', 'b']]);
     var cross2 = "\\(\\frac{" + abcd2[0][0] + "}{" + abcd2[1][0] 
                 + "} = \\frac{" + abcd2[1][1] + "}{" + abcd2[0][1] + "}\\)";
+
+    var divByA = "\\(\\frac{a}{b} \\times \\frac{1}{a}= \\frac{c}{d} \\times \\frac{1}{a}\\)";
+    var divByAResult = "\\(\\frac{1}{b} = \\frac{c}{ad} \\)";
+    var multByD = "\\(\\frac{1}{b} \\times d = \\frac{c}{ad} \\times d\\)";
+    var multByDResults = "\\(\\frac{b}{d} = \\frac{c}{a}\\)";
 
     var abbEqucbd = "\\(\\frac{ab}{b} = \\frac{cb}{d}\\)";
     var aEqucbd = "\\(a = \\frac{cb}{d}\\)";
@@ -113,9 +117,10 @@ const LeProduitEnCroix = () => {
                     D'où la forme de croix.
                     Car {"\n"} Les éléments [a,d] et [b,c] sont interchangeables à souhait :
                 </p>
-                <MathJaxDisplay toShow={cross2}/>
-                <MathJaxDisplay toShow={cross}/>
-               
+                <Container className="Focus">
+                    <MathJaxDisplay toShow={cross2}/>
+                    <MathJaxDisplay toShow={cross}/>
+                </Container>
                 <Row>
                     <Col>
                         <Button 
@@ -148,6 +153,18 @@ const LeProduitEnCroix = () => {
                         </Button>
                     </Col>
                 </Row>
+                <p>Dans ce cas, diviser chaque membre par a (ou multiplier par son inverse) revient à le transposer de l'autre côté, au dénominateur.</p>
+                <MathJaxDisplay toShow={abcdBase}/>
+                <MathJaxDisplay toShow={divByA}/>
+                <MathJaxDisplay toShow={divByAResult}/>
+                <p>De même, si je multiplie tout par d</p>
+                <MathJaxDisplay toShow={multByD}/>
+                <MathJaxDisplay toShow={multByDResults}/>
+                <p>
+                    On effectuant ces deux étapes, on a interchangé a et d.
+                    {"\n"}On peut faire de même avec b et c. D'où l'appellation de produit en croix.
+                </p>
+
                 <p className="Title1">b) Démonstration</p>
                 <p>
                     Partons à nouveau de notre équation de départ.

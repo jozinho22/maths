@@ -51,7 +51,6 @@ function App() {
         initDimensions();
     }, []);
 
-
     return ( 
         <div className = "App" >
             <ThemeContext.Provider value = {themeContext} >
