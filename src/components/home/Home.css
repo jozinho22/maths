@@ -1,8 +1,5 @@
 .HomeContainer {
-    position: absolute;
-    top: 50%; /* Position Y halfway in */
-    left: 50%; /* Position X halfway in */
-    transform: translate(-50%,-50%); /* Move it halfway back(x,y) */ 
+    position: relative;
 }
 
 .HomeTitleContainer {
