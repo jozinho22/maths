@@ -15,7 +15,7 @@ const getChapters = () => {
     var k = 0;
 
     return [
-        {
+/*         {
             id: k++,
             component: <LeCarre />,
             name: 'Le carré',
@@ -26,7 +26,7 @@ const getChapters = () => {
                             prez={true}
                             staticDim={true} /> 
                     </Container>
-        },
+        }, */
         {
             id: k++,
             component: <LeCube />,
@@ -39,7 +39,7 @@ const getChapters = () => {
                             staticDim={true} />  
                     </Container>
         },
-        {
+/*         {
             id: k++,
             component: <LeCercle />,
             name: 'Le cercle',
@@ -50,7 +50,7 @@ const getChapters = () => {
                             prez={true} 
                             staticDim={true} /> 
                     </Container>
-        },
+        }, */
         {
             id: k++,
             component: <LaSphere />,
@@ -62,7 +62,8 @@ const getChapters = () => {
                             prez={true} 
                             staticDim={true} />   
                     </Container>
-        },          
+        }
+        /* ,          
         {
             id: k++,
             component: <LeCylindre />,
@@ -110,7 +111,7 @@ const getChapters = () => {
                             prez={true} 
                             staticDim={true} />   
                     </Container>
-        }
+        } */
     ];
 }
 

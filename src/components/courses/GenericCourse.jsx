@@ -10,8 +10,6 @@ const GenericCourse = ({title, chapters}) => {
     /* -1 -> Sommaire, n >= 0 -> chapitres */
     const [count, setCount] = React.useState(-1);
     
-    console.log(count);
-
     React.useEffect(() => {
         window.scrollTo(0, 0);
     }, [count]);

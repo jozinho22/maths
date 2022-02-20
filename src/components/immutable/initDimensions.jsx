@@ -2,6 +2,7 @@ const initDimensions = () => {
     var dimensions = 
         [
             {className: 'CustomHeader', height: ''}, 
+            {className: 'RelativeContainer', height: ''},
             {className: 'CustomFooter', height: ''}
         ];
 

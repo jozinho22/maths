@@ -3,12 +3,19 @@
 }
 
 mjx-math {
-    font-size: large !important;
+    font-size: medium !important;
+    margin: 0px;
 }
 
 @media (min-width: 768px) {
     mjx-math {
-        font-size: x-large !important;
+        font-size: large !important;    
+    }
+}
+
+@media (min-width: 1268px) {
+    mjx-math {
+        font-size: x-large !important;    
     }
 }
 

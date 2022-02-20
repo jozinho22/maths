@@ -57,4 +57,6 @@
 
 .KeyboardButton {
     background-color: var(--back-color);
+    color: var(--mirror-button-text-color);
+    border-color: var(--grey-color);
 }

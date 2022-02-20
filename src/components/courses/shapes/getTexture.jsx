@@ -1,12 +1,10 @@
 import ShapeType from './ShapeType';
 import aquarelle from "./assets/textures/aquarelle.jpg";
-import basket from "./assets/textures/basket.jpg";
 import bricks from "./assets/textures/bricks.jpg";
 import carrelage from "./assets/textures/carrelage.jpg";
 import chess from "./assets/textures/chess.jpg";
-import danger from "./assets/textures/danger.jpg";
-import danger2 from "./assets/textures/danger2.jpg";
 import earth from "./assets/textures/earth.jpg";
+import earth2 from "./assets/textures/earth2.jpg";
 import eye from "./assets/textures/eye.jpg";
 import mario from "./assets/textures/mario.jpg";
 import metal from "./assets/textures/metal.jpg";
@@ -29,7 +27,7 @@ const getTexture = ( type, prez ) => {
         case ShapeType.CIRCLE:
             return prez ? eye : moon;
         case ShapeType.SPHERE:
-            return prez ? basket : earth;
+            return prez ? earth2 : earth;
         case ShapeType.CYLINDER:
             return prez ? metal : metal2;
         case ShapeType.TRIANGLE:

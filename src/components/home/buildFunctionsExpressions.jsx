@@ -25,12 +25,16 @@ const buildFunctionsExpressions = () => {
     var cosAPlusB = "\\(cos(a+b) = cos(a)cos(b) - sin(a)sin(b)\\)"
     var dUdivV = "\\((\\frac{u}{v})' = \\frac{u' v - v' u}{v^2}\\)";
     var dUplusV = "\\((u+v)' = u' + v' \\)";
-    var dUV = "\\((uv)' = u'v + v'u \\)";
+    var dUV = "\\(\\left(uv\\right)' = u'v + v'u \\)";
     var phi2 = "\\(\\phi^2 = 2\\phi + 1\\)";
     var discrimant = "\\(\\Delta = b^2 -4c\\)";
     var aPLusB3 = "\\((a+b)^3 = a^3 + 3a^2b + 3ab^2 + b^3\\)";
     var lnATimesB = "\\(ln(ab) = ln(a) + ln(b) \\)";
     var sigmaN = "\\(\\Sigma_{n=1}^{\\infty} n = \\frac{n(n+1)}{2}\\)";
+
+    var w = getComputedStyle(document.body).getPropertyValue('width');
+    var wSliced = w.slice(0, w.length - 2);
+    var wInNumbers = parseInt(wSliced);
 
     var listEqu = [];
     var k = 0;
@@ -179,7 +183,11 @@ const buildFunctionsExpressions = () => {
         return array;
     }
 
-    return shuffle(listEqu);
+console.log(wInNumbers)
+console.log(listEqu.length)
+    return wInNumbers < 500 ? shuffle(listEqu).slice(0, 10) 
+        : wInNumbers < 1000 ? shuffle(listEqu).slice(0, 20) 
+            : shuffle(listEqu).slice(0, 30);
 
 }
 

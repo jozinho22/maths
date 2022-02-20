@@ -89,13 +89,11 @@ const LeProduitEnCroix = () => {
     }
 
     const showAnswer = (exoN) => {
-
         let showAnswersSlice = {...showAnswers};
         showAnswersSlice[exoN].show = !showAnswersSlice[exoN].show;
-     
-        console.log(showAnswersSlice)
         setShowAnswers(showAnswersSlice);
     }
+
     return (
         <>
             <p className="Title">La règle de trois</p>
@@ -178,15 +176,16 @@ const LeProduitEnCroix = () => {
                 <MathJaxDisplay toShow={adEqucbdd}/>
                 <MathJaxDisplay toShow={adcb}/>
                 <p>On retrouve bien notre équation de départ </p>
-                <MathJaxDisplay toShow={adEqubc}/>
-
+                <Container className="Focus">
+                    <MathJaxDisplay toShow={adEqubc}/>
+                </Container>
                 <p className="Title1">c) Application</p>
                 <p className="Underline">Exo 1</p>
                 <p>On sait que 1 kg = 1 000 g.
                     {"\n"}Combien fait 3000 kg convertit en g ?
                 </p>
                 <Button 
-                    className="GreenButton DefaultButton"
+                    className=" DefaultButton GreenButton"
                     onClick={() => showAnswer(0)}>
                     {showAnswers[0].show ? 'Masquer les réponses' : 'Afficher les réponses'}
                 </Button>

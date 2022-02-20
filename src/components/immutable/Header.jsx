@@ -49,13 +49,13 @@ const Header = ({ pdfItems, setComponent }) => {
                                     goTo(<Programmation />);
                                 }} >
                                 Bases de la programmation
-                            </NavDropdown.Item> 
+                            </NavDropdown.Item>  */} 
                             <NavDropdown.Item 
                                 onClick={() => {
                                     goTo(<Shapes />);
                                 }} >
                                 Les formes
-                            </NavDropdown.Item> */} 
+                            </NavDropdown.Item>
                             <NavDropdown.Item 
                                 onClick={() => {
                                     goTo(<UsualFunctions />);

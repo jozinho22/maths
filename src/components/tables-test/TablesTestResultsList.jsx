@@ -9,9 +9,7 @@ const TablesTestResultsList = ({ question, answer }) => {
 
     var answerToShow = question.enounce;
     var goodAnswerToShow = question.goodAnswer;
-
-    console.log(answer.input === '')
-
+    
     return (
             <tr>
                 <td className="AnswersResults">

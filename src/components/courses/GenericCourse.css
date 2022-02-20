@@ -50,6 +50,7 @@
 
 .TextureCopyRight {
     font-family: 'Times New Roman', Times, serif;
+    font-size: medium;
 }
 
 .CoursesAnswers {
@@ -60,4 +61,5 @@
     border-width: 1px;
     border-style: solid;
     border-color: var(--front-color);
+    width: 50%;
 }
