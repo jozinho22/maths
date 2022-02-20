@@ -41,7 +41,7 @@ function App() {
 
     const [component, setComponent] = React.useState( 
         process.env.NODE_ENV === 'development' ? 
-            <LeProduitEnCroix /> 
+            <Home /> 
                 : <Home />
     );
 

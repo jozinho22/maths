@@ -66,7 +66,6 @@ const LaSphere = () => {
 
     return (
         <>
-            <p className="Title1">La sphère</p>
             <p>
                 La formule du volume de la sphère est :
             </p> 
@@ -87,6 +86,7 @@ const LaSphere = () => {
                     type={ShapeType.SPHERE}
                     dimensions={1} /> 
             </Container>
+            <p className="Title1">Calcul du volume par intégration</p>
             <p>Calculons avec une méthode d'intégration le volume de la sphère.
                 {"\n"}
                 Par facilité, nous allons d'abord calculer le demi-volume.
@@ -127,6 +127,7 @@ const LaSphere = () => {
             </p>
             <MathJaxDisplay toShow={circleVol}/>
 
+            <p className="Title1">Calcul de la surface par intégration</p>
             <p>
                 {"\n"}{"\n"}{"\n"}
                 On peut faire la même chose pour calculer la surface.

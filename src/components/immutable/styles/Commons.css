@@ -62,7 +62,6 @@
     font-size: x-small;
 }
 
-
 @media (min-width: 360px) {
     .DefaultButton {
         padding: 10px;
@@ -96,6 +95,20 @@
     border-width: 0px;
 }
 
+.DefaultButton mjx-math {
+    font-size: medium !important;
+}
+
+@media (min-width: 768px) {
+    .DefaultButton mjx-math {
+        font-size: large !important;
+    }
+}
+
+.DefaultButton mjx-container {
+    margin: 0px;
+}
+
 .MiniButton {
     padding: 5px;
     font-size: x-small;
@@ -110,6 +123,10 @@
     background-color: var(--green-hover-color);
 }
 
+.GreenButton:focus {
+    background-color: var(--green-hover-color);
+}
+
 .OrangeButton {
     background-color: var(--orange-color);
 }
@@ -118,11 +135,19 @@
     background-color: var(--orange-hover-color);
 }
 
+.OrangeButton:focus {
+    background-color: var(--orange-hover-color);
+}
+
 .RedButton {
     background-color: var(--red-color);
 }
 
 .RedButton:hover {
+    background-color: var(--red-hover-color);
+}
+
+.RedButton:focus {
     background-color: var(--red-hover-color);
 }
 
@@ -141,3 +166,4 @@
 .Clickable {
     cursor: pointer;
 }
+

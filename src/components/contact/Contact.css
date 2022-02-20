@@ -14,7 +14,11 @@
     margin: 0 auto;
 }
 
-.Subject, .Message {
+.Subject {
+    width: 30%;
+}
+
+.Message {
     width: 60%;
 }
 
@@ -113,4 +117,8 @@
     .ContactForm canvas {
         width: 15% !important;
     }
+}
+
+#reload_href {
+    color: var(--blue-color);
 }

@@ -114,9 +114,7 @@ const Contact = ( {setComponent} ) => {
 
     const verifyCaptcha = () => {
         let user_captcha_value = document.getElementById('user_captcha_input').value;
-        console.log(user_captcha_value)
         if (validateCaptcha(user_captcha_value, false) === true) {
-            console.log('OK')
             setCaptchaOk(true);
             setGlobalAlert(updateAlert(true, 'captcha verifié !', "Green"));
         } else {
@@ -148,7 +146,6 @@ const Contact = ( {setComponent} ) => {
                     return true;
                 }, (err) => {
                     setError(true);
-                    console.log(err)
                 }
                 ).then((ok) => {
                     if(ok) {
@@ -274,7 +271,7 @@ const Contact = ( {setComponent} ) => {
                 </Form.Label>
                 <FormControl 
                     as="textarea" 
-                    rows={nbLines}
+                    rows={4}
                     maxLength={maxLength}
                     value={message}
                     onChange={e => setMessage(e.target.value)} />
