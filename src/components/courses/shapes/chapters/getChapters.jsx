@@ -39,7 +39,7 @@ const getChapters = () => {
                             staticDim={true} />  
                     </Container>
         },
-/*         {
+        {
             id: k++,
             component: <LeCercle />,
             name: 'Le cercle',
@@ -50,7 +50,7 @@ const getChapters = () => {
                             prez={true} 
                             staticDim={true} /> 
                     </Container>
-        }, */
+        }, 
         {
             id: k++,
             component: <LaSphere />,

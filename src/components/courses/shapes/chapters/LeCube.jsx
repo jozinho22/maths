@@ -55,7 +55,9 @@ const LeCube = () => {
             <MathJaxDisplay toShow={vCube2}/>
             <MathJaxDisplay toShow={vCube3}/>
             <MathJaxDisplay toShow={vCube4}/>
-            <MathJaxDisplay toShow={vCube5}/>
+            <Container className="Focus">
+                <MathJaxDisplay toShow={vCube5}/>
+            </Container>
             <p>
                 Tout est OK !
             </p>
@@ -65,7 +67,9 @@ const LeCube = () => {
                 Étant donné que le cube est un volume, on obtient cinq carré de aPLusB
                 {"\n"}Un derrière et quatre sur les côtés, on a donc
             </p>
-            <MathJaxDisplay toShow={sCube}/>
+            <Container className="Focus">
+                <MathJaxDisplay toShow={sCube}/>
+            </Container>
         </>
     )
 }

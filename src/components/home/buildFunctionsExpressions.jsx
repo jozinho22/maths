@@ -183,8 +183,6 @@ const buildFunctionsExpressions = () => {
         return array;
     }
 
-console.log(wInNumbers)
-console.log(listEqu.length)
     return wInNumbers < 500 ? shuffle(listEqu).slice(0, 10) 
         : wInNumbers < 1000 ? shuffle(listEqu).slice(0, 20) 
             : shuffle(listEqu).slice(0, 30);
