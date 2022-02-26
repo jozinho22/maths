@@ -2,34 +2,32 @@ import React from 'react';
 import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
 import { RiMailSendLine } from 'react-icons/ri';
 
-import ThemeContext from '../context/ThemeContext'
 import FontContext from '../context/FontContext'
+import ThemeContext from '../context/ThemeContext'
 import Contact from '../contact/Contact';
 import getFonts from './styles/getFonts'
 import getThemes from './styles/getThemes'
 import './Nav.css';
 import './Footer.css';
 
-const Footer = ( { setComponent } ) => {
+const Footer = ( { setComponent, hide } ) => {
 
+    const {font, updateFont} = React.useContext(FontContext);
     const {theme, updateTheme} = React.useContext(ThemeContext);
 
+    const changeFont = (event) => {
+        updateFont(event); 
+    }
     const changeTheme = (event) => {
         updateTheme(event); 
     }
   
-    const {font, updateFont} = React.useContext(FontContext);
-        
-    const changeFont = (event) => {
-        updateFont(event); 
-    }
-
-    var themes = getThemes();
     var fonts = getFonts();
+    var themes = getThemes();
 
     return (
             <Navbar 
-                className="CustomNav CustomFooter" 
+                className={`CustomFooter CustomNav  ${hide ? "Hidden" : ''}`}
                 fixed="bottom" 
                 collapseOnSelect 
                 variant="dark" 

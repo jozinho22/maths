@@ -1,6 +1,7 @@
 import { Container } from 'react-bootstrap';
 import GenericShape from '../GenericShape';
 import ShapeType from '../ShapeType';
+import ImageZoom from '../../ImageZoom';
 
 import sphereVolCalculus from '../assets/sphereVolCalculus.png';
 import sphereAreaCalculus from '../assets/sphereAreaCalculus.png';
@@ -91,7 +92,7 @@ const LaSphere = () => {
                 {"\n"}
                 Par facilité, nous allons d'abord calculer le demi-volume.
             </p>
-            <img src={sphereVolCalculus} alt="Logo" />
+            <ImageZoom src={sphereVolCalculus} name="Calcul du volume par intégration"/>
             <p>Notons S la surface du cercle</p>
             <MathJaxDisplay toShow={sX}/>
             <MathJaxDisplay toShow={circleAreaX}/>
@@ -137,7 +138,7 @@ const LaSphere = () => {
                 {"\n"}
                 On prendra non plus la surface du cercle mais son périmètre
             </p>
-            <img src={sphereAreaCalculus} alt="Logo" />
+            <ImageZoom src={sphereAreaCalculus} name="Calcul de la surface par intégration"/>
             <p>Notons P le périmètre du cercle </p>
             <MathJaxDisplay toShow={pCercle}/>
             <MathJaxDisplay toShow={circlePerimX}/>

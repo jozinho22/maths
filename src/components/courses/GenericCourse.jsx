@@ -16,31 +16,31 @@ const GenericCourse = ({title, chapters}) => {
 
     return (
         <>
+            {
+                count >= 0 ?
+                    <NavigationButtons 
+                        chapters={chapters}
+                        count={count}
+                        setCount={setCount} />
+                        : ''
+            }
             <p className="Title">{title} {count >= 0 ? "- " + chapters[count].name : ''}</p>
-                    {
-                        count >= 0 ?
-                            <NavigationButtons 
-                                chapters={chapters}
-                                count={count}
-                                setCount={setCount} />
-                                : ''
-                    }
-                    <Container className="CoursesContainer"> 
-                        {
-                            count < 0 ?
-                                <TableOfContents chapters={chapters} setCount={setCount} />
-                                    : chapters[count].component  
-                        }           
-                    </Container>
-                    {
-                        count >= 0 ?
-                            <NavigationButtons 
-                                chapters={chapters}
-                                count={count}
-                                setCount={setCount} />
-                                : ''
-                    }
-            </>
+            <Container className="CoursesContainer"> 
+                {
+                    count < 0 ?
+                        <TableOfContents chapters={chapters} setCount={setCount} />
+                            : chapters[count].component  
+                }           
+            </Container>
+            {
+                count >= 0 ?
+                    <NavigationButtons 
+                        chapters={chapters}
+                        count={count}
+                        setCount={setCount} />
+                        : ''
+            }
+        </>
     );
 }
 

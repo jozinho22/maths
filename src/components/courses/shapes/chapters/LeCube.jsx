@@ -1,5 +1,6 @@
 import { Container } from 'react-bootstrap';
 import MathJaxDisplay from '../../../mathjax-display/MathJaxDisplay';
+import ImageZoom from '../../ImageZoom';
 
 import GenericShape from '../GenericShape';
 import ShapeType from '../ShapeType';
@@ -46,7 +47,7 @@ const LeCube = () => {
 
             <p className="Title1">Calcul du volume par intégration</p>
             <p>Intégrons notre volume à partir d'un côté pour voir si nosu retombons bien sur nos pattes</p>
-            <img src={squareVolCalculus} alt="Logo" />
+            <ImageZoom src={squareVolCalculus} name="Calcul du volume par intégration"/>
             <MathJaxDisplay toShow={sCarre}/>
             <MathJaxDisplay toShow={vCube}/>
             <p>

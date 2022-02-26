@@ -1,12 +1,14 @@
 import React from 'react';
 
-import { Container } from 'react-bootstrap';
+import { Container, Button } from 'react-bootstrap';
 import BootstrapSwitchButton from 'bootstrap-switch-button-react'
 
 import PDF from "react-pdf-js";
 import PaginationPageByPage from './PaginationPageByPage';
 import PaginationFullDocument from './PaginationFullDocument';
+import PlayModeContext from '../context/PlayModeContext'
 
+import getWidth from '../immutable/getWidth';
 import CustomSpinner from '../general-content/CustomSpinner';
 
 import './PDFViewerPage.css';
@@ -26,6 +28,12 @@ const PDFViewerPage = ({ pdfItem }) => {
         const [withAnswers, setWithAnswers] = React.useState(false);
         const step = 5;
 
+        const {playMode, updatePlayMode} = React.useContext(PlayModeContext);
+
+        React.useEffect(() => {
+            updatePlayMode(true);
+        }, []);
+       
         function addPagesToList(begin) {
             var list = [];
 
@@ -56,79 +64,109 @@ const PDFViewerPage = ({ pdfItem }) => {
             return page - (page % step);
         }
 
+        React.useEffect(() => {
+            window.scrollTo(0, 0);
+        }, [page, pagesList]);
+
         return (
           <> 
-              <h3 className="Title">{pdfItem.title}</h3>
-              <Container className="SwitchButton">
-                  <BootstrapSwitchButton 
-                      size="lg" 
-                      onlabel={`Par ${step} pages`}
-                      onstyle='primary'
-                      offlabel={`Page par page`}
-                      offstyle='warning'
-                      style='w-50 mx-3'
-                      onChange={() => switchView()} />  
-              </Container>
-
-              {
-                  pdfItem.type === 'courses' ?
-                      <Container className="SwitchButton">
-                          <BootstrapSwitchButton 
-                              size="lg" 
-                              onlabel={`Masquer les réponses`}
-                              onstyle='success'
-                              offlabel={`Afficher les réponses`}
-                              offstyle='danger'
-                              style='w-50 mx-3'
-                              onChange={() => setWithAnswers(!withAnswers)} />  
-                      </Container>
-                          : <></>
-              }
-
-              {
-                  pageByPageDocument ?
+            {
+                playMode ?
                     <>
-                      <PaginationPageByPage
-                          page={page}
-                          pages={pages} 
-                          setPage={setPage} />
-                      <PDF 
-                          className="CustomCanevas"
-                          file={!withAnswers ? pdfItem.pdfFile : pdfItem.pdfFileWithAnswers}
-                          page={page}
-                          onDocumentComplete={pages => {
-                              setPage(beginIndex + 1);
-                              setPages(pages);
-                          }} />
-                      <PaginationPageByPage
-                          page={page}
-                          pages={pages} 
-                          setPage={setPage} />
+                        <Button 
+                            className="DefaultButton UnPlayModeButton"
+                            onClick={() => updatePlayMode(false)}>
+                            Retour
+                        </Button>
+                    </> 
+                        :   <Button 
+                                className="DefaultButton PlayModeButton"
+                                onClick={() => updatePlayMode(true)}>
+                                Play mode
+                            </Button>
+            }
+
+            {
+                getWidth() > 450 ?
+                    <Container className="SwitchButton">
+                        <BootstrapSwitchButton 
+                            size="lg" 
+                            onlabel={`Par ${step} pages`}
+                            onstyle='primary'
+                            offlabel={`Page par page`}
+                            offstyle='warning'
+                            style='w-50 mx-3'
+                            onChange={() => switchView()} />  
+                    </Container>
+                        : <></>
+
+            }
+          
+            <h3 className="Title">{pdfItem.title}</h3>
+
+            {
+                pdfItem.type === 'courses' ?
+                    <Container className="SwitchButton">
+                        <BootstrapSwitchButton 
+                            size="lg" 
+                            onlabel={`Masquer les réponses`}
+                            onstyle='success'
+                            offlabel={`Afficher les réponses`}
+                            offstyle='danger'
+                            style='w-50 mx-3'
+                            onChange={() => setWithAnswers(!withAnswers)} />  
+                    </Container>
+                        : <></>
+            }
+
+            {
+                pageByPageDocument ?
+                    <>
+                        {
+                            !playMode ?
+                                <PaginationPageByPage
+                                    page={page}
+                                    pages={pages} 
+                                    setPage={setPage} />
+                                    : <></>
+                        }
+                        <PDF 
+                            className="CustomCanevas"
+                            file={!withAnswers ? pdfItem.pdfFile : pdfItem.pdfFileWithAnswers}
+                            page={page}
+                            onDocumentComplete={pages => {
+                                setPage(beginIndex + 1);
+                                setPages(pages);
+                            }} />
+                        <PaginationPageByPage
+                            page={page}
+                            pages={pages} 
+                            setPage={setPage} />
                     </> :
 
-                      <>
-                        <PaginationFullDocument 
-                            pages={pages}
-                            beginIndex={beginIndex} 
-                            step={step} 
-                            addPagesToList={addPagesToList} />
-                        {
-                          pagesList.map(item => (
-                            <PDF 
-                                key={item.id}
-                                className="CustomCanevas"
-                                file={!withAnswers ? pdfItem.pdfFile : pdfItem.pdfFileWithAnswers}
-                                page={item.pageNumber}
-                                onDocumentComplete={() => {
-                                }} />
-                          ))
-                        }
-                        <PaginationFullDocument 
-                            pages={pages}
-                            beginIndex={beginIndex} 
-                            step={step}
-                            addPagesToList={addPagesToList} />
-                      </>
+                        <>
+                            <PaginationFullDocument 
+                                pages={pages}
+                                beginIndex={beginIndex} 
+                                step={step} 
+                                addPagesToList={addPagesToList} />
+                            {
+                                pagesList.map(item => (
+                                <PDF 
+                                    key={item.id}
+                                    className="CustomCanevas"
+                                    file={!withAnswers ? pdfItem.pdfFile : pdfItem.pdfFileWithAnswers}
+                                    page={item.pageNumber}
+                                    onDocumentComplete={() => {
+                                    }} />
+                                ))
+                            }
+                            <PaginationFullDocument 
+                                pages={pages}
+                                beginIndex={beginIndex} 
+                                step={step}
+                                addPagesToList={addPagesToList} />
+                        </>
                 }
           </>     
         );
