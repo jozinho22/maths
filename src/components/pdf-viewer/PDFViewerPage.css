@@ -3,22 +3,26 @@
 }
 
 .SwitchButton .btn-lg {
-    font-size: xx-small !important;
     border-color: var(--grey-light-color);
+    font-size: xx-small !important;  
 }
 
 @media (min-width: 360px) {
     .SwitchButton .btn-lg {
         font-size: x-small !important;
     }
+    .SwitchButton {
+        width: 60%;
+    }
+
 }
 
 @media (min-width: 768px) {
-    .SwitchButton {
-        width: 70%;
-    }
     .SwitchButton .btn-lg {
         font-size: small !important;
+    }
+    .SwitchButton {
+        width: 50%;
     }
 }
 
@@ -58,4 +62,23 @@
 
 .SwitchButton .switch-handle {
     background-color: var(--grey-light-color);
+}
+
+.UnPlayModeButton, .PlayModeButton {
+    position: absolute;
+    right: 0px;
+    margin-top : 10px;
+    background-color: var(--green-color);
+}
+
+.UnPlayModeButton:hover, .UnPlayModeButton:focus, .PlayModeButton:hover, .PlayModeButton:focus {
+    background-color: var(--green-hover-color);
+}
+
+.UnPlayModeButton {
+    top: 0;
+}
+
+.PlayModeButton {
+    top: var(--customheader-height);
 }

@@ -1,6 +1,7 @@
 import { Container } from 'react-bootstrap';
 import GenericShape from '../GenericShape';
 import ShapeType from '../ShapeType';
+import ImageZoom from '../../ImageZoom';
 
 import sphereVolCalculus from '../assets/sphereVolCalculus.png';
 import sphereAreaCalculus from '../assets/sphereAreaCalculus.png';
@@ -8,8 +9,6 @@ import sphereAreaCalculus from '../assets/sphereAreaCalculus.png';
 import MathJaxDisplay from '../../../mathjax-display/MathJaxDisplay';
 
 const LaSphere = () => {
-    var vDemiSphereY = "V(y)_{\\frac{1}{2}}";
-    var sDemiSphereY = "S(y)_{\\frac{1}{2}}";
 
     var sphVolume = "\\(V_{sphere} = \\frac{4}{3}\\pi r^3\\)";
     var rTo2r = "\\(r \\to 2r\\)";
@@ -26,43 +25,45 @@ const LaSphere = () => {
     var circleAreaY = "\\(S(y) = \\pi \\sqrt{(R^2 - y^2)^2}\\)"
     var circleAreaY2 = "\\(S(y) = \\pi (R^2 - y^2)\\)"
 
-    var dVsphere = "\\(" + vDemiSphereY + " = V(y)_{\\frac{1}{2}sphere}\\)"
-    var dV = "\\(d(" + vDemiSphereY + ") = S(y) dy\\)"
-    var intDv = "\\(\\int_0^R d(" + vDemiSphereY + ") = \\int_0^R S(y) dy\\)"
+    var dVsphere = "\\(V(y) = V(y)_{\\frac{1}{2}sphere}\\)"
+    var dV = "\\(d(V(y)) = S(y) dy\\)"
+    var intDv = "\\(\\int_0^R d(V(y)) = \\int_0^R S(y) dy\\)"
 
-    var circleDemiVol = "\\(" + vDemiSphereY + " = \\int_0^R S(y) dy \\)"
-    var circleDemiVol2 = "\\(" + vDemiSphereY + " = \\int_0^R \\pi(R^2 - y^2) dy \\)"
-    var circleDemiVol3 = "\\(" + vDemiSphereY + " = \\pi \\left[ R^2 - \\frac{y^3}{3} \\right]_0^R \\)"
-    var circleDemiVol4 = "\\(" + vDemiSphereY + " = \\pi R^2 \\left[ 1 - \\frac{y}{3} \\right]_0^R \\)"
-    var circleDemiVol5 = "\\(" + vDemiSphereY + " = \\pi R^2 \\left[ \\frac{2}{3} y \\right]_0^R \\)"
-    var circleDemiVol6 = "\\(" + vDemiSphereY + " = \\pi R^2 (\\frac{2}{3} R - \\frac{2}{3} \\times 0 ) \\)"
-    var circleDemiVol7 = "\\(" + vDemiSphereY + " = \\frac{2}{3} \\pi R^3  \\)"
-    var circleVol = "\\(V(y)_{sphere} = \\frac{4}{3} \\pi R^3  \\)"
+    var circleDemiVol = "\\(V(y) = \\int_0^R S(y) dy \\)"
+    var circleDemiVol2 = "\\(V(y) = \\int_0^R \\pi(R^2 - y^2) dy \\)"
+    var circleDemiVol3 = "\\(V(y) = \\pi \\left[ R^2 - \\frac{y^3}{3} \\right]_0^R \\)"
+    var circleDemiVol4 = "\\(V(y) = \\pi R^2 \\left[ 1 - \\frac{y}{3} \\right]_0^R \\)"
+    var circleDemiVol5 = "\\(V(y) = \\pi R^2 \\left[ \\frac{2}{3} y \\right]_0^R \\)"
+    var circleDemiVol6 = "\\(V(y) = \\pi R^2 (\\frac{2}{3} R - \\frac{2}{3} \\times 0 ) \\)"
+    var circleDemiVol7 = "\\(V(y) = \\frac{2}{3} \\pi R^3  \\)"
+    var circleVol = "\\(V(y)_{sphere} = 2V(y)  \\)"
+    var circleVolR = "\\(V(y)_{sphere} = \\frac{4}{3} \\pi R^3  \\)"
 
     var pCercle = "\\(P(x) = P_{cercle}(x) \\)"
     var circlePerimX = "\\(P(x) = 2\\pi x\\)"
     var circlePerimY = "\\(P(y) = 2\\pi \\sqrt{R^2 - y^2}\\)"
 
-    var lfTheta = "\\(l = R \\theta \\)"
-    var dlfTheta = "\\(dl = R d\\theta \\)"
-    var dSdemiSphere = "\\(" + sDemiSphereY + " = S(y)_{\\frac{1}{2}}cercle\\)"
-    var dS = "\\(" + sDemiSphereY + " = P(y) dl\\)"
-    var intDS = "\\(\\int_0^{\\frac{\\pi}{2}} ("+ sDemiSphereY + ") = \\int_0^{\\frac{\\pi}{2}} P(y) dl\\)"
+    var lfTheta = "\\(l = R \\alpha \\)"
+    var dlfTheta = "\\(dl = R d\\alpha \\)"
+    var dSdemiSphere = "\\(S(y) = S(y)_{\\frac{1}{2}}cercle\\)"
+    var dS = "\\(S(y) = P(y) dl\\)"
+    var intDS = "\\(\\int_0^{\\frac{\\pi}{2}} (S(y)) = \\int_0^{\\frac{\\pi}{2}} P(y) dl\\)"
 
-    var circleDemiArea = "\\("+ sDemiSphereY + " = \\int_0^{\\frac{\\pi}{2}} P_{cercle}(y) dl \\)"
-    var circleDemiArea2 = "\\("+ sDemiSphereY + " = \\int_0^{\\frac{\\pi}{2}} 2\\pi \\sqrt{R^2 - y^2} dl \\)"
-    var yfTheta = "\\(y = R sin(\\theta) \\)"
-    var circleDemiArea4 = "\\("+ sDemiSphereY + " = 2\\pi \\int_0^{\\frac{\\pi}{2}} \\sqrt{R^2 - y^2} R d\\theta \\)"
-    var circleDemiArea5 = "\\("+ sDemiSphereY + " = 2\\pi R \\int_0^{\\frac{\\pi}{2}} \\sqrt{R^2 - R^2 sin^2(\\theta)} d\\theta \\)"
-    var circleDemiArea6 = "\\("+ sDemiSphereY + " = 2\\pi R \\int_0^{\\frac{\\pi}{2}}  \\sqrt{R^2 (1 -sin^2(\\theta))} d\\theta \\)"
-    var circleDemiArea7 = "\\("+ sDemiSphereY + " = 2\\pi R \\int_0^{\\frac{\\pi}{2}}  \\sqrt{R^2 (cos^2(\\theta))} d\\theta \\)"
-    var circleDemiArea8 = "\\("+ sDemiSphereY + " = 2\\pi R \\int_0^{\\frac{\\pi}{2}}  R cos(\\theta) d\\theta \\)"
-    var circleDemiArea9 = "\\("+ sDemiSphereY + " = 2\\pi R^2 \\int_0^{\\frac{\\pi}{2}} cos(\\theta) d\\theta \\)"
-    var circleDemiArea10 = "\\("+ sDemiSphereY + " = 2\\pi R^2 \\left[ sin(\\theta) \\right]_0^\\frac{\\pi}{2} \\)"
-    var circleDemiArea11 = "\\("+ sDemiSphereY + " = 2\\pi R^2 (sin(\\frac{\\pi}{2}) - sin(0)) \\)"
-    var circleDemiArea12 = "\\("+ sDemiSphereY + " = 2\\pi R^2 (1 - 0) \\)"
-    var circleDemiArea13 = "\\("+ sDemiSphereY + " = 2\\pi R^2 \\)"
-    var circleArea = "\\(S(y)_{sphere} = 4\\pi R^2 \\)"
+    var circleDemiArea = "\\(S(y) = \\int_0^{\\frac{\\pi}{2}} P_{cercle}(y) dl \\)"
+    var circleDemiArea2 = "\\(S(y) = \\int_0^{\\frac{\\pi}{2}} 2\\pi \\sqrt{R^2 - y^2} dl \\)"
+    var yfTheta = "\\(y = R sin(\\alpha) \\)"
+    var circleDemiArea4 = "\\(S(y) = 2\\pi \\int_0^{\\frac{\\pi}{2}} \\sqrt{R^2 - y^2} R d\\alpha \\)"
+    var circleDemiArea5 = "\\(S(y) = 2\\pi R \\int_0^{\\frac{\\pi}{2}} \\sqrt{R^2 - R^2 sin^2(\\alpha)} d\\alpha \\)"
+    var circleDemiArea6 = "\\(S(y) = 2\\pi R \\int_0^{\\frac{\\pi}{2}}  \\sqrt{R^2 (1 -sin^2(\\alpha))} d\\alpha \\)"
+    var circleDemiArea7 = "\\(S(y) = 2\\pi R \\int_0^{\\frac{\\pi}{2}}  \\sqrt{R^2 (cos^2(\\alpha))} d\\alpha \\)"
+    var circleDemiArea8 = "\\(S(y) = 2\\pi R \\int_0^{\\frac{\\pi}{2}}  R cos(\\alpha) d\\alpha \\)"
+    var circleDemiArea9 = "\\(S(y) = 2\\pi R^2 \\int_0^{\\frac{\\pi}{2}} cos(\\alpha) d\\alpha \\)"
+    var circleDemiArea10 = "\\(S(y) = 2\\pi R^2 \\left[ sin(\\alpha) \\right]_0^\\frac{\\pi}{2} \\)"
+    var circleDemiArea11 = "\\(S(y) = 2\\pi R^2 (sin(\\frac{\\pi}{2}) - sin(0)) \\)"
+    var circleDemiArea12 = "\\(S(y) = 2\\pi R^2 (1 - 0) \\)"
+    var circleDemiArea13 = "\\(S(y) = 2\\pi R^2 \\)"
+    var circleArea = "\\(S(y)_{sphere} = 2S(y) \\)"
+    var circleAreaR = "\\(S(y)_{sphere} = 4\\pi R^2 \\)"
 
     return (
         <>
@@ -91,7 +92,7 @@ const LaSphere = () => {
                 {"\n"}
                 Par facilité, nous allons d'abord calculer le demi-volume.
             </p>
-            <img src={sphereVolCalculus} alt="Logo" />
+            <ImageZoom src={sphereVolCalculus} name="Calcul du volume par intégration"/>
             <p>Notons S la surface du cercle</p>
             <MathJaxDisplay toShow={sX}/>
             <MathJaxDisplay toShow={circleAreaX}/>
@@ -126,6 +127,9 @@ const LaSphere = () => {
                 On a alors pour la sphère complète :
             </p>
             <MathJaxDisplay toShow={circleVol}/>
+            <Container className="Focus">
+               <MathJaxDisplay toShow={circleVolR}/>
+            </Container>
 
             <p className="Title1">Calcul de la surface par intégration</p>
             <p>
@@ -134,7 +138,7 @@ const LaSphere = () => {
                 {"\n"}
                 On prendra non plus la surface du cercle mais son périmètre
             </p>
-            <img src={sphereAreaCalculus} alt="Logo" />
+            <ImageZoom src={sphereAreaCalculus} name="Calcul de la surface par intégration"/>
             <p>Notons P le périmètre du cercle </p>
             <MathJaxDisplay toShow={pCercle}/>
             <MathJaxDisplay toShow={circlePerimX}/>
@@ -169,6 +173,9 @@ const LaSphere = () => {
             <MathJaxDisplay toShow={circleDemiArea13}/>
             <p>En enfin</p>
             <MathJaxDisplay toShow={circleArea}/>
+            <Container className="Focus">
+                <MathJaxDisplay toShow={circleAreaR}/>
+            </Container>
             <p>Youpi !!!</p>
         </>
     )

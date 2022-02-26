@@ -12,7 +12,7 @@ import PDFViewerPage from '../pdf-viewer/PDFViewerPage';
 import './Nav.css';
 import './Header.css';
 
-const Header = ({ pdfItems, setComponent }) => {
+const Header = ({ pdfItems, setComponent, hide }) => {
 
     const [showToggle, setShowToggle] = React.useState(false);
 
@@ -27,7 +27,7 @@ const Header = ({ pdfItems, setComponent }) => {
 
     return (
             <Navbar 
-                className="CustomNav CustomHeader" 
+                className={`CustomNav CustomHeader ${hide ? "Hidden" : ''}`}
                 fixed="top" 
                 expanded={showToggle}
                 onToggle={() => {

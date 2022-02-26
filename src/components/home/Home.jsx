@@ -1,7 +1,6 @@
 import { Container, Row, Col } from 'react-bootstrap';
 import MathJaxDisplay from '../mathjax-display/MathJaxDisplay';
 import buildFunctionsExpressions from './buildFunctionsExpressions';
-import initDimensions from '../immutable/initDimensions';
 import './Home.css';
 
 const Home = () => {

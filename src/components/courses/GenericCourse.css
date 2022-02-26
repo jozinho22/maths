@@ -4,11 +4,6 @@
     width: 80%;
 }
 
-/* @media (min-width: 360px) {
-   .ProgrammationBasicsContainer {
-    } 
-} */
-
 .CoursesContainer a {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
@@ -23,11 +18,24 @@
     font-size: small;
 }
 
+.ZoomContainer {
+    position: relative;
+}
+
 .CoursesContainer img {
-    width: 90%;
-    margin: 0 auto;
-    padding: 20px;
-    border-radius: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.ZoomContainer img {
+    width: 100%;
+    cursor: pointer;
+}
+
+.ZoomContainer .OnZoom img {
+    width: 200%;
+    position: relative;
+    right: 50%;
 }
 
 @media (min-width: 768px) {
@@ -35,7 +43,14 @@
        font-size: medium;  
     } 
     .CoursesContainer img {
-        width: 60%;
+        border-radius: 40px;
+    }
+    .ZoomContainer img {
+        width: 40%;
+    }
+    .ZoomContainer .OnZoom img {
+        width: 80%;
+        right: 0;
     }
 }
 
@@ -63,3 +78,4 @@
     border-color: var(--front-color);
     width: 50%;
 }
+

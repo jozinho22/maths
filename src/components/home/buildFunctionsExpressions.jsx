@@ -1,3 +1,5 @@
+import getWidth from '../immutable/getWidth';
+
 const buildFunctionsExpressions = () => {
 
     var dLnx = "\\(\\frac{d(\\ln{x})}{dx} = \\frac{1}{x}\\)";
@@ -32,9 +34,7 @@ const buildFunctionsExpressions = () => {
     var lnATimesB = "\\(ln(ab) = ln(a) + ln(b) \\)";
     var sigmaN = "\\(\\Sigma_{n=1}^{\\infty} n = \\frac{n(n+1)}{2}\\)";
 
-    var w = getComputedStyle(document.body).getPropertyValue('width');
-    var wSliced = w.slice(0, w.length - 2);
-    var wInNumbers = parseInt(wSliced);
+    var width = getWidth();
 
     var listEqu = [];
     var k = 0;
@@ -183,10 +183,8 @@ const buildFunctionsExpressions = () => {
         return array;
     }
 
-console.log(wInNumbers)
-console.log(listEqu.length)
-    return wInNumbers < 500 ? shuffle(listEqu).slice(0, 10) 
-        : wInNumbers < 1000 ? shuffle(listEqu).slice(0, 20) 
+    return width < 500 ? shuffle(listEqu).slice(0, 10) 
+        : width < 1000 ? shuffle(listEqu).slice(0, 20) 
             : shuffle(listEqu).slice(0, 30);
 
 }

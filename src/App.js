@@ -9,8 +9,9 @@ import './App.css';
 
 import { Container } from 'react-bootstrap';
 
-import ThemeContext from './components/context/ThemeContext';
 import FontContext from './components/context/FontContext';
+import ThemeContext from './components/context/ThemeContext';
+import PlayModeContext from './components/context/PlayModeContext';
 
 import pdfResourceBuilder from './components/pdf-viewer/pdfResourceBuilder';
 import initDimensions from './components/immutable/initDimensions';
@@ -19,26 +20,31 @@ import Header from './components/immutable/Header';
 import Home from './components/home/Home';
 import LaProgrammation from './components/courses/prog/LaProgrammation';
 import LesFormes from './components/courses/shapes/LesFormes';
+import LeCercle from './components/courses/shapes/chapters/LeCercle';
+
 import LeProduitEnCroix from './components/courses/cross-product/LeProduitEnCroix';
 
 import Footer from './components/immutable/Footer';
 
 function App() {
 
+    const [font, setFont] = React.useState("Dragons");
+    const [playMode, setPlayMode] = React.useState(false);
     const [theme, setTheme] = React.useState("Brazil");
 
     const themeContext = {
         theme: theme,
         updateTheme: setTheme
-    };
-
-    const [font, setFont] = React.useState("Dragons");
-
+    }
+    const playModeContext = {
+        playMode: playMode,
+        updatePlayMode: setPlayMode
+    }
     const fontContext = {
         font: font,
         updateFont: setFont
-    };
-
+    }
+   
     const [component, setComponent] = React.useState( 
         process.env.NODE_ENV === 'development' ? 
             <Home /> 
@@ -52,21 +58,25 @@ function App() {
     }, []);
 
     return ( 
-        <div className = "App" >
-            <ThemeContext.Provider value = {themeContext} >
+        <div className = "App" >     
             <FontContext.Provider value = {fontContext} >
+            <PlayModeContext.Provider value = {playModeContext} >
+            <ThemeContext.Provider value = {themeContext} >
                 <div className = {`${theme} ${font}`} >
                     <Header 
                         pdfItems = {pdfItems}
-                        setComponent = {setComponent} /> 
-                    <Container className = "RelativeContainer" > 
+                        setComponent = {setComponent}
+                        hide={playMode} /> 
+                    <Container className = {`RelativeContainer ${playMode ? "PlayMode" : ''}`} > 
                         {component} 
                     </Container> 
                     <Footer 
-                        setComponent = {setComponent} /> 
+                        setComponent = {setComponent}
+                        hide={playMode} /> 
                 </div> 
-            </FontContext.Provider> 
             </ThemeContext.Provider> 
+            </PlayModeContext.Provider> 
+            </FontContext.Provider> 
         </div>
     );
 }
