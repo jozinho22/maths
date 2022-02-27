@@ -1,6 +1,11 @@
+.Demo mjx-container {
+    text-align: left !important;
+}
+
 mjx-math {
     font-size: medium !important;
     margin: 0px;
+    text-size-adjust: auto;
 }
 
 @media (min-width: 768px) {
@@ -31,4 +36,9 @@ mjx-math {
     color: var(--red-color);
 }
 
+.MathJaxInline {
+    width: fit-content;
+    word-wrap: break-word;
+    block-size: fit-content;
+}
 

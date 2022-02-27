@@ -2,7 +2,7 @@ import { MathJax, MathJaxContext } from "better-react-mathjax";
 import { Container } from 'react-bootstrap';
 
 import './MathJaxDisplay.css';
-const MathJaxDisplay = ({toShow, demo, color}) => {
+const MathJaxInline = ({toShow}) => {
 
     const config =  {
                         loader: { load: ["[tex]/html"] },
@@ -14,14 +14,12 @@ const MathJaxDisplay = ({toShow, demo, color}) => {
                     }
 
     return (
-        <Container className={`MathJaxDisplayContainer ${demo ? "Demo": ''} ${color ? color + "MathJaxText" : '' }`}>      
-            <MathJaxContext config={config}>
-                <MathJax dynamic hideUntilTypeset={ "every" } >
+            <MathJaxContext className="MathJaxInline" config={config}>
+                <MathJax dynamic hideUntilTypeset={ "every" } inline >
                     {toShow}
                 </MathJax>
             </MathJaxContext>
-        </Container>
     );
 }
 
-export default MathJaxDisplay;
+export default MathJaxInline;
