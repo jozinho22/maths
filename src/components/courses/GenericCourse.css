@@ -76,6 +76,7 @@
     border-width: 1px;
     border-style: solid;
     border-color: var(--front-color);
-    width: 50%;
+    width: fit-content;
+    margin-bottom: 30px;
 }
 

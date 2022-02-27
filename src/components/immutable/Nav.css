@@ -42,6 +42,14 @@
   text-align: center;
 }
 
+.CustomNav .dropdown-item:hover {
+  background-color : var(--navbar-hover-color);
+}
+
+.CustomNav .dropdown-item:focus {
+  background-color : var(--navbar-hover-color);
+}
+
 @media (min-width: 768px) {
   .CustomNav .dropdown-item {
     font-size: small;

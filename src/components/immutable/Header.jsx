@@ -1,7 +1,8 @@
 import React from 'react';
 import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
+import MathJaxInline from '../mathjax-display/MathJaxInline';
 import Home from '../home/Home';
-import Programmation from '../courses/prog/LaProgrammation';
+import LeNombrePi from '../courses/pi/LeNombrePi';
 import Shapes from '../courses/shapes/LesFormes';
 import UsualFunctions from '../usual-functions/UsualFunctions';
 import LeProduitEnCroix from '../courses/cross-product/LeProduitEnCroix';
@@ -44,12 +45,12 @@ const Header = ({ pdfItems, setComponent, hide }) => {
                 <Navbar.Collapse id="responsive-navbar-nav" >
                     <Nav>
                         <NavDropdown title="Cours/exercices" id="basic-nav-dropdown">
-                             {/* <NavDropdown.Item 
+                            <NavDropdown.Item 
                                 onClick={() => {
-                                    goTo(<Programmation />);
+                                    goTo(<LeNombrePi />);
                                 }} >
-                                Bases de la programmation
-                            </NavDropdown.Item>  */} 
+                                Le nombre <MathJaxInline toShow={"$ \\pi $"} />
+                            </NavDropdown.Item>   
                             <NavDropdown.Item 
                                 onClick={() => {
                                     goTo(<Shapes />);

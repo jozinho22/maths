@@ -94,6 +94,10 @@ const LeProduitEnCroix = () => {
         setShowAnswers(showAnswersSlice);
     }
 
+    React.useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
     return (
         <>
             <p className="Title">La règle de trois</p>

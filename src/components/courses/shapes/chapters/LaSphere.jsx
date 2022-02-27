@@ -7,6 +7,7 @@ import sphereVolCalculus from '../assets/sphereVolCalculus.png';
 import sphereAreaCalculus from '../assets/sphereAreaCalculus.png';
 
 import MathJaxDisplay from '../../../mathjax-display/MathJaxDisplay';
+import MathJaxInline from '../../../mathjax-display/MathJaxInline';
 
 const LaSphere = () => {
 
@@ -94,85 +95,84 @@ const LaSphere = () => {
             </p>
             <ImageZoom src={sphereVolCalculus} name="Calcul du volume par intégration"/>
             <p>Notons S la surface du cercle</p>
-            <MathJaxDisplay toShow={sX}/>
-            <MathJaxDisplay toShow={circleAreaX}/>
+            <MathJaxDisplay toShow={sX} demo={true} />
+            <MathJaxDisplay toShow={circleAreaX} demo={true} />
             <p>
-                Exprimons tout d'abord x en fonction de y.
+                Exprimons tout d'abord x en fonction de <MathJaxInline toShow="$y$" />.
                 {"\n"}
                 On a avec le théorème de Pythagore:
             </p>
-            <MathJaxDisplay toShow={pyth}/>
-            <MathJaxDisplay toShow={rfH}/>
+            <MathJaxDisplay toShow={pyth} demo={true} />
+            <MathJaxDisplay toShow={rfH} demo={true} />
             <p>
-                Soit la nouvelle surface du cercle en fonction de y
+                Soit la nouvelle surface du cercle en fonction de <MathJaxInline toShow="$y$" />
             </p>
-            <MathJaxDisplay toShow={circleAreaY}/>
-            <MathJaxDisplay toShow={circleAreaY2}/>
+            <MathJaxDisplay toShow={circleAreaY} demo={true} />
+            <MathJaxDisplay toShow={circleAreaY2} demo={true} />
             <p>
-                On va maintenant intégrer cette surface sur l'axe y, en ajoutant tous éléments dv jusque R.
-                {"\n"}Notons V le volume de la sphère
+                On va maintenant intégrer cette surface sur l'axe <MathJaxInline toShow="$y$" />, en ajoutant tous éléments <MathJaxInline toShow="$dV$" /> jusque <MathJaxInline toShow="$R$" />.
+                {"\n"}Notons <MathJaxInline toShow="$V$" /> le volume de la sphère
             </p>
-            <MathJaxDisplay toShow={dVsphere}/>
-            <MathJaxDisplay toShow={dV}/>
-            <MathJaxDisplay toShow={intDv}/>
-            <MathJaxDisplay toShow={circleDemiVol}/>
-            <MathJaxDisplay toShow={circleDemiVol2}/>
-            <p>Afin de remplir la demi-sphère, on va intégrer sur toute la longueur R</p>
-            <MathJaxDisplay toShow={circleDemiVol3}/>
-            <MathJaxDisplay toShow={circleDemiVol4}/>
-            <MathJaxDisplay toShow={circleDemiVol5}/>
-            <MathJaxDisplay toShow={circleDemiVol6}/>
-            <MathJaxDisplay toShow={circleDemiVol7}/>
+            <MathJaxDisplay toShow={dVsphere} demo={true} />
+            <MathJaxDisplay toShow={dV} demo={true} />
+            <MathJaxDisplay toShow={intDv} demo={true} />
+            <MathJaxDisplay toShow={circleDemiVol} demo={true} />
+            <MathJaxDisplay toShow={circleDemiVol2} demo={true} />
+            <p>Afin de remplir la demi-sphère, on va intégrer sur toute la longueur <MathJaxInline toShow="$R$" /></p>
+            <MathJaxDisplay toShow={circleDemiVol3} demo={true} />
+            <MathJaxDisplay toShow={circleDemiVol4} demo={true} />
+            <MathJaxDisplay toShow={circleDemiVol5} demo={true} />
+            <MathJaxDisplay toShow={circleDemiVol6} demo={true} />
+            <MathJaxDisplay toShow={circleDemiVol7} demo={true} />
             <p>
                 On a alors pour la sphère complète :
             </p>
-            <MathJaxDisplay toShow={circleVol}/>
+            <MathJaxDisplay toShow={circleVol} demo={true} />
             <Container className="Focus">
                <MathJaxDisplay toShow={circleVolR}/>
             </Container>
 
             <p className="Title1">Calcul de la surface par intégration</p>
             <p>
-                {"\n"}{"\n"}{"\n"}
                 On peut faire la même chose pour calculer la surface.
                 {"\n"}
                 On prendra non plus la surface du cercle mais son périmètre
             </p>
             <ImageZoom src={sphereAreaCalculus} name="Calcul de la surface par intégration"/>
             <p>Notons P le périmètre du cercle </p>
-            <MathJaxDisplay toShow={pCercle}/>
-            <MathJaxDisplay toShow={circlePerimX}/>
-            <MathJaxDisplay toShow={circlePerimY}/>
+            <MathJaxDisplay toShow={pCercle} demo={true} />
+            <MathJaxDisplay toShow={circlePerimX} demo={true} />
+            <MathJaxDisplay toShow={circlePerimY} demo={true} />
             <p>
-                Cette fois, nous allons intégrer le périmètre sur une distance de l.
+                Cette fois, nous allons intégrer le périmètre sur une distance de <MathJaxInline toShow="$l$" />.
             </p>
             <p>Notons la demi-sphère comme ceci</p>
-            <MathJaxDisplay toShow={dSdemiSphere}/>
+            <MathJaxDisplay toShow={dSdemiSphere} demo={true} />
             <p>Soit</p>
-            <MathJaxDisplay toShow={dS}/>
-            <MathJaxDisplay toShow={intDS}/>
-            <MathJaxDisplay toShow={circleDemiArea}/>
-            <MathJaxDisplay toShow={circleDemiArea2}/>
+            <MathJaxDisplay toShow={dS} demo={true} />
+            <MathJaxDisplay toShow={intDS} demo={true} />
+            <MathJaxDisplay toShow={circleDemiArea} demo={true} />
+            <MathJaxDisplay toShow={circleDemiArea2} demo={true} />
             <p>On va poser</p>
-            <MathJaxDisplay toShow={lfTheta}/>
+            <MathJaxDisplay toShow={lfTheta} demo={true} />
             <p>Soit</p>
-            <MathJaxDisplay toShow={dlfTheta}/>
+            <MathJaxDisplay toShow={dlfTheta} demo={true} />
             <p>De même, on sait que</p>
-            <MathJaxDisplay toShow={yfTheta}/>
+            <MathJaxDisplay toShow={yfTheta} demo={true} />
             <p>Donc on remplace dans l'équation tel que</p>
-            <MathJaxDisplay toShow={circleDemiArea4}/>
-            <p>On sort R vu que c'est une constante</p>
-            <MathJaxDisplay toShow={circleDemiArea5}/>
-            <MathJaxDisplay toShow={circleDemiArea6}/>
-            <MathJaxDisplay toShow={circleDemiArea7}/>
-            <MathJaxDisplay toShow={circleDemiArea8}/>
-            <MathJaxDisplay toShow={circleDemiArea9}/>
-            <MathJaxDisplay toShow={circleDemiArea10}/>
-            <MathJaxDisplay toShow={circleDemiArea11}/>
-            <MathJaxDisplay toShow={circleDemiArea12}/>
-            <MathJaxDisplay toShow={circleDemiArea13}/>
+            <MathJaxDisplay toShow={circleDemiArea4} demo={true} />
+            <p>On sort <MathJaxInline toShow="$R$" /> vu que c'est une constante</p>
+            <MathJaxDisplay toShow={circleDemiArea5} demo={true} />
+            <MathJaxDisplay toShow={circleDemiArea6} demo={true} />
+            <MathJaxDisplay toShow={circleDemiArea7} demo={true} />
+            <MathJaxDisplay toShow={circleDemiArea8} demo={true} />
+            <MathJaxDisplay toShow={circleDemiArea9} demo={true} />
+            <MathJaxDisplay toShow={circleDemiArea10} demo={true} />
+            <MathJaxDisplay toShow={circleDemiArea11} demo={true} />
+            <MathJaxDisplay toShow={circleDemiArea12} demo={true} />
+            <MathJaxDisplay toShow={circleDemiArea13} demo={true} />
             <p>En enfin</p>
-            <MathJaxDisplay toShow={circleArea}/>
+            <MathJaxDisplay toShow={circleArea} demo={true} />
             <Container className="Focus">
                 <MathJaxDisplay toShow={circleAreaR}/>
             </Container>

@@ -24,6 +24,7 @@
 
     color: var(--dark-color); 
     --navbar-color: var(--green-color);
+    --navbar-hover-color: var(--green-hover-color);
     --back-color: var(--grey-light-color);
     --front-color: var(--red-color);
     --simple-text-color: var(--dark-color);
@@ -37,6 +38,7 @@
 
     color: var(--dark-color); 
     --navbar-color: var(--green-color);
+    --navbar-hover-color: var(--green-hover-color);
     --back-color: var(--yellow-color);
     --front-color: var(--blue-color);
     --simple-text-color: var(--dark-color);
@@ -52,6 +54,7 @@
 
     color: var(--grey-color); 
     --navbar-color: var(--dark-color);
+    --navbar-hover-color: var(--grey-light-color);
     --back-color: var(--dark-color);
     --front-color: var(--grey-dark-color);
     --simple-text-color: var(--grey-color);
@@ -65,6 +68,7 @@
 
     color: var(--grey-color); 
     --navbar-color: var(--dark-color);
+    --navbar-hover-color: var(--grey-light-color);
     --back-color: var(--yellow-color);
     --front-color: var(--red-color);
     --simple-text-color: var(--dark-color);
@@ -78,6 +82,7 @@
 
     color: var(--dark-color); 
     --navbar-color: var(--blue-color);
+    --navbar-hover-color: var(--blue-hover-color);
     --back-color: var(--grey-light-color);
     --front-color: var(--red-color);
     --simple-text-color: var(--dark-color);
@@ -91,6 +96,7 @@
 
     color: var(--front-color); 
     --navbar-color: var(--green-color);
+    --navbar-hover-color: var(--green-hover-color);
     --back-color: var(--yellow-color);
     --front-color: var(--red-color);
     --simple-text-color: var(--dark-color);
