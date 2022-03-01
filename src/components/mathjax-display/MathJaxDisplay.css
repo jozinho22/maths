@@ -1,9 +1,5 @@
-.Demo mjx-container {
-    text-align: left !important;
-}
-
 mjx-math {
-    font-size: medium !important;
+    font-size: small !important;
     margin: 0px;
     text-size-adjust: auto;
 }
@@ -17,6 +13,17 @@ mjx-math {
 @media (min-width: 1268px) {
     mjx-math {
         font-size: x-large !important;    
+    }
+}
+
+.Demo mjx-container {
+    text-align: left !important;
+    margin-left: -25px !important;
+}
+
+@media (min-width: 450px) {
+      .Demo mjx-container {
+         margin-left: 0px;
     }
 }
 

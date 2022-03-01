@@ -5,7 +5,6 @@ import Alert from '../alert/Alert';
 import { updateAlert, reInitAlert } from '../alert/alertFunctions';
 
 import './TablesTestQuestionDisplay.css';
-import CustomLogger from '../general-content/CustomLogger';
 
 const TablesTestQuestionDisplay = 
         ({ questions, count, next, user, setUser}) => {
@@ -168,7 +167,7 @@ const TablesTestQuestionDisplay =
 
     return (
         <>
-            <Timer className ="Timer"
+            <Timer 
                 maxTime={maxTime}
                 secondes={secondes}
                 setSecondes={setSecondes} 

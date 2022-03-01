@@ -1,23 +1,20 @@
 .AnswersResults {
     text-align: center;
-    width : 50%;
     font-size: x-small;
 }
 
-.GoodAnswerToDisplay {
-    text-align: center;
+.GoodAnswer {
     color: var(--green-color);
-    font-size: x-small;
 }
 
 @media (min-width: 360px) {
-    .AnswersResults, .GoodAnswerToDisplay {
+    .AnswersResults, .GoodAnswer {
         font-size: small;
     }
 }
 
 @media (min-width: 768px) {
-    .AnswersResults, .GoodAnswerToDisplay {
+    .AnswersResults, .GoodAnswer {
         font-size: large;
     }
 }
