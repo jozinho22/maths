@@ -18,9 +18,10 @@ const TablesTestResults = ({questions,
                 <Table className="TablesTestResults">
                     <thead>
                         <tr>
+                            {/* <th>Question</th>
                             <th>Vous avez répondu</th>
                             <th>Résultat</th>
-                            <th>La bonne réponse</th>
+                            <th>La bonne réponse</th> */}
                         </tr>
                     </thead>
                     <tbody>

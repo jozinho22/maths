@@ -65,8 +65,8 @@ const LeCube = () => {
 
             <p className="Title1">Calcul de la surface </p>
             <p>
-                Étant donné que le cube est un volume, on obtient cinq carrés de plus
-                {"\n"}Un derrière et quatre sur les côtés, on a donc
+                Étant donné que le cube est un volume, on obtient cinq carrés de plus.
+                {"\n"}Un derrière et quatre sur les côtés, on a donc :
             </p>
             <Container className="Focus">
                 <MathJaxDisplay toShow={sCube}/>

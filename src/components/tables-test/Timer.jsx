@@ -4,7 +4,7 @@ const Timer = ({maxTime, secondes, setSecondes, minutes, setMinutes, setEndTimer
 
     React.useEffect(()=>{
 
-        let myInterval = setInterval(() => {
+ /*        let myInterval = setInterval(() => {
 
             if (secondes > 0) {
                 setSecondes(secondes - 1);
@@ -23,7 +23,7 @@ const Timer = ({maxTime, secondes, setSecondes, minutes, setMinutes, setEndTimer
 
         return () => {
             clearInterval(myInterval);
-        };
+        }; */
     });
 
     return (

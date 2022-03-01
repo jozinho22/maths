@@ -27,15 +27,22 @@
     margin-bottom: 20px;
 }
 
+.ZoomContainer {
+    padding-bottom: 10px;
+}
+
 .ZoomContainer img {
     width: 100%;
-    cursor: pointer;
+}
+
+.ZoomContainer figcaption {
+    text-decoration: underline;
 }
 
 .ZoomContainer .OnZoom img {
-    width: 200%;
+    width: 150%;
     position: relative;
-    right: 50%;
+    right: 25%;
 }
 
 @media (min-width: 768px) {
@@ -43,15 +50,30 @@
        font-size: medium;  
     } 
     .CoursesContainer img {
-        border-radius: 40px;
+        border-radius: 10px;
     }
     .ZoomContainer img {
-        width: 40%;
+        width: 60%;
     }
     .ZoomContainer .OnZoom img {
         width: 80%;
         right: 0;
     }
+}
+
+@media (min-width: 1268px) {
+    .ZoomContainer img {
+        width: 40%;
+    }
+}
+
+.ZoomIcon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-150%, 150%);
+    width: 20px;
+    height: 20px;
 }
 
 @media (min-width: 1268px) {

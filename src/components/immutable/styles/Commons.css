@@ -3,7 +3,7 @@
     padding-top: calc(var(--customheader-height));
     padding-bottom: calc(var(--customfooter-height) + 20px); 
     min-height: 100vh;
-    font-size: xx-small;
+    font-size: x-small;
 }
 
 .RelativeContainer.PlayMode {

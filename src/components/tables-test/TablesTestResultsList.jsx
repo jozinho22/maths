@@ -7,13 +7,14 @@ import './TablesTestResultsList.css';
 
 const TablesTestResultsList = ({ question, answer }) => {
 
-    var answerToShow = question.enounce;
-    var goodAnswerToShow = question.goodAnswer;
-    
+console.log(answer)
     return (
             <tr>
                 <td className="AnswersResults">
-                    {answerToShow} 
+                    {question.enounce} 
+                </td>
+                <td className="AnswersResults">
+                    {answer.input} 
                 </td>
                 <td>
                 {
@@ -25,8 +26,8 @@ const TablesTestResultsList = ({ question, answer }) => {
                                             :  <GiCrossMark className="WrongIcon Icon" />
                 } 
                 </td>
-                <td className="GoodAnswerToDisplay">
-                    {goodAnswerToShow}
+                <td className="AnswersResults GoodAnswer">
+                    {question.goodAnswer}
                 </td>
             </tr>
     );

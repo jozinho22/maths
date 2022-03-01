@@ -64,10 +64,10 @@ const LeNombrePi = () => {
     var d2bis = "\\( d^2 = \\frac{c^2}{4} + \\left(1 -\\frac{1}{2} \\sqrt{ 2 + \\sqrt{2 + \\sqrt{2}}} \\right)^2 \\)"
     var d3 = "\\( d^2 = \\frac{2 - \\sqrt{2}}{4} + 1 - 2 \\times \\frac{1}{2} \\sqrt{ 2 + \\sqrt{2 + \\sqrt{2}}} + \\frac{ 2 + \\sqrt{2}}{4}  \\)"
     var d4 = "\\( d = \\sqrt{2 - \\sqrt{ 2 + \\sqrt{2 + \\sqrt{2}}}} \\)"
-    var pi16d2 = "\\( \\pi \\approx 16\\sqrt{2 - \\sqrt{ 2 + \\sqrt{2 + \\sqrt{2}}}} \\)"
+    var pi16d2 = "\\( \\pi \\approx 16\\sqrt{2 - \\sqrt{ 2 + \\sqrt{2 + \\sqrt{2} }}} \\)"
     var pi16dR = "\\( \\pi \\approx 3,13 \\)"
 
-    var piG = "\\( \\pi = 2^{n+1} \\sqrt{2 - \\sqrt{ 2 + \\sqrt{2 + sqrt{ 2 + ...etc.}}}} \\)"
+    var piG = "\\( \\pi = 2^{n+1} \\sqrt{2 - \\sqrt{ 2 + \\sqrt{2 + \\sqrt{ 2 + ...etc.}}}} \\)"
 
     React.useEffect(() => {
         window.scrollTo(0, 0);
@@ -76,7 +76,7 @@ const LeNombrePi = () => {
     return (
 
         <>
-            <p className="Title">Le nombre <MathJaxInline toShow={"$ \\pi $"} /></p>
+            <p className="Title">Le nombre π</p>
             <Container className="CoursesContainer">    
                 <p>Le nombre <MathJaxInline toShow={"$ \\pi $"} /> (pi), aussi appelée constante d'Archimède, est un nombre qui permet de mesurer le périmètre ou l'aire d'un cercle.</p>
                 
@@ -98,9 +98,10 @@ const LeNombrePi = () => {
                  <p>Soit</p>
                 <MathJaxDisplay toShow={piS} />
                 
-                <p>C'est l'une des constantes les plus importantes des mathématiques, car on la retrouve impliquée dans de nombreuses formules</p>
+                <p>C'est l'une des constantes les plus importantes des mathématiques, car on la retrouve impliquée dans de nombreuses formules.</p>
                 <p>
-                    Sa valeur approchée est de <MathJaxInline toShow="$ 3,14116...etc $" /> . C'est le demi-périmètre d'un cercle de rayon <MathJaxInline toShow="$ R=1 $" />.
+                    Sa valeur approchée est de <MathJaxInline toShow="$ 3,14116...etc $" /> . 
+                    {"\n"}C'est le demi-périmètre d'un cercle de rayon <MathJaxInline toShow="$ R=1 $" />.
                     {"\n"}En revanche, c'est un nombre irrationnel donc on peut le calculer avec une précision à l'infini !
                 </p>
                 <ImageZoom src={circlePi} name="Calcul de Pi"/>
@@ -115,32 +116,28 @@ const LeNombrePi = () => {
                 </p>
 
                 <ImageZoom src={circlePiCalculus} name="Calcul de Pi"/>
-
-                <p>Nous allons tenter de calculer le périmètre d'un demi-cercle de rayon <MathJaxInline toShow="$R = 1$" />. Car comme :</p>
+                <p>Nous avons vu plus haut que le périmètre d'un cercle peut s'écrire comme ceci : </p>
                 <MathJaxDisplay toShow={p} />
-                <p>dans notre cas</p>
+                <p>Mais lorsque <MathJaxInline toShow="$R = 1$" />, on a :</p>
                 <MathJaxDisplay toShow={pi1} />
 
                 <p className="Underline">Première approximation : par le côté du carré interne</p>
-                <p>Nous allons effetuer une première approximation assez grossière, nous allons dire que le périmètre du demi-cercle s'approche de deux côtés du carré additionnés.   </p>
+                <p>Nous allons effectuer une première approximation plutôt grossière, nous allons dire que le périmètre du demi-cercle s'approche de la longueur de deux côtés du carré interne additionnés.   </p>
                 <p>Soit</p>
-                
-                <MathJaxDisplay toShow={pi2a} demo={true} />
-
+                <MathJaxDisplay toShow={pi2a} demo={true} /><MathJaxInline toShow="$a$" />
                 <p>Pour cela, nous allons calculer <MathJaxInline toShow="$a$" />.
-                    {"\n"}Avec le théorème de Pythagore on a :
+                    {"\n"}Avec le théorème de Pythagore, on a :
                 </p>
                 <MathJaxDisplay toShow={a} demo={true} />
                 <MathJaxDisplay toShow={a2} demo={true} />
                 <p>Ce qui donne</p>
                 <MathJaxDisplay toShow={pi2a2} demo={true} />
                 <MathJaxDisplay toShow={pi2aR} demo={true} />
-
-                <p className="Underline">Deuxième approximation : par la base du triangle isocèle</p>
-
-                <p>Mais nous restons encore loin du but, prenons un segment plus proche du cercle, comme <MathJaxInline toShow="$b$" />.
-                    C'est la base du triangle isocèle formée par des rayons du cercle.
-                    {"\n"} Nous avions auparavant additioné deux longueurs <MathJaxInline toShow="$a$" />. Pour suivre la même longueur du demi-cercle, nous additionnerons 4 longueurs <MathJaxInline toShow="$b$" />.
+                <p>Mais nous restons encore loin du but, prenons un segment plus proche du cercle, comme <MathJaxInline toShow="$b$" />.</p>
+                
+                <p className="Underline"> Deuxième approximation : par la base du triangle isocèle</p>
+                <p> C'est la base du triangle isocèle formée par deux rayons du cercle (en rouge sur la figure).
+                    {"\n"} Nous avions auparavant additioné deux longueurs <MathJaxInline toShow="$a$" />. Pour suivre la même longueur du demi-cercle mais d'un peu plus près, nous additionnerons 4 longueurs <MathJaxInline toShow="$b$" />.
                 </p>
                 <MathJaxDisplay toShow={pi4b} demo={true} />
                 <p>Avec le même procédé, on calcule <MathJaxInline toShow="$b$" />
@@ -155,7 +152,7 @@ const LeNombrePi = () => {
                 <p>Ce qui donne</p>
                 <MathJaxDisplay toShow={pi4b2} demo={true} />
                 <MathJaxDisplay toShow={pi4bR} demo={true} />
-                <p>Nous commençons à nous approcher de 3,14. Continuons maintenant sur <MathJaxInline toShow="$b$" />, obtenue de la même façon que <MathJaxInline toShow="$b$" /> par rapport à <MathJaxInline toShow="$a$" />.</p>
+                <p>Nous commençons à nous approcher de 3,14. Continuons maintenant sur <MathJaxInline toShow="$c$" />, obtenue de la même façon que <MathJaxInline toShow="$b$" /> par rapport à <MathJaxInline toShow="$a$" />.</p>
                 
                 <p className="Underline">Troisième approximation : par la base du triangle isocèle suivant</p>
                 <MathJaxDisplay toShow={pi8c} demo={true} />
@@ -181,7 +178,7 @@ const LeNombrePi = () => {
                 <MathJaxDisplay toShow={pi8cR} demo={true} /> 
 
                 <p className="Underline">Quatrième approximation : par la base du triangle isocèle suivant</p>
-                <p>Continuons maintenant en imaginant une nouvelle longueur, <MathJaxInline toShow={"$d$"} /> trouvée par le même procédé que <MathJaxInline toShow="$b$" /> et <MathJaxInline toShow="$c$" /> </p>
+                <p>Continuons maintenant en imaginant une nouvelle longueur, <MathJaxInline toShow={"$d$"} /> (trop petite pour être dessinée), trouvée par le même procédé que <MathJaxInline toShow="$b$" /> et <MathJaxInline toShow="$c$" /> </p>
                 <MathJaxDisplay toShow={pi16d} demo={true} />
                 <MathJaxDisplay toShow={d} demo={true} />
                 <MathJaxDisplay toShow={d2} demo={true} />  
