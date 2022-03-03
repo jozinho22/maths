@@ -48,14 +48,14 @@ const LeCube = () => {
             <p className="Title1">Calcul du volume par intégration</p>
             <p>Intégrons notre volume à partir d'un côté pour voir si nosu retombons bien sur nos pattes</p>
             <ImageZoom src={squareVolCalculus} name="Calcul du volume par intégration"/>
-            <MathJaxDisplay toShow={sCarre} demo={true} />
-            <MathJaxDisplay toShow={vCube} demo={true} />
+            <MathJaxDisplay toShow={sCarre} demo />
+            <MathJaxDisplay toShow={vCube} demo />
             <p>
                 Comme on intégre sur p, la surface c² est une constante, donc on peut la sortir.
             </p>
-            <MathJaxDisplay toShow={vCube2} demo={true} />
-            <MathJaxDisplay toShow={vCube3} demo={true} />
-            <MathJaxDisplay toShow={vCube4} demo={true} />
+            <MathJaxDisplay toShow={vCube2} demo />
+            <MathJaxDisplay toShow={vCube3} demo />
+            <MathJaxDisplay toShow={vCube4} demo />
             <Container className="Focus">
                 <MathJaxDisplay toShow={vCube5}/>
             </Container>

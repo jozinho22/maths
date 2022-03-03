@@ -26,7 +26,7 @@ const buildFunctionsExpressions = () => {
     var circlePerim = "\\(P_{cercle} = 2\\pi r\\)"
     var cosAPlusB = "\\(cos(a+b) = cos(a)cos(b) - sin(a)sin(b)\\)"
     var dUdivV = "\\((\\frac{u}{v})' = \\frac{u' v - v' u}{v^2}\\)";
-    var dUplusV = "\\((u+v)' = u' + v' \\)";
+    var dUplusV = "\\( \\left(u+v \\right)' = u' + v' \\)";
     var dUV = "\\(\\left(uv\\right)' = u'v + v'u \\)";
     var phi2 = "\\(\\phi^2 = 2\\phi + 1\\)";
     var discrimant = "\\(\\Delta = b^2 -4c\\)";
@@ -183,7 +183,7 @@ const buildFunctionsExpressions = () => {
         return array;
     }
 
-    return width < 500 ? shuffle(listEqu).slice(0, 10) 
+    return width < 500 ? shuffle(listEqu).slice(0, 14) 
         : width < 1000 ? shuffle(listEqu).slice(0, 20) 
             : shuffle(listEqu).slice(0, 30);
 

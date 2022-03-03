@@ -24,8 +24,8 @@
 
 .ContactButton {
     text-align: center;
+    margin-top: 10px;
     margin-bottom: 0px;
-    margin-top: 0px;
 }
 
 @media (min-width: 768px) {

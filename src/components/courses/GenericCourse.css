@@ -37,6 +37,8 @@
 
 .ZoomContainer figcaption {
     text-decoration: underline;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: small;
 }
 
 .ZoomContainer .OnZoom img {
@@ -94,11 +96,11 @@
     color: var(--green-color);
 }
 
-.Focus{
+.Focus {
     border-width: 1px;
     border-style: solid;
     border-color: var(--front-color);
     width: fit-content;
     margin-bottom: 30px;
+    padding: 0 10px;
 }
-

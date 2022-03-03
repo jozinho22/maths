@@ -3,7 +3,7 @@ import { Container } from 'react-bootstrap';
 import { HiOutlineZoomIn } from 'react-icons/hi';
 import getWidth from '../immutable/getWidth';
 
-const ImageZoom = ( {src, name} ) => {
+const ImageZoom = ( {src, name, n} ) => {
 
     const [zoom, setZoom] = React.useState(false);
 
@@ -20,7 +20,7 @@ const ImageZoom = ( {src, name} ) => {
                                 alt={name}
                                 src= {src} 
                             />
-                            <figcaption>{name}</figcaption>
+                            <figcaption>{"figure " + n + " : " + name}</figcaption>
                         </figure>
                 </div>   
             </Container>

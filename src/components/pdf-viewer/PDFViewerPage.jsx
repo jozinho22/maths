@@ -11,6 +11,8 @@ import PlayModeContext from '../context/PlayModeContext'
 import getWidth from '../immutable/getWidth';
 import CustomSpinner from '../general-content/CustomSpinner';
 
+import { useSwipeable } from 'react-swipeable';
+
 import './PDFViewerPage.css';
 import './styles/Canevas.css';
 
@@ -29,6 +31,26 @@ const PDFViewerPage = ({ pdfItem }) => {
         const step = 5;
 
         const {playMode, updatePlayMode} = React.useContext(PlayModeContext);
+
+        const swipers = useSwipeable(
+            {
+                onSwipedRight: () =>  setPage(page - 1 > 0 ? page - 1 : 1),
+                onSwipedLeft: () =>  setPage(page + 1 > pages ? pages : page + 1)
+            }
+        );
+
+         // setup ref for your usage
+        const swipeRef = React.useRef();
+
+        const refPassthrough = (el) => {
+            // call useSwipeable ref prop with el
+            swipers.ref(el);
+
+            // set myRef el so you can access it yourself
+            swipeRef.current = el;
+        }
+
+        var mobile = getWidth() < 450;
 
         React.useEffect(() => {
             updatePlayMode(true);
@@ -87,7 +109,7 @@ const PDFViewerPage = ({ pdfItem }) => {
             }
 
             {
-                getWidth() > 450 ?
+                !mobile ?
                     <Container className="SwitchButton">
                         <BootstrapSwitchButton 
                             size="lg" 
@@ -123,25 +145,32 @@ const PDFViewerPage = ({ pdfItem }) => {
                 pageByPageDocument ?
                     <>
                         {
-                            !playMode ?
+                            !mobile ?
                                 <PaginationPageByPage
                                     page={page}
                                     pages={pages} 
                                     setPage={setPage} />
-                                    : <></>
+                                        : <></>
                         }
-                        <PDF 
-                            className="CustomCanevas"
-                            file={!withAnswers ? pdfItem.pdfFile : pdfItem.pdfFileWithAnswers}
-                            page={page}
-                            onDocumentComplete={pages => {
-                                setPage(beginIndex + 1);
-                                setPages(pages);
-                            }} />
-                        <PaginationPageByPage
-                            page={page}
-                            pages={pages} 
-                            setPage={setPage} />
+                        <div {...swipers} ref={refPassthrough} >
+                            <PDF 
+                                className="CustomCanevas"
+                                file={pdfItem.pdfFile}
+                                page={page}
+                                onDocumentComplete={pages => {
+                                    setPage(beginIndex + 1);
+                                    setPages(pages);
+                                }} />
+                        </div>   
+                        {
+                            !mobile ?
+                                <PaginationPageByPage
+                                    page={page}
+                                    pages={pages} 
+                                    setPage={setPage} />
+                                        : <></>
+                        }
+                        
                     </> :
 
                         <>
@@ -152,13 +181,13 @@ const PDFViewerPage = ({ pdfItem }) => {
                                 addPagesToList={addPagesToList} />
                             {
                                 pagesList.map(item => (
-                                <PDF 
-                                    key={item.id}
-                                    className="CustomCanevas"
-                                    file={!withAnswers ? pdfItem.pdfFile : pdfItem.pdfFileWithAnswers}
-                                    page={item.pageNumber}
-                                    onDocumentComplete={() => {
-                                    }} />
+                                    <PDF 
+                                        key={item.id}
+                                        className="CustomCanevas"
+                                        file={pdfItem.pdfFile}
+                                        page={item.pageNumber}
+                                        onDocumentComplete={() => {
+                                        }} />
                                 ))
                             }
                             <PaginationFullDocument 

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
 import MathJaxDisplay from '../../mathjax-display/MathJaxDisplay';
+import MathJaxInline from '../../mathjax-display/MathJaxInline';
 
 import '../GenericCourse.css'
 
@@ -54,9 +55,9 @@ const LeProduitEnCroix = () => {
     var answerExo2b2Results = "\\(x = 30,45 [euros]\\)";
 
 
-    const changeExp = (expPos, mirrorExpPos) => {
+    const changeOne = (expPos, mirrorExpPos) => {
 
-        function processChange(abcd, expPos, mirrorExpPos) {
+        function processChangeOne(abcd, expPos, mirrorExpPos) {
             let abcdSlice = {...abcd};
             let exp = abcdSlice[expPos[0]][expPos[1]];
             let mirrorExp = abcdSlice[mirrorExpPos[0]][mirrorExpPos[1]];
@@ -84,8 +85,25 @@ const LeProduitEnCroix = () => {
             }
         }
 
-        setABCD(processChange(abcd, expPos, mirrorExpPos));
-        setABCD2(processChange(abcd2, expPos, mirrorExpPos));
+        setABCD(processChangeOne(abcd, expPos, mirrorExpPos));
+        setABCD2(processChangeOne(abcd2, expPos, mirrorExpPos));
+    }
+
+    const invert = (expPos, mirrorExpPos) => {
+
+        function processInvert(abcd, expPos, mirrorExpPos) {
+            let abcdSlice = {...abcd};
+            let exp = abcdSlice[expPos[0]][expPos[1]];
+            let mirrorExp = abcdSlice[mirrorExpPos[0]][mirrorExpPos[1]];
+            
+            abcdSlice[expPos[0]][expPos[1]] = mirrorExp;
+            abcdSlice[mirrorExpPos[0]][mirrorExpPos[1]] = exp;
+            return abcdSlice;
+           
+            }
+
+        setABCD(processInvert(abcd, expPos, mirrorExpPos));
+        setABCD2(processInvert(abcd2, expPos, mirrorExpPos));
     }
 
     const showAnswer = (exoN) => {
@@ -108,69 +126,85 @@ const LeProduitEnCroix = () => {
                 </p>
                 <p className="Title1">a) Explication</p>
                 <p>
-                    Pour tout b ≠ 0 et d ≠ 0
+                    Pour tout <MathJaxInline toShow={"$a,b,c,d \\neq 0$"} />
                 </p>
                 <MathJaxDisplay toShow={abcdBase}/>
+                <p style={{color: "red"}}>Rappel : il est interdit de diviser par 0 !</p>
                 <p>
                     Le produit en croix nous dit que :
                 </p>
                 <MathJaxDisplay toShow={adEqubc}/>
                 <p>
-                    D'où la forme de croix.
-                    Car {"\n"} Les éléments [a,d] et [b,c] sont interchangeables à souhait :
+                    D'où la forme de croix car :
+                    {"\n"} Les éléments <MathJaxInline toShow={"$[a,d]$"} /> et <MathJaxInline toShow={"$[b,c]$"} /> sont interchangeables à souhait :
                 </p>
                 <Container className="Focus">
                     <MathJaxDisplay toShow={cross2}/>
                     <MathJaxDisplay toShow={cross}/>
                 </Container>
                 <Row>
-                    <Col>
+                    <Col xs={4}>
+                        <Button 
+                            className="DefaultButton OrangeButton"
+                            onClick={() => invert( [0,0], [0,1] )}>
+                            Inverser a et d
+                        </Button>
+                    </Col>
+                    <Col xs={4}>
                         <Button 
                             className="DefaultButton" 
-                            onClick={() => changeExp( [0,0], [0,1] )}>
+                            onClick={() => changeOne( [0,0], [0,1] )}>
                             Changer a
                         </Button>
                     </Col>
-                     <Col>
+                    <Col xs={4}>
                         <Button 
-                            className="DefaultButton" 
-                            onClick={() => changeExp( [1,1], [1,0] )}>
-                            Changer c
+                            className="DefaultButton"
+                            onClick={() => changeOne( [1,0], [1,1] )}>
+                            Changer b
                         </Button>
                     </Col>
                 </Row>
                 <Row>
-                    <Col>
+                    <Col xs={4}>
                         <Button 
-                            className="DefaultButton"
-                            onClick={() => changeExp( [1,0], [1,1] )}>
-                            Changer b
+                            className="DefaultButton OrangeButton"
+                            onClick={() => invert( [1,0], [1,1] )}>
+                            Inverser b et c
                         </Button>
                     </Col>
-                     <Col>
+                    <Col xs={4}>
+                        <Button 
+                            className="DefaultButton" 
+                            onClick={() => changeOne( [1,1], [1,0] )}>
+                            Changer c
+                        </Button>
+                    </Col>
+                    <Col xs={4}>
                         <Button 
                             className="DefaultButton"
-                            onClick={() => changeExp( [0,1], [0,0] )}>
+                            onClick={() => changeOne( [0,1], [0,0] )}>
                             Changer d
                         </Button>
                     </Col>
                 </Row>
-                <p>Dans ce cas, diviser chaque membre par a (ou multiplier par son inverse) revient à le transposer de l'autre côté, au dénominateur.</p>
+
+                <p>Dans ce cas, diviser chaque membre par  <MathJaxInline toShow={"$a$"} /> (ou multiplier par son inverse) revient à le transposer de l'autre côté, au dénominateur.</p>
                 <MathJaxDisplay toShow={abcdBase}/>
                 <MathJaxDisplay toShow={divByA}/>
                 <MathJaxDisplay toShow={divByAResult}/>
-                <p>De même, si je multiplie tout par d</p>
+                <p>De même, si je multiplie tout par <MathJaxInline toShow={"$d$"} /></p>
                 <MathJaxDisplay toShow={multByD}/>
                 <MathJaxDisplay toShow={multByDResults}/>
                 <p>
-                    On effectuant ces deux étapes, on a interchangé a et d.
-                    {"\n"}On peut faire de même avec b et c. D'où l'appellation de produit en croix.
+                    On effectuant ces deux étapes, on a interchangé <MathJaxInline toShow={"$a$"} /> et <MathJaxInline toShow={"$d$"} />.
+                    {"\n"}On peut faire de même avec <MathJaxInline toShow={"$b$"} /> et <MathJaxInline toShow={"$c$"} />. D'où l'appellation de produit en croix.
                 </p>
 
                 <p className="Title1">b) Démonstration</p>
                 <p>
                     Partons à nouveau de notre équation de départ.
-                    {"\n"} Pour tout b ≠ 0 et d ≠ 0
+                    {"\n"} Pour tout <MathJaxInline toShow={"$a,b,c,d \\neq 0$"} />
                 </p>
                 <MathJaxDisplay toShow={abcdBase}/>
                 <p>On multiplie les deux membres par le même nombre b</p>

@@ -27,6 +27,18 @@ mjx-math {
     }
 }
 
+.InfiniteFrac  mjx-container [size="s"] {
+    font-size: 100%;
+}
+
+.InfiniteFrac  mjx-container [size="s"] mjx-script{
+    font-size: 70%;
+}
+
+.InfiniteFrac  mjx-math {
+    line-height: 0.75;
+}
+
 .DefaultMathJaxText {
     color: var(--blue-color);
 }
