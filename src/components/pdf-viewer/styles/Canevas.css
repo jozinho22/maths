@@ -6,6 +6,7 @@ canvas {
 @media (min-width: 768px) {
     canvas {
         width: 80% !important;
+        padding: 10px;
     }
 }
 

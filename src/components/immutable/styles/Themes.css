@@ -7,7 +7,7 @@
     --grey-dark-color: rgb(77, 78, 78);
     --orange-color: rgb(167, 90, 27);
     --purple-color: rgb(179, 94, 187);
-    --red-color: rgb(179, 61, 61);
+    --red-color: rgb(202, 76, 76);
     --yellow-color: rgb(201, 193, 85);
     
     --blue-hover-color: rgb(54, 78, 131);
@@ -48,7 +48,7 @@
 .Darcula {
     /* Le seul à avoir un début différent...*/
     background: var(--back-color);
-    --links-color: var(--purple-color);
+    --links-color: var(--red-color);
     --button-text-color: var(--grey-light-color);
     --mirror-button-text-color: var(--grey-light-color);
 

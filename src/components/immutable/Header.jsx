@@ -77,7 +77,7 @@ const Header = ({ pdfItems, setComponent, hide }) => {
                                     onClick={() => {
                                         goTo(
                                             <PDFViewerPage 
-                                            pdfItem={findPdfItemById(pdfItem.id)} />
+                                                pdfItem={findPdfItemById(pdfItem.id)} />
                                         );
                                     }} >
                                     {pdfItem.title}

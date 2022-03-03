@@ -39,18 +39,6 @@
     }
 }
 
-.Timer {
-    position: relative;
-    margin-top: 35px;
-    height: 60px;
-}
-
-@media (min-width : 768px) {
-   .Timer {
-        margin-top: 10px;
-    }
-}
-
 .AnswerDisplay {
     width: 30%;
     text-align: center;
