@@ -9,6 +9,7 @@ import circlePiCalculus from './assets/circlePiCalculus.png';
 
 const LeNombrePi = () => {
 
+    var n = 0;
     var pCercle = "\\( P_{cercle} = 2\\pi R_{cercle} \\)"
     var p = "\\( P = 2\\pi R \\)"
     var piP = "\\(\\pi = \\frac{P} {2R} \\)"
@@ -67,7 +68,13 @@ const LeNombrePi = () => {
     var pi16d2 = "\\( \\pi \\approx 16\\sqrt{2 - \\sqrt{ 2 + \\sqrt{2 + \\sqrt{2} }}} \\)"
     var pi16dR = "\\( \\pi \\approx 3,13 \\)"
 
-    var piG = "\\( \\pi = 2^{n+1} \\sqrt{2 - \\sqrt{ 2 + \\sqrt{2 + \\sqrt{ 2 + ...etc.}}}} \\)"
+    var piG = "\\( \\pi = lim_{n \\to +\\infty} \\enspace 2^{n+1} \\sqrt{2 - \\underbrace {\\sqrt{ 2 + \\sqrt{2 + \\sqrt{ 2 + {...etc.}}}} }_\\text{n} }  \\)"
+
+    var approxPi1 = "\\( \\frac{\\pi}{4} = \\frac{1}{ 1 + \\frac{1^2}{ 3 + \\frac{2^2}{5 + \\frac{3^2}{7 + {...etc.} }}}} \\)"
+
+    var approxPi2 = "\\( \\frac{\\pi^2}{6} = \\frac{1}{1^2} + \\frac{1}{2^2} + \\frac{1}{3^2} + \\frac{1}{4^2} + {...etc.} \\)"
+
+    var approxPi3 = "\\( \\pi = \\int_{-1}^1 \\frac{dx}{\\sqrt{1 - x^2}} \\)"
 
     React.useEffect(() => {
         window.scrollTo(0, 0);
@@ -104,7 +111,7 @@ const LeNombrePi = () => {
                     {"\n"}C'est le demi-périmètre d'un cercle de rayon <MathJaxInline toShow="$ R=1 $" />.
                     {"\n"}En revanche, c'est un nombre irrationnel donc on peut le calculer avec une précision à l'infini !
                 </p>
-                <ImageZoom src={circlePi} name="Calcul de Pi"/>
+                <ImageZoom src={circlePi} name="Pi sur le demi-cercle de rayon R = 1" n={++n} />
 
                 <p>Mais comment fait-on pour calculer la valeur de <MathJaxInline toShow={"$ \\pi $"} /> soi même ? </p>
                 <p>En voici un exemple :</p>
@@ -115,7 +122,7 @@ const LeNombrePi = () => {
                     {"\n"}C'est une méthode qui a été développée par Archimède dans l'antiquité.
                 </p>
 
-                <ImageZoom src={circlePiCalculus} name="Calcul de Pi"/>
+                <ImageZoom src={circlePiCalculus} name="Calcul de Pi" n={++n} />
                 <p>Nous avons vu plus haut que le périmètre d'un cercle peut s'écrire comme ceci : </p>
                 <MathJaxDisplay toShow={p} />
                 <p>Mais lorsque <MathJaxInline toShow="$R = 1$" />, on a :</p>
@@ -124,85 +131,96 @@ const LeNombrePi = () => {
                 <p className="Underline">Première approximation : par le côté du carré interne</p>
                 <p>Nous allons effectuer une première approximation plutôt grossière, nous allons dire que le périmètre du demi-cercle s'approche de la longueur de deux côtés du carré interne additionnés.   </p>
                 <p>Soit</p>
-                <MathJaxDisplay toShow={pi2a} demo={true} /><MathJaxInline toShow="$a$" />
+                <MathJaxDisplay toShow={pi2a} demo />
                 <p>Pour cela, nous allons calculer <MathJaxInline toShow="$a$" />.
                     {"\n"}Avec le théorème de Pythagore, on a :
                 </p>
-                <MathJaxDisplay toShow={a} demo={true} />
-                <MathJaxDisplay toShow={a2} demo={true} />
+                <MathJaxDisplay toShow={a} demo />
+                <MathJaxDisplay toShow={a2} demo />
                 <p>Ce qui donne</p>
-                <MathJaxDisplay toShow={pi2a2} demo={true} />
-                <MathJaxDisplay toShow={pi2aR} demo={true} />
+                <MathJaxDisplay toShow={pi2a2} demo />
+                <MathJaxDisplay toShow={pi2aR} demo />
                 <p>Mais nous restons encore loin du but, prenons un segment plus proche du cercle, comme <MathJaxInline toShow="$b$" />.</p>
                 
                 <p className="Underline"> Deuxième approximation : par la base du triangle isocèle</p>
                 <p> C'est la base du triangle isocèle formée par deux rayons du cercle (en rouge sur la figure).
                     {"\n"} Nous avions auparavant additioné deux longueurs <MathJaxInline toShow="$a$" />. Pour suivre la même longueur du demi-cercle mais d'un peu plus près, nous additionnerons 4 longueurs <MathJaxInline toShow="$b$" />.
                 </p>
-                <MathJaxDisplay toShow={pi4b} demo={true} />
+                <MathJaxDisplay toShow={pi4b} demo />
                 <p>Avec le même procédé, on calcule <MathJaxInline toShow="$b$" />
                 </p>
-                <MathJaxDisplay toShow={b} demo={true} />
-                <MathJaxDisplay toShow={b2} demo={true} />            
-                <MathJaxDisplay toShow={b2bis} demo={true} />
-                <MathJaxDisplay toShow={b3} demo={true} />
-                <MathJaxDisplay toShow={b4} demo={true} />
-                <MathJaxDisplay toShow={b5} demo={true} />
-                <MathJaxDisplay toShow={b6} demo={true} />
+                <MathJaxDisplay toShow={b} demo />
+                <MathJaxDisplay toShow={b2} demo />            
+                <MathJaxDisplay toShow={b2bis} demo />
+                <MathJaxDisplay toShow={b3} demo />
+                <MathJaxDisplay toShow={b4} demo />
+                <MathJaxDisplay toShow={b5} demo />
+                <MathJaxDisplay toShow={b6} demo />
                 <p>Ce qui donne</p>
-                <MathJaxDisplay toShow={pi4b2} demo={true} />
-                <MathJaxDisplay toShow={pi4bR} demo={true} />
+                <MathJaxDisplay toShow={pi4b2} demo />
+                <MathJaxDisplay toShow={pi4bR} demo />
                 <p>Nous commençons à nous approcher de 3,14. Continuons maintenant sur <MathJaxInline toShow="$c$" />, obtenue de la même façon que <MathJaxInline toShow="$b$" /> par rapport à <MathJaxInline toShow="$a$" />.</p>
                 
                 <p className="Underline">Troisième approximation : par la base du triangle isocèle suivant</p>
-                <MathJaxDisplay toShow={pi8c} demo={true} />
-                <MathJaxDisplay toShow={c} demo={true} />
-                <MathJaxDisplay toShow={c2} demo={true} />  
+                <MathJaxDisplay toShow={pi8c} demo />
+                <MathJaxDisplay toShow={c} demo />
+                <MathJaxDisplay toShow={c2} demo />  
                 <p>Ici, il nous faut calculer d'abord la hauteur <MathJaxInline toShow="$h_b$" /></p>  
-                <MathJaxDisplay toShow={hb} demo={true} />   
-                <MathJaxDisplay toShow={hb2} demo={true} />   
-                <MathJaxDisplay toShow={hb3} demo={true} />   
-                <MathJaxDisplay toShow={hb4} demo={true} />   
-                <MathJaxDisplay toShow={hb5} demo={true} />  
-                <MathJaxDisplay toShow={hbR} demo={true} />  
+                <MathJaxDisplay toShow={hb} demo />   
+                <MathJaxDisplay toShow={hb2} demo />   
+                <MathJaxDisplay toShow={hb3} demo />   
+                <MathJaxDisplay toShow={hb4} demo />   
+                <MathJaxDisplay toShow={hb5} demo />  
+                <MathJaxDisplay toShow={hbR} demo />  
                 <p>Remplaçons maintenant par la valeur trouvée, nous avions</p>  
-                <MathJaxDisplay toShow={c2} demo={true} />  
+                <MathJaxDisplay toShow={c2} demo />  
                 <p>Soit</p>
-                <MathJaxDisplay toShow={c2bis} demo={true} />  
-                <MathJaxDisplay toShow={c3} demo={true} /> 
-                <MathJaxDisplay toShow={c4} demo={true} />  
-                <MathJaxDisplay toShow={c5} demo={true} /> 
-                <MathJaxDisplay toShow={c6} demo={true} /> 
+                <MathJaxDisplay toShow={c2bis} demo />  
+                <MathJaxDisplay toShow={c3} demo /> 
+                <MathJaxDisplay toShow={c4} demo />  
+                <MathJaxDisplay toShow={c5} demo /> 
+                <MathJaxDisplay toShow={c6} demo /> 
                 <p>Ce qui donne</p>
-                <MathJaxDisplay toShow={pi8c2} demo={true} /> 
-                <MathJaxDisplay toShow={pi8cR} demo={true} /> 
+                <MathJaxDisplay toShow={pi8c2} demo /> 
+                <MathJaxDisplay toShow={pi8cR} demo /> 
 
                 <p className="Underline">Quatrième approximation : par la base du triangle isocèle suivant</p>
                 <p>Continuons maintenant en imaginant une nouvelle longueur, <MathJaxInline toShow={"$d$"} /> (trop petite pour être dessinée), trouvée par le même procédé que <MathJaxInline toShow="$b$" /> et <MathJaxInline toShow="$c$" /> </p>
-                <MathJaxDisplay toShow={pi16d} demo={true} />
-                <MathJaxDisplay toShow={d} demo={true} />
-                <MathJaxDisplay toShow={d2} demo={true} />  
+                <MathJaxDisplay toShow={pi16d} demo />
+                <MathJaxDisplay toShow={d} demo />
+                <MathJaxDisplay toShow={d2} demo />  
                 <p>Ici, il nous faut calculer d'abord la hauteur <MathJaxInline toShow="$h_c$" /></p>  
-                <MathJaxDisplay toShow={hc} demo={true} />   
-                <MathJaxDisplay toShow={hc2} demo={true} />   
-                <MathJaxDisplay toShow={hc3} demo={true} />   
-                <MathJaxDisplay toShow={hcR} demo={true} />   
+                <MathJaxDisplay toShow={hc} demo />   
+                <MathJaxDisplay toShow={hc2} demo />   
+                <MathJaxDisplay toShow={hc3} demo />   
+                <MathJaxDisplay toShow={hcR} demo />   
                  <p>Remplaçons maintenant par la valeur trouvée, nous avions</p>  
-                <MathJaxDisplay toShow={d2} demo={true} />  
+                <MathJaxDisplay toShow={d2} demo />  
                 <p>Soit</p>
-                <MathJaxDisplay toShow={d2bis} demo={true} />  
-                <MathJaxDisplay toShow={d3} demo={true} />
-                <MathJaxDisplay toShow={d4} demo={true} />  
+                <MathJaxDisplay toShow={d2bis} demo />  
+                <MathJaxDisplay toShow={d3} demo />
+                <MathJaxDisplay toShow={d4} demo />  
                  <p>Ce qui donne</p>
-                <MathJaxDisplay toShow={pi16d2} demo={true} /> 
-                <MathJaxDisplay toShow={pi16dR} demo={true} /> 
+                <MathJaxDisplay toShow={pi16d2} demo /> 
+                <MathJaxDisplay toShow={pi16dR} demo /> 
 
                 <p className="Underline">Généralisation</p>
                 <p>Nous pouvons à présent donner une formule générale pour <MathJaxInline toShow={"$\\pi$"} /></p>
                 <Container className="Focus">
-                    <MathJaxDisplay toShow={piG} />  
+                    <MathJaxDisplay toShow={piG} demo />  
                 </Container>
                 <p>avec <MathJaxInline toShow="$ n $" /> le nombre de <MathJaxInline toShow="$ 2 $" /> additionnés de manière récursive</p>                
+                
+                <p className="Underline">Autres formules générales </p>
+                <Container className="Focus">
+                    <MathJaxDisplay toShow={approxPi1} infiniteFrac />  
+                </Container>
+                <Container className="Focus">
+                    <MathJaxDisplay toShow={approxPi2} />  
+                </Container>
+                <Container className="Focus">
+                    <MathJaxDisplay toShow={approxPi3} />  
+                </Container>
             </Container>
         </>
     );

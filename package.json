@@ -21,6 +21,7 @@
     "react-router-dom": "^6.2.1",
     "react-scripts": "^5.0.0",
     "react-simple-captcha": "^8.2.6",
+    "react-swipeable": "^6.2.0",
     "react-three-fiber": "^6.0.13",
     "recharts": "^2.1.8",
     "three": "^0.137.5",

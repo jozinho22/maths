@@ -19,38 +19,6 @@
     }
 }
 
-.Icon {
-    text-align: center;
-    width: 20px;
-    height: 20px;
-}
-
-@media (min-width: 768px) {
-    .Icon {
-        width: 30px;
-        height: 30px;
-    }
-}
-
-@media (min-width: 1268px) {
-    .Icon {
-        width: 35px;
-        height: 35px;
-    }  
-}
-
-.CheckIcon {
-    color:  var(--green-color);
-}
-
-.QuestionIcon {
-    color:  var(--orange-color);
-}
-
-.WrongIcon {
-    color:  var(--red-color);
-}
-
 Col {
     border-width: 1px;
 }
