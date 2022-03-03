@@ -68,11 +68,11 @@ const LeNombrePi = () => {
     var pi16d2 = "\\( \\pi \\approx 16\\sqrt{2 - \\sqrt{ 2 + \\sqrt{2 + \\sqrt{2} }}} \\)"
     var pi16dR = "\\( \\pi \\approx 3,13 \\)"
 
-    var piG = "\\( \\pi = lim_{n \\to +\\infty} \\enspace 2^{n+1} \\sqrt{2 - \\underbrace {\\sqrt{ 2 + \\sqrt{2 + \\sqrt{ 2 + {...etc.}}}} }_\\text{n} }  \\)"
+    var piG = "\\( \\pi = lim_{n \\to +\\infty} \\enspace 2^{n+1} \\sqrt{2 - \\underbrace {\\sqrt{ 2 + \\sqrt{2 + \\sqrt{ 2 + {...}}}} }_\\text{n} }  \\)"
 
-    var approxPi1 = "\\( \\frac{\\pi}{4} = \\frac{1}{ 1 + \\frac{1^2}{ 3 + \\frac{2^2}{5 + \\frac{3^2}{7 + {...etc.} }}}} \\)"
+    var approxPi1 = "\\( \\frac{\\pi}{4} = \\frac{1}{ 1 + \\frac{1^2}{ 3 + \\frac{2^2}{5 + \\frac{3^2}{7 + {...} }}}} \\)"
 
-    var approxPi2 = "\\( \\frac{\\pi^2}{6} = \\frac{1}{1^2} + \\frac{1}{2^2} + \\frac{1}{3^2} + \\frac{1}{4^2} + {...etc.} \\)"
+    var approxPi2 = "\\( \\frac{\\pi^2}{6} = \\frac{1}{1^2} + \\frac{1}{2^2} + \\frac{1}{3^2} + \\frac{1}{4^2} + {...} \\)"
 
     var approxPi3 = "\\( \\pi = \\int_{-1}^1 \\frac{dx}{\\sqrt{1 - x^2}} \\)"
 
@@ -207,7 +207,7 @@ const LeNombrePi = () => {
                 <p className="Underline">Généralisation</p>
                 <p>Nous pouvons à présent donner une formule générale pour <MathJaxInline toShow={"$\\pi$"} /></p>
                 <Container className="Focus">
-                    <MathJaxDisplay toShow={piG} demo />  
+                    <MathJaxDisplay toShow={piG} />  
                 </Container>
                 <p>avec <MathJaxInline toShow="$ n $" /> le nombre de <MathJaxInline toShow="$ 2 $" /> additionnés de manière récursive</p>                
                 

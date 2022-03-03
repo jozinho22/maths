@@ -143,6 +143,7 @@ const PDFViewerPage = ({ pdfItem }) => {
 
             {
                 pageByPageDocument ?
+
                     <>
                         {
                             !mobile ?
@@ -163,12 +164,12 @@ const PDFViewerPage = ({ pdfItem }) => {
                                 }} />
                         </div>   
                         {
-                            !mobile ?
-                                <PaginationPageByPage
-                                    page={page}
-                                    pages={pages} 
-                                    setPage={setPage} />
-                                        : <></>
+                            mobile && playMode ?
+                                <div className="PagesMobile">page : {page} / {pages}</div>
+                                    :   <PaginationPageByPage
+                                            page={page}
+                                            pages={pages} 
+                                            setPage={setPage} />                 
                         }
                         
                     </> :
@@ -197,6 +198,12 @@ const PDFViewerPage = ({ pdfItem }) => {
                                 addPagesToList={addPagesToList} />
                         </>
                 }
+                {
+                    !playMode ?
+                        <p className="AuthorCopyRight">Avec l'accord de Mr Petit - <a href="http://www.savoir-sans-frontieres.com/JPP/telechargeables/free_downloads.htm" target="_blank" rel="noreferrer">toutes ses BDs</a></p>
+                            : <></>
+                }
+                
           </>     
         );
       }

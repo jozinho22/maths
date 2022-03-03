@@ -12,7 +12,7 @@ const LesFormes = () => {
     return (
         <>
             <GenericCourse title={title} chapters={chapters} />
-            <p className="TextureCopyRight">Textures : Copyright &copy; 
+            <p className="AuthorCopyRight">Textures : Copyright &copy; 
                 <a href="http://unsplash.com" target="_blank" rel="noreferrer">unsplash.com</a>
             </p>           
         </>
