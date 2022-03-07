@@ -5,7 +5,7 @@ import ContactManager from './ContactManager';
 import { updateAlert, reInitAlert } from '../alert/alertFunctions';
 import emailjs from 'emailjs-com';
 import { loadCaptchaEnginge, LoadCanvasTemplate, validateCaptcha } from 'react-simple-captcha';
-
+import ContactItem from './ContactItem';
 import './Contact.css';
 
 const Contact = ( {setComponent} ) => {
@@ -16,6 +16,25 @@ const Contact = ( {setComponent} ) => {
     const [email, setEmail] =  React.useState("");
     const [subject, setSubject] =  React.useState("");
     const [message, setMessage] =  React.useState("");
+
+    const alertInitialValue = {show: false, message: '', color: ''};
+
+    const alertReducer = (alert, action) => {
+        switch(action.type) {
+            case ContactItem.FIRSTNAME: 
+                return {show: true, message: 'trop long !!!', color: ''};
+            case ContactItem.LASTNAME: 
+                return {show: true, message: 'really bro ?', color: ''};
+            case ContactItem.RE_INIT:
+                return alertInitialValue;
+            default: 
+                return alert;
+        }
+    }
+    const [alert, dispatch] = React.useReducer(alertReducer, alertInitialValue);
+
+    const firstNameRef = React.useRef(null)
+    const lastNameRef = React.useRef(null)
 
     const [firstNameAlert, setFirstNameAlert] = React.useState({show: false, message: ''});
     const [lastNameAlert, setLastNameAlert] = React.useState({show: false, message: ''});
@@ -53,18 +72,18 @@ const Contact = ( {setComponent} ) => {
      // Prénom
     React.useEffect(() => {
         if(firstName.length > maxName - 1) {
-            setFirstNameAlert(updateAlert(true, 'trop long !!!'));
+            dispatch({ type : ContactItem.FIRSTNAME })
         } else {
-            setFirstNameAlert(reInitAlert());
+            dispatch({ type : ContactItem.RE_INIT })
         }
     }, [firstName]);
 
     // Nom
     React.useEffect(() => {
         if(lastName.length > maxName - 1) {
-            setLastNameAlert(updateAlert(true, 'really bro ?'));
+            dispatch({ type : ContactItem.LASTNAME })
         } else {
-            setLastNameAlert(reInitAlert());
+            dispatch({ type : ContactItem.RE_INIT })
         }
     }, [lastName]);
 
@@ -181,8 +200,9 @@ const Contact = ( {setComponent} ) => {
                             <Form.Label>
                                 Prénom
                                 <Alert 
-                                    show={firstNameAlert.show}
-                                    message={firstNameAlert.message}
+                                    ref={firstNameRef}
+                                    show={alert.show}
+                                    message={alert.message}
                                     component="Contact" />
                             </Form.Label>
                             <FormControl
@@ -200,9 +220,10 @@ const Contact = ( {setComponent} ) => {
                         <Form.Group className="LastName" >
                             <Form.Label>
                                 Nom
-                                <Alert 
-                                    show={lastNameAlert.show}
-                                    message={lastNameAlert.message}
+                                <Alert                                     
+                                    ref={lastNameRef}
+                                    show={alert.show}
+                                    message={alert.message}
                                     component="Contact" />
                             </Form.Label>
                             <FormControl
