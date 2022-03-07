@@ -14,7 +14,6 @@
 .QuestionContainer .col {
     padding-left: 2px;
     padding-right: 0px;
-
 }
 
 @media (min-width : 450px) {
@@ -53,4 +52,12 @@
     background-color: var(--back-color);
     color: var(--mirror-button-text-color);
     border-color: var(--grey-color);
+}
+
+.KeyboardButton:hover {
+    background-color: var(--back-color);
+}
+
+.KeyboardButton:focus {
+    background-color: var(--back-color);
 }

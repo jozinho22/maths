@@ -1,16 +1,15 @@
+import React from 'react';
 import { Container, Button, Table, Col, Row } from 'react-bootstrap';
-
 import TablesTestResultsList from './TablesTestResultsList';
+import { TablesTestContext } from './TablesTest';
 
 import './TablesTestResults.css';
 
-const TablesTestResults = ({questions, 
-                            user, 
-                            levels,
-                            reInit}) => {
+const TablesTestResults = () => {
+
+    const {questions, user, levels, reInit} = React.useContext(TablesTestContext);
 
     return (
-        
         <>
             <p className="Title">Résultats</p>
             <Container className="ResultsContainer">

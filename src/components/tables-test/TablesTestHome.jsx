@@ -1,12 +1,12 @@
 import React from 'react';
 import { Container, Button } from 'react-bootstrap';
+import { TablesTestContext } from './TablesTest';
 
 import './TablesTestHome.css';
-import CustomLogger from '../general-content/CustomLogger';
 
-const TablesTestHome = ({levels,
-                         launchGame
-                         }) => {
+const TablesTestHome = () => {
+
+    const {levels, launchGame} = React.useContext(TablesTestContext);
 
     return (
         <>

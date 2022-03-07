@@ -6,9 +6,7 @@ import mathJaxConfig from './MathJaxConfig';
 import './MathJaxDisplay.css';
 const MathJaxDisplay = ({toShow, demo, infiniteFrac, color}) => {
 
-    const memoizedDisplay = React.useMemo(() => {
-
-        return (
+    const memoizedDisplay = React.useMemo(() =>  (
             <Container className={`MathJaxDisplayContainer ${demo ? "Demo": ''} ${infiniteFrac ? "InfiniteFrac" : ''} ${color ? color + "MathJaxText" : '' }`}>      
                 <MathJaxContext config={mathJaxConfig()}>
                     <MathJax dynamic hideUntilTypeset={ "every" } >
@@ -16,8 +14,7 @@ const MathJaxDisplay = ({toShow, demo, infiniteFrac, color}) => {
                     </MathJax>
                 </MathJaxContext>
             </Container>
-        );
-    }, [toShow])
+    ), [toShow]);
 
     return memoizedDisplay;
 }

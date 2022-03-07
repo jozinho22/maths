@@ -5,6 +5,8 @@ import TablesTestManager from './TablesTestManager';
 
 import CustomLogger from '../general-content/CustomLogger';
 
+export const TablesTestContext = React.createContext(null);
+
 const TablesTest = () => {
 
     const [gameStarted, setGameStarted] =  React.useState(false);
@@ -100,26 +102,24 @@ const TablesTest = () => {
         setGameStarted(true);
     }
 
+    var context = {
+        levels,
+        count: count,
+        questions,
+        user,
+        setUser,
+        launchGame,
+        gameStarted,
+        next,
+        reInit
+    }
+
     return (
-
-        <TablesTestManager
-                    count={count} 
-                    levels={levels}
-                    questions={questions}
-                    user={user} 
-                    launchGame={launchGame}
-                    gameStarted={gameStarted}
-                    reInit={reInit}>
-    
-            <TablesTestQuestionDisplay 
-                        questions={questions}
-                        count={count}
-                        next={next} 
-                        user={user}
-                        setUser={setUser} /> 
-
-        </TablesTestManager>
-            
+            <TablesTestContext.Provider value={context}>
+                <TablesTestManager>
+                    <TablesTestQuestionDisplay /> 
+                </TablesTestManager>
+            </TablesTestContext.Provider>         
     );
 
 }
