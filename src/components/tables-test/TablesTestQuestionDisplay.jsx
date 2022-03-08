@@ -60,6 +60,7 @@ const TablesTestQuestionDisplay = () => {
         }
         setSecondes(timeInSecondes % 60);  
     }
+    
     // Timer
     React.useEffect(() => {
         setEndTimer(false);

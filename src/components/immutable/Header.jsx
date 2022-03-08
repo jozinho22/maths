@@ -9,11 +9,15 @@ import LeProduitEnCroix from '../courses/cross-product/LeProduitEnCroix';
 
 import TablesTest from '../tables-test/TablesTest';
 import PDFViewerPage from '../pdf-viewer/PDFViewerPage';
+import CurriculumVitae from '../cv/CurriculumVitae';
+import AppContext from '../context/AppContext'
 
 import './Nav.css';
 import './Header.css';
 
-const Header = ({ pdfItems, setComponent, hide }) => {
+const Header = ({ pdfItems }) => {
+
+    const {updateComponent, playMode} = React.useContext(AppContext);
 
     const [showToggle, setShowToggle] = React.useState(false);
 
@@ -23,12 +27,12 @@ const Header = ({ pdfItems, setComponent, hide }) => {
 
     const goTo = (component) => {
         setShowToggle(false);
-        setComponent(component);
+        updateComponent(component);
     }
 
     return (
             <Navbar 
-                className={`CustomNav CustomHeader ${hide ? "Hidden" : ''}`}
+                className={`CustomNav CustomHeader ${playMode ? "Hidden" : ''}`}
                 fixed="top" 
                 expanded={showToggle}
                 onToggle={() => {
@@ -38,7 +42,7 @@ const Header = ({ pdfItems, setComponent, hide }) => {
                 expand="lg">
                 <Navbar.Brand 
                     className="Clickable"
-                    onClick={() => setComponent(<Home />)}>
+                    onClick={() => goTo(<Home />)}>
                     Maths pour tous
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -92,6 +96,13 @@ const Header = ({ pdfItems, setComponent, hide }) => {
                                 Réviser ses tables
                             </NavDropdown.Item>
                         </NavDropdown>
+                    </Nav>
+                    <Nav>
+                        <Nav.Link 
+                            onClick={() => goTo(<CurriculumVitae />)}>
+                                Who am I ?
+                        </Nav.Link>
+
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>

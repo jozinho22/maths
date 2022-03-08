@@ -6,7 +6,7 @@ import BootstrapSwitchButton from 'bootstrap-switch-button-react'
 import PDF from "react-pdf-js";
 import PaginationPageByPage from './PaginationPageByPage';
 import PaginationFullDocument from './PaginationFullDocument';
-import PlayModeContext from '../context/PlayModeContext'
+import AppContext from '../context/AppContext'
 
 import getWidth from '../immutable/getWidth';
 import CustomSpinner from '../general-content/CustomSpinner';
@@ -30,7 +30,7 @@ const PDFViewerPage = ({ pdfItem }) => {
         const [withAnswers, setWithAnswers] = React.useState(false);
         const step = 5;
 
-        const {playMode, updatePlayMode} = React.useContext(PlayModeContext);
+        const {playMode, updatePlayMode} = React.useContext(AppContext);
 
         const swipers = useSwipeable(
             {

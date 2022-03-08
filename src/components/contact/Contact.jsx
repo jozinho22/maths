@@ -6,9 +6,12 @@ import { updateAlert, reInitAlert } from '../alert/alertFunctions';
 import emailjs from 'emailjs-com';
 import { loadCaptchaEnginge, LoadCanvasTemplate, validateCaptcha } from 'react-simple-captcha';
 import ContactItem from './ContactItem';
+import AppContext from '../context/AppContext';
 import './Contact.css';
 
-const Contact = ( {setComponent} ) => {
+export const ContactContext = React.createContext(null);
+
+const Contact = () => {
 
     const [contactType, setContactType] =  React.useState("");
     const [firstName, setFirstName] =  React.useState("");
@@ -67,6 +70,9 @@ const Contact = ( {setComponent} ) => {
             setMessage("Un test pour le plaisir ");
         }
         loadCaptchaEnginge(6); 
+
+        window.scrollTo(0, 0);
+  
     }, []);
 
      // Prénom
@@ -185,146 +191,150 @@ const Contact = ( {setComponent} ) => {
         }
     }
     
+    const contactContext = {
+        isLoading,
+        success,
+        error
+    }
+
     return (
 
-    <ContactManager 
-        isLoading={isLoading} 
-        success={success} 
-        error={error} 
-        setComponent={setComponent} >
-        <Form className="ContactForm">
-            <Container className="InfosContainer">
-                <Row>
-                    <Col>
-                        <Form.Group className="FirstName" >
-                            <Form.Label>
-                                Prénom
-                                <Alert 
-                                    ref={firstNameRef}
-                                    show={alert.show}
-                                    message={alert.message}
-                                    component="Contact" />
-                            </Form.Label>
-                            <FormControl
-                                value={firstName} 
-                                onChange={e => {
-                                    if(firstName.length < maxName) {
-                                        setFirstName(e.target.value)
-                                    } else {
-                                        setFirstName(e.target.value.slice(0, e.target.value.length - 1))
-                                    }
-                                }} />
-                        </Form.Group>
-                    </Col>
-                    <Col>
-                        <Form.Group className="LastName" >
-                            <Form.Label>
-                                Nom
-                                <Alert                                     
-                                    ref={lastNameRef}
-                                    show={alert.show}
-                                    message={alert.message}
-                                    component="Contact" />
-                            </Form.Label>
-                            <FormControl
-                                value={lastName} 
-                                onChange={e => {
-                                    if(lastName.length < maxName) {
-                                        setLastName(e.target.value);
-                                    } else {
-                                        setLastName(e.target.value.slice(0, e.target.value.length - 1))
-                                    }
-                                }} />
-                        </Form.Group>
-                    </Col>
-                </Row>
-                <Row>
-                    <Col>
-                        <Form.Group className="Email">
-                            <Form.Label>
-                                @
-                                <Alert 
-                                    show={emailAlert.show}
-                                    message={emailAlert.message}
-                                    component="Contact" />
-                            </Form.Label>
-                            <FormControl
-                                value={email} 
-                                onChange={e => setEmail(e.target.value)} />
-                        </Form.Group>
-                    </Col>
-                    <Col>
-                        <Form.Group className="ContactType">
-                            <Form.Label>Vous êtes ?</Form.Label>
-                            <Form.Control 
-                                value={contactType} 
-                                as="select" 
-                                onChange={e => setContactType(e.target.value)}>
-                                <option value="student">un élève</option>
-                                <option value="teacher">un professeur</option>
-                                <option value="company">une société</option>
-                                <option value="other">autre</option >
-                            </Form.Control>
-                        </Form.Group>
-                    </Col>
-                </Row>
-            </Container>
-            <Form.Group className="Subject" >
-                <Form.Label>
-                    Sujet
-                    <Alert 
-                        show={subjectAlert.show}
-                        message={subjectAlert.message}
-                        component="Contact" />
-                </Form.Label>
-                <FormControl 
-                    value={subject} 
-                    onChange={e => setSubject(e.target.value)}/>
-            </Form.Group>
-
-            <Form.Group className="Message" >
-                <Form.Label>
-                    Message
-                    <Alert 
-                        show={messageAlert.show}
-                        message={messageAlert.message}
-                        component="Contact" />
-                </Form.Label>
-                <FormControl 
-                    as="textarea" 
-                    rows={4}
-                    maxLength={maxLength}
-                    value={message}
-                    onChange={e => setMessage(e.target.value)} />
-            </Form.Group>
-        
-            {captchaOk === false ?
-                <Container className="CaptchaContainer">
-                    <LoadCanvasTemplate />
-                    <InputGroup>
-                        <FormControl id="user_captcha_input"
-                            value={captchaText} 
-                            onChange={e => setCaptchaText(e.target.value)} />
-                    </InputGroup>
-                    <Button 
-                        className="DefaultButton" 
-                        onClick={() => verifyCaptcha()} >
-                        vérifier
-                    </Button>
+    <ContactContext.Provider value={contactContext}>
+        <ContactManager >
+            <Form className="ContactForm">
+                <Container className="InfosContainer">
+                    <Row>
+                        <Col>
+                            <Form.Group className="FirstName" >
+                                <Form.Label>
+                                    Prénom
+                                    <Alert 
+                                        ref={firstNameRef}
+                                        show={alert.show}
+                                        message={alert.message}
+                                        component="Contact" />
+                                </Form.Label>
+                                <FormControl
+                                    value={firstName} 
+                                    onChange={e => {
+                                        if(firstName.length < maxName) {
+                                            setFirstName(e.target.value)
+                                        } else {
+                                            setFirstName(e.target.value.slice(0, e.target.value.length - 1))
+                                        }
+                                    }} />
+                            </Form.Group>
+                        </Col>
+                        <Col>
+                            <Form.Group className="LastName" >
+                                <Form.Label>
+                                    Nom
+                                    <Alert                                     
+                                        ref={lastNameRef}
+                                        show={alert.show}
+                                        message={alert.message}
+                                        component="Contact" />
+                                </Form.Label>
+                                <FormControl
+                                    value={lastName} 
+                                    onChange={e => {
+                                        if(lastName.length < maxName) {
+                                            setLastName(e.target.value);
+                                        } else {
+                                            setLastName(e.target.value.slice(0, e.target.value.length - 1))
+                                        }
+                                    }} />
+                            </Form.Group>
+                        </Col>
+                    </Row>
+                    <Row>
+                        <Col>
+                            <Form.Group className="Email">
+                                <Form.Label>
+                                    @
+                                    <Alert 
+                                        show={emailAlert.show}
+                                        message={emailAlert.message}
+                                        component="Contact" />
+                                </Form.Label>
+                                <FormControl
+                                    value={email} 
+                                    onChange={e => setEmail(e.target.value)} />
+                            </Form.Group>
+                        </Col>
+                        <Col>
+                            <Form.Group className="ContactType">
+                                <Form.Label>Vous êtes ?</Form.Label>
+                                <Form.Control 
+                                    value={contactType} 
+                                    as="select" 
+                                    onChange={e => setContactType(e.target.value)}>
+                                    <option value="student">un élève</option>
+                                    <option value="teacher">un professeur</option>
+                                    <option value="company">une société</option>
+                                    <option value="other">autre</option >
+                                </Form.Control>
+                            </Form.Group>
+                        </Col>
+                    </Row>
                 </Container>
-                    :   <Button 
-                            className="ContactButton DefaultButton"
-                            onClick={(client) => sendEmail(client)}>Merci !
+                <Form.Group className="Subject" >
+                    <Form.Label>
+                        Sujet
+                        <Alert 
+                            show={subjectAlert.show}
+                            message={subjectAlert.message}
+                            component="Contact" />
+                    </Form.Label>
+                    <FormControl 
+                        value={subject} 
+                        onChange={e => setSubject(e.target.value)}/>
+                </Form.Group>
+
+                <Form.Group className="Message" >
+                    <Form.Label>
+                        Message
+                        <Alert 
+                            show={messageAlert.show}
+                            message={messageAlert.message}
+                            component="Contact" />
+                    </Form.Label>
+                    <FormControl 
+                        as="textarea" 
+                        rows={4}
+                        maxLength={maxLength}
+                        value={message}
+                        onChange={e => setMessage(e.target.value)} />
+                </Form.Group>
+            
+                {captchaOk === false ?
+                    <Container className="CaptchaContainer">
+                        <LoadCanvasTemplate />
+                        <InputGroup>
+                            <FormControl id="user_captcha_input"
+                                value={captchaText} 
+                                onChange={e => setCaptchaText(e.target.value)} />
+                        </InputGroup>
+                        <Button 
+                            className="DefaultButton" 
+                            onClick={() => verifyCaptcha()} >
+                            vérifier
                         </Button>
-            }
+                    </Container>
+                        :   <Button 
+                                className="ContactButton DefaultButton"
+                                onClick={(client) => sendEmail(client)}>Merci !
+                            </Button>
+                }
 
-            <Alert 
-                show={globalAlert.show}
-                message={globalAlert.message}
-                color={globalAlert.color} />
+                <Alert 
+                    show={globalAlert.show}
+                    message={globalAlert.message}
+                    color={globalAlert.color} />
 
-        </Form>
-    </ContactManager>
+            </Form>
+        </ContactManager>
+    </ContactContext.Provider>
     );
 }
 
