@@ -128,7 +128,9 @@ const LeProduitEnCroix = () => {
                 <p>
                     Pour tout <MathJaxInline toShow={"$a,b,c,d \\neq 0$"} />
                 </p>
-                <MathJaxDisplay toShow={abcdBase}/>
+                <Container className="Focus">
+                    <MathJaxDisplay toShow={abcdBase}/>
+                </Container>
                 <p style={{color: "red"}}>Rappel : il est interdit de diviser par 0 !</p>
                 <p>
                     Le produit en croix nous dit que :

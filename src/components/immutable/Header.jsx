@@ -3,13 +3,13 @@ import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
 import MathJaxInline from '../mathjax-display/MathJaxInline';
 import Home from '../home/Home';
 import LeNombrePi from '../courses/pi/LeNombrePi';
+import LaTrigonometrie from '../courses/trigo/LaTrigonometrie';
 import Shapes from '../courses/shapes/LesFormes';
 import UsualFunctions from '../usual-functions/UsualFunctions';
 import LeProduitEnCroix from '../courses/cross-product/LeProduitEnCroix';
 
 import TablesTest from '../tables-test/TablesTest';
 import PDFViewerPage from '../pdf-viewer/PDFViewerPage';
-import CurriculumVitae from '../cv/CurriculumVitae';
 import AppContext from '../context/AppContext'
 
 import './Nav.css';
@@ -54,7 +54,13 @@ const Header = ({ pdfItems }) => {
                                     goTo(<LeNombrePi />);
                                 }} >
                                 Le nombre <MathJaxInline toShow={"$ \\pi $"} />
-                            </NavDropdown.Item>   
+                            </NavDropdown.Item>  
+                            <NavDropdown.Item 
+                                onClick={() => {
+                                    goTo(<LaTrigonometrie />);
+                                }} >
+                                La trigonométrie
+                            </NavDropdown.Item>  
                             <NavDropdown.Item 
                                 onClick={() => {
                                     goTo(<Shapes />);
@@ -96,13 +102,6 @@ const Header = ({ pdfItems }) => {
                                 Réviser ses tables
                             </NavDropdown.Item>
                         </NavDropdown>
-                    </Nav>
-                    <Nav>
-                        <Nav.Link 
-                            onClick={() => goTo(<CurriculumVitae />)}>
-                                Who am I ?
-                        </Nav.Link>
-
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>

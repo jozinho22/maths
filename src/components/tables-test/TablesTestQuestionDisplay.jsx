@@ -101,7 +101,6 @@ const TablesTestQuestionDisplay = () => {
 
     const handleKeyboardInput = (keyboardInput) => {
         var newInputText = "";
-        console.log(keyboardInput, inputText)
         if(!isNaN(keyboardInput)) {
             if(inputText === '0' && keyboardInput === 0) {
                 setAlert(updateAlert(true, 'Très drôle...'));

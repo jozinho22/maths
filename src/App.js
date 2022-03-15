@@ -8,26 +8,13 @@ import './components/alert/Alert.css';
 import './App.css';
 
 import { Container } from 'react-bootstrap';
-
 import AppContext from './components/context/AppContext';
-
-import FontContext from './components/context/FontContext';
-import ThemeContext from './components/context/ThemeContext';
-import PlayModeContext from './components/context/PlayModeContext';
-
 import pdfResourceBuilder from './components/pdf-viewer/pdfResourceBuilder';
 import initDimensions from './components/immutable/initDimensions';
-
 import Header from './components/immutable/Header';
 import Home from './components/home/Home';
-import LaProgrammation from './components/courses/prog/LaProgrammation';
-import LesFormes from './components/courses/shapes/LesFormes';
-import LeCercle from './components/courses/shapes/chapters/LeCercle';
-
-import LeProduitEnCroix from './components/courses/cross-product/LeProduitEnCroix';
-import CurriculumVitae from './components/cv/CurriculumVitae';
-
 import Footer from './components/immutable/Footer';
+import LaTrigonometrie from './components/courses/trigo/LaTrigonometrie';
 
 function App() {
 
@@ -37,7 +24,7 @@ function App() {
 
     const [component, setComponent] = React.useState( 
         process.env.NODE_ENV === 'development' ? 
-            <CurriculumVitae /> 
+            <LaTrigonometrie /> 
                 : <Home />
     );
 
