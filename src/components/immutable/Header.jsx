@@ -51,6 +51,12 @@ const Header = ({ pdfItems }) => {
                         <NavDropdown title="Cours/exercices" id="basic-nav-dropdown">
                             <NavDropdown.Item 
                                 onClick={() => {
+                                    goTo(<LeProduitEnCroix />);
+                                }} >
+                                Règle de 3
+                            </NavDropdown.Item>
+                            <NavDropdown.Item 
+                                onClick={() => {
                                     goTo(<LeNombrePi />);
                                 }} >
                                 Le nombre <MathJaxInline toShow={"$ \\pi $"} />
@@ -59,7 +65,7 @@ const Header = ({ pdfItems }) => {
                                 onClick={() => {
                                     goTo(<LaTrigonometrie />);
                                 }} >
-                                La trigonométrie
+                                La trigo
                             </NavDropdown.Item>  
                             <NavDropdown.Item 
                                 onClick={() => {
@@ -72,12 +78,6 @@ const Header = ({ pdfItems }) => {
                                     goTo(<UsualFunctions />);
                                 }} >
                                 Fonctions usuelles
-                            </NavDropdown.Item>
-                            <NavDropdown.Item 
-                                onClick={() => {
-                                    goTo(<LeProduitEnCroix />);
-                                }} >
-                                Règle de 3
                             </NavDropdown.Item>
                         </NavDropdown> 
                         <NavDropdown title="BDs de Jean-Pierre Petit" id="basic-nav-dropdown">
