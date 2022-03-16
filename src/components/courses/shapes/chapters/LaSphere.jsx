@@ -11,6 +11,7 @@ import MathJaxInline from '../../../mathjax-display/MathJaxInline';
 
 const LaSphere = () => {
 
+    var n = 0;
     var sphVolume = "\\(V_{sphere} = \\frac{4}{3}\\pi r^3\\)";
     var rTo2r = "\\(r \\to 2r\\)";
     var sphDoubleVolume = "\\(V = \\frac{4}{3}\\pi (3r)^3\\)";
@@ -42,7 +43,7 @@ const LaSphere = () => {
     var circlePerimY = "\\(P(y) = 2\\pi \\sqrt{R^2 - y^2}\\)"
 
     var lfAlpha = "\\(l = R \\alpha \\)"
-    var dlfAlpha = "\\(.dl = R.d\\alpha \\)"
+    var dlfAlpha = "\\(dl = R.d\\alpha \\)"
     var dS = "\\(d(S(y)) = P(y).dl\\)"
     var intDS = "\\(\\int_0^{\\frac{\\pi}{2}} d(S(y)) = \\int_0^{\\frac{\\pi}{2}} P(y) .dl\\)"
 
@@ -89,7 +90,7 @@ const LaSphere = () => {
                 {"\n"}
                 Par facilité, nous allons d'abord calculer le demi-volume.
             </p>
-            <ImageZoom src={sphereVolCalculus} name="Calcul du volume par intégration"/>
+            <ImageZoom src={sphereVolCalculus} name="Calcul du volume par intégration" n={++n}/>
             <p>Notons <MathJaxInline toShow="$S(x)$" /> la surface du cercle en fonction du rayon <MathJaxInline toShow="$x$" /> variable</p>
             <MathJaxDisplay toShow={circleAreaX} demo />
             <p>
@@ -134,7 +135,7 @@ const LaSphere = () => {
                 {"\n"}
                 On prendra non plus la surface du cercle mais le périmètre.
             </p>
-            <ImageZoom src={sphereAreaCalculus} name="Calcul de la surface par intégration"/>
+            <ImageZoom src={sphereAreaCalculus} name="Calcul de la surface par intégration" n={++n}/>
             <p>Notons <MathJaxInline toShow="$P(x)$" /> le périmètre du cercle en fonction du rayon variable <MathJaxInline toShow="$x$" /></p>
             <MathJaxDisplay toShow={circlePerimX} demo />
             <p>Plus haut, nous avons vu que : </p>

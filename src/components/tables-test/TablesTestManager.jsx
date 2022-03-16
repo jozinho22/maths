@@ -3,34 +3,21 @@ import { Navigate } from 'react-router-dom';
 
 import TablesTestHome from './TablesTestHome';
 import TablesTestResults from './TablesTestResults';
-import CustomLogger from '../general-content/CustomLogger';
+import { TablesTestContext } from './TablesTest';
 
-const TablesTestManager = ({count, 
-                            levels,
-                            questions, 
-                            user, 
-                            launchGame,
-                            gameStarted, 
-                            reInit,
-                            children}) => {
+const TablesTestManager = ({children}) => {
+
+    const {count, questions, gameStarted} = React.useContext(TablesTestContext);
 
     return (
 
         !gameStarted ?
-
-            <TablesTestHome 
-                levels={levels}
-                launchGame={launchGame} /> :
+            <TablesTestHome /> :
 
                     count < questions.length ? 
-
                             children : 
 
-                                <TablesTestResults
-                                    questions= {questions}
-                                    user = {user}
-                                    levels={levels}
-                                    reInit={reInit} />           
+                                <TablesTestResults />           
     );
 }
  

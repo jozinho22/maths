@@ -3,17 +3,21 @@ import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
 import MathJaxInline from '../mathjax-display/MathJaxInline';
 import Home from '../home/Home';
 import LeNombrePi from '../courses/pi/LeNombrePi';
+import LaTrigonometrie from '../courses/trigo/LaTrigonometrie';
 import Shapes from '../courses/shapes/LesFormes';
 import UsualFunctions from '../usual-functions/UsualFunctions';
 import LeProduitEnCroix from '../courses/cross-product/LeProduitEnCroix';
 
 import TablesTest from '../tables-test/TablesTest';
 import PDFViewerPage from '../pdf-viewer/PDFViewerPage';
+import AppContext from '../context/AppContext'
 
 import './Nav.css';
 import './Header.css';
 
-const Header = ({ pdfItems, setComponent, hide }) => {
+const Header = ({ pdfItems }) => {
+
+    const {updateComponent, playMode} = React.useContext(AppContext);
 
     const [showToggle, setShowToggle] = React.useState(false);
 
@@ -23,12 +27,12 @@ const Header = ({ pdfItems, setComponent, hide }) => {
 
     const goTo = (component) => {
         setShowToggle(false);
-        setComponent(component);
+        updateComponent(component);
     }
 
     return (
             <Navbar 
-                className={`CustomNav CustomHeader ${hide ? "Hidden" : ''}`}
+                className={`CustomNav CustomHeader ${playMode ? "Hidden" : ''}`}
                 fixed="top" 
                 expanded={showToggle}
                 onToggle={() => {
@@ -38,7 +42,7 @@ const Header = ({ pdfItems, setComponent, hide }) => {
                 expand="lg">
                 <Navbar.Brand 
                     className="Clickable"
-                    onClick={() => setComponent(<Home />)}>
+                    onClick={() => goTo(<Home />)}>
                     Maths pour tous
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -47,10 +51,22 @@ const Header = ({ pdfItems, setComponent, hide }) => {
                         <NavDropdown title="Cours/exercices" id="basic-nav-dropdown">
                             <NavDropdown.Item 
                                 onClick={() => {
+                                    goTo(<LeProduitEnCroix />);
+                                }} >
+                                Règle de 3
+                            </NavDropdown.Item>
+                            <NavDropdown.Item 
+                                onClick={() => {
                                     goTo(<LeNombrePi />);
                                 }} >
                                 Le nombre <MathJaxInline toShow={"$ \\pi $"} />
-                            </NavDropdown.Item>   
+                            </NavDropdown.Item>  
+                            <NavDropdown.Item 
+                                onClick={() => {
+                                    goTo(<LaTrigonometrie />);
+                                }} >
+                                La trigo
+                            </NavDropdown.Item>  
                             <NavDropdown.Item 
                                 onClick={() => {
                                     goTo(<Shapes />);
@@ -62,12 +78,6 @@ const Header = ({ pdfItems, setComponent, hide }) => {
                                     goTo(<UsualFunctions />);
                                 }} >
                                 Fonctions usuelles
-                            </NavDropdown.Item>
-                            <NavDropdown.Item 
-                                onClick={() => {
-                                    goTo(<LeProduitEnCroix />);
-                                }} >
-                                Règle de 3
                             </NavDropdown.Item>
                         </NavDropdown> 
                         <NavDropdown title="BDs de Jean-Pierre Petit" id="basic-nav-dropdown">

@@ -1,0 +1,10 @@
+.TrigoTable {
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+@media(min-width: 450px) {
+    .TrigoTable {
+        margin-bottom: 40px;
+    }
+}

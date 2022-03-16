@@ -1,8 +1,14 @@
+import React from 'react';
 import { Button } from 'react-bootstrap';
 import Home from '../home/Home';
 import { GiCheckMark , GiCrossMark} from 'react-icons/gi';
+import AppContext from '../context/AppContext';
+import { ContactContext } from './Contact';
 
-const SendResult = ({ success, error, setComponent }) => {
+const SendResult = () => {
+
+    const {updateComponent} = React.useContext(AppContext);
+    const {success, error} = React.useContext(ContactContext);
 
     return (
             <div className="SendResult">
@@ -15,7 +21,7 @@ const SendResult = ({ success, error, setComponent }) => {
                 }
                 <Button 
                     className="DefaultButton"
-                    onClick={() => setComponent(<Home />)}>
+                    onClick={() => updateComponent(<Home />)}>
                     Retour au lobby
                 </Button>
             </div>    

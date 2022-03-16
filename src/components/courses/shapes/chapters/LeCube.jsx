@@ -8,6 +8,7 @@ import squareVolCalculus from '../assets/squareVolCalculus.png';
 
 const LeCube = () => {
 
+    var n = 0;
     var cVolume = "\\(V_{cube} = c^3\\)";
     var rTo2r = "\\(r \\to 2r\\)";
     var cDoubleVolume = "\\(V_{cube} = (2c)^3\\)";
@@ -47,7 +48,7 @@ const LeCube = () => {
 
             <p className="Title1">Calcul du volume par intégration</p>
             <p>Intégrons notre volume à partir d'un côté pour voir si nosu retombons bien sur nos pattes</p>
-            <ImageZoom src={squareVolCalculus} name="Calcul du volume par intégration"/>
+            <ImageZoom src={squareVolCalculus} name="Calcul du volume par intégration" n={++n} />
             <MathJaxDisplay toShow={sCarre} demo />
             <MathJaxDisplay toShow={vCube} demo />
             <p>

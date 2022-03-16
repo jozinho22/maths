@@ -1,13 +1,10 @@
 import { GiCheckMark , GiCrossMark} from 'react-icons/gi';
 import { FaQuestion } from 'react-icons/fa';
 
-import CustomLogger from '../general-content/CustomLogger';
-
 import './TablesTestResultsList.css';
 
 const TablesTestResultsList = ({ question, answer }) => {
 
-console.log(answer)
     return (
             <tr>
                 <td className="AnswersResults">

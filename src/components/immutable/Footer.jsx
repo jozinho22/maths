@@ -1,6 +1,7 @@
 import React from 'react';
 import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
 import { RiMailSendLine } from 'react-icons/ri';
+import AppContext from '../context/AppContext'
 
 import FontContext from '../context/FontContext'
 import ThemeContext from '../context/ThemeContext'
@@ -10,30 +11,20 @@ import getThemes from './styles/getThemes'
 import './Nav.css';
 import './Footer.css';
 
-const Footer = ( { setComponent, hide } ) => {
+const Footer = () => {
 
-    const {font, updateFont} = React.useContext(FontContext);
-    const {theme, updateTheme} = React.useContext(ThemeContext);
+    const {updateComponent, playMode, updateFont, updateTheme} = React.useContext(AppContext);
 
-    const changeFont = (event) => {
-        updateFont(event); 
-    }
-    const changeTheme = (event) => {
-        updateTheme(event); 
-    }
-  
     var fonts = getFonts();
     var themes = getThemes();
 
     return (
             <Navbar 
-                className={`CustomFooter CustomNav  ${hide ? "Hidden" : ''}`}
+                className={`CustomFooter CustomNav  ${playMode ? "Hidden" : ''}`}
                 fixed="bottom" 
                 collapseOnSelect 
                 variant="dark" 
                 expand="lg">   
-                {/* <FaQuestion 
-                    className="QuestionIcon" /> */} 
                 <Navbar.Toggle aria-controls="basic-nav-nav"/>
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav>
@@ -41,7 +32,7 @@ const Footer = ( { setComponent, hide } ) => {
                             drop="up"
                             title="Fonts" 
                             id="basic-nav-nav"
-                            onSelect={changeFont} >   
+                            onSelect={(event) => updateFont(event)} >   
                             {
                                 fonts.map(font => (
                                     <NavDropdown.Item key={font.id}
@@ -56,7 +47,7 @@ const Footer = ( { setComponent, hide } ) => {
                             drop="up"
                             title="Themes" 
                             id="theme-dropdown-menu"
-                            onSelect={changeTheme} >   
+                            onSelect={(event) => updateTheme(event)} >   
                             {
                                 themes.map(theme => (
                                     <NavDropdown.Item 
@@ -76,7 +67,7 @@ const Footer = ( { setComponent, hide } ) => {
                 </p>
                 <RiMailSendLine 
                     className="ContactIcon"
-                    onClick={() => setComponent(<Contact setComponent={setComponent} />)} />
+                    onClick={() => updateComponent(<Contact />)} />
             </Navbar>
     );
 }

@@ -3,11 +3,14 @@ import { Container, Button, Row, Col } from 'react-bootstrap';
 import Timer from './Timer';
 import Alert from '../alert/Alert';
 import { updateAlert, reInitAlert } from '../alert/alertFunctions';
-
+import { TablesTestContext } from './TablesTest';
+/* import CiferKeyboard from './CiferKeyboard';
+ */
 import './TablesTestQuestionDisplay.css';
 
-const TablesTestQuestionDisplay = 
-        ({ questions, count, next, user, setUser}) => {
+const TablesTestQuestionDisplay = () => {
+
+    const {count, questions, user, setUser, next} = React.useContext(TablesTestContext);
 
     // Timer
     const [endTimer, setEndTimer] = React.useState(false);
@@ -57,6 +60,7 @@ const TablesTestQuestionDisplay =
         }
         setSecondes(timeInSecondes % 60);  
     }
+    
     // Timer
     React.useEffect(() => {
         setEndTimer(false);
@@ -96,20 +100,21 @@ const TablesTestQuestionDisplay =
     }, [inputText]);
 
     const handleKeyboardInput = (keyboardInput) => {
+        var newInputText = "";
         if(!isNaN(keyboardInput)) {
             if(inputText === '0' && keyboardInput === 0) {
-                setAlert(updateAlert(true, 'Très drôle...'))
+                setAlert(updateAlert(true, 'Très drôle...'));
             } else {
-                setInputText(inputText + keyboardInput)
-            }
+                newInputText = inputText + keyboardInput;
+            } 
         } else if(keyboardInput === 'C') {
-            setInputText("")
+            newInputText = '';
         } else if(keyboardInput === '<') {
-            setInputText(inputText.slice(0, inputText.length - 1))
+            newInputText = inputText.slice(0, inputText.length - 1);
         }
+        setInputText(newInputText);
     }
 
-    // pb : le clavier se met a jour toutes les secondes;....
     const CiferKeyboard = () => {
 
         var rows = [];
@@ -123,7 +128,7 @@ const TablesTestQuestionDisplay =
             }
             rows.push({id: 'row' + k, cols: cols});
         }
-       
+        
         rows.push(
             {
                 id: 'row' + 4, 
@@ -143,26 +148,29 @@ const TablesTestQuestionDisplay =
                     ]
             }
         );
-        return (
-            <Container className="CiferKeyboard">
-            {
-                rows.map(row => (
-                    <Row key={row.id}>
-                        {row.cols.map(col =>(  
-                            <Col key={col.id}>
-                                <Button 
-                                    className="KeyboardButton"
-                                    onClick={() => handleKeyboardInput(col.cifer)}>
-                                    {col.cifer}
-                                </Button>
-                            </Col>  
-                        ))}
-                    </Row>
-                ))
-            }
-            </Container> 
-        );
 
+        const memoizedKeyboard = React.useMemo(() => (
+        
+                <Container className="CiferKeyboard">
+                    {
+                        rows.map(row => (
+                            <Row key={row.id}>
+                                {row.cols.map(col =>(  
+                                    <Col key={col.id}>
+                                        <Button 
+                                            className="KeyboardButton"
+                                            onClick={() => handleKeyboardInput(col.cifer)}>
+                                            {col.cifer}
+                                        </Button>
+                                    </Col>  
+                                ))}
+                            </Row>
+                        ))
+                    }
+                </Container> 
+        ), []);
+
+        return memoizedKeyboard;
     }
 
     return (

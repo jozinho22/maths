@@ -121,7 +121,7 @@ const UsualFunctions2 = () => {
                                 interval={f.xInterval} />
                             <YAxis 
                                  />
-                            <Tooltip /> 
+                            {/* <Tooltip />  */}
                             <ReferenceLine x={0} />
                             <ReferenceLine y={0} />
                         </LineChart>
