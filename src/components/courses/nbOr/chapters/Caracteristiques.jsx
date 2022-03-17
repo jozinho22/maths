@@ -1,48 +1,24 @@
 import React from 'react';
 import { Container, Button } from 'react-bootstrap';
-import MathJaxDisplay from '../../mathjax-display/MathJaxDisplay';
-import MathJaxInline from '../../mathjax-display/MathJaxInline';
-import UnsplashCopyRight from '../UnsplashCopyRight';
-import ImageZoom from '../ImageZoom';
-import rabbits from './assets/rabbits.png';
-import rabbitsEvolution from './assets/rabbitsEvolution.png';
+import MathJaxDisplay from '../../../mathjax-display/MathJaxDisplay';
+import MathJaxInline from '../../../mathjax-display/MathJaxInline';
+import ImageZoom from '../../ImageZoom';
+import AppContext from '../../../context/AppContext';
+import FibonacciTable from '../FibonacciTable';
+import euclideStuff from '../assets/euclideStuff.png';
+import LeProduitEnCroix from '../../cross-product/LeProduitEnCroix';
 
-import AppContext from '../../context/AppContext';
-import RabbitsEvolutionTable from './RabbitsEvolutionTable';
-import RatioTable from './RatioTable';
-import FibonacciTable from './FibonacciTable';
+const Caracteristiques = () => {
 
-import euclideStuff from './assets/euclideStuff.png';
-import LeProduitEnCroix from '../cross-product/LeProduitEnCroix';
-import FibonacciFormulasTable from './FibonacciFormulasTable';
+    const {updateComponent} = React.useContext(AppContext);
 
-import GenericCourse from '../GenericCourse';
-import getChapters from './chapters/getChapters';
-
-import './LeNombreDOr.css'
-
-const LeNombreDOr = () => {
-
-    var chapters = getChapters();
-    var title = "Le nombre d\'or"
-
-    return (
-        <>
-            <GenericCourse title={title} chapters={chapters} />
-        </>
-    );
-
-    /* var n = 0;
-    var phiMain = "\\(F_{n+2} = F_{n+1} + F_{n} \\)";
-    var ratio = "$\\frac{F_{n+1}}{F_{n}}$";
-    var ratioValue = "\\(\\phi = lim_{n \\to +\\infty} \\enspace \\frac{F_{n+1}}{F_{n}}\\)";
-
-    var ratioValueR = "\\(\\phi \\approx 1,618  \\)";
+    var n = 0;
 
     var euclideStuff1 =  "\\(\\frac{BC}{AB } =\\frac{AC}{BC }   \\)";
     var euclideStuff2 =  "\\(\\frac{x}{1} =\\frac{1 + x}{x}   \\)";
     var euclideStuff3 =  "\\(x^2 = 1+x \\)";
     var euclideStuff4 =  "\\(x^2 - x - 1 = 0  \\)";
+    /* var euclideStuff4 =  "\\(\\begin{equation} \\label{eq:1} {x^2 - x - 1 = 0}  \\end{equation} \\)"; */
 
     var idRem = "\\( \\big(x - \\frac{1}{2}\\big)^2 = x^2 - x + \\frac{1}{4} \\)";
     var idRem2 = "\\( x^2 - x - 1 =   x^2 - x + \\frac{1}{4} -  \\frac{5}{4}\\)";
@@ -78,6 +54,7 @@ const LeNombreDOr = () => {
     var phiGen =  "\\(\\phi^{n+1} =  F_{n+1}.\\phi +  F_{n} \\)";
     var phiGen2 =  "\\(\\phi^{n+2} =  \\phi^{n+1} +  \\phi^{n} \\)";
 
+    var phiMain = "\\(F_{n+2} = F_{n+1} + F_{n} \\)";
     var phiMainReverse = "\\( F_{n} = F_{n+2} - F_{n+1} \\)";
 
     var f0 = "\\( F_{0} = F_{2} - F_{1} \\)";
@@ -124,75 +101,9 @@ const LeNombreDOr = () => {
     var phiGen2Verif3 = "\\(\\phi^{-2} + \\phi^{-3} = \\phi -1  \\)";
     var phiGen2VerifOk = "$\\phi - 1 = \\phi^{-1} $";
 
-    var approxPhi1Begin =  "$\\phi^2 = \\phi + 1  $";
-    var approxPhi1 = "\\( \\phi = \\sqrt{1 + \\sqrt{1 + \\sqrt{1 + \\sqrt{1 + {...} }}}} \\)"
-
-    var approxPhi2Begin =  "$ \\phi^{-1} = \\phi - 1 $";
-    var approxPhi2Begin2 =  "$ 1 + \\phi^{-1} = \\phi $";
-    var approxPhi2 = "\\( \\phi = 1 + \\frac{1}{ 1 + \\frac{1}{ 1 + \\frac{1}{1 + \\frac{1}{1 + {...} }}}} \\)"
-    
-    var approxPhi3 = "\\( \\phi = 4 \\sum_{k =0}^{+\\infty} \\enspace \\frac{-1}{2k + 1} \\big( \\big( \\phi^{-1} \\big)^{2k+1} + \\big( \\phi^{-3} \\big)^{2k+1}   \\big) \\)"
-
-    React.useEffect(() => {
-        if(process.env.NODE_ENV !== 'development') {
-            window.scrollTo(0, 0);
-        }
-    }, []);
-
     return (
-        
-        <>
-            <p className="Title">Le nombre d'or</p>
-            <Container className="CoursesContainer">  
-                <p>
-                    Voici le problème que s’est posé Fibonacci, un mathématicien italien en 1 202.
-                    {"\n"}Il voulait étudier la progression de naissances de lapins, à partir d’un couple donné.
-                 </p>
-                 <ImageZoom src={rabbits} name="Couples de lapins" n={++n} />
-                 <p>
-                    {"\n"}Le 1 er mois, un jeune couple de lapins est réuni
-                    {"\n"}Le 2 ème mois, ce couple donne naissance à un couple de lapereaux
-                    {"\n"}{"\n"}Ensuite, les naissances répondent à la règle est la suivante :
-                    {"\n"}- Un couple de lapereaux doit attendre un mois avant d’être mature et de pouvoir
-                    donner naissance à un couple de lapereaux
-                    {"\n"}- Un couple de lapins adultes donne naissance à un couple de lapereaux tous les mois
-                    {"\n"}{"\n"}
-                </p>
 
-                <p className="Title1">Évolution du nombre de couples de lapins chaque mois</p>
-                <ImageZoom src={rabbitsEvolution} name="Évolution du nombre de couple de lapins sur un an" n={++n} />
-                <RabbitsEvolutionTable />
-                <p>
-                    On remarque l'évolution suit une certaine tendance.
-                    {"\n"}En effet, le couple de lapins présents au mois en cours est toujours égal à l'addition de ceux présents les deux mois précédents.
-                    {"\n"}{"\n"}On alors cette modélisation :
-                </p>
-                <Container className="Focus">
-                    <MathJaxDisplay toShow={phiMain} />
-                </Container>
-                <p><MathJaxInline toShow={"$F_n$"} /> étant le nombre de lapins au mois <MathJaxInline toShow={"$n$"} /></p>
-                <p>
-                    La suite de nombres correspondant au naissances de couples de lapins mensuelles s'appelle la suite de Fibonacci.
-                </p>
-                <p>
-                    Fibonacci s'est ensuite intéressé au ratio entre le nombre au mois suivant et le mois courant, soit <MathJaxInline toShow={ratio} />
-                </p>
-                <RatioTable />
-                <p>On s'aperçoit que l'on tend vers une certaine valeur, mais sa valeur exacte est  :</p>
-                <Container className="Focus">
-                    <MathJaxDisplay toShow={ratioValue} />
-                </Container>
-                <p>Sa valeur approchée est : </p>
-                <Container className="Focus">
-                    <MathJaxDisplay toShow={ratioValueR} />
-                </Container>
-                <p>
-                    Ce nombre est le nombre d’or, autrement appelée la divine proportion, désigné par la
-                    lettre grecque <MathJaxInline toShow={"$\\phi$"} /> . 
-                    {"\n"}Un des plus célèbres nombres utilisés dans les mathématiques, notamment avec le nombre <MathJaxInline toShow={"$\\pi$"} /> . 
-                    {"\n"}Il est célèbre pour ces fascinantes caractéristiques mais aussi sa présence dans la nature.
-                </p>
-
+            <>
                 <p className="Title1">Découverte du nombre d'or par Euclide</p>
                 <p>
                     Euclide s’est intéressé à ce nombre et voulu le calculer de la manière suivante.
@@ -371,30 +282,10 @@ const LeNombreDOr = () => {
                 <p>Tout est OK, car <MathJaxInline toShow={phiGen2VerifOk} /></p>
                 <p>Donc</p>
                 <MathJaxDisplay toShow={phiGen2VerifBegin} />
+            </>
 
-                <p className="Title2">Résumé des <MathJaxInline toShow={"$\\phi^{-n}$"} /> </p>
-                <FibonacciFormulasTable />
+    )
 
-                <p className="Title1">Autres formules générales</p>
-                <p className="Title2">Formule de la racine</p>
-                <p>À partir de la formule <MathJaxInline toShow={approxPhi1Begin}/>, on a :</p>
-                <Container className="Focus">
-                    <MathJaxDisplay toShow={approxPhi1} />
-                </Container>
-                <p>{"\n"}{"\n"}Vérifions maintenant la seconde formule :</p>
-                <p className="Title2">Formule du quotient</p>
-                <p>À partir de la formule <MathJaxInline toShow={approxPhi2Begin}/>, qu'on arrange en <MathJaxInline toShow={approxPhi2Begin2}/> on a :</p>
-                <Container className="Focus">
-                    <MathJaxDisplay toShow={approxPhi2} infiniteFrac />
-                </Container>
-                <p className="Title2">Formule de la somme</p>
-                <Container className="Focus">
-                    <MathJaxDisplay toShow={approxPhi3} />
-                </Container>
-            </Container>
-            <UnsplashCopyRight item="Images de lapins" />
-        </>
-    ); */
 }
 
-export default LeNombreDOr;
+export default Caracteristiques;

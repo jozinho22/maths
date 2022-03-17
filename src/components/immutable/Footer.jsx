@@ -3,11 +3,10 @@ import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
 import { RiMailSendLine } from 'react-icons/ri';
 import AppContext from '../context/AppContext'
 
-import FontContext from '../context/FontContext'
-import ThemeContext from '../context/ThemeContext'
 import Contact from '../contact/Contact';
-import getFonts from './styles/getFonts'
-import getThemes from './styles/getThemes'
+import getFonts from './styles/getFonts';
+import getThemes from './styles/getThemes';
+
 import './Nav.css';
 import './Footer.css';
 

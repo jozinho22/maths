@@ -1,7 +1,6 @@
-import { Container, Row, Col, Button } from 'react-bootstrap';
+import { Row, Col, Button } from 'react-bootstrap';
 
 const TableOfContents = ( {chapters, setCount} ) => {
-
 
     return (
         <>
@@ -12,9 +11,9 @@ const TableOfContents = ( {chapters, setCount} ) => {
                         <Button 
                             className="PrezButton DefaultButton"
                             onClick={() => setCount(chapter.id)}>
-                            {chapter.name}
+                            {chapter.id} - {chapter.name}
                         </Button>
-                        {chapter.picture}
+                        {chapter.picture ? chapter.picture : <></>}
                     </Col>
                 ))
             }

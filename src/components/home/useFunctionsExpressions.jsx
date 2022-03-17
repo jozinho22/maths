@@ -1,11 +1,13 @@
+import React from 'react';
 import getWidth from '../immutable/getWidth';
+import SizeContext from '../context/SizeContext';
 
-const buildFunctionsExpressions = () => {
+const useFunctionsExpressions = () => {
 
     var dLnx = "\\(\\frac{d(\\ln{x})}{dx} = \\frac{1}{x}\\)";
     var pyth = "\\(x^2 + y^2 = z^2\\)";
     var dSqrt = "\\(\\frac{d(\\sqrt{x^2+1})}{dx} = \\frac{x}{\\sqrt{x^2+1}}\\)";
-    var tauxVar = "\\(\\frac{d(f(x))}{dx} = \\lim_{h \\to 0} \\frac{f(x+h)-f(x)}{h}\\)"
+    var tauxVar = "\\(\\frac{d(f(x))}{dx} = \\lim_{h \\to 0} \\enspace \\frac{f(x+h)-f(x)}{h}\\)"
     var sinCos = "\\(cos{x^2(x)} + sin{x^2(x)} = 1\\)"
     var integX2 = "\\(\\int x^2 dx = \\frac{1}{3} x^3\\)"
     var alKashi = "\\(c = \\sqrt{a^2 + b^2 - 2abcos\\gamma}\\)"
@@ -34,8 +36,9 @@ const buildFunctionsExpressions = () => {
     var lnATimesB = "\\(ln(ab) = ln(a) + ln(b) \\)";
     var sigmaN = "\\(\\Sigma_{n=1}^{\\infty} n = \\frac{n(n+1)}{2}\\)";
 
-    var width = getWidth();
-
+    var [width] = React.useContext(SizeContext);
+    console.log(width)
+    
     var listEqu = [];
     var k = 0;
     listEqu.push(
@@ -189,4 +192,4 @@ const buildFunctionsExpressions = () => {
 
 }
 
-export default buildFunctionsExpressions;
+export default useFunctionsExpressions;

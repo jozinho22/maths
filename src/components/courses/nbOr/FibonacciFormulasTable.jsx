@@ -17,7 +17,6 @@ const FibonacciFormulasTable = () => {
                         <td>
                             <MathJaxDisplay toShow={"\\( \\phi^{n} \\)"} />
                         </td>
-                        
                     </tr>
                 </thead>
                 <tbody> 

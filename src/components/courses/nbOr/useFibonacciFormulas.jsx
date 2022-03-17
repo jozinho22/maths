@@ -12,7 +12,7 @@ const useFibonacciFormulas = () => {
 
         var fiboFormula = "\\( \\phi^{" + (fibo[k].id) + "} = " 
             + (fibo[k].nb === 1 ? "\\phi" : fibo[k].nb === -1 ? "-\\phi" : fibo[k].nb === 0 ? "" : fibo[k].nb + "\\phi") 
-            + (fibo[k - 1].nb !== 0 ? " + " + fibo[k - 1].nb : "") + "\\)";
+            + (fibo[k - 1].nb > 0 ? " + " + fibo[k - 1].nb : fibo[k - 1].nb < 0 ? fibo[k - 1].nb : "") + "\\)";
 
         fiboFormulas.push(
             {

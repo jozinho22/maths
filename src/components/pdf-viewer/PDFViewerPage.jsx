@@ -9,6 +9,8 @@ import PaginationFullDocument from './PaginationFullDocument';
 import AppContext from '../context/AppContext'
 
 import getWidth from '../immutable/getWidth';
+import SizeContext from '../context/SizeContext';
+
 import CustomSpinner from '../general-content/CustomSpinner';
 
 import { useSwipeable } from 'react-swipeable';
@@ -50,7 +52,8 @@ const PDFViewerPage = ({ pdfItem }) => {
             swipeRef.current = el;
         }
 
-        var mobile = getWidth() < 450;
+        var [width] = React.useContext(SizeContext);
+        var mobile = width < 450;
 
         React.useEffect(() => {
             updatePlayMode(true);

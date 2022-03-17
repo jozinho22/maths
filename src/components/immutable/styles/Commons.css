@@ -1,14 +1,14 @@
 .RelativeContainer {
     position: relative;
-    padding-top: calc(var(--customheader-height));
-    padding-bottom: calc(var(--customfooter-height) + 20px); 
+    padding-top: calc(var(--customheader-height) + 20px);
+    padding-bottom: calc(var(--customfooter-height) + 20px);
     min-height: 100vh;
     font-size: x-small;
 }
 
 .RelativeContainer.PlayMode {
     padding-top: 20px;
-    padding-bottom: 20px; 
+    padding-bottom: 20px;
 }
 
 .Title, .Title1 {
@@ -17,27 +17,27 @@
 }
 
 .Title {
-   margin: 0 auto;
-   padding-top: 20px;
-   font-size: small; 
-   padding-bottom: 20px;
-   block-size: fit-content;
-   width: fit-content;
+    margin: 0 auto;
+    padding-top: 20px;
+    font-size: small;
+    padding-bottom: 20px;
+    block-size: fit-content;
+    width: fit-content;
 }
 
 .Title1 {
-   padding-top: 10px;
-   text-align: left;
-   padding-bottom: 5px;
-   text-decoration: underline;
-   font-weight: bold;
+    padding-top: 10px;
+    text-align: left;
+    padding-bottom: 5px;
+    text-decoration: underline;
+    font-weight: bold;
 }
 
 .Title2 {
-   padding-top: 10px;
-   text-align: left;
-   text-decoration: underline;
-   font-style: italic;
+    padding-top: 10px;
+    text-align: left;
+    text-decoration: underline;
+    font-style: italic;
 }
 
 @media (min-width: 768px) {
@@ -45,6 +45,7 @@
         font-size: small;
         padding-top: calc(var(--customheader-height) + 20px);
     }
+
     .Title {
         font-size: medium;
     }
@@ -54,6 +55,7 @@
     .RelativeContainer {
         font-size: medium;
     }
+
     .Title {
         font-size: large;
     }
@@ -177,7 +179,7 @@
 }
 
 .InlineIcon {
-   padding-left: 5px;
+    padding-left: 5px;
 }
 
 @media (min-width: 768px) {
@@ -191,19 +193,19 @@
     .Icon {
         width: 35px;
         height: 35px;
-    }  
+    }
 }
 
 .CheckIcon {
-    color:  var(--green-color);
+    color: var(--green-color);
 }
 
 .QuestionIcon {
-    color:  var(--orange-color);
+    color: var(--orange-color);
 }
 
 .WrongIcon {
-    color:  var(--red-color);
+    color: var(--red-color);
 }
 
 /* Page tricks */
@@ -229,16 +231,18 @@
 }
 
 .AuthorCopyRight {
-    font-family: 'Times New Roman', Times, serif;
-    font-size: medium;
+    font-family: 'Times New Roman', Times, serif !important;
+    font-size: medium !important;
+    text-align: center !important;
 }
 
 /* Tables */
 
 .TableContainer {
     margin-bottom: 20px;
-/*     overflow: hidden;
- */    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    /*     overflow: hidden;
+ */
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: small;
 }
 
@@ -248,7 +252,7 @@
     }
 }
 
-.TableContainer td, th { 
+.TableContainer td, th {
     vertical-align: middle;
 }
 
@@ -257,6 +261,6 @@ table::-webkit-scrollbar {
 }
 
 table::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-    box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
 }

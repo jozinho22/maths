@@ -10,12 +10,15 @@ import './App.css';
 import { Container } from 'react-bootstrap';
 import AppContext from './components/context/AppContext';
 import pdfResourceBuilder from './components/pdf-viewer/pdfResourceBuilder';
-import initDimensions from './components/immutable/initDimensions';
+import SizeContext from './components/context/SizeContext';
+
+import useWindowSize from './components/immutable/dimensions/useWindowSize';
+import updateDimensions from './components/immutable/dimensions/updateDimensions';
 import Header from './components/immutable/Header';
 import Home from './components/home/Home';
 import Footer from './components/immutable/Footer';
-import LeNombreDOr from './components/courses/nbOr/LeNombreDOr';
-
+/* import LeNombreDOr from './components/courses/nbOr/LeNombreDOr';
+ */
 function App() {
 
     const [font, setFont] = React.useState("Dragons");
@@ -24,7 +27,7 @@ function App() {
 
     const [component, setComponent] = React.useState( 
         process.env.NODE_ENV === 'development' ? 
-            <LeNombreDOr /> 
+            <Home /> 
                 : <Home />
     );
 
@@ -41,13 +44,17 @@ function App() {
 
     var pdfItems = pdfResourceBuilder();
 
-    React.useEffect(() => {
-        initDimensions();
-    }, []);
+    const [width, height] = useWindowSize();
+    const sizeContext = [width, height];
+
+    React.useLayoutEffect(() => {
+        updateDimensions([width, height]);
+    }, [width, height]);
 
     return ( 
         <div className = "App" >     
             <AppContext.Provider value = {appContext} >
+            <SizeContext.Provider value ={sizeContext} >
                 <div className = {`${theme} ${font}`} >
                     <Header 
                         pdfItems = {pdfItems} /> 
@@ -56,6 +63,7 @@ function App() {
                     </Container> 
                     <Footer /> 
                 </div> 
+            </SizeContext.Provider>
             </AppContext.Provider> 
         </div>
     );

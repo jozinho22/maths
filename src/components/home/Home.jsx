@@ -1,14 +1,14 @@
 import { Container, Row, Col } from 'react-bootstrap';
 import MathJaxDisplay from '../mathjax-display/MathJaxDisplay';
-import buildFunctionsExpressions from './buildFunctionsExpressions';
+import useFunctionsExpressions from './useFunctionsExpressions';
 import './Home.css';
 
 const Home = () => {
   
-    var listEqu = buildFunctionsExpressions();
+    var listEqu = useFunctionsExpressions();
 
     return (
-        <Container className="HomeContainer">
+        <>
             <Container className="HomeTitleContainer">
                 Maths pour tous
             </Container>
@@ -21,7 +21,7 @@ const Home = () => {
                     ))}
                 </Row>  
             </Container>
-        </Container>
+        </>
     );
 }
 

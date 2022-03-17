@@ -3,11 +3,14 @@ import { Container } from 'react-bootstrap';
 import { HiOutlineZoomIn } from 'react-icons/hi';
 import getWidth from '../immutable/getWidth';
 
+import SizeContext from '../context/SizeContext';
+
 const ImageZoom = ( {src, name, n} ) => {
 
     const [zoom, setZoom] = React.useState(false);
 
-    var mobile = getWidth() < 450;
+    var [width] = React.useContext(SizeContext);
+    var mobile = width < 450;
 
     return (
             <Container className="ZoomContainer">     

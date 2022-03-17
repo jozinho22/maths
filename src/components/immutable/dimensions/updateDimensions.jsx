@@ -1,4 +1,4 @@
-const initDimensions = () => {
+const updateDimensions = ( [width, height] ) => {
     var dimensions = 
         [
             {className: 'CustomHeader', height: ''}, 
@@ -11,8 +11,10 @@ const initDimensions = () => {
         var property = dim.className.toLowerCase();
         document.documentElement.style.setProperty(`--${property}-height`, dim.height + 'px');
     }
-
+    document.documentElement.style.setProperty(`--window-width`, width + 'px');
+    document.documentElement.style.setProperty(`--window-height`, height + 'px');
+ 
     return dimensions;
 }
 
-export default initDimensions;
+export default updateDimensions;

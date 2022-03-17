@@ -1,39 +1,35 @@
-.HomeContainer {
+/* .HomeContainer {
     position: absolute;
-    top: 50%; /* Position Y halfway in */
-    left: 50%; /* Position X halfway in */
-    transform: translate(-50%,-50%); /* Move it halfway back(x,y) */
-}
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%,-50%); 
+} */
 
 .HomeTitleContainer {
     position: absolute;
-    top: 50%; /* Position Y halfway in */
-    left: 50%; /* Position X halfway in */
-    transform: translate(-50%,-50%); /* Move it halfway back(x,y) */
+    top: 50%;
+    /* Position Y halfway in */
+    left: 50%;
+    /* Position X halfway in */
+    transform: translate(-50%, -50%);
+    /* Move it halfway back(x,y) */
     background-color: var(--front-color);
     border-radius: 10px;
     color: var(--links-color);
     font-size: small;
     padding: 30px;
     margin-top: 20px;
-    width: 40%;
+    width: calc(var(--window-width) * 3 / 4);
     z-index: 1;
 }
 
-@media (min-width : 768px) {
+@media (min-width : 450px) {
     .HomeTitleContainer {
-        width: 40%;
-        font-size: medium;
-        padding: 40px;
+        width: calc(var(--window-width) * 1 / 2);
     }
 }
 
 @media (min-width : 768px) {
-    .HomeTitleContainer {
-        width: 30%;
-        font-size: large;
-        padding: 50px;
-    }
     .ExpressionsContainer .MathJaxDisplayContainer {
         padding: 10px;
     }

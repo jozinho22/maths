@@ -4,17 +4,13 @@
 
 .SwitchButton .btn-lg {
     border-color: var(--grey-light-color);
-    font-size: xx-small !important;  
+    font-size: xx-small !important;
 }
 
-@media (min-width: 360px) {
+@media (min-width: 450px) {
     .SwitchButton .btn-lg {
         font-size: x-small !important;
     }
-    .SwitchButton {
-        width: 60%;
-    }
-
 }
 
 @media (min-width: 768px) {
@@ -22,7 +18,7 @@
         font-size: small !important;
     }
     .SwitchButton {
-        width: 50%;
+        width: 60%;
     }
 }
 
@@ -67,7 +63,7 @@
 .UnPlayModeButton, .PlayModeButton {
     position: absolute;
     right: 0px;
-    margin-top : 10px;
+    margin-top: 10px;
     background-color: var(--green-color);
 }
 
