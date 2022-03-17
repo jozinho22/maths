@@ -12,8 +12,6 @@ const useRabbitsEvolution = () => {
         );
     }
 
-    console.log(values)
-
     return values;
 
 };

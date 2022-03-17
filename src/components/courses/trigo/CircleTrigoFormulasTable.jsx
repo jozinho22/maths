@@ -1,5 +1,5 @@
 import MathJaxInline from '../../mathjax-display/MathJaxInline';
-import { Container, Table } from 'react-bootstrap';
+import { Table } from 'react-bootstrap';
 
 const CircleTrigoFormulasTable = () => {
 

@@ -220,7 +220,7 @@ const LeProduitEnCroix = () => {
                     <MathJaxDisplay toShow={adEqubc}/>
                 </Container>
                 <p className="Title1">c) Application</p>
-                <p className="Underline">Exo 1</p>
+                <p className="Title2">Exo 1</p>
                 <p>On sait que 1 kg = 1 000 g.
                     {"\n"}Combien fait 3000 kg convertit en g ?
                 </p>
@@ -241,7 +241,7 @@ const LeProduitEnCroix = () => {
                     <MathJaxDisplay toShow={answerExo1Results}/>
                 </Container>
 
-                <p className="Underline">Exo 2</p>
+                <p className="Title2">Exo 2</p>
                 <p>
                     Ma voiture diesel consomme 3 litre / (100 km).
                     {"\n"}Combien me faut-il de litre d’essence pour aller jusqu’à Paris depuis Rennes ?
@@ -258,7 +258,7 @@ const LeProduitEnCroix = () => {
                     <MathJaxDisplay toShow={answerExo2Results}/>
                 </Container>
 
-                <p className="Underline">Exo 2-b</p>
+                <p className="Title2">Exo 2-b</p>
                 <p>
                     Sachant que le gasoil vaut 1,45 € / litre, combien cela va-t-il me coûter pour un aller-retour Paris-Rennes ?
                 </p>
