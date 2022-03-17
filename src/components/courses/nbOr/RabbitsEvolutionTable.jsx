@@ -7,33 +7,32 @@ const RabbitsEvolutionTable = () => {
     var rabbitsEv = getRabbitsEvolution();
 
     return (
-
             <NiceTable>
-                    <thead>
-                        <tr>
-                            <th>
-                                Mois
+                <thead>
+                    <tr>
+                        <th>
+                            Mois
+                        </th>
+                        {Array.from(rabbitsEv).map( (value, index) => (
+                            <th key={index}>
+                                {value.id}    
                             </th>
-                            {Array.from(rabbitsEv).map( (value, index) => (
-                                <th key={index}>
-                                    {value.id}    
-                                </th>
-                            ))}
-                        </tr>
-                    </thead>
-                    <tbody> 
-                        <tr>
-                            <td>
-                                Nombre de couples
+                        ))}
+                    </tr>
+                </thead>
+                <tbody> 
+                    <tr>
+                        <td>
+                            Nombre de couples
+                        </td>
+                        {Array.from(rabbitsEv).map( (value, index) => (
+                            <td key={index}>
+                                {value.nb}    
                             </td>
-                            {Array.from(rabbitsEv).map( (value, index) => (
-                                <td key={index}>
-                                    {value.nb}    
-                                </td>
-                            ))}
-                        </tr>   
-                    </tbody>
-                </NiceTable>   
+                        ))}
+                    </tr>   
+                </tbody>
+            </NiceTable>   
         );
 
 }

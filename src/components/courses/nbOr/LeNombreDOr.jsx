@@ -14,6 +14,7 @@ import FibonacciTable from './FibonacciTable';
 
 import euclideStuff from './assets/euclideStuff.png';
 import LeProduitEnCroix from '../cross-product/LeProduitEnCroix';
+import FibonacciFormulasTable from './FibonacciFormulasTable';
 
 import './LeNombreDOr.css'
 
@@ -65,8 +66,8 @@ const LeNombreDOr = () => {
     var phi446 = "\\(\\phi^4 = \\phi^3 +  \\phi^2 \\)";
     var phi447 = "\\(\\phi^4 = 3\\phi + 2 \\)";
 
-    var phiGen2 =  "\\(\\phi^{n+2} =  \\phi^{n+1} +  \\phi^{n} \\)";
     var phiGen =  "\\(\\phi^{n+1} =  F_{n+1}.\\phi +  F_{n} \\)";
+    var phiGen2 =  "\\(\\phi^{n+2} =  \\phi^{n+1} +  \\phi^{n} \\)";
 
     var phiMainReverse = "\\( F_{n} = F_{n+2} - F_{n+1} \\)";
 
@@ -102,16 +103,16 @@ const LeNombreDOr = () => {
     var phiPowMinus33 = "\\(\\phi^{-3} = 2  (\\phi - 1) - 1\\)";
     var phiPowMinus34 = "\\(\\phi^{-3} = 2\\phi - 3\\)";
 
+    var phiGenVerifBegin = "\\(\\phi^{-1} = F_{-1}.\\phi + F_{-2}\\)";
+    var phiGenVerif = "$F_{-1}.\\phi + F_{-2} $";
+    var phiGenVerif2 = "\\(F_{-1}.\\phi + F_{-2} = \\phi - 1 \\)";
+    var phiGenVerifOk = "$\\phi^{-1} = F_{-1}.\\phi + F_{-2} $";
 
     var phiGen2VerifBegin = "\\(\\phi^{-1} = \\phi^{-2} + \\phi^{-3}\\)";
     var phiGen2Verif = "$\\phi^{-2} + \\phi^{-3} $";
     var phiGen2Verif2 = "\\(\\phi^{-2} + \\phi^{-3} = 2 - \\phi + 2\\phi -3 \\)";
     var phiGen2Verif3 = "\\(\\phi^{-2} + \\phi^{-3} = \\phi -1  \\)";
     var phiGen2VerifOk = "$\\phi - 1 = \\phi^{-1} $";
-
-    var phiGenVerifBegin = "\\(\\phi^{-1} = F_{-1}.\\phi + F_{-2}\\)";
-    var phiGenVerif = "$F_{-1}.\\phi + F_{-2} $";
-    var phiGenVerif2 = "\\(F_{-1}.\\phi + F_{-2} = \\phi - 1 \\)";
 
     var approxPhi1Begin =  "$\\phi^2 = \\phi + 1  $";
     var approxPhi1 = "\\( \\phi = \\sqrt{1 + \\sqrt{1 + \\sqrt{1 + \\sqrt{1 + {...} }}}} \\)"
@@ -120,6 +121,7 @@ const LeNombreDOr = () => {
     var approxPhi2Begin2 =  "$ 1 + \\phi^{-1} = \\phi $";
     var approxPhi2 = "\\( \\phi = 1 + \\frac{1}{ 1 + \\frac{1}{ 1 + \\frac{1}{1 + \\frac{1}{1 + {...} }}}} \\)"
     
+    var approxPhi3 = "\\( \\phi = 4 \\sum_{k =0}^{+\\infty} \\enspace \\frac{-1}{2k + 1} \\big( \\big( \\phi^{-1} \\big)^{2k+1} + \\big( \\phi^{-3} \\big)^{2k+1}   \\big) \\)"
 
     React.useEffect(() => {
         if(process.env.NODE_ENV !== 'development') {
@@ -222,15 +224,17 @@ const LeNombreDOr = () => {
                 </Container>            
 
                 <p className="Title1">Caractéristiques du nombre d'or</p>
-                <p>On a vu plus haut que cenombre vérifiait l'équation suivante </p>
+                <p>On a vu plus haut que ce nombre vérifiait l'équation suivante </p>
                 <MathJaxDisplay toShow={euclideStuff4} />
                 <p>Donc on peut remplacer <MathJaxInline toShow={"$x$"} /> par <MathJaxInline toShow={"$\\phi$"} /></p>
                 <Container className="Focus">
                     <MathJaxDisplay toShow={phi22} />
+                </Container>
+                <p>On peut aussi l'écrire sous cette forme</p>
+                <Container className="Focus">
                     <MathJaxDisplay toShow={phi221} />
                 </Container>
-                
-                <p className="Underline">Calcul de <MathJaxInline toShow={"$\\phi^3$"} /></p>
+                <p className="Title2">Calcul de <MathJaxInline toShow={"$\\phi^3$"} /></p>
                 <MathJaxDisplay toShow={phi33} demo />
                 <p>On remplace <MathJaxInline toShow={"$\\phi^2$"} /> par <MathJaxInline toShow={"$\\phi + 1$"} /> </p>
                 <MathJaxDisplay toShow={phi331} demo />
@@ -238,11 +242,13 @@ const LeNombreDOr = () => {
                 <MathJaxDisplay toShow={phi333} demo />
                 <p>On obtient ces deux expressions au suite des calculs :</p>
                 <Container className="Focus">
-                    <MathJaxDisplay toShow={phi332} />
                     <MathJaxDisplay toShow={phi334} />
                 </Container>
-                
-                <p className="Underline">Calcul de <MathJaxInline toShow={"$\\phi^4$"} /></p>
+                <Container className="Focus">
+                    <MathJaxDisplay toShow={phi332} />
+                </Container>
+             
+                <p className="Title2">Calcul de <MathJaxInline toShow={"$\\phi^4$"} /></p>
                 <MathJaxDisplay toShow={phi44} demo />
                 <p>On remplace par ce qu'on connait de <MathJaxInline toShow={"$\\phi^3$"} /> </p>
                 <MathJaxDisplay toShow={phi441} demo />
@@ -252,14 +258,18 @@ const LeNombreDOr = () => {
                 <MathJaxDisplay toShow={phi444} demo />
                 <MathJaxDisplay toShow={phi445} demo />
                 <Container className="Focus">
-                    <MathJaxDisplay toShow={phi446} />
                     <MathJaxDisplay toShow={phi447} />
+                </Container>
+                <Container className="Focus">
+                    <MathJaxDisplay toShow={phi446} />
                 </Container>
                 <p>On voit qu'il y a encore une fois un pattern qui se répète avec le nombre d'or.</p>
                 <p>On peut alors généraliser ces deux expressions :</p>
                 <Container className="Focus">
-                    <MathJaxDisplay toShow={phiGen2} />
                     <MathJaxDisplay toShow={phiGen} />
+                </Container>
+                <Container className="Focus">
+                    <MathJaxDisplay toShow={phiGen2} />
                 </Container>
 
                 <p className="Title1">Caractéristiques du nombre d'or en sens inverse</p>
@@ -291,7 +301,7 @@ const LeNombreDOr = () => {
                 <p>Voici les éléments de la suite ajoutée de leur mirroir</p>
                 <FibonacciTable />
                 
-                <p className="Underline">Calcul de <MathJaxInline toShow={"$\\phi^{-1}$"} /></p>
+                <p className="Title2">Calcul de <MathJaxInline toShow={"$\\phi^{-1}$"} /></p>
                 <p>On sait que : </p>
                 <MathJaxDisplay toShow={phi22} demo/>
                 <p>Divisons tout par <MathJaxInline toShow={"$\\phi$"} /> pour transformer <MathJaxInline toShow={"$1$"} /> en <MathJaxInline toShow={"$\\frac{1}{\\phi}$"} /></p>
@@ -302,7 +312,7 @@ const LeNombreDOr = () => {
                     <MathJaxDisplay toShow={phiPowMinus12} />
                 </Container>
               
-                <p className="Underline">Calcul de <MathJaxInline toShow={"$\\phi^{-2}$"} /></p>
+                <p className="Title2">Calcul de <MathJaxInline toShow={"$\\phi^{-2}$"} /></p>
                 <p>On sait que : </p>
                 <MathJaxDisplay toShow={phiPowMinus2} demo/>
                 <p>Soit que </p>
@@ -314,7 +324,7 @@ const LeNombreDOr = () => {
                     <MathJaxDisplay toShow={phiPowMinus24} />
                 </Container>
 
-                <p className="Underline">Calcul de <MathJaxInline toShow={"$\\phi^{-3}$"} /></p>
+                <p className="Title2">Calcul de <MathJaxInline toShow={"$\\phi^{-3}$"} /></p>
                 <p>On sait que : </p>
                 <MathJaxDisplay toShow={phiPowMinus3} demo/>
                 <p>Soit que </p>
@@ -326,31 +336,46 @@ const LeNombreDOr = () => {
                     <MathJaxDisplay toShow={phiPowMinus34} />
                 </Container>
 
-                <p className="Underline">Vérification</p>
+                <p className="Title2">Vérification</p>
                 <p>Nous allons vérifier que les formules marchent bien aussi en sens inverse.</p>
                 <p>Pour rappel, nous avions :</p>
-                <MathJaxDisplay toShow={phiGen2} />
+                
                 <p>Si tout se passe bien, nous devrions retrouver :</p>
+                <MathJaxDisplay toShow={phiGen} />
+                <p>Si tout se passe bien, nous devrions avoir :</p>
+                <MathJaxDisplay toShow={phiGenVerifBegin} />
+                <p>Calculons d'abord <MathJaxInline toShow={phiGenVerif} /></p>
+                <MathJaxDisplay toShow={phiGenVerif2} demo />
+                <p>Tout est OK, car <MathJaxInline toShow={phiGenVerifOk} /></p>
+
+                <p>{"\n"}{"\n"}Vérifions maintenant la seconde formule :</p>
+                <MathJaxDisplay toShow={phiGen2} />
+                <p>Si tout se passe bien, nous devrions avoir :</p>
                 <MathJaxDisplay toShow={phiGen2VerifBegin} />
                 <p>Calculons d'abord <MathJaxInline toShow={phiGen2Verif} /></p>
                 <MathJaxDisplay toShow={phiGen2Verif2} demo/>
                 <MathJaxDisplay toShow={phiGen2Verif3} demo/>
                 <p>Tout est OK, car <MathJaxInline toShow={phiGen2VerifOk} /></p>
-                <p>{"\n"}{"\n"}Vérifions maintenant la seconde formule :</p>
-                <MathJaxDisplay toShow={phiGen} />
-                <p>De même, si tout se passe bien, nous devrions avoir :</p>
-                <MathJaxDisplay toShow={phiGenVerifBegin} />
-                <p>Calculons d'abord <MathJaxInline toShow={phiGenVerif} /></p>
-                <MathJaxDisplay toShow={phiGenVerif2} demo />
-                <p>De même, tout est OK</p>
+
+                <p>En résumé, on a : </p>
+                <FibonacciFormulasTable />
+
+
                 <p className="Title1">Autres formules générales</p>
+                <p className="Title2">Formule de la racine</p>
                 <p>À partir de la formule <MathJaxInline toShow={approxPhi1Begin}/>, on a :</p>
                 <Container className="Focus">
                     <MathJaxDisplay toShow={approxPhi1} />
                 </Container>
+                <p>{"\n"}{"\n"}Vérifions maintenant la seconde formule :</p>
+                <p className="Title2">Formule du quotient</p>
                 <p>À partir de la formule <MathJaxInline toShow={approxPhi2Begin}/>, qu'on arrange en <MathJaxInline toShow={approxPhi2Begin2}/> on a :</p>
                 <Container className="Focus">
                     <MathJaxDisplay toShow={approxPhi2} infiniteFrac />
+                </Container>
+                <p className="Title2">Formule de la somme</p>
+                <Container className="Focus">
+                    <MathJaxDisplay toShow={approxPhi3} />
                 </Container>
             </Container>
             <UnsplashCopyRight item="Images" />

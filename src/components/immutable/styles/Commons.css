@@ -33,6 +33,13 @@
    font-weight: bold;
 }
 
+.Title2 {
+   padding-top: 10px;
+   text-align: left;
+   text-decoration: underline;
+   font-style: italic;
+}
+
 @media (min-width: 768px) {
     .RelativeContainer {
         font-size: small;
