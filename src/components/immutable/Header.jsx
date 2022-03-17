@@ -3,6 +3,7 @@ import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
 import MathJaxInline from '../mathjax-display/MathJaxInline';
 import Home from '../home/Home';
 import LeNombrePi from '../courses/pi/LeNombrePi';
+import LeNombreDOr from '../courses/nbOr/LeNombreDOr';
 import LaTrigonometrie from '../courses/trigo/LaTrigonometrie';
 import Shapes from '../courses/shapes/LesFormes';
 import UsualFunctions from '../usual-functions/UsualFunctions';
@@ -61,6 +62,12 @@ const Header = ({ pdfItems }) => {
                                 }} >
                                 Le nombre <MathJaxInline toShow={"$ \\pi $"} />
                             </NavDropdown.Item>  
+                            <NavDropdown.Item 
+                                onClick={() => {
+                                    goTo(<LeNombreDOr />);
+                                }} >
+                                Le nombre d'or (<MathJaxInline toShow={"$ \\phi $"} />)
+                            </NavDropdown.Item> 
                             <NavDropdown.Item 
                                 onClick={() => {
                                     goTo(<LaTrigonometrie />);

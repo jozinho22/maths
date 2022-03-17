@@ -70,7 +70,7 @@ const CircleTrigoFormulasTable = () => {
         }
     );
     return (
-            <Table className="TrigoTable" responsive >
+            <Table className="ValuesTable" responsive >
                 <thead>
                     <tr>
                         <th>

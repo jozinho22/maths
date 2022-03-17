@@ -68,7 +68,7 @@ const LeNombrePi = () => {
     var pi16d2 = "\\( \\pi \\approx 16\\sqrt{2 - \\sqrt{ 2 + \\sqrt{2 + \\sqrt{2} }}} \\)"
     var pi16dR = "\\( \\pi \\approx 3,13 \\)"
 
-    var piG = "\\( \\pi = lim_{n \\to +\\infty} \\enspace 2^{n+1} \\sqrt{2 - \\underbrace {\\sqrt{ 2 + \\sqrt{2 + \\sqrt{ 2 + {...}}}} }_\\text{n} }  \\)"
+    var piG = "\\( \\pi = lim_{n \\to +\\infty} \\enspace 2^{n+1} \\sqrt{2 - \\underbrace { \\sqrt{ 2 + \\sqrt{2 + \\sqrt{ 2 + {...}}}} }_\\text{n} }  \\)"
 
     var approxPi1 = "\\( \\frac{\\pi}{4} = \\frac{1}{ 1 + \\frac{1^2}{ 3 + \\frac{2^2}{5 + \\frac{3^2}{7 + {...} }}}} \\)"
 

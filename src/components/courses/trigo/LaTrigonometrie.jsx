@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Row, Col, Button } from 'react-bootstrap';
+import { Container, Button } from 'react-bootstrap';
 import MathJaxDisplay from '../../mathjax-display/MathJaxDisplay';
 import MathJaxInline from '../../mathjax-display/MathJaxInline';
 import CircleTrigoValuesTable from './CircleTrigoValuesTable';
@@ -9,8 +9,6 @@ import circleTrigoValues from './assets/circleTrigoValues.png';
 import AppContext from '../../context/AppContext';
 import LeNombrePi from '../pi/LeNombrePi';
 import CircleTrigoFormulasTable from './CircleTrigoFormulasTable';
-
-import './LaTrigonometrie.css'
 
 const LaTrigonometrie = () => {
 

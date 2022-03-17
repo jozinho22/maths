@@ -1,7 +1,7 @@
 import React from 'react';
 import GenericCourse from '../GenericCourse';
 import getChapters from './chapters/getChapters';
-
+import UnsplashCopyRight from '../UnsplashCopyRight';
 import './LesFormes.css';
 
 const LesFormes = () => {
@@ -12,9 +12,7 @@ const LesFormes = () => {
     return (
         <>
             <GenericCourse title={title} chapters={chapters} />
-            <p className="AuthorCopyRight">Textures : Copyright &copy; 
-                <a href="http://unsplash.com" target="_blank" rel="noreferrer">unsplash.com</a>
-            </p>           
+            <UnsplashCopyRight item="Textures" />
         </>
     );
 

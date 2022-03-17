@@ -14,7 +14,7 @@ import initDimensions from './components/immutable/initDimensions';
 import Header from './components/immutable/Header';
 import Home from './components/home/Home';
 import Footer from './components/immutable/Footer';
-import LaTrigonometrie from './components/courses/trigo/LaTrigonometrie';
+import LeNombreDOr from './components/courses/nbOr/LeNombreDOr';
 
 function App() {
 
@@ -24,7 +24,7 @@ function App() {
 
     const [component, setComponent] = React.useState( 
         process.env.NODE_ENV === 'development' ? 
-            <LaTrigonometrie /> 
+            <LeNombreDOr /> 
                 : <Home />
     );
 
