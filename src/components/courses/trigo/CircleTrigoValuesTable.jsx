@@ -64,7 +64,7 @@ const CircleTrigoValuesTable = () => {
             id: ++k,
             alpha: <MathJaxInline toShow={"$ \\frac{3\\pi}{4}$"} />,
             alphaDeg: <MathJaxInline toShow={"$135° $"} />,
-            cos: <MathJaxInline toShow={"$\\frac{\\sqrt{2}}{2}$"} />,
+            cos: <MathJaxInline toShow={"$-\\frac{\\sqrt{2}}{2}$"} />,
             sin: <MathJaxInline toShow={"$\\frac{\\sqrt{2}}{2}$"} />
         }
     );
@@ -87,7 +87,7 @@ const CircleTrigoValuesTable = () => {
         }
     );
     return (
-            <Table className="TrigoTable" responsive >
+            <Table className="ValuesTable" responsive >
                 <thead>
                     <tr>
                         <th>
