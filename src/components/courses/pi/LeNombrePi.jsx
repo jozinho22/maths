@@ -204,14 +204,14 @@ const LeNombrePi = () => {
                 <MathJaxDisplay toShow={pi16d2} demo /> 
                 <MathJaxDisplay toShow={pi16dR} demo /> 
 
-                <p className="Underline">Généralisation</p>
+                <p className="Title1">Généralisation</p>
                 <p>Nous pouvons à présent donner une formule générale pour <MathJaxInline toShow={"$\\pi$"} /></p>
                 <Container className="Focus">
                     <MathJaxDisplay toShow={piG} />  
                 </Container>
                 <p>avec <MathJaxInline toShow="$ n $" /> le nombre de <MathJaxInline toShow="$ 2 $" /> additionnés de manière récursive</p>                
                 
-                <p className="Underline">Autres formules générales </p>
+                <p className="Title1">Autres formules générales </p>
                 <Container className="Focus">
                     <MathJaxDisplay toShow={approxPi1} infiniteFrac />  
                 </Container>

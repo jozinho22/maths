@@ -93,15 +93,14 @@ const LeNombreDOr = () => {
     var phiPowMinus2 = "\\(\\phi^{-1} = \\phi - 1 \\)";
     var phiPowMinus21 = "\\(\\frac{1}{\\phi} = \\phi - 1 \\)";
     var phiPowMinus22 = "\\(\\frac{1}{\\phi^2} = 1 - \\frac{1}{\\phi}  \\)";
-    var phiPowMinus23 = "\\(\\frac{1}{\\phi^2} = 1 - (\\phi - 1)  \\)";
-    var phiPowMinus24 = "\\(\\frac{1}{\\phi^2} = 2 - \\phi  \\)";
+    var phiPowMinus23 = "\\(\\phi^{-2} = 1 - (\\phi - 1)  \\)";
+    var phiPowMinus24 = "\\(\\phi^{-2} = 2 - \\phi  \\)";
 
     var phiPowMinus3 = "\\(\\phi^{-2} = 2 - \\phi\\)";
     var phiPowMinus31 = "\\(\\phi^{-3} = \\frac{2}{\\phi} - 1\\)";
     var phiPowMinus32 = "\\(\\phi^{-3} = 2{\\phi}^{-1} - 1\\)";
     var phiPowMinus33 = "\\(\\phi^{-3} = 2  (\\phi - 1) - 1\\)";
-    var phiPowMinus34 = "\\(\\phi^{-3} = 2(\\phi - 1) - 1\\)";
-    var phiPowMinus35 = "\\(\\phi^{-3} = 2\\phi - 3\\)";
+    var phiPowMinus34 = "\\(\\phi^{-3} = 2\\phi - 3\\)";
 
 
     var phiGen2VerifBegin = "\\(\\phi^{-1} = \\phi^{-2} + \\phi^{-3}\\)";
@@ -118,6 +117,7 @@ const LeNombreDOr = () => {
     var approxPhi1 = "\\( \\phi = \\sqrt{1 + \\sqrt{1 + \\sqrt{1 + \\sqrt{1 + {...} }}}} \\)"
 
     var approxPhi2Begin =  "$ \\phi^{-1} = \\phi - 1 $";
+    var approxPhi2Begin2 =  "$ 1 + \\phi^{-1} = \\phi $";
     var approxPhi2 = "\\( \\phi = 1 + \\frac{1}{ 1 + \\frac{1}{ 1 + \\frac{1}{1 + \\frac{1}{1 + {...} }}}} \\)"
     
 
@@ -151,7 +151,7 @@ const LeNombreDOr = () => {
                 <ImageZoom src={rabbitsEvolution} name="Évolution du nombre de couple de lapins sur un an" n={++n} />
                 <p>
                     On remarque l'évolution suit une certaine tendance.
-                    {"\n"}En effet, le couple de lapins présents au mois <MathJaxInline toShow={"$n$"} /> est toujours égal à l'addition de ceux présents les deux mois précédents.
+                    {"\n"}En effet, le couple de lapins présents au mois en cours est toujours égal à l'addition de ceux présents les deux mois précédents.
                     {"\n"}{"\n"}On alors cette modélisation :
                 </p>
                 <Container className="Focus">
@@ -159,12 +159,10 @@ const LeNombreDOr = () => {
                 </Container>
                 <p><MathJaxInline toShow={"$F_n$"} /> étant le nombre de lapins au mois <MathJaxInline toShow={"$n$"} /></p>
                 <p>
-                    Pour les mois avant la naissance des premiers specimens, on prendra comme valeur <MathJaxInline toShow={"$0$"} />.
-                    La suite de nombres correspondant au naissances de lapins s'appelle la suite de Fibonacci.
+                    La suite de nombres correspondant au naissances de couples de lapins mensuelles s'appelle la suite de Fibonacci.
                 </p>
                 <p>
-                    Fibonacci s'est ensuite intéressé au ratio entre le nombre au mois suivant et le mois courant.
-                    {"\n"}Soit <MathJaxInline toShow={ratio} />
+                    Fibonacci s'est ensuite intéressé au ratio entre le nombre au mois suivant et le mois courant, soit <MathJaxInline toShow={ratio} />
                 </p>
                 <RatioTable />
                 <p>On s'aperçoit que l'on tend vers une certaine valeur, mais sa valeur exacte est  :</p>
@@ -301,7 +299,7 @@ const LeNombreDOr = () => {
                 <MathJaxDisplay toShow={phiPowMinus11} demo/>
                 <p>Soit :</p>
                 <Container className="Focus">
-                    <MathJaxDisplay toShow={phiPowMinus12} demo/>
+                    <MathJaxDisplay toShow={phiPowMinus12} />
                 </Container>
               
                 <p className="Underline">Calcul de <MathJaxInline toShow={"$\\phi^{-2}$"} /></p>
@@ -313,7 +311,7 @@ const LeNombreDOr = () => {
                 <MathJaxDisplay toShow={phiPowMinus22} demo/>
                 <MathJaxDisplay toShow={phiPowMinus23} demo/>
                 <Container className="Focus">
-                    <MathJaxDisplay toShow={phiPowMinus24} demo/>
+                    <MathJaxDisplay toShow={phiPowMinus24} />
                 </Container>
 
                 <p className="Underline">Calcul de <MathJaxInline toShow={"$\\phi^{-3}$"} /></p>
@@ -324,11 +322,9 @@ const LeNombreDOr = () => {
                 <p>On divise encore tout par <MathJaxInline toShow={"$\\phi$"} /></p>
                 <MathJaxDisplay toShow={phiPowMinus32} demo/>
                 <MathJaxDisplay toShow={phiPowMinus33} demo/>
-                <MathJaxDisplay toShow={phiPowMinus34} demo/>
                 <Container className="Focus">
-                    <MathJaxDisplay toShow={phiPowMinus35} demo/>
+                    <MathJaxDisplay toShow={phiPowMinus34} />
                 </Container>
-
 
                 <p className="Underline">Vérification</p>
                 <p>Nous allons vérifier que les formules marchent bien aussi en sens inverse.</p>
@@ -339,7 +335,8 @@ const LeNombreDOr = () => {
                 <p>Calculons d'abord <MathJaxInline toShow={phiGen2Verif} /></p>
                 <MathJaxDisplay toShow={phiGen2Verif2} demo/>
                 <MathJaxDisplay toShow={phiGen2Verif3} demo/>
-                <p>Tout est OK, car <MathJaxInline toShow={phiGen2VerifOk} />,  vérifions maintenant la seconde formule :</p>
+                <p>Tout est OK, car <MathJaxInline toShow={phiGen2VerifOk} /></p>
+                <p>{"\n"}{"\n"}Vérifions maintenant la seconde formule :</p>
                 <MathJaxDisplay toShow={phiGen} />
                 <p>De même, si tout se passe bien, nous devrions avoir :</p>
                 <MathJaxDisplay toShow={phiGenVerifBegin} />
@@ -351,7 +348,7 @@ const LeNombreDOr = () => {
                 <Container className="Focus">
                     <MathJaxDisplay toShow={approxPhi1} />
                 </Container>
-                <p>À partir de la formule <MathJaxInline toShow={approxPhi2Begin}/>, on a :</p>
+                <p>À partir de la formule <MathJaxInline toShow={approxPhi2Begin}/>, qu'on arrange en <MathJaxInline toShow={approxPhi2Begin2}/> on a :</p>
                 <Container className="Focus">
                     <MathJaxDisplay toShow={approxPhi2} infiniteFrac />
                 </Container>
