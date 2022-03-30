@@ -5,6 +5,8 @@ import Home from '../home/Home';
 import LeNombrePi from '../courses/pi/LeNombrePi';
 import LeNombreDOr from '../courses/nbOr/LeNombreDOr';
 import LaTrigonometrie from '../courses/trigo/LaTrigonometrie';
+import LesPuissances from '../courses/powers/LesPuissances';
+
 import Shapes from '../courses/shapes/LesFormes';
 import UsualFunctions from '../usual-functions/UsualFunctions';
 import LeProduitEnCroix from '../courses/cross-product/LeProduitEnCroix';
@@ -55,6 +57,12 @@ const Header = ({ pdfItems }) => {
                                     goTo(<LeProduitEnCroix />);
                                 }} >
                                 Règle de 3
+                            </NavDropdown.Item>
+                            <NavDropdown.Item 
+                                onClick={() => {
+                                    goTo(<LesPuissances />);
+                                }} >
+                                Les puissances
                             </NavDropdown.Item>
                             <NavDropdown.Item 
                                 onClick={() => {

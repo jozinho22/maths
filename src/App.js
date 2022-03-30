@@ -19,6 +19,8 @@ import Home from './components/home/Home';
 import Footer from './components/immutable/Footer';
 /* import LeNombreDOr from './components/courses/nbOr/LeNombreDOr';
  */
+
+import LesPuissances from './components/courses/powers/LesPuissances';
 function App() {
 
     const [font, setFont] = React.useState("Dragons");
@@ -27,7 +29,7 @@ function App() {
 
     const [component, setComponent] = React.useState( 
         process.env.NODE_ENV === 'development' ? 
-            <Home /> 
+            <LesPuissances /> 
                 : <Home />
     );
 
