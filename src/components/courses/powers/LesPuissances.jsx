@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Row, Col, Button } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
 import MathJaxDisplay from '../../mathjax-display/MathJaxDisplay';
 import MathJaxInline from '../../mathjax-display/MathJaxInline';
 
@@ -43,13 +43,40 @@ const LesPuissances = () => {
 
     var compInv = "\\( \\frac{1}{x^{-3}} = {x^3} \\)";
 
-    var xPowAOnXPowB = "\\( \\frac{x^a}{x^b} = x^{a - b} \\)";
-    var xDiff0 = "$avec \\; x \\neq 0$"
 
-    var xTimesYPowA = "\\( \\big(x \\times y)^{a} = x^a \\times y^a \\)";
+    var xTimesYPowA = "\\( (x \\times y)^{a} = x^a \\times y^a \\)";
+    var xTimesYPowADemo = "\\( (x \\times y)^{a} = \\underbrace{ (x \\times y) \\times (x \\times y) \\times (x \\times y) ...etc.}_\\text{a fois} \\)";
+    var xTimesYPowADemo2 = "\\( (x \\times y)^{a} = \\underbrace{ (x  \\times x  \\times x ...etc.) }_\\text{a fois} \\underbrace{ (y  \\times y  \\times y ...etc.) }_\\text{a fois} \\)";
 
     var xOnYPowA = "\\( \\Big(\\frac{x}{y}\\Big)^{a} = \\frac{x^a}{y^a}  \\)";
     var yDiff0 = "$ avec \\;  y \\neq 0$"
+    var xOnYPowADemo = "\\( \\Big(\\frac{x}{y}\\Big)^{a} = \\underbrace{ \\frac{x}{y} \\times \\frac{x}{y} \\times \\frac{x}{y} ...etc.}_\\text{a fois} \\)";
+    var xOnYPowADemo2 = "\\( \\Big(\\frac{x}{y}\\Big)^{a} =  \\frac{ \\overbrace{x  \\times x  \\times x ...etc. }^\\text{a fois} }  { \\underbrace{ y  \\times y  \\times y ...etc. }_\\text{a fois} }  \\)";
+
+    var xPowAOnXPowB = "\\( \\frac{x^a}{x^b} = x^{a - b} \\)";
+    var xDiff0 = "$avec \\; x \\neq 0$"
+    var xPowAOnXPowBDemo = "\\( \\frac{x^a}{x^b} = x^a x^{-b} \\)";
+    var xPowAOnXPowBDemo2 = "\\( \\frac{x^a}{x^b} = x^{a + (- b)} \\)";
+    var xPowAOnXPowBDemo3 = "\\( \\frac{x^a}{x^b} = x^{a - b} \\)";
+
+    var sqrt2 = "\\( \\sqrt{x} \\times \\sqrt{x} = x \\)";
+    var sqrt22 = "\\( x^{n} \\times x^{n} = x^1 \\)";
+    var sqrt23 = "\\( x^{n + n} = x^1 \\)";
+    var sqrt24 = "\\( x^{2n} = x^1 \\)";
+    var sqrt25 = "\\( 2n = 1 \\Leftrightarrow  n = \\frac{1}{2} \\)";
+    var sqrt26 = "\\( \\sqrt{x} = x^{\\frac{1}{2}} \\)";
+
+    var sqrt3 = "\\( \\sqrt[3]{x} \\times \\sqrt[3]{x} \\times \\sqrt[3]{x} = x \\)";
+    var sqrt32 = "\\( 3n = 1 \\Leftrightarrow  n = \\frac{1}{3} \\)";
+    var sqrt33 = "\\( \\sqrt[3]{x} = x^{\\frac{1}{3}} \\)";
+
+    var sqrtn = "\\( \\sqrt[n]{x} = x^{\\frac{1}{n}} \\)";
+
+    var sqrtnInv = "\\( \\frac{1}{\\sqrt[n]{x}} = x^{-\\frac{1}{n}} \\)";
+    var sqrtnInvPow = "\\( \\Big( \\frac{1}{\\sqrt[n]{x}}\\Big)^{m} = x^{-\\frac{m}{n}} \\)";
+    var sqrtnEx = "\\( \\sqrt{x}^{6} = x^{\\frac{6}{2}} = x^3  \\)";
+    var sqrtnEx2 = "\\( \\Big( \\frac{1}{\\sqrt[3]{x}}\\Big)^{2} = x^{-\\frac{2}{3}} \\)";
+
 
     React.useEffect(() => {
         window.scrollTo(0, 0);
@@ -151,18 +178,80 @@ const LesPuissances = () => {
                 <MathJaxDisplay toShow={compInv} demo />
 
                 <p className="Title1">Autres formules générales</p>
+                <p className="Title2">Puissance de produit</p>
+                <Container className="Focus"> 
+                    <MathJaxDisplay toShow={xTimesYPowA}/>
+                </Container>
+                <p>Car </p>
+                <MathJaxDisplay toShow={xTimesYPowADemo} demo />
+                <MathJaxDisplay toShow={xTimesYPowADemo2} demo />
+                <MathJaxDisplay toShow={xTimesYPowA} demo />
+
+                <p className="Title2">Puissance de quotient</p>
+                <Container className="Focus"> 
+                    <MathJaxDisplay toShow={xOnYPowA}/>
+                    <MathJaxInline toShow={yDiff0} />
+                </Container>
+                <p>Idem que pour précédemment : </p>
+                <MathJaxDisplay toShow={xOnYPowADemo} demo />
+                <MathJaxDisplay toShow={xOnYPowADemo2} demo />
+                <MathJaxDisplay toShow={xOnYPowA} demo />
+
+                <p className="Title2">Quotient de puissance</p>
                 <Container className="Focus"> 
                     <MathJaxDisplay toShow={xPowAOnXPowB}/>
                     <MathJaxInline toShow={xDiff0} />
                 </Container>
-                
+                <p>Car avec <MathJaxInline toShow={"$(4)$"} /> on a vu que :</p>
+                <MathJaxDisplay toShow={xPowAOnXPowBDemo} demo />
+                <p>et avec <MathJaxInline toShow={"$(1)$"} /> on a :</p>
+                <MathJaxDisplay toShow={xPowAOnXPowBDemo2} demo/>
+                <MathJaxDisplay toShow={xPowAOnXPowBDemo3} demo/>
+
+                <p className="Title1">Liens entre puissances et racines</p>
+                <p>La définition de la racine carrée est la suivante : </p>
+                <MathJaxDisplay toShow={sqrt2} demo/>
+                <p>Nous allons essayer de déterminer la valeur de <MathJaxInline toShow={"$n$"} /> pour laquelle <MathJaxInline toShow={"$x^n = \\sqrt{x}$"} /> </p>
+                <MathJaxDisplay toShow={sqrt22} demo/>
+                <p>Avec la formule <MathJaxInline toShow={"$(1)$"} /> on sait que :</p>
+                <MathJaxDisplay toShow={sqrt23} demo/>
+                <MathJaxDisplay toShow={sqrt24} demo/>
+                <p>Il nous suffit alors de résoudre l'équation :</p>
+                <MathJaxDisplay toShow={sqrt25} demo/>
+                <p>Ce qui nous nous donne comme résultat :</p>
                 <Container className="Focus"> 
-                    <MathJaxDisplay toShow={xTimesYPowA}/>
+                    <MathJaxInline toShow={sqrt26} />
                 </Container>
+                <p>
+                    Mais la racine carrée est une racine particulière avec <MathJaxInline toShow={"$n = 2$"} />.
+                    {"\n"}
+                    La racine carrée pourrait alors éventuellement s'écrire aussi <MathJaxInline toShow={"$sqrt[2]{x}$"} />
+                    {"\n"}
+                    Nous pouvons généraliser cette formule pour tout <MathJaxInline toShow={"$n$"} />...
+                    {"\n"}{"\n"}
+                </p>
+                <p>Par exemple, si l'on prend par exemple <MathJaxInline toShow={"$n = 3$"} />, autrement dit la racine cubique a comme définition :</p>
+                <MathJaxDisplay toShow={sqrt3} demo/>
+                <p>En réitérant le même processus que plus haut, on obtient comme équation à résoudre :</p>
+                <MathJaxDisplay toShow={sqrt32} demo/>
+                <p>Soit : </p>
+                <MathJaxDisplay toShow={sqrt33} demo/>
+                <p>On a alors pour tout <MathJaxInline toShow={"$n$"} /> :</p>
                 <Container className="Focus"> 
-                    <MathJaxDisplay toShow={xOnYPowA}/>
-                     <MathJaxInline toShow={yDiff0} />
+                    <MathJaxInline toShow={sqrtn} fRef={5}/>
                 </Container>
+                <p>En mixant les formules <MathJaxInline toShow={"$(3)$"} /> et <MathJaxInline toShow={"$(5)$"} />, on peut voir par exemple que :</p>
+                <Container className="Focus"> 
+                    <MathJaxInline toShow={sqrtnInv} />
+                </Container>
+                <p>Et y ajoutant la formule <MathJaxInline toShow={"$(4)$"} />, on a :   </p>
+                <Container className="Focus"> 
+                    <MathJaxInline toShow={sqrtnInvPow} />
+                </Container>
+                <p className="Title2">Exemples</p>
+                <MathJaxInline toShow={sqrtnEx} />
+                <MathJaxInline toShow={sqrtnEx2} />
+
             </Container>
         </>
 
