@@ -10,7 +10,7 @@ const LesPuissances = () => {
     var million2 = "\\(1 \\; 000 \\; 000 = 10^6 \\)";
 
     var txtPowGen = " a facteurs"
-    var powGen = "\\(x^a = \\underbrace{ a \\times a \\times a \\times a ...etc.}_\\text{" + txtPowGen + "} \\)";
+    var powGen = "\\(x^a = \\underbrace{ a \\times a \\times a \\times a ...}_\\text{" + txtPowGen + "} \\)";
     var powGen2 = "\\(x^a = \\prod_{n=1}^n a  \\)";
 
     var txtThou = "3 fois ";
@@ -45,13 +45,13 @@ const LesPuissances = () => {
 
 
     var xTimesYPowA = "\\( (x \\times y)^{a} = x^a \\times y^a \\)";
-    var xTimesYPowADemo = "\\( (x \\times y)^{a} = \\underbrace{ (x \\times y) \\times (x \\times y) \\times (x \\times y) ...etc.}_\\text{a fois} \\)";
-    var xTimesYPowADemo2 = "\\( (x \\times y)^{a} = \\underbrace{ (x  \\times x  \\times x ...etc.) }_\\text{a fois} \\underbrace{ (y  \\times y  \\times y ...etc.) }_\\text{a fois} \\)";
+    var xTimesYPowADemo = "\\( (x \\times y)^{a} = \\underbrace{ (x \\times y) \\times (x \\times y) \\times (x \\times y) ...}_\\text{a fois} \\)";
+    var xTimesYPowADemo2 = "\\( (x \\times y)^{a} = \\underbrace{ (x  \\times x  \\times x ...) }_\\text{a fois} \\underbrace{ (y  \\times y  \\times y ...) }_\\text{a fois} \\)";
 
     var xOnYPowA = "\\( \\Big(\\frac{x}{y}\\Big)^{a} = \\frac{x^a}{y^a}  \\)";
     var yDiff0 = "$ avec \\;  y \\neq 0$"
-    var xOnYPowADemo = "\\( \\Big(\\frac{x}{y}\\Big)^{a} = \\underbrace{ \\frac{x}{y} \\times \\frac{x}{y} \\times \\frac{x}{y} ...etc.}_\\text{a fois} \\)";
-    var xOnYPowADemo2 = "\\( \\Big(\\frac{x}{y}\\Big)^{a} =  \\frac{ \\overbrace{x  \\times x  \\times x ...etc. }^\\text{a fois} }  { \\underbrace{ y  \\times y  \\times y ...etc. }_\\text{a fois} }  \\)";
+    var xOnYPowADemo = "\\( \\Big(\\frac{x}{y}\\Big)^{a} = \\underbrace{ \\frac{x}{y} \\times \\frac{x}{y} \\times \\frac{x}{y} ...}_\\text{a fois} \\)";
+    var xOnYPowADemo2 = "\\( \\Big(\\frac{x}{y}\\Big)^{a} =  \\frac{ \\overbrace{x  \\times x  \\times x ... }^\\text{a fois} }  { \\underbrace{ y  \\times y  \\times y ... }_\\text{a fois} }  \\)";
 
     var xPowAOnXPowB = "\\( \\frac{x^a}{x^b} = x^{a - b} \\)";
     var xDiff0 = "$avec \\; x \\neq 0$"
@@ -88,8 +88,8 @@ const LesPuissances = () => {
     var vLumiere = "\\( V_{lumiere (vide)} = 300 \\;000 \\;km.s^{-1}  \\)";
     var vLumiere2 = "\\( V_{lumiere (vide)} = 3.0  \\times 10^5 \\;km.s^{-1}  \\)";
 
-    var aLumiere = "\\( annee-lumière = 10 \\;000 \\;000 \\;000 \\;000 \\;000 \\;m \\)";
-    var aLumiere2 = "\\( annee-lumière = 10^16 \\;m \\)";
+    var aLumiere = "\\( annee-lumiere = 10 \\;000 \\;000 \\;000 \\;000 \\;000 \\;m \\)";
+    var aLumiere2 = "\\( annee-lumiere = 10^{16} \\;m \\)";
 
     var mic = "\\( D_{microbe} = 0, \\;000 \\;001 \\;m \\)";
     var mic2 = "\\( D_{microbe} = 10^{-6} \\;m \\)";
@@ -288,7 +288,7 @@ const LesPuissances = () => {
                 <p className="Title1">Distance Terre-soleil</p>
                 <MathJaxDisplay toShow={terreSol}  demo />
                 <MathJaxDisplay toShow={terreSol2} demo  />
-                <p className="Title1">Vitesse de la lumière</p>
+                <p className="Title1">Vitesse de la lumière dans le vide</p>
                 <MathJaxDisplay toShow={vLumiere}  demo />
                 <MathJaxDisplay toShow={vLumiere2} demo  />
                 <p className="Title1">Année-lumière</p>
