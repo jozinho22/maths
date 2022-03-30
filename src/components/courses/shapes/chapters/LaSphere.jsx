@@ -18,7 +18,7 @@ const LaSphere = () => {
     var sphDoubleVolumeDev = "\\(V = \\frac{4}{3}\\pi 2^3 r^3\\)";
     var sphDoubleVolumeDev2 = "\\(V = \\frac{4}{3} 8\\pi r^3\\)";
 
-    var circleAreaX = "\\(S(x) = \\pi x^2\\)"
+    var circleAreaX = "\\(S(x) = \\pi x^2\\)";
 
     var pyth = "\\(R^2 = y^2 + x^2 \\)";
     var rfH = "\\(x = \\sqrt{R^2 - y^2} \\)";

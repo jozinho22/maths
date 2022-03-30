@@ -48,7 +48,7 @@ const LesPuissances = () => {
 
     var xTimesYPowA = "\\( \\big(x \\times y)^{a} = x^a \\times y^a \\)";
 
-    var xOnYPowA = "\\( \\Bigg(\\frac{x}{y}\\Bigg)^{a} = \\frac{x^a}{y^a}  \\)";
+    var xOnYPowA = "\\( \\Big(\\frac{x}{y}\\Big)^{a} = \\frac{x^a}{y^a}  \\)";
     var yDiff0 = "$ avec \\;  y \\neq 0$"
 
     React.useEffect(() => {
