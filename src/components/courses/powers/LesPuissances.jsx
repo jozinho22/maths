@@ -74,11 +74,31 @@ const LesPuissances = () => {
 
     var sqrtnInv = "\\( \\frac{1}{\\sqrt[n]{x}} = x^{-\\frac{1}{n}} \\)";
     var sqrtnInvPow = "\\( \\Big( \\frac{1}{\\sqrt[n]{x}}\\Big)^{m} = x^{-\\frac{m}{n}} \\)";
+
     var sqrtnEx = "\\( \\sqrt{x}^{6} = x^{\\frac{6}{2}} = x^3  \\)";
     var sqrtnEx2 = "\\( \\Big( \\frac{1}{\\sqrt[3]{x}}\\Big)^{2} = x^{-\\frac{2}{3}} \\)";
 
 
+    var terreLune = "\\(D_{Terre-lune} = 400 \\; 000 \\;km   \\)";
+    var terreLune2 = "\\( D_{Terre-lune} = 4.0  \\times 10^5 \\;km  \\)";
+
+    var terreSol = "\\( D_{Terre-soleil} = 150 \\;000 \\;000 \\;km  \\)";
+    var terreSol2 = "\\( D_{Terre-soleil} = 1.5  \\times 10^{10}\\; km  \\)";
+
+    var vLumiere = "\\( V_{lumiere (vide)} = 300 \\;000 \\;km.s^{-1}  \\)";
+    var vLumiere2 = "\\( V_{lumiere (vide)} = 3.0  \\times 10^5 \\;km.s^{-1}  \\)";
+
+    var aLumiere = "\\( annee-lumière = 10 \\;000 \\;000 \\;000 \\;000 \\;000 \\;m \\)";
+    var aLumiere2 = "\\( annee-lumière = 10^16 \\;m \\)";
+
+    var mic = "\\( D_{microbe} = 0, \\;000 \\;001 \\;m \\)";
+    var mic2 = "\\( D_{microbe} = 10^{-6} \\;m \\)";
+
+    var atom = "\\( D_{atome} = 0, \\;000 \\;000 \\;000 \\;000 \\;001 \\;m \\)";
+    var atom2 = "\\( D_{atome} = 10^{-16} \\;m \\)";
+
     React.useEffect(() => {
+        if(process.env.NODE_ENV !== "development")
         window.scrollTo(0, 0);
     }, []);
 
@@ -220,7 +240,7 @@ const LesPuissances = () => {
                 <MathJaxDisplay toShow={sqrt25} demo/>
                 <p>Ce qui nous nous donne comme résultat :</p>
                 <Container className="Focus"> 
-                    <MathJaxInline toShow={sqrt26} />
+                    <MathJaxDisplay toShow={sqrt26} />
                 </Container>
                 <p>
                     Mais la racine carrée est une racine particulière avec <MathJaxInline toShow={"$n = 2$"} />.
@@ -238,19 +258,49 @@ const LesPuissances = () => {
                 <MathJaxDisplay toShow={sqrt33} demo/>
                 <p>On a alors pour tout <MathJaxInline toShow={"$n$"} /> :</p>
                 <Container className="Focus"> 
-                    <MathJaxInline toShow={sqrtn} fRef={5}/>
+                    <MathJaxDisplay toShow={sqrtn} fRef={5}/>
                 </Container>
                 <p>En mixant les formules <MathJaxInline toShow={"$(3)$"} /> et <MathJaxInline toShow={"$(5)$"} />, on peut voir par exemple que :</p>
                 <Container className="Focus"> 
-                    <MathJaxInline toShow={sqrtnInv} />
+                    <MathJaxDisplay toShow={sqrtnInv} />
                 </Container>
                 <p>Et y ajoutant la formule <MathJaxInline toShow={"$(4)$"} />, on a :   </p>
                 <Container className="Focus"> 
-                    <MathJaxInline toShow={sqrtnInvPow} />
+                    <MathJaxDisplay toShow={sqrtnInvPow} />
                 </Container>
                 <p className="Title2">Exemples</p>
-                <MathJaxInline toShow={sqrtnEx} />
-                <MathJaxInline toShow={sqrtnEx2} />
+                <MathJaxDisplay toShow={sqrtnEx} />
+                <MathJaxDisplay toShow={sqrtnEx2} />
+
+                <p className="Title1">L'écriture scientifique</p>
+                <p>
+                    Les puissances nous permettent d'écrire les nombres de l'infiniment grand et de l'infiniment petit.
+                    L'écriture utilisée dans la norme internationale est l'écriture scientifique.
+                    Elle se définit comme ceci :
+                    {"\n"}{"\n"}
+                    Un nombre avec au moins chiffre significatif avant la virgule (autre que <MathJaxInline toShow={"$0$"} />), multiplié par une puissance de <MathJaxInline toShow={"$10$"} />.
+                    {"\n"}Le (les) nombre(s) va (vont) apporter une précision et la puissance de <MathJaxInline toShow={"$10$"} /> un ordre de grandeur.
+                    {"\n"}{"\n"} Exemples :
+                </p>
+                <p className="Title1">Distance Terre-lune</p>
+                <MathJaxDisplay toShow={terreLune} demo />
+                <MathJaxDisplay toShow={terreLune2}  demo />
+                <p className="Title1">Distance Terre-soleil</p>
+                <MathJaxDisplay toShow={terreSol}  demo />
+                <MathJaxDisplay toShow={terreSol2} demo  />
+                <p className="Title1">Vitesse de la lumière</p>
+                <MathJaxDisplay toShow={vLumiere}  demo />
+                <MathJaxDisplay toShow={vLumiere2} demo  />
+                <p className="Title1">Année-lumière</p>
+                <MathJaxDisplay toShow={aLumiere}  demo />
+                <MathJaxDisplay toShow={aLumiere2}  demo />
+
+                <p className="Title1">Microbe</p>
+                <MathJaxDisplay toShow={mic}  demo />
+                <MathJaxDisplay toShow={mic2} demo  />
+                <p className="Title1">Atome</p>
+                <MathJaxDisplay toShow={atom}  demo />
+                <MathJaxDisplay toShow={atom2} demo  />
 
             </Container>
         </>

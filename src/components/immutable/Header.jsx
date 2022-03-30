@@ -8,7 +8,7 @@ import LaTrigonometrie from '../courses/trigo/LaTrigonometrie';
 import LesPuissances from '../courses/powers/LesPuissances';
 
 import Shapes from '../courses/shapes/LesFormes';
-import UsualFunctions from '../usual-functions/UsualFunctions';
+import LesFonctionsUsuelles from '../courses/usual-functions/LesFonctionsUsuelles';
 import LeProduitEnCroix from '../courses/cross-product/LeProduitEnCroix';
 
 import TablesTest from '../tables-test/TablesTest';
@@ -62,35 +62,35 @@ const Header = ({ pdfItems }) => {
                                 onClick={() => {
                                     goTo(<LesPuissances />);
                                 }} >
-                                Les puissances
+                                Puissances
                             </NavDropdown.Item>
                             <NavDropdown.Item 
                                 onClick={() => {
                                     goTo(<LeNombrePi />);
                                 }} >
-                                Le nombre <MathJaxInline toShow={"$ \\pi $"} />
+                                Nombre <MathJaxInline toShow={"$ \\pi $"} />
                             </NavDropdown.Item>  
                             <NavDropdown.Item 
                                 onClick={() => {
                                     goTo(<LeNombreDOr />);
                                 }} >
-                                Le nombre d'or (<MathJaxInline toShow={"$ \\phi $"} />)
+                                Nombre d'or (<MathJaxInline toShow={"$ \\phi $"} />)
                             </NavDropdown.Item> 
                             <NavDropdown.Item 
                                 onClick={() => {
                                     goTo(<LaTrigonometrie />);
                                 }} >
-                                La trigo
+                                Trigo
                             </NavDropdown.Item>  
                             <NavDropdown.Item 
                                 onClick={() => {
                                     goTo(<Shapes />);
                                 }} >
-                                Les formes
+                                Formes
                             </NavDropdown.Item>
                             <NavDropdown.Item 
                                 onClick={() => {
-                                    goTo(<UsualFunctions />);
+                                    goTo(<LesFonctionsUsuelles />);
                                 }} >
                                 Fonctions usuelles
                             </NavDropdown.Item>

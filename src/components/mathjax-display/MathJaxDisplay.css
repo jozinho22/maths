@@ -5,41 +5,44 @@ mjx-math {
 
 @media (min-width: 768px) {
     mjx-math {
-        font-size: large !important;    
+        font-size: large !important;
     }
 }
 
 @media (min-width: 1268px) {
     mjx-math {
-        font-size: x-large !important;    
+        font-size: x-large !important;
     }
 }
 
 button mjx-container {
-    margin: 0px !important;    
+    margin: 0px !important;
+}
+
+table mjx-container {
+    color: var(--simple-text-color);
 }
 
 .Demo mjx-container {
     text-align: left !important;
-    
     margin-left: -25px !important;
 }
 
 @media (min-width: 450px) {
-      .Demo mjx-container {
-         margin-left: 25px !important;
+    .Demo mjx-container {
+        margin-left: 25px !important;
     }
 }
 
-.InfiniteFrac  mjx-container [size="s"] {
+.InfiniteFrac mjx-container [size="s"] {
     font-size: 100%;
 }
 
-.InfiniteFrac  mjx-container [size="s"] mjx-script{
+.InfiniteFrac mjx-container [size="s"] mjx-script {
     font-size: 70%;
 }
 
-.InfiniteFrac  mjx-math {
+.InfiniteFrac mjx-math {
     line-height: 0.75;
 }
 
@@ -64,4 +67,3 @@ button mjx-container {
     word-wrap: break-word;
     block-size: fit-content;
 }
-

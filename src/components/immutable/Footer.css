@@ -27,10 +27,10 @@
 
 .CustomFooter #theme-dropdown-item {
       background: linear-gradient(
-        0.25turn, 
-        var(--navbar-color), 
-        var(--back-color),
-        var(--front-color)
+          0.25turn, 
+          var(--navbar-color), 
+          var(--back-color),
+          var(--front-color)
       );
 }
 

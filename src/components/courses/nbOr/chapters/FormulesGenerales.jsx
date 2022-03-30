@@ -23,7 +23,6 @@ const FormulesGenerales = () => {
                 <Container className="Focus">
                     <MathJaxDisplay toShow={approxPhi1} />
                 </Container>
-                <p>{"\n"}{"\n"}Vérifions maintenant la seconde formule :</p>
                 <p className="Title2">Formule du quotient</p>
                 <p>À partir de la formule <MathJaxInline toShow={approxPhi2Begin}/>, qu'on arrange en <MathJaxInline toShow={approxPhi2Begin2}/> on a :</p>
                 <Container className="Focus">

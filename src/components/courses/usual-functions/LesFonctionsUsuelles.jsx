@@ -2,14 +2,16 @@ import React from "react";
 import { Container, Button } from "react-bootstrap";
 import { LineChart, XAxis, YAxis, ReferenceLine, ResponsiveContainer, Tooltip, Line } from 'recharts';
 
-import MathJaxDisplay from '../mathjax-display/MathJaxDisplay';
+import MathJaxDisplay from '../../mathjax-display/MathJaxDisplay';
 import buildUsualFunctions from "./buildUsualFunctions";
-import './UsualFunctions.css';
+import './LesFonctionsUsuelles.css';
 
-const UsualFunctions2 = () => {
+const LesFonctionsUsuelles = () => {
 
     var usualFunctions = buildUsualFunctions();
 
+    var ufLeft = usualFunctions.slice(0, usualFunctions.length /2);
+    var ufRight = usualFunctions.slice(usualFunctions.length /2);
     const [f, setF] = React.useState({});
     const [fData, setFData] = React.useState({});
 
@@ -70,7 +72,7 @@ const UsualFunctions2 = () => {
     }
 
     const getPrimitiveExp = (primitive) => {
-        return "\\(\\int f(x) \\mathrm{d}x = " + primitive + " \\)";
+        return "\\(\\int f(x) . \\mathrm{d}x = " + primitive + " \\)";
     }
 
     const getLimitExp = (where, value) => {
@@ -83,9 +85,9 @@ const UsualFunctions2 = () => {
 
     return(
         <>
-            <Container className="UsualFunctionsButtonsContainer">
+            <Container className="UsualFunctionsButtonsContainer Left">
                 {
-                    usualFunctions.map(f => (
+                    ufLeft.map(f => (
                         <Button key={f.id}
                             className={`DefaultButton UsualFunctionsButton ${f.color}Button`}
                             onClick={() => setF(usualFunctions[f.id])} >
@@ -94,7 +96,17 @@ const UsualFunctions2 = () => {
                     ))
                 }
             </Container>
-
+            <Container className="UsualFunctionsButtonsContainer Right">
+                {
+                    ufRight.map(f => (
+                        <Button key={f.id}
+                            className={`DefaultButton UsualFunctionsButton ${f.color}Button`}
+                            onClick={() => setF(usualFunctions[f.id])} >
+                            <MathJaxDisplay toShow={getButtonTitle(f.mathJaxTitle)} />
+                        </Button>
+                    ))
+                }
+            </Container>
             { !isEmpty(f) ?
                 <>
                     <Container className="GraphTitle">
@@ -167,4 +179,4 @@ const UsualFunctions2 = () => {
     );
 }
 
-export default UsualFunctions2;
+export default LesFonctionsUsuelles;

@@ -2,6 +2,7 @@ import NiceTable from '../../immutable/NiceTable';
 import useFibonacciFormulas from './useFibonacciFormulas';
 
 import MathJaxDisplay from '../../mathjax-display/MathJaxDisplay';
+import MathJaxInline from '../../mathjax-display/MathJaxInline';
 
 const FibonacciFormulasTable = () => {
 
@@ -23,7 +24,7 @@ const FibonacciFormulasTable = () => {
                     {Array.from(values).map( (value, index) => (
                         <tr key={index}>
                             <td>
-                                {value.id}  
+                                 <MathJaxInline toShow={`$ ${value.id} $`} />  
                             </td>
                             <td>
                                 <MathJaxDisplay toShow={value.formula} /> 

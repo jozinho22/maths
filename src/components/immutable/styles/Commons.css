@@ -26,7 +26,7 @@
 }
 
 .Title1 {
-    padding-top: 10px;
+    padding-top: 20px;
     text-align: left;
     padding-bottom: 5px;
     text-decoration: underline;
@@ -107,11 +107,18 @@
 
 .DefaultButton:hover {
     background-color: var(--blue-hover-color);
+    border-color: var(--grey-color);
 }
 
 .DefaultButton:focus {
     background-color: var(--blue-hover-color);
+    border-color: var(--grey-color);
     border-width: 0px;
+}
+
+.DefaultButton:disabled {
+    background-color: var(--blue-hover-color);
+    border-color: var(--grey-color);
 }
 
 .DefaultButton mjx-math {
@@ -235,6 +242,15 @@
     font-size: medium !important;
     text-align: center !important;
 }
+
+.Left {
+    left: 0px;
+}
+
+.Right {
+    right: 0px;
+}
+
 
 /* Tables */
 
