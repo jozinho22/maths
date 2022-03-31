@@ -61,12 +61,6 @@
     }
 }
 
-.LoadingSpinner {
-    position: relative;
-    /* or absolute */
-    color: var(--front-color);
-}
-
 /* Buttons */
 
 .DefaultButton {
@@ -216,6 +210,14 @@
 }
 
 /* Page tricks */
+
+.Greyed {
+    filter: blur(6px);
+    /* -webkit-filter: blur(10px);
+    -moz-filter: blur(10px);
+    -o-filter: blur(10px);
+    -ms-filter: blur(10px); */
+}
 
 .CenterText {
     margin: auto;

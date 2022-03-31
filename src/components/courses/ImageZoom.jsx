@@ -1,8 +1,6 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
 import { HiOutlineZoomIn } from 'react-icons/hi';
-import getWidth from '../immutable/getWidth';
-
 import SizeContext from '../context/SizeContext';
 
 const ImageZoom = ( {src, name, n} ) => {

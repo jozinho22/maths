@@ -1,24 +1,24 @@
 import React from 'react';
 import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
-import MathJaxInline from '../mathjax-display/MathJaxInline';
-import Home from '../home/Home';
-import LeNombrePi from '../courses/pi/LeNombrePi';
-import LeNombreDOr from '../courses/nbOr/LeNombreDOr';
-import LaTrigonometrie from '../courses/trigo/LaTrigonometrie';
-import LesPuissances from '../courses/powers/LesPuissances';
+import MathJaxInline from '../../mathjax-display/MathJaxInline';
+import Home from '../../home/Home';
+import LeNombrePi from '../../courses/pi/LeNombrePi';
+import LeNombreDOr from '../../courses/nbOr/LeNombreDOr';
+import LaTrigonometrie from '../../courses/trigo/LaTrigonometrie';
+import LesPuissances from '../../courses/powers/LesPuissances';
 
-import Shapes from '../courses/shapes/LesFormes';
-import LesFonctionsUsuelles from '../courses/usual-functions/LesFonctionsUsuelles';
-import LeProduitEnCroix from '../courses/cross-product/LeProduitEnCroix';
+import Shapes from '../../courses/shapes/LesFormes';
+import LesFonctionsUsuelles from '../../courses/usual-functions/LesFonctionsUsuelles';
+import LeProduitEnCroix from '../../courses/cross-product/LeProduitEnCroix';
 
-import TablesTest from '../tables-test/TablesTest';
-import PDFViewerPage from '../pdf-viewer/PDFViewerPage';
-import AppContext from '../context/AppContext'
+import TablesTest from '../../tables-test/TablesTest';
+import PDFViewerPage from '../../pdf-viewer/PDFViewerPage';
+import AppContext from '../../context/AppContext'
 
 import './Nav.css';
 import './Header.css';
 
-const Header = ({ pdfItems }) => {
+const Header = ({ pdfItems, setIsLoading}) => {
 
     const {updateComponent, playMode} = React.useContext(AppContext);
 
@@ -29,6 +29,7 @@ const Header = ({ pdfItems }) => {
     }
 
     const goTo = (component) => {
+        setIsLoading(true)
         setShowToggle(false);
         updateComponent(component);
     }

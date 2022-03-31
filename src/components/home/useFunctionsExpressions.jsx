@@ -1,5 +1,4 @@
 import React from 'react';
-import getWidth from '../immutable/getWidth';
 import SizeContext from '../context/SizeContext';
 
 const useFunctionsExpressions = () => {

@@ -8,10 +8,7 @@ import PaginationPageByPage from './PaginationPageByPage';
 import PaginationFullDocument from './PaginationFullDocument';
 import AppContext from '../context/AppContext'
 
-import getWidth from '../immutable/getWidth';
 import SizeContext from '../context/SizeContext';
-
-import CustomSpinner from '../general-content/CustomSpinner';
 
 import { useSwipeable } from 'react-swipeable';
 

@@ -3,7 +3,7 @@ import React from 'react';
 import TablesTestQuestionDisplay from './TablesTestQuestionDisplay';
 import TablesTestManager from './TablesTestManager';
 
-import CustomLogger from '../general-content/CustomLogger';
+import CustomLogger from '../immutable/CustomLogger';
 
 export const TablesTestContext = React.createContext(null);
 
