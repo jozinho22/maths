@@ -3,14 +3,10 @@ import { Container, Button } from 'react-bootstrap';
 import MathJaxDisplay from '../../../mathjax-display/MathJaxDisplay';
 import MathJaxInline from '../../../mathjax-display/MathJaxInline';
 import ImageZoom from '../../ImageZoom';
-import AppContext from '../../../context/AppContext';
 import FibonacciTable from '../FibonacciTable';
 import euclideStuff from '../assets/euclideStuff.png';
-import LeProduitEnCroix from '../../cross-product/LeProduitEnCroix';
 
 const Caracteristiques = () => {
-
-    const {updateComponent} = React.useContext(AppContext);
 
     var n = 0;
 
@@ -117,7 +113,7 @@ const Caracteristiques = () => {
                 <MathJaxDisplay toShow={euclideStuff3} />
                 <Button 
                     className="DefaultButton" 
-                    onClick={() => updateComponent(<LeProduitEnCroix />)}>
+                    href="/cours/le-produit-en-croix" target="_blank" >
                         Chapitre sur le produit en croix
                 </Button>
                 <p>Soit :</p>

@@ -118,7 +118,7 @@ const LeProduitEnCroix = () => {
 
     return (
         <>
-            <p className="Title">La règle de trois</p>
+            <p className="Title">Le produit en croix</p>
             <Container className="CoursesContainer">    
                 <p>
                     La règle de trois (ou produit en croix ) est une méthode servant à effectuer des conversions dans une autre unité, calculer le nombre de couverts pour un repas, calculer une surface à peindre...etc.

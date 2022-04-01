@@ -1,20 +1,14 @@
 import React from 'react';
-import { Container, Button, Table } from 'react-bootstrap';
+import { Container, Button } from 'react-bootstrap';
 import MathJaxDisplay from '../../../mathjax-display/MathJaxDisplay';
 import MathJaxInline from '../../../mathjax-display/MathJaxInline';
 import ImageZoom from '../../ImageZoom';
-import GenericShape from '../GenericShape';
-import ShapeType from '../ShapeType';
-import AppContext from '../../../context/AppContext';
-import LeNombrePi from '../../pi/LeNombrePi';
+
 import circleTurnAround from '../assets/circleTurnAround.png'
 import circleAreaCalculus from '../assets/circleAreaCalculus.png'
 import circleAreaCalculus2 from '../assets/circleAreaCalculus2.png';
-import LaTrigonometrie from '../../trigo/LaTrigonometrie';
 
 const LeCercle = () => {
-
-    const {updateComponent} = React.useContext(AppContext);
 
     var n = 0;
     var pOverD = "\\(\\pi = \\frac{P_{cercle}}  {D_{cercle}} \\)"
@@ -59,7 +53,7 @@ const LeCercle = () => {
 
             <Button 
                 className="DefaultButton" 
-                onClick={() => updateComponent(<LeNombrePi />)}>
+                href="/cours/le-nombre-pi" target="_blank" >
                     Chapitre sur le nombre π
             </Button>
 
@@ -123,7 +117,7 @@ const LeCercle = () => {
 
             <Button 
                 className="DefaultButton" 
-                onClick={() => updateComponent(<LaTrigonometrie />)}>
+                href="/cours/la-trigonometrie" target="_blank" >
                     Chapitre sur la trigonométrie
             </Button>
             

@@ -52,10 +52,6 @@ const PDFViewerPage = ({ pdfItem }) => {
         var [width] = React.useContext(SizeContext);
         var mobile = width < 450;
 
-        React.useEffect(() => {
-            updatePlayMode(true);
-        }, []);
-       
         function addPagesToList(begin) {
             var list = [];
 
@@ -87,27 +83,22 @@ const PDFViewerPage = ({ pdfItem }) => {
         }
 
         React.useEffect(() => {
+            updatePlayMode(true);
+        }, []);
+
+        React.useEffect(() => {
             window.scrollTo(0, 0);
         }, [page, pagesList]);
 
         return (
           <> 
-            {
-                playMode ?
-                    <>
-                        <Button 
-                            className="DefaultButton UnPlayModeButton"
-                            onClick={() => updatePlayMode(false)}>
-                            Retour
-                        </Button>
-                    </> 
-                        :   <Button 
-                                className="DefaultButton PlayModeButton"
-                                onClick={() => updatePlayMode(true)}>
-                                Play mode
-                            </Button>
-            }
 
+            <Button 
+                className="DefaultButton UnPlayModeButton"
+                href="/bds-de-jpp">
+                Toutes les BDs
+            </Button>
+                   
             {
                 !mobile ?
                     <Container className="SwitchButton">
@@ -117,7 +108,7 @@ const PDFViewerPage = ({ pdfItem }) => {
                             onstyle='primary'
                             offlabel={`Page par page`}
                             offstyle='warning'
-                            style='w-50 mx-3'
+                            style={'w-50 mx-3'}
                             onChange={() => switchView()} />  
                     </Container>
                         : <></>
@@ -135,7 +126,7 @@ const PDFViewerPage = ({ pdfItem }) => {
                             onstyle='success'
                             offlabel={`Afficher les réponses`}
                             offstyle='danger'
-                            style='w-50 mx-3'
+                            style={'w-50 mx-3'}
                             onChange={() => setWithAnswers(!withAnswers)} />  
                     </Container>
                         : <></>
@@ -164,7 +155,7 @@ const PDFViewerPage = ({ pdfItem }) => {
                                 }} />
                         </div>   
                         {
-                            mobile && playMode ?
+                            mobile ?
                                 <div className="PagesMobile">page : {page} / {pages}</div>
                                     :   <PaginationPageByPage
                                             page={page}
@@ -198,12 +189,8 @@ const PDFViewerPage = ({ pdfItem }) => {
                                 addPagesToList={addPagesToList} />
                         </>
                 }
-                {
-                    !playMode ?
-                        <p className="AuthorCopyRight">Avec l'accord de Mr Petit - <a href="http://www.savoir-sans-frontieres.com/JPP/telechargeables/free_downloads.htm" target="_blank" rel="noreferrer">toutes ses BDs</a></p>
-                            : <></>
-                }
-                
+
+                <p className="AuthorCopyRight">Avec l'accord de Mr Petit - <a href="http://www.savoir-sans-frontieres.com/JPP/telechargeables/free_downloads.htm" target="_blank" rel="noreferrer">toutes ses BDs</a></p>     
           </>     
         );
       }

@@ -12,7 +12,7 @@ import './Footer.css';
 
 const Footer = () => {
 
-    const {updateComponent, playMode, updateFont, updateTheme} = React.useContext(AppContext);
+    const {playMode, updateFont, updateTheme} = React.useContext(AppContext);
 
     var fonts = getFonts();
     var themes = getThemes();
@@ -66,7 +66,7 @@ const Footer = () => {
                 </p>
                 <RiMailSendLine 
                     className="ContactIcon"
-                    onClick={() => updateComponent(<Contact />)} />
+                    href="contact" />
             </Navbar>
     );
 }

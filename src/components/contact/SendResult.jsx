@@ -7,7 +7,6 @@ import { ContactContext } from './Contact';
 
 const SendResult = () => {
 
-    const {updateComponent} = React.useContext(AppContext);
     const {success, error} = React.useContext(ContactContext);
 
     return (
@@ -21,7 +20,7 @@ const SendResult = () => {
                 }
                 <Button 
                     className="DefaultButton"
-                    onClick={() => updateComponent(<Home />)}>
+                    href="/" >
                     Retour au lobby
                 </Button>
             </div>    

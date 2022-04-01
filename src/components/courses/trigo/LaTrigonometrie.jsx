@@ -6,13 +6,9 @@ import CircleTrigoValuesTable from './CircleTrigoValuesTable';
 import ImageZoom from '../ImageZoom';
 import circleTrigo from './assets/circleTrigo.png';
 import circleTrigoValues from './assets/circleTrigoValues.png';
-import AppContext from '../../context/AppContext';
-import LeNombrePi from '../pi/LeNombrePi';
 import CircleTrigoFormulasTable from './CircleTrigoFormulasTable';
 
 const LaTrigonometrie = () => {
-
-    const {updateComponent} = React.useContext(AppContext);
 
     var n = 0;
     var pyth = "\\((cos(\\alpha))^2 + (sin(\\alpha))^2 = 1\\)";
@@ -61,7 +57,7 @@ const LaTrigonometrie = () => {
                 </p>
                 <Button 
                     className="DefaultButton" 
-                    onClick={() => updateComponent(<LeNombrePi />)}>
+                    href="/cours/le-nombre-pi" target="_blank" >
                         Chapitre sur le nombre π
                 </Button>
                 <ImageZoom src={circleTrigoValues} name="Les angles remarquables sur le cercle" n={++n} />

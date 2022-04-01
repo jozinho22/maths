@@ -1,11 +1,11 @@
-import { Container, Spinner } from 'react-bootstrap';
+import { Spinner } from 'react-bootstrap';
 import './Spinners.css';
 
 const BlurryingSpinner = () => {
 
     return (
         <div className={"BlurryingSpinner"}> 
-            <p>Loading...</p>
+            <p>Chargement, soyez patient ^^...</p>
             <Spinner animation="border" />
         </div>
     );

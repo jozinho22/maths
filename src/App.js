@@ -1,5 +1,8 @@
 import React from 'react';
 
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { Container } from 'react-bootstrap';
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './components/immutable/styles/Fonts.css';
 import './components/immutable/styles/Themes.css';
@@ -7,7 +10,6 @@ import './components/immutable/styles/Commons.css';
 import './components/alert/Alert.css';
 import './App.css';
 
-import { Container } from 'react-bootstrap';
 import AppContext from './components/context/AppContext';
 import pdfResourceBuilder from './components/pdf-viewer/pdfResourceBuilder';
 import SizeContext from './components/context/SizeContext';
@@ -15,14 +17,23 @@ import SizeContext from './components/context/SizeContext';
 import useWindowSize from './components/immutable/dimensions/useWindowSize';
 import updateDimensions from './components/immutable/dimensions/updateDimensions';
 
-import FrontSpinner from './components/immutable/spinners/BlurryingSpinner';
+import BlurryingSpinner from './components/immutable/spinners/BlurryingSpinner';
 
 import Header from './components/immutable/nav/Header';
 import Home from './components/home/Home';
-import Footer from './components/immutable/nav/Footer';
-/* import LeNombreDOr from './components/courses/nbOr/LeNombreDOr';
- */
+import LeNombrePi from './components/courses/pi/LeNombrePi';
+import LeNombreDOr from './components/courses/nbOr/LeNombreDOr';
+import LaTrigonometrie from './components/courses/trigo/LaTrigonometrie';
 import LesPuissances from './components/courses/powers/LesPuissances';
+import LesFormes from './components/courses/shapes/LesFormes';
+import LesFonctionsUsuelles from './components/courses/usual-functions/LesFonctionsUsuelles';
+import LeProduitEnCroix from './components/courses/cross-product/LeProduitEnCroix';
+import TablesTest from './components/tables-test/TablesTest';
+import ToutesLesBDs from './components/pdf-viewer/ToutesLesBDs';
+import PDFViewerPage from './components/pdf-viewer/PDFViewerPage';
+import Contact from './components/contact/Contact';
+import Error from './components/immutable/Error';
+import Footer from './components/immutable/nav/Footer';
 
 function App() {
 
@@ -32,15 +43,7 @@ function App() {
     const [playMode, setPlayMode] = React.useState(false);
     const [theme, setTheme] = React.useState("Brazil");
 
-    const [component, setComponent] = React.useState( 
-        process.env.NODE_ENV === 'development' ? 
-            <LesPuissances /> 
-                : <Home />
-    );
-
     const appContext = {
-        component: component,
-        updateComponent: setComponent,
         font: font,
         updateFont: setFont,
         playMode: playMode,
@@ -59,25 +62,51 @@ function App() {
     }, [width, height]); 
 
     React.useEffect(() => {
-        var interval = setInterval(function () {
-            if (document.readyState === 'complete') setIsLoading(false); 
-            clearInterval(interval);       
-            // do your work
-        }, 1000);
+        if(isLoading) {
+            var interval = setInterval(function () {
+                if (document.readyState === 'complete') setIsLoading(false); 
+                clearInterval(interval);       
+                // do your work
+            }, 1000);
+        }
     });
 
     return ( 
-        <div className = "App" >     
-            <AppContext.Provider value = {appContext} >
-            <SizeContext.Provider value ={sizeContext} >
-                <div className = {`${theme} ${font}`}>
-                    {isLoading ? <FrontSpinner /> : ''}
-                    {/* <FrontSpinner /> */}
-                    <Header pdfItems = {pdfItems} setIsLoading={setIsLoading}/> 
-                        <Container className = {` RelativeContainer ${playMode ? "PlayMode" : ''}  ${isLoading ? "Greyed" : ''} `} >                           
-                            {component}    
-                        </Container> 
-                    <Footer /> 
+        <div className="App" >     
+            <AppContext.Provider value ={appContext} >
+            <SizeContext.Provider value={sizeContext} >
+                <div className={`${theme} ${font}`}>
+                    <BrowserRouter>
+                        {isLoading ? <BlurryingSpinner /> : ''}
+                        <Header pdfItems ={pdfItems} setIsLoading={setIsLoading} /> 
+                            <Container className = {` RelativeContainer ${playMode ? "PlayMode" : ''}  ${isLoading ? "Blur" : ''} `} >                           
+                                <Routes>
+                                    <Route exact path="/" element={<Home />} />
+                                    <Route path="/cours/le-produit-en-croix" element={<LeProduitEnCroix />} />
+                                    <Route path="/cours/les-puissances" element={<LesPuissances />} />
+                                    <Route path="/cours/le-nombre-pi" element={<LeNombrePi />} />
+                                    <Route path="/cours/le-nombre-d-or" element={<LeNombreDOr />} />
+                                    <Route path="/cours/la-trigonometrie" element={<LaTrigonometrie />} />
+                                    <Route path="/cours/les-formes" element={<LesFormes />} />
+                                    <Route path="/cours/les-fonctions-usuelles" element={<LesFonctionsUsuelles />} />
+                                    
+                                    <Route path="/bds-de-jpp" element={<ToutesLesBDs pdfItems={pdfItems} />} />
+                                    {pdfItems.map(pdfItem => (
+                                            <Route 
+                                                key={pdfItem.id}
+                                                path={`/bds-de-jpp/${pdfItem.relativePath}`}
+                                                element={<PDFViewerPage pdfItem={pdfItem} />} />
+                                    ))}
+
+                                    <Route path="/jeux/reviser-ses-tables" element={<TablesTest />} />
+
+                                    <Route path="/contact" element={<Contact />} />
+
+                                    <Route path="*" element={<Error />} />
+                                </Routes>    
+                            </Container> 
+                        <Footer /> 
+                    </BrowserRouter>
                 </div> 
             </SizeContext.Provider>
             </AppContext.Provider> 

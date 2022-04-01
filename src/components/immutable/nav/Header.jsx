@@ -1,18 +1,6 @@
 import React from 'react';
 import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
 import MathJaxInline from '../../mathjax-display/MathJaxInline';
-import Home from '../../home/Home';
-import LeNombrePi from '../../courses/pi/LeNombrePi';
-import LeNombreDOr from '../../courses/nbOr/LeNombreDOr';
-import LaTrigonometrie from '../../courses/trigo/LaTrigonometrie';
-import LesPuissances from '../../courses/powers/LesPuissances';
-
-import Shapes from '../../courses/shapes/LesFormes';
-import LesFonctionsUsuelles from '../../courses/usual-functions/LesFonctionsUsuelles';
-import LeProduitEnCroix from '../../courses/cross-product/LeProduitEnCroix';
-
-import TablesTest from '../../tables-test/TablesTest';
-import PDFViewerPage from '../../pdf-viewer/PDFViewerPage';
 import AppContext from '../../context/AppContext'
 
 import './Nav.css';
@@ -20,19 +8,9 @@ import './Header.css';
 
 const Header = ({ pdfItems, setIsLoading}) => {
 
-    const {updateComponent, playMode} = React.useContext(AppContext);
+    const {playMode} = React.useContext(AppContext);
 
     const [showToggle, setShowToggle] = React.useState(false);
-
-    const findPdfItemById = (id) => {
-        return pdfItems[id];
-    }
-
-    const goTo = (component) => {
-        setIsLoading(true)
-        setShowToggle(false);
-        updateComponent(component);
-    }
 
     return (
             <Navbar 
@@ -46,75 +24,46 @@ const Header = ({ pdfItems, setIsLoading}) => {
                 expand="lg">
                 <Navbar.Brand 
                     className="Clickable"
-                    onClick={() => goTo(<Home />)}>
+                    href="/" >
                     Maths pour tous
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav" >
                     <Nav>
                         <NavDropdown title="Cours/exercices" id="basic-nav-dropdown">
-                            <NavDropdown.Item 
-                                onClick={() => {
-                                    goTo(<LeProduitEnCroix />);
-                                }} >
-                                Règle de 3
+                            <NavDropdown.Item href="/cours/le-produit-en-croix" >
+                                Le produit en croix
                             </NavDropdown.Item>
-                            <NavDropdown.Item 
-                                onClick={() => {
-                                    goTo(<LesPuissances />);
-                                }} >
+                            <NavDropdown.Item href="/cours/les-puissances" >
                                 Puissances
                             </NavDropdown.Item>
-                            <NavDropdown.Item 
-                                onClick={() => {
-                                    goTo(<LeNombrePi />);
-                                }} >
+                            <NavDropdown.Item href="/cours/le-nombre-pi" >
                                 Nombre <MathJaxInline toShow={"$ \\pi $"} />
                             </NavDropdown.Item>  
-                            <NavDropdown.Item 
-                                onClick={() => {
-                                    goTo(<LeNombreDOr />);
-                                }} >
+                            <NavDropdown.Item href="/cours/le-nombre-d-or" >
                                 Nombre d'or (<MathJaxInline toShow={"$ \\phi $"} />)
                             </NavDropdown.Item> 
-                            <NavDropdown.Item 
-                                onClick={() => {
-                                    goTo(<LaTrigonometrie />);
-                                }} >
+                            <NavDropdown.Item href="/cours/la-trigonometrie" >
                                 Trigo
                             </NavDropdown.Item>  
-                            <NavDropdown.Item 
-                                onClick={() => {
-                                    goTo(<Shapes />);
-                                }} >
+                            <NavDropdown.Item href="/cours/les-formes" >
                                 Formes
                             </NavDropdown.Item>
-                            <NavDropdown.Item 
-                                onClick={() => {
-                                    goTo(<LesFonctionsUsuelles />);
-                                }} >
+                            <NavDropdown.Item href="/cours/les-fonctions-usuelles" >
                                 Fonctions usuelles
                             </NavDropdown.Item>
                         </NavDropdown> 
                         <NavDropdown title="BDs de Jean-Pierre Petit" id="basic-nav-dropdown">
                             {pdfItems.map(pdfItem => 
-                                <NavDropdown.Item 
-                                    key= {pdfItem.id}
-                                    onClick={() => {
-                                        goTo(
-                                            <PDFViewerPage 
-                                                pdfItem={findPdfItemById(pdfItem.id)} />
-                                        );
-                                    }} >
-                                    {pdfItem.title}
+                                <NavDropdown.Item
+                                    key={pdfItem.id}
+                                    href={`/bds-de-jpp/${pdfItem.relativePath}`} >
+                                    {pdfItem.minTitle ? pdfItem.minTitle : pdfItem.title}
                                 </NavDropdown.Item>
-                                )}
+                            )}
                         </NavDropdown>
                         <NavDropdown title="Jeux" id="basic-nav-dropdown">
-                            <NavDropdown.Item 
-                                onClick={() =>{
-                                    goTo(<TablesTest />);
-                                }} >
+                            <NavDropdown.Item href="/jeux/reviser-ses-tables" >
                                 Réviser ses tables
                             </NavDropdown.Item>
                         </NavDropdown>
