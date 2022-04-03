@@ -1,7 +1,7 @@
 import React from 'react';
 
 import GenericCourse from '../GenericCourse';
-import getChapters from './chapters/getChapters';
+import getChapters from './getChapters';
 
 import './LeNombreDOr.css'
 

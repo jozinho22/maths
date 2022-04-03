@@ -36,7 +36,6 @@ const useFunctionsExpressions = () => {
     var sigmaN = "\\(\\Sigma_{n=1}^{\\infty} n = \\frac{n(n+1)}{2}\\)";
 
     var [width] = React.useContext(SizeContext);
-    console.log(width)
     
     var listEqu = [];
     var k = 0;

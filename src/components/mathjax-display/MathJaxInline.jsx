@@ -1,7 +1,7 @@
 import { MathJax, MathJaxContext } from "better-react-mathjax";
-import { Container } from 'react-bootstrap';
 
 import './MathJaxDisplay.css';
+
 const MathJaxInline = ({toShow}) => {
 
     const config =  {

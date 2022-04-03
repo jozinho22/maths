@@ -6,7 +6,7 @@ import AppContext from '../../context/AppContext'
 import './Nav.css';
 import './Header.css';
 
-const Header = ({ pdfItems, setIsLoading}) => {
+const Header = ({ pdfItems}) => {
 
     const {playMode} = React.useContext(AppContext);
 

@@ -15,7 +15,7 @@ const NavigationButtons = ( {chapters, count, setCount} ) => {
                     } 
                 </Col>
                 <Col className="CenterText">
-                    chapitre : {count + 1} / {chapters.length} 
+                    {count + 1} / {chapters.length} 
                 </Col>
                 <Col style={{textAlign:"left"}}>
                     {

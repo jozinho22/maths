@@ -1,14 +1,14 @@
 import { Container } from 'react-bootstrap';
-import GenericShape from '../GenericShape';
-import ShapeType from '../ShapeType';
-import LeCarre from './LeCarre';
-import LeCube from './LeCube';
-import LeCercle from './LeCercle';
-import LaSphere from './LaSphere';
-import LeCylindre from './LeCylindre';
-import LeTriangle from './LeTriangle';
-import LeCone from './LeCone';
-import LaPyramide from './LaPyramide';
+import GenericShape from './GenericShape';
+import ShapeType from './ShapeType';
+import LeCarre from './chapters/LeCarre';
+import LeCube from './chapters/LeCube';
+import LeCercle from './chapters/LeCercle';
+import LaSphere from './chapters/LaSphere';
+import LeCylindre from './chapters/LeCylindre';
+import LeTriangle from './chapters/LeTriangle';
+import LeCone from './chapters/LeCone';
+import LaPyramide from './chapters/LaPyramide';
 
 const getChapters = () => {
 

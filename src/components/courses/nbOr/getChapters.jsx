@@ -1,7 +1,7 @@
-import EvolutionDeLapins from './EvolutionDeLapins';
-import Caracteristiques from './Caracteristiques';
-import FormulesDePhiPuissN from './FormulesDePhiPuissN';
-import FormulesGenerales from './FormulesGenerales';
+import EvolutionDeLapins from './chapters/EvolutionDeLapins';
+import Caracteristiques from './chapters/Caracteristiques';
+import FormulesDePhiPuissN from './chapters/FormulesDePhiPuissN';
+import FormulesGenerales from './chapters/FormulesGenerales';
 
 const getChapters = () => {
 

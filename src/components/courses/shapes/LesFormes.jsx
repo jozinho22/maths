@@ -1,6 +1,6 @@
 import React from 'react';
 import GenericCourse from '../GenericCourse';
-import getChapters from './chapters/getChapters';
+import getChapters from './getChapters';
 import UnsplashCopyRight from '../UnsplashCopyRight';
 import './LesFormes.css';
 

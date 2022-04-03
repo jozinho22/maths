@@ -129,6 +129,16 @@
     margin: 0px;
 }
 
+.TableOfContentsButtonContainer {
+    padding-left: 30%;
+    text-align: left;
+}
+
+.TableOfContentsButton {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
 .MiniButton {
     padding: 5px;
     font-size: x-small;
