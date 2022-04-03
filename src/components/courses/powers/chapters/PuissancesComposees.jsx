@@ -1,7 +1,8 @@
 import React from 'react';
-import { Container } from 'react-bootstrap';
 import MathJaxDisplay from '../../../mathjax-display/MathJaxDisplay';
 import MathJaxInline from '../../../mathjax-display/MathJaxInline';
+import RefFormulasTable from '../../RefFormulasTable';
+import RefFormulasContext from '../../context/RefFormulasContext';
 
 const PuissancesComposees = () => {
 
@@ -13,6 +14,8 @@ const PuissancesComposees = () => {
     var compp = "\\( \\frac{x^4 y^5}{z^3} = {x^4 y^5}{z}^{-3} \\)";
 
     var compInv = "\\( \\frac{1}{x^{-3}} = {x^3} \\)";
+
+    const {refFormulas} = React.useContext(RefFormulasContext);
 
     return (
             <>

@@ -5,6 +5,7 @@ import MathJaxInline from '../../../mathjax-display/MathJaxInline';
 
 import RefFormulasContext from '../../context/RefFormulasContext';
 import addRefFormulas from '../../addRefFormulas';
+import RefFormulasTable from '../../RefFormulasTable';
 
 const InverseDePuissances = () => {
 
