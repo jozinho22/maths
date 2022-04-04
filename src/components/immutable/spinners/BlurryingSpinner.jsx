@@ -5,7 +5,7 @@ const BlurryingSpinner = () => {
 
     return (
         <div className={"BlurryingSpinner"}> 
-            <p>Chargement, soyez patient ^^...</p>
+            <p>Chargement</p>
             <Spinner animation="border" />
         </div>
     );

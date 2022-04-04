@@ -20,6 +20,7 @@ import useWindowSize from './components/immutable/dimensions/useWindowSize';
 import updateDimensions from './components/immutable/dimensions/updateDimensions';
 
 import BlurryingSpinner from './components/immutable/spinners/BlurryingSpinner';
+import useIsLoading from './components/immutable/spinners/useIsLoading';
 
 import Header from './components/immutable/nav/Header';
 import Home from './components/home/Home';
@@ -59,7 +60,9 @@ function App() {
 
     const loadingContext = {
         isLoadingLink: isLoadingLink,
-        updateIsLoadingLink: setIsLoadingLink
+        updateIsLoadingLink: setIsLoadingLink,
+        isLoadingChapter: isLoadingChapter,
+        updateIsLoadingChapter: setIsLoadingChapter
     }
 
     const [width, height] = useWindowSize();
@@ -69,26 +72,36 @@ function App() {
         updateDimensions([width, height]);
     }, [width, height]); 
 
-    React.useEffect(() => {
-        if(isLoadingLink || isLoadingChapter) {
+    /* React.useEffect(() => { */
+/*         if(isLoadingLink) {
             var interval = setInterval(function () {
-                if (document.readyState === 'complete') setIsLoading(false); 
+                if (document.readyState === 'complete') setIsLoadingLink(false); 
                 clearInterval(interval);       
                 // do your work
             }, 1000);
-        } 
-    });
+        }  else if(isLoadingChapter) {
+            var interval = setInterval(function () {
+                if (document.readyState === 'complete') setIsLoadingChapter(false); 
+                clearInterval(interval);       
+                // do your work
+            }, 1000);
+        } */
 
+        useIsLoading(isLoadingLink, setIsLoadingLink, isLoadingChapter, setIsLoadingChapter);
+
+    /* }); */
+
+    console.log(isLoadingLink, isLoadingChapter)
     return ( 
         <div className="App" >     
-            <AppContext.Provider value ={appContext} >
-            <LoadingContext.Provider value ={loadingContext} >
+            <AppContext.Provider value={appContext} >
+            <LoadingContext.Provider value={loadingContext} >
             <SizeContext.Provider value={sizeContext} >
                 <div className={`${theme} ${font}`}>
                     <BrowserRouter>
-                        {isLoading ? <BlurryingSpinner /> : ''}
-                        <Header pdfItems ={pdfItems} setIsLoading={setIsLoading} /> 
-                            <Container className = {` RelativeContainer ${playMode ? "PlayMode" : ''}  ${isLoading ? "Blur" : ''} `} >                           
+                        {isLoadingLink || isLoadingChapter ? <BlurryingSpinner /> : ''}
+                        <Header pdfItems ={pdfItems} /> 
+                            <Container className = {` RelativeContainer ${playMode ? "PlayMode" : ''}  ${isLoadingLink || isLoadingChapter ? "Blur" : ''} `} >                           
                                 <Routes>
                                     <Route exact path="/" element={<Home />} />
                                     <Route path="/cours/le-produit-en-croix" element={<LeProduitEnCroix />} />

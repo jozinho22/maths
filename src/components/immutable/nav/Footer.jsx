@@ -1,5 +1,6 @@
 import React from 'react';
-import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
+import { Navbar, Nav, NavDropdown} from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import { RiMailSendLine } from 'react-icons/ri';
 import AppContext from '../../context/AppContext'
 
@@ -64,9 +65,11 @@ const Footer = () => {
                 <p className="CopyRight" > 
                     Copyright &copy; Jozinho {(new Date().getFullYear())}
                 </p>
-                <RiMailSendLine 
-                    className="ContactIcon"
-                    href="/contact" />
+                <Link to="/contact">
+                    <RiMailSendLine 
+                        className="ContactIcon"
+                        href="/contact" />
+                </Link>
             </Navbar>
     );
 }
