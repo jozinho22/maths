@@ -11,11 +11,11 @@ const GenericCourse = ({title, chapters}) => {
     /* -1 -> Sommaire, n >= 0 -> chapitres */
     const [count, setCount] = React.useState(-1);
 
-    const {updateIsLoading} = React.useContext(LoadingContext);
+    const {updateIsLoadingChapter} = React.useContext(LoadingContext);
     
     React.useEffect(() => {
         window.scrollTo(0, 0);
-        updateIsLoading(true);
+        updateIsLoadingChapter(true);
     }, [count]);
 
     return (

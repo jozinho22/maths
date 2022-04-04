@@ -2,7 +2,9 @@ import React from 'react';
 
 export default React.createContext(
     {
-        isLoading: {},
-        updateIsLoading: (isLoading) => isLoading
+        isLoadingLink: {},
+        updateIsLoadingLink: (isLoadingLink) => isLoadingLink,
+        isLoadingChapter: {},
+        updateIsLoadingChapter: (isLoadingChapter) => isLoadingChapter
     }
 );

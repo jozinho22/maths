@@ -66,7 +66,7 @@ const Footer = () => {
                 </p>
                 <RiMailSendLine 
                     className="ContactIcon"
-                    href="contact" />
+                    href="/contact" />
             </Navbar>
     );
 }

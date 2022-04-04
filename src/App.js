@@ -39,7 +39,8 @@ import Footer from './components/immutable/nav/Footer';
 
 function App() {
 
-    const [isLoading, setIsLoading] = React.useState(true);
+    const [isLoadingLink, setIsLoadingLink] = React.useState(true);
+    const [isLoadingChapter, setIsLoadingChapter] = React.useState(false);
 
     const [font, setFont] = React.useState("Dragons");
     const [playMode, setPlayMode] = React.useState(false);
@@ -57,8 +58,8 @@ function App() {
     var pdfItems = pdfResourceBuilder();
 
     const loadingContext = {
-        isLoading: isLoading,
-        updateIsLoading: setIsLoading
+        isLoadingLink: isLoadingLink,
+        updateIsLoadingLink: setIsLoadingLink
     }
 
     const [width, height] = useWindowSize();
@@ -69,13 +70,13 @@ function App() {
     }, [width, height]); 
 
     React.useEffect(() => {
-        if(isLoading) {
+        if(isLoadingLink || isLoadingChapter) {
             var interval = setInterval(function () {
                 if (document.readyState === 'complete') setIsLoading(false); 
                 clearInterval(interval);       
                 // do your work
             }, 1000);
-        }
+        } 
     });
 
     return ( 
