@@ -2,7 +2,7 @@ import React from 'react';
 import { Container } from 'react-bootstrap';
 import NavigationButtons from './NavigationButtons';
 import TableOfContents from './TableOfContents';
-import RefFormulasContext from './context/RefFormulasContext';
+import LoadingContext from '../context/LoadingContext';
 
 import './GenericCourse.css';
 
@@ -11,15 +11,11 @@ const GenericCourse = ({title, chapters}) => {
     /* -1 -> Sommaire, n >= 0 -> chapitres */
     const [count, setCount] = React.useState(-1);
 
-    const [refFormulas, setRefFormulas] = React.useState([]); 
-
-    const refFormulasContext = {
-        refFormulas : refFormulas,
-        updateRefFormulas: setRefFormulas
-    }
+    const {updateIsLoading} = React.useContext(LoadingContext);
     
     React.useEffect(() => {
         window.scrollTo(0, 0);
+        updateIsLoading(true);
     }, [count]);
 
     return (
@@ -32,15 +28,12 @@ const GenericCourse = ({title, chapters}) => {
                         setCount={setCount} />
                         : ''
             }
-            <p className="Title">{title} {count >= 0 ? "- " + chapters[count].name : ''}</p>
+            <p className="Title">{title} {count >= 0 ? "(" + (count + 1) + ")" : ''}</p>
             <Container className="CoursesContainer"> 
                 {
                     count < 0 ?
                         <TableOfContents chapters={chapters} setCount={setCount} />
-                            :       
-                                <RefFormulasContext.Provider value ={refFormulasContext} >
-                                    {chapters[count].component}
-                                </RefFormulasContext.Provider>          
+                            :  chapters[count].component
                 }                  
             </Container>
             {

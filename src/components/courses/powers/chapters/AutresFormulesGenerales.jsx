@@ -2,9 +2,6 @@ import React from 'react';
 import { Container } from 'react-bootstrap';
 import MathJaxDisplay from '../../../mathjax-display/MathJaxDisplay';
 import MathJaxInline from '../../../mathjax-display/MathJaxInline';
-import addRefFormulas from '../../addRefFormulas';
-import RefFormulasTable from '../../RefFormulasTable';
-import RefFormulasContext from '../../context/RefFormulasContext';
 
 const AutresFormulesGenerales = () => {
 
@@ -22,8 +19,6 @@ const AutresFormulesGenerales = () => {
     var xPowAOnXPowBDemo = "\\( \\frac{x^a}{x^b} = x^a x^{-b} \\)";
     var xPowAOnXPowBDemo2 = "\\( \\frac{x^a}{x^b} = x^{a + (- b)} \\)";
     var xPowAOnXPowBDemo3 = "\\( \\frac{x^a}{x^b} = x^{a - b} \\)";
-
-    const {refFormulas} = React.useContext(RefFormulasContext);
 
     return (
             <>
@@ -57,7 +52,6 @@ const AutresFormulesGenerales = () => {
                 <p>et avec <MathJaxInline toShow={"$(1)$"} /> on a :</p>
                 <MathJaxDisplay toShow={xPowAOnXPowBDemo2} demo/>
                 <MathJaxDisplay toShow={xPowAOnXPowBDemo3} demo/>
-                <RefFormulasTable formulasToShow={[refFormulas[0, 3]]} />
             </>
     );
 }

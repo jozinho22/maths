@@ -1,8 +1,6 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
 import MathJaxDisplay from '../../../mathjax-display/MathJaxDisplay';
-import RefFormulasContext from '../../context/RefFormulasContext';
-import addRefFormulas from '../../addRefFormulas';
 
 const MultiplicationDePuissances = () => {
 
@@ -12,13 +10,6 @@ const MultiplicationDePuissances = () => {
     var thouByHundred2 = "\\( 10^3\\times 10^2 = 10^5 \\)";
     var powTimesPow = "\\(x^a.x^b = x^{a+b} \\)";
     
-    const {refFormulas, updateRefFormulas} = React.useContext(RefFormulasContext);
-
-    React.useEffect(() => {
-        updateRefFormulas(addRefFormulas(refFormulas, powTimesPow, 1));
-        console.log(refFormulas)
-    })
-
     return (
             <>
                 <p className="Title1">Multiplication de puissances</p>

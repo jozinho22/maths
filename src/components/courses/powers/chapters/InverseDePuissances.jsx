@@ -3,10 +3,6 @@ import { Container } from 'react-bootstrap';
 import MathJaxDisplay from '../../../mathjax-display/MathJaxDisplay';
 import MathJaxInline from '../../../mathjax-display/MathJaxInline';
 
-import RefFormulasContext from '../../context/RefFormulasContext';
-import addRefFormulas from '../../addRefFormulas';
-import RefFormulasTable from '../../RefFormulasTable';
-
 const InverseDePuissances = () => {
 
     var xPow03 = "\\( x^0  = 1 \\)";
@@ -17,13 +13,6 @@ const InverseDePuissances = () => {
     var xTimesInvX4 = "\\( x^{1 +n} = x^0 \\)";
     var xTimesInvX5 = "\\( 1 + n = 0 \\Leftrightarrow  n = -1 \\)";
     var xTimesInvX7 = "\\(  {1 \\over x} = x ^{-1}  \\)";
-
-    const {refFormulas, updateRefFormulas} = React.useContext(RefFormulasContext);
-
-    React.useEffect(() => {
-        updateRefFormulas(addRefFormulas(refFormulas, xTimesInvX7, 3));
-        console.log(refFormulas)
-    })
 
     return (
             <>
@@ -47,7 +36,6 @@ const InverseDePuissances = () => {
                 <Container className="Focus"> 
                     <MathJaxDisplay toShow={xTimesInvX7} fRef={3}/>
                 </Container>
-                <RefFormulasTable formulasToShow={[refFormulas[0, 1]]} />
             </>
     );
 }

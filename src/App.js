@@ -11,6 +11,8 @@ import './components/alert/Alert.css';
 import './App.css';
 
 import AppContext from './components/context/AppContext';
+import LoadingContext from './components/context/LoadingContext';
+
 import pdfResourceBuilder from './components/pdf-viewer/pdfResourceBuilder';
 import SizeContext from './components/context/SizeContext';
 
@@ -54,6 +56,11 @@ function App() {
 
     var pdfItems = pdfResourceBuilder();
 
+    const loadingContext = {
+        isLoading: isLoading,
+        updateIsLoading: setIsLoading
+    }
+
     const [width, height] = useWindowSize();
     const sizeContext = [width, height];
 
@@ -74,6 +81,7 @@ function App() {
     return ( 
         <div className="App" >     
             <AppContext.Provider value ={appContext} >
+            <LoadingContext.Provider value ={loadingContext} >
             <SizeContext.Provider value={sizeContext} >
                 <div className={`${theme} ${font}`}>
                     <BrowserRouter>
@@ -109,6 +117,7 @@ function App() {
                     </BrowserRouter>
                 </div> 
             </SizeContext.Provider>
+            </LoadingContext.Provider>
             </AppContext.Provider> 
         </div>
     );

@@ -33,8 +33,8 @@ const PDFViewerPage = ({ pdfItem }) => {
 
         const swipers = useSwipeable(
             {
-                onSwipedRight: () =>  setPage(page - 1 > 0 ? page - 1 : 1),
-                onSwipedLeft: () =>  setPage(page + 1 > pages ? pages : page + 1)
+                onSwipedRight: () =>  {setPage(page - 1 > 0 ? page - 1 : 1);},
+                onSwipedLeft: () =>  {setPage(page + 1 > pages ? pages : page + 1);}
             }
         );
 
@@ -115,7 +115,7 @@ const PDFViewerPage = ({ pdfItem }) => {
 
             }
           
-            <h3 className="Title">{pdfItem.title}</h3>
+            <h3 className="Title PdfTitle">{pdfItem.title}</h3>
 
             {
                 pdfItem.type === 'courses' ?
@@ -137,12 +137,12 @@ const PDFViewerPage = ({ pdfItem }) => {
 
                     <>
                         {
-                            !mobile ?
-                                <PaginationPageByPage
-                                    page={page}
-                                    pages={pages} 
-                                    setPage={setPage} />
-                                        : <></>
+                            mobile ?
+                                <div className="PagesMobile">page : {page} / {pages}</div>
+                                    : <PaginationPageByPage
+                                            page={page}
+                                            pages={pages} 
+                                            setPage={setPage} />
                         }
                         <div {...swipers} ref={refPassthrough} >
                             <PDF 
@@ -156,13 +156,12 @@ const PDFViewerPage = ({ pdfItem }) => {
                         </div>   
                         {
                             mobile ?
-                                <div className="PagesMobile">page : {page} / {pages}</div>
+                                <></>
                                     :   <PaginationPageByPage
                                             page={page}
                                             pages={pages} 
                                             setPage={setPage} />                 
                         }
-                        
                     </> :
 
                         <>

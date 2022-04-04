@@ -17,6 +17,7 @@
     .SwitchButton .btn-lg {
         font-size: small !important;
     }
+
     .SwitchButton {
         width: 60%;
     }
@@ -80,8 +81,10 @@
 }
 
 .PagesMobile {
-    position: fixed;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.PdfTitle {
+    margin-top: 15px;
 }

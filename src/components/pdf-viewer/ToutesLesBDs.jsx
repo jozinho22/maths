@@ -8,8 +8,8 @@ const ToutesLesBDs = ( {pdfItems} ) => {
             <Row>
                 {
                     pdfItems.map(pdfItem => (
-                        <Container className="TableOfContentsButtonContainer">
-                            <Col xs={12} md={12} key={pdfItem.id}>
+                        <Container  key={pdfItem.id} className="TableOfContentsButtonContainer">
+                            <Col xs={12} md={12}>
                                 <Button key={pdfItem.id} className="DefaultButton TableOfContentsButton" href={`bds-de-jpp/${pdfItem.relativePath}`}>
                                     {pdfItem.title}
                                 </Button>

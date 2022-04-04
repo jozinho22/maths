@@ -2,9 +2,6 @@ import React from 'react';
 import { Container } from 'react-bootstrap';
 import MathJaxDisplay from '../../../mathjax-display/MathJaxDisplay';
 import MathJaxInline from '../../../mathjax-display/MathJaxInline';
-import RefFormulasContext from '../../context/RefFormulasContext';
-import addRefFormulas from '../../addRefFormulas';
-import RefFormulasTable from '../../RefFormulasTable';
 
 const LienEntrePuissancesEtRacines = () => {
 
@@ -26,14 +23,6 @@ const LienEntrePuissancesEtRacines = () => {
 
     var sqrtnEx = "\\( \\sqrt{x}^{6} = x^{\\frac{6}{2}} = x^3  \\)";
     var sqrtnEx2 = "\\( \\Big( \\frac{1}{\\sqrt[3]{x}}\\Big)^{2} = x^{-\\frac{2}{3}} \\)";
-
-
-    const {refFormulas, updateRefFormulas} = React.useContext(RefFormulasContext);
-
-    React.useEffect(() => {
-        console.log(refFormulas)
-        updateRefFormulas(addRefFormulas(refFormulas, sqrtn, 5));
-    })
 
     return (
             <> 
@@ -80,7 +69,6 @@ const LienEntrePuissancesEtRacines = () => {
                 <p className="Title2">Exemples</p>
                 <MathJaxDisplay toShow={sqrtnEx} />
                 <MathJaxDisplay toShow={sqrtnEx2} />
-                <RefFormulasTable formulasToShow={[refFormulas[0, 2, 3]]} />
             </>
     );
 }

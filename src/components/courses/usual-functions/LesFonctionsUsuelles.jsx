@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Button } from "react-bootstrap";
 import { LineChart, XAxis, YAxis, ReferenceLine, ResponsiveContainer, Tooltip, Line } from 'recharts';
-
+import LoadingContext from "../../context/LoadingContext";
 import MathJaxDisplay from '../../mathjax-display/MathJaxDisplay';
 import buildUsualFunctions from "./buildUsualFunctions";
 import './LesFonctionsUsuelles.css';
@@ -18,6 +18,8 @@ const LesFonctionsUsuelles = () => {
 /*     'basis' | 'basisClosed' | 'basisOpen' | 'linear' | 'linearClosed' | 'natural' | 'monotoneX' | 'monotoneY' | 'monotone' | 'step' | 'stepBefore' | 'stepAfter' | CurveFactory;
  */
     const type = "natural";
+
+    const {updateIsLoading} = React.useContext(LoadingContext);
 
     React.useEffect(() => {
 
@@ -56,6 +58,8 @@ const LesFonctionsUsuelles = () => {
         } 
 
         setFData(datas);
+
+        updateIsLoading(true);
 
     }, [f]);
 
