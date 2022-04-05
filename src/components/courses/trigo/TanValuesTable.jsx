@@ -1,7 +1,7 @@
 import MathJaxInline from '../../mathjax-display/MathJaxInline';
 import { Table } from 'react-bootstrap';
 
-const CircleTrigoValuesTable = () => {
+const TanValuesTable = () => {
 
     var values = [];
     var k = 0;
@@ -10,8 +10,7 @@ const CircleTrigoValuesTable = () => {
             id: ++k,
             alpha: <MathJaxInline toShow={"$0 /  2\\pi $"} />,
             alphaDeg: <MathJaxInline toShow={"$0° /  360° $"} />,
-            cos: <MathJaxInline toShow={"$1$"} />,
-            sin: <MathJaxInline toShow={"$0$"} />
+            tan: <MathJaxInline toShow={"$0$"} />
         }
     );
     values.push(
@@ -19,8 +18,7 @@ const CircleTrigoValuesTable = () => {
             id: ++k,
             alpha: <MathJaxInline toShow={"$\\frac{\\pi}{6}$"} />,
             alphaDeg: <MathJaxInline toShow={"$30° $"} />,
-            cos: <MathJaxInline toShow={"$\\frac{\\sqrt{3}}{2}$"} />,
-            sin: <MathJaxInline toShow={"$\\frac{1}{2}$"} />
+            tan: <MathJaxInline toShow={"$ \\frac{1}{\\sqrt{3}}$"} />
         }
     );
     values.push(
@@ -28,8 +26,7 @@ const CircleTrigoValuesTable = () => {
             id: ++k,
             alpha: <MathJaxInline toShow={"$\\frac{\\pi}{4}$"} />,
             alphaDeg: <MathJaxInline toShow={"$45° $"} />,
-            cos: <MathJaxInline toShow={"$\\frac{\\sqrt{2}}{2}$"} />,
-            sin: <MathJaxInline toShow={"$\\frac{\\sqrt{2}}{2}$"} />
+            tan: <MathJaxInline toShow={"$1$"} />
         }
     );
     values.push(
@@ -37,17 +34,23 @@ const CircleTrigoValuesTable = () => {
             id: ++k,
             alpha: <MathJaxInline toShow={"$\\frac{\\pi}{3}$"} />,
             alphaDeg: <MathJaxInline toShow={"$60° $"} />,
-            cos: <MathJaxInline toShow={"$\\frac{1}{2}$"} />,
-            sin: <MathJaxInline toShow={"$\\frac{\\sqrt{3}}{2}$"} />
+            tan: <MathJaxInline toShow={"$\\sqrt{3}$"} />
         }
     );
     values.push(
         {
             id: ++k,
-            alpha: <MathJaxInline toShow={"$\\frac{\\pi}{2}$"} />,
-            alphaDeg: <MathJaxInline toShow={"$90° $"} />,
-            cos: <MathJaxInline toShow={"$0$"} />,
-            sin: <MathJaxInline toShow={"$1$"} />
+            alpha: <MathJaxInline toShow={"$\\frac{\\pi}{2}_{-}$"} />,
+            alphaDeg: <MathJaxInline toShow={"$90°_{-} $"} />,
+            tan: <MathJaxInline toShow={"$+\\infty$"} />
+        }
+    );
+    values.push(
+        {
+            id: ++k,
+            alpha: <MathJaxInline toShow={"$\\frac{\\pi}{2}_{+}$"} />,
+            alphaDeg: <MathJaxInline toShow={"$90°_{+} $"} />,
+            tan: <MathJaxInline toShow={"$-\\infty$"} />
         }
     );
     values.push(
@@ -55,8 +58,7 @@ const CircleTrigoValuesTable = () => {
             id: ++k,
             alpha: <MathJaxInline toShow={"$ \\frac{2\\pi}{3}$"} />,
             alphaDeg: <MathJaxInline toShow={"$120° $"} />,
-            cos: <MathJaxInline toShow={"$-\\frac{1}{2}$"} />,
-            sin: <MathJaxInline toShow={"$\\frac{\\sqrt{3}}{2}$"} />
+            tan: <MathJaxInline toShow={"$-\\sqrt{3}$"} />
         }
     );
     values.push(
@@ -64,8 +66,7 @@ const CircleTrigoValuesTable = () => {
             id: ++k,
             alpha: <MathJaxInline toShow={"$ \\frac{3\\pi}{4}$"} />,
             alphaDeg: <MathJaxInline toShow={"$135° $"} />,
-            cos: <MathJaxInline toShow={"$-\\frac{\\sqrt{2}}{2}$"} />,
-            sin: <MathJaxInline toShow={"$\\frac{\\sqrt{2}}{2}$"} />
+            tan: <MathJaxInline toShow={"$-1$"} />
         }
     );
     values.push(
@@ -73,8 +74,7 @@ const CircleTrigoValuesTable = () => {
             id: ++k,
             alpha: <MathJaxInline toShow={"$\\frac{5\\pi}{6}$"} />,
             alphaDeg: <MathJaxInline toShow={"$150° $"} />,
-            cos: <MathJaxInline toShow={"$-\\frac{\\sqrt{3}}{2}$"} />,
-            sin: <MathJaxInline toShow={"$\\frac{1}{2}$"} />
+            tan: <MathJaxInline toShow={"$-\\frac{1}{\\sqrt{3}}$"} />
         }
     );
     values.push(
@@ -82,8 +82,7 @@ const CircleTrigoValuesTable = () => {
             id: ++k,
             alpha: <MathJaxInline toShow={"$\\pi$"} />,
             alphaDeg: <MathJaxInline toShow={"$180°$"} />,
-            cos: <MathJaxInline toShow={"$-1$"} />,
-            sin: <MathJaxInline toShow={"$0$"} />
+            tan: <MathJaxInline toShow={"$0$"} />
         }
     );
     return (
@@ -97,10 +96,7 @@ const CircleTrigoValuesTable = () => {
                             <MathJaxInline toShow={"$\\alpha  \\quad (°)$"} />    
                         </th>
                         <th>
-                            <MathJaxInline toShow={"$cos(\\alpha)$"} />      
-                        </th>
-                        <th>
-                            <MathJaxInline toShow={"$sin(\\alpha)$"} />   
+                            <MathJaxInline toShow={"$tan(\\alpha)$"} />   
                         </th>
                     </tr>
                 </thead>
@@ -114,10 +110,7 @@ const CircleTrigoValuesTable = () => {
                                 {value.alphaDeg} 
                             </td>
                             <td>
-                                {value.cos} 
-                            </td>
-                            <td>
-                                {value.sin} 
+                                {value.tan} 
                             </td>
                         </tr>
                     ))}
@@ -126,4 +119,4 @@ const CircleTrigoValuesTable = () => {
     );
 }
 
-export default CircleTrigoValuesTable;
+export default TanValuesTable;

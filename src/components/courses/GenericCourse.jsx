@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container } from 'react-bootstrap';
+import { Container, Button } from 'react-bootstrap';
 import NavigationButtons from './NavigationButtons';
 import TableOfContents from './TableOfContents';
 import LoadingContext from '../context/LoadingContext';
@@ -20,6 +20,13 @@ const GenericCourse = ({title, chapters}) => {
 
     return (
         <>
+            {
+                count != -1 ? 
+                    <Button className="DefaultButton GreenButton" onClick={() => setCount(-1)}>
+                        Retour au sommaire
+                    </Button> 
+                        : <></>
+            }
             {
                 count >= 0 ?
                     <NavigationButtons 

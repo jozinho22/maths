@@ -1,7 +1,7 @@
 import MathJaxInline from '../../mathjax-display/MathJaxInline';
 import { Table } from 'react-bootstrap';
 
-const CircleTrigoFormulasTable = () => {
+const CosSinFormulasTable = () => {
 
     var values = [];
     var k = 0;
@@ -103,4 +103,4 @@ const CircleTrigoFormulasTable = () => {
     );
 }
 
-export default CircleTrigoFormulasTable;
+export default CosSinFormulasTable;
