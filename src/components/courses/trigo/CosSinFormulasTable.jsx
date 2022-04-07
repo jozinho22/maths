@@ -1,18 +1,11 @@
 import MathJaxInline from '../../mathjax-display/MathJaxInline';
-import { Table } from 'react-bootstrap';
+import NiceTable from '../../immutable/NiceTable';
 
 const CosSinFormulasTable = () => {
 
     var values = [];
     var k = 0;
-/*     values.push(
-        {
-            id: ++k,
-            alpha: <MathJaxInline toShow={"$\\alpha $"} />,
-            cos: <MathJaxInline toShow={"$cos(\\alpha)$"} />,
-            sin: <MathJaxInline toShow={"$sin(\\alpha)$"} />
-        }
-    ); */
+
     values.push(
         {
             id: ++k,
@@ -70,7 +63,7 @@ const CosSinFormulasTable = () => {
         }
     );
     return (
-            <Table className="ValuesTable" responsive >
+            <NiceTable>
                 <thead>
                     <tr>
                         <th>
@@ -99,7 +92,7 @@ const CosSinFormulasTable = () => {
                         </tr>
                     ))}
                 </tbody>
-            </Table>   
+            </NiceTable>   
     );
 }
 

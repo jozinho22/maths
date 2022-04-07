@@ -1,11 +1,9 @@
 import React from 'react';
-import { Button } from 'react-bootstrap';
 import ImageZoom from '../../ImageZoom';
 import MathJaxInline from '../../../mathjax-display/MathJaxInline';
 import MathJaxDisplay from '../../../mathjax-display/MathJaxDisplay';
 
 import circleTrigo from '../assets/circleTrigo.png';
-import circleTrigoValues from '../assets/circleTrigoValues.png';
 import sohcahtoa from '../assets/sohcahtoa.png';
 
 const Definition = () => {
@@ -26,7 +24,7 @@ const Definition = () => {
                 </p>
                 <ImageZoom src={circleTrigo} name="Cosinus et sinus" n={1} />
                 <p>
-                    Dans le cercle trigonométrique, on utilisera π comme une mesure d'angle.
+                    Dans le cercle trigonométrique, on utilisera π comme une mesure d'angle (voir le chapitre sur <a href="/cours/le-nombre-pi" target="_blank"  >le nombre π</a>)
                     {"\n"}
                     L'unité est le radian, où un tour complet vaut <MathJaxInline toShow={"$2 \\pi$"} />  radians (équivalent à 360°)
                     {"\n"}
@@ -48,12 +46,6 @@ const Definition = () => {
                     {"\n"} L'hypothénuse est le plus grand côté.
                 </p>
                 
-                <Button 
-                    className="DefaultButton" 
-                    href="/cours/le-nombre-pi" target="_blank" >
-                        Chapitre sur le nombre π
-                </Button>
-                <ImageZoom src={circleTrigoValues} name="Les angles remarquables sur le cercle" n={3} />
             </>
     )
 

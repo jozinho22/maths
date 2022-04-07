@@ -2,6 +2,8 @@ import React from 'react';
 import MathJaxInline from '../../../mathjax-display/MathJaxInline';
 import CosSinValuesTable from '../CosSinValuesTable';
 import CosSinFormulasTable from '../CosSinFormulasTable';
+import circleTrigoValues from '../assets/circleTrigoValues.png';
+import ImageZoom from '../../ImageZoom';
 
 const ValeursDeSinEtCos = () => {
 
@@ -13,6 +15,7 @@ const ValeursDeSinEtCos = () => {
                 <p className="Title1">Formules de cos(α) et sin(α) en fonction de π </p>
                 <p>On observant la figure 2, on voit que certaines valeurs se répétent, voici un tableau récapitulatif du comportement : </p>
                 <CosSinFormulasTable />
+                <ImageZoom src={circleTrigoValues} name="Les angles remarquables sur le cercle" n={3} />
             </>
     )
 

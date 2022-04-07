@@ -1,10 +1,11 @@
 import MathJaxInline from '../../mathjax-display/MathJaxInline';
-import { Table } from 'react-bootstrap';
+import NiceTable from '../../immutable/NiceTable';
 
 const CosSinValuesTable = () => {
 
     var values = [];
     var k = 0;
+    
     values.push(
         {
             id: ++k,
@@ -87,7 +88,7 @@ const CosSinValuesTable = () => {
         }
     );
     return (
-            <Table className="ValuesTable" responsive >
+            <NiceTable>
                 <thead>
                     <tr>
                         <th>
@@ -122,7 +123,7 @@ const CosSinValuesTable = () => {
                         </tr>
                     ))}
                 </tbody>
-            </Table>   
+            </NiceTable>   
     );
 }
 

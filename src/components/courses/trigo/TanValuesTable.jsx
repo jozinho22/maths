@@ -1,10 +1,11 @@
 import MathJaxInline from '../../mathjax-display/MathJaxInline';
-import { Table } from 'react-bootstrap';
+import NiceTable from '../../immutable/NiceTable';
 
 const TanValuesTable = () => {
 
     var values = [];
     var k = 0;
+    
     values.push(
         {
             id: ++k,
@@ -86,7 +87,7 @@ const TanValuesTable = () => {
         }
     );
     return (
-            <Table className="ValuesTable" responsive >
+            <NiceTable>
                 <thead>
                     <tr>
                         <th>
@@ -115,7 +116,7 @@ const TanValuesTable = () => {
                         </tr>
                     ))}
                 </tbody>
-            </Table>   
+            </NiceTable>   
     );
 }
 

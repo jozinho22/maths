@@ -37,6 +37,7 @@ import PDFViewerPage from './components/pdf-viewer/PDFViewerPage';
 import Contact from './components/contact/Contact';
 import Error from './components/immutable/Error';
 import Footer from './components/immutable/nav/Footer';
+import LeTheoremeDePythagore from './components/courses/pythagore/LeTheoremeDePythagore';
 
 function App() {
 
@@ -72,26 +73,8 @@ function App() {
         updateDimensions([width, height]);
     }, [width, height]); 
 
-    /* React.useEffect(() => { */
-/*         if(isLoadingLink) {
-            var interval = setInterval(function () {
-                if (document.readyState === 'complete') setIsLoadingLink(false); 
-                clearInterval(interval);       
-                // do your work
-            }, 1000);
-        }  else if(isLoadingChapter) {
-            var interval = setInterval(function () {
-                if (document.readyState === 'complete') setIsLoadingChapter(false); 
-                clearInterval(interval);       
-                // do your work
-            }, 1000);
-        } */
+    useIsLoading(isLoadingLink, setIsLoadingLink, isLoadingChapter, setIsLoadingChapter);
 
-        useIsLoading(isLoadingLink, setIsLoadingLink, isLoadingChapter, setIsLoadingChapter);
-
-    /* }); */
-
-    console.log(isLoadingLink, isLoadingChapter)
     return ( 
         <div className="App" >     
             <AppContext.Provider value={appContext} >
@@ -106,6 +89,7 @@ function App() {
                                     <Route exact path="/" element={<Home />} />
                                     <Route path="/cours/le-produit-en-croix" element={<LeProduitEnCroix />} />
                                     <Route path="/cours/les-puissances" element={<LesPuissances />} />
+                                    <Route path="/cours/le-theoreme-de-pythagore" element={<LeTheoremeDePythagore />} />
                                     <Route path="/cours/le-nombre-pi" element={<LeNombrePi />} />
                                     <Route path="/cours/le-nombre-d-or" element={<LeNombreDOr />} />
                                     <Route path="/cours/la-trigonometrie" element={<LaTrigonometrie />} />

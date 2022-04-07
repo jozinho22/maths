@@ -1,18 +1,11 @@
 import MathJaxInline from '../../mathjax-display/MathJaxInline';
-import { Table } from 'react-bootstrap';
+import NiceTable from '../../immutable/NiceTable';
 
 const TanFormulasTable = () => {
 
     var values = [];
     var k = 0;
-/*     values.push(
-        {
-            id: ++k,
-            alpha: <MathJaxInline toShow={"$\\alpha $"} />,
-            cos: <MathJaxInline toShow={"$cos(\\alpha)$"} />,
-            sin: <MathJaxInline toShow={"$sin(\\alpha)$"} />
-        }
-    ); */
+
     values.push(
         {
             id: ++k,
@@ -63,7 +56,7 @@ const TanFormulasTable = () => {
         }
     );
     return (
-            <Table className="ValuesTable" responsive >
+            <NiceTable className="ValuesTable" >
                 <thead>
                     <tr>
                         <th>
@@ -86,7 +79,7 @@ const TanFormulasTable = () => {
                         </tr>
                     ))}
                 </tbody>
-            </Table>   
+            </NiceTable>   
     );
 }
 

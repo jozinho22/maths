@@ -6,11 +6,16 @@ import MathJaxDisplay from '../../../mathjax-display/MathJaxDisplay';
 
 import tangente from '../assets/tangente.png';
 import circleTrigo2 from '../assets/circleTrigo2.png';
+import tangenteApplication from '../assets/tangenteApplication.png';
 
 const LaTangente = () => {
 
     var tan = "\\(tan(\\alpha) = \\frac{sin(\\alpha)}{cos(\\alpha)}  \\)";
     var thales = "\\(\\frac{sin(\\alpha)}{tan(\\alpha)} = \\frac{cos(\\alpha)}{1} \\)";
+
+    var tanAlpha = "\\(tan(\\alpha) = \\frac{a}{b}  \\)";
+    var a = "\\( a = b.tan(\\alpha)  \\)";
+    var tanAlphaGen = "\\(tan(\\alpha) = \\frac{opposé}{adjacent} \\)";
 
     return (
 
@@ -34,6 +39,15 @@ const LaTangente = () => {
                 <MathJaxDisplay toShow={tan} />
             </Container>
 
+            <p className="Title2">Applications</p>
+            <p>En utilisant la tangente, on peut mesurer la longueur d'un côté d'un triangle, en connaissant l'angle opposé au côté que l'on cherche.</p>
+            <ImageZoom src={tangenteApplication} name="La tangente de manière générale" n={6} />
+            <p>Avec la formule vue précédemment : </p>
+            <MathJaxDisplay toShow={tanAlphaGen} />
+            <p>On a par rapport à la figure 6 :</p>
+            <MathJaxDisplay toShow={tanAlpha} />
+            <p>Soit </p>
+            <MathJaxDisplay toShow={a} />
         </>
             
             

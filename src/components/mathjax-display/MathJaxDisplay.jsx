@@ -6,7 +6,8 @@ import mathJaxConfig from './MathJaxConfig';
 import './MathJaxDisplay.css';
 const MathJaxDisplay = ({toShow, demo, fRef, infiniteFrac, color}) => {
 
-    toShow = fRef ? (toShow.slice(0, toShow.length - 3) + "\\hspace{2cm} " + "(" + fRef + ")" + toShow.slice(toShow.length - 3)) : toShow;
+    /* -2 et non -3 car les 2 backslashs ne sont plus qu'un */
+    toShow = fRef ? (toShow.slice(0, toShow.length - 2) + "\\hspace{2cm} " + "(" + fRef + ")" + toShow.slice(toShow.length - 2)) : toShow;
     
     var config = mathJaxConfig();
     const memoizedDisplay = React.useMemo(() =>  (
@@ -17,7 +18,7 @@ const MathJaxDisplay = ({toShow, demo, fRef, infiniteFrac, color}) => {
                     </MathJax>
                 </MathJaxContext>
             </Container>
-    ), [toShow, demo, fRef, infiniteFrac, color, config]);
+    ), [toShow, demo, infiniteFrac, color, config]);
 
     return memoizedDisplay;
 }
