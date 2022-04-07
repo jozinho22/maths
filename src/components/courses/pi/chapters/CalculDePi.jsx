@@ -67,8 +67,6 @@ const CalculDePi = () => {
     return (
 
         <>
-
-            <p className="Title1">Calcul de π par méthode géométrique</p>
             <p>
                 Nous allons tenter de calculer <MathJaxInline toShow={"$ \\pi $"} />, en utilsant plusieurs approximations successives.
                 {"\n"}C'est une méthode qui a été développée par Archimède dans l'antiquité.

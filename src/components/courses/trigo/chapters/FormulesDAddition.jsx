@@ -11,7 +11,6 @@ const FormulesDAddition = () => {
 
     return (
         <>      
-            <p className="Title1">Formules d'additions</p>
             <Container className="Focus">
                 <MathJaxDisplay toShow={cosAplusB} />
                 <MathJaxDisplay toShow={cosAminusB} />

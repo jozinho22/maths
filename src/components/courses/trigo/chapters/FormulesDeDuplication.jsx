@@ -11,7 +11,6 @@ const FormulesDeDuplication = () => {
 
     return (
         <>      
-            <p className="Title1">Formules de duplication</p>
             <Container className="Focus">
                 <MathJaxDisplay toShow={cos2a} />
                 <MathJaxDisplay toShow={cos2aBis} />

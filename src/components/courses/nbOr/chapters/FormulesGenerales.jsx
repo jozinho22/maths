@@ -17,7 +17,6 @@ const FormulesGenerales = () => {
 
     return (
             <>
-                <p className="Title1">Autres formules générales</p>
                 <p className="Title2">Formule de la racine</p>
                 <p>À partir de la formule <MathJaxInline toShow={approxPhi1Begin}/>, on a :</p>
                 <Container className="Focus">

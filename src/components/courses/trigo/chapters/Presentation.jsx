@@ -8,9 +8,9 @@ import sohcahtoa from '../assets/sohcahtoa.png';
 
 const Definition = () => {
 
-    var sin = "\\(sin(\\alpha) = \\frac{opposé}{hypothénuse} \\)";
+    var sin = "\\(sin(\\alpha) = \\frac{oppose}{hypothenuse} \\)";
     var cos = "\\(cos(\\alpha) = \\frac{adjacent}{hypothénuse} \\)";
-    var tan = "\\(tan(\\alpha) = \\frac{opposé}{adjacent} \\)";
+    var tan = "\\(tan(\\alpha) = \\frac{oppose}{adjacent} \\)";
 
     return (
             <>

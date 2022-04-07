@@ -9,7 +9,6 @@ const ValeursDeSinEtCos = () => {
 
     return (
             <>
-                <p className="Title1">Valeurs de cos(α) et sin(α)</p>
                 <p>On voit que certaines valeurs se répètent : <MathJaxInline toShow={"$\\frac{1}{2}$"} />, <MathJaxInline toShow={"$\\frac{\\sqrt2}{2}$"} /> et <MathJaxInline toShow={"$\\frac{\\sqrt{3}}{2}$"} /> </p>
                 <CosSinValuesTable />
                 <p className="Title1">Formules de cos(α) et sin(α) en fonction de π </p>

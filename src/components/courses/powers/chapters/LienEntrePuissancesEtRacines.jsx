@@ -26,7 +26,6 @@ const LienEntrePuissancesEtRacines = () => {
 
     return (
             <> 
-                <p className="Title1">Liens entre puissances et racines</p>
                 <p>La définition de la racine carrée est la suivante : </p>
                 <MathJaxDisplay toShow={sqrt2} demo/>
                 <p>Nous allons essayer de déterminer la valeur de <MathJaxInline toShow={"$n$"} /> pour laquelle <MathJaxInline toShow={"$x^n = \\sqrt{x}$"} /> </p>

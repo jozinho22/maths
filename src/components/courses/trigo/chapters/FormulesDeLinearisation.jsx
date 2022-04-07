@@ -12,7 +12,6 @@ const FormulesDeLinearisation = () => {
 
     return (
             <>      
-                <p className="Title1">Formules de linéarisation</p>
                 <Container className="Focus">
                     <MathJaxDisplay toShow={cosAcosB} />
                     <MathJaxDisplay toShow={sinAsinB} />

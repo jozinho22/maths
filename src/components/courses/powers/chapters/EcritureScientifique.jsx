@@ -24,7 +24,6 @@ const EcritureScientifique = () => {
 
     return (
             <>
-                <p className="Title1">L'écriture scientifique</p>
                 <p>
                     Les puissances nous permettent d'écrire les nombres de l'infiniment grand et de l'infiniment petit.
                     L'écriture utilisée dans la norme internationale est l'écriture scientifique.

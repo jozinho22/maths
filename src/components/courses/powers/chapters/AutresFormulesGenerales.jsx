@@ -22,7 +22,6 @@ const AutresFormulesGenerales = () => {
 
     return (
             <>
-                <p className="Title1">Autres formules générales</p>
                 <p className="Title2">Puissance de produit</p>
                 <Container className="Focus"> 
                     <MathJaxDisplay toShow={xTimesYPowA}/>

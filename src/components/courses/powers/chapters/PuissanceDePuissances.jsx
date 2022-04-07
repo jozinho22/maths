@@ -11,7 +11,6 @@ const PuissanceDePuissances = () => {
 
     return (
             <>
-                <p className="Title1">Puissances de puissances</p>
                 <p>Si maintenant on met une puissance exposé à une puissance : </p>
                  <MathJaxDisplay toShow={thouPow2} demo />
                 <p>Soit</p>

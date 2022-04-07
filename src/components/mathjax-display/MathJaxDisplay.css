@@ -1,5 +1,5 @@
 mjx-math {
-    font-size: medium !important;
+    font-size: small !important;
     margin: 0px;
 }
 
@@ -30,7 +30,7 @@ table mjx-container {
 
 @media (min-width: 450px) {
     .Demo mjx-container {
-        margin-left: 25px !important;
+        margin-left: 45px !important;
     }
 }
 

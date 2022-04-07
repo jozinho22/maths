@@ -13,7 +13,6 @@ const DemonstrationDuTheoremeDePythagore = () => {
 
     return (
         <>
-            <p className="Title1">Démonstration du théorème de Pythagore</p>
             <p>Pour prouver la véracité du thèorème, reprenons le triangle précédent, et ajoutons-y sa hauteur <MathJaxInline toShow={"$h$"} />. </p>
             <ImageZoom src={pythagoreDemo1} name="Démonstration du thèorème de Pythagore" n={2} />
             <p>

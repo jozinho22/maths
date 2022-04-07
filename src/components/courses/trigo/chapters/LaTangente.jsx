@@ -15,12 +15,10 @@ const LaTangente = () => {
 
     var tanAlpha = "\\(tan(\\alpha) = \\frac{a}{b}  \\)";
     var a = "\\( a = b.tan(\\alpha)  \\)";
-    var tanAlphaGen = "\\(tan(\\alpha) = \\frac{opposé}{adjacent} \\)";
+    var tanAlphaGen = "\\(tan(\\alpha) = \\frac{oppose}{adjacent} \\)";
 
     return (
-
         <>
-            <p className="Title1">La tangente</p>
             <p>
                 La définition d'une tangente en maths est la droite qui coupe une portion de cercle à angle droit.
                 {"\n"}Le cercle et sa tangente se coupent alors en un point précis.

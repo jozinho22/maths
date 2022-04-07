@@ -4,6 +4,7 @@ import { Container } from 'react-bootstrap';
 import mathJaxConfig from './MathJaxConfig';
 
 import './MathJaxDisplay.css';
+
 const MathJaxDisplay = ({toShow, demo, fRef, infiniteFrac, color}) => {
 
     /* -2 et non -3 car les 2 backslashs ne sont plus qu'un */

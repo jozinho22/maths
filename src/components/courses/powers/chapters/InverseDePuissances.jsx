@@ -16,7 +16,6 @@ const InverseDePuissances = () => {
 
     return (
             <>
-                <p className="Title1">Inverse de puissances</p>
                 <p>La multiplication d'un nombre par son inverse donne toujours l'identité, à savoir <MathJaxInline toShow={"$1$"} />.</p>
                 <MathJaxDisplay toShow={xTimesInvX} demo />
                 <p>Mais on sait, grâce à la formule <MathJaxInline toShow={"$(2)$"} /> que :</p>

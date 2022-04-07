@@ -12,7 +12,6 @@ const AutresFormulesGenerales = () => {
 
     return (
             <>
-                <p className="Title1">Autres formules générales </p>
                 <Container className="Focus">
                     <MathJaxDisplay toShow={approxPi1} infiniteFrac />  
                 </Container>

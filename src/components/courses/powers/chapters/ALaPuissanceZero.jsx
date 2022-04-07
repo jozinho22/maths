@@ -11,7 +11,6 @@ const ALapuissanceZero = () => {
 
     return (
             <>
-                <p className="Title1">À La puissance zéro</p>
                 <p>Avec la formule <MathJaxInline toShow={"$(1)$"} />, on peut dire que : </p>
                 <MathJaxDisplay toShow={xPow0} demo />
                 <p>Soit </p>

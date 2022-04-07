@@ -15,7 +15,6 @@ const PuissancesComposees = () => {
 
     return (
             <>
-                <p className="Title1">Puissances composées</p>
                 <p className="Title2">Exemple 1 : puissance au dénominateur</p>
                 <MathJaxDisplay toShow={comp} demo />
                 <p>peut s'exprimer, grâce à la formule <MathJaxInline toShow={"$(3)$"} /> comme ceci :  </p>

@@ -10,8 +10,6 @@ const PythagoreAppliqueALatrigo = () => {
 
     return (
             <>
-
-                <p className="Title1">Pythagore appliqué à la trigonométrie</p>
                 <p>Sur la figure 1, on voit que nous sommes dans le cas d'un triangle rectangle formé par <MathJaxInline toShow={"$cos(\\alpha)$"} />, <MathJaxInline toShow={"$sin(\\alpha)$"} /> et son hypothénuse <MathJaxInline toShow={"$R$"} />.
                  {"\n"}Grâce au théorème de Pythagore, on sait que :</p>
                 <MathJaxDisplay toShow={pyth} />

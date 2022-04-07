@@ -9,7 +9,6 @@ const ValeursDeTan = () => {
 
     return (
             <>
-                <p className="Title1">Valeurs de tan(α)</p>
                 <p>Étant donné que : </p>
                 <MathJaxDisplay toShow={tan} />
                 <p>Les valeurs du tableau précédents seront à nouveau présentes.</p>

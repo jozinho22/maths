@@ -5,6 +5,7 @@ import TableOfContents from './TableOfContents';
 import LoadingContext from '../context/LoadingContext';
 
 import './GenericCourse.css';
+import GenericChapter from './GenericChapter';
 
 const GenericCourse = ({title, chapters}) => {
 
@@ -21,7 +22,7 @@ const GenericCourse = ({title, chapters}) => {
     return (
         <>
             {
-                count != -1 ? 
+                count !== -1 ? 
                     <Button className="DefaultButton GreenButton" onClick={() => setCount(-1)}>
                         Retour au sommaire
                     </Button> 
@@ -40,7 +41,7 @@ const GenericCourse = ({title, chapters}) => {
                 {
                     count < 0 ?
                         <TableOfContents chapters={chapters} setCount={setCount} />
-                            :  chapters[count].component
+                            : <GenericChapter name={chapters[count].name} component={chapters[count].component} />
                 }                  
             </Container>
             {

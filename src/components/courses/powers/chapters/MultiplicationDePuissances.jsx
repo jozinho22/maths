@@ -12,7 +12,6 @@ const MultiplicationDePuissances = () => {
     
     return (
             <>
-                <p className="Title1">Multiplication de puissances</p>
                 <p>Si l'on multiplie des puissances ensemble, voici ce qu'il se passe : </p>
                 <MathJaxDisplay toShow={thouByHundred} demo />
                 <p>Soit</p>
