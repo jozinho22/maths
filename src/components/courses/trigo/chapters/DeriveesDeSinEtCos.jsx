@@ -5,11 +5,11 @@ import MathJaxInline from '../../../mathjax-display/MathJaxInline';
 
 const DeriveesDeSinEtCos = () => {
 
-    var sinXPlusDx = "\\(sin(\\x + \\dx) - sin(x) = sin(x) cos(dx) + sin(dx) cos(x) - sin(x) \\)";
-    var sinXPlusDx2 = "\\(sin(\\x + \\dx) - sin(x) = sin(x)(cos(dx) - 1) + sin(dx) cos(x)  \\)";
+    var sinXPlusDx = "\\(sin(x + dx) - sin(x) = sin(x) cos(dx) + sin(dx) cos(x) - sin(x) \\)";
+    var sinXPlusDx2 = "\\(sin(x + dx) - sin(x) = sin(x)(cos(dx) - 1) + sin(dx) cos(x)  \\)";
 
-    var cosXPlusDx = "\\(cos(\\x + \\dx) - cos(x) = cos(x) cos(dx) - sin(x) cos(dx) - cos(x) \\)";
-    var cosXPlusDx2 = "\\(cos(\\x + \\dx) - cos(x) = cos(x)(cos(dx) - 1) - sin(x) cos(dx)  \\)";
+    var cosXPlusDx = "\\(cos(x + dx) - cos(x) = cos(x) cos(dx) - sin(x) cos(dx) - cos(x) \\)";
+    var cosXPlusDx2 = "\\(cos(x + dx) - cos(x) = cos(x)(cos(dx) - 1) - sin(x) cos(dx)  \\)";
 
     var sin0 = "\\(sin(0) = 0 \\)";
     var cos0 = "\\(cos(0) = 1 \\)";
@@ -17,11 +17,11 @@ const DeriveesDeSinEtCos = () => {
     var sinDx = "\\(sin(dx) = dx \\)";
     var cosDx = "\\(cos(dx) = 1 \\)";
 
-    var dSinX = "\\( dsin(x) = cos(x).dx \\)";
-    var dCosX = "\\( dcos(x) = -sin(x).dx \\)";
+    var dSinX = "\\( d(sin(x)) = cos(x).dx \\)";
+    var dCosX = "\\( d(cos(x)) = -sin(x).dx \\)";
 
-    var dSinXOverDx = "\\( \\frac{dsin(x)}{dx}  = cos(x) \\)";
-    var dCosXOverDx = "\\( \\frac{dcos(x)}{dx}  = -sin(x) \\)";
+    var dSinXOverDx = "\\( \\frac{d(sin(x))}{dx}  = cos(x) \\)";
+    var dCosXOverDx = "\\( \\frac{d(cos(x))}{dx}  = -sin(x) \\)";
 
     var sinXPrim = "\\( sin(x)'  = cos(x) \\)";
     var cosXPrim = "\\( cos(x)'  = -sin(x) \\)";
@@ -54,7 +54,7 @@ const DeriveesDeSinEtCos = () => {
                 <MathJaxDisplay toShow={dSinXOverDx} />
                 <MathJaxDisplay toShow={dCosXOverDx} />
             </Container> 
-            <p>Ce qui est la définition même de la dérivée, donc on a alors le couple d'expressions :</p>
+            <p>L'expression <MathJaxInline toShow={"$\\frac{d(f(x))}{dx}$"} /> est la définition même de la dérivée (utilisée par Leibniz) d'une fonction <MathJaxInline toShow={"$f(x)$"} /> par rapport à <MathJaxInline toShow={"$x$"} />, donc on a alors le couple d'expressions :</p>
             <Container className="Focus">
                 <MathJaxDisplay toShow={sinXPrim} />
                 <MathJaxDisplay toShow={cosXPrim} />

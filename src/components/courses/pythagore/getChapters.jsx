@@ -16,12 +16,13 @@ const getChapters = () => {
             id: k++,
             component: <DemonstrationDuTheoreme />,
             name: 'Demonstration du théorème de Pythagore'
-        },
+        }
+        /* ,
         {
             id: k++,
             component: <DemonstrationDeLaReciproque />,
             name: 'Demonstration de la réciproque théorème de Pythagore'
-        }
+        } */
         
     ];
 }
