@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Button } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
 import MathJaxDisplay from '../../../mathjax-display/MathJaxDisplay';
 import MathJaxInline from '../../../mathjax-display/MathJaxInline';
 import ImageZoom from '../../ImageZoom';
@@ -109,13 +109,8 @@ const Caracteristiques = () => {
                 <MathJaxDisplay toShow={euclideStuff1} />
                 <p>Autrement dit que : </p>
                 <MathJaxDisplay toShow={euclideStuff2} />
-                <p>Avec le produit en croix, on sait que cela peut s'écrire :</p>
+                <p>Avec <a href="/cours/le-produit-en-croix" target="_blank" >le produit en croix</a>, on sait que cela peut s'écrire :</p>
                 <MathJaxDisplay toShow={euclideStuff3} />
-                <Button 
-                    className="DefaultButton" 
-                    href="/cours/le-produit-en-croix" target="_blank" >
-                        Chapitre sur le produit en croix
-                </Button>
                 <p>Soit :</p>
                 <Container className="Focus">
                     <MathJaxDisplay toShow={euclideStuff4} />

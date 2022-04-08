@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Button } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
 import MathJaxDisplay from '../../../mathjax-display/MathJaxDisplay';
 import MathJaxInline from '../../../mathjax-display/MathJaxInline';
 import ImageZoom from '../../ImageZoom';
@@ -42,20 +42,13 @@ const LeCercle = () => {
     var aCalcComplet = "\\( S_{(2\\pi)} = \\frac{R^2}{2} 2\\pi  \\)"
     var aCalcComplet2 = "\\( S_{(2\\pi)} = \\pi R^2  \\)"
 
-
     return (
         <>
             <p>
-                Le cercle est caractérisé par sa relation avec le nombre π (Pi).
+                Le cercle est caractérisé par sa relation avec <a href="/cours/le-nombre-pi" target="_blank">le nombre π (Pi)</a>.
                 π n'est autre que la rapport de la circonférence (périmètre) sur le diamètre.
                 {"\n"}Cette valeur vaut environ 3,14. Mais c'est une valeur approchée...
             </p>
-
-            <Button 
-                className="DefaultButton" 
-                href="/cours/le-nombre-pi" target="_blank" >
-                    Chapitre sur le nombre π
-            </Button>
 
             <p className="Title1">Le périmètre du cercle</p>
             <p>π se caractérise par le rapport du périmètre sur le diamètre comme ceci :</p>
@@ -113,14 +106,7 @@ const LeCercle = () => {
             <ImageZoom src={circleAreaCalculus2} name="Surface balayée sur le cercle par un angle α" n={++n} />
             <p>Avec le tour complet, on a bien : </p>
             <MathJaxDisplay toShow={aCalcComplet} />
-            <MathJaxDisplay toShow={aCalcComplet2} />
-
-            <Button 
-                className="DefaultButton" 
-                href="/cours/la-trigonometrie" target="_blank" >
-                    Chapitre sur la trigonométrie
-            </Button>
-            
+            <MathJaxDisplay toShow={aCalcComplet2} />        
         </>
     )
 }

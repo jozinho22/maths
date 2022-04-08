@@ -8,8 +8,10 @@ import sohcahtoa from '../assets/sohcahtoa.png';
 
 const Definition = () => {
 
+    var sinDef = "\\ y =sin(\\alpha) \\)";
+    var cosDef = "\\ x =cos(\\alpha) \\)";
     var sin = "\\(sin(\\alpha) = \\frac{oppose}{hypothenuse} \\)";
-    var cos = "\\(cos(\\alpha) = \\frac{adjacent}{hypothénuse} \\)";
+    var cos = "\\(cos(\\alpha) = \\frac{adjacent}{hypothenuse} \\)";
     var tan = "\\(tan(\\alpha) = \\frac{oppose}{adjacent} \\)";
 
     return (
@@ -17,11 +19,15 @@ const Definition = () => {
                 <p>
                     C'est dans le cercle que se définissent les notions de cosinus et de sinus.
                     {"\n"}{"\n"}
-                    Le cosinus est le projeté orthogonal de l'interception entre un cercle de rayon <MathJaxInline toShow="$R = 1$" /> et son rayon, sur l'axe horizontal <MathJaxInline toShow="$x$" />.
+                    Le sinus est le projeté orthogonal de l'interception entre un cercle de rayon <MathJaxInline toShow="$R = 1$" /> et son rayon, sur l'axe vertical <MathJaxInline toShow="$y$" />.
                     {"\n"}
-                    Le sinus est le même principe mais appliqué sur l'axe vertical <MathJaxInline toShow="$y$" />.
-                    {"\n"}{"\n"}Nous verrons la tangente par la suite.   
                 </p>
+                <MathJaxDisplay toShow={sinDef} />
+                <p>
+                    Le cosinus est le même principe mais appliqué sur l'axe horizontal <MathJaxInline toShow="$x$" />.  
+                </p>
+                <MathJaxDisplay toShow={cosDef} />
+                <p>Nous verrons la tangente par la suite. </p>
                 <ImageZoom src={circleTrigo} name="Cosinus et sinus" n={1} />
                 <p>
                     Dans le cercle trigonométrique, on utilisera π comme une mesure d'angle (voir le chapitre sur <a href="/cours/le-nombre-pi" target="_blank"  >le nombre π</a>)

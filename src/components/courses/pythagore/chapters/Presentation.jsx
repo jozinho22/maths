@@ -26,12 +26,12 @@ const Presentation = () => {
                 {"\n"}Alors, si :
             </p>
             <MathJaxDisplay toShow={pyth} />
-            <p>Cela veut dire que le triangle est rectangle entre <MathJaxInline toShow={"$a$"} /> et <MathJaxInline toShow={"$$b$"} />. </p>
+            <p>Cela veut dire que le triangle est rectangle entre <MathJaxInline toShow={"$a$"} /> et <MathJaxInline toShow={"$b$"} />. </p>
             <p>Cela implique alors que : </p>
             <MathJaxDisplay toShow={pyth2} />
             <p>Soit</p>
             <Container className="Focus">
-                <MathJaxDisplay toShow={pyth3} />
+                <MathJaxDisplay toShow={pyth3} fRef={2}/>
             </Container>
         </>
     );

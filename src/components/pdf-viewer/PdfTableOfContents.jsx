@@ -1,6 +1,6 @@
 import { Container, Row, Col, Button } from 'react-bootstrap'
 
-const ToutesLesBDs = ( {pdfItems} ) => {
+const PdfTableOfContents = ( {pdfItems} ) => {
 
     return (
         <>
@@ -23,4 +23,4 @@ const ToutesLesBDs = ( {pdfItems} ) => {
 
 }
 
-export default ToutesLesBDs;
+export default PdfTableOfContents;

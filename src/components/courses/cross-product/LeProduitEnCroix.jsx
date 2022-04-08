@@ -135,7 +135,7 @@ const LeProduitEnCroix = () => {
                 <p>
                     Le produit en croix nous dit que :
                 </p>
-                <MathJaxDisplay toShow={adEqubc}/>
+                <MathJaxDisplay toShow={adEqubc} fRef={1} />
                 <p>
                     D'où la forme de croix car :
                     {"\n"} Les éléments <MathJaxInline toShow={"$[a,d]$"} /> et <MathJaxInline toShow={"$[b,c]$"} /> sont interchangeables à souhait :

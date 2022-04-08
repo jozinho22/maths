@@ -23,21 +23,21 @@ import BlurryingSpinner from './components/immutable/spinners/BlurryingSpinner';
 import useIsLoading from './components/immutable/spinners/useIsLoading';
 
 import Header from './components/immutable/nav/Header';
+
 import Home from './components/home/Home';
-import LeNombrePi from './components/courses/pi/LeNombrePi';
-import LeNombreDOr from './components/courses/nbOr/LeNombreDOr';
-import LaTrigonometrie from './components/courses/trigo/LaTrigonometrie';
-import LesPuissances from './components/courses/powers/LesPuissances';
-import LesFormes from './components/courses/shapes/LesFormes';
-import LesFonctionsUsuelles from './components/courses/usual-functions/LesFonctionsUsuelles';
-import LeProduitEnCroix from './components/courses/cross-product/LeProduitEnCroix';
-import TablesTest from './components/tables-test/TablesTest';
-import ToutesLesBDs from './components/pdf-viewer/ToutesLesBDs';
+
+
+
+import PdfTableOfContents from './components/pdf-viewer/PdfTableOfContents';
 import PDFViewerPage from './components/pdf-viewer/PDFViewerPage';
+
+import TablesTest from './components/tables-test/TablesTest';
+
 import Contact from './components/contact/Contact';
 import Error from './components/immutable/Error';
+
 import Footer from './components/immutable/nav/Footer';
-import LeTheoremeDePythagore from './components/courses/pythagore/LeTheoremeDePythagore';
+import coursesResourceBuilder from './components/courses/coursesResourceBuilder';
 
 function App() {
 
@@ -57,8 +57,6 @@ function App() {
         updateTheme: setTheme
     }
 
-    var pdfItems = pdfResourceBuilder();
-
     const loadingContext = {
         isLoadingLink: isLoadingLink,
         updateIsLoadingLink: setIsLoadingLink,
@@ -75,6 +73,9 @@ function App() {
 
     useIsLoading(isLoadingLink, setIsLoadingLink, isLoadingChapter, setIsLoadingChapter);
 
+    var pdfItems = pdfResourceBuilder();
+    var coursesItems = coursesResourceBuilder();
+
     return ( 
         <div className="App" >     
             <AppContext.Provider value={appContext} >
@@ -83,20 +84,19 @@ function App() {
                 <div className={`${theme} ${font}`}>
                     <BrowserRouter>
                         {isLoadingLink || isLoadingChapter ? <BlurryingSpinner /> : ''}
-                        <Header pdfItems ={pdfItems} /> 
+                        <Header coursesItems = {coursesItems} pdfItems ={pdfItems} /> 
                             <Container className = {` RelativeContainer ${playMode ? "PlayMode" : ''}  ${isLoadingLink || isLoadingChapter ? "Blur" : ''} `} >                           
                                 <Routes>
                                     <Route exact path="/" element={<Home />} />
-                                    <Route path="/cours/le-produit-en-croix" element={<LeProduitEnCroix />} />
-                                    <Route path="/cours/les-puissances" element={<LesPuissances />} />
-                                    <Route path="/cours/le-theoreme-de-pythagore" element={<LeTheoremeDePythagore />} />
-                                    <Route path="/cours/le-nombre-pi" element={<LeNombrePi />} />
-                                    <Route path="/cours/le-nombre-d-or" element={<LeNombreDOr />} />
-                                    <Route path="/cours/la-trigonometrie" element={<LaTrigonometrie />} />
-                                    <Route path="/cours/les-formes" element={<LesFormes />} />
-                                    <Route path="/cours/les-fonctions-usuelles" element={<LesFonctionsUsuelles />} />
-                                    
-                                    <Route path="/bds-de-jpp" element={<ToutesLesBDs pdfItems={pdfItems} />} />
+                                   
+                                    {coursesItems.map(coursesItem => (
+                                            <Route 
+                                                key={coursesItem.id}
+                                                path={coursesItem.relativePath}
+                                                element={coursesItem.component} />
+                                    ))}
+
+                                    <Route path="/bds-de-jpp" element={<PdfTableOfContents pdfItems={pdfItems} />} />
                                     {pdfItems.map(pdfItem => (
                                             <Route 
                                                 key={pdfItem.id}

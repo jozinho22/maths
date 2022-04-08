@@ -12,10 +12,10 @@ const FormulesDAddition = () => {
     return (
         <>      
             <Container className="Focus">
-                <MathJaxDisplay toShow={cosAplusB} />
-                <MathJaxDisplay toShow={cosAminusB} />
-                <MathJaxDisplay toShow={sinAplusB} />
+                <MathJaxDisplay toShow={sinAplusB} fRef={2} />
                 <MathJaxDisplay toShow={sinAminusB} />
+                <MathJaxDisplay toShow={cosAplusB} fRef={3} />
+                <MathJaxDisplay toShow={cosAminusB} />
             </Container> 
         </>
     )

@@ -1,7 +1,7 @@
 import MathJaxInline from '../../mathjax-display/MathJaxInline';
 import NiceTable from '../../immutable/NiceTable';
 
-const CosSinFormulasTable = () => {
+const SinCosFormulasTable = () => {
 
     var values = [];
     var k = 0;
@@ -10,56 +10,56 @@ const CosSinFormulasTable = () => {
         {
             id: ++k,
             alpha: <MathJaxInline toShow={"$\\frac{\\pi}{2} + \\alpha $"} />,
-            cos: <MathJaxInline toShow={"$-sin(\\alpha)$"} />,
-            sin: <MathJaxInline toShow={"$cos(\\alpha)$"} />
+            sin: <MathJaxInline toShow={"$cos(\\alpha)$"} />,
+            cos: <MathJaxInline toShow={"$-sin(\\alpha)$"} />
         }
     );
     values.push(
         {
             id: ++k,
             alpha: <MathJaxInline toShow={"$\\pi + \\alpha$"} />,
-            cos: <MathJaxInline toShow={"$-cos(\\alpha)$"} />,
-            sin: <MathJaxInline toShow={"$-sin(\\alpha)$"} />
+            sin: <MathJaxInline toShow={"$-sin(\\alpha)$"} />,
+            cos: <MathJaxInline toShow={"$-cos(\\alpha)$"} />
         }
     );
     values.push(
         {
             id: ++k,
             alpha: <MathJaxInline toShow={"$2 \\pi + \\alpha$"} />,
-            cos: <MathJaxInline toShow={"$cos(\\alpha)$"} />,
-            sin: <MathJaxInline toShow={"$sin(\\alpha)$"} />
+            sin: <MathJaxInline toShow={"$sin(\\alpha)$"} />,
+            cos: <MathJaxInline toShow={"$cos(\\alpha)$"} />
         }
     );
     values.push(
         {
             id: ++k,
             alpha: <MathJaxInline toShow={"$- \\alpha$"} />,
-            cos: <MathJaxInline toShow={"$cos(\\alpha)$"} />,
-            sin: <MathJaxInline toShow={"$-sin(\\alpha)$"} />
+            sin: <MathJaxInline toShow={"$-sin(\\alpha)$"} />,
+            cos: <MathJaxInline toShow={"$cos(\\alpha)$"} />
         }
     );
     values.push(
         {
             id: ++k,
             alpha: <MathJaxInline toShow={"$\\frac{\\pi}{2} - \\alpha$"} />,
-            cos: <MathJaxInline toShow={"$sin(\\alpha)$"} />,
-            sin: <MathJaxInline toShow={"$cos(\\alpha)$"} />
+            sin: <MathJaxInline toShow={"$cos(\\alpha)$"} />,
+            cos: <MathJaxInline toShow={"$sin(\\alpha)$"} />
         }
     );
     values.push(
         {
             id: ++k,
             alpha: <MathJaxInline toShow={"$\\pi - \\alpha$"} />,
-            cos: <MathJaxInline toShow={"$-cos(\\alpha)$"} />,
-            sin: <MathJaxInline toShow={"$sin(\\alpha)$"} />
+            sin: <MathJaxInline toShow={"$sin(\\alpha)$"} />,
+            cos: <MathJaxInline toShow={"$-cos(\\alpha)$"} />
         }
     );
     values.push(
         {
             id: ++k,
             alpha: <MathJaxInline toShow={"$2\\pi - \\alpha$"} />,
-            cos: <MathJaxInline toShow={"$cos(\\alpha)$"} />,
-            sin: <MathJaxInline toShow={"$-sin(\\alpha)$"} />
+            sin: <MathJaxInline toShow={"$-sin(\\alpha)$"} />,
+            cos: <MathJaxInline toShow={"$cos(\\alpha)$"} />
         }
     );
     return (
@@ -70,10 +70,10 @@ const CosSinFormulasTable = () => {
                             <MathJaxInline toShow={"$\\alpha$"} />    
                         </th>
                         <th>
-                            <MathJaxInline toShow={"$cos(\\alpha)$"} />      
+                            <MathJaxInline toShow={"$sin(\\alpha)$"} />   
                         </th>
                         <th>
-                            <MathJaxInline toShow={"$sin(\\alpha)$"} />   
+                            <MathJaxInline toShow={"$cos(\\alpha)$"} />      
                         </th>
                     </tr>
                 </thead>
@@ -84,10 +84,10 @@ const CosSinFormulasTable = () => {
                                 {value.alpha} 
                             </td>
                             <td>
-                                {value.cos} 
+                                {value.sin} 
                             </td>
                             <td>
-                                {value.sin} 
+                                {value.cos} 
                             </td>
                         </tr>
                     ))}
@@ -96,4 +96,4 @@ const CosSinFormulasTable = () => {
     );
 }
 
-export default CosSinFormulasTable;
+export default SinCosFormulasTable;

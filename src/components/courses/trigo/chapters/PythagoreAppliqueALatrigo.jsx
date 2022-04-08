@@ -5,7 +5,7 @@ import MathJaxInline from '../../../mathjax-display/MathJaxInline';
 
 const PythagoreAppliqueALatrigo = () => {
 
-        var pyth = "\\((cos(\\alpha))^2 + (sin(\\alpha))^2 = 1\\)";
+    var pyth = "\\((cos(\\alpha))^2 + (sin(\\alpha))^2 = 1\\)";
     var pyth2 = "\\(cos^2(\\alpha)+ sin^2(\\alpha) = 1\\)";
 
     return (
@@ -15,7 +15,7 @@ const PythagoreAppliqueALatrigo = () => {
                 <MathJaxDisplay toShow={pyth} />
                 <p>Mais voici plutôt la façon exacte de noter cette formule :</p>
                 <Container className="Focus">
-                    <MathJaxDisplay toShow={pyth2} />
+                    <MathJaxDisplay toShow={pyth2} fRef={1} />
                 </Container>
         
             </>

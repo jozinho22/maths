@@ -12,12 +12,12 @@ const FormulesDeDuplication = () => {
     return (
         <>      
             <Container className="Focus">
+                <MathJaxDisplay toShow={sin2a} />
+            </Container>
+            <Container className="Focus">
                 <MathJaxDisplay toShow={cos2a} />
                 <MathJaxDisplay toShow={cos2aBis} />
                 <MathJaxDisplay toShow={cos2aTer} />
-            </Container>
-            <Container className="Focus">
-                <MathJaxDisplay toShow={sin2a} />
             </Container>
         </>
     )

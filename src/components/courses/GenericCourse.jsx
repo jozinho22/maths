@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Button } from 'react-bootstrap';
 import NavigationButtons from './NavigationButtons';
-import TableOfContents from './TableOfContents';
+import ChapterTableOfContents from './ChapterTableOfContents';
 import LoadingContext from '../context/LoadingContext';
 
 import './GenericCourse.css';
@@ -40,7 +40,7 @@ const GenericCourse = ({title, chapters}) => {
             <Container className="CoursesContainer"> 
                 {
                     count < 0 ?
-                        <TableOfContents chapters={chapters} setCount={setCount} />
+                        <ChapterTableOfContents chapters={chapters} setCount={setCount} />
                             : <GenericChapter name={chapters[count].name} component={chapters[count].component} />
                 }                  
             </Container>

@@ -6,6 +6,7 @@ import FormulesDeDuplication from './chapters/FormulesDeDuplication';
 import FormulesDeLinearisation from './chapters/FormulesDeLinearisation';
 import LaTangente from './chapters/LaTangente';
 import ValeursDeTan from './chapters/ValeursDeTan';
+import DeriveesDeSinEtCos from './chapters/DeriveesDeSinEtCos';
 
 const getChapters = () => {
 
@@ -41,6 +42,11 @@ const getChapters = () => {
             id: k++,
             component: <FormulesDeLinearisation />,
             name: 'Formules de linéarisation'
+        },
+        {
+            id: k++,
+            component: <DeriveesDeSinEtCos />,
+            name: 'Dérivées de sinus et cosinus'
         },
         {
             id: k++,

@@ -1,6 +1,6 @@
 import { Container, Row, Col, Button } from 'react-bootstrap';
 
-const TableOfContents = ( {chapters, setCount} ) => {
+const ChapterTableOfContents = ( {chapters, setCount} ) => {
 
     return (
         <>
@@ -25,4 +25,4 @@ const TableOfContents = ( {chapters, setCount} ) => {
 
 }
 
-export default TableOfContents;
+export default ChapterTableOfContents;
