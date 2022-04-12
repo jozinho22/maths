@@ -1,19 +1,6 @@
-mjx-math {
-    font-size: small !important;
-    margin: 0px;
-}
-
-@media (min-width: 768px) {
-    mjx-math {
-        font-size: large !important;
-    }
-}
-
-@media (min-width: 1268px) {
-    mjx-math {
-        font-size: x-large !important;
-    }
-}
+/* mjx-container mjx-math {
+    white-space: normal
+}  */
 
 button mjx-container {
     margin: 0px !important;
@@ -40,6 +27,23 @@ table mjx-container {
 
 .InfiniteFrac mjx-container [size="s"] mjx-script {
     font-size: 70%;
+}
+
+mjx-math {
+    font-size: small !important;
+    margin: 0px;
+}
+
+@media (min-width: 768px) {
+    mjx-math {
+        font-size: large !important;
+    }
+}
+
+@media (min-width: 1268px) {
+    mjx-math {
+        font-size: x-large !important;
+    }
 }
 
 .InfiniteFrac mjx-math {

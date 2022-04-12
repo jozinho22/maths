@@ -1,42 +1,37 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 import ImageZoom from '../../ImageZoom';
 import MathJaxInline from '../../../mathjax-display/MathJaxInline';
 import MathJaxDisplay from '../../../mathjax-display/MathJaxDisplay';
 
+import alKashi from '../../shapes/assets/alKashi.png';
 import pythagoreReciproqueDemo from '../assets/pythagoreReciproqueDemo.png';
 
 const DemonstrationDeLaReciproque = () => {
 
     var gen = "\\(a^2 + b^2 = c^2\\)";
-
-    var gen2 = "\\( \\frac{a^2}{c^2} + \\frac{b^2}{c^2} = 1\\)";
-    var gen3 = "\\( {\\frac{a}{c}}^2 + {\\frac{b}{c}}^2 = 1\\)";
-
-    var gen4 = "\\( sin^2(\\beta) + cos^2(\\beta) = 1\\)";
-    var gen5 = "\\( cos^2(\\alpha) + sin^2(\\alpha) = 1\\)";
+    var alKashi1 = "\\(a^2 + b^2 -2ab.cos(\\gamma) = c^2\\)";
+    var alKashi2 = "\\(2ab.cos(\\gamma) = 0\\)";
+    var gamma = "\\(\\gamma = \\frac{\\pi}{2}\\)";
 
     return (
-        <>
-            <p>Pour prouver la réciproque du thèorème, il va falloir prouver que le triangle formé par <MathJaxInline toShow={"$\\{a, \\; b, \\; c\\}$"} /> est bien rectangle entre <MathJaxInline toShow={"$a$"} /> et <MathJaxInline toShow={"$b$"} />, si et seulement si : </p>
+        <> 
+            <p>Afin de prouver la réciproque du théorème, ik faut pouvoir prouver que dans un triangle formé par <MathJaxInline toShow={"$\\{a, \\; b, \\; c\\}$"} />, si <MathJaxInline toShow={"$a^2 + b^2 = c^2$"} /> alors ce triangle est rectangle entre <MathJaxInline toShow={"$a$"} /> et <MathJaxInline toShow={"$b$"} />.</p>    
+            <p>Le théorème d'Al-Kashi, qui est le théorème de Pythagore appliqué à un triangle quelconque, nous dit que :</p>
+            <MathJaxDisplay toShow={alKashi1} />
+            <ImageZoom src={alKashi} name="Théorème d'Al-Kashi" n={4} />
+            <p>Étant donnée que notre hypothèse de base est que :</p>
             <MathJaxDisplay toShow={gen} />
-            <p>Pour cela, nous allons reprendre la figure de départ en y ajoutant les deux angles <MathJaxInline toShow={"$\\alpha$"} /> et <MathJaxInline toShow={"$\\beta$"} /></p>
-            <ImageZoom src={pythagoreReciproqueDemo} name="Démonstration de la réciproque du thèorème de Pythagore" n={4} />
-            <p>En divisant le tout par <MathJaxInline toShow={"$c^2$"} />, on obtient : </p>
-            <MathJaxDisplay toShow={gen2} demo />
-            <MathJaxDisplay toShow={gen3} fRef={7} demo />
+            <p>Cela nous amène à voir que : </p>
+            <MathJaxDisplay toShow={alKashi2} />  
+            <p>Soit que </p>
+            <MathJaxDisplay toShow={gamma} />
+            <p>Sur notre figure 5, <MathJaxInline toShow={"$\\alpha$"} /> et <MathJaxInline toShow={"$\\beta$"} /> sont inversés, mais ce qui ne change rien au calcul.</p>
+            <ImageZoom src={pythagoreReciproqueDemo} name="Théorème d'Al-Kashi dans notre cas" n={5} />
             <p>
-                Mais <MathJaxInline toShow={"$\\frac{a}{c}$"} /> n'est autre que <MathJaxInline toShow={"$sin(\\beta)$"} /> et <MathJaxInline toShow={"$\\frac{b}{c}$"} /> n'est autre que <MathJaxInline toShow={"$cos(\\beta)$"} />.
-                {"\n"} Soit :
+                Si <MathJaxInline toShow={"$\\gamma = \\frac{\\pi}{2}$"} /> (ou 90°), alors l'angle <MathJaxInline toShow={"$\\gamma$"} /> entre <MathJaxInline toShow={"$a$"} /> et <MathJaxInline toShow={"$b$"} /> est un angle droit.
+                {"\n"}Donc le triangle formé par <MathJaxInline toShow={"$\\{a, \\; b, \\; c\\}$"} /> est bien rectangle entre <MathJaxInline toShow={"$a$"} /> et <MathJaxInline toShow={"$b$"} />.
             </p>
-            <MathJaxDisplay toShow={gen4} demo />
-            <p>Cette formule a été vue dans le chapitre sur <a href="/cours/la-trigonometrie" target="_blank">la trigonométrie</a>, c'est la <MathJaxInline toShow={"$(1)$"} />.</p>
-            <p>Et cette formule ne peut être vraie que si le triangle est rectangle.</p>
-            <p>Si l'on reprend la formule <MathJaxInline toShow={"$(7)$"} />, on trouve aussi : </p>
-            <MathJaxDisplay toShow={gen5} demo />
-            <p>Donc l'angle droit ne peut être qu'entre <MathJaxInline toShow={"$a$"} /> et <MathJaxInline toShow={"$b$"} />.</p>
-            <p>On peut alors conclure que, si dans un triangle formé par <MathJaxInline toShow={"$\\{a, \\; b, \\; c\\}$"} />, <MathJaxInline toShow={"$a^2 + b^2 = c^2$"} /> alors le triangle est rectangle entre <MathJaxInline toShow={"$a$"} /> et <MathJaxInline toShow={"$b$"} />. </p>
         </>
     );
 

@@ -5,6 +5,9 @@ import MathJaxInline from '../../../mathjax-display/MathJaxInline';
 
 const DeriveesDeSinEtCos = () => {
 
+    var dSinX = "\\( d(sin(x)) = sin(x + dx) - sin(x) \\)";
+    var dCosX = "\\( d(cos(x)) = cos(x + dx) - cos(x) \\)";
+
     var sinXPlusDx = "\\(sin(x + dx) - sin(x) = sin(x) cos(dx) + sin(dx) cos(x) - sin(x) \\)";
     var sinXPlusDx2 = "\\(sin(x + dx) - sin(x) = sin(x)(cos(dx) - 1) + sin(dx) cos(x)  \\)";
 
@@ -17,8 +20,8 @@ const DeriveesDeSinEtCos = () => {
     var sinDx = "\\(sin(dx) = dx \\)";
     var cosDx = "\\(cos(dx) = 1 \\)";
 
-    var dSinX = "\\( d(sin(x)) = cos(x).dx \\)";
-    var dCosX = "\\( d(cos(x)) = -sin(x).dx \\)";
+    var dSinXR = "\\( d(sin(x)) = cos(x).dx \\)";
+    var dCosXR = "\\( d(cos(x)) = -sin(x).dx \\)";
 
     var dSinXOverDx = "\\( \\frac{d(sin(x))}{dx}  = cos(x) \\)";
     var dCosXOverDx = "\\( \\frac{d(cos(x))}{dx}  = -sin(x) \\)";
@@ -31,7 +34,10 @@ const DeriveesDeSinEtCos = () => {
             <p>
                 Nous admettrons que <MathJaxInline toShow={"$dx$"} /> est une portion infinitésimale de <MathJaxInline toShow={"$x$"} />.
                 {"\n"}La définition même de la différentielle.
-             </p>
+            </p>
+            <p>On a alors le couple : </p>
+            <MathJaxDisplay toShow={dSinX} demo />
+            <MathJaxDisplay toShow={dCosX} demo />
             <p>Avec la formule <MathJaxInline toShow={"$(2)$"} /> vue dans les formules d'addition, on a :</p>   
             <MathJaxDisplay toShow={sinXPlusDx} demo />
             <p>Soit</p>
@@ -47,9 +53,9 @@ const DeriveesDeSinEtCos = () => {
             <MathJaxDisplay toShow={sinDx} demo />
             <MathJaxDisplay toShow={cosDx} demo />
             <p>D'où les deux expressions suivantes : </p>
-            <MathJaxDisplay toShow={dSinX} demo />
-            <MathJaxDisplay toShow={dCosX} demo />
-            <p>En divisant par <MathJaxInline toShow={"$dx$"} /> chaque membre, on obitent : </p>
+            <MathJaxDisplay toShow={dSinXR} demo />
+            <MathJaxDisplay toShow={dCosXR} demo />
+            <p>En divisant par <MathJaxInline toShow={"$dx$"} /> chaque membre, on obtient : </p>
             <Container className="Focus">
                 <MathJaxDisplay toShow={dSinXOverDx} />
                 <MathJaxDisplay toShow={dCosXOverDx} />
