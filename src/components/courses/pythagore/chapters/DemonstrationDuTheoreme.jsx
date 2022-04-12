@@ -33,11 +33,11 @@ const DemonstrationDuTheoremeDePythagore = () => {
             <p>
                 On sait que la somme des angles d'un triangle est égal à <MathJaxInline toShow={"$\\pi$"} /> (180°).
                 {"\n"}{"\n"} Dans le triangle principal <MathJaxInline toShow={"$\\{a, \\; b, \\; c\\}$"} />, on voit que <MathJaxInline toShow={"$\\alpha + \\beta + \\frac{\\pi}{2} = \\pi$"} />.
-                {"\n"} Donc on peut déduire les autres angles.
-                {"\n"}{"\n"}Dans le triangle formé par <MathJaxInline toShow={"$\\{c_1, \\; h, \\; a\\}$"} />, on a un angle droit et l'angle <MathJaxInline toShow={"$\\alpha$"} />.
-                {"\n"} Le troisième angle est donc <MathJaxInline toShow={"$\\beta$"} />.
-                {"\n"}{"\n"}De même, dans le triangle formé par <MathJaxInline toShow={"$\\{h, \\; c_2, \\; b\\}$"} />, on a un angle droit et l'angle <MathJaxInline toShow={"$\\beta$"} />.
+                {"\n"} Cette relation générale va nous permettre de déduire d'autres angles.
+                {"\n"}{"\n"}Dans le triangle formé par <MathJaxInline toShow={"$\\{c_1, \\; h, \\; a\\}$"} />, on a un angle droit et l'angle <MathJaxInline toShow={"$\\beta$"} />.
                 {"\n"} Le troisième angle est donc <MathJaxInline toShow={"$\\alpha$"} />.
+                {"\n"}{"\n"}De même, dans le triangle formé par <MathJaxInline toShow={"$\\{h, \\; c_2, \\; b\\}$"} />, on a un angle droit et l'angle <MathJaxInline toShow={"$\\alpha$"} />.
+                {"\n"} Le troisième angle est donc <MathJaxInline toShow={"$\\beta$"} />.
                 {"\n"}{"\n"}Nous les avons ajouté à la figure suivante :
             </p>
             <ImageZoom src={pythagoreDemo2} name="Démonstration du thèorème de Pythagore (suite)" n={3} />

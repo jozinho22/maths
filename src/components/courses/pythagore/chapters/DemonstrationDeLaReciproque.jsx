@@ -26,7 +26,7 @@ const DemonstrationDeLaReciproque = () => {
             <MathJaxDisplay toShow={alKashi2} />  
             <p>Soit que </p>
             <MathJaxDisplay toShow={gamma} />
-            <p>Sur notre figure 5, <MathJaxInline toShow={"$\\alpha$"} /> et <MathJaxInline toShow={"$\\beta$"} /> sont inversés, mais ce qui ne change rien au calcul.</p>
+            <p>Dans notre cas, cela ressemble plus à la figure 5. </p>
             <ImageZoom src={pythagoreReciproqueDemo} name="Théorème d'Al-Kashi dans notre cas" n={5} />
             <p>
                 Si <MathJaxInline toShow={"$\\gamma = \\frac{\\pi}{2}$"} /> (ou 90°), alors l'angle <MathJaxInline toShow={"$\\gamma$"} /> entre <MathJaxInline toShow={"$a$"} /> et <MathJaxInline toShow={"$b$"} /> est un angle droit.
