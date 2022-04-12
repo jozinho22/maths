@@ -3,13 +3,11 @@ import { Button, Row, Col } from 'react-bootstrap';
 
 const PaginationPageByPage = ( {page, pages, setPage} ) => {
 
-    const BackButton = ({disabled}) => {
+    const BackButton = () => {
         return (
             <Button 
                 className="DefaultButton"
-                disabled={disabled}                 
                 onClick={() => {
-                    /* setPage(page - 1 > 0 ? page - 1 : 1); */
                     setPage(page - 1);
                 }} >
                 Prev
@@ -17,13 +15,11 @@ const PaginationPageByPage = ( {page, pages, setPage} ) => {
         );
     }
 
-    const NextButton = ({disabled}) => {
+    const NextButton = () => {
         return (
             <Button 
                 className="DefaultButton"
-                disabled={disabled}
                 onClick={() => {
-                    /* setPage(page + 1 > pages ? pages : page + 1); */
                     setPage(page + 1);
                 }} >
                 Next
@@ -34,13 +30,21 @@ const PaginationPageByPage = ( {page, pages, setPage} ) => {
     return (
         <Row>
             <Col style={{textAlign:"right"}}>
-                <BackButton disabled={ !(pages > 1 && page > 1) } /> 
+                {
+                    pages > 1 && page > 1 ? 
+                        <BackButton />
+                            :  <></>
+                }
             </Col>
             <Col className="CenterText">
                 page : {page} / {pages} 
             </Col>
             <Col style={{textAlign:"left"}}>
-                <NextButton disabled={ !(pages > 1 && page < pages) } />  
+                {
+                    pages > 1 && page < pages ? 
+                        <NextButton />
+                            :  <></>
+                }
             </Col>
         </Row>
     );

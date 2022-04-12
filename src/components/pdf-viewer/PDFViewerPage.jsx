@@ -29,7 +29,7 @@ const PDFViewerPage = ({ pdfItem }) => {
         const [withAnswers, setWithAnswers] = React.useState(false);
         const step = 5;
 
-        const {playMode, updatePlayMode} = React.useContext(AppContext);
+        const {updatePlayMode} = React.useContext(AppContext);
 
         const swipers = useSwipeable(
             {
@@ -92,7 +92,6 @@ const PDFViewerPage = ({ pdfItem }) => {
 
         return (
           <> 
-
             <Button 
                 className="DefaultButton UnPlayModeButton"
                 href="/bds-de-jpp">

@@ -49,7 +49,6 @@ function App() {
     const [playMode, setPlayMode] = React.useState(false);
     const [theme, setTheme] = React.useState(JSON.parse(localStorage.getItem('theme')) ? JSON.parse(localStorage.getItem('theme')) : "Brazil");
 
-    console.log(JSON.parse(localStorage.getItem('font')))
     const appContext = {
         font: font,
         updateFont: setFont,

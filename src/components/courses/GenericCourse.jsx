@@ -10,7 +10,7 @@ import GenericChapter from './GenericChapter';
 const GenericCourse = ({title, chapters}) => {
 
     /* -1 -> Sommaire, n >= 0 -> chapitres */
-    const [count, setCount] = React.useState(-1);
+    const [count, setCount] = React.useState(0);
 
     const {updateIsLoadingChapter} = React.useContext(LoadingContext);
     
@@ -19,33 +19,35 @@ const GenericCourse = ({title, chapters}) => {
         updateIsLoadingChapter(true);
     }, [count]);
 
+    console.log(count)
+
     return (
         <>
             {
-                count !== -1 ? 
-                    <Button className="DefaultButton GreenButton" onClick={() => setCount(-1)}>
+                count > 0 ? 
+                    <Button className="DefaultButton GreenButton" onClick={() => setCount(0)}>
                         Retour au sommaire
                     </Button> 
                         : <></>
             }
             {
-                count >= 0 ?
+                count > 0 ?
                     <NavigationButtons 
                         chapters={chapters}
                         count={count}
                         setCount={setCount} />
                         : ''
             }
-            <p className="Title">{title} {count >= 0 ? "(" + (count + 1) + ")" : ''}</p>
+            <p className="Title">{title} {count > 0 ? "(" + count + ")" : ''}</p>
             <Container className="CoursesContainer"> 
                 {
-                    count < 0 ?
+                    count === 0 ?
                         <ChapterTableOfContents chapters={chapters} setCount={setCount} />
-                            : <GenericChapter name={chapters[count].name} component={chapters[count].component} />
+                            : <GenericChapter name={chapters[count - 1].name} component={chapters[count - 1].component} />
                 }                  
             </Container>
             {
-                count >= 0 ?
+                count > 0 ?
                     <NavigationButtons 
                         chapters={chapters}
                         count={count}

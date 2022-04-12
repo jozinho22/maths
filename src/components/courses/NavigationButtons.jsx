@@ -11,30 +11,30 @@ const NavigationButtons = ( {chapters, count, setCount} ) => {
         <Row>
             <Col style={{textAlign:"right"}}>
                 {
-                    count >= 0 ?  
+                    count > 1 ?  
                     <Button 
                         className="DefaultButton NavigationButton"
-                        onClick={() => {setCount(count >= 0 ? count - 1 : -1)}} >
+                        onClick={() => {setCount(count - 1)}} >
                         {
-                            count > 0 ? 
-                                mobile ? 'Précedent' :
-                                    chapters[count - 1].name : 'Sommaire'
+                                mobile ? 
+                                    'Précedent' 
+                                        :  chapters[count - 1].name 
                         }
                     </Button> 
                         : ''
                 } 
             </Col>
             <Col className="CenterText">
-                {count + 1} / {chapters.length} 
+                {count} / {chapters.length} 
             </Col>
             <Col style={{textAlign:"left"}}>
                 {
-                    count < chapters.length - 1 ?
+                    count < chapters.length ?
                         <Button 
                             className="DefaultButton NavigationButton"
                             onClick={() => {setCount(count + 1)}} >
                             {
-                                mobile ? 'Précedent' :
+                                mobile ? 'Suivant' :
                                     chapters[count + 1].name
                             }
                         </Button>
