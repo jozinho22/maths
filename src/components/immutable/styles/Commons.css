@@ -1,7 +1,7 @@
 .RelativeContainer {
     position: relative;
-    padding-top: 20px;
-    padding-bottom: calc(var(--customfooter-height) + 20px);
+    padding-top: calc(var(--customheader-height) + 20px);
+    padding-bottom: calc(var(--customfooter-height) + 20px); 
     min-height: 100vh;
     font-size: x-small;
 }
