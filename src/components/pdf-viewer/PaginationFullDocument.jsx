@@ -12,7 +12,7 @@ const PaginationFullDocument = ({pages, beginIndex, step, addPagesToList}) => {
                         addPagesToList(beginIndex - step);
                     }
                 }} >
-                Prev
+                Précédent
             </Button>
         );
     }
@@ -27,7 +27,7 @@ const PaginationFullDocument = ({pages, beginIndex, step, addPagesToList}) => {
                         addPagesToList(beginIndex + step);
                     }
                 }} >
-                Next
+                Suivant
             </Button>
         );
     }

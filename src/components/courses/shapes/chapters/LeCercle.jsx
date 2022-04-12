@@ -45,7 +45,7 @@ const LeCercle = () => {
     return (
         <>
             <p>
-                Le cercle est caractérisé par sa relation avec <a href="/cours/le-nombre-pi" target="_blank">le nombre π (Pi)</a>.
+                Le cercle est caractérisé par sa relation avec <a href="/cours/le-nombre-pi" target="_blank" rel="noopener">le nombre π (Pi)</a>.
                 π n'est autre que la rapport de la circonférence (périmètre) sur le diamètre.
                 {"\n"}Cette valeur vaut environ 3,14. Mais c'est une valeur approchée...
             </p>

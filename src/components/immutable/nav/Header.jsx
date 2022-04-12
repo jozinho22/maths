@@ -52,6 +52,9 @@ const Header = ( {coursesItems, pdfItems} ) => {
                                 Réviser ses tables
                             </NavDropdown.Item>
                         </NavDropdown>
+                        <Nav.Link title="Liens" href="/liens" >
+                            Liens
+                        </Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>

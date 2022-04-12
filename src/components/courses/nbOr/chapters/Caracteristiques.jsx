@@ -109,7 +109,7 @@ const Caracteristiques = () => {
                 <MathJaxDisplay toShow={euclideStuff1} />
                 <p>Autrement dit que : </p>
                 <MathJaxDisplay toShow={euclideStuff2} />
-                <p>Avec <a href="/cours/le-produit-en-croix" target="_blank" >le produit en croix</a>, on sait que cela peut s'écrire :</p>
+                <p>Avec <a href="/cours/le-produit-en-croix" target="_blank" rel="noopener" >le produit en croix</a>, on sait que cela peut s'écrire :</p>
                 <MathJaxDisplay toShow={euclideStuff3} />
                 <p>Soit :</p>
                 <Container className="Focus">

@@ -189,7 +189,7 @@ const PDFViewerPage = ({ pdfItem }) => {
                         </>
                 }
 
-                <p className="AuthorCopyRight">Avec l'accord de Mr Petit - <a href="http://www.savoir-sans-frontieres.com/JPP/telechargeables/free_downloads.htm" target="_blank" rel="noreferrer">toutes ses BDs</a></p>     
+                <p className="AuthorCopyRight">Avec l'accord de Mr Petit - <a href="http://www.savoir-sans-frontieres.com/JPP/telechargeables/free_downloads.htm" target="_blank" rel="noopener">toutes ses BDs</a></p>     
           </>     
         );
       }

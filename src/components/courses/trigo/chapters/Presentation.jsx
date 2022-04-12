@@ -30,7 +30,7 @@ const Definition = () => {
                 <p>Nous verrons la tangente par la suite. </p>
                 <ImageZoom src={circleTrigo} name="Cosinus et sinus" n={1} />
                 <p>
-                    Dans le cercle trigonométrique, on utilisera π comme une mesure d'angle (voir le chapitre sur <a href="/cours/le-nombre-pi" target="_blank"  >le nombre π</a>)
+                    Dans le cercle trigonométrique, on utilisera π comme une mesure d'angle (voir le chapitre sur <a href="/cours/le-nombre-pi" target="_blank" rel="noopener" >le nombre π</a>)
                     {"\n"}
                     L'unité est le radian, où un tour complet vaut <MathJaxInline toShow={"$2 \\pi$"} />  radians (équivalent à 360°)
                     {"\n"}

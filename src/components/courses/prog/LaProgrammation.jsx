@@ -15,7 +15,7 @@ const Programmation = () => {
             <>
                 <GenericCourse title={title} chapters={chapters} />
                 <p>La documentation complète de 
-                    <a href={jsLink} target="_blank" rel="noreferrer">javascript</a>  
+                    <a href={jsLink} target="_blank" rel="noopener">javascript</a>  
                 </p>         
             </>
             );

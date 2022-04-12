@@ -57,7 +57,7 @@ const LaTrigonometrie = () => {
                 </p>
                 <Button 
                     className="DefaultButton" 
-                    href="/cours/le-nombre-pi" target="_blank" >
+                    href="/cours/le-nombre-pi" target="_blank" rel="noopener" >
                         Chapitre sur le nombre π
                 </Button>
                 <ImageZoom src={circleTrigoValues} name="Les angles remarquables sur le cercle" n={++n} />

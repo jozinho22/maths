@@ -58,7 +58,7 @@ const DemonstrationDuTheoremeDePythagore = () => {
             </p>
             <p>Grâce à l'expression <MathJaxInline toShow={"$(3)$"} />, on a :</p>
             <MathJaxDisplay toShow={ratio1} demo />
-            <p>Avec la formule <MathJaxInline toShow={"$(1)$"} /> du chapitre sur <a href="/cours/le-produit-en-croix" target="_blank" >le produit en croix</a>, on a :  </p>
+            <p>Avec la formule <MathJaxInline toShow={"$(1)$"} /> du chapitre sur <a href="/cours/le-produit-en-croix" target="_blank" rel="noopener" >le produit en croix</a>, on a :  </p>
             <MathJaxDisplay toShow={ratio1pc} fRef={5} demo />
             <p>De plus, graĉe à l'expression <MathJaxInline toShow={"$(4)$"} />, on a :</p>
             <MathJaxDisplay toShow={ratio2} demo />

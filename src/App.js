@@ -32,6 +32,7 @@ import PdfTableOfContents from './components/pdf-viewer/PdfTableOfContents';
 import PDFViewerPage from './components/pdf-viewer/PDFViewerPage';
 
 import TablesTest from './components/tables-test/TablesTest';
+import Links from './components/links/Links';
 
 import Contact from './components/contact/Contact';
 import Error from './components/immutable/Error';
@@ -105,6 +106,7 @@ function App() {
                                     ))}
 
                                     <Route path="/jeux/reviser-ses-tables" element={<TablesTest />} />
+                                    <Route path="/liens" element={<Links />} />
 
                                     <Route path="/contact" element={<Contact />} />
 
