@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import { RiMailSendLine } from 'react-icons/ri';
 import AppContext from '../../context/AppContext'
 
-import Contact from '../../contact/Contact';
 import getFonts from '../styles/getFonts';
 import getThemes from '../styles/getThemes';
 
@@ -32,7 +31,10 @@ const Footer = () => {
                             drop="up"
                             title="Fonts" 
                             id="basic-nav-nav"
-                            onSelect={(event) => updateFont(event)} >   
+                            onSelect={(event) => {
+                                updateFont(event);
+                                localStorage.setItem('font', JSON.stringify(event));
+                            }} >   
                             {
                                 fonts.map(font => (
                                     <NavDropdown.Item key={font.id}
@@ -47,7 +49,10 @@ const Footer = () => {
                             drop="up"
                             title="Themes" 
                             id="theme-dropdown-menu"
-                            onSelect={(event) => updateTheme(event)} >   
+                            onSelect={(event) => {
+                                updateTheme(event);
+                                localStorage.setItem('theme', JSON.stringify(event));
+                            }} >   
                             {
                                 themes.map(theme => (
                                     <NavDropdown.Item 

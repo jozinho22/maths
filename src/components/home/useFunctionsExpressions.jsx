@@ -186,7 +186,7 @@ const useFunctionsExpressions = () => {
 
     return width < 500 ? shuffle(listEqu).slice(0, 14) 
         : width < 1000 ? shuffle(listEqu).slice(0, 20) 
-            : shuffle(listEqu).slice(0, 30);
+            : shuffle(listEqu).slice(0, listEqu.length);
 
 }
 
