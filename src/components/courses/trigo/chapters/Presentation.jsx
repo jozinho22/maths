@@ -8,8 +8,8 @@ import sohcahtoa from '../assets/sohcahtoa.png';
 
 const Definition = () => {
 
-    var sinDef = "\\ y =sin(\\alpha) \\)";
-    var cosDef = "\\ x =cos(\\alpha) \\)";
+    var sinDef = "\\(y =sin(\\alpha) \\)";
+    var cosDef = "\\( x =cos(\\alpha) \\)";
     var sin = "\\(sin(\\alpha) = \\frac{oppose}{hypothenuse} \\)";
     var cos = "\\(cos(\\alpha) = \\frac{adjacent}{hypothenuse} \\)";
     var tan = "\\(tan(\\alpha) = \\frac{oppose}{adjacent} \\)";

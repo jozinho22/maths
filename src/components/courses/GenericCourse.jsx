@@ -19,8 +19,6 @@ const GenericCourse = ({title, chapters}) => {
         updateIsLoadingChapter(true);
     }, [count]);
 
-    console.log(count)
-
     return (
         <>
             {

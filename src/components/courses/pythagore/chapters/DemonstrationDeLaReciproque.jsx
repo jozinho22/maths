@@ -18,12 +18,12 @@ const DemonstrationDeLaReciproque = () => {
         <> 
             <p>Afin de prouver la réciproque du théorème, ik faut pouvoir prouver que dans un triangle formé par <MathJaxInline toShow={"$\\{a, \\; b, \\; c\\}$"} />, si <MathJaxInline toShow={"$a^2 + b^2 = c^2$"} /> alors ce triangle est rectangle entre <MathJaxInline toShow={"$a$"} /> et <MathJaxInline toShow={"$b$"} />.</p>    
             <p>Le théorème d'Al-Kashi, qui est le théorème de Pythagore appliqué à un triangle quelconque, nous dit que :</p>
-            <MathJaxDisplay toShow={alKashi1} />
+            <MathJaxDisplay toShow={alKashi1} demo />
             <ImageZoom src={alKashi} name="Théorème d'Al-Kashi" n={4} />
             <p>Étant donnée que notre hypothèse de base est que :</p>
-            <MathJaxDisplay toShow={gen} />
+            <MathJaxDisplay toShow={gen} demo />
             <p>Cela nous amène à voir que : </p>
-            <MathJaxDisplay toShow={alKashi2} />  
+            <MathJaxDisplay toShow={alKashi2} demo />  
             <p>Soit que </p>
             <MathJaxDisplay toShow={gamma} />
             <p>Dans notre cas, cela ressemble plus à la figure 5. </p>

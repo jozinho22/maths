@@ -15,7 +15,7 @@ const SinCosValuesTable = () => {
             cos: <MathJaxInline toShow={"$1$"} />
         }
     );
-    values.push(
+/*     values.push(
         {
             id: ++k,
             alpha: <MathJaxInline toShow={"$\\frac{\\pi}{10}$"} />,
@@ -23,7 +23,7 @@ const SinCosValuesTable = () => {
             sin: <MathJaxInline toShow={"$ \\frac{\\sqrt{5} - 1}{4}$"} />,
             cos: <MathJaxInline toShow={"$ \\frac{ \\sqrt{ 10 + 2\\sqrt{5}} } {4} $"} />
         }
-    );
+    ); */
     values.push(
         {
             id: ++k,
@@ -51,7 +51,7 @@ const SinCosValuesTable = () => {
             cos: <MathJaxInline toShow={"$\\frac{1}{2}$"} />
         }
     );
-    values.push(
+/*     values.push(
         {
             id: ++k,
             alpha: <MathJaxInline toShow={"$\\frac{2\\pi}{5}$"} />,
@@ -59,7 +59,7 @@ const SinCosValuesTable = () => {
             sin: <MathJaxInline toShow={"$ \\frac{ \\sqrt{ 10 + 2\\sqrt{5}} } {4}$"} />,
             cos: <MathJaxInline toShow={"$ \\frac{\\sqrt{5} - 1}{4} $"} />
         }
-    );
+    ); */
     values.push(
         {
             id: ++k,

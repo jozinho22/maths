@@ -18,7 +18,7 @@ const NavigationButtons = ( {chapters, count, setCount} ) => {
                         {
                                 mobile ? 
                                     'Précedent' 
-                                        :  chapters[count - 1].name 
+                                        :  chapters[count - 2].name 
                         }
                     </Button> 
                         : ''
@@ -35,7 +35,7 @@ const NavigationButtons = ( {chapters, count, setCount} ) => {
                             onClick={() => {setCount(count + 1)}} >
                             {
                                 mobile ? 'Suivant' :
-                                    chapters[count + 1].name
+                                    chapters[count].name
                             }
                         </Button>
                             : ''
