@@ -2,7 +2,7 @@ const GenericChapter = ( {name, component} ) => {
 
     return (
         <>
-            <p className="Title1">{name}</p>
+            <p className="Title">{name}</p>
             {component}
         </>
     )

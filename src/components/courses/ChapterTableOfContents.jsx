@@ -1,4 +1,4 @@
-import { Container, Row, Col, Button } from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
 
 const ChapterTableOfContents = ( {chapters, setCount} ) => {
 
@@ -9,11 +9,11 @@ const ChapterTableOfContents = ( {chapters, setCount} ) => {
                     chapters.map(chapter => (
                         <Container key={chapter.id} className="TableOfContentsButtonContainer">
                             <Col xs={12} md={6} >
-                                <Button 
-                                    className="DefaultButton TableOfContentsButton"
+                                <div 
+                                    className="Clickable TableOfContentsButton"
                                     onClick={() => setCount(chapter.id)}>
-                                    {chapter.id} - {chapter.name}
-                                </Button>
+                                    <u>chapitre {chapter.id}</u> - {chapter.name}
+                                </div>
                                 {chapter.picture ? chapter.picture : <></>}
                             </Col>
                         </Container>

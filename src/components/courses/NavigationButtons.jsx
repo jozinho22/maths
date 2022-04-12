@@ -7,7 +7,7 @@ const NavigationButtons = ( {chapters, count, setCount} ) => {
                     {
                          count >= 0 ?  
                             <Button 
-                                className="DefaultButton"
+                                className="DefaultButton NavigationButton"
                                 onClick={() => {setCount(count >= 0 ? count - 1 : -1)}} >
                                 {count > 0 ? chapters[count - 1].name : 'Sommaire'}
                             </Button> 
@@ -21,7 +21,7 @@ const NavigationButtons = ( {chapters, count, setCount} ) => {
                     {
                         count < chapters.length - 1 ?
                             <Button 
-                                className="DefaultButton"
+                                className="DefaultButton NavigationButton"
                                 onClick={() => {setCount(count + 1)}} >
                                 {chapters[count + 1].name}
                             </Button>

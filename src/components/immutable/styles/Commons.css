@@ -137,6 +137,13 @@
 .TableOfContentsButton {
     margin-top: 10px;
     margin-bottom: 10px;
+    font-family: 'Times New Roman', Times, serif !important;
+    font-size: large !important;
+}
+
+.NavigationButton {
+    font-family: 'Times New Roman', Times, serif !important;
+    font-size: large !important;
 }
 
 .MiniButton {

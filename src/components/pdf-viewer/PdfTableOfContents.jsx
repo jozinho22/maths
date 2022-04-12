@@ -1,4 +1,4 @@
-import { Container, Row, Col, Button } from 'react-bootstrap'
+import { Container, Row, Col } from 'react-bootstrap'
 
 const PdfTableOfContents = ( {pdfItems} ) => {
 
@@ -10,9 +10,9 @@ const PdfTableOfContents = ( {pdfItems} ) => {
                     pdfItems.map(pdfItem => (
                         <Container  key={pdfItem.id} className="TableOfContentsButtonContainer">
                             <Col xs={12} md={12}>
-                                <Button key={pdfItem.id} className="DefaultButton TableOfContentsButton" href={`bds-de-jpp/${pdfItem.relativePath}`}>
+                                <div key={pdfItem.id} className="TableOfContentsButton" href={`bds-de-jpp/${pdfItem.relativePath}`}>
                                     {pdfItem.title}
-                                </Button>
+                                </div>
                             </Col>
                         </Container>
                     ))
