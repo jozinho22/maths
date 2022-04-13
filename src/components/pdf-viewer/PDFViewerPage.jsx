@@ -9,6 +9,8 @@ import PaginationFullDocument from './PaginationFullDocument';
 import AppContext from '../context/AppContext'
 
 import SizeContext from '../context/SizeContext';
+import Link from '../immutable/nav/Link';
+import CoursesLinks from '../courses/CoursesLinks';
 
 import { useSwipeable } from 'react-swipeable';
 
@@ -188,7 +190,7 @@ const PDFViewerPage = ({ pdfItem }) => {
                         </>
                 }
 
-                <p className="AuthorCopyRight">Avec l'accord de Mr Petit - <a href="http://www.savoir-sans-frontieres.com/JPP/telechargeables/free_downloads.htm" target="_blank" rel="noopener">toutes ses BDs</a></p>     
+                <p className="AuthorCopyRight">Avec l'accord de Mr Petit - <Link link={CoursesLinks.SAVOIR_SANS_FRONTIERES} >toutes ses BDs</Link></p>     
           </>     
         );
       }

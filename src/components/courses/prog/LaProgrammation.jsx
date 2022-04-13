@@ -4,6 +4,7 @@ import GenericCourse from '../GenericCourse';
 import getChapters from './chapters/getChapters';
 
 import './LaProgrammation.css';
+import Link from '../../../immutable/nav/Link';
 
 const Programmation = () => {
 
@@ -15,7 +16,7 @@ const Programmation = () => {
             <>
                 <GenericCourse title={title} chapters={chapters} />
                 <p>La documentation complète de 
-                    <a href={jsLink} target="_blank" rel="noopener">javascript</a>  
+                    <Link link={jsLink}>javascript</Link>
                 </p>         
             </>
             );

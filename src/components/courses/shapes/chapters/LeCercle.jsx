@@ -8,6 +8,9 @@ import circleTurnAround from '../assets/circleTurnAround.png'
 import circleAreaCalculus from '../assets/circleAreaCalculus.png'
 import circleAreaCalculus2 from '../assets/circleAreaCalculus2.png';
 
+import Link from '../../../immutable/nav/Link';
+import CoursesLinks from '../../CoursesLinks';
+
 const LeCercle = () => {
 
     var n = 0;
@@ -45,7 +48,7 @@ const LeCercle = () => {
     return (
         <>
             <p>
-                Le cercle est caractérisé par sa relation avec <a href="/cours/le-nombre-pi" target="_blank" rel="noopener">le nombre π (Pi)</a>.
+                Le cercle est caractérisé par sa relation avec <Link link={CoursesLinks.PI} >le nombre π (Pi)</Link>.
                 π n'est autre que la rapport de la circonférence (périmètre) sur le diamètre.
                 {"\n"}Cette valeur vaut environ 3,14. Mais c'est une valeur approchée...
             </p>

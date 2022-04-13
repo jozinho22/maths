@@ -7,6 +7,8 @@ import MathJaxDisplay from '../../../mathjax-display/MathJaxDisplay';
 
 import pythagoreDemo1 from '../assets/pythagoreDemo1.png';
 import pythagoreDemo2 from '../assets/pythagoreDemo2.png';
+import Link from '../../../immutable/nav/Link';
+import CoursesLinks from '../../CoursesLinks';
 
 const DemonstrationDuTheoremeDePythagore = () => {
 
@@ -58,7 +60,7 @@ const DemonstrationDuTheoremeDePythagore = () => {
             </p>
             <p>Grâce à l'expression <MathJaxInline toShow={"$(3)$"} />, on a :</p>
             <MathJaxDisplay toShow={ratio1} demo />
-            <p>Avec la formule <MathJaxInline toShow={"$(1)$"} /> du chapitre sur <a href="/cours/le-produit-en-croix" target="_blank" rel="noopener" >le produit en croix</a>, on a :  </p>
+            <p>Avec la formule <MathJaxInline toShow={"$(1)$"} /> du chapitre sur <Link link={CoursesLinks.PRODUIT_EN_CROIX} >le produit en croix</Link>, on a :  </p>
             <MathJaxDisplay toShow={ratio1pc} fRef={5} demo />
             <p>De plus, graĉe à l'expression <MathJaxInline toShow={"$(4)$"} />, on a :</p>
             <MathJaxDisplay toShow={ratio2} demo />

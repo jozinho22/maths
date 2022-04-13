@@ -7,6 +7,8 @@ import ImageZoom from '../ImageZoom';
 import circleTrigo from './assets/circleTrigo.png';
 import circleTrigoValues from './assets/circleTrigoValues.png';
 import CircleTrigoFormulasTable from './CircleTrigoFormulasTable';
+import CoursesLinks from '../CoursesLinks';
+import Link from '../../immutable/nav/Link';
 
 const LaTrigonometrie = () => {
 
@@ -47,7 +49,7 @@ const LaTrigonometrie = () => {
                 </p>
                 <ImageZoom src={circleTrigo} name="Cosinus et sinus" n={++n} />
                 <p>
-                    Dans le cercle trigonométrique, on utilisera π comme une mesure d'angle.
+                    Dans le cercle trigonométrique, on utilisera π comme une mesure d'angle (voir <Link link={CoursesLinks.PI}>chapitre sur le nombre π</Link>).
                     {"\n"}
                     L'unité est le radian, où un tour complet vaut <MathJaxInline toShow={"$2 \\pi$"} />  radians.
                     {"\n"}
@@ -55,11 +57,7 @@ const LaTrigonometrie = () => {
                     {"\n"}
                     <MathJaxInline toShow={"$k$"} /> étant un entier naturel commençant à 0.
                 </p>
-                <Button 
-                    className="DefaultButton" 
-                    href="/cours/le-nombre-pi" target="_blank" rel="noopener" >
-                        Chapitre sur le nombre π
-                </Button>
+    
                 <ImageZoom src={circleTrigoValues} name="Les angles remarquables sur le cercle" n={++n} />
 
                 <p className="Title1">Valeurs de cos(α) et sin(α)</p>

@@ -3,6 +3,9 @@ import ImageZoom from '../../ImageZoom';
 import MathJaxInline from '../../../mathjax-display/MathJaxInline';
 import MathJaxDisplay from '../../../mathjax-display/MathJaxDisplay';
 
+import Link from '../../../immutable/nav/Link';
+import CoursesLinks from '../../CoursesLinks';
+
 import circleTrigo from '../assets/circleTrigo.png';
 import sohcahtoa from '../assets/sohcahtoa.png';
 
@@ -30,7 +33,7 @@ const Definition = () => {
                 <p>Nous verrons la tangente par la suite. </p>
                 <ImageZoom src={circleTrigo} name="Cosinus et sinus" n={1} />
                 <p>
-                    Dans le cercle trigonométrique, on utilisera π comme une mesure d'angle (voir le chapitre sur <a href="/cours/le-nombre-pi" target="_blank" rel="noopener" >le nombre π</a>)
+                    Dans le cercle trigonométrique, on utilisera π comme une mesure d'angle (voir le chapitre sur <Link link={CoursesLinks.PI} >le nombre π</Link>)
                     {"\n"}
                     L'unité est le radian, où un tour complet vaut <MathJaxInline toShow={"$2 \\pi$"} />  radians (équivalent à 360°)
                     {"\n"}

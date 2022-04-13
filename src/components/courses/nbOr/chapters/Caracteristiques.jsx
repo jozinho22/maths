@@ -5,6 +5,8 @@ import MathJaxInline from '../../../mathjax-display/MathJaxInline';
 import ImageZoom from '../../ImageZoom';
 import FibonacciTable from '../FibonacciTable';
 import euclideStuff from '../assets/euclideStuff.png';
+import Link from '../../../immutable/nav/Link';
+import CoursesLinks from '../../CoursesLinks';
 
 const Caracteristiques = () => {
 
@@ -98,7 +100,6 @@ const Caracteristiques = () => {
     var phiGen2VerifOk = "$\\phi - 1 = \\phi^{-1} $";
 
     return (
-
             <>
                 <p className="Title1">Découverte du nombre d'or par Euclide</p>
                 <p>
@@ -109,7 +110,7 @@ const Caracteristiques = () => {
                 <MathJaxDisplay toShow={euclideStuff1} />
                 <p>Autrement dit que : </p>
                 <MathJaxDisplay toShow={euclideStuff2} />
-                <p>Avec <a href="/cours/le-produit-en-croix" target="_blank" rel="noopener" >le produit en croix</a>, on sait que cela peut s'écrire :</p>
+                <p>Avec <Link link={CoursesLinks.PRODUIT_EN_CROIX}>le produit en croix</Link>, on sait que cela peut s'écrire :</p>
                 <MathJaxDisplay toShow={euclideStuff3} />
                 <p>Soit :</p>
                 <Container className="Focus">

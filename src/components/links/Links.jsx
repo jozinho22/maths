@@ -1,5 +1,6 @@
 import { Container, Row, Col } from 'react-bootstrap';
 
+import Link from '../immutable/nav/Link';
 import linksResourceBuilder from "./linksResourceBuilder";
 
 const Links = () => {
@@ -16,7 +17,7 @@ const Links = () => {
                             <Col xs={12} md={12}>
                                 <div className="TableOfContentsButton" >
                                     <p className="Underline">{link.title}</p>
-                                    <a href={link.link} target="_blank" rel="noopener">{link.link}</a>
+                                    <Link link={link.link}>{link.link}</Link>
                                 </div>
                                 <p className="BasicText">{link.desc}</p>
                                 <br></br>

@@ -7,6 +7,8 @@ import LesFonctionsUsuelles from './usual-functions/LesFonctionsUsuelles';
 import LeProduitEnCroix from './cross-product/LeProduitEnCroix';
 import LeTheoremeDePythagore from './pythagore/LeTheoremeDePythagore';
 
+import CoursesLinks from './CoursesLinks';
+
 function coursesResourceBuilder() {
 
     var coursesItems = [];
@@ -15,49 +17,49 @@ function coursesResourceBuilder() {
     var crossProduct = {
       id: i++,
       title: 'Produit en croix',
-      relativePath: '/cours/le-produit-en-croix',
+      relativePath: CoursesLinks.PRODUIT_EN_CROIX,
       component: <LeProduitEnCroix />
     }
     var powers = {
       id: i++,
       title: 'Puissances',
-      relativePath: '/cours/les-puissances',
+      relativePath: CoursesLinks.PUISSANCES,
       component: <LesPuissances />
     }
     var pythagore = {
       id: i++,
       title: 'Théorème de Pythagore',
-      relativePath: '/cours/le-theoreme-de-pythagore',
+      relativePath: CoursesLinks.PYTHAGORE,
       component: <LeTheoremeDePythagore />
     }
     var pi = {
       id: i++,
       title: 'Nombre π',
-      relativePath: '/cours/le-nombre-pi',
+      relativePath: CoursesLinks.PI,
       component: <LeNombrePi />
     }
     var nbOr = {
       id: i++,
       title: 'Nombre d\'or (φ)',
-      relativePath: '/cours/le-nombre-d-or',
+      relativePath: CoursesLinks.NOMBRE_OR,
       component: <LeNombreDOr />
     }
     var trigo = {
       id: i++,
       title: 'Trigonométrie',
-      relativePath: '/cours/la-trigonometrie',
+      relativePath: CoursesLinks.TRIGO,
       component: <LaTrigonometrie />
     }
     var shapes = {
       id: i++,
       title: 'Formes',
-      relativePath: '/cours/les-formes',
+      relativePath: CoursesLinks.FORMES,
       component: <LesFormes />
     }
     var usualFunctions = {
       id: i++,
       title: 'Fonctions usuelles',
-      relativePath: '/cours/les-fonctions-usuelles',
+      relativePath: CoursesLinks.FONCTIONS,
       component: <LesFonctionsUsuelles />
     }
     
