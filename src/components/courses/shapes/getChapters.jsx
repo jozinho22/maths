@@ -1,8 +1,7 @@
 import { Container } from 'react-bootstrap';
 import GenericShape from './GenericShape';
 import ShapeType from './ShapeType';
-import LeCarre from './chapters/LeCarre';
-import LeCube from './chapters/LeCube';
+import LeCarreLeCube from './chapters/LeCarreLeCube';
 import LeCercle from './chapters/LeCercle';
 import LaSphere from './chapters/LaSphere';
 import LeCylindre from './chapters/LeCylindre';
@@ -15,22 +14,10 @@ const getChapters = () => {
     var k = 1;
 
     return [
-/*         {
-            id: k++,
-            component: <LeCarre />,
-            name: 'Le carré',
-            picture: <Container className="ShapesContainer">
-                        <GenericShape 
-                            type={ShapeType.SQUARE}
-                            dimensions={[2]}
-                            prez={true}
-                            staticDim={true} /> 
-                    </Container>
-        }, */
         {
             id: k++,
-            component: <LeCube />,
-            name: 'Le cube',
+            component: <LeCarreLeCube />,
+            name: 'Le carré - Le cube',
             picture: <Container className="ShapesContainer">
                         <GenericShape 
                             type={ShapeType.CUBE}
@@ -62,6 +49,18 @@ const getChapters = () => {
                             prez={true} 
                             staticDim={true} />   
                     </Container>
+        },
+                {
+            id: k++,
+            component: <LeTriangle />,
+            name: 'Le triangle',
+            picture:  <Container className="ShapesContainer">
+                        <GenericShape 
+                            type={ShapeType.TRIANGLE}
+                            dimensions={[2, 3]} 
+                            prez={true} 
+                            staticDim={true} />  
+                    </Container>
         }
         /* ,          
         {
@@ -76,18 +75,7 @@ const getChapters = () => {
                             staticDim={true} /> 
                     </Container>
         },
-        {
-            id: k++,
-            component: <LeTriangle />,
-            name: 'Le triangle',
-            picture:  <Container className="ShapesContainer">
-                        <GenericShape 
-                            type={ShapeType.TRIANGLE}
-                            dimensions={[2, 3]} 
-                            prez={true} 
-                            staticDim={true} />  
-                    </Container>
-        },
+
         {
             id: k++,
             component: <LeCone />,

@@ -19,7 +19,7 @@
 .Title {
     margin: 0 auto;
     padding-top: 20px;
-    font-size: small;
+    font-size: medium;
     padding-bottom: 20px;
     block-size: fit-content;
     width: fit-content;
@@ -27,6 +27,7 @@
 
 .Title1 {
     padding-top: 20px;
+    font-size: small;
     text-align: left;
     padding-bottom: 5px;
     text-decoration: underline;
@@ -35,6 +36,7 @@
 
 .Title2 {
     padding-top: 10px;
+    font-size: small;
     text-align: left;
     text-decoration: underline;
     font-style: italic;
@@ -45,8 +47,10 @@
         font-size: small;
         padding-top: calc(var(--customheader-height) + 20px);
     }
-
     .Title {
+        font-size: large;
+    }
+    .Title1, .Title2 {
         font-size: medium;
     }
 }
@@ -54,10 +58,6 @@
 @media (min-width: 1268px) {
     .RelativeContainer {
         font-size: medium;
-    }
-
-    .Title {
-        font-size: large;
     }
 }
 

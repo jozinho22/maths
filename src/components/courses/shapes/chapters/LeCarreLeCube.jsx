@@ -6,7 +6,7 @@ import GenericShape from '../GenericShape';
 import ShapeType from '../ShapeType';
 import squareVolCalculus from '../assets/squareVolCalculus.png';
 
-const LeCube = () => {
+const LeCarreLeCube = () => {
 
     var n = 0;
     var cVolume = "\\(V_{cube} = c^3\\)";
@@ -28,41 +28,15 @@ const LeCube = () => {
             <p>
                 La formule du volume du cube est :
             </p> 
-            <MathJaxDisplay toShow={cVolume}/>
+            <Container className="Focus">
+                <MathJaxDisplay toShow={cVolume}/>
+            </Container>
             <p>
                 Si alors on double seulement le côté, le volume sera 8 fois plus grand.
             </p>
             <MathJaxDisplay toShow={rTo2r}/>
             <MathJaxDisplay toShow={cDoubleVolume}/>
             <MathJaxDisplay toShow={cDoubleVolumeDev}/>
-            <p>
-                {"\n"}
-                Cliquez sur l'image ci-dessous pour illlustrer ce propos.           
-            </p> 
-            <Container className="ShapesContainer">
-                <GenericShape 
-                    className="ShapesContainer"
-                    type={ShapeType.CUBE}
-                    dimensions={1.5} /> 
-            </Container>
-
-            <p className="Title1">Calcul du volume par intégration</p>
-            <p>Intégrons notre volume à partir d'un côté pour voir si nosu retombons bien sur nos pattes</p>
-            <ImageZoom src={squareVolCalculus} name="Calcul du volume par intégration" n={++n} />
-            <MathJaxDisplay toShow={sCarre} demo />
-            <MathJaxDisplay toShow={vCube} demo />
-            <p>
-                Comme on intégre sur p, la surface c² est une constante, donc on peut la sortir.
-            </p>
-            <MathJaxDisplay toShow={vCube2} demo />
-            <MathJaxDisplay toShow={vCube3} demo />
-            <MathJaxDisplay toShow={vCube4} demo />
-            <Container className="Focus">
-                <MathJaxDisplay toShow={vCube5}/>
-            </Container>
-            <p>
-                Tout est OK !
-            </p>
 
             <p className="Title1">Calcul de la surface </p>
             <p>
@@ -76,4 +50,4 @@ const LeCube = () => {
     )
 }
 
-export default LeCube;
+export default LeCarreLeCube;

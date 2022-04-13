@@ -5,7 +5,7 @@ import * as THREE from "three";
 import ShapeType from './ShapeType';
 import getTexture from './getTexture';
 
-const GenericShape = ( {type, dimensions, prez, staticDim} ) => {
+const GenericShape = ( {type, dimensions, staticDim} ) => {
 
     const MyMesh = () => {
 
@@ -14,7 +14,7 @@ const GenericShape = ( {type, dimensions, prez, staticDim} ) => {
         useFrame(() => {
             mesh.current.rotation.x = mesh.current.rotation.y += 0.01;
         });
-        const texture = React.useMemo(() => new THREE.TextureLoader().load(getTexture(type, prez)), []);
+        const texture = React.useMemo(() => new THREE.TextureLoader().load(getTexture(type)), []);
 
         return (
 

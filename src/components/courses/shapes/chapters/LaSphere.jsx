@@ -1,6 +1,4 @@
 import { Container } from 'react-bootstrap';
-import GenericShape from '../GenericShape';
-import ShapeType from '../ShapeType';
 import ImageZoom from '../../ImageZoom';
 
 import sphereVolCalculus from '../assets/sphereVolCalculus.png';
@@ -76,15 +74,7 @@ const LaSphere = () => {
             <MathJaxDisplay toShow={sphDoubleVolume}/>
             <MathJaxDisplay toShow={sphDoubleVolumeDev}/>
             <MathJaxDisplay toShow={sphDoubleVolumeDev2}/>
-            <p>
-                Cliquez sur l'image ci-dessous pour illlustrer ce propos.           
-            </p> 
-            <Container className="ShapesContainer">
-                <GenericShape 
-                    className="ShapesContainer"
-                    type={ShapeType.SPHERE}
-                    dimensions={1} /> 
-            </Container>
+
             <p className="Title1">Calcul du volume par intégration</p>
             <p>Calculons avec une méthode d'intégration le volume de la sphère.
                 {"\n"}

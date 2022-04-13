@@ -4,7 +4,7 @@ import ImageZoom from '../../ImageZoom';
 import MathJaxInline from '../../../mathjax-display/MathJaxInline';
 import MathJaxDisplay from '../../../mathjax-display/MathJaxDisplay';
 
-import alKashi from '../../shapes/assets/alKashi.png';
+import alKashi from '../assets/alKashi.png';
 import pythagoreReciproqueDemo from '../assets/pythagoreReciproqueDemo.png';
 
 const DemonstrationDeLaReciproque = () => {

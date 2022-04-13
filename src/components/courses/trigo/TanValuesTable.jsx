@@ -19,7 +19,7 @@ const TanValuesTable = () => {
             id: ++k,
             alpha: <MathJaxInline toShow={"$\\frac{\\pi}{6}$"} />,
             alphaDeg: <MathJaxInline toShow={"$30° $"} />,
-            tan: <MathJaxInline toShow={"$ \\frac{1}{\\sqrt{3}}$"} />
+            tan: <MathJaxInline toShow={"$ \\frac{\\sqrt{3}}{3}$"} />
         }
     );
     values.push(
@@ -75,7 +75,7 @@ const TanValuesTable = () => {
             id: ++k,
             alpha: <MathJaxInline toShow={"$\\frac{5\\pi}{6}$"} />,
             alphaDeg: <MathJaxInline toShow={"$150° $"} />,
-            tan: <MathJaxInline toShow={"$-\\frac{1}{\\sqrt{3}}$"} />
+            tan: <MathJaxInline toShow={"$-\\frac{\\sqrt{3}}{3}$"} />
         }
     );
     values.push(

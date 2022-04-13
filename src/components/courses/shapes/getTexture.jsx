@@ -17,25 +17,23 @@ import wood from "./assets/textures/wood.jpg";
 
 import woody from "./assets/textures/woody.jpg";
 
-const getTexture = ( type, prez ) => {
+const getTexture = ( type) => {
 
     switch (type) {
-        case ShapeType.SQUARE:
-            return prez ? chess : aquarelle;
         case ShapeType.CUBE:
-            return prez ? sealedbox : mario;
+            return mario;
         case ShapeType.CIRCLE:
-            return prez ? eye : moon;
+            return eye;
         case ShapeType.SPHERE:
-            return prez ? earth2 : earth;
+            return earth2;
         case ShapeType.CYLINDER:
-            return prez ? metal : metal2;
+            return metal;
         case ShapeType.TRIANGLE:
-            return prez ? stars : wood;
+            return stars ;
         case ShapeType.CONE:
-            return prez ? sand : carrelage;
+            return sand;
         case ShapeType.PYRAMIDE:
-            return prez ? woody : bricks;
+            return woody;
     }
 }
 

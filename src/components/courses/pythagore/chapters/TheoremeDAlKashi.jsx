@@ -5,7 +5,7 @@ import ImageZoom from '../../ImageZoom';
 import MathJaxInline from '../../../mathjax-display/MathJaxInline';
 import MathJaxDisplay from '../../../mathjax-display/MathJaxDisplay';
 
-import alKashi from '../../shapes/assets/alKashi.png';
+import alKashi from '../assets/alKashi.png';
 import alKashiDemo from '../assets/alKashiDemo.png';
 import alKashiDemo2 from '../assets/alKashiDemo2.png';
 import alKashiDemo3 from '../assets/alKashiDemo3.png';
