@@ -95,8 +95,8 @@ const LeTriangle = () => {
                 <MathJaxDisplay toShow={appolonius3}/> 
             </Container>
 
-            <p className="Title1">La bissectrice</p>
-            <p className="Title1">La médiatrice</p>
+{/*             <p className="Title1">La bissectrice</p>
+            <p className="Title1">La médiatrice</p> */}
 
             <p className="Title1">Loi des sinus</p>
             <p>Ses deux notions se retrouvent dans la loi des sinus :</p>

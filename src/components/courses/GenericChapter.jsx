@@ -1,8 +1,8 @@
-const GenericChapter = ( {name, component} ) => {
+const GenericChapter = ( {name, component, count} ) => {
 
     return (
         <>
-            <p className="Title">{name}</p>
+            <p className="Title">chapitre {count} : {name}</p>
             {component}
         </>
     )

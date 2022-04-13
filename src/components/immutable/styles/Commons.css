@@ -1,6 +1,6 @@
 .RelativeContainer {
     position: relative;
-    padding-top: calc(var(--customheader-height) + 20px);
+    padding-top: calc(var(--customheader-height) + 10px);
     padding-bottom: calc(var(--customfooter-height) + 20px); 
     min-height: 100vh;
     font-size: x-small;
@@ -19,45 +19,44 @@
 .Title {
     margin: 0 auto;
     padding-top: 20px;
-    font-size: medium;
+    font-size: medium !important;
     padding-bottom: 20px;
     block-size: fit-content;
     width: fit-content;
 }
 
+.Title1, .Title2 {
+    font-size: small !important;
+    text-align: left;
+}
 .Title1 {
     padding-top: 20px;
-    font-size: small;
-    text-align: left;
     padding-bottom: 5px;
-    text-decoration: underline;
     font-weight: bold;
 }
 
 .Title2 {
     padding-top: 10px;
-    font-size: small;
-    text-align: left;
     text-decoration: underline;
     font-style: italic;
 }
 
 @media (min-width: 768px) {
     .RelativeContainer {
-        font-size: small;
+        font-size: small !important;
         padding-top: calc(var(--customheader-height) + 20px);
     }
     .Title {
-        font-size: large;
+        font-size: large !important;
     }
     .Title1, .Title2 {
-        font-size: medium;
+        font-size: medium !important;
     }
 }
 
 @media (min-width: 1268px) {
     .RelativeContainer {
-        font-size: medium;
+        font-size: medium !important;
     }
 }
 

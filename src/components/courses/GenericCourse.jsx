@@ -9,7 +9,7 @@ import GenericChapter from './GenericChapter';
 
 const GenericCourse = ({title, chapters}) => {
 
-    /* -1 -> Sommaire, n >= 0 -> chapitres */
+    /* 0 -> Sommaire, n > 0 -> chapitres */
     const [count, setCount] = React.useState(0);
 
     const {updateIsLoadingChapter} = React.useContext(LoadingContext);
@@ -36,12 +36,12 @@ const GenericCourse = ({title, chapters}) => {
                         setCount={setCount} />
                         : ''
             }
-            <p className="Title">{title} {count > 0 ? "(" + count + ")" : ''}</p>
+            {/* <p className="Title">{title} {count > 0 ? "(" + count + ")" : ''}</p> */}
             <Container className="CoursesContainer"> 
                 {
                     count === 0 ?
                         <ChapterTableOfContents chapters={chapters} setCount={setCount} />
-                            : <GenericChapter name={chapters[count - 1].name} component={chapters[count - 1].component} />
+                            : <GenericChapter name={chapters[count - 1].name} component={chapters[count - 1].component} count={count} />
                 }                  
             </Container>
             {
