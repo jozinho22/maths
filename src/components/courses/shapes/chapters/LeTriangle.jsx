@@ -8,6 +8,9 @@ import triangles from '../assets/triangles.png'
 import heights from '../assets/heights.png'
 import heights2 from '../assets/heights2.png'
 import medianes from '../assets/medianes.png'
+import bissectrices from '../assets/bissectrices.png'
+import mediatrices from '../assets/mediatrices.png'
+
 import triangleSinusRelation from '../assets/triangleSinusRelation.png'
 import triangleSinusRelationDemo from '../assets/triangleSinusRelationDemo.png'
 import pythagore from '../../pythagore/assets/pythagore.png';
@@ -95,8 +98,22 @@ const LeTriangle = () => {
                 <MathJaxDisplay toShow={appolonius3}/> 
             </Container>
 
-{/*             <p className="Title1">La bissectrice</p>
-            <p className="Title1">La médiatrice</p> */}
+            <p className="Title1">La bissectrice</p>
+            <p>La bissectrice est la droite qui coupe un sommet en deux angles égaux.</p>
+            <ImageZoom src={bissectrices} name="Les bissectrices dans un triangle" n={++n}/>
+            <p>Son intersection est le centre du cercle inscrit au triangle.</p>
+            <p>
+                Elle s'obtient de la manière suivante :
+                {"\n"}- prendre un écart de compas (n'importe lequel)
+                {"\n"}- faire une marque sur chaque côté adjacent l'angle
+                {"\n"}- reporter le compas sur chacune des marques et tracer un cercle
+                {"\n"}{"\n"}L'intersection des cercle indique le chemin pour tracer la bissectrice.
+            </p>
+
+            <p className="Title1">La médiatrice</p> 
+            <p>La médiatrice est la droite qui passe par le centre d'un côté de manière orthogonale.</p>
+            <ImageZoom src={mediatrices} name="Les médiatrices dans un triangle" n={++n}/>
+            <p>Son intersection est le centre du cercle circonscrit au triangle.</p>
 
             <p className="Title1">Loi des sinus</p>
             <p>Ses deux notions se retrouvent dans la loi des sinus :</p>
@@ -106,7 +123,7 @@ const LeTriangle = () => {
             <ImageZoom src={triangleSinusRelation} name="Loi des sinus" n={++n}/>
             <p>Au cas où vous ne seriez pas familier avec les sinus et cosinus, se référer au chapitre sur <Link link={CoursesLinks.TRIGO}>la trigonométrie</Link>.</p>
             <p>
-                Ce théorème est très simple à prouver.
+                Ce théorème se démontre simplement.
                 {"\n"}Prenons le même triangle et projetons une hauteur <MathJaxInline toShow={"$h_b$"}/> sur une des longueurs, la longueur <MathJaxInline toShow={"$b$"}/>.
             </p>
             <ImageZoom src={triangleSinusRelationDemo} name="Démonstration de la loi des sinus" n={++n}/>

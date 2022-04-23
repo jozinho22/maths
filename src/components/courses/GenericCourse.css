@@ -55,7 +55,7 @@
         border-radius: 10px;
     }
     .ZoomContainer img {
-        width: 60%;
+        width: 40%;
     }
     .ZoomContainer .OnZoom img {
         width: 80%;
@@ -65,7 +65,7 @@
 
 @media (min-width: 1268px) {
     .ZoomContainer img {
-        width: 80%;
+        width: 60%;
     }
 }
 
