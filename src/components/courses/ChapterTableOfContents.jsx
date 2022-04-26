@@ -1,9 +1,10 @@
 import { Container, Row, Col } from 'react-bootstrap';
 
-const ChapterTableOfContents = ( {chapters, setCount} ) => {
+const ChapterTableOfContents = ( {title, chapters, setCount} ) => {
 
     return (
         <>
+            <p className="Title"> {title} </p>
             <Row>
                 {
                     chapters.map(chapter => (

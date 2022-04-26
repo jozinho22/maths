@@ -2,6 +2,7 @@ import Presentation from './chapters/Presentation';
 import DemonstrationDuTheoreme from './chapters/DemonstrationDuTheoreme';
 import DemonstrationDeLaReciproque from './chapters/DemonstrationDeLaReciproque';
 import TheoremeDAlKashi from './chapters/TheoremeDAlKashi';
+import Applications from './chapters/Applications';
 
 const getChapters = () => {
 
@@ -22,6 +23,11 @@ const getChapters = () => {
             id: k++,
             component: <DemonstrationDeLaReciproque />,
             name: 'Demonstration de la réciproque théorème de Pythagore'
+        },
+        {
+            id: k++,
+            component: <Applications />,
+            name: 'Applications'
         },
         {
             id: k++,

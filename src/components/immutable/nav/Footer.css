@@ -45,7 +45,7 @@
 }
 
 .ContactIcon {
-  position : absolute;
+  position : relative;
   right: 0;
   margin-right: 30px;
   color: var(--links-color);

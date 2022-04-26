@@ -56,13 +56,13 @@ const TheoremeDAlKashi = () => {
                 <MathJaxDisplay toShow={alKashiB} />
                 <MathJaxDisplay toShow={alKashiC} />
             </Container>
-            <p>Le triangle supposé est representé sur la figure 4 suivante.</p>
-            <ImageZoom src={alKashi} name="Théorème d'Al-Kashi" n={4} />
+            <p>Le triangle supposé est representé sur la figure suivante.</p>
+            <ImageZoom src={alKashi} name="Théorème d'Al-Kashi" n={11} />
 
             <p className="Title1">Démonstration</p>
             <p className="Title2">1er cas : un triangle avec des angles aigus</p>
             <p>Nous avons projeté sur <MathJaxInline toShow={"$c$"} /> le sommet de l'angle <MathJaxInline toShow={"$\\gamma$"} /> pour obtenir la figure suivante:</p>
-            <ImageZoom src={alKashiDemo} name="Démonstration du théorème d'Al-Kashi - cas 1" n={6} />
+            <ImageZoom src={alKashiDemo} name="Démonstration du théorème d'Al-Kashi - cas 1" n={12} />
             <p>Avec les règles de trigonométrie bien connues, on peut écrire :</p>
             <MathJaxDisplay toShow={cosAlpha} demo />
             <p>Soit</p>
@@ -96,7 +96,7 @@ const TheoremeDAlKashi = () => {
                 Un deuxième cas se présente, celui de la présence d'un angle obtus dans le triangle.
                 {"\n"}La hauteur sera alors à l'extérieur du triangle.
             </p>
-            <ImageZoom src={alKashiDemo2} name="Démonstration du théorème d'Al-Kashi - cas 2" n={7} />
+            <ImageZoom src={alKashiDemo2} name="Démonstration du théorème d'Al-Kashi - cas 2" n={13} />
             <p>Comme précédemment, on a les relations classiques de la trigonométrie :</p>
             <MathJaxDisplay toShow={cosAlpha2} demo />
             <p>Soit </p>
@@ -121,7 +121,7 @@ const TheoremeDAlKashi = () => {
             </p>
             <MathJaxDisplay toShow={pyth7} />
             <p>On aurait pu de même réaliser cette opération de l'autre côté en projetant sur <MathJaxInline toShow={"$b$"} /> au lieu de <MathJaxInline toShow={"$a$"} />.</p>
-            <ImageZoom src={alKashiDemo3} name="Démonstration du théorème d'Al-Kashi - cas 2bis" n={8} />
+            <ImageZoom src={alKashiDemo3} name="Démonstration du théorème d'Al-Kashi - cas 2bis" n={14} />
         </>
     );
 
