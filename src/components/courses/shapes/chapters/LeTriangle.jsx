@@ -116,7 +116,7 @@ const LeTriangle = () => {
             <p>Son intersection est le centre du cercle circonscrit au triangle.</p>
 
             <p className="Title1">Loi des sinus</p>
-            <p>Ses deux notions se retrouvent dans la loi des sinus :</p>
+            <p>La loi des sinus s'exprime de la manière suivante :</p>
             <Container className="Focus">
                 <MathJaxDisplay toShow={sinusRelation}/> 
             </Container>
