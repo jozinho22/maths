@@ -17,50 +17,54 @@ const getChapters = () => {
         {
             id: k++,
             component: <LeCarreLeCube />,
-            name: 'Le carré - Le cube',
+            name: 'Le carré - Le cube'
+            /* ,
             picture: <Container className="ShapesContainer">
                         <GenericShape 
                             type={ShapeType.CUBE}
                             dimensions={[2]}
                             prez={true} 
                             staticDim={true} />  
-                    </Container>
+                    </Container> */
         },  
         {
             id: k++,
             component: <LeCercle />,
-            name: 'Le cercle',
+            name: 'Le cercle'
+            /* ,
             picture:  <Container className="ShapesContainer">
                         <GenericShape 
                             type={ShapeType.CIRCLE}
                             dimensions={[2]} 
                             prez={true} 
                             staticDim={true} /> 
-                    </Container>
+                    </Container> */
         },  
         {
             id: k++,
             component: <LaSphere />,
-            name: 'La sphère',
+            name: 'La sphère'
+            /* ,
             picture:  <Container className="ShapesContainer">
                         <GenericShape 
                             type={ShapeType.SPHERE}
                             dimensions={[2]} 
                             prez={true} 
                             staticDim={true} />   
-                    </Container>
+                    </Container> */
         },
-                {
+        {
             id: k++,
             component: <LeTriangle />,
-            name: 'Le triangle',
+            name: 'Le triangle'
+            /* ,
             picture:  <Container className="ShapesContainer">
                         <GenericShape 
                             type={ShapeType.TRIANGLE}
                             dimensions={[2, 3]} 
                             prez={true} 
                             staticDim={true} />  
-                    </Container>
+                    </Container> */
         }
         /* ,          
         {

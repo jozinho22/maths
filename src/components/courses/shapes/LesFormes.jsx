@@ -12,7 +12,7 @@ const LesFormes = () => {
     return (
         <>
             <GenericCourse title={title} chapters={chapters} />
-            <UnsplashCopyRight item="Textures" />
+            {/* <UnsplashCopyRight item="Textures" /> */}
         </>
     );
 

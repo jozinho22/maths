@@ -16,10 +16,10 @@ const Applications = () => {
     var ab22d2 = "\\(AB^2 =  (x_b - x_a)^2 + (y_b - y_a)^2  \\)";
     var ab22d3 = "\\(AB = \\sqrt{ (x_b - x_a)^2 + (y_b - y_a)^2 }  \\)";
 
-    var abbaX = "\\( CA = x_a - x_b = -(x_b - x_a) \\)";
+    /* var abbaX = "\\( CA = x_a - x_b = -(x_b - x_a) \\)";
     var abbaY = "\\( CB = y_a - y_b = -(y_b - y_a) \\)";
     var abbaX2 = "\\( (-(x_b - x_a))^2 = (x_b - x_a)^2 \\)";
-    var abbaY2 = "\\( (-(y_b - y_a))^2 = (y_b - y_a)^2 \\)";
+    var abbaY2 = "\\( (-(y_b - y_a))^2 = (y_b - y_a)^2 \\)"; */
 
     var ac = "\\( AC = \\sqrt{ (x_b - x_a)^2 + (y_b - y_a)^2 } \\)";
     var ab23d = "\\(AB^2 =  AC^2 + BC^2  \\)";
@@ -31,7 +31,7 @@ const Applications = () => {
         <> 
             <p className="Title1">Mesurer une longueur dans le plan</p>    
             <ImageZoom src={pythagoreApplication} name="Une longueur AB dans le plan" n={6} />
-            <p>Nous disposons d'un plan à deux dimensions <MathJaxInline toShow={"$\\vv{x}, \\vv{y}$"} /> dans lequel nous avons placé deux points <MathJaxInline toShow={"$A$"} /> et <MathJaxInline toShow={"$B$"} />. </p>
+            <p>Nous disposons d'un plan à deux dimensions <MathJaxInline toShow={"$\\vec{x}, \\vec{y}$"} /> dans lequel nous avons placé deux points <MathJaxInline toShow={"$A$"} /> et <MathJaxInline toShow={"$B$"} />. </p>
             <p>En prolongeant <MathJaxInline toShow={"$A$"} /> jusque <MathJaxInline toShow={"$x_b$"} /> et <MathJaxInline toShow={"$B$"} /> jusque <MathJaxInline toShow={"$y_a$"} />, on obtient un troisième point <MathJaxInline toShow={"$C$"} />.</p>
             <ImageZoom src={pythagoreApplication2} name="Une longueur AB dans le plan (bis)" n={7} />
             <p>Sur la figure ci-dessus, nous avons un triangle rectangle formé par <MathJaxInline toShow={"$AC$"} />, <MathJaxInline toShow={"$BC$"} /> et <MathJaxInline toShow={"$AB$"} /> représentant l'hypothénuse.</p>

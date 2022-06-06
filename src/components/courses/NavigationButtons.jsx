@@ -2,6 +2,9 @@ import React from 'react';
 import {Row, Col, Button} from 'react-bootstrap';
 import SizeContext from '../context/SizeContext';
 
+import {GrFormPrevious} from 'react-icons/gr';
+import {GrFormNext} from 'react-icons/gr';
+
 const NavigationButtons = ( {chapters, count, setCount} ) => {
 
     var [width] = React.useContext(SizeContext);
@@ -12,16 +15,18 @@ const NavigationButtons = ( {chapters, count, setCount} ) => {
             <Col style={{textAlign:"right"}}>
                 {
                     count > 1 ?  
-                    <Button 
-                        className="DefaultButton NavigationButton"
-                        onClick={() => {setCount(count - 1)}} >
-                        {
-                                mobile ? 
-                                    'Précedent' 
-                                        :  chapters[count - 2].name 
-                        }
-                    </Button> 
-                        : ''
+                        <Button 
+                            className="DefaultButton NavigationButton"
+                            onClick={() => {setCount(count - 1)}} >
+                            { !mobile ? <GrFormPrevious className="NavigationIcon" /> : <></> }
+                            {
+                                    mobile ? 
+                                        'Précédent' 
+                                            : chapters[count - 2].name 
+                            }
+                        
+                        </Button> 
+                            : <></> 
                 } 
             </Col>
             <Col className="CenterText">
@@ -34,11 +39,13 @@ const NavigationButtons = ( {chapters, count, setCount} ) => {
                             className="DefaultButton NavigationButton"
                             onClick={() => {setCount(count + 1)}} >
                             {
-                                mobile ? 'Suivant' :
-                                    chapters[count].name
+                                mobile ? 
+                                    'Suivant' :
+                                        chapters[count].name
                             }
+                            { !mobile ? <GrFormNext className="NavigationIcon" /> : <></> }
                         </Button>
-                            : ''
+                            : <></> 
                 }
         
             </Col>

@@ -15,7 +15,7 @@ const ChapterTableOfContents = ( {title, chapters, setCount} ) => {
                                     onClick={() => setCount(chapter.id)}>
                                     <u>chapitre {chapter.id}</u> - {chapter.name}
                                 </div>
-                                {chapter.picture ? chapter.picture : <></>}
+                                {/* {chapter.picture ? chapter.picture : <></>} */}
                             </Col>
                         </Container>
                     ))
