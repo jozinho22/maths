@@ -47,9 +47,9 @@ const DemonstrationDuTheoremeDePythagore = () => {
                 Le théorème des triangles semblables nous dit que lorsque deux triangles ont deux-à-deux les mêmes angles, ils sons semblables, et auront alors deux-à-deux leurs côtés similaires formant un même ratio.
                 {"\n"}Dans ce cas :
             </p>
-            <MathJaxDisplay toShow={semblables} fRef={3} demo />
-            <MathJaxDisplay toShow={semblables2} fRef={4} demo />
-            <MathJaxDisplay toShow={semblables3} demo />
+            <MathJaxDisplay toShow={semblables} demo />
+            <MathJaxDisplay toShow={semblables2} fRef={3} demo />
+            <MathJaxDisplay toShow={semblables3} fRef={4} demo />
             <p>
                 De même, si deux triangles on deux-à-deux des côtés similaires formant le même ratio, ils sont semblables et auront alors deux-à-deux les mêmes angles.
                 {"\n"}{"\n"}On peut alors dire que les trois triangles formés respectivement par :
@@ -58,11 +58,11 @@ const DemonstrationDuTheoremeDePythagore = () => {
             <p>
                 sont trois triangles semblables.
             </p>
-            <p>Grâce à l'expression <MathJaxInline toShow={"$(3)$"} />, on a :</p>
+            <p>Grâce à l'expression <MathJaxInline toShow={"$(4)$"} />, on a :</p>
             <MathJaxDisplay toShow={ratio1} demo />
             <p>Avec la formule <MathJaxInline toShow={"$(1)$"} /> du chapitre sur <Link link={CoursesLinks.PRODUIT_EN_CROIX} >le produit en croix</Link>, on a :  </p>
             <MathJaxDisplay toShow={ratio1pc} fRef={5} demo />
-            <p>De plus, graĉe à l'expression <MathJaxInline toShow={"$(4)$"} />, on a :</p>
+            <p>De plus, graĉe à l'expression <MathJaxInline toShow={"$(3)$"} />, on a :</p>
             <MathJaxDisplay toShow={ratio2} demo />
             <p>puis</p>
             <MathJaxDisplay toShow={ratio2pc} fRef={6} demo />

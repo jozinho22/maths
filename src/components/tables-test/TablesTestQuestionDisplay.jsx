@@ -65,12 +65,12 @@ const TablesTestQuestionDisplay = () => {
     React.useEffect(() => {
         setEndTimer(false);
 
-        maxTime = 10;
+        maxTime = 30;
         if(questions[count].a > 9) {
-            maxTime = maxTime + 30;
+            maxTime = maxTime + 40;
         }
         if(questions[count].b > 9) {
-            maxTime = maxTime + 30;
+            maxTime = maxTime + 40;
         }
 
         setTimer(maxTime)
