@@ -1,8 +1,8 @@
 .ExpressionsContainer {
     margin: auto;
-    position: absolute;
-    top: 20%;
-    bottom: 20%;
+    position: relative;
+    /* top: 20%;
+    bottom: 20%; */
 } 
 
 .HomeTitleContainer {
@@ -18,7 +18,6 @@
     color: var(--links-color);
     font-size: small;
     padding: 30px;
-    margin-top: 20px;
     width: calc(var(--window-width) * 3 / 4);
     z-index: 1;
 }
@@ -27,18 +26,17 @@
     .HomeTitleContainer {
         width: calc(var(--window-width) * 1 / 2);
     }
+    .ExpressionsContainer .MathJaxDisplayContainer {
+        padding: 25px;
+    }
 }
 
 @media (min-width : 768px) {
     .ExpressionsContainer .MathJaxDisplayContainer {
-        padding: 10px;
+        padding: 35px;
     }
 
     .ExpressionsContainer mjx-math {
         font-size: large !important;
     }
-}
-
-.ExpressionsContainer .MathJaxDisplayContainer {
-    padding: 0px;
 }
