@@ -1,5 +1,8 @@
 .ExpressionsContainer {
     margin: auto;
+    position: absolute;
+    top: 20%;
+    bottom: 20%;
 } 
 
 .HomeTitleContainer {

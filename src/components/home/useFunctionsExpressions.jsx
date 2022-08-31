@@ -184,9 +184,10 @@ const useFunctionsExpressions = () => {
         return array;
     }
 
-    return width < 500 ? shuffle(listEqu).slice(0, 14) 
-        : width < 1000 ? shuffle(listEqu).slice(0, 20) 
-            : shuffle(listEqu).slice(0, listEqu.length);
+    return width < 500 ? shuffle(listEqu).slice(0, 9) 
+                : width < 1000 ? shuffle(listEqu).slice(0, 16) 
+                    : width < 1800 ? shuffle(listEqu).slice(0, 22) 
+                        : shuffle(listEqu).slice(0, listEqu.length);
 
 }
 
