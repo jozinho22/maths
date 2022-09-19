@@ -9,8 +9,8 @@ const useIsLoading = ( isLoadingLink, setIsLoadingLink, isLoadingChapter, setIsL
                 clearInterval(interval);       
                 // do your work
             }, 1000);
-
-        } if(isLoadingChapter) {
+        } 
+        if(isLoadingChapter) {
             var interval = setInterval(function () {
                 if (document.readyState === 'complete') setIsLoadingChapter(false); 
                 clearInterval(interval);       

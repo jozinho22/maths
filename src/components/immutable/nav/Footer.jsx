@@ -4,18 +4,18 @@ import { Link } from 'react-router-dom';
 import { RiMailSendLine } from 'react-icons/ri';
 import AppContext from '../../context/AppContext'
 
-import getFonts from '../styles/getFonts';
-import getThemes from '../styles/getThemes';
+/* import getFonts from '../styles/getFonts';
+ import getThemes from '../styles/getThemes'; */
 
 import './Nav.css';
 import './Footer.css';
 
 const Footer = () => {
 
-    const {playMode, updateFont, updateTheme} = React.useContext(AppContext);
+    const {playMode, /* updateFont,  updateTheme */} = React.useContext(AppContext);
 
-    var fonts = getFonts();
-    var themes = getThemes();
+    /* var fonts = getFonts(); 
+    var themes = getThemes(); */
 
     return (
             <Navbar 
@@ -26,8 +26,8 @@ const Footer = () => {
                 expand="lg">   
                 <Navbar.Toggle aria-controls="basic-nav-nav"/>
                 <Navbar.Collapse id="responsive-navbar-nav">
-                    <Nav>
-                        <NavDropdown 
+                   {/* <Nav>
+                         <NavDropdown 
                             drop="up"
                             title="Fonts" 
                             id="basic-nav-nav"
@@ -44,7 +44,7 @@ const Footer = () => {
                                     </NavDropdown.Item>
                                 ))
                             }                         
-                        </NavDropdown>
+                        </NavDropdown> 
                         <NavDropdown 
                             drop="up"
                             title="Themes" 
@@ -65,7 +65,7 @@ const Footer = () => {
                                 ))
                             }                         
                         </NavDropdown>
-                    </Nav>
+                    </Nav> */}
                 </Navbar.Collapse>        
                 <p className="CopyRight" > 
                     Copyright &copy; Jozinho {(new Date().getFullYear())}
