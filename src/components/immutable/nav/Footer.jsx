@@ -24,9 +24,9 @@ const Footer = () => {
                 collapseOnSelect 
                 variant="dark" 
                 expand="lg">   
-                <Navbar.Toggle aria-controls="basic-nav-nav"/>
+                {/* <Navbar.Toggle aria-controls="basic-nav-nav"/>
                 <Navbar.Collapse id="responsive-navbar-nav">
-                   {/* <Nav>
+                   <Nav>
                          <NavDropdown 
                             drop="up"
                             title="Fonts" 
@@ -65,8 +65,8 @@ const Footer = () => {
                                 ))
                             }                         
                         </NavDropdown>
-                    </Nav> */}
-                </Navbar.Collapse>        
+                    </Nav>
+                </Navbar.Collapse>  */}       
                 <p className="CopyRight" > 
                     Copyright &copy; Jozinho {(new Date().getFullYear())}
                 </p>
