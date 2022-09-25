@@ -18,7 +18,7 @@ const useFibonacci = () => {
         );
     }
     
-    return fibo.slice(0, 26);
+    return fibo.slice(0, 27);
    
 }
 

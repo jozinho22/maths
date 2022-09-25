@@ -50,10 +50,10 @@ const Caracteristiques = () => {
     var phi447 = "\\(\\phi^4 = 3\\phi + 2 \\)";
 
     var phiGen =  "\\(\\phi^{n+1} =  F_{n+1}.\\phi +  F_{n} \\)";
-    var phiGen2 =  "\\(\\phi^{n+2} =  \\phi^{n+1} +  \\phi^{n} \\)";
+    var phiGen2 =  "\\(\\phi^{n+1} =  \\phi^{n} +  \\phi^{n - 1} \\)";
 
-    var phiMain = "\\(F_{n+2} = F_{n+1} + F_{n} \\)";
-    var phiMainReverse = "\\( F_{n} = F_{n+2} - F_{n+1} \\)";
+    var phiMain = "\\(F_{n+1} = F_{n} + F_{n-1} \\)";
+    var phiMainReverse = "\\( F_{n-1} = F_{n+1} - F_{n} \\)";
 
     var f0 = "\\( F_{0} = F_{2} - F_{1} \\)";
     var f01 = "\\( F_{0} = 1 - 1 \\)";
@@ -256,7 +256,7 @@ const Caracteristiques = () => {
                 
                 <p>Si tout se passe bien, nous devrions retrouver notre formule :</p>
                 <MathJaxDisplay toShow={phiGen} />
-                <p>Nous devrions alors avoir :</p>
+                <p>Nous devrions alors avoir pour <MathJaxInline toShow={"$\\ n = - 2$"} /> :</p>
                 <MathJaxDisplay toShow={phiGenVerifBegin} />
                 <p>Calculons d'abord <MathJaxInline toShow={phiGenVerif} /></p>
                 <MathJaxDisplay toShow={phiGenVerif2} demo />
@@ -266,7 +266,7 @@ const Caracteristiques = () => {
 
                 <p>{"\n"}{"\n"}Vérifions maintenant la seconde formule :</p>
                 <MathJaxDisplay toShow={phiGen2} />
-                <p>Si tout se passe bien, nous devrions avoir :</p>
+                <p>Si tout se passe bien, nous devrions avoir pour  <MathJaxInline toShow={"$\\ n = - 3$"} />  :</p>
                 <MathJaxDisplay toShow={phiGen2VerifBegin} />
                 <p>Calculons d'abord <MathJaxInline toShow={phiGen2Verif} /></p>
                 <MathJaxDisplay toShow={phiGen2Verif2} demo/>

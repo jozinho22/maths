@@ -43,14 +43,14 @@ function App() {
     const [isLoadingLink, setIsLoadingLink] = React.useState(true);
     const [isLoadingChapter, setIsLoadingChapter] = React.useState(false);
 
-/*     const [font, setFont] = React.useState(JSON.parse(localStorage.getItem('font')) ? JSON.parse(localStorage.getItem('font')) : "Dragons");
- */    
+    const [font, setFont] = React.useState(JSON.parse(localStorage.getItem('font')) ? JSON.parse(localStorage.getItem('font')) : "Dragons");
+ 
     const [playMode, setPlayMode] = React.useState(false);
     const [theme, setTheme] = React.useState(JSON.parse(localStorage.getItem('theme')) ? JSON.parse(localStorage.getItem('theme')) : "Brazil");
  
     const appContext = {
-        /* font: font,
-        updateFont: setFont, */
+        font: font,
+        updateFont: setFont, 
         playMode: playMode,
         updatePlayMode: setPlayMode,
         theme: theme,
@@ -81,7 +81,7 @@ function App() {
             <AppContext.Provider value={appContext} > 
             <LoadingContext.Provider value={loadingContext} >
             <SizeContext.Provider value={sizeContext} >
-                <div  className={`${theme}`}>
+                <div  className={`${theme} ${font}`}>
                     <BrowserRouter>
                         {isLoadingLink || isLoadingChapter ? <BlurryingSpinner /> : ''}
                         <Header coursesItems = {coursesItems} pdfItems ={pdfItems} /> 

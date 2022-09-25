@@ -7,6 +7,8 @@ import MathJaxInline from '../../mathjax-display/MathJaxInline';
 const FibonacciFormulasTable = () => {
 
     var values = useFibonacciFormulas();
+    var phiGen =  "\\(\\phi^{n+1} =  F_{n+1}.\\phi +  F_{n} \\)";
+    var phiGen2 =  "\\(\\phi^{n+1} =  \\phi^{n} +  \\phi^{n - 1} \\)";
 
     return (
             <NiceTable >
@@ -16,7 +18,10 @@ const FibonacciFormulasTable = () => {
                             <MathJaxDisplay toShow={"\\( n \\)"} />
                         </th>
                         <td>
-                            <MathJaxDisplay toShow={"\\( \\phi^{n} \\)"} />
+                            <MathJaxDisplay toShow={phiGen} />
+                        </td>
+                        <td>
+                            <MathJaxDisplay toShow={phiGen2} />
                         </td>
                     </tr>
                 </thead>
@@ -27,8 +32,11 @@ const FibonacciFormulasTable = () => {
                                  <MathJaxInline toShow={`$ ${value.id} $`} />  
                             </td>
                             <td>
-                                <MathJaxDisplay toShow={value.formula} /> 
+                                <MathJaxDisplay toShow={value.formula1} /> 
                             </td>  
+                            <td>
+                                <MathJaxDisplay toShow={value.formula2} /> 
+                            </td> 
                         </tr>
                     ))}  
                 </tbody>
