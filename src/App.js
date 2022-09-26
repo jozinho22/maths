@@ -114,7 +114,7 @@ function App() {
                                     {gameItems.map(gameItem => (
                                             <Route 
                                                 key={gameItem.id}
-                                                path={gameItem.relativePath}
+                                                path={`/jeux/${gameItem.relativePath}`}
                                                 element={gameItem.component} />
                                     ))}
 
@@ -123,7 +123,7 @@ function App() {
                                     <Route path="/contact" element={<Contact />} />
 
                                     <Route path="*" element={<Error />} />
-                                </Routes>    
+                                </Routes> 
                             </Container> 
                         <Footer /> 
                     </BrowserRouter>

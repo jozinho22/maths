@@ -77,6 +77,8 @@
     margin-right: 10px;
     padding: 10px;
     font-size: medium;
+    font-family: 'Times New Roman', Times, serif !important;
+    font-size: large !important;
 }
 
 @media (min-width: 450px) {
@@ -127,6 +129,7 @@
 .TableOfContentsButtonContainer {
     padding-left: 20%;
     text-align: left;
+    font-size: large;
 }
 
 .NormalFontButton, .TableOfContentsLink {
@@ -273,6 +276,10 @@ a { color: inherit; }
     font-family: 'Times New Roman', Times, serif !important;
     font-size: medium !important;
     text-align: center !important;
+}
+
+.OnlyGfxCopyRight {
+    bottom: 20px;
 }
 
 .Left {
