@@ -9,7 +9,7 @@ import rabbitsEvolution from '../assets/rabbitsEvolution.png';
 
 import RabbitsEvolutionTable from '../RabbitsEvolutionTable';
 import RatioTable from '../RatioTable';
-
+import FibonacciTable from '../FibonacciTable';
 
 const EvolutionDeLapins = () => {
 
@@ -48,10 +48,11 @@ const EvolutionDeLapins = () => {
                 <Container className="Focus">
                     <MathJaxDisplay toShow={phiMain} />
                 </Container>
-                <p><MathJaxInline toShow={"$F_n$"} /> étant le nombre de lapins au mois <MathJaxInline toShow={"$n$"} /></p>
+                <p><MathJaxInline toShow={"$F_n$"} /> étant le nombre de couples de lapins au mois <MathJaxInline toShow={"$n$"} /></p>
                 <p>
                     La suite de nombres correspondant au naissances de couples de lapins mensuelles s'appelle la suite de Fibonacci.
                 </p>
+                <FibonacciTable />
                 <p>
                     Fibonacci s'est ensuite intéressé au ratio entre le nombre au mois suivant et le mois courant, soit <MathJaxInline toShow={ratio} />
                 </p>
@@ -65,7 +66,7 @@ const EvolutionDeLapins = () => {
                     <MathJaxDisplay toShow={ratioValueR} />
                 </Container>
                 <p>
-                    Ce nombre est le nombre d’or, autrement appelée la divine proportion, désigné par la
+                    Ce nombre est le nombre d’or, autrement appelée la divine proportion, désignée par la
                     lettre grecque <MathJaxInline toShow={"$\\phi$"} /> . 
                     {"\n"}Un des plus célèbres nombres utilisés dans les mathématiques, notamment avec le nombre <MathJaxInline toShow={"$\\pi$"} /> . 
                     {"\n"}Il est célèbre pour ces fascinantes caractéristiques mais aussi sa présence dans la nature.

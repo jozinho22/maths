@@ -1,5 +1,6 @@
 import EvolutionDeLapins from './chapters/EvolutionDeLapins';
 import Caracteristiques from './chapters/Caracteristiques';
+import CaracteristiquesEnSensContraire from './chapters/CaracteristiquesEnSensContraire';
 import FormulesDePhiPuissN from './chapters/FormulesDePhiPuissN';
 import FormulesGenerales from './chapters/FormulesGenerales';
 
@@ -17,6 +18,11 @@ const getChapters = () => {
             id: k++,
             component: <Caracteristiques />,
             name: 'Caractéristiques du nombre d\'or'
+        },
+        {
+            id: k++,
+            component: <CaracteristiquesEnSensContraire />,
+            name: 'Caractéristiques du nombre d\'or en sens contraire'
         },
         {
             id: k++,

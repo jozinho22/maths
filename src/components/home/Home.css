@@ -7,7 +7,7 @@
 
 .HomeTitleContainer {
     position: absolute;
-    top: 50%;
+    top: 35%;
     /* Position Y halfway in */
     left: 50%;
     /* Position X halfway in */
@@ -16,10 +16,15 @@
     background-color: var(--front-color);
     border-radius: 10px;
     color: var(--links-color);
-    font-size: small;
+    font-size: large;
     padding: 30px;
     width: calc(var(--window-width) * 3 / 4);
     z-index: 1;
+}
+
+.HomeContentContainer {
+    position: absolute;
+    top: 50%;
 }
 
 @media (min-width : 450px) {

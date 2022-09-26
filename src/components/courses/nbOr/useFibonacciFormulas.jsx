@@ -1,14 +1,17 @@
-import useFibonacci from './useFibonacci';
+import useFibonacciInBothSenses from './useFibonacciInBothSenses';
 
 const useFibonacciFormulas = () => {
 
-    var fibo = useFibonacci();
+    var fibo = useFibonacciInBothSenses();
     var fiboFormulas = []
 
-    for(var k = 0; k < fibo.length; k++) {
+    for(var k = 0; k < fibo.length ; k++) {
+
         if(fibo[k].id === -13) {
             continue;
         }
+        console.log(fibo)
+        console.log(k)
 
         var fiboFormula1 = "\\("
             .concat("\\phi^{" + (fibo[k].id) + "}")

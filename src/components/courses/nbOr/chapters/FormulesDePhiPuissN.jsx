@@ -12,7 +12,7 @@ const FormulesDePhiPuissN = () => {
 
     return (
         <>
-            <p className="Title2">Résumé des <MathJaxInline toShow={"$\\phi^{-n}$"} /> </p>
+            <p className="Title2">Résumé des <MathJaxInline toShow={"$\\phi^{n}$"} /> </p>
             <p>Voici un aperçu des deux formules que nous avons vues dans le chapitre précédent :</p>
             <Container className="Focus">
                 <MathJaxDisplay toShow={phiGen} />

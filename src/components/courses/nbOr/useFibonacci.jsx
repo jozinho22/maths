@@ -2,23 +2,23 @@ import useRabbitsEvolution from './useRabbitsEvolution';
 
 const useFibonacci = () => {
 
-    const reversePattern = (fnPlus2, fnPlus1) => {
-        return fnPlus2 - fnPlus1;
+    const pattern = (fnPlus2, fnPlus1) => {
+        return fnPlus2 + fnPlus1;
     }
 
     var fibo = useRabbitsEvolution();
   
     var k = 0;
-    for(k; k > -13 - 1; k--) {
-        fibo.unshift(
+    for(k; k < 13 ; k++) {
+        fibo.push(
             {
                 id: k,
-                nb: reversePattern(fibo[1].nb, fibo[0].nb)
+                nb: pattern(fibo[1].nb, fibo[0].nb)
             }
         );
     }
     
-    return fibo.slice(0, 27);
+    return fibo.slice(0, 12);
    
 }
 
