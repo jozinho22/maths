@@ -4,7 +4,7 @@
     margin-top: 30px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 450px) {
     .ResultsContainer{
         font-size: large;
         width : 70%;

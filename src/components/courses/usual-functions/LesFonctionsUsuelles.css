@@ -13,7 +13,7 @@
     padding: 20px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 450px) {
     .UsualFunctionsButtonsContainer {
         position: fixed;
         width: 20%;
@@ -55,7 +55,7 @@
     }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 450px) {
     .Graph {
         width: 65% !important;
         height: 80% !important;

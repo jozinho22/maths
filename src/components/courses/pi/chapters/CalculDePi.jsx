@@ -3,11 +3,14 @@ import { Container } from 'react-bootstrap';
 import ImageZoom from '../../ImageZoom';
 import MathJaxDisplay from '../../../mathjax-display/MathJaxDisplay';
 import MathJaxInline from '../../../mathjax-display/MathJaxInline';
+import SizeContext from '../../../context/SizeContext';
 
 import circlePiCalculus from '../assets/circlePiCalculus.png';
 
 const CalculDePi = () => {
-    
+
+    var [width] = React.useContext(SizeContext);
+
     var n = 0;
 
     var p = "\\( P = 2\\pi R \\)"
@@ -42,8 +45,10 @@ const CalculDePi = () => {
     var hb5 = "\\(  h_b = \\sqrt{ \\frac{1}{2} + \\frac{\\sqrt{2}}{4} } \\)"
     var hbR = "\\(  h_b = \\frac{1}{2} \\sqrt{ 2 + \\sqrt{2}} \\)"
     var c2bis = "\\( c^2 = \\frac{b^2}{4} + \\left(1 -\\frac{1}{2} \\sqrt{ 2 + \\sqrt{2}} \\right)^2 \\)"
-    var c3 = "\\( c^2 = \\frac{2 - \\sqrt{2}}{4} + 1 - 2 \\times \\frac{1}{2} \\sqrt{ 2 + \\sqrt{2}} + \\frac{ 2 + \\sqrt{2}}{4}  \\)"
-    var c4 = "\\( c^2 = \\frac{1}{2} - \\frac{\\sqrt{2}}{4} + 1 - \\sqrt{ 2 + \\sqrt{2}} +  \\frac{1}{2} + \\frac{\\sqrt{2}}{4} \\)"
+    var c3 = "\\( c^2 = \\frac{2 - \\sqrt{2}}{4} + 1 - 2 \\times \\frac{1}{2} \\sqrt{ 2 + \\sqrt{2}} \\\\ + \\frac{ 2 + \\sqrt{2}}{4}  \\)"
+    var c4 = "\\( c^2 = \\frac{1}{2} - \\frac{\\sqrt{2}}{4} + 1 - \\sqrt{ 2 + \\sqrt{2}} \\\\ +  \\frac{1}{2} + \\frac{\\sqrt{2}}{4}  \\)"
+    var c3Mobile = "\\( \\displaylines { c^2 = \\frac{2 - \\sqrt{2}}{4} + 1 - 2 \\times \\frac{1}{2} \\sqrt{ 2 + \\sqrt{2}} \\\\ + \\frac{ 2 + \\sqrt{2}}{4} } \\)"
+    var c4Mobile = "\\( \\displaylines { c^2 = \\frac{1}{2} - \\frac{\\sqrt{2}}{4} + 1 - \\sqrt{ 2 + \\sqrt{2}} \\\\ +  \\frac{1}{2} + \\frac{\\sqrt{2}}{4} } \\)"
     var c5 = "\\( c^2 = 2 - \\sqrt{ 2 + \\sqrt{2}} \\)"
     var c6 = "\\( c = \\sqrt{2 - \\sqrt{ 2 + \\sqrt{2}}} \\)"
     var pi8c2 = "\\( \\pi \\approx 8\\sqrt{2 - \\sqrt{ 2 + \\sqrt{2}}} \\)"
@@ -57,12 +62,13 @@ const CalculDePi = () => {
     var hc3 = "\\(  h_c^2 = 1 - \\frac{2 - \\sqrt{2 + \\sqrt{2}}}{4}\\)"
     var hcR = "\\(  h_b = \\frac{1}{2} \\sqrt{ 2 + \\sqrt{2 + \\sqrt{2}}} \\)"
     var d2bis = "\\( d^2 = \\frac{c^2}{4} + \\left(1 -\\frac{1}{2} \\sqrt{ 2 + \\sqrt{2 + \\sqrt{2}}} \\right)^2 \\)"
-    var d3 = "\\( d^2 = \\frac{2 - \\sqrt{2}}{4} + 1 - 2 \\times \\frac{1}{2} \\sqrt{ 2 + \\sqrt{2 + \\sqrt{2}}} + \\frac{ 2 + \\sqrt{2}}{4}  \\)"
+    var d3 = "\\( d^2 = \\frac{2 - \\sqrt{2}}{4} + 1 \\\\ - 2 \\times \\frac{1}{2} \\sqrt{ 2 + \\sqrt{2 + \\sqrt{2}}} \\\\ + \\frac{ 2 + \\sqrt{2}}{4}  \\)"
+    var d3Mobile = "\\( \\displaylines { d^2 = \\frac{2 - \\sqrt{2}}{4} + 1 \\\\ - 2 \\times \\frac{1}{2} \\sqrt{ 2 + \\sqrt{2 + \\sqrt{2}}} \\\\ + \\frac{ 2 + \\sqrt{2}}{4} } \\)"
     var d4 = "\\( d = \\sqrt{2 - \\sqrt{ 2 + \\sqrt{2 + \\sqrt{2}}}} \\)"
     var pi16d2 = "\\( \\pi \\approx 16\\sqrt{2 - \\sqrt{ 2 + \\sqrt{2 + \\sqrt{2} }}} \\)"
     var pi16dR = "\\( \\pi \\approx 3,13 \\)"
 
-    var piG = "\\( \\pi = lim_{n \\to +\\infty} \\enspace 2^{n+1} \\sqrt{2 - \\underbrace { \\sqrt{ 2 + \\sqrt{2 + \\sqrt{ 2 + {...}}}} }_\\text{n} }  \\)"
+    var piG = "\\( \\pi = lim_{n \\to +\\infty} \\enspace 2^{n+1} \\sqrt{2 - \\underbrace { \\sqrt{ 2 + \\sqrt{2 + {...}}} }_\\text{n} }  \\)"
 
     return (
 
@@ -126,8 +132,8 @@ const CalculDePi = () => {
             <MathJaxDisplay toShow={c2} demo />  
             <p>Soit</p>
             <MathJaxDisplay toShow={c2bis} demo />  
-            <MathJaxDisplay toShow={c3} demo /> 
-            <MathJaxDisplay toShow={c4} demo />  
+            <MathJaxDisplay toShow={width < 500 ? c3Mobile : c3} demo /> 
+            <MathJaxDisplay toShow={width < 500 ? c4Mobile : c4} demo />  
             <MathJaxDisplay toShow={c5} demo /> 
             <MathJaxDisplay toShow={c6} demo /> 
             <p>Ce qui donne</p>
@@ -148,7 +154,7 @@ const CalculDePi = () => {
             <MathJaxDisplay toShow={d2} demo />  
             <p>Soit</p>
             <MathJaxDisplay toShow={d2bis} demo />  
-            <MathJaxDisplay toShow={d3} demo />
+            <MathJaxDisplay toShow={width < 500 ? d3Mobile : d3} demo />  
             <MathJaxDisplay toShow={d4} demo />  
                 <p>Ce qui donne</p>
             <MathJaxDisplay toShow={pi16d2} demo /> 
@@ -156,11 +162,10 @@ const CalculDePi = () => {
 
             <p className="Title1">Généralisation</p>
             <p>Nous pouvons à présent donner une formule générale pour <MathJaxInline toShow={"$\\pi$"} /></p>
-            <Container className="Focus">
+            <Container className="Focus FocusHuge">
                 <MathJaxDisplay toShow={piG} />  
+                <p>avec <MathJaxInline toShow="$ n $" /> le nombre de <MathJaxInline toShow="$ 2 $" /> additionnés de manière récursive</p>                
             </Container>
-            <p>avec <MathJaxInline toShow="$ n $" /> le nombre de <MathJaxInline toShow="$ 2 $" /> additionnés de manière récursive</p>                
-    
         </>
 
 

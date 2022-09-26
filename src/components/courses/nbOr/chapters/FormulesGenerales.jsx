@@ -3,7 +3,6 @@ import { Container } from 'react-bootstrap';
 import MathJaxDisplay from '../../../mathjax-display/MathJaxDisplay';
 import MathJaxInline from '../../../mathjax-display/MathJaxInline';
 
-
 const FormulesGenerales = () => {
 
     var approxPhi1Begin =  "\\( \\phi^2 = \\phi + 1  \\)";
@@ -39,7 +38,7 @@ const FormulesGenerales = () => {
                 <p>En ainsi de suite...</p>
                 <MathJaxDisplay toShow={approxPhi14} demo />    
                 <MathJaxDisplay toShow={approxPhi15} demo />
-                <Container className="Focus">
+                <Container className="Focus FocusHuge">
                     <MathJaxDisplay toShow={approxPhi1End} />
                 </Container>
 
@@ -57,7 +56,7 @@ const FormulesGenerales = () => {
                 <p>En ainsi de suite...</p>
                 <MathJaxDisplay toShow={approxPhi25}/>
                 <MathJaxDisplay toShow={approxPhi26}/>
-                <Container className="Focus">
+                <Container className="Focus FocusHuge">
                     <MathJaxDisplay toShow={approxPhi2End} infiniteFrac />
                 </Container>
 

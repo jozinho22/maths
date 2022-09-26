@@ -7,7 +7,7 @@
 
 .HomeTitleContainer {
     position: relative;
-    margin-top: calc(var(--customfooter-height) + 20px);
+    margin-top: calc(var(--customheader-height));
     background-color: var(--front-color);
     border-radius: 10px;
     color: var(--links-color);

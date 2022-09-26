@@ -17,17 +17,18 @@ const GenericCourse = ({title, chapters}) => {
     React.useEffect(() => {
         window.scrollTo(0, 0);
         updateIsLoadingChapter(true);
-    }, [count]);
+    }, [count, updateIsLoadingChapter]);
 
     return (
         <>
             {
                 count > 0 ? 
-                    <Button className="DefaultButton GreenButton" onClick={() => setCount(0)}>
+                    <Button className="DefaultButton GreenButton NormalFontButton" onClick={() => setCount(0)}>
                         Retour au sommaire
                     </Button> 
                         : <></>
             }
+            <p className="ChapterTitle">{title}</p>
             {
                 count > 0 ?
                     <NavigationButtons 

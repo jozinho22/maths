@@ -14,7 +14,7 @@ const PdfTableOfContents = ( {pdfItems} ) => {
                     pdfItems.map(pdfItem => (
                         <Container  key={pdfItem.id} className="TableOfContentsButtonContainer">
                             <Col xs={12} md={12}>
-                                <div key={pdfItem.id} className="TableOfContentsButton" >
+                                <div key={pdfItem.id} className="TableOfContentsLink" >
                                     <Link link={`bds-de-jpp/${pdfItem.relativePath}`} internalLink={true} >
                                         {pdfItem.title}
                                     </Link>

@@ -11,7 +11,7 @@ const GamesTableOfContents = ( {gameItems} ) => {
                     gameItems.map(gameItem => (
                         <Container  key={gameItem.id} className="TableOfContentsButtonContainer">
                             <Col xs={12} md={12}>
-                                <div key={gameItem.id} className="TableOfContentsButton" >
+                                <div key={gameItem.id} className="TableOfContentsLink" >
                                     <Link link={`jeux/${gameItem.relativePath}`} internalLink={true} >
                                         {gameItem.title}
                                     </Link>

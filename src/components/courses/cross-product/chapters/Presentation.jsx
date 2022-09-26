@@ -21,7 +21,7 @@ const Presentation = () => {
 
     var divByA = "\\(\\frac{a}{b} \\times \\frac{1}{a}= \\frac{c}{d} \\times \\frac{1}{a}\\)";
     var divByAResult = "\\(\\frac{1}{b} = \\frac{c}{ad} \\)";
-    var multByD = "\\(\\frac{1}{b} \\times d = \\frac{c}{a/d} \\times d\\)";
+    var multByD = "\\(\\frac{1}{b} \\times d = \\frac{c}{a.d} \\times d\\)";
     var multByDResults = "\\(\\frac{b}{d} = \\frac{c}{a}\\)";
 
     const changeOne = (expPos, mirrorExpPos) => {
@@ -108,21 +108,21 @@ const Presentation = () => {
             <Row>
                 <Col xs={4}>
                     <Button 
-                        className="DefaultButton OrangeButton"
+                        className="DefaultButton OrangeButton NormalFontButton"
                         onClick={() => invert( [0,0], [0,1] )}>
                         Inverser a et d
                     </Button>
                 </Col>
                 <Col xs={4}>
                     <Button 
-                        className="DefaultButton" 
+                        className="DefaultButton NormalFontButton" 
                         onClick={() => changeOne( [0,0], [0,1] )}>
                         Changer a
                     </Button>
                 </Col>
                 <Col xs={4}>
                     <Button 
-                        className="DefaultButton"
+                        className="DefaultButton NormalFontButton"
                         onClick={() => changeOne( [1,0], [1,1] )}>
                         Changer b
                     </Button>
@@ -131,21 +131,21 @@ const Presentation = () => {
             <Row>
                 <Col xs={4}>
                     <Button 
-                        className="DefaultButton OrangeButton"
+                        className="DefaultButton OrangeButton NormalFontButton"
                         onClick={() => invert( [1,0], [1,1] )}>
                         Inverser b et c
                     </Button>
                 </Col>
                 <Col xs={4}>
                     <Button 
-                        className="DefaultButton" 
+                        className="DefaultButton NormalFontButton" 
                         onClick={() => changeOne( [1,1], [1,0] )}>
                         Changer c
                     </Button>
                 </Col>
                 <Col xs={4}>
                     <Button 
-                        className="DefaultButton"
+                        className="DefaultButton NormalFontButton"
                         onClick={() => changeOne( [0,1], [0,0] )}>
                         Changer d
                     </Button>

@@ -11,7 +11,7 @@ const CoursesTableOfContents = ( {courseItems} ) => {
                     courseItems.map(courseItem => (
                         <Container key={courseItem.id} className="TableOfContentsButtonContainer">
                             <Col xs={12} md={12}>
-                                <div key={courseItem.id} className="TableOfContentsButton" >
+                                <div key={courseItem.id} className="TableOfContentsLink" >
                                     <Link link={`cours/${courseItem.relativePath}`} internalLink={true} >
                                         {courseItem.title}
                                     </Link>

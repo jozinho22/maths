@@ -68,7 +68,7 @@
   background-color : var(--navbar-hover-color);
 }
 
-@media (min-width: 768px) {
+@media (min-width: 450px) {
   .CustomNav .dropdown-item {
     font-size: small;
     width: 100%;
