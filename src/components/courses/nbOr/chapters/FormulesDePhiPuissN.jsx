@@ -3,7 +3,7 @@ import { Container } from 'react-bootstrap';
 import MathJaxDisplay from '../../../mathjax-display/MathJaxDisplay';
 import MathJaxInline from '../../../mathjax-display/MathJaxInline';
 
-import FibonacciFormulasTable from '../FibonacciFormulasTable';
+import FibonacciFormulasTable from '../helpers/FibonacciFormulasTable';
 
 const FormulesDePhiPuissN = () => {
 

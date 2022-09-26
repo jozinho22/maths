@@ -13,7 +13,6 @@ import './App.css';
 import AppContext from './components/context/AppContext';
 import LoadingContext from './components/context/LoadingContext';
 
-import pdfResourceBuilder from './components/pdf-viewer/pdfResourceBuilder';
 import SizeContext from './components/context/SizeContext';
 
 import useWindowSize from './components/immutable/dimensions/useWindowSize';
@@ -26,17 +25,22 @@ import Header from './components/immutable/nav/Header';
 
 import Home from './components/home/Home';
 
-import PdfTableOfContents from './components/pdf-viewer/PdfTableOfContents';
-import PDFViewerPage from './components/pdf-viewer/PDFViewerPage';
+import coursesResourceBuilder from './components/courses/coursesResourceBuilder';
+import CoursesTableOfContents from './components/courses/CoursesTableOfContents';
 
-import TablesTest from './components/tables-test/TablesTest';
+import PDFViewerPage from './components/pdf-viewer/PDFViewerPage';
+import pdfResourceBuilder from './components/pdf-viewer/pdfResourceBuilder';
+import PdfTableOfContents from './components/pdf-viewer/PdfTableOfContents';
+
+import gamesResourceBuilder from './components/games/gamesResourceBuilder';
+import GamesTableOfContents from './components/games/GamesTableOfContents';
+
 import Links from './components/links/Links';
 
 import Contact from './components/contact/Contact';
 import Error from './components/immutable/Error';
 
 import Footer from './components/immutable/nav/Footer';
-import coursesResourceBuilder from './components/courses/coursesResourceBuilder';
 
 function App() {
 
@@ -73,8 +77,9 @@ function App() {
 
     useIsLoading(isLoadingLink, setIsLoadingLink, isLoadingChapter, setIsLoadingChapter);
 
+    var courseItems = coursesResourceBuilder();
     var pdfItems = pdfResourceBuilder();
-    var coursesItems = coursesResourceBuilder();
+    var gameItems = gamesResourceBuilder();
 
     return ( 
         <div className="App" >     
@@ -84,16 +89,17 @@ function App() {
                 <div  className={`${theme} ${font}`}>
                     <BrowserRouter>
                         {isLoadingLink || isLoadingChapter ? <BlurryingSpinner /> : ''}
-                        <Header coursesItems = {coursesItems} pdfItems ={pdfItems} /> 
+                        <Header courseItems = {courseItems} pdfItems ={pdfItems} gameItems={gameItems} /> 
                             <Container className = {` RelativeContainer ${playMode ? "PlayMode" : ''}  ${isLoadingLink || isLoadingChapter ? "Blur" : ''} `} >                           
                                 <Routes>
                                     <Route exact path="/" element={<Home />} />
-                                   
-                                    {coursesItems.map(coursesItem => (
+
+                                    <Route path="/cours" element={<CoursesTableOfContents courseItems={courseItems} />} />
+                                    {courseItems.map(courseItem => (
                                             <Route 
-                                                key={coursesItem.id}
-                                                path={coursesItem.relativePath}
-                                                element={coursesItem.component} />
+                                                key={courseItem.id}
+                                                path={`/cours/${courseItem.relativePath}`}
+                                                element={courseItem.component} />
                                     ))}
 
                                     <Route path="/bds-de-jpp" element={<PdfTableOfContents pdfItems={pdfItems} />} />
@@ -104,7 +110,14 @@ function App() {
                                                 element={<PDFViewerPage pdfItem={pdfItem} />} />
                                     ))}
 
-                                    <Route path="/jeux/reviser-ses-tables" element={<TablesTest />} />
+                                    <Route path="/jeux" element={<GamesTableOfContents gameItems={gameItems} />} />
+                                    {gameItems.map(gameItem => (
+                                            <Route 
+                                                key={gameItem.id}
+                                                path={gameItem.relativePath}
+                                                element={gameItem.component} />
+                                    ))}
+
                                     <Route path="/liens" element={<Links />} />
 
                                     <Route path="/contact" element={<Contact />} />

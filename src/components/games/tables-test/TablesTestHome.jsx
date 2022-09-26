@@ -2,8 +2,6 @@ import React from 'react';
 import { Container, Button } from 'react-bootstrap';
 import { TablesTestContext } from './TablesTest';
 
-import './TablesTestHome.css';
-
 const TablesTestHome = () => {
 
     const {levels, launchGame} = React.useContext(TablesTestContext);
@@ -16,7 +14,7 @@ const TablesTestHome = () => {
                     levels.map(level => (
                         <div key={level.id}>
                             <Button   
-                                className={`${level.bStyle}Button TablesTestHomeButton DefaultButton`}
+                                className={`${level.bStyle}Button DefaultButton LargeButton`}
                                 onClick={() => launchGame(level.id)}>
                                 Niveau : {level.title}
                             </Button>

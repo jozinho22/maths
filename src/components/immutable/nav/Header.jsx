@@ -5,7 +5,7 @@ import AppContext from '../../context/AppContext'
 import './Nav.css';
 import './Header.css';
 
-const Header = ( {coursesItems, pdfItems} ) => {
+const Header = ( {courseItems, pdfItems, gameItems} ) => {
 
     const {playMode} = React.useContext(AppContext);
 
@@ -30,11 +30,11 @@ const Header = ( {coursesItems, pdfItems} ) => {
                 <Navbar.Collapse id="responsive-navbar-nav" >
                     <Nav>
                         <NavDropdown title="Cours" id="basic-nav-dropdown">
-                            {coursesItems.map(coursesItem => 
+                            {courseItems.map(courseItem => 
                                 <NavDropdown.Item
-                                    key={coursesItem.id}
-                                    href={coursesItem.relativePath} >
-                                    {coursesItem.title}
+                                    key={courseItem.id}
+                                    href={`/cours/${courseItem.relativePath}`} >
+                                    {courseItem.title}
                                 </NavDropdown.Item>
                             )}
                         </NavDropdown> 
@@ -48,10 +48,14 @@ const Header = ( {coursesItems, pdfItems} ) => {
                             )}
                         </NavDropdown>
                         <NavDropdown title="Jeux" id="basic-nav-dropdown">
-                            <NavDropdown.Item href="/jeux/reviser-ses-tables" >
-                                Réviser ses tables
-                            </NavDropdown.Item>
-                        </NavDropdown>
+                            {gameItems.map(gameItem => 
+                                <NavDropdown.Item
+                                    key={gameItem.id}
+                                    href={`/jeux/${gameItem.relativePath}`} >
+                                    {gameItem.title}
+                                </NavDropdown.Item>
+                            )}
+                        </NavDropdown> 
                         <Nav.Link title="Liens" href="/liens" >
                             Liens
                         </Nav.Link>

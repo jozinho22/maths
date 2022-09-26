@@ -7,7 +7,7 @@ const CoursesLinks = {
         TRIGO: '/cours/la-trigonometrie',
         FORMES: '/cours/les-formes',
         FONCTIONS: '/cours/les-fonctions-usuelles',
-        SAVOIR_SANS_FRONTIERES: 'http://www.savoir-sans-frontieres.com/JPP/telechargeables/free_downloads.htm',
+        
         UNSPLASH:'http://unsplash.com'
 }
 

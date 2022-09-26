@@ -3,7 +3,7 @@ import { Container } from 'react-bootstrap';
 import MathJaxDisplay from '../../../mathjax-display/MathJaxDisplay';
 import MathJaxInline from '../../../mathjax-display/MathJaxInline';
 
-import FibonacciTableInBothSenses from '../FibonacciTableInBothSenses';
+import FibonacciTableInBothSenses from '../helpers/FibonacciTableInBothSenses';
 
 const CaracteristiquesEnSensContraire = () => {
 

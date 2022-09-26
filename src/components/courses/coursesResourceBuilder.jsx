@@ -7,8 +7,6 @@ import LesFonctionsUsuelles from './usual-functions/LesFonctionsUsuelles';
 import LeProduitEnCroix from './cross-product/LeProduitEnCroix';
 import LeTheoremeDePythagore from './pythagore/LeTheoremeDePythagore';
 
-import CoursesLinks from './CoursesLinks';
-
 function coursesResourceBuilder() {
 
     var coursesItems = [];
@@ -17,49 +15,49 @@ function coursesResourceBuilder() {
     var crossProduct = {
       id: i++,
       title: 'Produit en croix',
-      relativePath: CoursesLinks.PRODUIT_EN_CROIX,
+      relativePath: 'le-produit-en-croix',
       component: <LeProduitEnCroix />
     }
     var powers = {
       id: i++,
       title: 'Puissances',
-      relativePath: CoursesLinks.PUISSANCES,
+      relativePath: 'les-puissances',
       component: <LesPuissances />
     }
     var pythagore = {
       id: i++,
       title: 'Théorème de Pythagore',
-      relativePath: CoursesLinks.PYTHAGORE,
+      relativePath: 'le-theoreme-de-pythagore',
       component: <LeTheoremeDePythagore />
     }
     var pi = {
       id: i++,
       title: 'Nombre π',
-      relativePath: CoursesLinks.PI,
+      relativePath: 'le-nombre-pi',
       component: <LeNombrePi />
     }
     var nbOr = {
       id: i++,
       title: 'Nombre d\'or (φ)',
-      relativePath: CoursesLinks.NOMBRE_OR,
+      relativePath: 'le-nombre-d-or',
       component: <LeNombreDOr />
     }
     var trigo = {
       id: i++,
       title: 'Trigonométrie',
-      relativePath: CoursesLinks.TRIGO,
+      relativePath: 'la-trigonometrie',
       component: <LaTrigonometrie />
     }
     var shapes = {
       id: i++,
       title: 'Formes',
-      relativePath: CoursesLinks.FORMES,
+      relativePath: 'les-formes',
       component: <LesFormes />
     }
     var usualFunctions = {
       id: i++,
       title: 'Fonctions usuelles',
-      relativePath: CoursesLinks.FONCTIONS,
+      relativePath: 'les-fonctions-usuelles',
       component: <LesFonctionsUsuelles />
     }
     

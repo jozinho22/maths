@@ -1,8 +1,8 @@
-import NiceTable from '../../immutable/NiceTable';
+import NiceTable from '../../../immutable/NiceTable';
 import useFibonacciFormulas from './useFibonacciFormulas';
 
-import MathJaxDisplay from '../../mathjax-display/MathJaxDisplay';
-import MathJaxInline from '../../mathjax-display/MathJaxInline';
+import MathJaxDisplay from '../../../mathjax-display/MathJaxDisplay';
+import MathJaxInline from '../../../mathjax-display/MathJaxInline';
 
 const FibonacciFormulasTable = () => {
 

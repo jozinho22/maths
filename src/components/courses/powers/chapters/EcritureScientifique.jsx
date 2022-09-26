@@ -16,10 +16,10 @@ const EcritureScientifique = () => {
     var aLumiere = "\\( annee-lumiere = 10 \\;000 \\;000 \\;000 \\;000 \\;000 \\;m \\)";
     var aLumiere2 = "\\( annee-lumiere = 10^{16} \\;m \\)";
 
-    var mic = "\\( D_{microbe} = 0, \\;000 \\;001 \\;m \\)";
+    var mic = "\\( D_{microbe} = 0, 000 \\;001 \\;m \\)";
     var mic2 = "\\( D_{microbe} = 10^{-6} \\;m \\)";
 
-    var atom = "\\( D_{atome} = 0, \\;000 \\;000 \\;000 \\;000 \\;001 \\;m \\)";
+    var atom = "\\( D_{atome} = 0, 000 \\;000 \\;000 \\;000 \\;001 \\;m \\)";
     var atom2 = "\\( D_{atome} = 10^{-16} \\;m \\)";
 
     return (

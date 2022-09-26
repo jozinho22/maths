@@ -1,7 +1,7 @@
 import React from 'react';
-import NiceTable from '../../immutable/NiceTable';
+import NiceTable from '../../../immutable/NiceTable';
 import useRatios from './useRatios';
-import MathJaxDisplay from '../../mathjax-display/MathJaxDisplay';
+import MathJaxDisplay from '../../../mathjax-display/MathJaxDisplay';
 
 const RatioTable = () => {
 

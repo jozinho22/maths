@@ -1,7 +1,7 @@
-import NiceTable from '../../immutable/NiceTable';
+import NiceTable from '../../../immutable/NiceTable';
 import useFibonacciInBothSenses from './useFibonacciInBothSenses';
 
-import MathJaxDisplay from '../../mathjax-display/MathJaxDisplay';
+import MathJaxDisplay from '../../../mathjax-display/MathJaxDisplay';
 
 const FibonacciTableInBothSenses = () => {
 

@@ -2,7 +2,7 @@ import React from 'react';
 import { Container } from 'react-bootstrap';
 import MathJaxDisplay from '../../../mathjax-display/MathJaxDisplay';
 import MathJaxInline from '../../../mathjax-display/MathJaxInline';
-import FibonacciTable from '../FibonacciTable';
+import FibonacciTable from '../helpers/FibonacciTable';
 
 import ImageZoom from '../../ImageZoom';
 import euclideStuff from '../assets/euclideStuff.png';
@@ -152,12 +152,14 @@ const Caracteristiques = () => {
                 <Container className="Focus">
                     <MathJaxDisplay toShow={phi448} />
                 </Container>
-                <p>On décompose alors l'expression précédente pour y trouver <MathJaxInline toShow={"$\\phi^2$"} /> et <MathJaxInline toShow={"$\\phi$"} /></p>
+                <p>Par la suite, on peut décomposer l'expression suivante en <MathJaxInline toShow={"$\\phi^3$"} /> et <MathJaxInline toShow={"$\\phi^2$"} /></p>
+                <MathJaxDisplay toShow={phi447} demo />
                 <MathJaxDisplay toShow={phi445} demo />
+                <MathJaxDisplay toShow={phi446} demo />
                 <p>On alors comme pour  <MathJaxInline toShow={"$\\phi^3$"} /> ce couple d'équations :</p>
                 <Container className="Focus">
+                    <MathJaxDisplay toShow={phi446} />
                     <MathJaxDisplay toShow={phi448} />
-                    <MathJaxDisplay toShow={phi447} />
                 </Container>
 
                 <p>On voit qu'il y a encore une fois un pattern qui se répète avec le nombre d'or.</p>

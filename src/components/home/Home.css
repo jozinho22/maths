@@ -6,13 +6,8 @@
 } 
 
 .HomeTitleContainer {
-    position: absolute;
-    top: 35%;
-    /* Position Y halfway in */
-    left: 50%;
-    /* Position X halfway in */
-    transform: translate(-50%, -50%);
-    /* Move it halfway back(x,y) */
+    position: relative;
+    margin-top: calc(var(--customfooter-height) + 20px);
     background-color: var(--front-color);
     border-radius: 10px;
     color: var(--links-color);
@@ -23,20 +18,20 @@
 }
 
 .HomeContentContainer {
-    position: absolute;
-    top: 50%;
+    position: relative;
+    margin-top: 30px;
 }
 
 @media (min-width : 450px) {
     .HomeTitleContainer {
         width: calc(var(--window-width) * 1 / 2);
     }
-    .ExpressionsContainer .MathJaxDisplayContainer {
+/*     .ExpressionsContainer .MathJaxDisplayContainer {
         padding: 25px;
-    }
+    } */
 }
 
-@media (min-width : 768px) {
+/* @media (min-width : 768px) {
     .ExpressionsContainer .MathJaxDisplayContainer {
         padding: 35px;
     }
@@ -45,3 +40,4 @@
         font-size: large !important;
     }
 }
+ */

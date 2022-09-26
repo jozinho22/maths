@@ -1,5 +1,4 @@
 import React from 'react';
-import { Navigate } from 'react-router-dom';
 
 import TablesTestHome from './TablesTestHome';
 import TablesTestResults from './TablesTestResults';

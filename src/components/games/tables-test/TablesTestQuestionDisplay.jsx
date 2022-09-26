@@ -1,8 +1,8 @@
 import React from 'react';
 import { Container, Button, Row, Col } from 'react-bootstrap';
 import Timer from './Timer';
-import Alert from '../alert/Alert';
-import { updateAlert, reInitAlert } from '../alert/alertFunctions';
+import Alert from '../../alert/Alert';
+import { updateAlert, reInitAlert } from '../../alert/alertFunctions';
 import { TablesTestContext } from './TablesTest';
 /* import CiferKeyboard from './CiferKeyboard';
  */

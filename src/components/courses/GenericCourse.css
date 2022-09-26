@@ -18,6 +18,10 @@
     font-size: small;
 }
 
+.CoursesContainer a {
+    color : #0d6efd;
+}
+
 .ZoomContainer {
     position: relative;
 }

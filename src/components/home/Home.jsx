@@ -1,6 +1,7 @@
 import { Container, Row, Col } from 'react-bootstrap';
-import MathJaxDisplay from '../mathjax-display/MathJaxDisplay';
-import useFunctionsExpressions from './useFunctionsExpressions';
+/* import MathJaxDisplay from '../mathjax-display/MathJaxDisplay';
+import useFunctionsExpressions from './useFunctionsExpressions'; */
+import Link from '../immutable/nav/Link';
 import './Home.css';
 
 const Home = () => {
@@ -11,13 +12,10 @@ const Home = () => {
                 Maths pour tous
             </Container>
             <Container className="HomeContentContainer">
-                <p>- Des cours de mathématiques sur de nombreux sujets</p>
-                <p>- Des BDs de Jean-Petit</p>   
-                <p>- Des petits jeux pour s'améliorer</p>            
+                <p><Link link={'/cours'} internalLink={true} >- Des cours de mathématiques sur de nombreux sujets</Link></p>
+                <p><Link link={'/bds-de-jpp'} internalLink={true} >- Des BDs de Jean-Petit</Link></p>   
+                <p><Link link={'/jeux'} internalLink={true} >- Des petits jeux pour s'améliorer</Link></p>            
             </Container>
-
-
-            
         </>
     );
 }

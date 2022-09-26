@@ -42,7 +42,7 @@ const LienEntrePuissancesEtRacines = () => {
                 <p>
                     Mais la racine carrée est une racine particulière avec <MathJaxInline toShow={"$n = 2$"} />.
                     {"\n"}
-                    La racine carrée pourrait alors éventuellement s'écrire aussi <MathJaxInline toShow={"$sqrt[2]{x}$"} />
+                    La racine carrée pourrait alors éventuellement s'écrire aussi <MathJaxInline toShow={"$\\sqrt[2]{x}$"} />
                     {"\n"}
                     Nous pouvons généraliser cette formule pour tout <MathJaxInline toShow={"$n$"} />...
                     {"\n"}{"\n"}

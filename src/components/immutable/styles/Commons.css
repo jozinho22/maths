@@ -156,6 +156,10 @@
     margin: 20px;
 }
 
+.LargeButton {
+    padding: 20px;
+}
+
 .GreenButton {
     background-color: var(--green-color);
 }
@@ -191,6 +195,14 @@
 .RedButton:focus {
     background-color: var(--red-hover-color);
 }
+
+/* Links */
+
+a {
+    font-size: large;
+}
+
+a { color: inherit; } 
 
 /* Icons */
 

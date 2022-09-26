@@ -7,9 +7,9 @@ import ImageZoom from '../../ImageZoom';
 import rabbits from '../assets/rabbits.png';
 import rabbitsEvolution from '../assets/rabbitsEvolution.png';
 
-import RabbitsEvolutionTable from '../RabbitsEvolutionTable';
-import RatioTable from '../RatioTable';
-import FibonacciTable from '../FibonacciTable';
+import RabbitsEvolutionTable from '../helpers/RabbitsEvolutionTable';
+import RatioTable from '../helpers/RatioTable';
+import FibonacciTable from '../helpers/FibonacciTable';
 
 const EvolutionDeLapins = () => {
 

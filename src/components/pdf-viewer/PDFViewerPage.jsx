@@ -95,6 +95,11 @@ const PDFViewerPage = ({ pdfItem }) => {
         return (
           <> 
             <Button 
+                className="DefaultButton ReturnHomeButton"
+                href="/">
+                Home
+            </Button>
+            <Button 
                 className="DefaultButton UnPlayModeButton"
                 href="/bds-de-jpp">
                 Toutes les BDs

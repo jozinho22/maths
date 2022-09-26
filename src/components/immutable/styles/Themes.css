@@ -68,7 +68,7 @@
 
     color: var(--grey-color); 
     --navbar-color: var(--dark-color);
-    --navbar-hover-color: var(--grey-light-color);
+    --navbar-hover-color: var(--grey-color);
     --back-color: var(--yellow-color);
     --front-color: var(--red-color);
     --simple-text-color: var(--dark-color);

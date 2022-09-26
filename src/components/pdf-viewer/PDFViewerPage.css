@@ -61,23 +61,28 @@
     background-color: var(--grey-light-color);
 }
 
-.UnPlayModeButton, .PlayModeButton {
+.ReturnHomeButton, .UnPlayModeButton {
     position: absolute;
-    right: 0px;
+    top: 0;
     margin-top: 10px;
-    background-color: var(--green-color);
 }
 
-.UnPlayModeButton:hover, .UnPlayModeButton:focus, .PlayModeButton:hover, .PlayModeButton:focus {
-    background-color: var(--green-hover-color);
+.ReturnHomeButton {
+    background-color: var(--orange-color);
+    left: 0px;
+}
+
+.ReturnHomeButton:hover, .ReturnHomeButton:focus {
+    background-color: var(--orange-hover-color);
 }
 
 .UnPlayModeButton {
-    top: 0;
+    background-color: var(--green-color); 
+    right: 0px;
 }
 
-.PlayModeButton {
-    top: var(--customheader-height);
+.UnPlayModeButton:hover, .UnPlayModeButton:focus {
+    background-color: var(--green-hover-color);
 }
 
 .PagesMobile {

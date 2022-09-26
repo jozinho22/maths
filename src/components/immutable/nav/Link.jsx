@@ -1,7 +1,7 @@
-const Link = ( {link, children} ) => {
+const Link = ( {link, internalLink, children} ) => {
 
     return (
-        <a href={link} target="_blank" rel="noopener">{children}</a>
+        <a className="Link" href={link} target={internalLink ? "_self" : "_blank"} rel="noopener">{children}</a>
     );
 }
 

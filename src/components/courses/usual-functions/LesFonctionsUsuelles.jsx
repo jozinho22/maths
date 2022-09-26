@@ -18,9 +18,8 @@ const LesFonctionsUsuelles = () => {
 /*     'basis' | 'basisClosed' | 'basisOpen' | 'linear' | 'linearClosed' | 'natural' | 'monotoneX' | 'monotoneY' | 'monotone' | 'step' | 'stepBefore' | 'stepAfter' | CurveFactory;
  */
     const type = "natural";
-
-    const {updateIsLoading} = React.useContext(LoadingContext);
-
+    const {updateIsLoadingChapter} = React.useContext(LoadingContext);
+ 
     React.useEffect(() => {
 
         var scale = f.scale;
@@ -58,10 +57,9 @@ const LesFonctionsUsuelles = () => {
         } 
 
         setFData(datas);
+        updateIsLoadingChapter(true);
 
-        updateIsLoading(true);
-
-    }, [f]);
+    }, [f, updateIsLoadingChapter]);
 
     const getButtonTitle = (exp) => {
         return "\\(" + exp + " \\)";

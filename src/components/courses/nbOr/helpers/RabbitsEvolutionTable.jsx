@@ -1,5 +1,5 @@
 import React from 'react';
-import NiceTable from '../../immutable/NiceTable';
+import NiceTable from '../../../immutable/NiceTable';
 import getRabbitsEvolution from './useRabbitsEvolution';
 
 const RabbitsEvolutionTable = () => {

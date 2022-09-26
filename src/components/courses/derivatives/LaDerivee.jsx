@@ -3,10 +3,12 @@ import React from 'react';
 import GenericCourse from '../GenericCourse';
 import getChapters from './getChapters';
 
-const LeNombreDOr = () => {
+import './LaDerivee.css'
+
+const LaDerivee = () => {
 
     var chapters = getChapters();
-    var title = "Le produit en croix"
+    var title = "La dérivée"
 
     return (
         <>
@@ -15,4 +17,4 @@ const LeNombreDOr = () => {
     );
 }
 
-export default LeNombreDOr;
+export default LaDerivee;
