@@ -86,7 +86,7 @@ function App() {
             <AppContext.Provider value={appContext} > 
             <LoadingContext.Provider value={loadingContext} >
             <SizeContext.Provider value={sizeContext} >
-                <div  className={`${theme} ${font}`}>
+                <div  className={`${theme} ${font} CopyBook`}>
                     <BrowserRouter>
                         {isLoadingLink || isLoadingChapter ? <BlurryingSpinner /> : ''}
                         <Header courseItems = {courseItems} pdfItems ={pdfItems} gameItems={gameItems} /> 

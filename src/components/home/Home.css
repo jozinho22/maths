@@ -8,8 +8,8 @@
 .HomeTitleContainer {
     position: relative;
     margin-top: calc(var(--customheader-height));
-    background-color: var(--front-color);
-    border-radius: 10px;
+    /* background-color: var(--front-color); */
+background-image: linear-gradient(to bottom right, var(--front-color), grey);    border-radius: 10px;
     color: var(--links-color);
     font-size: large;
     padding: 30px;

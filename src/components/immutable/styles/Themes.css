@@ -16,8 +16,14 @@
     --red-hover-color: rgb(105, 21, 21);
 }
 
+.CopyBook {
+    background-size: 20px 20px;
+    background-image: linear-gradient(90deg, rgb(170, 158, 158) 0.8px, transparent 0px), 
+                        linear-gradient(rgb(170, 158, 158) 0.8px, transparent 0px);
+}
+
 .Algeria {
-    background: var(--back-color);
+    background-color: var(--back-color);
     --links-color: var(--back-color);
     --button-text-color: var(--back-color);
     --mirror-button-text-color: var(--dark-color);
@@ -31,7 +37,7 @@
 }
 
 .Brazil {
-    background: var(--back-color);
+    background-color: var(--back-color);
     --links-color: var(--back-color);
     --button-text-color: var(--back-color);
     --mirror-button-text-color: var(--grey-color);
@@ -47,7 +53,7 @@
 
 .Darcula {
     /* Le seul à avoir un début différent...*/
-    background: var(--back-color);
+    background-color: var(--back-color);
     --links-color: var(--red-color);
     --button-text-color: var(--grey-light-color);
     --mirror-button-text-color: var(--grey-light-color);
@@ -61,12 +67,12 @@
 }
 
 .Germany {
-    background: var(--back-color);
+    background-color: var(--back-color);
     --links-color: var(--back-color);
     --button-text-color: var(--back-color);
     --mirror-button-text-color: var(--dark-color);
 
-    color: var(--grey-color); 
+    color: var(--dark-color); 
     --navbar-color: var(--dark-color);
     --navbar-hover-color: var(--grey-color);
     --back-color: var(--yellow-color);
@@ -75,7 +81,7 @@
 }
 
 .France {
-    background: var(--back-color);
+    background-color: var(--back-color);
     --button-text-color: var(--back-color);
     --links-color: var(--back-color);
     --mirror-button-text-color: var(--dark-color);
@@ -89,7 +95,7 @@
 }
 
 .Senegal {
-    background: var(--back-color);
+    background-color: var(--back-color);
     --links-color: var(--back-color);
     --button-text-color: var(--back-color);
     --mirror-button-text-color: var(--dark-color);

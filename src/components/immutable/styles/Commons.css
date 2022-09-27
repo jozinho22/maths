@@ -4,6 +4,7 @@
     padding-bottom: calc(var(--customfooter-height) + 20px); 
     min-height: 100vh;
     font-size: small;
+    opacity: 0.8;
 }
 
 .RelativeContainer.PlayMode {
@@ -143,7 +144,6 @@
 
 .TableOfContentsLink {
     margin-top: 20px;
-    margin-bottom: 20px;
 }
 
 .MiniButton {

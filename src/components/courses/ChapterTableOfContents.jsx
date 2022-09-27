@@ -10,7 +10,7 @@ const ChapterTableOfContents = ( {title, chapters, setCount} ) => {
                         <Container key={chapter.id} className="TableOfContentsButtonContainer">
                             <Col xs={12} md={6} >
                                 <div 
-                                    className="Clickable NormalFontButton"
+                                    className="Clickable TableOfContentsLink NormalFontButton"
                                     onClick={() => setCount(chapter.id)}>
                                     <u>chapitre {chapter.id}</u> - {chapter.name}
                                 </div>
