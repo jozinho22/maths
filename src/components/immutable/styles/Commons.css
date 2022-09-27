@@ -3,8 +3,13 @@
     padding-top: calc(var(--customheader-height) + 10px);
     padding-bottom: calc(var(--customfooter-height) + 20px); 
     min-height: 100vh;
-    font-size: small;
-    opacity: 0.8;
+    color: var(--simple-text-color);
+}
+
+@media (min-width: 450px) {
+    .RelativeContainer {
+        padding-top: calc(var(--customheader-height) + 20px);
+    }
 }
 
 .RelativeContainer.PlayMode {
@@ -12,24 +17,40 @@
     padding-bottom: 20px;
 }
 
+a, p {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: medium;
+}
+
+p {
+    text-align: justify;
+    white-space: pre-line;
+}
+
+a { color: inherit; } 
+
+.MainTitle {
+    font: inherit;
+}
+
 .Title, .Title1 {
     position: relative;
     text-decoration: underline;
 }
 
-.Title {
+.MainTitle, .Title {
     margin: 0 auto;
     padding-top: 20px;
-    font-size: large !important;
     padding-bottom: 20px;
-    block-size: fit-content;
     width: fit-content;
+    font-size: large !important;
 }
 
 .Title1, .Title2 {
     font-size: medium !important;
     text-align: left;
 }
+
 .Title1 {
     padding-top: 20px;
     padding-bottom: 5px;
@@ -43,27 +64,21 @@
 }
 
 @media (min-width: 450px) {
-    .RelativeContainer {
-        font-size: small !important;
-        padding-top: calc(var(--customheader-height) + 20px);
-    }
-    .Title {
+    .MainTitle {
         font-size: large !important;
     }
-    .Title1, .Title2 {
-        font-size: medium !important;
+    .Title {
+        font-size: x-large !important;
     }
-}
-
-@media (min-width: 1268px) {
-    .RelativeContainer {
-        font-size: medium !important;
+    a, p, .Title1, .Title2 {
+        font-size: large !important;
     }
 }
 
 .BasicText {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     text-justify: auto;
+    color: var(--simple-text-color);
 }
 
 /* Buttons */
@@ -79,7 +94,6 @@
     padding: 10px;
     font-size: medium;
     font-family: 'Times New Roman', Times, serif !important;
-    font-size: large !important;
 }
 
 @media (min-width: 450px) {
@@ -128,28 +142,35 @@
 }
 
 .TableOfContentsButtonContainer {
-    padding-left: 20%;
     text-align: left;
     font-size: large;
 }
 
-.NormalFontButton, .TableOfContentsLink {
-    font-family: 'Times New Roman', Times, serif !important;
+@media (min-width: 450px) {
+    .TableOfContentsButtonContainer {
+        margin-left: 80px;
+    }
+}
+
+.TableOfContentsLink {
     font-size: large !important;
+    margin-top: 20px;
+    font-family: var(--scholar-font);
+}
+
+.TableOfContentsLink a {
+    font-family: var(--scholar-font);
 }
 
 .TextBetweenNavigationsButtons {
     font-size: small;
 }
 
-.TableOfContentsLink {
-    margin-top: 20px;
-}
-
-.MiniButton {
-    padding: 5px;
-    font-size: x-small;
-    margin: 20px;
+@media (max-width: 450px) {
+    .MiniButton {
+        padding: 5px;
+        font-size: small !important;
+    }
 }
 
 .LargeButton {
@@ -191,14 +212,6 @@
 .RedButton:focus {
     background-color: var(--red-hover-color);
 }
-
-/* Links */
-
-a {
-    font-size: large;
-}
-
-a { color: inherit; } 
 
 /* Icons */
 
@@ -276,10 +289,7 @@ a { color: inherit; }
     font-family: 'Times New Roman', Times, serif !important;
     font-size: medium !important;
     text-align: center !important;
-}
-
-.OnlyGfxCopyRight {
-    bottom: 20px;
+    margin-top: 30px;
 }
 
 .Left {

@@ -7,24 +7,38 @@
 
 .HomeTitleContainer {
     position: relative;
-    margin-top: calc(var(--customheader-height));
+    top: 30px;
     /* background-color: var(--front-color); */
-background-image: linear-gradient(to bottom right, var(--front-color), grey);    border-radius: 10px;
+    background-image: linear-gradient(to bottom right, var(--front-color), grey);    
+    border-radius: 10px;
     color: var(--links-color);
     font-size: large;
     padding: 30px;
     width: calc(var(--window-width) * 3 / 4);
     z-index: 1;
+    box-shadow: 20px 20px 5px 5px var(--navbar-color);
 }
 
 .HomeContentContainer {
     position: relative;
-    margin-top: 30px;
+    top: 80px;
+}
+
+.HomeContentContainer a {
+    font-family: var(--scholar-font);
+}
+
+.HomeContentContainer p {
+    text-align: left;
 }
 
 @media (min-width : 450px) {
     .HomeTitleContainer {
         width: calc(var(--window-width) * 1 / 2);
+        top: 50px;
+    }
+    .HomeContentContainer {
+        top: 120px;
     }
 /*     .ExpressionsContainer .MathJaxDisplayContainer {
         padding: 25px;

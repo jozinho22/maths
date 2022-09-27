@@ -15,7 +15,7 @@ const AutresFormulesGenerales = () => {
                 <Container className="Focus">
                     <MathJaxDisplay toShow={approxPi1} infiniteFrac />  
                 </Container>
-                <Container className="Focus">
+                <Container className="Focus FocusHuge">
                     <MathJaxDisplay toShow={approxPi2} />  
                 </Container>
                 <Container className="Focus">

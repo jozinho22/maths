@@ -39,7 +39,7 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  font-size: small;
+  font-size: small !important;
   color: var(--back-color);
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }

@@ -15,7 +15,7 @@ const Links = () => {
                     links.map(link => (
                         <Container key={link.id} className="TableOfContentsButtonContainer">
                             <Col xs={12} md={12}>
-                                <div className="NormalFontButton" >
+                                <div>
                                     <p className="Underline">{link.title}</p>
                                     <Link link={link.link}>{link.link}</Link>
                                 </div>

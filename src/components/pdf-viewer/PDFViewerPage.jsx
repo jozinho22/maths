@@ -107,7 +107,7 @@ const PDFViewerPage = ({ pdfItem }) => {
                    
             {
                 !mobile ?
-                    <Container className="SwitchButton BasicText">
+                    <Container className="SwitchButton">
                         <BootstrapSwitchButton 
                             size="lg" 
                             onlabel={`Par ${step} pages`}

@@ -1,0 +1,9 @@
+.BlurryingSpinner {
+    padding-top: calc(var(--customheader-height) + 20px);
+    color: var(--front-color);
+    z-index: 10;
+    top: 20%;
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%, 0);
+}

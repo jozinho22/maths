@@ -29,16 +29,17 @@ table mjx-container {
     font-size: 70%;
 }
 
-mjx-math {
-    font-size: 60% !important;
+.MathJaxDisplay mjx-math {
+    font-size: 35% !important;
     margin: 0px;
 }
 
 @media (min-width: 450px) {
-    mjx-math {
-        font-size: 70% !important;
+    .MathJaxDisplay mjx-math {
+        font-size: 50% !important;
     }
 }
+
 
 @media (min-width: 1268px) {
     mjx-math {
@@ -70,10 +71,4 @@ mjx-math {
 
 .RedMathJaxText {
     color: var(--red-color);
-}
-
-.MathJaxInline {
-    width: fit-content;
-    word-wrap: break-word;
-    block-size: fit-content;
 }

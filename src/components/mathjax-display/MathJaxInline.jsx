@@ -1,6 +1,6 @@
 import { MathJax, MathJaxContext } from "better-react-mathjax";
 
-import './MathJaxDisplay.css';
+import './MathJax.css';
 
 const MathJaxInline = ({toShow}) => {
 
@@ -14,7 +14,7 @@ const MathJaxInline = ({toShow}) => {
                     }
 
     return (
-            <MathJaxContext className="MathJaxInline" config={config}>
+            <MathJaxContext config={config}>
                 <MathJax dynamic hideUntilTypeset={ "every" } inline >
                     {toShow}
                 </MathJax>

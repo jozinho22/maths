@@ -1,23 +1,22 @@
 import React from "react";
 
-const useIsLoading = ( isLoadingLink, setIsLoadingLink, isLoadingChapter, setIsLoadingChapter ) => {
+const useIsLoading = ( isLoading, setIsLoading ) => {
+
+    console.log('avant useEffect ' + document.readyState)
 
     React.useEffect(() => {
-        if(isLoadingLink) {
+        if(isLoading) {
+            console.log(document.readyState)
             var interval = setInterval(function () {
-                if (document.readyState === 'complete') setIsLoadingLink(false); 
-                clearInterval(interval);       
-                // do your work
+                console.log(interval)
+                if (document.readyState === 'complete') {
+                    clearInterval(interval);       
+                    setIsLoading(false); 
+                }
+
             }, 1000);
         } 
-        if(isLoadingChapter) {
-            var interval = setInterval(function () {
-                if (document.readyState === 'complete') setIsLoadingChapter(false); 
-                clearInterval(interval);       
-                // do your work
-            }, 1000);
-        }
-    }, [isLoadingLink, isLoadingChapter]);
+    }, [isLoading]);
 
 }
 

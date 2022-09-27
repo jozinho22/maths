@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Button } from 'react-bootstrap';
 import NavigationButtons from './NavigationButtons';
-import ChapterTableOfContents from './ChapterTableOfContents';
+import ChaptersTableOfContents from './ChaptersTableOfContents';
 import LoadingContext from '../context/LoadingContext';
 
 import './GenericCourse.css';
@@ -12,23 +12,23 @@ const GenericCourse = ({title, chapters}) => {
     /* 0 -> Sommaire, n > 0 -> chapitres */
     const [count, setCount] = React.useState(0);
 
-    const {updateIsLoadingChapter} = React.useContext(LoadingContext);
+    const {updateIsLoading} = React.useContext(LoadingContext);
     
     React.useEffect(() => {
         window.scrollTo(0, 0);
-        updateIsLoadingChapter(true);
-    }, [count, updateIsLoadingChapter]);
+        updateIsLoading(true);
+    }, [count, updateIsLoading]);
 
     return (
         <>
             {
                 count > 0 ? 
-                    <Button className="DefaultButton GreenButton NormalFontButton" onClick={() => setCount(0)}>
+                    <Button className="DefaultButton GreenButton" onClick={() => setCount(0)}>
                         Retour au sommaire
                     </Button> 
                         : <></>
             }
-            <p className="ChapterTitle">{title}</p>
+            <p className="MainTitle">{title}</p>
             {
                 count > 0 ?
                     <NavigationButtons 
@@ -41,7 +41,7 @@ const GenericCourse = ({title, chapters}) => {
             <Container className="CoursesContainer"> 
                 {
                     count === 0 ?
-                        <ChapterTableOfContents title={title} chapters={chapters} setCount={setCount} />
+                        <ChaptersTableOfContents title={title} chapters={chapters} setCount={setCount} />
                             : <GenericChapter name={chapters[count - 1].name} component={chapters[count - 1].component} count={count} />
                 }                  
             </Container>

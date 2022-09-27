@@ -108,21 +108,21 @@ const Presentation = () => {
             <Row>
                 <Col xs={4}>
                     <Button 
-                        className="DefaultButton OrangeButton NormalFontButton"
+                        className="DefaultButton OrangeButton MiniButton"
                         onClick={() => invert( [0,0], [0,1] )}>
                         Inverser a et d
                     </Button>
                 </Col>
                 <Col xs={4}>
                     <Button 
-                        className="DefaultButton NormalFontButton" 
+                        className="DefaultButton MiniButton" 
                         onClick={() => changeOne( [0,0], [0,1] )}>
                         Changer a
                     </Button>
                 </Col>
                 <Col xs={4}>
                     <Button 
-                        className="DefaultButton NormalFontButton"
+                        className="DefaultButton MiniButton"
                         onClick={() => changeOne( [1,0], [1,1] )}>
                         Changer b
                     </Button>
@@ -131,21 +131,21 @@ const Presentation = () => {
             <Row>
                 <Col xs={4}>
                     <Button 
-                        className="DefaultButton OrangeButton NormalFontButton"
+                        className="DefaultButton OrangeButton MiniButton"
                         onClick={() => invert( [1,0], [1,1] )}>
                         Inverser b et c
                     </Button>
                 </Col>
                 <Col xs={4}>
                     <Button 
-                        className="DefaultButton NormalFontButton" 
+                        className="DefaultButton MiniButton" 
                         onClick={() => changeOne( [1,1], [1,0] )}>
                         Changer c
                     </Button>
                 </Col>
                 <Col xs={4}>
                     <Button 
-                        className="DefaultButton NormalFontButton"
+                        className="DefaultButton MiniButton"
                         onClick={() => changeOne( [0,1], [0,0] )}>
                         Changer d
                     </Button>

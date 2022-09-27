@@ -4,10 +4,18 @@
     margin-right: auto; */
 }
 
+.CustomNav a {
+  font: inherit;
+}
+
 .CustomNav .navbar-brand {
   margin-right: 0;
   color: var(--links-color);
   padding-left: 15px;
+}
+
+.CustomNav .navbar-nav {
+  color: var(--simple-text-color) !important;
 }
 
 .CustomNav button .nav-toggler .collapsed {
@@ -17,7 +25,13 @@
 .CustomNav .nav-link {
   padding-left: 20px !important;
   padding-right: 20px !important;
-  font-size: small !important;
+  font-size: x-small !important;
+}
+
+@media (min-width: 450px) {
+  .CustomNav .nav-link {
+    font-size: small !important;
+  }
 }
 
 .CustomNav .navbar-collapse {
@@ -54,7 +68,7 @@
 .CustomNav .dropdown-item {
   color: var(--links-color) ;
   padding: 10px;
-  font-size: xx-small;
+  font-size: xx-small !important;
   width: 50%;
   display: inline-block;
   text-align: center;
@@ -70,7 +84,7 @@
 
 @media (min-width: 450px) {
   .CustomNav .dropdown-item {
-    font-size: small;
+    font-size: small !important;
     width: 100%;
     display: block;
   }

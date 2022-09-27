@@ -3,7 +3,7 @@ import { MathJax, MathJaxContext } from "better-react-mathjax";
 import { Container } from 'react-bootstrap';
 import mathJaxConfig from './MathJaxConfig';
 
-import './MathJaxDisplay.css';
+import './MathJax.css';
 
 const MathJaxDisplay = ({toShow, demo, fRef, infiniteFrac, color}) => {
 
@@ -12,7 +12,7 @@ const MathJaxDisplay = ({toShow, demo, fRef, infiniteFrac, color}) => {
     
     var config = mathJaxConfig();
     const memoizedDisplay = React.useMemo(() =>  (
-            <Container className={`MathJaxDisplayContainer ${demo ? "Demo": ''} ${infiniteFrac ? "InfiniteFrac" : ''} ${color ? color + "MathJaxText" : '' }`}>      
+            <Container className={`MathJaxDisplay ${demo ? "Demo": ''} ${infiniteFrac ? "InfiniteFrac" : ''} ${color ? color + "MathJaxText" : '' }`}>      
                 <MathJaxContext config={config}>
                     <MathJax dynamic hideUntilTypeset={ "every" } >
                         {toShow}

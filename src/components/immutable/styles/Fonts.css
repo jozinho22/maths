@@ -5,6 +5,7 @@
     --dragons-font: 'dragons', Fallback, sans-serif;
     --gothic-font: 'gothic', Fallback, sans-serif;
     --indian-font: 'indian', Fallback, sans-serif;
+    --scholar-font: 'scholar', Fallback, sans-serif;
     --scribe-font: 'scribe', Fallback, sans-serif;
     --xfiles-font: 'x-files', Fallback, sans-serif;
     --xmas-font: 'x-mas', Fallback, sans-serif;
@@ -15,38 +16,39 @@
 }
 
 .Arabic {
-    font-family: var(--arabic-font);
+    font-family: var(--arabic-font) !important;
 }
+
 .BlackChancery {
-    font-family: var(--black-chancery-font);
+    font-family: var(--black-chancery-font) !important;
 }
 
 .Chinese {
-    font-family: var(--chinese-font);
+    font-family: var(--chinese-font) !important;
 }
 
 .Dragons {
-    font-family: var(--dragons-font);
+    font-family: var(--dragons-font) !important;
 }
 
 .Gothic {
-    font-family: var(--gothic-font);
+    font-family: var(--gothic-font) !important;
 }
 
 .Indian {
-    font-family: var(--indian-font);
+    font-family: var(--indian-font) !important;
 }
 
 .Scribe {
-    font-family: var(--scribe-font);
+    font-family: var(--scribe-font) !important;
 }
 
 .Xfiles {
-    font-family: var(--xfiles-font);
+    font-family: var(--xfiles-font) !important;
 }
 
 .Xmas {
-    font-family: var(--xmas-font);
+    font-family: var(--xmas-font) !important;
 }
 
 @font-face {
@@ -95,6 +97,15 @@
     size-adjust: 180%;
     src: local('Indian'), url('./fonts/indian.ttf') format('truetype');
 }
+
+@font-face {
+    font-family: 'scholar';
+    font-style: normal;
+    font-weight: normal;
+    size-adjust: 180%;
+    src: local('Scholar'), url('./fonts/scholar.otf') format('opentype');
+}
+
 
 @font-face {
     font-family: 'scribe';

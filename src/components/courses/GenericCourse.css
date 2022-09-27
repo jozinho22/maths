@@ -5,27 +5,7 @@
 }
 
 .CoursesContainer a {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-}
-
-.CoursesContainer p {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    text-align: justify;
-    white-space: pre-line;
-}
-
-.CoursesContainer p, a {
-    font-size: medium;
-}
-
-.CoursesContainer a {
     color : #0d6efd;
-}
-
-.ChapterTitle {
-    margin-top: 40px;
-    margin-bottom: 30px;
-    font-size: large;
 }
 
 .ZoomContainer {
@@ -100,20 +80,23 @@
 }
 
 .Focus {
-    border-width: 1px;
+    border-width: 2px;
     border-style: solid;
     border-color: var(--front-color);
     width: fit-content;
-      display:table;
-  margin:0 auto;
+    display: table;
+    margin: 0 auto;
     padding: 0px 5px 0px 5px;
     margin-bottom: 20px;
 }
 
 @media (max-width: 450px) {
+    .Focus {
+        border-width: 1.5px;
+    }
     .FocusHuge {
         position: relative;
-        right: 20px;
+        right: 30px;
     }
     .FocusHuge mjx-math {
         font-size: 50% !important;

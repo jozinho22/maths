@@ -16,7 +16,7 @@ const NavigationButtons = ( {chapters, count, setCount} ) => {
                 {
                     count > 1 ?  
                         <Button 
-                            className="DefaultButton NormalFontButton"
+                            className="DefaultButton"
                             onClick={() => {setCount(count - 1)}} >
                             { !mobile ? <GrFormPrevious className="NavigationIcon" /> : <></> }
                             {
@@ -36,7 +36,7 @@ const NavigationButtons = ( {chapters, count, setCount} ) => {
                 {
                     count < chapters.length ?
                         <Button 
-                            className="DefaultButton NormalFontButton"
+                            className="DefaultButton"
                             onClick={() => {setCount(count + 1)}} >
                             {
                                 mobile ? 

@@ -44,8 +44,7 @@ import Footer from './components/immutable/nav/Footer';
 
 function App() {
 
-    const [isLoadingLink, setIsLoadingLink] = React.useState(true);
-    const [isLoadingChapter, setIsLoadingChapter] = React.useState(false);
+    const [isLoading, setIsLoading] = React.useState(true);
 
     const [font, setFont] = React.useState(JSON.parse(localStorage.getItem('font')) ? JSON.parse(localStorage.getItem('font')) : "Dragons");
  
@@ -62,10 +61,8 @@ function App() {
     }
 
     const loadingContext = {
-        isLoadingLink: isLoadingLink,
-        updateIsLoadingLink: setIsLoadingLink,
-        isLoadingChapter: isLoadingChapter,
-        updateIsLoadingChapter: setIsLoadingChapter
+        isLoading: isLoading,
+        updateIsLoading: setIsLoading
     }
 
     const [width, height] = useWindowSize();
@@ -75,11 +72,13 @@ function App() {
         updateDimensions([width, height]);
     }, [width, height]); 
 
-    useIsLoading(isLoadingLink, setIsLoadingLink, isLoadingChapter, setIsLoadingChapter);
+    useIsLoading(isLoading, setIsLoading);
 
     var courseItems = coursesResourceBuilder();
     var pdfItems = pdfResourceBuilder();
     var gameItems = gamesResourceBuilder();
+
+    console.log( isLoading)
 
     return ( 
         <div className="App" >     
@@ -88,9 +87,9 @@ function App() {
             <SizeContext.Provider value={sizeContext} >
                 <div  className={`${theme} ${font} CopyBook`}>
                     <BrowserRouter>
-                        {isLoadingLink || isLoadingChapter ? <BlurryingSpinner /> : ''}
+                        {isLoading ? <BlurryingSpinner /> : ''}
                         <Header courseItems = {courseItems} pdfItems ={pdfItems} gameItems={gameItems} /> 
-                            <Container className = {` RelativeContainer ${playMode ? "PlayMode" : ''}  ${isLoadingLink || isLoadingChapter ? "Blur" : ''} `} >                           
+                            <Container className = {` RelativeContainer ${playMode ? "PlayMode" : ''}  ${isLoading ? "Blur" : ''} `} >                           
                                 <Routes>
                                     <Route exact path="/" element={<Home />} />
 
