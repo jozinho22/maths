@@ -11,7 +11,7 @@
     "bootstrap-switch-button-react": "^1.2.0",
     "buffer": "^6.0.3",
     "emailjs-com": "^3.2.0",
-    "express": "^4.18.1",
+    "prerender": "^5.20.0",
     "react": "^17.0.2",
     "react-bootstrap": "^2.1.1",
     "react-dom": "^17.0.2",
@@ -22,7 +22,6 @@
     "react-simple-captcha": "^8.2.6",
     "react-swipeable": "^6.2.0",
     "recharts": "^2.1.8",
-    "rendertron-middleware": "^0.1.5",
     "web-vitals": "^2.1.3"
   },
   "scripts": {
