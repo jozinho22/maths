@@ -1,8 +1,6 @@
 import React from 'react';
 import { Button } from 'react-bootstrap';
-import Home from '../home/Home';
 import { GiCheckMark , GiCrossMark} from 'react-icons/gi';
-import AppContext from '../context/AppContext';
 import { ContactContext } from './Contact';
 
 const SendResult = () => {

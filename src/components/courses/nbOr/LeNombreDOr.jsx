@@ -8,7 +8,7 @@ import './LeNombreDOr.css'
 const LeNombreDOr = () => {
 
     var chapters = getChapters();
-    var title = "Le nombre d\'or"
+    var title = "Le nombre d'or"
 
     return (
         <>

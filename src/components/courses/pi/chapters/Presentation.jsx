@@ -5,9 +5,8 @@ import MathJaxDisplay from '../../../mathjax-display/MathJaxDisplay';
 import MathJaxInline from '../../../mathjax-display/MathJaxInline';
 
 import circlePi from '../assets/circlePi.png';
-import circlePiCalculus from '../assets/circlePiCalculus.png';
 
-const Definition = () => {
+const Presentation = () => {
 
     var n = 0;
     var pCercle = "\\( P_{cercle} = 2\\pi R_{cercle} \\)"
@@ -52,4 +51,4 @@ const Definition = () => {
 
 }
 
-export default Definition;
+export default Presentation;

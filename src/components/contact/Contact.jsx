@@ -5,7 +5,6 @@ import ContactManager from './ContactManager';
 import { updateAlert, reInitAlert } from '../alert/alertFunctions';
 import emailjs from 'emailjs-com';
 import { loadCaptchaEnginge, LoadCanvasTemplate, validateCaptcha } from 'react-simple-captcha';
-import ContactItem from './ContactItem';
 import './Contact.css';
 
 export const ContactContext = React.createContext(null);
@@ -19,8 +18,6 @@ const Contact = () => {
     const [subject, setSubject] =  React.useState("");
     const [message, setMessage] =  React.useState("");
 
-    const alertInitialValue = {show: false, message: '', color: ''};
-
     const [firstNameAlert, setFirstNameAlert] = React.useState({show: false, message: ''});
     const [lastNameAlert, setLastNameAlert] = React.useState({show: false, message: ''});
     var maxName = 20;
@@ -31,7 +28,6 @@ const Contact = () => {
     const [messageAlert, setMessageAlert] = React.useState({show: false, message: ''});
     const [globalAlert, setGlobalAlert] = React.useState({show: false, message: '', color: ''});
 
-    const [nbLines, setNbLines] = React.useState(4);
     const maxLength = 500;
 
     const [captchaOk, setCaptchaOk] = React.useState(false);
@@ -110,8 +106,6 @@ const Contact = () => {
 
     // Hauteur de la zone de texte
     React.useEffect(() => {
-        var nbLinesToCheck = message.split(/\r\n|\r|\n/).length;
-        setNbLines(nbLinesToCheck);
         if(message.length > maxLength - 1) {
             setMessageAlert(updateAlert(true, 'Trop, trop, trop long !'));
         } else {
