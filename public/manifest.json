@@ -3,9 +3,14 @@
   "name": "Maths pour tous: un site dédié aux mathématiques",
   "icons": [
     {
-      "src": "favicon-brasil.png",
+      "src": "favicon-brasil-mini.png",
       "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
+      "type": "image/png"
+    },
+    {
+      "src": "favicon-brasil-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
     }
   ],
   "start_url": ".",
