@@ -4,7 +4,7 @@
     background-color: var(--front-color);
     border-radius: 10px;
     color: var(--back-color);
-    font-size: small;
+    font-size: medium;
     padding: 20px;
     display: inline-block;
     margin-top: 10px;

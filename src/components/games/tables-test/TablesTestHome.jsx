@@ -8,7 +8,7 @@ const TablesTestHome = () => {
 
     return (
         <>
-            <p className="Title">Jeu pour réviser ses tables de multiplication</p>
+            <p className="MainTitle">Jeu pour réviser ses tables de multiplication</p>
             <Container className="TablesTestHomeButtonContainer"  >
                 {
                     levels.map(level => (

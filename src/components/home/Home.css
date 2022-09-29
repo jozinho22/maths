@@ -17,6 +17,7 @@
     width: calc(var(--window-width) * 3 / 4);
     z-index: 1;
     box-shadow: 20px 20px 5px 5px var(--navbar-color);
+    margin-bottom: 100px;
 }
 
 .HomeContentContainer {

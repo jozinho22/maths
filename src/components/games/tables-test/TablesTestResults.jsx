@@ -11,7 +11,7 @@ const TablesTestResults = () => {
 
     return (
         <>
-            <p className="Title">Résultats</p>
+            <p className="MainTitle">Résultats</p>
             <Container className="ResultsContainer">
 
                 <Table className="TablesTestResults">
@@ -38,7 +38,7 @@ const TablesTestResults = () => {
 
             <p className="Title">Score : {user.score}/{questions.length}</p>
             <br></br>
-            <h3>Une autre ?</h3>
+            <p>Une autre ?</p>
             <Container>
                 <Row>
                 {
@@ -50,7 +50,6 @@ const TablesTestResults = () => {
                                 Rejouer au niveau : {level.title}
                             </Button>
                         </Col>
-                        
                     ))
                 }
                 </Row> 

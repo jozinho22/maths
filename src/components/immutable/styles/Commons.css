@@ -75,12 +75,6 @@ a { color: inherit; }
     }
 }
 
-.BasicText {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    text-justify: auto;
-    color: var(--simple-text-color);
-}
-
 /* Buttons */
 
 .DefaultButton {
@@ -101,6 +95,7 @@ a { color: inherit; }
         padding: 10px;
         margin-top: 25px;
         margin-bottom: 25px;
+        font-size: large;
     }
 }
 
@@ -141,25 +136,38 @@ a { color: inherit; }
     margin: 0px;
 }
 
-.TableOfContentsButtonContainer {
+.TableOfContents {
     text-align: left;
     font-size: large;
 }
 
 @media (min-width: 450px) {
-    .TableOfContentsButtonContainer {
+    .TableOfContents {
         margin-left: 80px;
     }
 }
 
 .TableOfContentsLink {
+    position: relative;
     font-size: large !important;
     margin-top: 20px;
-    font-family: var(--scholar-font);
 }
 
 .TableOfContentsLink a {
     font-family: var(--scholar-font);
+    font-size: large !important;
+    text-align: left;
+}
+
+@media (min-width: 450px) {
+    .TableOfContentsLink {
+        font-size: large !important;
+        margin-top: 20px;
+        font-family: var(--scholar-font);
+    }
+    .TableOfContentsLink a {
+        font-family: var(--scholar-font);
+    }
 }
 
 .TextBetweenNavigationsButtons {

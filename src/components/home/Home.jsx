@@ -11,7 +11,7 @@ const Home = () => {
             <Container className="HomeTitleContainer">
                 Maths pour tous
             </Container>
-            <Container className="HomeContentContainer">
+            <Container className="TableOfContentsLink">
                 <p><Link link={'/cours'} internalLink={true} >- Des cours de mathématiques sur de nombreux sujets</Link></p>
                 <p><Link link={'/bds-de-jpp'} internalLink={true} >- Des BDs de Jean-Petit</Link></p>   
                 <p><Link link={'/jeux'} internalLink={true} >- Des petits jeux pour s'améliorer</Link></p>            
