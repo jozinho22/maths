@@ -1,6 +1,6 @@
 import { Container, Row, Col } from 'react-bootstrap';
 
-const ChaptersTableOfContents = ( {title, chapters, setCount} ) => {
+const ChaptersTableOfContents = ( {chapters, setCount} ) => {
 
     return (
         <>
@@ -12,7 +12,7 @@ const ChaptersTableOfContents = ( {title, chapters, setCount} ) => {
                                 <div 
                                     className="Clickable TableOfContentsLink"
                                     onClick={() => setCount(chapter.id)}>
-                                    <a><u>chapitre {chapter.id}</u> - {chapter.name}</a>
+                                    <p><u>chapitre {chapter.id}</u> - {chapter.name}</p>
                                 </div>
                             </Col>
                         </Container>

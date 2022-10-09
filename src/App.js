@@ -47,7 +47,6 @@ function App() {
     const [isLoading, setIsLoading] = React.useState(true);
 
     const [font, setFont] = React.useState(JSON.parse(localStorage.getItem('font')) ? JSON.parse(localStorage.getItem('font')) : "Dragons");
- 
     const [playMode, setPlayMode] = React.useState(false);
     const [theme, setTheme] = React.useState(JSON.parse(localStorage.getItem('theme')) ? JSON.parse(localStorage.getItem('theme')) : "Brazil");
  

@@ -86,7 +86,7 @@ const PDFViewerPage = ({ pdfItem }) => {
 
         React.useEffect(() => {
             updatePlayMode(true);
-        }, []);
+        });
 
         React.useEffect(() => {
             window.scrollTo(0, 0);

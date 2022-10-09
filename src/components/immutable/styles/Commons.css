@@ -44,6 +44,7 @@ a { color: inherit; }
     padding-bottom: 20px;
     width: fit-content;
     font-size: large !important;
+    text-align: center;
 }
 
 .Title1, .Title2 {
@@ -153,21 +154,10 @@ a { color: inherit; }
     margin-top: 20px;
 }
 
-.TableOfContentsLink a {
+.TableOfContentsLink a, .TableOfContentsLink p {
     font-family: var(--scholar-font);
     font-size: large !important;
     text-align: left;
-}
-
-@media (min-width: 450px) {
-    .TableOfContentsLink {
-        font-size: large !important;
-        margin-top: 20px;
-        font-family: var(--scholar-font);
-    }
-    .TableOfContentsLink a {
-        font-family: var(--scholar-font);
-    }
 }
 
 .TextBetweenNavigationsButtons {

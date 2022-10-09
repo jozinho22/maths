@@ -5,6 +5,7 @@ import ContactManager from './ContactManager';
 import { updateAlert, reInitAlert } from '../alert/alertFunctions';
 import emailjs from 'emailjs-com';
 import { loadCaptchaEnginge, LoadCanvasTemplate, validateCaptcha } from 'react-simple-captcha';
+
 import './Contact.css';
 
 export const ContactContext = React.createContext(null);

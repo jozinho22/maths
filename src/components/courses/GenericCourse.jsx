@@ -41,7 +41,7 @@ const GenericCourse = ({title, chapters}) => {
             <Container className="CoursesContainer"> 
                 {
                     count === 0 ?
-                        <ChaptersTableOfContents title={title} chapters={chapters} setCount={setCount} />
+                        <ChaptersTableOfContents chapters={chapters} setCount={setCount} />
                             : <GenericChapter name={chapters[count - 1].name} component={chapters[count - 1].component} count={count} />
                 }                  
             </Container>
