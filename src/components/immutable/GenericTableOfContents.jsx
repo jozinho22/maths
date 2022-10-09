@@ -9,7 +9,7 @@ const GenericTableOfContents = ( {items, prefix, title} ) => {
             <Row>
                 {
                     items.map(item => (
-                        <Container  key={item.id} className="TableOfContents">
+                        <Container key={item.id} className="TableOfContents">
                             <Col xs={12} md={12}>
                                 <div key={item.id} className="TableOfContentsLink" >
                                     <Link link={`/${prefix}/${item.relativePath}`} internalLink={true} >

@@ -4,22 +4,17 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import './index.css';
 
-/* ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);  */
-
 const rootElement = document.getElementById("root");
 
-if (rootElement.hasChildNodes()) {
+/* if (rootElement.hasChildNodes()) {
   console.log('hydrate')
   ReactDOM.hydrate(<React.StrictMode><App /></React.StrictMode>, rootElement);
 } else {
   console.log('render')
   ReactDOM.render(<React.StrictMode><App /></React.StrictMode>, rootElement);
-}
+} */
+
+ReactDOM.render(<React.StrictMode><App /></React.StrictMode>, rootElement);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
