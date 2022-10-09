@@ -4,4 +4,10 @@
 # Disallow:
 
 User-agent: Googlebot
-Allow : /
+Disallow:
+
+User-agent: AdsBot-Google
+Disallow:
+
+User-agent: Googlebot-Image
+Disallow:
