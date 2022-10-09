@@ -77,7 +77,7 @@ function App() {
     var pdfItems = pdfResourceBuilder();
     var gameItems = gamesResourceBuilder();
 
-    console.log( isLoading)
+    console.log(isLoading)
 
     return ( 
         <div className="App" >     
@@ -89,9 +89,9 @@ function App() {
                         {isLoading ? <BlurryingSpinner /> : ''}
                         <Header courseItems = {courseItems} pdfItems ={pdfItems} gameItems={gameItems} /> 
                             <Container className = {` RelativeContainer ${playMode ? "PlayMode" : ''}  ${isLoading ? "Blur" : ''} `} >                           
+                                
                                 <Routes>
                                     <Route exact path="/" element={<Home />} />
-
                                     <Route path="/cours" element={<CoursesTableOfContents courseItems={courseItems} />} />
                                     {courseItems.map(courseItem => (
                                             <Route 
@@ -99,7 +99,6 @@ function App() {
                                                 path={`/cours/${courseItem.relativePath}`}
                                                 element={courseItem.component} />
                                     ))}
-
                                     <Route path="/bds-de-jpp" element={<PdfTableOfContents pdfItems={pdfItems} />} />
                                     {pdfItems.map(pdfItem => (
                                             <Route 
@@ -107,7 +106,6 @@ function App() {
                                                 path={`/bds-de-jpp/${pdfItem.relativePath}`}
                                                 element={<PDFViewerPage pdfItem={pdfItem} />} />
                                     ))}
-
                                     <Route path="/jeux" element={<GamesTableOfContents gameItems={gameItems} />} />
                                     {gameItems.map(gameItem => (
                                             <Route 
@@ -115,13 +113,11 @@ function App() {
                                                 path={`/jeux/${gameItem.relativePath}`}
                                                 element={gameItem.component} />
                                     ))}
-
                                     <Route path="/liens" element={<Links />} />
-
                                     <Route path="/contact" element={<Contact />} />
-
                                     <Route path="*" element={<Error />} />
-                                </Routes> 
+                                </Routes>
+
                             </Container> 
                         <Footer /> 
                     </BrowserRouter>
