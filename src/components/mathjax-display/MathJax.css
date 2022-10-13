@@ -30,13 +30,13 @@ table mjx-container {
 }
 
 .MathJaxDisplay mjx-math {
-    font-size: 35% !important;
+    font-size: 20px !important;
     margin: 0px;
 }
 
 @media (min-width: 450px) {
     .MathJaxDisplay mjx-math {
-        font-size: 50% !important;
+        font-size: 25px !important;
     }
 }
 
