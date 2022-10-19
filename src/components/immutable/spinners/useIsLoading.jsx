@@ -2,13 +2,13 @@ import React from "react";
 
 const useIsLoading = ( isLoading, setIsLoading ) => {
 
-    console.log('avant useEffect ' + document.readyState)
+    /* console.log('avant useEffect ' + document.readyState) */
 
     React.useEffect(() => {
         if(isLoading) {
-            console.log(document.readyState)
+            /* console.log(document.readyState) */
             var interval = setInterval(function () {
-                console.log(interval)
+                /* console.log(interval) */
                 if (document.readyState === 'complete') {
                     clearInterval(interval);       
                     setIsLoading(false); 
