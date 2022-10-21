@@ -24,7 +24,7 @@ const Header = ( {courseItems, pdfItems, gameItems} ) => {
                 <Navbar.Brand 
                     className="Clickable"
                     href="/" >
-                    MT
+                    Accueil
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav" >

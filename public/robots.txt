@@ -12,4 +12,4 @@ Disallow:
 User-agent: Googlebot-Image
 Disallow:
 
-Sitemap: http://ma-thematique.netlify.app/mt-sitemap.xml
+Sitemap: http://ma-thematique.netlify.app/sitemap.xml
