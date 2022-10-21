@@ -77,7 +77,7 @@ function App() {
     var pdfItems = pdfResourceBuilder();
     var gameItems = gamesResourceBuilder();
 
-    console.log(isLoading)
+    console.log(isLoading);
 
     return ( 
         <div className="App" >     
