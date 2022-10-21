@@ -9,7 +9,7 @@ const Home = () => {
     return (
         <>
             <Container className="HomeTitleContainer">
-                Maths pour tous
+                Ma Thématique
             </Container>
             <Container className="TableOfContentsLink">
                 <p><Link link={'/cours'} internalLink={true} >- Des cours de mathématiques sur de nombreux sujets</Link></p>
