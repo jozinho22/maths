@@ -115,7 +115,7 @@ function App() {
                                     ))}
                                     <Route path="/liens" element={<Links />} />
                                     <Route path="/contact" element={<Contact />} />
-                                    <Route path="*" element={<Error />} />
+                                    <Route path="*" element={<Error />} status={404} />
                                 </Routes>
 
                             </Container> 
