@@ -185,10 +185,6 @@ const Contact = () => {
                             <Form.Group className="FirstName" >
                                 <Form.Label>
                                     Prénom
-                                    <Alert 
-                                        show={firstNameAlert.show}
-                                        message={firstNameAlert.message}
-                                        component="Contact" />
                                 </Form.Label>
                                 <FormControl
                                     value={firstName} 
@@ -199,16 +195,16 @@ const Contact = () => {
                                             setFirstName(e.target.value.slice(0, e.target.value.length - 1))
                                         }
                                     }} />
+                                <Alert 
+                                    show={firstNameAlert.show}
+                                    message={firstNameAlert.message}
+                                    component="Contact" />
                             </Form.Group>
                         </Col>
                         <Col>
                             <Form.Group className="LastName" >
                                 <Form.Label>
                                     Nom
-                                    <Alert                                     
-                                        show={lastNameAlert.show}
-                                        message={lastNameAlert.message}
-                                        component="Contact" />
                                 </Form.Label>
                                 <FormControl
                                     value={lastName} 
@@ -219,6 +215,10 @@ const Contact = () => {
                                             setLastName(e.target.value.slice(0, e.target.value.length - 1))
                                         }
                                     }} />
+                                <Alert                                     
+                                    show={lastNameAlert.show}
+                                    message={lastNameAlert.message}
+                                    component="Contact" />
                             </Form.Group>
                         </Col>
                     </Row>
@@ -227,19 +227,19 @@ const Contact = () => {
                             <Form.Group className="Email">
                                 <Form.Label>
                                     @
-                                    <Alert 
-                                        show={emailAlert.show}
-                                        message={emailAlert.message}
-                                        component="Contact" />
                                 </Form.Label>
                                 <FormControl
                                     value={email} 
                                     onChange={e => setEmail(e.target.value)} />
+                                <Alert 
+                                    show={emailAlert.show}
+                                    message={emailAlert.message}
+                                    component="Contact" />
                             </Form.Group>
                         </Col>
                         <Col>
                             <Form.Group className="ContactType">
-                                <Form.Label>Vous êtes ?</Form.Label>
+                                <Form.Label>Vous</Form.Label>
                                 <Form.Control 
                                     value={contactType} 
                                     as="select" 
@@ -256,23 +256,19 @@ const Contact = () => {
                 <Form.Group className="Subject" >
                     <Form.Label>
                         Sujet
-                        <Alert 
-                            show={subjectAlert.show}
-                            message={subjectAlert.message}
-                            component="Contact" />
                     </Form.Label>
                     <FormControl 
                         value={subject} 
                         onChange={e => setSubject(e.target.value)}/>
+                    <Alert 
+                        show={subjectAlert.show}
+                        message={subjectAlert.message}
+                        component="Contact" />
                 </Form.Group>
 
                 <Form.Group className="Message" >
                     <Form.Label>
                         Message
-                        <Alert 
-                            show={messageAlert.show}
-                            message={messageAlert.message}
-                            component="Contact" />
                     </Form.Label>
                     <FormControl 
                         as="textarea" 
@@ -280,6 +276,10 @@ const Contact = () => {
                         maxLength={maxLength}
                         value={message}
                         onChange={e => setMessage(e.target.value)} />
+                    <Alert 
+                        show={messageAlert.show}
+                        message={messageAlert.message}
+                        component="Contact" />
                 </Form.Group>
             
                 {captchaOk === false ?

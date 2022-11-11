@@ -13,7 +13,7 @@ const Timer = ({maxTime, secondes, setSecondes, minutes, setMinutes, setEndTimer
             if (secondes === 0) {
                 if (minutes === 0) {
                     setEndTimer(true);
-                    setSecondes(maxTime);
+                    setSecondes(secondes);
                     clearInterval(myInterval);
                 } else {
                     setMinutes(minutes - 1);
@@ -30,9 +30,9 @@ const Timer = ({maxTime, secondes, setSecondes, minutes, setMinutes, setEndTimer
     return (
         <div className="Timer">
             { minutes === 0 && secondes === 0 ? 
-                    <p>Temps restant : </p> :  
+                    <p>Timer : </p> :  
                     <>
-                        <p> Temps restant : {minutes} : {secondes < 10 ?  
+                        <p> Timer : {minutes} : {secondes < 10 ?  
                                             `0${secondes}` : 
                                                 secondes}
                         </p> 

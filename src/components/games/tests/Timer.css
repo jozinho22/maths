@@ -1,19 +1,18 @@
 .Timer {
     position: relative;
     margin: 0 auto;
-    margin-top: 25px;
-    margin-bottom: 35px;
-    height: 60px;
+    margin-top: 10px;
 }
 
 @media (min-width : 450px) {
    .Timer {
-        margin-top: 10px;
+        margin-top: 25px;
         height: 30px;
     }
 }
 
 .Timer p {
     font: inherit;
+    font-size: medium;
     text-align: center !important;
 }

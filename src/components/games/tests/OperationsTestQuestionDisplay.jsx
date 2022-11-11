@@ -3,14 +3,14 @@ import { Container, Button, Row, Col } from 'react-bootstrap';
 import Timer from './Timer';
 import Alert from '../../alert/Alert';
 import { updateAlert, reInitAlert } from '../../alert/alertFunctions';
-import { TablesTestContext } from './TablesTest';
+import { OperationsTestContext } from './OperationsTest';
 /* import CiferKeyboard from './CiferKeyboard';
  */
-import './TablesTestQuestionDisplay.css';
+import './OperationsTestQuestionDisplay.css';
 
-const TablesTestQuestionDisplay = () => {
+const OperationsTestQuestionDisplay = () => {
 
-    const {count, questions, user, setUser, next} = React.useContext(TablesTestContext);
+    const {operationType, count, questions, user, setUser, next} = React.useContext(OperationsTestContext);
 
     // Timer
     const [endTimer, setEndTimer] = React.useState(false);
@@ -24,8 +24,6 @@ const TablesTestQuestionDisplay = () => {
             message : ''
         }
     );
-
-    var maxTime = 0;
 
     const doNext = () => {
 
@@ -65,12 +63,23 @@ const TablesTestQuestionDisplay = () => {
     React.useEffect(() => {
         setEndTimer(false);
 
-        maxTime = 30;
-        if(questions[count].a > 9) {
-            maxTime = maxTime + 40;
-        }
-        if(questions[count].b > 9) {
-            maxTime = maxTime + 40;
+        let maxTime = 0;
+        if(operationType === 'x') {
+            maxTime = 40;
+            if(questions[count].a > 9) {
+                maxTime = maxTime + 40;
+            }
+            if(questions[count].b > 9) {
+                maxTime = maxTime + 40;
+            }
+        } else if(operationType === '+') {
+            maxTime = 20;
+            if(questions[count].a > 9) {
+                maxTime = maxTime + 20;
+            }
+            if(questions[count].b > 9) {
+                maxTime = maxTime + 20;
+            }
         }
 
         setTimer(maxTime)
@@ -94,6 +103,8 @@ const TablesTestQuestionDisplay = () => {
             }
             var message = 'Je pense que ça va non ?';
             setAlert(updateAlert(true, message));
+        } else if(inputText === '0') {
+            setInputText(inputText.slice(0, inputText.length-1))
         } else {
             setAlert(reInitAlert());
         }
@@ -102,11 +113,7 @@ const TablesTestQuestionDisplay = () => {
     const handleKeyboardInput = (keyboardInput) => {
         var newInputText = "";
         if(!isNaN(keyboardInput)) {
-            if(inputText === '0' && keyboardInput === 0) {
-                setAlert(updateAlert(true, 'Très drôle...'));
-            } else {
-                newInputText = inputText + keyboardInput;
-            } 
+            newInputText = inputText + keyboardInput;
         } else if(keyboardInput === 'C') {
             newInputText = '';
         } else if(keyboardInput === '<') {
@@ -176,7 +183,6 @@ const TablesTestQuestionDisplay = () => {
     return (
         <>
             <Timer 
-                maxTime={maxTime}
                 secondes={secondes}
                 setSecondes={setSecondes} 
                 minutes={minutes}
@@ -191,10 +197,10 @@ const TablesTestQuestionDisplay = () => {
                         {inputText}
                     </Col>
                 </Row>  
-                <Alert 
-                    show={alert.show}
+                <Alert className="OperationsAlert"
+                    show={true}
                     message={alert.message}
-                    component="TablesTestQuestionDisplay" />
+                    component="OperationsTestQuestionDisplay" />
                 <CiferKeyboard /> 
             </Container>
 
@@ -209,4 +215,4 @@ const TablesTestQuestionDisplay = () => {
     );
 }
 
-export default TablesTestQuestionDisplay;
+export default OperationsTestQuestionDisplay;

@@ -18,11 +18,11 @@
     }
 }
 
-.TablesTestResults {
+.OperationsTestResults {
     color: var(--simple-text-color);
 }
 
-.TablesTestResults td p {
+.OperationsTestResults td p {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);

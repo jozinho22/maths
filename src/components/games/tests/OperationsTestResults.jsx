@@ -1,20 +1,20 @@
 import React from 'react';
 import { Container, Button, Table, Col, Row } from 'react-bootstrap';
-import TablesTestResultsList from './TablesTestResultsList';
-import { TablesTestContext } from './TablesTest';
+import OperationsTestResultsList from './OperationsTestResultsList';
+import { OperationsTestContext } from './OperationsTest';
 
-import './TablesTestResults.css';
+import './OperationsTestResults.css';
 
-const TablesTestResults = () => {
+const OperationsTestResults = () => {
 
-    const {questions, user, levels, reInit} = React.useContext(TablesTestContext);
+    const {questions, user, levels, reInit} = React.useContext(OperationsTestContext);
 
     return (
         <>
             <p className="MainTitle">Résultats</p>
             <Container className="ResultsContainer">
 
-                <Table className="TablesTestResults">
+                <Table className="OperationsTestResults">
                     <thead>
                         <tr>
                             {/* <th>Question</th>
@@ -25,7 +25,7 @@ const TablesTestResults = () => {
                     </thead>
                     <tbody>
                         {questions.map(question => (
-                            <TablesTestResultsList 
+                            <OperationsTestResultsList 
                                 key={question.id}
                                 question={question}
                                 answer={user.answers[question.id]}
@@ -58,4 +58,4 @@ const TablesTestResults = () => {
     );
 }
 
-export default TablesTestResults;
+export default OperationsTestResults;

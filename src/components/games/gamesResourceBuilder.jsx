@@ -1,4 +1,4 @@
-import TablesTest from "./tables-test/TablesTest";
+import TablesTest from "./tests/OperationsTest";
 
 function gamesResourceBuilder() {
 
@@ -7,13 +7,21 @@ function gamesResourceBuilder() {
 
     var tablesTest = {
       id: i++,
-      title: 'Jeu pour réviser ses tables de multiplication',
+      title: 'Tables de multiplication',
       relativePath: 'reviser-ses-tables',
       component: <TablesTest />
     }
 
+    var additionsTest = {
+      id: i++,
+      title: 'Additions',
+      relativePath: 'additionner',
+      component: <TablesTest />
+    }
+
     gameItems.push(
-        tablesTest
+        tablesTest,
+        additionsTest
       );
 
     return gameItems;

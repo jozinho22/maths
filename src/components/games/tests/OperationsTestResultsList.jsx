@@ -1,9 +1,9 @@
 import { GiCheckMark , GiCrossMark} from 'react-icons/gi';
 import { FaQuestion } from 'react-icons/fa';
 
-import './TablesTestResultsList.css';
+import './OperationsTestResultsList.css';
 
-const TablesTestResultsList = ({ question, answer }) => {
+const OperationsTestResultsList = ({ question, answer }) => {
 
     return (
             <tr>
@@ -30,4 +30,4 @@ const TablesTestResultsList = ({ question, answer }) => {
     );
 }
 
-export default TablesTestResultsList;
+export default OperationsTestResultsList;

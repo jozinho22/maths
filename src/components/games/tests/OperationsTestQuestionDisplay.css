@@ -8,7 +8,7 @@
     padding: 20px;
     display: inline-block;
     margin-top: 10px;
-    width: 80%;
+    width: 90%;
 }
 
 .QuestionContainer .col {
@@ -18,8 +18,9 @@
 
 @media (min-width : 450px) {
     .QuestionContainer {
-        width: 400px;
         font-size: medium;
+        width: 50%;
+        margin-top: 30px;
     }
     .CiferKeyboard {
         width: 150px;
@@ -38,13 +39,16 @@
     }
 }
 
+.OperationsAlert {
+    height: 30px;
+}
 .AnswerDisplay {
     width: 30%;
     text-align: center;
 }
 
 .CiferKeyboard {
-    margin-top: 50px;
+    margin-top: 10px;
     width: 200px;
 }
 

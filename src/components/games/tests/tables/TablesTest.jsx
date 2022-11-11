@@ -1,15 +1,15 @@
 import React from 'react';
 import { Container, Button } from 'react-bootstrap';
-import { TablesTestContext } from './TablesTest';
+import { OperationsTestContext } from '../OperationsTest';
 
-const TablesTestHome = () => {
+const TablesTest = () => {
 
-    const {levels, launchGame} = React.useContext(TablesTestContext);
+    const {levels, launchGame} = React.useContext(OperationsTestContext);
 
     return (
         <>
             <p className="MainTitle">Réviser ses tables de multiplication</p>
-            <Container className="TablesTestHomeButtonContainer"  >
+            <Container >
                 {
                     levels.map(level => (
                         <div key={level.id}>
@@ -26,4 +26,4 @@ const TablesTestHome = () => {
     );
 }
 
-export default TablesTestHome;
+export default TablesTest;

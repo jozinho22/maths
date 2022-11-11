@@ -1,20 +1,33 @@
 import React from 'react';
 
-import TablesTestQuestionDisplay from './TablesTestQuestionDisplay';
-import TablesTestManager from './TablesTestManager';
+import OperationsTestQuestionDisplay from './OperationsTestQuestionDisplay';
+import OperationsTestManager from './OperationsTestManager';
 
-export const TablesTestContext = React.createContext(null);
+export const OperationsTestContext = React.createContext(null);
 
-const TablesTest = () => {
+const OperationsTest = () => {
 
     const [gameStarted, setGameStarted] =  React.useState(false);
 
     const [count, setCount] = React.useState(0);
     const [user, setUser] = React.useState(initUser());
-    const [questions, setQuestions]= React.useState([]);
+    const [questions, setQuestions] = React.useState([]);
 
+    var operationType = initOperationType();
     var levels = createLevels();
-    var questionsByLevel = createQuestionsByLevel();
+    var questionsByLevel = createQuestionsByLevel(operationType);
+
+    function initOperationType() {
+        let path = window.location.href;
+        let relativePath = path.substring(path.lastIndexOf('/') + 1);
+
+        let operationType = '';
+        switch(relativePath) {
+            case 'reviser-ses-tables' : operationType = 'x'; break;
+            case 'additionner' : operationType = '+'; break;
+        }
+        return operationType;
+    }
 
     function initUser() {
         return {
@@ -49,7 +62,7 @@ const TablesTest = () => {
         return levelSlice;
     }
 
-    function createQuestionsByLevel() {
+    function createQuestionsByLevel(operationType) {
 
         var nbQuestions = 10;
         var randomQuestionsByLevelSlice = [];
@@ -58,15 +71,13 @@ const TablesTest = () => {
             for (var j = 0; j < nbQuestions; j++) {
                 var a = getRandomInt(levels[i].maxInt);
                 var b = getRandomInt(levels[i].maxInt);
-
-                var enounce = a + " x " + b + " = "; 
-    
+                var enounce = a + ' ' + operationType + ' ' + b + " = "; 
                 var question = {
                     id: j,
                     a: a,
                     b: b,
                     enounce: enounce,
-                    goodAnswer: a*b
+                    goodAnswer: operationType === 'x' ? a*b : operationType ==='+' ? a+b : <></>
                 }
                 randomQuestions.push(question);
             }
@@ -80,10 +91,6 @@ const TablesTest = () => {
         return Math.floor(Math.random() * max);
     }
 
-    function initQuestions() {
-        return createQuestionsByLevel();
-    }
-
     const next = () => {
         setCount (count + 1);
     }
@@ -91,7 +98,7 @@ const TablesTest = () => {
     const reInit = (levelId) => {
         setCount(0);
         setUser(initUser());
-        setQuestions(initQuestions());
+        setQuestions(createQuestionsByLevel(operationType));
         launchGame(levelId);
     }
 
@@ -101,8 +108,9 @@ const TablesTest = () => {
     }
 
     var context = {
+        operationType,
         levels,
-        count: count,
+        count,
         questions,
         user,
         setUser,
@@ -113,13 +121,13 @@ const TablesTest = () => {
     }
 
     return (
-            <TablesTestContext.Provider value={context}>
-                <TablesTestManager>
-                    <TablesTestQuestionDisplay /> 
-                </TablesTestManager>
-            </TablesTestContext.Provider>         
+            <OperationsTestContext.Provider value={context}>
+                <OperationsTestManager>
+                    <OperationsTestQuestionDisplay operationType={operationType} /> 
+                </OperationsTestManager>
+            </OperationsTestContext.Provider>         
     );
 
 }
 
-export default TablesTest;
+export default OperationsTest;

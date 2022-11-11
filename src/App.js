@@ -76,9 +76,7 @@ function App() {
     var courseItems = coursesResourceBuilder();
     var pdfItems = pdfResourceBuilder();
     var gameItems = gamesResourceBuilder();
-
-    console.log(isLoading);
-
+    
     return ( 
         <div className="App" >     
             <AppContext.Provider value={appContext} > 

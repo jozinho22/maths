@@ -5,7 +5,7 @@ const Alert = ({show, message, component, color}) => {
     return (
         <>
             {show === true ?
-                <div className={`${component}Alert ${color}Alert DefaultAlert`}>{message}</div> :
+                <div className={`DefaultAlert ${component}Alert ${color}Alert`}>{message}</div> :
                     <></>
             }
         </>
