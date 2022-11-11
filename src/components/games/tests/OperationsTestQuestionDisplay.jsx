@@ -103,7 +103,7 @@ const OperationsTestQuestionDisplay = () => {
             }
             var message = 'Je pense que ça va non ?';
             setAlert(updateAlert(true, message));
-        } else if(inputText === '0') {
+        } else if(inputText === '00') {
             setInputText(inputText.slice(0, inputText.length-1))
         } else {
             setAlert(reInitAlert());

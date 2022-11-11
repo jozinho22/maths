@@ -33,6 +33,7 @@
 @media (min-width : 768px) {
     .QuestionContainer {
         font-size: large;
+        width: 400px;
     }
     .Enounce, .AnswerDisplay {
         font-size: large;
