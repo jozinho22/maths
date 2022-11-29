@@ -82,7 +82,8 @@
 .Focus {
     border-width: 2px;
     border-style: solid;
-    border-color: var(--front-color);
+    /* border-color: var(--front-color); */
+    border-color: var(--navbar-color);
     width: fit-content;
     display: table;
     margin: 0 auto;

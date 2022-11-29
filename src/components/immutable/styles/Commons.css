@@ -29,6 +29,10 @@ p {
 
 a { color: inherit; } 
 
+a:hover {
+    color: inherit;
+}
+
 .MainTitle {
     font: inherit;
     text-decoration: underline;
