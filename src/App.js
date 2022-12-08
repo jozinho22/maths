@@ -112,6 +112,7 @@ function App() {
                                                 element={gameItem.component} />
                                     ))}
                                     <Route path="/liens" element={<Links />} />
+
                                     <Route path="/contact" element={<Contact />} />
                                     <Route path="*" element={<Error />} status={404} />
                                 </Routes>

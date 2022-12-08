@@ -11,6 +11,8 @@ const Header = ( {courseItems, pdfItems, gameItems} ) => {
 
     const [showToggle, setShowToggle] = React.useState(false);
 
+    var monCv = "https://josselin-douineau-developer.netlify.app";
+
     return (
             <Navbar 
                 className={`CustomNav CustomHeader ${playMode ? "Hidden" : ''}`}
@@ -58,6 +60,9 @@ const Header = ( {courseItems, pdfItems, gameItems} ) => {
                         </NavDropdown> 
                         <Nav.Link title="Liens" href="/liens" >
                             Liens
+                        </Nav.Link>
+                        <Nav.Link title="Mon CV" href={monCv} target="_blank" rel="norefeerer" >
+                            Mon CV
                         </Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
