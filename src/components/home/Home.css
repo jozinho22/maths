@@ -5,6 +5,10 @@
     bottom: 20%; */
 } 
 
+.HomeContainer {
+    margin-top: 80px;
+}
+
 .HomeTitleContainer {
     position: relative;
     top: 30px;
@@ -19,26 +23,10 @@
     margin-bottom: 100px;
 }
 
-.HomeContentContainer {
-    position: relative;
-    top: 80px;
-}
-
-.HomeContentContainer a {
-    font-family: var(--scholar-font);
-}
-
-.HomeContentContainer p {
-    text-align: left;
-}
-
 @media (min-width : 450px) {
     .HomeTitleContainer {
         width: calc(var(--window-width) * 1 / 2);
         top: 50px;
-    }
-    .HomeContentContainer {
-        top: 120px;
     }
 /*     .ExpressionsContainer .MathJaxDisplayContainer {
         padding: 25px;
