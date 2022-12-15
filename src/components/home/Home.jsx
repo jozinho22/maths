@@ -7,7 +7,7 @@ import './Home.css';
 const Home = () => {
   
     return (
-        <>
+        <Container>
             <Container className="HomeTitleContainer">
                 Ma Thématique
             </Container>
@@ -16,7 +16,7 @@ const Home = () => {
                 <p><Link link={'/bds-de-jpp'} internalLink={true} >- Des BDs de Jean-Petit</Link></p>   
                 <p><Link link={'/jeux'} internalLink={true} >- Des petits jeux pour s'améliorer</Link></p>            
             </Container>
-        </>
+        </Container>
     );
 }
 
