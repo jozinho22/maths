@@ -38,13 +38,15 @@ const GenericCourse = ({title, chapters}) => {
                         : ''
             }
             {/* <p className="Title">{title} {count > 0 ? "(" + count + ")" : ''}</p> */}
-            <Container className="CoursesContainer"> 
-                {
+             
+            {
                     count === 0 ?
                         <ChaptersTableOfContents chapters={chapters} setCount={setCount} />
-                            : <GenericChapter name={chapters[count - 1].name} component={chapters[count - 1].component} count={count} />
-                }                  
-            </Container>
+                            :   <Container className="CoursesContainer">
+                                    <GenericChapter name={chapters[count - 1].name} component={chapters[count - 1].component} count={count} />
+                                </Container>
+            }                  
+            
             {
                 count > 0 ?
                     <NavigationButtons 

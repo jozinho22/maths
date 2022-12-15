@@ -10,13 +10,11 @@ const GenericTableOfContents = ( {items, prefix, title} ) => {
                 {
                     items.map(item => (
                         <Container key={item.id} className="TableOfContents">
-                            <Col xs={12} md={12}>
-                                <div key={item.id} className="TableOfContentsLink" >
-                                    <Link link={`/${prefix}/${item.relativePath}`} internalLink={true} >
-                                        <div>{item.title}</div>
-                                    </Link>
-                                </div>
-                            </Col>
+                            <div key={item.id} className="TableOfContentsLink" >
+                                <Link link={`/${prefix}/${item.relativePath}`} internalLink={true} >
+                                    <div>{item.title}</div>
+                                </Link>
+                            </div>
                         </Container>
                     ))
                 }

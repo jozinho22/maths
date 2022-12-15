@@ -8,13 +8,11 @@ const ChaptersTableOfContents = ( {chapters, setCount} ) => {
                 {
                     chapters.map(chapter => (
                         <Container key={chapter.id} className="TableOfContents">
-                            <Col xs={12} md={12} >
-                                <div 
-                                    className="Clickable TableOfContentsLink"
-                                    onClick={() => setCount(chapter.id)}>
-                                    <p><u>chapitre {chapter.id}</u> - {chapter.name}</p>
-                                </div>
-                            </Col>
+                            <div 
+                                className="Clickable TableOfContentsLink"
+                                onClick={() => setCount(chapter.id)}>
+                                <p><u>chapitre {chapter.id}</u> - {chapter.name}</p>
+                            </div>
                         </Container>
                     ))
                 }
