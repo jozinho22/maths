@@ -7,11 +7,7 @@ import './Home.css';
 const Home = () => {
   
     return (
-        <Container className="HomeContainer">
-            {/* <Container className="HomeTitleContainer">
-                Ma Thématique
-            </Container> */} 
-            <Container>Ma Thématique</Container>
+        <Container>
             <Container className="TableOfContentsLink">
                 <p><Link link={'/cours'} internalLink={true} >- Des cours de mathématiques sur de nombreux sujets</Link></p>
                 <p><Link link={'/bds-de-jpp'} internalLink={true} >- Des BDs de Jean-Petit</Link></p>   
