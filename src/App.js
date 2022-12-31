@@ -42,13 +42,16 @@ import Error from './components/immutable/Error';
 
 import Footer from './components/immutable/nav/Footer';
 
+import { getFontIfStoredFontExists } from './components/immutable/styles/getFonts';
+import { getThemeIfStoredThemeExists } from './components/immutable/styles/getThemes';
+
 function App() {
 
     const [isLoading, setIsLoading] = React.useState(true);
 
-    const [font, setFont] = React.useState(JSON.parse(localStorage.getItem('font')) ? JSON.parse(localStorage.getItem('font')) : "Dragons");
+    const [font, setFont] = React.useState(getFontIfStoredFontExists(JSON.parse(sessionStorage.getItem('font'))) ? getFontIfStoredFontExists(JSON.parse(sessionStorage.getItem('font'))) : "Dragons");
     const [playMode, setPlayMode] = React.useState(false);
-    const [theme, setTheme] = React.useState(JSON.parse(localStorage.getItem('theme')) ? JSON.parse(localStorage.getItem('theme')) : "Brazil");
+    const [theme, setTheme] = React.useState(getThemeIfStoredThemeExists(JSON.parse(sessionStorage.getItem('theme'))) ? getThemeIfStoredThemeExists(JSON.parse(sessionStorage.getItem('theme'))) : "Brazil");
  
     const appContext = {
         font: font,

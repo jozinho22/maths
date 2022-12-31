@@ -11,9 +11,8 @@ table mjx-container {
 }
 
 .Demo mjx-container {
-    text-align: left !important;
-/*     margin-left: -25px !important;
- */}
+    margin-left: -20% !important;
+} 
 
 @media (min-width: 450px) {
     .Demo mjx-container {
@@ -29,14 +28,22 @@ table mjx-container {
     font-size: 70%;
 }
 
+.MathJaxDisplay.Demo mjx-math {
+    font-size: 15px !important;
+}
+
 .MathJaxDisplay mjx-math {
-    font-size: 20px !important;
+    font-size: 20px;
     margin: 0px;
+    text-align: left !important;
 }
 
 @media (min-width: 450px) {
     .MathJaxDisplay mjx-math {
-        font-size: 25px !important;
+        font-size: 20px !important;
+    }
+    .MathJaxDisplay.Demo mjx-math {
+        font-size: 20px !important;
     }
 }
 

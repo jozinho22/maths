@@ -11,4 +11,14 @@ const getThemes = () => {
                 ];
 }
 
-export default getThemes;
+const getThemeIfStoredThemeExists = (theme) => {
+
+    var themes = getThemes();
+    for(var t of themes) {
+        if(t === theme) {
+            return t;
+        }
+    }
+}
+
+export {getThemes, getThemeIfStoredThemeExists};

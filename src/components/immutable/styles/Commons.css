@@ -143,36 +143,36 @@ a:hover {
 }
 
 .TableOfContents {
-    text-align: left;
+    text-align: center;
     font-size: large;
 }
 
-@media (min-width: 450px) {
+/* @media (min-width: 450px) {
     .TableOfContents {
         margin-left: 80px;
     }
-}
+} */
 
 .TableOfContentsLink {
     position: relative;
     font-size: large !important;
-    margin-top: 20px;
+    margin-top: 40px;
 }
 
 .TableOfContentsLink a, .TableOfContentsLink p {
     font-family: var(--scholar-font);
-    font-size: large !important;
+    font-size: medium !important;
     text-align: left;
-}
-
-.TextBetweenNavigationsButtons {
-    font-size: small;
+    transform: translateX(5%);
 }
 
 @media (max-width: 450px) {
     .MiniButton {
         padding: 5px;
         font-size: small !important;
+    }
+    .TextBetweenNavigationsButtons {
+        font-size: x-small;
     }
 }
 

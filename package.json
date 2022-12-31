@@ -22,7 +22,8 @@
     "react-spa-prerender": "^1.0.14",
     "react-swipeable": "^6.2.0",
     "recharts": "^2.1.8",
-    "web-vitals": "^2.1.3"
+    "web-vitals": "^2.1.3",
+    "webpack": "^5.75.0"
   },
   "scripts": {
     "start": "BROWSER=none react-scripts start",
