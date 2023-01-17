@@ -1,9 +1,7 @@
 import React from 'react';
-import { Container, Button, Table, Col, Row } from 'react-bootstrap';
+import { Container, Button, Table } from 'react-bootstrap';
 import OperationsTestResultsList from './OperationsTestResultsList';
 import { OperationsTestContext } from './OperationsTest';
-
-import './OperationsTestResults.css';
 
 const OperationsTestResults = () => {
 
@@ -38,21 +36,21 @@ const OperationsTestResults = () => {
 
             <p className="Title">Score : {user.score}/{questions.length}</p>
             <br></br>
-            <p>Une autre ?</p>
-            <Container>
-                <Row>
+            <div>Une autre ?</div>
+            <br></br>
+            <Container className="OperationsTestResults">
                 {
                     levels.map(level => (
-                        <Col key={level.id} >
+                        <div key={level.id} >
                             <Button 
                                 className={`${level.bStyle}Button DefaultButton LargeButton`}
                                 onClick={() => reInit(level.id)} >
                                 Rejouer au niveau : {level.title}
                             </Button>
-                        </Col>
+                        </div>
                     ))
                 }
-                </Row> 
+               
             </Container>
         </>  
     );

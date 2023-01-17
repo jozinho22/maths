@@ -1,8 +1,6 @@
 import { GiCheckMark , GiCrossMark} from 'react-icons/gi';
 import { FaQuestion } from 'react-icons/fa';
 
-import './OperationsTestResultsList.css';
-
 const OperationsTestResultsList = ({ question, answer }) => {
 
     return (

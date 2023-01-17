@@ -61,9 +61,6 @@ const Header = ( {courseItems, pdfItems, gameItems} ) => {
                         <Nav.Link title="Liens" href="/liens" >
                             Liens
                         </Nav.Link>
-                        <Nav.Link title="Mon CV" href={monCv} target="_blank" rel="norefeerer" >
-                            Mon CV
-                        </Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>

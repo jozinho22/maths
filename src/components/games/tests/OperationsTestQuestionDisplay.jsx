@@ -6,7 +6,6 @@ import { updateAlert, reInitAlert } from '../../alert/alertFunctions';
 import { OperationsTestContext } from './OperationsTest';
 /* import CiferKeyboard from './CiferKeyboard';
  */
-import './OperationsTestQuestionDisplay.css';
 
 const OperationsTestQuestionDisplay = () => {
 

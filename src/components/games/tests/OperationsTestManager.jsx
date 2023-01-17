@@ -1,10 +1,8 @@
 import React from 'react';
 
-import AdditionsTest from './additions/AdditionsTest';
-import TablesTest from './tables/TablesTest';
-
 import OperationsTestResults from './OperationsTestResults';
 import { OperationsTestContext } from './OperationsTest';
+import OperationsTestHome from './OperationsTestHome';
 
 const OperationsTestManager = ({children}) => {
 
@@ -14,13 +12,12 @@ const OperationsTestManager = ({children}) => {
 
         !gameStarted ?
 
-            (operationType === '+' ? <AdditionsTest /> :
-                operationType === 'x' ? <TablesTest /> : <></>) 
+            <OperationsTestHome operationType={operationType}/>
 
-                    : count < questions.length ? 
-                            children : 
+                : count < questions.length ? 
+                        children : 
 
-                                <OperationsTestResults />           
+                            <OperationsTestResults />           
     );
 }
  

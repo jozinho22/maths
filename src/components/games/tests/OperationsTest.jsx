@@ -3,6 +3,8 @@ import React from 'react';
 import OperationsTestQuestionDisplay from './OperationsTestQuestionDisplay';
 import OperationsTestManager from './OperationsTestManager';
 
+import './OperationsTest.css';
+
 export const OperationsTestContext = React.createContext(null);
 
 const OperationsTest = () => {

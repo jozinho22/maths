@@ -1,6 +1,5 @@
 import React from 'react';
 
-import "./Timer.css";
 const Timer = ({maxTime, secondes, setSecondes, minutes, setMinutes, setEndTimer}) => {
 
     React.useEffect(()=>{

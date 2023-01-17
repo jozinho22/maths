@@ -1,0 +1,161 @@
+/* Home */
+
+.GamesContainer button {
+    width: 60%;
+}
+
+/* Question display */
+
+.QuestionContainer {
+    position: relative;
+    border-color: black;
+    background-color: var(--front-color);
+    border-radius: 10px;
+    color: var(--back-color);
+    font-size: medium;
+    padding: 20px;
+    display: inline-block;
+    margin-top: 10px;
+    width: 90%;
+}
+
+.QuestionContainer .col {
+    padding-left: 2px;
+    padding-right: 0px;
+}
+
+@media (min-width : 450px) {
+    .QuestionContainer {
+        font-size: medium;
+        width: 50%;
+        margin-top: 30px;
+    }
+    .CiferKeyboard {
+        width: 150px;
+    }
+    .Enounce, .AnswerDisplay {
+        font-size: medium;
+    }
+}
+
+@media (min-width : 768px) {
+    .QuestionContainer {
+        font-size: large;
+        width: 400px;
+    }
+    .Enounce, .AnswerDisplay {
+        font-size: large;
+    }
+}
+
+.OperationsAlert {
+    height: 30px;
+}
+.AnswerDisplay {
+    width: 30%;
+    text-align: center;
+}
+
+.CiferKeyboard {
+    margin-top: 10px;
+    width: 200px;
+}
+
+.KeyboardButton {
+    background-color: var(--back-color);
+    color: var(--mirror-button-text-color);
+    border-color: var(--grey-color);
+}
+
+.KeyboardButton:hover {
+    background-color: var(--back-color);
+}
+
+.KeyboardButton:focus {
+    background-color: var(--back-color);
+}
+
+/* Timer */
+.Timer {
+    position: relative;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+@media (min-width : 450px) {
+   .Timer {
+        margin-top: 25px;
+        height: 30px;
+    }
+}
+
+.Timer p {
+    font: inherit;
+    font-size: medium;
+    text-align: center !important;
+}
+/* Operations Test Results */
+
+.ResultsContainer {
+    font-size: small;
+    width : 100%;
+    margin-top: 30px;
+}
+
+@media (min-width: 450px) {
+    .ResultsContainer{
+        font-size: large;
+        width : 70%;
+    }
+}
+
+@media (min-width: 1268px) {
+    .ResultsContainer{
+        font-size: large;
+        width : 80%;
+    }
+}
+
+.OperationsTestResults {
+    color: var(--simple-text-color);
+}
+
+.OperationsTestResults td p {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.OperationsTestResults button {
+    width: 60%;
+}
+
+.AnswersResults {
+    text-align: center;
+    font-size: x-small;
+}
+
+.GoodAnswer {
+    color: var(--green-color);
+}
+
+@media (min-width: 450px) {
+    .AnswersResults, .GoodAnswer {
+        font-size: small;
+    }
+}
+
+@media (min-width: 450px) {
+    .AnswersResults, .GoodAnswer {
+        font-size: large;
+    }
+}
+
+Col {
+    border-width: 1px;
+}
+
+
+
+
+
