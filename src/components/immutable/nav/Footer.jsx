@@ -1,7 +1,7 @@
 import React from 'react';
 import { Navbar, Nav, NavDropdown} from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import { RiMailSendLine } from 'react-icons/ri';
+import { Envelope } from 'react-bootstrap-icons';
 import AppContext from '../../context/AppContext'
 
 import { getFonts } from '../styles/getFonts';
@@ -71,7 +71,7 @@ const Footer = () => {
                     Copyright &copy; Jozinho {(new Date().getFullYear())}
                 </p>
                 <Link to="/contact">
-                    <RiMailSendLine 
+                    <Envelope 
                         className="ContactIcon"
                         href="/contact" />
                 </Link>

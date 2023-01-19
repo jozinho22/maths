@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
-import { HiOutlineZoomIn } from 'react-icons/hi';
+import { ZoomIn } from 'react-bootstrap-icons';
 import SizeContext from '../context/SizeContext';
 
 const ImageZoom = ( {src, name, n} ) => {
@@ -15,7 +15,7 @@ const ImageZoom = ( {src, name, n} ) => {
                 <div 
                     className={`${zoom && mobile ? "OnZoom" : ''}`}
                     onClick={() => setZoom(!zoom)} >
-                        <HiOutlineZoomIn className={`ZoomIcon ${!mobile ? "Hidden": ''}`}/>
+                        <ZoomIn className={`ZoomIcon ${!mobile ? "Hidden": ''}`}/>
                         <figure>
                             <img className={`${mobile ? "Clickable" : ''}`}
                                 alt={name}

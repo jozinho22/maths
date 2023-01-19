@@ -1,5 +1,4 @@
-import { GiCheckMark , GiCrossMark} from 'react-icons/gi';
-import { FaQuestion } from 'react-icons/fa';
+import { Check2, X, Question} from 'react-bootstrap-icons';
 
 const OperationsTestResultsList = ({ question, answer }) => {
 
@@ -14,11 +13,11 @@ const OperationsTestResultsList = ({ question, answer }) => {
                 <td>
                 {
                     answer.input === '' ?
-                        <FaQuestion className="QuestionIcon Icon" /> 
+                        <Question className="QuestionIcon Icon" /> 
                             : 
                                 answer.isTrue ? 
-                                        <GiCheckMark className="CheckIcon Icon" /> 
-                                            :  <GiCrossMark className="WrongIcon Icon" />
+                                        <Check2 className="CheckIcon Icon" /> 
+                                            :  <X className="WrongIcon Icon" />
                 } 
                 </td>
                 <td className="AnswersResults GoodAnswer">

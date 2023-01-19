@@ -2,8 +2,7 @@ import React from 'react';
 import {Row, Col, Button} from 'react-bootstrap';
 import SizeContext from '../context/SizeContext';
 
-import {GrFormPrevious} from 'react-icons/gr';
-import {GrFormNext} from 'react-icons/gr';
+import {ChevronLeft, ChevronRight} from 'react-bootstrap-icons'
 
 const NavigationButtons = ( {chapters, count, setCount} ) => {
 
@@ -18,7 +17,7 @@ const NavigationButtons = ( {chapters, count, setCount} ) => {
                         <Button 
                             className="DefaultButton"
                             onClick={() => {setCount(count - 1)}} >
-                            { !mobile ? <GrFormPrevious className="NavigationIcon" /> : <></> }
+                            { !mobile ? <ChevronLeft className="NavigationIcon" /> : <></> }
                             {
                                     mobile ? 
                                         'Précédent' 
@@ -43,7 +42,7 @@ const NavigationButtons = ( {chapters, count, setCount} ) => {
                                     'Suivant' :
                                         chapters[count].name
                             }
-                            { !mobile ? <GrFormNext className="NavigationIcon" /> : <></> }
+                            { !mobile ? <ChevronRight className="NavigationIcon" /> : <></> }
                         </Button>
                             : <></> 
                 }
