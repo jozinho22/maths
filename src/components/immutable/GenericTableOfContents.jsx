@@ -20,7 +20,7 @@ const GenericTableOfContents = ( {items, prefix, title} ) => {
                                             { 
                                                 title: item.title,
                                                 metaContent: item.metaContent,
-                                                canonicalLink: item.relativePath
+                                                relativePath: item.relativePath
                                             }
                                         } >
                                 {item.title}

@@ -22,7 +22,7 @@ const GenericCourse = ({title, chapters, state}) => {
 
     return (
         <>
-            <CustomHelmet title={state.title} metaContent={state.metaContent} canonicalPath={state.canonicalPath}/>
+            <CustomHelmet title={state.title} metaContent={state.metaContent} relativePath={state.relativePath}/>
             {
                 count > 0 ? 
                     <div className="FlexButton">
