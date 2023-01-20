@@ -49,9 +49,9 @@ function App() {
 
     const [isLoading, setIsLoading] = React.useState(true);
 
-    const [font, setFont] = React.useState(getFontIfStoredFontExists(JSON.parse(sessionStorage.getItem('font'))) ? JSON.parse(sessionStorage.getItem('font')) : "Dragons");
+    const [font, setFont] = React.useState(getFontIfStoredFontExists(JSON.parse(sessionStorage.getItem('ma-thematique-font'))) ? JSON.parse(sessionStorage.getItem('ma-thematique-font')) : "Dragons");
     const [playMode, setPlayMode] = React.useState(false);
-    const [theme, setTheme] = React.useState(getThemeIfStoredThemeExists(JSON.parse(sessionStorage.getItem('theme'))) ? getThemeIfStoredThemeExists(JSON.parse(sessionStorage.getItem('theme'))) : "Brazil");
+    const [theme, setTheme] = React.useState(getThemeIfStoredThemeExists(JSON.parse(sessionStorage.getItem('ma-thematique-theme'))) ? getThemeIfStoredThemeExists(JSON.parse(sessionStorage.getItem('ma-thematique-theme'))) : "Brazil");
  
     const appContext = {
         font: font,

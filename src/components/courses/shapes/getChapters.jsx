@@ -30,6 +30,11 @@ const getChapters = () => {
             id: k++,
             component: <LeTriangle />,
             name: 'Le triangle'
+        }/*,
+        {
+            id: k++,
+            component: <LeCylindre />,
+            name: 'Le cylindre'
         },
         {
             id: k++,
@@ -40,7 +45,7 @@ const getChapters = () => {
             id: k++,
             component: <LaPyramide />,
             name: 'La pyramide'
-        } 
+        } */
     ];
 }
 

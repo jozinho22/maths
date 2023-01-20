@@ -16,7 +16,8 @@ const getThemeIfStoredThemeExists = (theme) => {
     var themes = getThemes();
     for(var t of themes) {
         if(t.name === theme) {
-            return t;
+            console.log(t)
+            return t.name;
         }
     }
 }

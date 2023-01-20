@@ -33,7 +33,7 @@ const Footer = () => {
                             id="basic-nav-nav"
                             onSelect={(event) => {
                                 updateFont(event);
-                                sessionStorage.setItem('font', JSON.stringify(event));
+                                sessionStorage.setItem('ma-thematique-font', JSON.stringify(event));
                             }} >   
                             {
                                 fonts.map(font => (
@@ -51,7 +51,7 @@ const Footer = () => {
                             id="theme-dropdown-menu"
                             onSelect={(event) => {
                                 updateTheme(event);
-                                sessionStorage.setItem('theme', JSON.stringify(event));
+                                sessionStorage.setItem('ma-thematique-theme', JSON.stringify(event));
                             }} >   
                             {
                                 themes.map(theme => (
