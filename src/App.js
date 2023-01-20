@@ -95,27 +95,26 @@ function App() {
                                     <Route exact path="/" element={<Home />} />
                                     <Route path="/cours" element={<CoursesTableOfContents courseItems={courseItems} />} />
                                     {courseItems.map(courseItem => (
-                                            <Route 
-                                                key={courseItem.id}
-                                                path={`/cours/${courseItem.relativePath}`}
-                                                element={courseItem.component} />
+                                        <Route 
+                                            key={courseItem.id}
+                                            path={`/cours/${courseItem.relativePath}`}
+                                            element={courseItem.component} />
                                     ))}
                                     <Route path="/bds-de-jpp" element={<PdfTableOfContents pdfItems={pdfItems} />} />
                                     {pdfItems.map(pdfItem => (
-                                            <Route 
-                                                key={pdfItem.id}
-                                                path={`/bds-de-jpp/${pdfItem.relativePath}`}
-                                                element={<PDFViewerPage pdfItem={pdfItem} />} />
+                                        <Route 
+                                            key={pdfItem.id}
+                                            path={`/bds-de-jpp/${pdfItem.relativePath}`}
+                                            element={<PDFViewerPage pdfItem={pdfItem} />} />
                                     ))}
                                     <Route path="/jeux" element={<GamesTableOfContents gameItems={gameItems} />} />
                                     {gameItems.map(gameItem => (
-                                            <Route 
-                                                key={gameItem.id}
-                                                path={`/jeux/${gameItem.relativePath}`}
-                                                element={gameItem.component} />
+                                        <Route 
+                                            key={gameItem.id}
+                                            path={`/jeux/${gameItem.relativePath}`}
+                                            element={gameItem.component} />
                                     ))}
                                     <Route path="/liens" element={<Links />} />
-
                                     <Route path="/contact" element={<Contact />} />
                                     <Route path="*" element={<Error />} status={404} />
                                 </Routes>

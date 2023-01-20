@@ -15,6 +15,7 @@ function coursesResourceBuilder() {
     var crossProduct = {
       id: i++,
       title: 'Produit en croix',
+      metaContent: "Cours sur le produit en croix : un cours très important pour la vie de tous les jours",
       relativePath: 'le-produit-en-croix',
       component: <LeProduitEnCroix />
     }
