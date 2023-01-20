@@ -23,9 +23,11 @@ const GenericCourse = ({title, chapters}) => {
         <>
             {
                 count > 0 ? 
-                    <Button className="DefaultButton GreenButton" onClick={() => setCount(0)}>
-                        Retour au sommaire
-                    </Button> 
+                    <div className="FlexButton">
+                        <Button className="DefaultButton GreenButton" onClick={() => setCount(0)}>
+                            Retour au sommaire
+                        </Button> 
+                    </div>
                         : <></>
             }
             <p className="MainTitle">{title}</p>

@@ -96,6 +96,7 @@ a:hover {
 /*     padding: 10px;
  */    font-size: medium;
     font-family: 'Times New Roman', Times, serif !important;
+    width: fit-content;
 }
 
 @media (min-width: 450px) {
@@ -142,6 +143,11 @@ a:hover {
 
 .DefaultButton mjx-container {
     margin: 0px;
+}
+
+.FlexButton {
+    display: flex;
+    justify-content: center;
 }
 
 .TableOfContents {

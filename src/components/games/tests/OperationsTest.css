@@ -1,9 +1,13 @@
 /* Home */
-
 .GamesContainer button {
-    width: 60%;
+    width: 30%;
 }
 
+@media (width < 450px) {
+   .GamesContainer button {
+        width: 70%;
+    } 
+}
 /* Question display */
 
 .QuestionContainer {
