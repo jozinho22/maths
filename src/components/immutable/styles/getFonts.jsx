@@ -15,10 +15,9 @@ const getFonts = () => {
 }
 
 const getFontIfStoredFontExists = (font) => {
-
     var fonts = getFonts();
     for(var f of fonts) {
-        if(f === font) {
+        if(f.name === font) {
             return f.name;
         }
     }
