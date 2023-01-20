@@ -1,15 +1,13 @@
 # https://www.robotstxt.org/robotstxt.html
 
-# User-agent: *
+User-agent: *
+Disallow:
+
+# User-agent: Googlebot
 # Disallow:
 
-User-agent: Googlebot
-Disallow:
+# User-agent: AdsBot-Google
+# Disallow:
 
-User-agent: AdsBot-Google
-Disallow:
-
-User-agent: Googlebot-Image
-Disallow:
-
-Sitemap: https://ma-thematique.netlify.app/my-sitemap.xml
+# User-agent: Googlebot-Image
+# Disallow:
