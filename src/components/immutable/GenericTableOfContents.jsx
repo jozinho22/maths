@@ -1,5 +1,6 @@
 import { Container } from 'react-bootstrap';
-import Link from '../immutable/nav/Link';
+/* import Link from '../immutable/nav/Link'; */
+import { NavLink } from 'react-router-dom';
 
 const GenericTableOfContents = ( {items, prefix, title} ) => {
 
@@ -10,9 +11,20 @@ const GenericTableOfContents = ( {items, prefix, title} ) => {
                 {
                     items.map(item => (     
                         <div key={item.id} className="TableOfContentsLink" >
-                            <Link link={`/${prefix}/${item.relativePath}`} internalLink={true} >
+                            {/* <Link link={`/${prefix}/${item.relativePath}`} internalLink={true} >
                                 <div>{item.title}</div>
-                            </Link>
+                            </Link> */}
+                            <NavLink  
+                                    to={`/${prefix}/${item.relativePath}`} 
+                                    state={
+                                            { 
+                                                title: item.title,
+                                                metaContent: item.metaContent,
+                                                canonicalLink: item.relativePath
+                                            }
+                                        } >
+                                {item.title}
+                            </NavLink>
                         </div>    
                     ))
                 }

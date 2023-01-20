@@ -7,13 +7,13 @@ const ChaptersTableOfContents = ( {chapters, setCount} ) => {
             <Container className="TableOfContents">
             {
                 chapters.map(chapter => (
-                    <Container key={chapter.id} className="TableOfContentsLink">
+                    <div key={chapter.id} className="TableOfContentsLink">
                         <div 
                             className="Clickable"
                             onClick={() => setCount(chapter.id)}>
                             <p><u>chapitre {chapter.id}</u> - {chapter.name}</p>
-                        </div>
-                    </Container>
+                        </div> 
+                    </div>
                 ))
             }
             </Container>

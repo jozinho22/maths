@@ -6,8 +6,9 @@ import LoadingContext from '../context/LoadingContext';
 
 import './GenericCourse.css';
 import GenericChapter from './GenericChapter';
+import CustomHelmet from '../immutable/seo/CustomHelmet';
 
-const GenericCourse = ({title, chapters}) => {
+const GenericCourse = ({title, chapters, state}) => {
 
     /* 0 -> Sommaire, n > 0 -> chapitres */
     const [count, setCount] = React.useState(0);
@@ -21,6 +22,7 @@ const GenericCourse = ({title, chapters}) => {
 
     return (
         <>
+            <CustomHelmet title={state.title} metaContent={state.metaContent} canonicalPath={state.canonicalPath}/>
             {
                 count > 0 ? 
                     <div className="FlexButton">

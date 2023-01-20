@@ -4,9 +4,7 @@ const Link = ( {link, internalLink, children} ) => {
         <a 
             className="Link" 
             href={link} 
-            target={internalLink ? "_self" : "_blank"} 
-            rel="noopener">{children}
-        </a>
+            target={internalLink ? "_self" : "_blank"} rel="noopener">{children}</a>
     );
 }
 

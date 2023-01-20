@@ -1,4 +1,6 @@
 import React from 'react';
+import { useLocation } from 'react-router-dom';
+
 import GenericCourse from '../GenericCourse';
 import getChapters from './getChapters';
 import './LesFormes.css';
@@ -6,12 +8,10 @@ import './LesFormes.css';
 const LesFormes = () => {
 
     var chapters = getChapters();
-    var title = "Les formes"
 
     return (
         <>
-            <GenericCourse title={title} chapters={chapters} />
-            {/* <UnsplashCopyRight item="Textures" /> */}
+            <GenericCourse title={useLocation().state.title} chapters={chapters} state={useLocation().state}/>
         </>
     );
 

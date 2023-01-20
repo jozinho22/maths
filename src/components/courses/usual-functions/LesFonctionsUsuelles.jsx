@@ -1,12 +1,19 @@
 import React from "react";
+import { useLocation } from 'react-router-dom';
+
 import { Container, Button } from "react-bootstrap";
 import { LineChart, XAxis, YAxis, ReferenceLine, ResponsiveContainer, Tooltip, Line } from 'recharts';
 import LoadingContext from "../../context/LoadingContext";
 import MathJaxDisplay from '../../mathjax-display/MathJaxDisplay';
 import buildUsualFunctions from "./buildUsualFunctions";
+
+import CustomHelmet from "../../immutable/seo/CustomHelmet";
+
 import './LesFonctionsUsuelles.css';
 
 const LesFonctionsUsuelles = () => {
+
+    var state = useLocation().state;
 
     var usualFunctions = buildUsualFunctions();
 
@@ -87,6 +94,7 @@ const LesFonctionsUsuelles = () => {
 
     return(
         <>
+            <CustomHelmet title={state.title} metaContent={state.metaContent} canonicalPath={state.canonicalPath}/>
             <Container className="UsualFunctionsButtonsContainer Left">
                 {
                     ufLeft.map(f => (
