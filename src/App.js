@@ -92,7 +92,7 @@ function App() {
                             <Container className = {` RelativeContainer ${playMode ? "PlayMode" : ''}  ${isLoading ? "Blur" : ''} `} >                           
                                 
                                 <Routes>
-                                    <Route exact path="/" element={<CoursesTableOfContents courseItems={courseItems} />} />
+                                    <Route exact path="/" element={<Home />} />
                                     <Route path="/cours" element={<CoursesTableOfContents courseItems={courseItems} />} />
                                     {courseItems.map(courseItem => (
                                             <Route 
