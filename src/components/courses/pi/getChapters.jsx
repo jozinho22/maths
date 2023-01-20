@@ -2,7 +2,7 @@ import Presentation from './chapters/Presentation';
 import CalculDePi from './chapters/CalculDePi';
 import AutresFormulesGenerales from './chapters/AutresFormulesGenerales';
 
-const getChapters = () => {
+const getPiChapters = () => {
 
     var k = 1;
 
@@ -25,4 +25,4 @@ const getChapters = () => {
     ];
 }
 
-export default getChapters;
+export default getPiChapters;

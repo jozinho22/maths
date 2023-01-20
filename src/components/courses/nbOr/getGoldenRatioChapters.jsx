@@ -4,7 +4,7 @@ import CaracteristiquesEnSensContraire from './chapters/CaracteristiquesEnSensCo
 import FormulesDePhiPuissN from './chapters/FormulesDePhiPuissN';
 import FormulesGenerales from './chapters/FormulesGenerales';
 
-const getChapters = () => {
+const getGoldenRatioChapters = () => {
 
     var k = 1;
 
@@ -37,4 +37,4 @@ const getChapters = () => {
     ];
 }
 
-export default getChapters;
+export default getGoldenRatioChapters;

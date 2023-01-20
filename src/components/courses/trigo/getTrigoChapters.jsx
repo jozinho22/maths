@@ -8,7 +8,7 @@ import LaTangente from './chapters/LaTangente';
 import ValeursDeTan from './chapters/ValeursDeTan';
 import DeriveesDeSinEtCos from './chapters/DeriveesDeSinEtCos';
 
-const getChapters = () => {
+const getTrigoChapters = () => {
 
     var k = 1;
 
@@ -61,4 +61,4 @@ const getChapters = () => {
     ];
 }
 
-export default getChapters;
+export default getTrigoChapters;

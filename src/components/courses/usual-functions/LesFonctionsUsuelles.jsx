@@ -13,8 +13,9 @@ import './LesFonctionsUsuelles.css';
 
 const LesFonctionsUsuelles = () => {
 
-    var state = useLocation().state;
-
+    var title = 'Les fonctions usuelles';
+    var metaContent = "Les fonctions usuelles : les différentes fonctions usuelles (carré, cube, sinus, cosinus, exp...etc) et leur réprésention sur un axe ainsi que leur caractéritiques"
+    var relativePath = useLocation();
     var usualFunctions = buildUsualFunctions();
 
     var ufLeft = usualFunctions.slice(0, usualFunctions.length /2);
@@ -94,7 +95,7 @@ const LesFonctionsUsuelles = () => {
 
     return(
         <>
-            <CustomHelmet title={state.title} metaContent={state.metaContent} canonicalPath={state.canonicalPath}/>
+            <CustomHelmet title={title} metaContent={metaContent} canonicalPath={relativePath}/>
             <Container className="UsualFunctionsButtonsContainer Left">
                 {
                     ufLeft.map(f => (

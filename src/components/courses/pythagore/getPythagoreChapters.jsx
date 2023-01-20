@@ -4,7 +4,7 @@ import DemonstrationDeLaReciproque from './chapters/DemonstrationDeLaReciproque'
 import TheoremeDAlKashi from './chapters/TheoremeDAlKashi';
 import Applications from './chapters/Applications';
 
-const getChapters = () => {
+const getPythagoreChapters = () => {
 
     var k = 1;
 
@@ -37,4 +37,4 @@ const getChapters = () => {
     ];
 }
 
-export default getChapters;
+export default getPythagoreChapters;

@@ -8,7 +8,7 @@ import AutresFormulesGenerales from './chapters/AutresFormulesGenerales';
 import LienEntrePuissancesEtRacines from './chapters/LienEntrePuissancesEtRacines';
 import EcritureScientifique from './chapters/EcritureScientifique';
 
-const getChapters = () => {
+const getPowersChapters = () => {
 
     var k = 1;
 
@@ -61,4 +61,4 @@ const getChapters = () => {
     ];
 }
 
-export default getChapters;
+export default getPowersChapters;

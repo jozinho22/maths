@@ -44,6 +44,8 @@ import Footer from './components/immutable/nav/Footer';
 
 import { getFontIfStoredFontExists } from './components/immutable/styles/getFonts';
 import { getThemeIfStoredThemeExists } from './components/immutable/styles/getThemes';
+import GenericCourse from './components/courses/GenericCourse';
+import LesFonctionsUsuelles from './components/courses/usual-functions/LesFonctionsUsuelles';
 
 function App() {
 
@@ -98,8 +100,9 @@ function App() {
                                         <Route 
                                             key={courseItem.id}
                                             path={`/cours/${courseItem.relativePath}`}
-                                            element={courseItem.component} />
+                                            element={<GenericCourse courseItem={courseItem} />} />
                                     ))}
+                                    <Route path="/les-fonctions-usuelles" element={<LesFonctionsUsuelles />} />
                                     <Route path="/bds-de-jpp" element={<PdfTableOfContents pdfItems={pdfItems} />} />
                                     {pdfItems.map(pdfItem => (
                                         <Route 

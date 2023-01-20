@@ -8,8 +8,9 @@ import './GenericCourse.css';
 import GenericChapter from './GenericChapter';
 import CustomHelmet from '../immutable/seo/CustomHelmet';
 
-const GenericCourse = ({title, chapters, state}) => {
+const GenericCourse = ({courseItem}) => {
 
+    console.log(courseItem)
     /* 0 -> Sommaire, n > 0 -> chapitres */
     const [count, setCount] = React.useState(0);
 
@@ -22,7 +23,7 @@ const GenericCourse = ({title, chapters, state}) => {
 
     return (
         <>
-            <CustomHelmet title={state.title} metaContent={state.metaContent} relativePath={state.relativePath}/>
+            <CustomHelmet title={courseItem.title} metaContent={courseItem.metaContent} relativePath={courseItem.relativePath}/>
             {
                 count > 0 ? 
                     <div className="FlexButton">
@@ -32,11 +33,11 @@ const GenericCourse = ({title, chapters, state}) => {
                     </div>
                         : <></>
             }
-            <p className="MainTitle">{title}</p>
+            <p className="MainTitle">{courseItem.title}</p>
             {
                 count > 0 ?
                     <NavigationButtons 
-                        chapters={chapters}
+                        chapters={courseItem.chapters}
                         count={count}
                         setCount={setCount} />
                         : ''
@@ -45,16 +46,16 @@ const GenericCourse = ({title, chapters, state}) => {
              
             {
                 count === 0 ?
-                    <ChaptersTableOfContents chapters={chapters} setCount={setCount} />
+                    <ChaptersTableOfContents chapters={courseItem.chapters} setCount={setCount} />
                         :   <Container className="CoursesContainer">
-                                <GenericChapter name={chapters[count - 1].name} component={chapters[count - 1].component} count={count} />
+                                <GenericChapter name={courseItem.chapters[count - 1].name} component={courseItem.chapters[count - 1].component} count={count} />
                             </Container>
             }                  
             
             {
                 count > 0 ?
                     <NavigationButtons 
-                        chapters={chapters}
+                        chapters={courseItem.chapters}
                         count={count}
                         setCount={setCount} />
                         : ''

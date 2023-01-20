@@ -2,7 +2,7 @@ import Presentation from './chapters/Presentation';
 import Demonstration from './chapters/Demonstration';
 import Exercices from './chapters/Exercices';
 
-const getChapters = () => {
+const getCrossProductsChapters = () => {
 
     var k = 1;
 
@@ -25,4 +25,4 @@ const getChapters = () => {
     ];
 }
 
-export default getChapters;
+export default getCrossProductsChapters;

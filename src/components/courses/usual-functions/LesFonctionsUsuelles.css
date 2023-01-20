@@ -28,6 +28,7 @@
     text-decoration: underline;
     color: var(--simple-text-color);
     padding-top: 10px;
+    text-align: center;
 }
 
 .Graph {

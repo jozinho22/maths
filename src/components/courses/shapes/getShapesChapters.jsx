@@ -6,7 +6,7 @@ import LeTriangle from './chapters/LeTriangle';
 import LeCone from './chapters/LeCone';
 import LaPyramide from './chapters/LaPyramide';
 
-const getChapters = () => {
+const getShapesChapters = () => {
 
     var k = 1;
 
@@ -49,4 +49,4 @@ const getChapters = () => {
     ];
 }
 
-export default getChapters;
+export default getShapesChapters;
