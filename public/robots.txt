@@ -2,6 +2,7 @@
 
 User-agent: *
 Disallow:
+Sitemap: https://ma-thematique.netlify.app/sitemap.txt
 
 # User-agent: Googlebot
 # Disallow:
