@@ -155,7 +155,7 @@ a:hover {
 .TableOfContents {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: stretch;
     gap: 30px;
 }
 

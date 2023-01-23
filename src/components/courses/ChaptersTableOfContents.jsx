@@ -16,7 +16,7 @@ const ChaptersTableOfContents = ( {courseItem} ) => {
                             key={chapter.id} 
                             to={`/cours/${courseItem.relativePath}/${courseItem.chapters[chapter.id].relativePath}`} 
                             className="TableOfContentsLink" >
-                                <p><u>chapitre {chapter.id + 1}</u> - {chapter.name}</p>
+                                <p><u>chapitre {chapter.id + 1}</u> - {chapter.title}</p>
                         </NavLink>
                     ))
                 }

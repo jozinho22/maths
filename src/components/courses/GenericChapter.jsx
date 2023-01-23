@@ -1,8 +1,9 @@
 import React from 'react';
+import { Button } from 'react-bootstrap';
 import NavigationButtons from './NavigationButtons';
 import LoadingContext from '../context/LoadingContext';
 import CustomHelmet from '../immutable/seo/CustomHelmet';
-
+import { NavLink } from 'react-router-dom';
 import './GenericChapter.css';
 
 const GenericChapter = ( {chapter, courseItem} ) => {
@@ -18,11 +19,13 @@ const GenericChapter = ( {chapter, courseItem} ) => {
         <>
             {/* <CustomHelmet title={chapter.title} metaContent={chapter.metaContent} relativePath={chapter.relativePath}/> */}
                
-            {/* <div className="FlexButton">
-                <Button className="DefaultButton GreenButton" onClick={() => setCount(0)}>
-                    Retour au sommaire
-                </Button> 
-            </div> */}
+            <div className="FlexButton">
+                <NavLink to={`/cours/${courseItem.relativePath}`}>
+                    <Button className="DefaultButton GreenButton" >
+                        Retour au sommaire
+                    </Button> 
+                </NavLink>
+            </div> 
                      
             <p className="MainTitle">{chapter.title}</p>
     
@@ -32,14 +35,14 @@ const GenericChapter = ( {chapter, courseItem} ) => {
                 courseRelativePath={courseItem.relativePath} />
         
             {/* <p className="Title">{title} {count > 0 ? "(" + count + ")" : ''}</p> */}
-             
-            {chapter.component}                
-            
+            <div className="CourseContainer">
+                {chapter.component}          
+            </div>
+                   
             <NavigationButtons 
                 chapter={chapter}
                 chapters={courseItem.chapters} 
-                courseRelativePath={courseItem.relativePath} />
-                        
+                courseRelativePath={courseItem.relativePath} />      
         </>
     );
 }
