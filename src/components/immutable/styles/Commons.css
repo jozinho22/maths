@@ -168,6 +168,7 @@ a:hover {
 .TableOfContentsLink {
     position: relative;
     font-size: large !important;
+    cursor: pointer;
 }
 
 .TableOfContentsLink a, .TableOfContentsLink p {

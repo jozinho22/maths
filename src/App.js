@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import { Container } from 'react-bootstrap';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -22,30 +22,16 @@ import BlurryingSpinner from './components/immutable/spinners/BlurryingSpinner';
 import useIsLoading from './components/immutable/spinners/useIsLoading';
 
 import Header from './components/immutable/nav/Header';
-
-import Home from './components/home/Home';
+import Footer from './components/immutable/nav/Footer';
 
 import coursesResourceBuilder from './components/courses/coursesResourceBuilder';
-import CoursesTableOfContents from './components/courses/CoursesTableOfContents';
-
-import PDFViewerPage from './components/pdf-viewer/PDFViewerPage';
 import pdfResourceBuilder from './components/pdf-viewer/pdfResourceBuilder';
-import PdfTableOfContents from './components/pdf-viewer/PdfTableOfContents';
-
 import gamesResourceBuilder from './components/games/gamesResourceBuilder';
-import GamesTableOfContents from './components/games/GamesTableOfContents';
-
-import Links from './components/links/Links';
-
-import Contact from './components/contact/Contact';
-import Error from './components/immutable/Error';
-
-import Footer from './components/immutable/nav/Footer';
 
 import { getFontIfStoredFontExists } from './components/immutable/styles/getFonts';
 import { getThemeIfStoredThemeExists } from './components/immutable/styles/getThemes';
-import GenericCourse from './components/courses/GenericCourse';
-import LesFonctionsUsuelles from './components/courses/usual-functions/LesFonctionsUsuelles';
+import AppRoutes from './AppRoutes';
+import reactRouterToArray from 'react-router-to-array';
 
 function App() {
 
@@ -81,6 +67,8 @@ function App() {
     var courseItems = coursesResourceBuilder();
     var pdfItems = pdfResourceBuilder();
     var gameItems = gamesResourceBuilder();
+
+    console.log(reactRouterToArray(<AppRoutes courseItems={courseItems} pdfItems={pdfItems} gameItems={gameItems} />))
     
     return ( 
         <div className="App" >     
@@ -92,36 +80,7 @@ function App() {
                         {isLoading ? <BlurryingSpinner /> : ''}
                         <Header courseItems = {courseItems} pdfItems ={pdfItems} gameItems={gameItems} /> 
                             <Container className = {` RelativeContainer ${playMode ? "PlayMode" : ''}  ${isLoading ? "Blur" : ''} `} >                           
-                                
-                                <Routes>
-                                    <Route exact path="/" element={<CoursesTableOfContents courseItems={courseItems} />} />
-                                    <Route path="/cours" element={<CoursesTableOfContents courseItems={courseItems} />} />
-                                    {courseItems.map(courseItem => (
-                                        <Route 
-                                            key={courseItem.id}
-                                            path={`/cours/${courseItem.relativePath}`}
-                                            element={<GenericCourse courseItem={courseItem} />} />
-                                    ))}
-                                    <Route path="/les-fonctions-usuelles" element={<LesFonctionsUsuelles />} />
-                                    <Route path="/bds-de-jpp" element={<PdfTableOfContents pdfItems={pdfItems} />} />
-                                    {pdfItems.map(pdfItem => (
-                                        <Route 
-                                            key={pdfItem.id}
-                                            path={`/bds-de-jpp/${pdfItem.relativePath}`}
-                                            element={<PDFViewerPage pdfItem={pdfItem} />} />
-                                    ))}
-                                    <Route path="/jeux" element={<GamesTableOfContents gameItems={gameItems} />} />
-                                    {gameItems.map(gameItem => (
-                                        <Route 
-                                            key={gameItem.id}
-                                            path={`/jeux/${gameItem.relativePath}`}
-                                            element={gameItem.component} />
-                                    ))}
-                                    <Route path="/liens" element={<Links />} />
-                                    <Route path="/contact" element={<Contact />} />
-                                    <Route path="*" element={<Error />} status={404} />
-                                </Routes>
-
+                                <AppRoutes courseItems={courseItems} pdfItems={pdfItems} gameItems={gameItems} />
                             </Container> 
                         <Footer /> 
                     </BrowserRouter>

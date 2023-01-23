@@ -1,52 +1,53 @@
 import React from 'react';
 import {Row, Col, Button} from 'react-bootstrap';
 import SizeContext from '../context/SizeContext';
-
+import { NavLink, useLocation } from 'react-router-dom';
 import {ChevronLeft, ChevronRight} from 'react-bootstrap-icons'
 
-const NavigationButtons = ( {chapters, count, setCount} ) => {
+const NavigationButtons = ( {chapter, chapters, courseRelativePath} ) => {
 
     var [width] = React.useContext(SizeContext);
     var mobile = width < 450; 
-    
+
     return (
         <Row>
             <Col style={{textAlign:"right"}}>
                 {
-                    count > 1 ?  
-                        <Button 
-                            className="DefaultButton"
-                            onClick={() => {setCount(count - 1)}} >
-                            { !mobile ? <ChevronLeft className="NavigationIcon" /> : <></> }
-                            {
-                                    mobile ? 
-                                        'Précédent' 
-                                            : chapters[count - 2].name 
-                            }
-                        
-                        </Button> 
+                    chapter.id > 0 ?  
+                        <NavLink to={`/cours/${courseRelativePath}/${chapters[chapter.id - 1].relativePath}`} >
+                            <Button 
+                                className="DefaultButton" >
+                                { !mobile ? <ChevronLeft className="NavigationIcon" /> : <></> }
+                                {
+                                        mobile ? 
+                                            'Précédent' 
+                                                : chapters[chapter.id -1].title 
+                                }
+                            
+                            </Button> 
+                        </NavLink>
                             : <></> 
                 } 
             </Col>
             <Col className="CenterText TextBetweenNavigationsButtons">
-                {count} / {chapters.length} 
+                {chapter.id + 1} / {chapters.length} 
             </Col>
             <Col style={{textAlign:"left"}}>
                 {
-                    count < chapters.length ?
-                        <Button 
-                            className="DefaultButton"
-                            onClick={() => {setCount(count + 1)}} >
-                            {
-                                mobile ? 
-                                    'Suivant' :
-                                        chapters[count].name
-                            }
-                            { !mobile ? <ChevronRight className="NavigationIcon" /> : <></> }
-                        </Button>
+                    chapter.id < 2 ?
+                        <NavLink to={`/cours/${courseRelativePath}/${chapters[chapter.id + 1].relativePath}`} >
+                            <Button 
+                                className="DefaultButton" >
+                                {
+                                    mobile ? 
+                                        'Suivant' :
+                                            chapters[chapter.id + 1].title
+                                }
+                                { !mobile ? <ChevronRight className="NavigationIcon" /> : <></> }
+                            </Button>
+                        </NavLink>
                             : <></> 
                 }
-        
             </Col>
         </Row>
     );

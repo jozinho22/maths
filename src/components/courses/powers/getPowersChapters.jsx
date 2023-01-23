@@ -10,53 +10,62 @@ import EcritureScientifique from './chapters/EcritureScientifique';
 
 const getPowersChapters = () => {
 
-    var k = 1;
+    var k = 0;
 
     return [
         {
             id: k++,
             component: <Presentation />,
-            name: 'Présentation'
+            title: 'Présentation',
+            relativePath: 'presentation'
         },
         {
             id: k++,
             component: <MultiplicationDePuissances />,
-            name: 'Multiplication de puissance'
+            title: 'Multiplication de puissances',
+            relativePath: 'multiplication-de-puissance'
         },
         {
             id: k++,
             component: <ALaPuissanceZero />,
-            name: 'À la puissance zéro'
+            title: 'À la puissance zéro',
+            relativePath: 'a-la-puissance-zero'
         },
         {
             id: k++,
             component: <InverseDePuissances />,
-            name: 'Inverse de puissances'
+            title: 'Inverse de puissances',
+            relativePath: 'inverse-de-puissances'
         },
         {
             id: k++,
             component: <PuissanceDePuissances />,
-            name: 'Puissance de puissances'
+            title: 'Puissance de puissances',
+            relativePath: 'puissance-de-puissances'
         },
         {
             id: k++,
             component: <PuissancesComposees />,
-            name: 'Puissances composées'
+            title: 'Puissances composées',
+            relativePath: 'puissances-composees'
         },
         {
             id: k++,
             component: <AutresFormulesGenerales />,
-            name: 'Autre formules générales'
+            title: 'Autre formules générales',
+            relativePath: 'autres-formules'
         },
         {
             id: k++,
             component: <LienEntrePuissancesEtRacines />,
-            name: 'Lien entre puissances et racines'
+            title: 'Lien entre puissances et racines',
+            relativePath: 'liens-entre-puissances-et-racines'
         },
         {
             id: k++,
             component: <EcritureScientifique />,
-            name: 'L\'écriture scientifique'
+            title: 'L\'écriture scientifique',
+            relativePath: 'ecriture-scientifique'
         }
     ];
 }

@@ -6,33 +6,38 @@ import FormulesGenerales from './chapters/FormulesGenerales';
 
 const getGoldenRatioChapters = () => {
 
-    var k = 1;
+    var k = 0;
 
     return [      
         {
             id: k++,
             component: <EvolutionDeLapins />,
-            name: 'Évolutions de lapins'
+            title: 'Évolutions de lapins',
+            relativePath: 'evolutions-de-lapins'
         },  
         {
             id: k++,
             component: <Caracteristiques />,
-            name: 'Caractéristiques du nombre d\'or'
+            title: 'Caractéristiques du nombre d\'or',
+            relativePath: 'caracteristiques-du-nombre-d-or'
         },
         {
             id: k++,
             component: <CaracteristiquesEnSensContraire />,
-            name: 'Caractéristiques du nombre d\'or en sens contraire'
+            title: 'Caractéristiques du nombre d\'or en sens contraire',
+            relativePath: 'caracteristiques-du-nombre-d-or-en-sens-contraire'
         },
         {
             id: k++,
             component: <FormulesDePhiPuissN />,
-            name: 'Formules de φ en fonction de n'
+            title: 'Formules de φ en fonction de n',
+            relativePath: 'formule-de-phi'
         },   
         {
             id: k++,
             component: <FormulesGenerales />,
-            name: 'Quelques formules générales'
+            title: 'Quelques formules générales',
+            relativePath: 'formules-generales'
         }
     ];
 }

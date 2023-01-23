@@ -1,21 +1,27 @@
 import { Container } from 'react-bootstrap';
+import { NavLink } from 'react-router-dom';
+import CustomHelmet from '../immutable/seo/CustomHelmet';
 
-const ChaptersTableOfContents = ( {chapters, setCount} ) => {
+const ChaptersTableOfContents = ( {courseItem} ) => {
 
     return (
+        <>
+            <CustomHelmet title={courseItem.title} metaContent={courseItem.metaContent} relativePath={courseItem.relativePath}/>
+
+            <p className="MainTitle">{courseItem.title}</p>
             <Container className="TableOfContents">
                 {
-                    chapters.map(chapter => (
-                        <div key={chapter.id} className="TableOfContentsLink">
-                            <div 
-                                className="Clickable"
-                                onClick={() => setCount(chapter.id)}>
-                                <p><u>chapitre {chapter.id}</u> - {chapter.name}</p>
-                            </div> 
-                        </div>
+                    courseItem.chapters.map(chapter => (
+                        <NavLink 
+                            key={chapter.id} 
+                            to={`/cours/${courseItem.relativePath}/${courseItem.chapters[chapter.id].relativePath}`} 
+                            className="TableOfContentsLink" >
+                                <p><u>chapitre {chapter.id + 1}</u> - {chapter.name}</p>
+                        </NavLink>
                     ))
                 }
             </Container>
+        </>
     )
 
 }

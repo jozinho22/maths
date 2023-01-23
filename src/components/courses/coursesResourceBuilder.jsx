@@ -6,8 +6,6 @@ import getGoldenRatioChapters from './nbOr/getGoldenRatioChapters';
 import getTrigoChapters from './trigo/getTrigoChapters';
 import getShapesChapters from './shapes/getShapesChapters';
 
-import LesFonctionsUsuelles from './usual-functions/LesFonctionsUsuelles';
-
 function coursesResourceBuilder() {
 
     var coursesItems = [];
@@ -15,61 +13,54 @@ function coursesResourceBuilder() {
 
     var crossProduct = {
       id: i++,
-      title: 'Produit en croix',
+      title: 'Le produit en croix',
       metaContent: "Cours sur le produit en croix : un cours très important pour la vie de tous les jours",
       relativePath: 'le-produit-en-croix',
       chapters: getCrossProductsChapters()
     }
     var powers = {
       id: i++,
-      title: 'Puissances',
+      title: 'Les puissances',
       metaContent: "Cours sur les puissances : comprendre les différentes (simples, composées, inverses)",
       relativePath: 'les-puissances',
       chapters: getPowersChapters()
     }
     var pythagore = {
       id: i++,
-      title: 'Théorème de Pythagore',
+      title: 'Le théorème de Pythagore',
       metaContent: "Le théorème de Pythagore : explications, démonstrations, réciproque et exemples",
       relativePath: 'le-theoreme-de-pythagore',
       chapters: getPythagoreChapters()
     }
     var pi = {
       id: i++,
-      title: 'Nombre π',
+      title: 'Le nombre π',
       metaContent: "Le nombre π : ses mystères et une manière de le calculer géométriquement",
       relativePath: 'le-nombre-pi',
       chapters: getPiChapters()
     }
     var nbOr = {
       id: i++,
-      title: 'Nombre d\'or (φ)',
+      title: 'Le nombre d\'or (φ)',
       metaContent: "Le nombre φ : son histoire, son calcul et son lien avec la suite de Fibonacci",
       relativePath: 'le-nombre-d-or',
       chapters: getGoldenRatioChapters()
     }
     var trigo = {
       id: i++,
-      title: 'Trigonométrie',
+      title: 'La trigonométrie',
       metaContent: "La trigonométrie : explications et toutes les formules associées",
       relativePath: 'la-trigonometrie',
       chapters: getTrigoChapters()
     }
     var shapes = {
       id: i++,
-      title: 'Formes',
+      title: 'Les formes',
       metaContent: "Les formes : les différentes formes usuelles (carré, cube, cercle, triangle...etc) et le calcul des aires et volumes",
       relativePath: 'les-formes',
       chapters: getShapesChapters()
     }
-/*     var usualFunctions = {
-      id: i++,
-      title: 'Fonctions usuelles',
-      metaContent: "Les fonctions usuelles : les différentes fonctions usuelles (carré, cube, sinus, cosinus, exp...etc) et leur réprésention sur un axe ainsi que leur caractéritiques",
-      relativePath: 'les-fonctions-usuelles',
-      component: <LesFonctionsUsuelles />
-    } */
-    
+
     coursesItems.push(
         crossProduct,
         powers,

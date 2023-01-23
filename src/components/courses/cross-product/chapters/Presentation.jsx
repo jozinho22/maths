@@ -3,8 +3,6 @@ import { Container, Row, Col, Button } from 'react-bootstrap';
 import MathJaxDisplay from '../../../mathjax-display/MathJaxDisplay';
 import MathJaxInline from '../../../mathjax-display/MathJaxInline';
 
-import '../../GenericCourse.css'
-
 const Presentation = () => {
 
     var abcdBase = "\\(\\frac{a}{b} = \\frac{c}{d}\\)";

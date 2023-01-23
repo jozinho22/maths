@@ -4,23 +4,26 @@ import Exercices from './chapters/Exercices';
 
 const getCrossProductsChapters = () => {
 
-    var k = 1;
+    var k = 0;
 
     return [      
         {
             id: k++,
             component: <Presentation />,
-            name: 'Présentation'
+            title: 'Présentation',
+            relativePath: 'presentation'
         },  
         {
             id: k++,
             component: <Demonstration />,
-            name: 'Démonstration'
+            title: 'Démonstration',
+            relativePath: 'demonstration'
         },
         {
             id: k++,
             component: <Exercices />,
-            name: 'Exercices'
+            title: 'Exercices',
+            relativePath: 'exercices'
         }
     ];
 }

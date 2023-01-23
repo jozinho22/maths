@@ -6,33 +6,38 @@ import Applications from './chapters/Applications';
 
 const getPythagoreChapters = () => {
 
-    var k = 1;
+    var k = 0;
 
     return [
         {
             id: k++,
             component: <Presentation />,
-            name: 'Présentation'
+            title: 'Présentation',
+            relativePath: 'presentation'
         },
         {
             id: k++,
             component: <DemonstrationDuTheoreme />,
-            name: 'Démonstration du théorème de Pythagore'
+            title: 'Démonstration du théorème de Pythagore',
+            relativePath: 'demonstration'
         },
         {
             id: k++,
             component: <DemonstrationDeLaReciproque />,
-            name: 'Démonstration de la réciproque théorème de Pythagore'
+            title: 'Démonstration de la réciproque théorème de Pythagore',
+            relativePath: 'reciproque'
         },
         {
             id: k++,
             component: <Applications />,
-            name: 'Applications'
+            title: 'Applications',
+            relativePath: 'applications'
         },
         {
             id: k++,
             component: <TheoremeDAlKashi />,
-            name: 'Théorème d\'Al-Kashi'
+            title: 'Théorème d\'Al-Kashi',
+            relativePath: 'theoreme-d-al-kashi'
         } 
     ];
 }

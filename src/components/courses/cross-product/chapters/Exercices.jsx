@@ -2,8 +2,6 @@ import React from 'react';
 import { Container, Button } from 'react-bootstrap';
 import MathJaxDisplay from '../../../mathjax-display/MathJaxDisplay';
 
-import '../../GenericCourse.css'
-
 const Exercices = () => {
 
     var nbExo = -1;

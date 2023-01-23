@@ -4,23 +4,26 @@ import AutresFormulesGenerales from './chapters/AutresFormulesGenerales';
 
 const getPiChapters = () => {
 
-    var k = 1;
+    var k = 0;
 
     return [
         {
             id: k++,
             component: <Presentation />,
-            name: 'Présentation'
+            title: 'Présentation',
+            relativePath: 'presentation'
         },
         {
             id: k++,
             component: <CalculDePi />,
-            name: 'Calcul de π par méthode géométrique'
+            title: 'Calcul de π par méthode géométrique',
+            relativePath: 'calcul-de-pi'
         },
         {
             id: k++,
             component: <AutresFormulesGenerales />,
-            name: 'Autre formules générales'
+            title: 'Autre formules générales',
+            relativePath: 'autres-formules'
         }
     ];
 }

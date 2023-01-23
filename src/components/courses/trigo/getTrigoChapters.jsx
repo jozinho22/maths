@@ -10,53 +10,62 @@ import DeriveesDeSinEtCos from './chapters/DeriveesDeSinEtCos';
 
 const getTrigoChapters = () => {
 
-    var k = 1;
+    var k = 0;
 
     return [
         {
             id: k++,
             component: <Presentation />,
-            name: 'Présentation'
+            title: 'Présentation',
+            relativePath: 'presentation'
         },
         {
             id: k++,
             component: <ValeursDeSinEtCos />,
-            name: 'Valeurs de sinus et cosinus sur le cercle'
+            title: 'Valeurs de sinus et cosinus sur le cercle',
+            relativePath: 'valeurs-de-sin-cos'
         },
         {
             id: k++,
             component: <PythagoreAppliqueALatrigo />,
-            name: 'Pythagore appliqué à la trigonométrie'
+            title: 'Pythagore appliqué à la trigonométrie',
+            relativePath: 'pythagore-et-trigonometrie'
         },
         {
             id: k++,
             component: <FormulesDAddition />,
-            name: 'Formules d\'addition'
+            title: 'Formules d\'addition',
+            relativePath: 'formules-d-addition'
         },
         {
             id: k++,
             component: <FormulesDeDuplication />,
-            name: 'Formules de duplication'
+            title: 'Formules de duplication',
+            relativePath: 'formules-de-duplication'
         },
         {
             id: k++,
             component: <FormulesDeLinearisation />,
-            name: 'Formules de linéarisation'
+            title: 'Formules de linéarisation',
+            relativePath: 'formules-de-linearisation'
         },
         {
             id: k++,
             component: <DeriveesDeSinEtCos />,
-            name: 'Dérivées de sinus et cosinus'
+            title: 'Dérivées de sinus et cosinus',
+            relativePath: 'derivees'
         },
         {
             id: k++,
             component: <LaTangente />,
-            name: 'La tangente'
+            title: 'La tangente',
+            relativePath: 'la-tangente'
         },
         {
             id: k++,
             component: <ValeursDeTan />,
-            name: 'Valeurs de la tangente sur le cercle'
+            title: 'Valeurs de la tangente sur le cercle',
+            relativePath: 'valeurs-de-tan'
         }
     ];
 }

@@ -8,43 +8,47 @@ import LaPyramide from './chapters/LaPyramide';
 
 const getShapesChapters = () => {
 
-    var k = 1;
+    var k = 0;
 
     return [
         {
             id: k++,
             component: <LeCarreLeCube />,
-            name: 'Le carré - Le cube'
+            title: 'Le carré - Le cube',
+            relativePath: 'le-carre-le-cube'
         },  
         {
             id: k++,
             component: <LeCercle />,
-            name: 'Le cercle'
+            title: 'Le cercle',
+            relativePath: 'le-cercle'
         },  
         {
             id: k++,
             component: <LaSphere />,
-            name: 'La sphère'
+            title: 'La sphère',
+            relativePath: 'la-sphere'
         },
         {
             id: k++,
             component: <LeTriangle />,
-            name: 'Le triangle'
+            title: 'Le triangle',
+            relativePath: 'le-triangle'
         }/*,
         {
             id: k++,
             component: <LeCylindre />,
-            name: 'Le cylindre'
+            title: 'Le cylindre'
         },
         {
             id: k++,
             component: <LeCone />,
-            name: 'Le cône'
+            title: 'Le cône'
         },
         {
             id: k++,
             component: <LaPyramide />,
-            name: 'La pyramide'
+            title: 'La pyramide'
         } */
     ];
 }

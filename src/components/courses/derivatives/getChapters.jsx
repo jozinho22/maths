@@ -2,23 +2,23 @@
 
 const getChapters = () => {
 
-    var k = 1;
+    var k = 0;
 
     return [      
         {
             id: k++,
             component: '',
-            name: 'Présentation'
+            title: 'Présentation'
         },  
         {
             id: k++,
             component: '',
-            name: 'Démonstration'
+            title: 'Démonstration'
         },
         {
             id: k++,
             component: '',
-            name: 'Exercices'
+            title: 'Exercices'
         }
     ];
 }
