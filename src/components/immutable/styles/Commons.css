@@ -29,10 +29,12 @@ p {
     white-space: pre-line;
 }
 
-a { color: inherit; } 
+a { 
+    color: rgb(86, 86, 158); 
+} 
 
 a:hover {
-    color: inherit;
+    color: rgb(61, 61, 139);
 }
 
 .MainTitle {
@@ -173,6 +175,7 @@ a:hover {
     font-size: large !important;
     text-align: left;
     transform: translateX(5%);
+    color: var(--simple-text-color);
 }
 
 @media (max-width: 450px) {

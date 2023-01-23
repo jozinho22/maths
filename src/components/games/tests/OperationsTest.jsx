@@ -12,12 +12,11 @@ const OperationsTest = () => {
     const [gameStarted, setGameStarted] =  React.useState(false);
 
     const [count, setCount] = React.useState(0);
-    const [user, setUser] = React.useState(initUser());
+    const [user, setUser] = React.useState({});
     const [questions, setQuestions] = React.useState([]);
 
     var operationType = initOperationType();
     var levels = createLevels();
-    var questionsByLevel = createQuestionsByLevel(operationType);
 
     function initOperationType() {
         let path = window.location.href;
@@ -97,15 +96,10 @@ const OperationsTest = () => {
         setCount (count + 1);
     }
 
-    const reInit = (levelId) => {
+    const launchGame = (levelId) => { 
         setCount(0);
         setUser(initUser());
-        setQuestions(createQuestionsByLevel(operationType));
-        launchGame(levelId);
-    }
-
-    const launchGame = (levelId) => {
-        setQuestions(questionsByLevel[levelId]);
+        setQuestions(createQuestionsByLevel(operationType)[levelId])
         setGameStarted(true);
     }
 
@@ -118,8 +112,7 @@ const OperationsTest = () => {
         setUser,
         launchGame,
         gameStarted,
-        next,
-        reInit
+        next
     }
 
     return (

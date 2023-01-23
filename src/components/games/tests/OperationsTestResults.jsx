@@ -2,10 +2,11 @@ import React from 'react';
 import { Container, Button, Table } from 'react-bootstrap';
 import OperationsTestResultsList from './OperationsTestResultsList';
 import { OperationsTestContext } from './OperationsTest';
+import LevelsTableOfContents from './LevelsTableOfContents';
 
 const OperationsTestResults = () => {
 
-    const {questions, user, levels, reInit} = React.useContext(OperationsTestContext);
+    const {questions, user, levels, launchGame} = React.useContext(OperationsTestContext);
 
     return (
         <>
@@ -38,20 +39,7 @@ const OperationsTestResults = () => {
             <br></br>
             <div>Une autre ?</div>
             <br></br>
-            <Container className="OperationsTestResults">
-                {
-                    levels.map(level => (
-                        <div key={level.id} >
-                            <Button 
-                                className={`${level.bStyle}Button DefaultButton LargeButton`}
-                                onClick={() => reInit(level.id)} >
-                                Rejouer au niveau : {level.title}
-                            </Button>
-                        </div>
-                    ))
-                }
-               
-            </Container>
+            <LevelsTableOfContents title={""} levels={levels} launchGame={launchGame} />
         </>  
     );
 }

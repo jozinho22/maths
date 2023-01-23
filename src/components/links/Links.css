@@ -1,7 +1,7 @@
-.Links a {
+/* .Links a {
     color: rgb(84, 84, 179) ! important;
 }
-
+ */
 .Links .Title {
     padding-bottom: 10px;
 }
@@ -12,4 +12,8 @@
 
 .Links .TableOfContents {
     align-items: center;
+}
+
+.LinksDesc {
+    font-style: italic;
 }

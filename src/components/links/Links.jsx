@@ -18,7 +18,9 @@ const Links = () => {
                         <div key={link.id} >     
                             <p className="Title">{link.title}</p>
                             <Link link={link.link}>{link.link}</Link>
-                            <p>{link.desc}</p>
+                            <div className="LinksDesc" >   
+                                <p>{link.desc}</p>
+                            </div>
                             <br></br>  
                         </div>
                     ))

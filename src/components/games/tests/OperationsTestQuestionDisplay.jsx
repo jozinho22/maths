@@ -58,6 +58,7 @@ const OperationsTestQuestionDisplay = () => {
         setSecondes(timeInSecondes % 60);  
     }
     
+    console.log(user)
     // Timer
     React.useEffect(() => {
         setEndTimer(false);
