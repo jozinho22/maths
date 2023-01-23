@@ -27,6 +27,7 @@
     "react-router-dom": "^6.2.1",
     "react-scripts": "^5.0.0",
     "react-simple-captcha": "^8.2.6",
+    "react-spa-prerender": "^1.0.14",
     "react-swipeable": "^6.2.0",
     "recharts": "^2.1.8",
     "web-vitals": "^2.1.3",
@@ -37,7 +38,8 @@
     "build": "CI=false react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "ssr": "node server/index.js"
+    "ssr": "node server/index.js",
+    "postbuild": "react-spa-prerender"
   },
   "eslintConfig": {
     "extends": [
@@ -61,6 +63,7 @@
     "mini-css-extract-plugin": "2.4.5"
   },
   "devDependencies": {
-    "mini-css-extract-plugin": "2.4.5"
+    "mini-css-extract-plugin": "2.4.5",
+    "xml-parser": "^1.2.1"
   }
 }

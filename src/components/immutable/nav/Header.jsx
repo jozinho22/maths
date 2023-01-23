@@ -39,10 +39,11 @@ const Header = ( {courseItems, pdfItems, gameItems} ) => {
                                     {courseItem.title}
                                 </NavDropdown.Item>
                             )}
+                            <NavDropdown.Item
+                                href={`/cours/les-fonctions-usuelles`} >
+                                Les fonctions usuelles
+                            </NavDropdown.Item>
                         </NavDropdown> 
-                        <Nav.Link title="Les fonctions usuelles" href="/les-fonctions-usuelles" >
-                            Les fonctions usuelles
-                        </Nav.Link>
                         <NavDropdown title="BDs de Jean-Pierre Petit" id="basic-nav-dropdown">
                             {pdfItems.map(pdfItem => 
                                 <NavDropdown.Item
