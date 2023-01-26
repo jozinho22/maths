@@ -167,16 +167,22 @@ a:hover {
 
 .TableOfContentsLink {
     position: relative;
-    font-size: large !important;
+    font-size: medium !important;
     cursor: pointer;
+    text-decoration: none !important;
 }
 
 .TableOfContentsLink a, .TableOfContentsLink p {
     font-family: var(--scholar-font);
-    font-size: large !important;
+    font-size: medium !important;
     text-align: left;
     transform: translateX(5%);
     color: var(--simple-text-color);
+    text-decoration: none !important;
+}
+
+a:-webkit-any-link {
+    text-decoration: none !important;
 }
 
 @media (max-width: 450px) {
@@ -185,7 +191,7 @@ a:hover {
         font-size: small !important;
     }
     .TextBetweenNavigationsButtons {
-        font-size: x-small;
+        font-size: xx-small;
     }
 }
 

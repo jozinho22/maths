@@ -67,15 +67,13 @@ function App() {
     var courseItems = coursesResourceBuilder();
     var pdfItems = pdfResourceBuilder();
     var gameItems = gamesResourceBuilder();
-
-    console.log(reactRouterToArray(<AppRoutes courseItems={courseItems} pdfItems={pdfItems} gameItems={gameItems} />))
     
     return ( 
         <div className="App" >     
             <AppContext.Provider value={appContext} > 
             <LoadingContext.Provider value={loadingContext} >
             <SizeContext.Provider value={sizeContext} >
-                <div  className={`${theme} ${font} CopyBook`}>
+                <div className={`${theme} ${font} CopyBook`}>
                     <BrowserRouter>
                         {isLoading ? <BlurryingSpinner /> : ''}
                         <Header courseItems = {courseItems} pdfItems ={pdfItems} gameItems={gameItems} /> 

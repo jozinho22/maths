@@ -6,7 +6,7 @@ const ChaptersTableOfContents = ( {courseItem} ) => {
 
     return (
         <>
-            <CustomHelmet title={courseItem.title} metaContent={courseItem.metaContent} relativePath={courseItem.relativePath}/>
+            <CustomHelmet title={courseItem.title} metaContent={courseItem.metaContent} relativePath={`/cours/${courseItem.relativePath}`}/>
 
             <p className="MainTitle">{courseItem.title}</p>
             <Container className="TableOfContents">

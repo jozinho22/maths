@@ -5,6 +5,7 @@ import getPiChapters from './pi/getChapters';
 import getGoldenRatioChapters from './nbOr/getGoldenRatioChapters';
 import getTrigoChapters from './trigo/getTrigoChapters';
 import getShapesChapters from './shapes/getShapesChapters';
+import getEquationsChapters from './equations/getEquationsChapters';
 
 function coursesResourceBuilder() {
 
@@ -17,6 +18,13 @@ function coursesResourceBuilder() {
       metaContent: "Cours sur le produit en croix : un cours très important pour la vie de tous les jours",
       relativePath: 'le-produit-en-croix',
       chapters: getCrossProductsChapters()
+    }
+    var equations = {
+      id: i++,
+      title: 'Les équations/inéquations',
+      metaContent: "Cours sur les équations/inéquations : apprendre à résoudre les équations de base",
+      relativePath: 'les-équations',
+      chapters: getEquationsChapters()
     }
     var powers = {
       id: i++,
@@ -63,6 +71,7 @@ function coursesResourceBuilder() {
 
     coursesItems.push(
         crossProduct,
+        equations,
         powers,
         pythagore,
         pi, 

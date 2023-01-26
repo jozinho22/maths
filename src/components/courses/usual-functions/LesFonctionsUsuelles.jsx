@@ -95,7 +95,7 @@ const LesFonctionsUsuelles = () => {
 
     return(
         <>
-            <CustomHelmet title={title} metaContent={metaContent} canonicalPath={relativePath}/>
+            <CustomHelmet title={title} metaContent={metaContent} canonicalPath={`/cours/${relativePath}`}/>
             <Container className="UsualFunctionsButtonsContainer Left">
                 {
                     ufLeft.map(f => (

@@ -12,7 +12,6 @@ import Error from './components/immutable/Error';
 
 const AppRoutes = ( {courseItems, pdfItems, gameItems} ) => {
 
-    console.log(courseItems)
     return  <Routes>
                 <Route exact path="/" element={<CoursesTableOfContents courseItems={courseItems} />} />
                 <Route path="/cours" element={<CoursesTableOfContents courseItems={courseItems} />} />

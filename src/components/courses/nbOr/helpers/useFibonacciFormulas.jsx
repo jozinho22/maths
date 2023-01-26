@@ -10,8 +10,6 @@ const useFibonacciFormulas = () => {
         if(fibo[k].id === -13) {
             continue;
         }
-        console.log(fibo)
-        console.log(k)
 
         var fiboFormula1 = "\\("
             .concat("\\phi^{" + (fibo[k].id) + "}")

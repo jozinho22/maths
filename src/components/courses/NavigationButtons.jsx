@@ -1,7 +1,7 @@
 import React from 'react';
 import {Row, Col, Button} from 'react-bootstrap';
 import SizeContext from '../context/SizeContext';
-import { NavLink, useLocation } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import {ChevronLeft, ChevronRight} from 'react-bootstrap-icons'
 
 const NavigationButtons = ( {chapter, chapters, courseRelativePath} ) => {
@@ -19,9 +19,9 @@ const NavigationButtons = ( {chapter, chapters, courseRelativePath} ) => {
                                 className="DefaultButton" >
                                 { !mobile ? <ChevronLeft className="NavigationIcon" /> : <></> }
                                 {
-                                        mobile ? 
-                                            'Précédent' 
-                                                : chapters[chapter.id -1].title 
+                                    mobile ? 
+                                        'Précédent' 
+                                            : chapters[chapter.id -1].title 
                                 }
                             
                             </Button> 
@@ -34,7 +34,7 @@ const NavigationButtons = ( {chapter, chapters, courseRelativePath} ) => {
             </Col>
             <Col style={{textAlign:"left"}}>
                 {
-                    chapter.id < 2 ?
+                    chapter.id < chapters.length - 1 ?
                         <NavLink to={`/cours/${courseRelativePath}/${chapters[chapter.id + 1].relativePath}`} >
                             <Button 
                                 className="DefaultButton" >

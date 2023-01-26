@@ -8,9 +8,6 @@ const OperationsTestManager = ({children}) => {
 
     const {count, questions, gameStarted, operationType} = React.useContext(OperationsTestContext);
 
-    console.log(count)
-    console.log(operationType)
-    console.log(questions)
     return (
 
         !gameStarted ?
