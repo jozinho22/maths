@@ -3,9 +3,11 @@
     padding-top: calc(var(--customheader-height) + 10px);
     padding-bottom: calc(var(--customfooter-height) + 20px); 
     min-height: 100vh;
+    min-width: 100vw;
     color: var(--simple-text-color);
     display: flex;
     flex-direction: column;
+    align-items: normal;
 }
 
 @media (min-width: 450px) {

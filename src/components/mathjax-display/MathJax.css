@@ -2,6 +2,10 @@
     white-space: normal
 }  */
 
+mjx-container {
+    text-align: justify !important;
+}
+
 button mjx-container {
     margin: 0px !important;
 }
@@ -10,9 +14,9 @@ table mjx-container {
     color: var(--simple-text-color);
 }
 
-.Demo mjx-container {
+/* .Demo mjx-container {
     margin-left: -20% !important;
-} 
+}  */
 
 @media (min-width: 450px) {
     .Demo mjx-container {
@@ -34,7 +38,7 @@ table mjx-container {
 
 .MathJaxDisplay mjx-math {
     font-size: 20px;
-    margin: 0px;
+    margin-left: 200px !important;
     text-align: left !important;
 }
 
@@ -47,6 +51,9 @@ table mjx-container {
     }
 }
 
+.Focus .MathJaxDisplay mjx-math {
+    margin-left: 0px !important;
+}
 
 @media (min-width: 1268px) {
     mjx-math {

@@ -35,7 +35,7 @@ const GenericChapter = ( {chapter, courseItem} ) => {
                 courseRelativePath={courseItem.relativePath} />
         
             {/* <p className="Title">{title} {count > 0 ? "(" + count + ")" : ''}</p> */}
-            <div className="CourseContainer">
+            <div className="CoursesContainer">
                 {chapter.component}          
             </div>
                    

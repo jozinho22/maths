@@ -1,7 +1,27 @@
 .CoursesContainer {
     position: relative;
     margin-bottom: 20px;
+    /* display: flex;
+    flex-direction: column;
+    align-items: flex-start; */
     /* width: 80%; */
+}
+
+@media (min-width: 1268px) {
+   .CoursesContainer p, a {
+        font-size: large;
+    } 
+}
+
+.CoursesContainer p {
+    text-align: justify;
+    margin-left: 100px;
+} 
+
+@media (width < 450px) {
+    .CoursesContainer p {
+        text-align: justify;
+    }
 }
 
 .CoursesContainer a {
@@ -69,9 +89,6 @@
    .CoursesContainer p, a {
         font-size: large;
     } 
-    .CoursesContainer {
-        width: 60%;
-    }
 }
 
 

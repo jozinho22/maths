@@ -31,7 +31,6 @@ import gamesResourceBuilder from './components/games/gamesResourceBuilder';
 import { getFontIfStoredFontExists } from './components/immutable/styles/getFonts';
 import { getThemeIfStoredThemeExists } from './components/immutable/styles/getThemes';
 import AppRoutes from './AppRoutes';
-import reactRouterToArray from 'react-router-to-array';
 
 function App() {
 

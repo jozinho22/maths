@@ -25,3 +25,8 @@ fs.writeFile ('.rsp.json', JSON.stringify(rspJson), function(err) {
     if (err) throw err;
     console.log('complete');
 });
+
+fs.writeFile ('routes.json', JSON.stringify(rspJson), function(err) {
+    if (err) throw err;
+    console.log('complete');
+});
