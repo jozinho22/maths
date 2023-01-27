@@ -17,7 +17,6 @@
     "buffer": "^6.0.3",
     "emailjs-com": "^3.2.0",
     "express": "^4.18.2",
-    "html-webpack-plugin": "^5.5.0",
     "ignore-styles": "^5.0.1",
     "react": "^16.0.0-0",
     "react-bootstrap": "^2.7.0",
@@ -41,7 +40,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "ssr": "node server/index.js",
-    "postbuild": "react-spa-prerender"
+    "rsp": "react-spa-prerender"
   },
   "eslintConfig": {
     "extends": [
@@ -66,7 +65,6 @@
   },
   "devDependencies": {
     "mini-css-extract-plugin": "2.4.5",
-    "prerender-spa-plugin": "^3.4.0",
     "xml-parser": "^1.2.1"
   }
 }

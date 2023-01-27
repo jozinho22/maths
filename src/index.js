@@ -8,7 +8,7 @@ import { HelmetProvider } from 'react-helmet-async';
 
 const rootElement = document.getElementById("root");
 
-ReactDOM.hydrate(
+ReactDOM.render(
     <React.StrictMode>
         <HelmetProvider>
             <App />
