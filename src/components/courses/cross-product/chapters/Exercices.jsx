@@ -52,15 +52,15 @@ const Exercices = () => {
                 {showAnswers[0].show ? 'Masquer les réponses' : 'Afficher les réponses'}
             </Button>
             <Container className={`CoursesAnswers ${showAnswers[0].show ? '' : "Hidden"}`} >
-                <MathJaxDisplay toShow={answerExo1}/>
-                <MathJaxDisplay toShow={answerExo11}/>
-                <MathJaxDisplay toShow={answerExo1Results}/>  
+                <MathJaxDisplay toShow={answerExo1} demo />
+                <MathJaxDisplay toShow={answerExo11} demo />
+                <MathJaxDisplay toShow={answerExo1Results} demo />  
                 <p>
                     Même si pour cet exemple on n'est pas obligé de se servir de la règle de trois
                     {"\n"}On peut juste faire :
                 </p>
-                <MathJaxDisplay toShow={answerExo13}/>
-                <MathJaxDisplay toShow={answerExo1Results}/>
+                <MathJaxDisplay toShow={answerExo13} demo />
+                <MathJaxDisplay toShow={answerExo1Results} demo />
             </Container>
 
             <p className="Title1">Exo 2</p>
@@ -75,9 +75,9 @@ const Exercices = () => {
             </Button>
             <Container className={`CoursesAnswers ${showAnswers[1].show ? '' : "Hidden"}`} >
                 <p>Paris-Rennes fait environ 350 km.</p>
-                <MathJaxDisplay toShow={answerExo2}/>
-                <MathJaxDisplay toShow={answerExo21}/>
-                <MathJaxDisplay toShow={answerExo2Results}/>
+                <MathJaxDisplay toShow={answerExo2} demo />
+                <MathJaxDisplay toShow={answerExo21} demo />
+                <MathJaxDisplay toShow={answerExo2Results} demo />
             </Container>
 
             <p className="Title1">Exo 2-b</p>
@@ -91,12 +91,12 @@ const Exercices = () => {
             </Button>
             <Container className={`CoursesAnswers ${showAnswers[2].show ? '' : "Hidden"}`} >
                 <p>Pour un aller seulement</p>
-                <MathJaxDisplay toShow={answerExo2b}/>
-                <MathJaxDisplay toShow={answerExo2b1}/>
-                <MathJaxDisplay toShow={answerExo2bResults}/>
+                <MathJaxDisplay toShow={answerExo2b} demo />
+                <MathJaxDisplay toShow={answerExo2b1} demo />
+                <MathJaxDisplay toShow={answerExo2bResults} demo />
                 <p>Et pour l'aller-retour</p>
-                <MathJaxDisplay toShow={answerExo2b2}/>
-                <MathJaxDisplay toShow={answerExo2b2Results}/>
+                <MathJaxDisplay toShow={answerExo2b2} demo />
+                <MathJaxDisplay toShow={answerExo2b2Results} demo />
             </Container>
         </>
     )

@@ -94,7 +94,7 @@ const Presentation = () => {
             <p>
                 Le produit en croix nous dit que :
             </p>
-            <MathJaxDisplay toShow={adEqubc} fRef={1} />
+            <MathJaxDisplay toShow={adEqubc} fRef={1} demo />
             <p>
                 D'où la forme de croix car :
                 {"\n"} Les éléments <MathJaxInline toShow={"$[a,d]$"} /> et <MathJaxInline toShow={"$[b,c]$"} /> sont interchangeables à souhait :
@@ -151,12 +151,12 @@ const Presentation = () => {
             </Row>
 
             <p>Dans ce cas, diviser chaque membre par  <MathJaxInline toShow={"$a$"} /> (ou multiplier par son inverse) revient à le transposer de l'autre côté, au dénominateur.</p>
-            <MathJaxDisplay toShow={abcdBase}/>
-            <MathJaxDisplay toShow={divByA}/>
-            <MathJaxDisplay toShow={divByAResult}/>
+            <MathJaxDisplay toShow={abcdBase} demo />
+            <MathJaxDisplay toShow={divByA} demo />
+            <MathJaxDisplay toShow={divByAResult} demo />
             <p>De même, si je multiplie tout par <MathJaxInline toShow={"$d$"} /></p>
-            <MathJaxDisplay toShow={multByD}/>
-            <MathJaxDisplay toShow={multByDResults}/>
+            <MathJaxDisplay toShow={multByD} demo />
+            <MathJaxDisplay toShow={multByDResults} demo />
             <p>
                 On effectuant ces deux étapes, on a interchangé <MathJaxInline toShow={"$a$"} /> et <MathJaxInline toShow={"$d$"} />.
                 {"\n"}On peut faire de même avec <MathJaxInline toShow={"$b$"} /> et <MathJaxInline toShow={"$c$"} />. D'où l'appellation de produit en croix.
