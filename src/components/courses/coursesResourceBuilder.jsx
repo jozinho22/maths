@@ -23,7 +23,7 @@ function coursesResourceBuilder() {
       id: i++,
       title: 'Les équations/inéquations',
       metaContent: "Cours sur les équations/inéquations : apprendre à résoudre les équations de base",
-      relativePath: 'les-équations',
+      relativePath: 'les-equations',
       chapters: getEquationsChapters()
     }
     var powers = {

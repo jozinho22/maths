@@ -27,6 +27,13 @@
     }
 }
 
+
+@media (min-width: 1268px) {
+   .CoursesContainer p, a {
+        font-size: large;
+    } 
+}
+
 .CoursesContainer a {
     color : #0d6efd;
 }
@@ -36,8 +43,14 @@
 }
 
 .CoursesContainer img {
-    margin-top: 20px;
-    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+@media (width < 450px) {
+    .CoursesContainer img {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
 }
 
 .ZoomContainer {
@@ -45,7 +58,7 @@
 }
 
 .ZoomContainer img {
-    width: 100%;
+    width: 30%;
 }
 
 .ZoomContainer figcaption {
@@ -55,22 +68,19 @@
 }
 
 .ZoomContainer .OnZoom img {
-    width: 115%;
+    width: 80%;
     position: relative;
-    left: 50%;
-    transform: translateX(-50%);
+    right: 0;
 }
 
-@media (min-width: 450px) {
-    .CoursesContainer img {
-        border-radius: 10px;
-    }
+@media (width < 450px) {
     .ZoomContainer img {
-        width: 40%;
+        width: 80%;
     }
     .ZoomContainer .OnZoom img {
-        width: 80%;
-        right: 0;
+        width: 110%;
+        left: 50%;
+        transform: translateX(-50%);
     }
 }
 
@@ -80,21 +90,22 @@
     }
 }
 
-.ZoomIcon {
+.ZoomInIcon, .ZoomOutIcon  {
     position: absolute;
     top: 0;
     right: 0;
-    transform: translate(-150%, 150%);
     width: 20px;
     height: 20px;
+    z-index: 1;
 }
 
-@media (min-width: 1268px) {
-   .CoursesContainer p, a {
-        font-size: large;
-    } 
+.ZoomInIcon  {
+    transform: translate(-300%, 200%);
 }
 
+.ZoomOutIcon  {
+    transform: translate(-100%, 250%);
+}
 
 .CoursesAnswers {
     color: var(--green-color);

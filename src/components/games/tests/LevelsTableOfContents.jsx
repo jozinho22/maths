@@ -1,18 +1,20 @@
-import { Container } from 'react-bootstrap';
+import { Container, Button } from 'react-bootstrap';
 
 const LevelsTableOfContents = ( {title, levels, launchGame} ) => {
 
     return (
         <>
             {title ? <p className="MainTitle">{title}</p> : <></>}
-            <Container className="TableOfContents">
+            <Container className="GamesContainer">
                 {
-                    levels.map(level => (     
-                        <div key={level.id} className="TableOfContentsLink" onClick={() => launchGame(level.id)} >
-                            <div className="Clickable">
-                                <p><u>Niveau :</u> {level.title}</p>
-                            </div>
-                        </div>    
+                    levels.map(level => (
+                        <div key={level.id}>
+                            <Button   
+                                className={`${level.bStyle}Button DefaultButton LargeButton`}
+                                onClick={() => launchGame(level.id)}>
+                                Niveau : {level.title}
+                            </Button>
+                        </div>
                     ))
                 }
             </Container>

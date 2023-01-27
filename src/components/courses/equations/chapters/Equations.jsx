@@ -9,7 +9,7 @@ const Equations = () => {
     var equBaseMinus3 = "\\(2x + 3 - 3 = 0 - 3\\)";
     var equBaseMinus32 = "\\(2x = - 3\\)";
     var equBaseMinus32divBy2 = "\\(\\frac{2x}{2} = \\frac{-3}{2} \\)";
-    var equBaseMinus32divBy22 = "\\(x = \\frac{-3}{2} \\)";
+    var equBaseMinus32divBy22 = "\\(x = -\\frac{3}{2} \\)";
 
     return  <>
                 <p>
@@ -18,19 +18,19 @@ const Equations = () => {
                 </p>
                 <p className="Title1">a) Exemple</p>
                 <p>Nous allons prendre par exemple cette équation :</p>
-                <MathJaxDisplay toShow={equBase} />
+                <MathJaxDisplay toShow={equBase} demo />
                 <p>Nous allons essayer de résoudre <MathJaxInline toShow={"$f(x)=0$"} />, et ainsi trouver une valeur pour <MathJaxInline toShow={"$x$"} />.</p>
                 <p>On a alors</p>
-                <MathJaxDisplay toShow={equBaseEquals0} />
+                <MathJaxDisplay toShow={equBaseEquals0} demo />
                 <p>Le but ici est d'isoler la variable <MathJaxInline toShow={"$x$"} /></p>
-                <p>Pour cela, on va d'abord se débarasser du nombre <MathJaxInline toShow={"$3$"} /> en retirant <MathJaxInline toShow={"$3$"} /> de chaque côté :</p>
-                <MathJaxDisplay toShow={equBaseMinus3} />
+                <p>Pour cela, on va d'abord se débarasser du nombre <MathJaxInline toShow={"$3$"} /> en le retirant  de chaque côté :</p>
+                <MathJaxDisplay toShow={equBaseMinus3} demo />
                 <p>Ce qui nous donne :</p>
-                <MathJaxDisplay toShow={equBaseMinus32} />
+                <MathJaxDisplay toShow={equBaseMinus32} demo />
                 <p>Maintenant, nous allons transformer <MathJaxInline toShow={"$2x$"} /> en <MathJaxInline toShow={"$x$"} /> en divisant par <MathJaxInline toShow={"$2$"} /> de chaque côté :</p>
-                <MathJaxDisplay toShow={equBaseMinus32divBy2} />
+                <MathJaxDisplay toShow={equBaseMinus32divBy2} demo />
                 <p>Il reste alors <MathJaxInline toShow={"$x$"} /></p>
-                <MathJaxDisplay toShow={equBaseMinus32divBy22} />
+                <MathJaxDisplay toShow={equBaseMinus32divBy22} demo />
                 <p>En conclusion :</p>
             
                 <Container className="Focus">

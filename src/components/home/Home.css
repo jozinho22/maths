@@ -18,14 +18,14 @@
     color: var(--links-color);
     font-size: large;
     padding: 30px;
-    width: calc(var(--window-width) * 3 / 4);
+    width: 75%;
     box-shadow: 20px 20px 5px 5px var(--navbar-color);
     margin-bottom: 30px;
 }
 
-@media (min-width : 450px) {
+@media (width < 450px) {
     .HomeTitleContainer {
-        width: calc(var(--window-width) * 1 / 2);
+        width: 90%;
     }
 /*     .ExpressionsContainer .MathJaxDisplayContainer {
         padding: 25px;

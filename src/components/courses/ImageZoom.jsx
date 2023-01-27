@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
-import { ZoomIn } from 'react-bootstrap-icons';
+import { ZoomIn, ZoomOut } from 'react-bootstrap-icons';
 
 const ImageZoom = ( {src, name, n} ) => {
 
@@ -14,7 +14,11 @@ const ImageZoom = ( {src, name, n} ) => {
                 <div 
                     className={`${zoom && mobile ? "OnZoom" : ''}`}
                     onClick={() => setZoom(!zoom)} >
-                        <ZoomIn className={`ZoomIcon ${!mobile ? "Hidden": ''}`}/>
+                        {
+                            !zoom ?
+                                <ZoomIn className={`ZoomInIcon ${!mobile ? "Hidden": ''}`}/>
+                                    :   <ZoomOut className={`ZoomOutIcon ${!mobile ? "Hidden": ''}`}/>
+                        }
                         <figure>
                             <img className={`${mobile ? "Clickable" : ''}`}
                                 alt={name}

@@ -70,11 +70,11 @@ const Footer = () => {
                 <p className="CopyRight" > 
                     Copyright &copy; Jozinho {(new Date().getFullYear())}
                 </p>
-                <Link to="/contact">
+                {/* <Link to="/contact">
                     <Envelope 
                         className="ContactIcon"
                         href="/contact" />
-                </Link>
+                </Link> */}
             </Navbar>
     );
 }

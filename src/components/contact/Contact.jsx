@@ -1,4 +1,4 @@
-import React from 'react';
+/* import React from 'react';
 import { Container, Form, FormControl, InputGroup, Button, Col, Row } from 'react-bootstrap';
 import Alert from '../alert/Alert';
 import ContactManager from './ContactManager';
@@ -313,4 +313,4 @@ const Contact = () => {
     );
 }
 
-export default Contact;
+export default Contact; */

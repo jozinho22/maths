@@ -29,7 +29,7 @@ const Timer = ({maxTime, secondes, setSecondes, minutes, setMinutes, setEndTimer
     return (
         <div className="Timer">
             { minutes === 0 && secondes === 0 ? 
-                    <p>Timer : </p> :  
+                    <p>Timer : 0 : 00 </p> :  
                     <>
                         <p> Timer : {minutes} : {secondes < 10 ?  
                                             `0${secondes}` : 

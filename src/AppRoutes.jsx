@@ -1,4 +1,5 @@
 import { Route, Routes } from 'react-router-dom';
+import Home from './components/home/Home';
 import CoursesTableOfContents from './components/courses/CoursesTableOfContents';
 import ChaptersTableOfContents from './components/courses/ChaptersTableOfContents';
 import GenericChapter from './components/courses/GenericChapter';
@@ -7,16 +8,16 @@ import PdfTableOfContents from './components/pdf-viewer/PdfTableOfContents';
 import PDFViewerPage from './components/pdf-viewer/PDFViewerPage';
 import GamesTableOfContents from './components/games/GamesTableOfContents';
 import Links from './components/links/Links';
-import Contact from './components/contact/Contact';
+import VCard from './components/contact/VCard';
 import Error from './components/immutable/Error';
 
 const AppRoutes = ( {courseItems, pdfItems, gameItems} ) => {
 
     return  <Routes>
-                <Route exact path="/" element={<CoursesTableOfContents courseItems={courseItems} />} />
+                <Route exact path="/" element={<Home />} />
                 <Route path="/cours" element={<CoursesTableOfContents courseItems={courseItems} />} />
                 {courseItems.map(courseItem => {
-                    return <Route 
+                    return  <Route 
                                 key={courseItem.id}
                                 path={`/cours/${courseItem.relativePath}`}
                                 element={<ChaptersTableOfContents courseItem={courseItem} />} />
@@ -24,7 +25,7 @@ const AppRoutes = ( {courseItems, pdfItems, gameItems} ) => {
                 })}
                 {courseItems.map(courseItem => (
                     courseItem.chapters.map(chapter => {
-                        return <Route 
+                        return  <Route 
                                     key={chapter.id}
                                     path={`/cours/${courseItem.relativePath}/${chapter.relativePath}`}
                                     element={<GenericChapter chapter={chapter} courseItem={courseItem} />} />
@@ -46,7 +47,7 @@ const AppRoutes = ( {courseItems, pdfItems, gameItems} ) => {
                         element={gameItem.component} />
                 ))}
                 <Route path="/liens" element={<Links />} />
-                <Route path="/contact" element={<Contact />} />
+                <Route path="/contact" element={<VCard />} />
                 <Route path="*" element={<Error />} status={404} />
             </Routes>
 }

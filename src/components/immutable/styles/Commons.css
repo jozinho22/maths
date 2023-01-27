@@ -158,8 +158,16 @@ a:hover {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 30px;
+    gap: 20px;
+    padding-left: 25%;
 }
+
+@media (width < 450px) {
+    .TableOfContents {
+        padding-left: 8%;
+    }
+}
+
 
 /* @media (min-width: 450px) {
     .TableOfContents {
