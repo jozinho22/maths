@@ -1,4 +1,4 @@
-const PrerenderSPAPlugin = require('prerender-spa-plugin');
+/* const PrerenderSPAPlugin = require('prerender-spa-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const path = require('path');
 const jsonRoutes = require('./routes.json')
@@ -14,4 +14,4 @@ module.exports = {
       routes: [ '/', '/cours', '/liens' ],
     })
   ]
-}
+} */

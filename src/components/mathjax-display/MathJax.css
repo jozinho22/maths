@@ -38,17 +38,17 @@ table mjx-container {
 
 .MathJaxDisplay mjx-math {
     font-size: 20px;
-    margin-left: 200px !important;
+    margin-left: 0px !important;
     text-align: left !important;
 }
 
 @media (min-width: 450px) {
     .MathJaxDisplay mjx-math {
-        font-size: 20px !important;
+        margin-left: 200px !important;
     }
-    .MathJaxDisplay.Demo mjx-math {
+    /* .MathJaxDisplay.Demo mjx-math {
         font-size: 20px !important;
-    }
+    } */
 }
 
 .Focus .MathJaxDisplay mjx-math {

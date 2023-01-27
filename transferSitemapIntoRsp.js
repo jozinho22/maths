@@ -12,7 +12,12 @@ var xmlDoc = parse(xml)
 console.log(xmlDoc.root.children);
 
 var rspJson = {
-    routes: []
+    routes: [],
+    engine : {
+        gotoOptions: {
+        timeout: 0
+        }
+    }
 };
 
 for(var url of xmlDoc.root.children) {

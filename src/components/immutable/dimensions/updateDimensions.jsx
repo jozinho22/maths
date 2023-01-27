@@ -7,6 +7,7 @@ const updateDimensions = ( [width, height] ) => {
         ];
 
     for(var dim of dimensions) {
+        console.log(dim)
         dim.height = document.getElementsByClassName(dim.className)[0].offsetHeight;
         var property = dim.className.toLowerCase();
         document.documentElement.style.setProperty(`--${property}-height`, dim.height + 'px');
