@@ -3,14 +3,12 @@ import { Container } from 'react-bootstrap';
 import ImageZoom from '../../ImageZoom';
 import MathJaxDisplay from '../../../mathjax-display/MathJaxDisplay';
 import MathJaxInline from '../../../mathjax-display/MathJaxInline';
-import SizeContext from '../../../context/SizeContext';
 
 import circlePiCalculus from '../assets/circlePiCalculus.png';
 
 const CalculDePi = () => {
 
-    var [width] = React.useContext(SizeContext);
-
+    var width = document.body.offsetWidth
     var n = 0;
 
     var p = "\\( P = 2\\pi R \\)"
@@ -132,8 +130,8 @@ const CalculDePi = () => {
             <MathJaxDisplay toShow={c2} demo />  
             <p>Soit</p>
             <MathJaxDisplay toShow={c2bis} demo />  
-            <MathJaxDisplay toShow={width < 500 ? c3Mobile : c3} demo /> 
-            <MathJaxDisplay toShow={width < 500 ? c4Mobile : c4} demo />  
+            <MathJaxDisplay toShow={width < 450 ? c3Mobile : c3} demo /> 
+            <MathJaxDisplay toShow={width < 450 ? c4Mobile : c4} demo />  
             <MathJaxDisplay toShow={c5} demo /> 
             <MathJaxDisplay toShow={c6} demo /> 
             <p>Ce qui donne</p>
@@ -154,7 +152,7 @@ const CalculDePi = () => {
             <MathJaxDisplay toShow={d2} demo />  
             <p>Soit</p>
             <MathJaxDisplay toShow={d2bis} demo />  
-            <MathJaxDisplay toShow={width < 500 ? d3Mobile : d3} demo />  
+            <MathJaxDisplay toShow={width < 450 ? d3Mobile : d3} demo />  
             <MathJaxDisplay toShow={d4} demo />  
                 <p>Ce qui donne</p>
             <MathJaxDisplay toShow={pi16d2} demo /> 

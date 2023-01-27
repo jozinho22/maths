@@ -8,7 +8,6 @@ import PaginationPageByPage from './PaginationPageByPage';
 import PaginationFullDocument from './PaginationFullDocument';
 import AppContext from '../context/AppContext'
 
-import SizeContext from '../context/SizeContext';
 import Link from '../immutable/nav/Link';
 import CoursesLinks from '../courses/CoursesLinks';
 
@@ -51,7 +50,7 @@ const PDFViewerPage = ({ pdfItem }) => {
             swipeRef.current = el;
         }
 
-        var [width] = React.useContext(SizeContext);
+        var width = document.body.offsetWidth
         var mobile = width < 450;
 
         function addPagesToList(begin) {

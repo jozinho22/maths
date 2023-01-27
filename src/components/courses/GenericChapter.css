@@ -55,9 +55,10 @@
 }
 
 .ZoomContainer .OnZoom img {
-    width: 150%;
+    width: 115%;
     position: relative;
-    right: 25%;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 @media (min-width: 450px) {

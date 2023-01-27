@@ -1,5 +1,6 @@
 .CustomHeader {
     border-bottom: 4px solid var(--front-color);
+    height: 100px;
 }
 
 .CustomHeader .navbar-nav {

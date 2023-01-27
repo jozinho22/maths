@@ -13,11 +13,6 @@ import './App.css';
 import AppContext from './components/context/AppContext';
 import LoadingContext from './components/context/LoadingContext';
 
-import SizeContext from './components/context/SizeContext';
-
-import useWindowSize from './components/immutable/dimensions/useWindowSize';
-import updateDimensions from './components/immutable/dimensions/updateDimensions';
-
 import BlurryingSpinner from './components/immutable/spinners/BlurryingSpinner';
 import useIsLoading from './components/immutable/spinners/useIsLoading';
 
@@ -54,13 +49,6 @@ function App() {
         updateIsLoading: setIsLoading
     }
 
-    const [width, height] = useWindowSize();
-    const sizeContext = [width, height];
-
-    React.useLayoutEffect(() => {
-        updateDimensions([width, height]);
-    }, [width, height]); 
-
     useIsLoading(isLoading, setIsLoading);
 
     var courseItems = coursesResourceBuilder();
@@ -71,7 +59,6 @@ function App() {
         <div className="App" >     
             <AppContext.Provider value={appContext} > 
             <LoadingContext.Provider value={loadingContext} >
-            <SizeContext.Provider value={sizeContext} >
                 <div className={`${theme} ${font} CopyBook`}>
                     <BrowserRouter>
                         {isLoading ? <BlurryingSpinner /> : ''}
@@ -82,7 +69,6 @@ function App() {
                         <Footer /> 
                     </BrowserRouter>
                 </div> 
-            </SizeContext.Provider>
             </LoadingContext.Provider>
             </AppContext.Provider> 
         </div>

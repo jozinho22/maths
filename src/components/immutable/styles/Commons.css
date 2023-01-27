@@ -1,7 +1,7 @@
 .RelativeContainer {
     position: relative;
-    padding-top: calc(var(--customheader-height) + 10px);
-    padding-bottom: calc(var(--customfooter-height) + 20px); 
+    padding-top: calc(100px + 10px);
+    padding-bottom: calc(100px + 20px); 
     min-height: 100vh;
     min-width: 100vw;
     color: var(--simple-text-color);
@@ -12,7 +12,7 @@
 
 @media (min-width: 450px) {
     .RelativeContainer {
-        padding-top: calc(var(--customheader-height) + 20px);
+        padding-top: calc(100px + 20px);
     }
 }
 

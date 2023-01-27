@@ -1,12 +1,11 @@
 import React from 'react';
 import {Row, Col, Button} from 'react-bootstrap';
-import SizeContext from '../context/SizeContext';
 import { NavLink } from 'react-router-dom';
 import {ChevronLeft, ChevronRight} from 'react-bootstrap-icons'
 
 const NavigationButtons = ( {chapter, chapters, courseRelativePath} ) => {
 
-    var [width] = React.useContext(SizeContext);
+    var width = document.body.offsetWidth;
     var mobile = width < 450; 
 
     return (

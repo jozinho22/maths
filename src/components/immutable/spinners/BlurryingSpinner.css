@@ -1,5 +1,5 @@
 .BlurryingSpinner {
-    padding-top: calc(var(--customheader-height) + 20px);
+    padding-top: calc(100px + 20px);
     color: var(--front-color);
     z-index: 10;
     top: 20%;

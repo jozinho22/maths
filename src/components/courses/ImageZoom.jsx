@@ -1,13 +1,12 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
 import { ZoomIn } from 'react-bootstrap-icons';
-import SizeContext from '../context/SizeContext';
 
 const ImageZoom = ( {src, name, n} ) => {
 
     const [zoom, setZoom] = React.useState(false);
 
-    var [width] = React.useContext(SizeContext);
+    var width = document.body.offsetWidth
     var mobile = width < 450;
 
     return (
