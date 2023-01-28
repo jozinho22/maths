@@ -30,10 +30,23 @@
 
 /* .VCardRecto decides for .VCardVerso */ 
 .VCardRecto {
+    width: 50%;
     position: relative;
     margin-top: 10%;
     margin-bottom: 10%;
     visibility: visible;
+}
+
+@media (width < 1000px) {
+    .VCardRecto {
+        width: 80%;
+    }
+}
+
+@media (width < 450px) {
+    .VCardRecto {
+        width: 90%;
+    }
 }
 
 .VCardRecto.Active {
@@ -43,12 +56,9 @@
 }
 
 .VCardVerso {
-    width: 100%;
-    height: 100%;
     position: absolute;
     top: 0;
     right: 0;
-    bottom: 0;
     left: 0;
     visibility: hidden;
     background-color: var(--back-color);
@@ -61,7 +71,6 @@
 }
 
 .VCardVerso.Active {
-    z-index: 2;
     visibility: visible;
 }
 
