@@ -39,7 +39,7 @@ const PaginationFullDocument = ({pages, beginIndex, step, addPagesToList}) => {
                 }
             </Col>
             <Col className="CenterText">
-                <p>pages : 
+                pages : 
                 {
                     beginIndex > pages ? 
                         pages : 
@@ -47,7 +47,7 @@ const PaginationFullDocument = ({pages, beginIndex, step, addPagesToList}) => {
                             + ' - ' 
                             + ((beginIndex + step) < pages ? (beginIndex + step) : pages)
                 } 
-                / {pages} </p>
+                / {pages}
             </Col>
             <Col style={{textAlign:"left"}}>
                 {

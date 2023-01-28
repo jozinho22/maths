@@ -6,7 +6,7 @@
     color: var(--simple-text-color);
     display: flex;
     flex-direction: column;
-    align-items: normal;
+    align-items: center;
 }
 
 @media (min-width: 450px) {
