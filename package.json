@@ -56,5 +56,8 @@
     "mini-css-extract-plugin": "2.4.5",
     "react-snap": "^1.23.0",
     "xml-parser": "^1.2.1"
+  },
+  "reactSnap": {
+    "inlineCss": true
   }
 }

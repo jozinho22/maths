@@ -3,7 +3,6 @@
     padding-top: calc(100px + 10px);
     padding-bottom: calc(100px + 20px); 
     min-height: 100vh;
-    min-width: 100vw;
     color: var(--simple-text-color);
     display: flex;
     flex-direction: column;
