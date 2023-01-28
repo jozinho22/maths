@@ -22,7 +22,7 @@ const GenericChapter = ( {chapter, courseItem} ) => {
             <div className="FlexButton">
                 <NavLink to={`/cours/${courseItem.relativePath}`}>
                     <Button className="DefaultButton GreenButton" >
-                        Retour au sommaire
+                        Retour au sommaire des chapitres
                     </Button> 
                 </NavLink>
             </div> 

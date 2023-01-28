@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { Container, Button } from 'react-bootstrap';
+import { NavLink } from 'react-router-dom';
 import BootstrapSwitchButton from 'bootstrap-switch-button-react'
 
 import PDF from "react-pdf-js";
@@ -83,6 +84,10 @@ const PDFViewerPage = ({ pdfItem }) => {
             return page - (page % step);
         }
 
+        function undoPlayMode() {
+            updatePlayMode(false);
+        }
+
         React.useEffect(() => {
             updatePlayMode(true);
         });
@@ -93,16 +98,16 @@ const PDFViewerPage = ({ pdfItem }) => {
 
         return (
           <> 
-            <Button 
-                className="DefaultButton ReturnHomeButton"
-                href="/">
-                Home
-            </Button>
-            <Button 
-                className="DefaultButton UnPlayModeButton"
-                href="/bds-de-jpp">
-                Toutes les BDs
-            </Button>
+            <NavLink to={"/"}>
+                <Button className="DefaultButton ReturnHomeButton" onClick={() => undoPlayMode()}>
+                    Home
+                </Button>
+            </NavLink>
+            <NavLink to={"/bds-de-jpp"} onClick={() => undoPlayMode()}>
+                <Button className="DefaultButton UnPlayModeButton" >
+                    Toutes les BDs
+                </Button>
+            </NavLink>
                    
             {
                 !mobile ?

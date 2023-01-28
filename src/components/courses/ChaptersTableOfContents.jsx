@@ -1,4 +1,4 @@
-import { Container } from 'react-bootstrap';
+import { Container, Button } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 import CustomHelmet from '../immutable/seo/CustomHelmet';
 
@@ -7,7 +7,13 @@ const ChaptersTableOfContents = ( {courseItem} ) => {
     return (
         <>
             <CustomHelmet title={courseItem.title} metaContent={courseItem.metaContent} relativePath={`/cours/${courseItem.relativePath}`}/>
-
+            <div className="FlexButton">
+                <NavLink to={`/cours`}>
+                    <Button className="DefaultButton GreenButton" >
+                        Retour au sommaire des cours
+                    </Button> 
+                </NavLink>
+            </div> 
             <p className="MainTitle">{courseItem.title}</p>
             <Container className="TableOfContents">
                 {

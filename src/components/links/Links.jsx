@@ -12,7 +12,7 @@ const Links = () => {
     return (
         <div className="Links">
             <p className="MainTitle">Liens</p>
-            <Container className="TableOfContents Links">
+            <Container className="Links">
                 {
                     links.map(link => (
                         <div key={link.id} >     

@@ -1,5 +1,7 @@
 import GenericTableOfContents from '../immutable/GenericTableOfContents';
-import { Helmet } from 'react-helmet-async';
+import { Button } from 'react-bootstrap';
+import { NavLink } from 'react-router-dom';
+import CustomHelmet from '../immutable/seo/CustomHelmet';
 
 const CoursesTableOfContents = ( {courseItems} ) => {
 
@@ -9,12 +11,14 @@ const CoursesTableOfContents = ( {courseItems} ) => {
 
     return (
         <>
-            <Helmet>
-                <title>
-                    {title}
-                </title>
-                <meta name="description" content={metaContent} />
-            </Helmet>
+            <CustomHelmet title={title} metaContent={metaContent} relativePath={`/cours`} />
+            <div className="FlexButton">
+                <NavLink to={`/`}>
+                    <Button className="DefaultButton GreenButton" >
+                        Retour à l'accueil
+                    </Button> 
+                </NavLink>
+            </div> 
             <GenericTableOfContents items={courseItems} prefix={prefix} title={title} />
         </>
     )
