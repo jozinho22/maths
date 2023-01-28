@@ -11,10 +11,6 @@
     --xmas-font: 'x-mas', Fallback, sans-serif;
 }
 
-#theme-dropdown-item {
-    color: black;
-}
-
 .Arabic {
     font-family: var(--arabic-font) !important;
 }

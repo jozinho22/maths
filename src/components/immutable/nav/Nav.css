@@ -1,21 +1,19 @@
 .CustomNav {
     background-color : var(--navbar-color);
-  /*   margin-left: auto;
-    margin-right: auto; */
 }
 
 .CustomNav a {
   font: inherit;
 }
 
+.CustomNav .navbar-nav {
+  margin-left: 30px;
+}
+
 .CustomNav .navbar-brand {
   margin-right: 0;
   color: var(--links-color);
   padding-left: 15px;
-}
-
-.CustomNav .navbar-nav {
-  color: var(--simple-text-color) !important;
 }
 
 .CustomNav button .nav-toggler .collapsed {
@@ -45,30 +43,57 @@
   overflow-x: hidden;
 }
 
-.CustomNav .dropdown-menu::-webkit-scrollbar {
-    width: 0.2em;
-}
-
-.CustomNav .dropdown-menu::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-    box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-}
-
-.CustomNav .dropdown-menu::-webkit-scrollbar-thumb {
-  background-color: var(--grey-color);
-  outline: 1px solid var(--grey-color);
-}
-
-.CustomNav .dropdown-toggle {
-  padding: 10px;  
-}
-
 .CustomNav .dropdown-item {
-  color: var(--links-color) ;
   padding: 10px;
-  font-size: xx-small !important;
-/*   display: inline-block;*/
+}
+
+@media (width < 450px) {
+  .CustomNav .dropdown-item {
+    padding: 5px;
+  }
+}
+
+.CustomNav .nav-item {
+  padding-bottom: 10px !important;
+  margin-bottom: 0px !important;
+}
+
+#basic-nav-item {
+  margin-bottom: 10px !important;
+}
+
+.CustomNav .dropdown-item, .CustomNav .nav-item {
   text-align: center; 
+}
+ 
+@media (width < 450px) {
+  .CustomNav .dropdown-item, .CustomNav .nav-item {
+      margin-top: 0px;
+  }
+}
+
+.CustomNav .dropdown-item a, .CustomNav .nav-item a {
+  font-size: small !important;
+}
+
+@media (width < 450px) {
+  .CustomNav .nav-item a {
+      font-size: x-small !important;
+  }
+}
+
+.CustomNav .dropdown-item a {
+  color: var(--links-color) !important;
+}
+
+.CustomNav .nav-item a {
+  color: var(--grey-light-color);
+}
+
+@media (width < 450px) {
+  .CustomNav .dropdown-item a {
+      font-size: xx-small !important;
+  }
 }
 
 .CustomNav .dropdown-item:hover {
@@ -93,3 +118,7 @@
     transform: translateX(-40%);
   }
 }
+
+#theme-dropdown-item {
+    color: var(--simple-text-color) !important;
+} 
