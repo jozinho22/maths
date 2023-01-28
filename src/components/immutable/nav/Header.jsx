@@ -65,6 +65,9 @@ const Header = ( {courseItems, pdfItems, gameItems} ) => {
                         <Nav.Link title="Liens" href="/liens" >
                             Liens
                         </Nav.Link>
+                        <Nav.Link title="Cours à domicile" href="/contact" >
+                            Cours à domicile
+                        </Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>

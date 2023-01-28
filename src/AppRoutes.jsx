@@ -14,7 +14,11 @@ import Error from './components/immutable/Error';
 const AppRoutes = ( {courseItems, pdfItems, gameItems} ) => {
 
     return  <Routes>
-                <Route exact path="/" element={<Home />} />
+                {
+                    process.env.NODE_ENV === 'development' ?
+                        <Route exact path="/" element={<VCard />} />
+                            :   <Route exact path="/" element={<Home />} />
+                }
                 <Route path="/cours" element={<CoursesTableOfContents courseItems={courseItems} />} />
                 {courseItems.map(courseItem => {
                     return  <Route 

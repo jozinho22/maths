@@ -1,0 +1,71 @@
+.VCardContainer {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    overflow: hidden;
+    position: relative; 
+}
+
+.VCardRecto, .VCardVerso  {
+    border-radius: 10px;
+    background-color: var(--front-color);
+    color: var(--simple-text-color);
+    padding: 30px;
+    text-align: justify;
+    hyphens: auto;
+    transition: transform 2s linear, visibility 0s linear 1s;
+    cursor: pointer;
+}
+
+.VCardRecto img {
+    width: 100px;
+    float: left;
+    border-radius: 50px;
+    margin-right: 15px;
+}
+
+.VCardRecto a {
+    color: var(--back-color);
+}
+
+/* .VCardRecto decides for .VCardVerso */ 
+.VCardRecto {
+    position: relative;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    visibility: visible;
+}
+
+.VCardRecto.Active {
+    transform:
+      rotateY(180deg);
+    visibility: hidden;
+}
+
+.VCardVerso {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    visibility: hidden;
+    background-color: var(--back-color);
+    color: var(--front-color);
+    transform:
+      rotateY(180deg);
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--front-color);
+}
+
+.VCardVerso.Active {
+    z-index: 2;
+    visibility: visible;
+}
+
+.VCardVerso a {
+    color: var(--front-color);
+}
+

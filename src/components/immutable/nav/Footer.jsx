@@ -1,6 +1,6 @@
 import React from 'react';
 import { Navbar, Nav, NavDropdown} from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { Envelope } from 'react-bootstrap-icons';
 import AppContext from '../../context/AppContext'
 
@@ -70,11 +70,9 @@ const Footer = () => {
                 <p className="CopyRight" > 
                     Copyright &copy; Jozinho {(new Date().getFullYear())}
                 </p>
-                {/* <Link to="/contact">
-                    <Envelope 
-                        className="ContactIcon"
-                        href="/contact" />
-                </Link> */}
+                <NavLink to={"/contact"}>
+                    <Envelope className="ContactIcon" />
+                </NavLink>
             </Navbar>
     );
 }
