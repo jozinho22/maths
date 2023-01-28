@@ -30,7 +30,7 @@ const Footer = () => {
                          <NavDropdown 
                             drop="up"
                             title="Fonts" 
-                            id="basic-nav-nav"
+                            id="basic-nav-dropdown"
                             onSelect={(event) => {
                                 updateFont(event);
                                 sessionStorage.setItem('ma-thematique-font', JSON.stringify(event));
@@ -48,7 +48,7 @@ const Footer = () => {
                         <NavDropdown 
                             drop="up"
                             title="Themes" 
-                            id="theme-dropdown-menu"
+                            id="basic-nav-dropdown"
                             onSelect={(event) => {
                                 updateTheme(event);
                                 sessionStorage.setItem('ma-thematique-theme', JSON.stringify(event));

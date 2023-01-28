@@ -4,10 +4,19 @@
   height: 100px;
 }
 
+.CustomFooter .navbar-nav {
+  width: 200px;
+  margin-left: 0px;
+}
+
 @media (min-width: 1268px) {
   .CustomFooter {
     height: 60px;
   }
+}
+
+.CustomFooter .dropdown-item.active {
+  background-color: var(--front-color) !important;
 }
 
 .CustomFooter .navbar-toggler {
