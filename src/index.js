@@ -25,12 +25,16 @@ if(root.hasChildNodes()) {
 
 // v.18
 const domNode = document.getElementById('root');
-if(domNode.hasChildNodes()) {
+// marre du prerender avec React ^^
+/* if(domNode.hasChildNodes()) {
     hydrateRoot(domNode, app); 
 } else {
     const root = createRoot(domNode);
     root.render(app);
-}
+} */
+
+const root = createRoot(domNode);
+root.render(app);
 
 
 // If you want to start measuring performance in your app, pass a function
