@@ -1,4 +1,5 @@
-import Equations from './chapters/Equations';
+import EquationsDuPremierDegre from './chapters/EquationsDuPremierDegre';
+import InequationsDuPremierDegre from './chapters/InequationsDuPremierDegre';
 
 const getEquationsChapters = () => {
 
@@ -7,9 +8,15 @@ const getEquationsChapters = () => {
     return [      
         {
             id: k++,
-            component: <Equations />,
-            title: 'Résolution d\'équations',
-            relativePath: 'resolution-d-equations'
+            component: <EquationsDuPremierDegre />,
+            title: 'Résolution d\'équations du premier degré',
+            relativePath: 'resolution-d-equations-du-premier-degre'
+        },
+                {
+            id: k++,
+            component: <InequationsDuPremierDegre />,
+            title: 'Résolution d\'inéquations du premier degré',
+            relativePath: 'resolution-d-inequations-du-premier-degre'
         }
     ];
 }

@@ -23,7 +23,7 @@ import coursesResourceBuilder from './components/courses/coursesResourceBuilder'
 import pdfResourceBuilder from './components/pdf-viewer/pdfResourceBuilder';
 import gamesResourceBuilder from './components/games/gamesResourceBuilder';
 
-import { getFontIfStoredFontExists } from './components/immutable/styles/getFonts';
+import { getFontIfStoredFontExists, getRandomFont } from './components/immutable/styles/getFonts';
 import { getThemeIfStoredThemeExists } from './components/immutable/styles/getThemes';
 import AppRoutes from './AppRoutes';
 
@@ -31,7 +31,7 @@ function App() {
 
     const [isLoading, setIsLoading] = React.useState(true);
 
-    const [font, setFont] = React.useState(getFontIfStoredFontExists(JSON.parse(sessionStorage.getItem('ma-thematique-font'))) ? JSON.parse(sessionStorage.getItem('ma-thematique-font')) : "Dragons");
+    const [font, setFont] = React.useState(getFontIfStoredFontExists(JSON.parse(sessionStorage.getItem('ma-thematique-font'))) ? JSON.parse(sessionStorage.getItem('ma-thematique-font')) : getRandomFont());
     const [playMode, setPlayMode] = React.useState(false);
     const [theme, setTheme] = React.useState(getThemeIfStoredThemeExists(JSON.parse(sessionStorage.getItem('ma-thematique-theme'))) ? JSON.parse(sessionStorage.getItem('ma-thematique-theme')) : "Brazil");
  

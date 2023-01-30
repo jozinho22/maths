@@ -85,11 +85,9 @@ const Presentation = () => {
             </p>
             <p className="Title1">a) Explication</p>
             <p>
-                Pour tout <MathJaxInline toShow={"$a,b,c,d \\neq 0$"} />
+                Posons comme hypothèse que pour tout <MathJaxInline toShow={"$a,b,c,d \\neq 0$"} />
             </p>
-            <Container className="Focus">
-                <MathJaxDisplay toShow={abcdBase}/>
-            </Container>
+            <MathJaxDisplay toShow={abcdBase} demo />
             <p style={{color: "red"}}>Rappel : il est interdit de diviser par 0 !</p>
             <p>
                 Le produit en croix nous dit que :

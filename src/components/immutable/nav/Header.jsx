@@ -11,12 +11,20 @@ const Header = ( {courseItems, pdfItems, gameItems} ) => {
     const {playMode} = React.useContext(AppContext);
 
     const [showToggle, setShowToggle] = React.useState(false);
+    var width = document.body.offsetWidth;
 
     var monCv = "https://josselin-douineau-developer.netlify.app";
 
     React.useEffect(() => {
         setShowToggle(false);
-    }, [])
+    }, []);
+
+    const retractDropdownOnMobile = () => {
+        console.log(showToggle)
+        if(width < 450) {
+            setShowToggle(false);
+        } 
+    }
 
     return (
             <Navbar 
@@ -28,17 +36,17 @@ const Header = ( {courseItems, pdfItems, gameItems} ) => {
                 }}
                 variant="dark" 
                 expand="lg">
-                <Navbar.Brand 
-                    className="Clickable"
-                    href="/" >
-                    Accueil
+                <Navbar.Brand className="Clickable" onClick={() => {retractDropdownOnMobile()}}>
+                    <NavLink to={`/`}>
+                        Accueil
+                    </NavLink>
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav" >
                     <Nav>
-                        <NavDropdown title="Cours" id="basic-nav-dropdown">
+                        <NavDropdown title="Cours">
                             {courseItems.map(courseItem => 
-                                <NavDropdown.Item key={courseItem.id} onClick={() => {setShowToggle(!showToggle); }} >
+                                <NavDropdown.Item key={courseItem.id} eventKey={courseItem.id} onClick={() => {retractDropdownOnMobile()}} >
                                     <NavLink to={`/cours/${courseItem.relativePath}`}>
                                         {courseItem.title}
                                     </NavLink>
@@ -50,30 +58,30 @@ const Header = ( {courseItems, pdfItems, gameItems} ) => {
                                 </NavLink>
                             </NavDropdown.Item>
                         </NavDropdown> 
-                        <NavDropdown title="BDs de Jean-Pierre Petit" id="basic-nav-dropdown">
+                        <NavDropdown title="BDs de Jean-Pierre Petit">
                             {pdfItems.map(pdfItem => 
-                                <NavDropdown.Item key={pdfItem.id} onClick={() => {setShowToggle(!showToggle); }} >
+                                <NavDropdown.Item key={pdfItem.id} onClick={() => {retractDropdownOnMobile()}} >
                                     <NavLink to={`/bds-de-jpp/${pdfItem.relativePath}`}>
                                         {pdfItem.minTitle ? pdfItem.minTitle : pdfItem.title}
                                     </NavLink>
                                 </NavDropdown.Item>
                             )}
                         </NavDropdown>
-                        <NavDropdown title="Jeux" id="basic-nav-dropdown">
+                        <NavDropdown title="Jeux">
                             {gameItems.map(gameItem => 
-                                <NavDropdown.Item key={gameItem.id} onClick={() => {setShowToggle(!showToggle); }}>
+                                <NavDropdown.Item key={gameItem.id} onClick={() => {retractDropdownOnMobile()}} >
                                     <NavLink to={`/jeux/${gameItem.relativePath}`} >
                                         {gameItem.title}
                                     </NavLink>
                                 </NavDropdown.Item>
                             )}
                         </NavDropdown> 
-                        <Nav.Item title="Liens" id="basic-nav-item" onClick={() => {setShowToggle(!showToggle); }}>
+                        <Nav.Item title="Liens" id="nav-item-liens" onClick={() => {retractDropdownOnMobile()}} >
                             <NavLink to={"/liens"} >
                                 Liens
                             </NavLink>  
                         </Nav.Item>
-                        <Nav.Item title="Cours à domicile" id="basic-nav-item" onClick={() => {setShowToggle(!showToggle); }}>
+                        <Nav.Item title="Cours à domicile" id="nav-item-contact" onClick={() => {retractDropdownOnMobile()}} >
                             <NavLink to={"/contact"} >
                                 Cours à domicile
                             </NavLink>  

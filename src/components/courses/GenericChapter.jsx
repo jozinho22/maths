@@ -27,14 +27,12 @@ const GenericChapter = ( {chapter, courseItem} ) => {
                 </NavLink>
             </div> 
                      
-            <p className="MainTitle">{chapter.title}</p>
-    
             <NavigationButtons 
                 chapter={chapter}
                 chapters={courseItem.chapters} 
                 courseRelativePath={courseItem.relativePath} />
-        
-            {/* <p className="Title">{title} {count > 0 ? "(" + count + ")" : ''}</p> */}
+
+            <p className="MainTitle">{chapter.title}</p>
             <div className="CoursesContainer">
                 {chapter.component}          
             </div>
