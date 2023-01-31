@@ -55,14 +55,14 @@ const LeCercle = () => {
 
             <p className="Title1">Le périmètre du cercle</p>
             <p>π se caractérise par le rapport du périmètre sur le diamètre comme ceci :</p>
-            <MathJaxDisplay toShow={pOverD} />
+            <MathJaxDisplay toShow={pOverD} demo />
              <p>Soit</p>
-            <MathJaxDisplay toShow={pCercle} />
+            <MathJaxDisplay toShow={pCercle} demo />
             <p>Étant donné que le rayon est la moitié du diamètre</p>
-            <MathJaxDisplay toShow={pCercle2} />
+            <MathJaxDisplay toShow={pCercle2} demo />
             <p>Soit</p>
             <Container className="Focus">
-                <MathJaxDisplay toShow={pCercle3} />
+                <MathJaxDisplay toShow={pCercle3} demo />
             </Container>
 
             <p>2π est un tour complet du cercle. Mais la distance parcourue sur le cercle sera proportionnelle à l'angle créé par cette distance radiale.  </p>
@@ -71,17 +71,17 @@ const LeCercle = () => {
                 <MathJaxDisplay toShow={pCercle4} />
             </Container>
 
-            <p className="Title">La surface du cercle</p>
+            <p className="Title1">La surface du cercle</p>
             <p>π se caractérise par le rapport de la surface sur le rayon comme ceci :</p>
-            <MathJaxDisplay toShow={aOverR} />
+            <MathJaxDisplay toShow={aOverR} demo />
             <p>Soit</p>
             <MathJaxDisplay toShow={aCercle} />
             <Container className="Focus">
-                <MathJaxDisplay toShow={aCercle4} />
+                <MathJaxDisplay toShow={aCercle4} demo />
             </Container>
             <p>Comme précédemment, on peut l'écrire sous cette forme :</p>
-            <MathJaxDisplay toShow={aCercle2} />
-            <MathJaxDisplay toShow={aCercle3} />
+            <MathJaxDisplay toShow={aCercle2} demo/>
+            <MathJaxDisplay toShow={aCercle3} demo />
             <p>De même façon que pour le périmètre, la surface balayée par un angle <MathJaxInline toShow="$\\alpha$" /> sera de : </p>
             <Container className="Focus">
                 <MathJaxDisplay toShow={aCercle5} />
@@ -109,7 +109,9 @@ const LeCercle = () => {
             <ImageZoom src={circleAreaCalculus2} name="Surface balayée sur le cercle par un angle α" n={++n} />
             <p>Avec le tour complet, on a bien : </p>
             <MathJaxDisplay toShow={aCalcComplet} />
-            <MathJaxDisplay toShow={aCalcComplet2} />        
+            <Container className="Focus">
+                <MathJaxDisplay toShow={aCalcComplet2} />
+            </Container> 
         </>
     )
 }

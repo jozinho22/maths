@@ -64,7 +64,7 @@
 .ZoomContainer figcaption {
     text-decoration: underline;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: small;
+    font-size: medium;
 }
 
 .ZoomContainer .OnZoom img {
@@ -86,7 +86,7 @@
 
 @media (min-width: 1268px) {
     .ZoomContainer img {
-        width: 60%;
+        width: 30%;
     }
 }
 

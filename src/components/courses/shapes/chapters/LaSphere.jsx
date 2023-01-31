@@ -42,7 +42,7 @@ const LaSphere = () => {
 
     var lfAlpha = "\\(l = R \\alpha \\)"
     var dlfAlpha = "\\(dl = R.d\\alpha \\)"
-    var dS = "\\(d(S(y)) = P(y).dl\\)"
+    var dS = "\\(d[S(y)] = P(y).dl\\)"
     var intDS = "\\(\\int_0^{\\frac{\\pi}{2}} d(S(y)) = \\int_0^{\\frac{\\pi}{2}} P(y) .dl\\)"
 
     var circleDemiArea = "\\(S(y) = \\int_0^{\\frac{\\pi}{2}} P(y) .dl \\)"

@@ -34,18 +34,20 @@ const getShapesChapters = () => {
             component: <LeTriangle />,
             title: 'Le triangle',
             relativePath: 'le-triangle'
-        }/*,
-        {
+        },
+/*         {
             id: k++,
             component: <LeCylindre />,
             title: 'Le cylindre'
-        },
+        }, */
         {
             id: k++,
             component: <LeCone />,
-            title: 'Le cône'
-        },
-        {
+            title: 'Le cône',
+            relativePath: 'le-cone'
+        }
+        /*
+        ,{
             id: k++,
             component: <LaPyramide />,
             title: 'La pyramide'

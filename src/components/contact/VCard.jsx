@@ -1,5 +1,6 @@
 import React from "react";
 import { Container } from "react-bootstrap";
+import { ClipboardCheck } from "react-bootstrap-icons";
 import photoProfil from './assets/photo-profil.jpeg';
 import Link from "../immutable/nav/Link";
 
@@ -33,16 +34,11 @@ const VCard = () => {
                             <br /><br />
                             <u>Pour me contacter :</u>
                             <br />
-                            <a href="mailto:josselin.douineau@gmail.com">josselin.douineau@gmail.com</a>
+                            <span>josselin.douineau@gmail.com</span>
                         </p>
+
                     </Container>
-                    
                 </Container>
-                {/* <Container className={`VCardVerso ${active ? "Active" : ""}`} onClick={rotateY} >
-                    <p>
-                        Pour me contacter...
-                    </p>
-                </Container> */}
             </Container>
 }
 

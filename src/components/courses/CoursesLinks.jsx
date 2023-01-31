@@ -1,5 +1,6 @@
 const CoursesLinks = {
         PRODUIT_EN_CROIX: '/cours/le-produit-en-croix',
+        EQUATIONS: '/cours/les-equations',
         PUISSANCES: '/cours/les-puissances',
         PYTHAGORE: '/cours/le-theoreme-de-pythagore',
         PI: '/cours/le-nombre-pi',

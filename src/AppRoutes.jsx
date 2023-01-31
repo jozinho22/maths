@@ -4,6 +4,8 @@ import CoursesTableOfContents from './components/courses/CoursesTableOfContents'
 import ChaptersTableOfContents from './components/courses/ChaptersTableOfContents';
 import GenericChapter from './components/courses/GenericChapter';
 import LesFonctionsUsuelles from './components/courses/usual-functions/LesFonctionsUsuelles';
+import LeCone from './components/courses/shapes/chapters/LeCone';
+
 import PdfTableOfContents from './components/pdf-viewer/PdfTableOfContents';
 import PDFViewerPage from './components/pdf-viewer/PDFViewerPage';
 import GamesTableOfContents from './components/games/GamesTableOfContents';

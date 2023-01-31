@@ -25,7 +25,6 @@ const getFontIfStoredFontExists = (font) => {
 
 const getRandomFont = () => {
     var fonts = getFonts();
-    console.log(fonts[getRandomInt(fonts.length - 1)])
     return fonts[getRandomInt(fonts.length - 1)].name;
 }
 

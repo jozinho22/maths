@@ -35,6 +35,12 @@
   padding-right: 20px !important;
 }
 
+@media (width > 450px) {
+  #nav-item-liens, #nav-item-contact {
+    margin-top: 5px
+  }
+}
+
 @media (width < 450px) {
     .CustomNav .nav-item a {
       font-size: small;
