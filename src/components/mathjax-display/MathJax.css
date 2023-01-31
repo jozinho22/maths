@@ -15,7 +15,7 @@ table mjx-container {
 }
 
 .Demo mjx-container {
-    margin-left: 45px !important;
+    margin-left: 250px !important;
 }  
 
 @media (width < 450px) {
@@ -33,7 +33,6 @@ table mjx-container {
 }
 
 .MathJaxDisplay mjx-math {
-    margin-left: 200px !important;
     font-size: 20px; 
 }
 

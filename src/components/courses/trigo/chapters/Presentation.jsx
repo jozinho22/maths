@@ -25,11 +25,11 @@ const Definition = () => {
                     Le sinus est le projeté orthogonal de l'interception entre un cercle de rayon <MathJaxInline toShow="$R = 1$" /> et son rayon, sur l'axe vertical <MathJaxInline toShow="$y$" />.
                     {"\n"}
                 </p>
-                <MathJaxDisplay toShow={sinDef} />
+                <MathJaxDisplay toShow={sinDef} demo />
                 <p>
                     Le cosinus est le même principe mais appliqué sur l'axe horizontal <MathJaxInline toShow="$x$" />.  
                 </p>
-                <MathJaxDisplay toShow={cosDef} />
+                <MathJaxDisplay toShow={cosDef} demo />
                 <p>Nous verrons la tangente par la suite. </p>
                 <ImageZoom src={circleTrigo} name="Cosinus et sinus" n={1} />
                 <p>
@@ -46,9 +46,9 @@ const Definition = () => {
                     {"\n"}{"\n"}SOH-CAH-TOA
                 </p>
                 <ImageZoom src={sohcahtoa} name="SOH-CAH-TOA dans un triangle rectangle" n={2} />
-                <MathJaxDisplay toShow={sin} />
-                <MathJaxDisplay toShow={cos} />
-                <MathJaxDisplay toShow={tan} />
+                <MathJaxDisplay toShow={sin} demo />
+                <MathJaxDisplay toShow={cos} demo />
+                <MathJaxDisplay toShow={tan} demo />
                 <p>
                     {"\n"} "opposé" signifie le côté opposé à l'angle α.
                     {"\n"} "adjacent" signifie le côté collé à l'angle α.

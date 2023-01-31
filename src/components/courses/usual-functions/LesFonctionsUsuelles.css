@@ -1,3 +1,16 @@
+.UsualFunctionsButtonContainer {
+    display: flex;
+}
+
+@media (min-width: 450px) {
+    .UsualFunctionsButtonsContainer {
+        position: fixed;
+        width: 20%;
+        align-items: center;
+        flex-direction: column;
+    }
+}
+
 .UsualFunctionsButton {
     margin-top: 0px;
     padding: 0px;
@@ -5,30 +18,40 @@
     height: 60px;
 }
 
-.UsualFunctionsButton mjx-container {
-    margin: 0px;
-}
-
-.FunctionAttributes {
-    padding: 20px;
-}
-
 @media (min-width: 450px) {
-    .UsualFunctionsButtonsContainer {
-        position: fixed;
-        width: 20%;
-    }
-
     .UsualFunctionsButton {
         margin-top: 10px;
     }
 }
+
+/* .UsualFunctionsButton mjx-container {
+    margin: 0px;
+} */
+
+.FunctionAttributes {
+    padding: 20px;
+    text-align: center;
+}
+
+
 
 .FunctionAttributesTitle {
     text-decoration: underline;
     color: var(--simple-text-color);
     padding-top: 10px;
     text-align: center;
+}
+
+.FunctionAttributesValue {
+    position: relative;
+    left: 50%;
+    transform : translateX(-50%);
+    width: fit-content;
+}
+
+.UsualFunctionsButton mjx-container {
+    display: flex !important; 
+    justify-content: center;
 }
 
 .Graph {
@@ -41,8 +64,8 @@
 }
 
 .GraphTitle {
-    padding: 10px;
-    width: 30%;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .recharts-wrapper {
@@ -70,3 +93,4 @@
         font-size: x-large;
     }
 }
+

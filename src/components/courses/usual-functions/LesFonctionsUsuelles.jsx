@@ -120,7 +120,7 @@ const LesFonctionsUsuelles = () => {
             </Container>
             { !isEmpty(f) ?
                 <>
-                    <Container className="GraphTitle">
+                    <Container className={`GraphTitle Focus${f.color}`}>
                         <MathJaxDisplay 
                             toShow={getGraphTitle(f.mathJaxTitle)} 
                             color={f.color}/>    
@@ -152,34 +152,44 @@ const LesFonctionsUsuelles = () => {
 
                     <Container className="FunctionAttributes">
                         <p className="FunctionAttributesTitle">Définie sur</p> 
-                        <MathJaxDisplay 
+                        <div className="FunctionAttributesValue">
+                            <MathJaxDisplay 
                             toShow={f.definition} 
-                            color={f.color}/>  
+                            color={f.color}/> 
+                        </div> 
 
                         <p className="FunctionAttributesTitle">Dérivée</p> 
-                        <MathJaxDisplay 
-                            toShow={getDerivativeExp(f.derivative)} 
-                            color={f.color}/>    
+                        <div className="FunctionAttributesValue">
+                            <MathJaxDisplay 
+                                toShow={getDerivativeExp(f.derivative)} 
+                                color={f.color}/>    
+                        </div>
 
                         <p className="FunctionAttributesTitle">Primitives</p> 
-                        <MathJaxDisplay 
-                            toShow={getPrimitiveExp(f.primitive)} 
-                            color={f.color}/> 
+                        <div className="FunctionAttributesValue">
+                            <MathJaxDisplay 
+                                toShow={getPrimitiveExp(f.primitive)} 
+                                color={f.color}/> 
+                        </div>
 
                         <p className="FunctionAttributesTitle">Limites</p> 
                         {
                             f.limits !== undefined ?
                                 
                                 f.limits.map(limit => (
-                                    <MathJaxDisplay 
-                                        key={limit.id}
-                                        toShow={getLimitExp(limit.where, limit.value)} 
-                                        color={f.color}/> 
+                                    <div className="FunctionAttributesValue">
+                                        <MathJaxDisplay 
+                                            key={limit.id}
+                                            toShow={getLimitExp(limit.where, limit.value)} 
+                                            color={f.color}/> 
+                                    </div>
                                 )) 
                                 
-                                    : <MathJaxDisplay 
-                                            toShow={"\\(\\varnothing\\)"} 
-                                            color={f.color}/> 
+                                    :   <div className="FunctionAttributesValue">
+                                            <MathJaxDisplay 
+                                                toShow={"\\(\\varnothing\\)"} 
+                                                color={f.color}/> 
+                                        </div>
                         }
                    
                     </Container>

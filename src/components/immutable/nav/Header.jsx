@@ -22,17 +22,21 @@ const Header = ( {courseItems, pdfItems, gameItems} ) => {
     }, []);
 
     const retractToggleOnMobile = () => {
-        if(width < 450) {
+        console.log("cocou")
+/*         if(width < 450) {
             setShowToggle(false);
-        } 
+        } */ 
+        setShowToggle(false);
     }
 
-    const retractDropdownOnScreen = () => {
+/*     const retractDropdownOnScreen = () => {
         console.log()
         if(width >= 450) {
             setShowDropdown(false);
         } 
-    }
+    } */
+
+    /* const handleSelect = (eventKey) => alert(`selected ${eventKey}`); */
 
     return (
             <Navbar 
@@ -44,21 +48,21 @@ const Header = ( {courseItems, pdfItems, gameItems} ) => {
                 }}
                 variant="dark" 
                 expand="lg">
-                <Navbar.Brand className="Clickable" onClick={() => {retractDropdownOnScreen()}}>
+                <Navbar.Brand className="Clickable">
                     <NavLink to={`/`}>
                         Accueil
                     </NavLink>
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav" >
-                    <Nav id="Nav">
-                        <NavDropdown title="Cours" onSelect={() => retractDropdownOnScreen()} id="NavDropdown">
+                    <Nav /* onSelect={handleSelect} */>
+                        <NavDropdown title="Cours" >
                             {courseItems.map(courseItem => 
-                                <NavDropdown.Item key={courseItem.id} className="dropdown-item" onClick={() => {retractToggleOnMobile()}} >
+                                <NavDropdown.ItemText key={courseItem.id} eventKey={courseItem.id} onClick={() => {retractToggleOnMobile()}} >
                                     <NavLink key={courseItem.id} className="dropdown-item" to={`/cours/${courseItem.relativePath}`}>
                                         {courseItem.title}
                                     </NavLink>
-                                </NavDropdown.Item>
+                                </NavDropdown.ItemText>
                             )}
                             <NavDropdown.Divider />
                             <NavDropdown.Item>                              

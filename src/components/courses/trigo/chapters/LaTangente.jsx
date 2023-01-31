@@ -29,23 +29,23 @@ const LaTangente = () => {
             <ImageZoom src={circleTrigo2} name="La tangente en trigonométrie" n={5} />
       
             <p>En appliquant le théorème de Thalès, on voit que :</p>
-            <MathJaxDisplay toShow={thales} />
+            <MathJaxDisplay toShow={thales} demo />
             <p>
                 Soit :
             </p>
             <Container className="Focus">
-                <MathJaxDisplay toShow={tan} />
+                <MathJaxDisplay toShow={tan}  demo />
             </Container>
 
             <p className="Title2">Applications</p>
             <p>En utilisant la tangente, on peut mesurer la longueur d'un côté d'un triangle, en connaissant l'angle opposé au côté que l'on cherche.</p>
             <ImageZoom src={tangenteApplication} name="La tangente de manière générale" n={6} />
             <p>Avec la formule vue précédemment : </p>
-            <MathJaxDisplay toShow={tanAlphaGen} />
+            <MathJaxDisplay toShow={tanAlphaGen} demo />
             <p>On a par rapport à la figure 6 :</p>
-            <MathJaxDisplay toShow={tanAlpha} />
+            <MathJaxDisplay toShow={tanAlpha} demo />
             <p>Soit </p>
-            <MathJaxDisplay toShow={a} />
+            <MathJaxDisplay toShow={a} demo />
         </>
             
             
