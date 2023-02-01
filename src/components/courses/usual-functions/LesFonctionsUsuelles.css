@@ -95,7 +95,13 @@
 }
 
 .CoursesContainer .recharts-wrapper {
-    left: 0%;
+    left: 15%;
+}
+
+@media (width < 450px) {
+    .CoursesContainer .recharts-wrapper {
+        left: 0%;
+    }
 }
 
 

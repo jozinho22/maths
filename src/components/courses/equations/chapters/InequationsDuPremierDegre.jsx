@@ -1,6 +1,7 @@
 import { Container } from 'react-bootstrap';
 import MathJaxDisplay from '../../../mathjax-display/MathJaxDisplay';
 import MathJaxInline from '../../../mathjax-display/MathJaxInline';
+import Link from '../../../immutable/nav/Link';
 
 const InequationsDuPremierDegre = () => {
 
@@ -23,10 +24,16 @@ const InequationsDuPremierDegre = () => {
     var equBaseMinus32divBy22WithMinus = "\\(x \\geqslant -\\frac{3}{2} \\)";
 
     var exampleWithReels = "\\(3 \\leqslant 6\\)";
-    var exampleWithReelsDivByNegativeNumber = "\\(3 \\times {\\color{#E55151}{(-4)}} \\leqslant 6 \\times {\\color{#E55151}{(-4)}}\\)";
-    var exampleWithReelsDivByNegativeNumber2 = "\\(-12 \\geqslant -24\\)";
+    var exampleWithReelsMultByNegativeNumber = "\\(3 \\times {\\color{#E55151}{(-4)}} \\leqslant 6 \\times {\\color{#E55151}{(-4)}}\\)";
+    var exampleWithReelsMultByNegativeNumber2 = "\\(-12 \\geqslant -24\\)";
 
     var divideEqualsMultiplyByInverse = "\\( \\frac{a}{b} = a \\times \\frac{1}{b} \\)";
+
+    var descrescantFunc = "\\( j(x) = -ax \\)";
+    var descrescantFuncExample = "\\( j(x) = -4x \\)";
+    var exampleWithReelsWithFunc = "\\(3 \\leqslant 6\\)";
+    var exampleWithReelsMultByNegativeNumberWithFunc = "\\( {\\color{#E55151}{j(}} 3 {\\color{#E55151}{)}} \\geqslant {\\color{#E55151}{j(}} 6 {\\color{#E55151}{)}} \\)";
+    var exampleWithReelsMultByNegativeNumberWithFunc2 = "\\({\\color{#E55151}{(-4)}} \\times 3 \\geqslant {\\color{#E55151}{(-4)}}  \\times 6  \\)";
 
     return  <>
                 <p>
@@ -82,19 +89,27 @@ const InequationsDuPremierDegre = () => {
                 <p>Supposons une situation avec des nombres réels, par exemple :</p>
                 <MathJaxDisplay toShow={exampleWithReels} demo />
                 <p>Appliquons maintenant une multiplication (ou division) par un nombre négatif.</p>
-                <MathJaxDisplay toShow={exampleWithReelsDivByNegativeNumber} demo />
+                <MathJaxDisplay toShow={exampleWithReelsMultByNegativeNumber} demo />
                 <p>On voit bien que pour l'expression reste vraie, il faut passer d'un signe <MathJaxInline toShow={"$\\leqslant$"} /> à un signe <MathJaxInline toShow={"$\\geqslant$"} />, sinon l'équation devient fausse.</p>
-                <MathJaxDisplay toShow={exampleWithReelsDivByNegativeNumber2} demo />
+                <p>Effectivement ici :</p>
+                <MathJaxDisplay toShow={exampleWithReelsMultByNegativeNumber2} demo />
                 <p>Car <MathJaxInline toShow={"$-12$"} /> est bien supérieur à <MathJaxInline toShow={"$-24$"} />.</p>
-                
+                <p>Ce qui se passe réellement ici lorsque l'on multiplie les deux côtés par un nombre négatif, c'est qu'on leur applique une fonction qui est décroissante sur l'intervalle, une fonction de type : </p>
+                <MathJaxDisplay toShow={descrescantFunc} demo />
+                <p>En l'occurrence avec <MathJaxInline toShow={"$-4$"} />, c'est la fonction :</p>
+                <MathJaxDisplay toShow={descrescantFuncExample} demo />
+                <p>Si l'on reprend, il s'est alors passé ceci :</p>
+                <MathJaxDisplay toShow={exampleWithReelsWithFunc} demo />
+                <MathJaxDisplay toShow={exampleWithReelsMultByNegativeNumberWithFunc} demo />
+                <p>Et ici vu que la fonction est décroissante sur <MathJaxInline toShow={"$\\mathbb{R}$"} />, on change le signe : </p>
+                <MathJaxDisplay toShow={exampleWithReelsMultByNegativeNumberWithFunc2} demo />
+                <MathJaxDisplay toShow={exampleWithReelsMultByNegativeNumber2} demo />
+
                 <p className="Title1">3) Conclusion</p>
                 <p>Les inéquations du premier degré fonctionnent comme les équations du premier degré, sauf que l'on change de signe (<MathJaxInline toShow={"$\\leqslant$"} /> devient <MathJaxInline toShow={"$\\geqslant$"} /> ou inversement) si l'on multiplie (ou divise) par un nombre négatif.</p>
                 <p>Il est à noter que c'est lors d'une multiplication, ou d'une division. Les deux reviennent au même, car diviser un nombre <MathJaxInline toShow={"$a$"} /> par un nombre <MathJaxInline toShow={"$b$"} /> revient à multiplier par l'inverse de <MathJaxInline toShow={"$b$"} />.</p>
                 <MathJaxDisplay toShow={divideEqualsMultiplyByInverse} demo />
-                <p>L'inverse de <MathJaxInline toShow={"$b$"} /> se note :</p>
-                <MathJaxDisplay toShow={"\\( \\frac{1}{b} \\)"} demo />
-                <p>Ou encore</p>
-                <MathJaxDisplay toShow={"\\( b^{-1} \\)"} demo />
+                <p>L'inverse de <MathJaxInline toShow={"$b$"} /> se note <MathJaxInline toShow={"$\\frac{1}{b}$"} /> ou encore <MathJaxInline toShow={"$b^{-1}$"} /> (voir <Link link={'/cours/les-puissances/inverse-de-puissances'}>chapitre sur l'inverse</Link>).</p>
             </>
 }
 

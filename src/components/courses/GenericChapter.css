@@ -57,14 +57,17 @@
     padding-bottom: 10px;
 }
 
-.ZoomContainer img {
-    width: 30%;
-}
-
 .ZoomContainer figcaption {
+    margin-top: 20px;
     text-decoration: underline;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: medium;
+}
+
+@media (width < 450px) {
+    .ZoomContainer figcaption {
+        margin-top: 0px;
+    }
 }
 
 .ZoomContainer .OnZoom img {
@@ -86,7 +89,7 @@
 
 @media (min-width: 1268px) {
     .ZoomContainer img {
-        width: 30%;
+        width: 50%;
     }
 }
 

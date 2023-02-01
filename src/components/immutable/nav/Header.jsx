@@ -22,21 +22,10 @@ const Header = ( {courseItems, pdfItems, gameItems} ) => {
     }, []);
 
     const retractToggleOnMobile = () => {
-        console.log("cocou")
-/*         if(width < 450) {
+        if(width < 450) {
             setShowToggle(false);
-        } */ 
-        setShowToggle(false);
-    }
-
-/*     const retractDropdownOnScreen = () => {
-        console.log()
-        if(width >= 450) {
-            setShowDropdown(false);
         } 
-    } */
-
-    /* const handleSelect = (eventKey) => alert(`selected ${eventKey}`); */
+    }
 
     return (
             <Navbar 
