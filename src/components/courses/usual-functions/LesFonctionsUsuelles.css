@@ -58,24 +58,13 @@
     /* position: relative; */
     padding-bottom: 10px;
     font-family: 'Times New Roman', Times, serif;
-    font-size: small;
-    width: 65% !important;
-    height: 80% !important;
 }
 
-.GraphTitle {
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-
-.recharts-wrapper {
-    position: absolute;
-    left: 25%;
-}
-
-@media (min-width: 300px) {
+@media (min-width: 450px) {
     .Graph {
         font-size: large;
+        width: 65% !important;
+        padding-bottom: 20px;
     }
 }
 
@@ -93,4 +82,21 @@
         font-size: x-large;
     }
 }
+
+@media (min-width: 1000px) {
+    .recharts-wrapper {
+        left: 25%;
+    }
+}
+
+.GraphTitle {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.CoursesContainer .recharts-wrapper {
+    left: 0%;
+}
+
+
 

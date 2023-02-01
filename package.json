@@ -12,6 +12,7 @@
     "bootstrap-switch-button-react": "^1.2.0",
     "buffer": "^6.0.3",
     "emailjs-com": "^3.2.0",
+    "fractional": "^1.0.0",
     "react": "^18.2.0",
     "react-bootstrap": "^2.7.0",
     "react-bootstrap-icons": "^1.10.2",
@@ -55,8 +56,5 @@
   "devDependencies": {
     "mini-css-extract-plugin": "2.4.5",
     "xml-parser": "^1.2.1"
-  },
-  "reactSnap": {
-    "inlineCss": true
   }
 }

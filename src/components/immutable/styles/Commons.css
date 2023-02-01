@@ -210,6 +210,19 @@ a:-webkit-any-link {
     }
 }
 
+.RowAlignedButton {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 30px;
+}
+
+@media (width < 450px) {
+    .RowAlignedButton {
+        flex-direction: column;
+    }
+}
 .LargeButton {
     padding: 13px;
 }

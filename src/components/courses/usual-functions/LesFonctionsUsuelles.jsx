@@ -8,6 +8,7 @@ import MathJaxDisplay from '../../mathjax-display/MathJaxDisplay';
 import buildUsualFunctions from "./buildUsualFunctions";
 
 import CustomHelmet from "../../immutable/seo/CustomHelmet";
+import Fractionnal from 'fractional';
 
 import './LesFonctionsUsuelles.css';
 
@@ -41,19 +42,19 @@ const LesFonctionsUsuelles = () => {
         } else {
             x = 0;
             it = it / 2;
-        }
-
-        var xTrigo = -2*step;
+        }        
 
         var datas = []
         for(var k = -it; k <= it; k++) {
+            var num = new Fractionnal.Fraction(x / Math.PI).numerator
+            var den = new Fractionnal.Fraction(x / Math.PI).denominator
             if(f.type === 'trigo') {
                 let d = {
-                    x: (xTrigo === 0) ? 0 : xTrigo +'π',
-                    y: f.formula(xTrigo*Math.PI)
+                    x: num + `${den !== 1 ? "/" + den :""}` + 'π',
+                    y: f.formula(x)
                 }
                 datas.push(d);
-                xTrigo = xTrigo + step;
+                x = x + step;
             } else {
                 let d = {
                     x: Math.floor(x),
@@ -127,11 +128,12 @@ const LesFonctionsUsuelles = () => {
                     </Container>
                     
                     <ResponsiveContainer 
-                        width="80%" 
+                        width="100%" 
                         aspect={f.aspect} 
                         className="Graph">
                         <LineChart
                             width={f.width}
+                            height={f.height}
                             data={fData}
                             margin={{ top: 5, right: 20, bottom: 5, left: 0 }} >
                             <Line 
@@ -141,10 +143,11 @@ const LesFonctionsUsuelles = () => {
                                 dot={false} />
                             <XAxis 
                                 dataKey="x" 
-                                interval={f.xInterval} />
+                                interval={f.xInterval} 
+                                domain={f.domain && f.domain.length > 0 ? f.domain : []}/>
                             <YAxis 
                                  />
-                            {/* <Tooltip />  */}
+                            <Tooltip itemStyle={{backgroundColor: "grey"}} wrapperStyle={{backgroundColor: "dimgray"}}/> 
                             <ReferenceLine x={0} />
                             <ReferenceLine y={0} />
                         </LineChart>
@@ -177,9 +180,8 @@ const LesFonctionsUsuelles = () => {
                             f.limits !== undefined ?
                                 
                                 f.limits.map(limit => (
-                                    <div className="FunctionAttributesValue">
-                                        <MathJaxDisplay 
-                                            key={limit.id}
+                                    <div key={limit.id} className="FunctionAttributesValue">
+                                        <MathJaxDisplay  
                                             toShow={getLimitExp(limit.where, limit.value)} 
                                             color={f.color}/> 
                                     </div>

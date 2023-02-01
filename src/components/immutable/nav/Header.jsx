@@ -48,7 +48,7 @@ const Header = ( {courseItems, pdfItems, gameItems} ) => {
                 }}
                 variant="dark" 
                 expand="lg">
-                <Navbar.Brand className="Clickable">
+                <Navbar.Brand className="Clickable" onClick={() => {retractToggleOnMobile()}}>
                     <NavLink to={`/`}>
                         Accueil
                     </NavLink>
@@ -58,14 +58,14 @@ const Header = ( {courseItems, pdfItems, gameItems} ) => {
                     <Nav /* onSelect={handleSelect} */>
                         <NavDropdown title="Cours" >
                             {courseItems.map(courseItem => 
-                                <NavDropdown.ItemText key={courseItem.id} eventKey={courseItem.id} onClick={() => {retractToggleOnMobile()}} >
-                                    <NavLink key={courseItem.id} className="dropdown-item" to={`/cours/${courseItem.relativePath}`}>
+                                <NavDropdown.Item key={courseItem.id} eventKey={courseItem.id} onClick={() => {retractToggleOnMobile()}} >
+                                    <NavLink key={courseItem.id} to={`/cours/${courseItem.relativePath}`}>
                                         {courseItem.title}
                                     </NavLink>
-                                </NavDropdown.ItemText>
+                                </NavDropdown.Item>
                             )}
                             <NavDropdown.Divider />
-                            <NavDropdown.Item>                              
+                            <NavDropdown.Item onClick={() => {retractToggleOnMobile()}}>                              
                                 <NavLink to={`/cours/les-fonctions-usuelles`} >
                                     Les fonctions usuelles
                                 </NavLink>

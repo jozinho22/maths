@@ -193,9 +193,11 @@ const buildUsualFunctions = () => {
                 derivative: "-sin(x)",
                 primitive: "sin(x) + K",
                 type: 'trigo',
-                scale : 2,
-                step : 1/4,
+                scale : 2*Math.PI,
+                domain:[-Math.PI, Math.PI],
+                step : Math.PI/4,
                 width: 200,
+                height: 100,
                 xInterval: 1,
                 aspect: 3
             },
@@ -208,9 +210,11 @@ const buildUsualFunctions = () => {
                 derivative: "cos(x)",
                 primitive: "-cos(x) + K",
                 type: 'trigo',
-                scale : 2,
-                step : 1/4,
+                scale : 2*Math.PI,
+                domain:[-Math.PI, Math.PI],
+                step : Math.PI/4,
                 width: 200,
+                height: 100,
                 xInterval: 1,
                 aspect: 3
             }
