@@ -4,8 +4,6 @@ import CoursesTableOfContents from './components/courses/CoursesTableOfContents'
 import ChaptersTableOfContents from './components/courses/ChaptersTableOfContents';
 import GenericChapter from './components/courses/GenericChapter';
 import LesFonctionsUsuelles from './components/courses/usual-functions/LesFonctionsUsuelles';
-import EquationsDuPremierDegre from './components/courses/equations/chapters/EquationsDuPremierDegre';
-
 import PdfTableOfContents from './components/pdf-viewer/PdfTableOfContents';
 import PDFViewerPage from './components/pdf-viewer/PDFViewerPage';
 import GamesTableOfContents from './components/games/GamesTableOfContents';
@@ -18,7 +16,7 @@ const AppRoutes = ( {courseItems, pdfItems, gameItems} ) => {
     return  <Routes>
                 {
                     process.env.NODE_ENV === 'development' ?
-                        <Route exact path="/" element={<EquationsDuPremierDegre />} />
+                        <Route exact path="/" element={<Home />} />
                             :   <Route exact path="/" element={<Home />} />
                 }
                 <Route path="/cours" element={<CoursesTableOfContents courseItems={courseItems} />} />

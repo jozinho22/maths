@@ -25,13 +25,13 @@ const Presentation = () => {
             <p>De même, on a la réciproque du théorème.
                 {"\n"}Alors, si :
             </p>
-            <MathJaxDisplay toShow={pyth} />
+            <MathJaxDisplay toShow={pyth} demo />
             <p>Cela veut dire que le triangle est rectangle entre <MathJaxInline toShow={"$a$"} /> et <MathJaxInline toShow={"$b$"} />. </p>
             <p>Cela implique alors que : </p>
-            <MathJaxDisplay toShow={pyth2} />
+            <MathJaxDisplay toShow={pyth2} demo />
             <p>Soit</p>
             <Container className="Focus">
-                <MathJaxDisplay toShow={pyth3} fRef={2}/>
+                <MathJaxDisplay toShow={pyth3} fRef={2} />
             </Container>
         </>
     );

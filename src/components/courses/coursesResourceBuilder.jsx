@@ -1,11 +1,13 @@
 import getCrossProductsChapters from './cross-product/getCrossProductsChapters';
 import getPowersChapters from './powers/getPowersChapters';
+import getEquationsFirstDegreeChapters from './equations-first-degree/getEquationsFirstDegreeChapters';
+import getEquationsSecondDegreeChapters from './equations-second-degree/getEquationsSecondDegreeChapters';
+
 import getPythagoreChapters from './pythagore/getPythagoreChapters';
 import getPiChapters from './pi/getChapters';
 import getGoldenRatioChapters from './nbOr/getGoldenRatioChapters';
 import getTrigoChapters from './trigo/getTrigoChapters';
 import getShapesChapters from './shapes/getShapesChapters';
-import getEquationsChapters from './equations/getEquationsChapters';
 
 function coursesResourceBuilder() {
 
@@ -19,12 +21,19 @@ function coursesResourceBuilder() {
       relativePath: 'le-produit-en-croix',
       chapters: getCrossProductsChapters()
     }
-    var equations = {
+    var equationsFirstDegree = {
       id: i++,
-      title: 'Les équations',
-      metaContent: "Cours sur les équations : apprendre à résoudre les équations et inéquations de base",
-      relativePath: 'les-equations',
-      chapters: getEquationsChapters()
+      title: 'Les équations du premier degré',
+      metaContent: "Cours sur les équations du premier degré : apprendre à résoudre les équations et inéquations de base et voir l'aspect de ses fonctions dans un repère",
+      relativePath: 'les-equations-du-premier-degre',
+      chapters: getEquationsFirstDegreeChapters()
+    }
+    var equationsSecondDegree = {
+      id: i++,
+      title: 'Les équations du second degré',
+      metaContent: "Cours sur les équations du second degré : apprendre à résoudre les équations et voir l'aspect de ses fonctions dans un repère",
+      relativePath: 'les-equations-du-second-degre',
+      chapters: getEquationsSecondDegreeChapters()
     }
     var powers = {
       id: i++,
@@ -42,15 +51,15 @@ function coursesResourceBuilder() {
     }
     var pi = {
       id: i++,
-      title: 'Le nombre π',
-      metaContent: "Le nombre π : ses mystères et une manière de le calculer géométriquement",
+      title: 'Le nombre Pi',
+      metaContent: "Le nombre Pi : ses mystères et une manière de le calculer géométriquement",
       relativePath: 'le-nombre-pi',
       chapters: getPiChapters()
     }
     var nbOr = {
       id: i++,
-      title: 'Le nombre d\'or (φ)',
-      metaContent: "Le nombre φ : son histoire, son calcul et son lien avec la suite de Fibonacci",
+      title: 'Le nombre d\'or (Phi)',
+      metaContent: "Le nombre Phi : son histoire, son calcul et son lien avec la suite de Fibonacci",
       relativePath: 'le-nombre-d-or',
       chapters: getGoldenRatioChapters()
     }
@@ -71,14 +80,15 @@ function coursesResourceBuilder() {
 
     coursesItems.push(
         crossProduct,
-        equations,
+        equationsFirstDegree,
+        equationsSecondDegree,
         powers,
         pythagore,
         pi, 
         nbOr,
         trigo,
         shapes
-      );
+    );
 
     return coursesItems;
 

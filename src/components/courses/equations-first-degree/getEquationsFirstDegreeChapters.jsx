@@ -2,7 +2,7 @@ import EquationsDuPremierDegre from './chapters/EquationsDuPremierDegre';
 import AspectDesEquationsDuPremierDegre from './chapters/AspectDesEquationsDuPremierDegre';
 import InequationsDuPremierDegre from './chapters/InequationsDuPremierDegre';
 
-const getEquationsChapters = () => {
+const getEquationsFirstDegreeChapters = () => {
 
     var k = 0;
 
@@ -28,4 +28,4 @@ const getEquationsChapters = () => {
     ];
 }
 
-export default getEquationsChapters;
+export default getEquationsFirstDegreeChapters;

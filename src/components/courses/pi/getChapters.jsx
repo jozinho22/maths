@@ -16,7 +16,7 @@ const getPiChapters = () => {
         {
             id: k++,
             component: <CalculDePi />,
-            title: 'Calcul de π par méthode géométrique',
+            title: 'Calcul de Pi par méthode géométrique',
             relativePath: 'calcul-de-pi'
         },
         {

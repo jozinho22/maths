@@ -83,7 +83,7 @@ const LeCone = () => {
             <MathJaxDisplay toShow={sCercle} demo/>
             <p>Ici le rayon sur lequel on travaille est <MathJaxInline toShow={"$y$"}/>, soit :</p>
             <MathJaxDisplay toShow={circleAreaX} fRef={2} demo />
-            <p>En injectant maintenant (1) dans (2), on obtient la surface du cercle en fonction de <MathJaxInline toShow={"$y$"}/> :</p>
+            <p>En injectant maintenant <MathJaxInline toShow={"$(1)$"}/> dans <MathJaxInline toShow={"$(2)$"}/>, on obtient la surface du cercle en fonction de <MathJaxInline toShow={"$y$"}/> :</p>
             <MathJaxDisplay toShow={circleAreaY} demo />
             <MathJaxDisplay toShow={circleAreaY2} demo />
             <p>À présent, comme nous savons que le volume va être la somme de ces surfaces sur l'axe <MathJaxInline toShow={"$y$"}/>, nous pouvons intégrer sur <MathJaxInline toShow={"$y$"}/> : </p>
@@ -111,7 +111,7 @@ const LeCone = () => {
             <MathJaxDisplay toShow={circlePerimX} fRef={3} demo />
             <p>Plus haut, on a vu que : </p>
             <MathJaxDisplay toShow={thales2} fRef={1} demo />
-            <p>Soit en injectant (1) dans (3), on obitent le périmètre en fonction de <MathJaxInline toShow={"$y$"}/> : </p>
+            <p>Soit en injectant <MathJaxInline toShow={"$(1)$"}/> dans <MathJaxInline toShow={"$(3)$"}/>, on obitent le périmètre en fonction de <MathJaxInline toShow={"$y$"}/> : </p>
             <MathJaxDisplay toShow={circlePerimY} demo />
             <p>Nous allons intégrer sur la distance <MathJaxInline toShow={"$l$"}/> qui est l'hypothénuse du triangle rectangle formé par <MathJaxInline toShow={"$x$"}/>, <MathJaxInline toShow={"$y$"}/> et <MathJaxInline toShow={"$l$"}/>.</p>
             <p>Notons <MathJaxInline toShow={"$S(y)$"}/> la surface du cône sur l'axe <MathJaxInline toShow={"$y$"}/>.</p>
@@ -127,12 +127,12 @@ const LeCone = () => {
             <MathJaxDisplay toShow={dl} fRef={5} demo />
             <p>Mais souvenez-vous que : </p>
             <MathJaxDisplay toShow={thales2} fRef={1} demo />
-            <p>Soit en injectant (1) dans (5)</p>
+            <p>Soit en injectant <MathJaxInline toShow={"$S(1)$"}/> dans <MathJaxInline toShow={"$S(5)$"}/></p>
             <MathJaxDisplay toShow={dl2} demo />
             <MathJaxDisplay toShow={dl3} demo />
             <MathJaxDisplay toShow={dl4} fRef={6} demo />
             <MathJaxDisplay toShow={dl5} demo />
-            <p>À présent on injecte (6) dans (4) : </p>
+            <p>À présent on injecte <MathJaxInline toShow={"$(6)$"}/> dans <MathJaxInline toShow={"$(4)$"}/> : </p>
             <MathJaxDisplay toShow={coneArea3} demo />
             <p>On sort à nouveau les constantes : </p>
             <MathJaxDisplay toShow={coneArea4} demo />

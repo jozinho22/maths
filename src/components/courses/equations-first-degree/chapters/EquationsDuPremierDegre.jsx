@@ -22,7 +22,8 @@ const EquationsDuPremierDegre = () => {
                 </p>
                 <p>On aura une expression de ce type:</p>
                 <MathJaxDisplay toShow={equPremierDeg} demo />
-                <p>Avec <MathJaxInline toShow={"$a$"} /> et <MathJaxInline toShow={"$b$"} /> des nombres réels :</p>
+                <p>Avec <MathJaxInline toShow={"$a$"} /> et <MathJaxInline toShow={"$b$"} /> des nombres réels.</p>
+                <p>Elles sont définies sur <MathJaxInline toShow={"$\\mathbb{R}$"} />, l'ensemble des réels.</p>
                 <p>Pour plus de détails, voir <Link link={'/cours/les-equations/aspect-des-equations-du-premier-degre'}>le chapitre suivant.</Link></p>
 
                 <p className="Title1">a) Résolution d'équations du premier degré</p>

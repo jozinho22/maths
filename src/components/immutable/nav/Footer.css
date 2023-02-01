@@ -15,10 +15,6 @@
   }
 }
 
-.CustomFooter .dropdown-item.active {
-  background-color: var(--front-color) !important;
-}
-
 .CustomFooter .navbar-toggler {
   margin-left: 20px;
 }

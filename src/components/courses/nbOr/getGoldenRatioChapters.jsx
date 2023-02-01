@@ -30,7 +30,7 @@ const getGoldenRatioChapters = () => {
         {
             id: k++,
             component: <FormulesDePhiPuissN />,
-            title: 'Formules de φ en fonction de n',
+            title: 'Formules de Phi en fonction de n',
             relativePath: 'formules-de-phi'
         },   
         {

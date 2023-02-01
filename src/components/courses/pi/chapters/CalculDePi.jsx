@@ -78,9 +78,9 @@ const CalculDePi = () => {
 
             <ImageZoom src={circlePiCalculus} name="Calcul de Pi" n={++n} />
             <p>Nous avons vu plus haut que le périmètre d'un cercle peut s'écrire comme ceci : </p>
-            <MathJaxDisplay toShow={p} />
+            <MathJaxDisplay toShow={p} demo />
             <p>Mais lorsque <MathJaxInline toShow="$R = 1$" />, on a :</p>
-            <MathJaxDisplay toShow={pi1} />
+            <MathJaxDisplay toShow={pi1} demo />
 
             <p className="Title2">Première approximation : par le côté du carré interne</p>
             <p>Nous allons effectuer une première approximation plutôt grossière, nous allons dire que le périmètre du demi-cercle s'approche de la longueur de deux côtés du carré interne additionnés.   </p>

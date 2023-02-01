@@ -20,7 +20,7 @@ const buildUsualFunctions = () => {
                 mathJaxTitle: "x^2",
                 color: getFunctionColor(i),
                 formula: (x) => {return x*x},
-                definition: "\\(\\xi = \\mathbb{R} = ]-\\infty; +\\infty[ \\)",
+                definition: "\\(\\xi = ]-\\infty; +\\infty[ (\\mathbb{R} )\\)",
                 derivative: "2x",
                 primitive: "\\frac{x^3}{3} + K",
                 limits: [
@@ -47,7 +47,7 @@ const buildUsualFunctions = () => {
                 mathJaxTitle: "x^3",
                 color: getFunctionColor(i),
                 formula: (x) => {return x*x*x},
-                definition: "\\(\\xi = \\mathbb{R} = ]-\\infty; +\\infty[ \\)",
+                definition: "\\(\\xi = ]-\\infty; +\\infty[ (\\mathbb{R}) \\)",
                 derivative: "3x^2",
                 primitive: "\\frac{x^4}{4} + K",
                 limits: [
@@ -74,7 +74,7 @@ const buildUsualFunctions = () => {
                 mathJaxTitle: "\\sqrt(x)",
                 color: getFunctionColor(i),
                 formula: (x) => {return Math.sqrt(x)},
-                definition: "\\(\\xi = \\mathbb{R^+} = [ 0 ; +\\infty[ \\)",
+                definition: "\\(\\xi = [ 0 ; +\\infty[ (\\mathbb{R^+}) \\)",
                 derivative: "\\frac{1}{2\\sqrt{x}}",
                 primitive: "\\frac{2x^{\\frac{3}{2}}}{3} + K",
                 limits: [
@@ -97,7 +97,7 @@ const buildUsualFunctions = () => {
                 mathJaxTitle: "e^x",
                 color: getFunctionColor(i),
                 formula: (x) => {return Math.exp(x)},
-                definition: "\\(\\xi = \\mathbb{R} = ]-\\infty ; +\\infty[ \\)",
+                definition: "\\(\\xi = ]-\\infty ; +\\infty[ (\\mathbb{R})\\)",
                 derivative: "e^x",
                 primitive: "e^x+ K",
                 limits: [
@@ -124,7 +124,7 @@ const buildUsualFunctions = () => {
                 mathJaxTitle: "ln(x)",
                 color: getFunctionColor(i),
                 formula: (x) => {return Math.log(x)},
-                definition: "\\(\\xi = \\mathbb{R^{+*}} = ] 0 ; +\\infty[ \\)",
+                definition: "\\(\\xi = ] 0 ; +\\infty[ (\\mathbb{R^{+*}}) \\)",
                 derivative: "\\frac{1}{x}",
                 primitive: "x(ln(x) - 1) + K",
                 limits: [
@@ -152,7 +152,7 @@ const buildUsualFunctions = () => {
                 mathJaxTitle: "\\frac{1}{x}",
                 color: getFunctionColor(i),
                 formula: (x) => {return 1 / x},
-                definition: "\\(\\xi = \\mathbb{R} - \\{0\\} = \\mathbb{R^{*}} =  ]-\\infty ; 0[\\bigcup] 0 ; +\\infty[ \\)",
+                definition: "\\(\\xi =  ]-\\infty ; 0[\\bigcup] 0 ; +\\infty[ (\\mathbb{R^{*}})\\)",
                 derivative: "-\\frac{1}{x^2}",
                 primitive: "ln(|x|) + K",
                 limits: [
@@ -189,7 +189,7 @@ const buildUsualFunctions = () => {
                 mathJaxTitle: "cos(x)",
                 color: getFunctionColor(i),
                 formula: (x) => {return Math.cos(x)},
-                definition: "\\(\\xi = \\mathbb{R} = ]-\\infty ; +\\infty[ \\)",
+                definition: "\\(\\xi  = ]-\\infty ; +\\infty[ (\\mathbb{R})\\)",
                 derivative: "-sin(x)",
                 primitive: "sin(x) + K",
                 type: 'trigo',
@@ -206,7 +206,7 @@ const buildUsualFunctions = () => {
                 mathJaxTitle: "sin(x)",
                 color: getFunctionColor(i),
                 formula: (x) => {return Math.sin(x)},
-                definition: "\\(\\xi = \\mathbb{R} = ]-\\infty ; +\\infty[ \\)",
+                definition: "\\(\\xi = ]-\\infty ; +\\infty[ (\\mathbb{R})\\)",
                 derivative: "cos(x)",
                 primitive: "-cos(x) + K",
                 type: 'trigo',

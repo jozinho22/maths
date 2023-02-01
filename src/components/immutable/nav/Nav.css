@@ -83,6 +83,10 @@
   text-align: center;
 }
 
+.CustomNav .dropdown-item.active, .CustomNav .dropdown-item:hover {
+  background-color: var(--front-color) !important;
+}
+
 @media (width < 450px) {
   .CustomNav .dropdown-item {
     padding: 5px;
