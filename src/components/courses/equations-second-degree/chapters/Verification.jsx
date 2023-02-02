@@ -42,7 +42,6 @@ const Verification = () => {
                 <p>On factorise par <MathJaxInline toShow={"$x$"} /> à l'intérieur des parenthèses : </p>
                 <MathJaxDisplay toShow={mobile ? factByXMobile : factByX} demo />
                 <MathJaxDisplay toShow={equSecondDegEquals0Fact} demo /> 
-                <MathJaxDisplay toShow={equSecondDegEquals0} demo />    
                 <p>En redéveloppant, on retrouve bien notre expression de départ.</p>
                 <MathJaxDisplay toShow={equSecondDegEquals0} fRef={1} demo />
             </>
