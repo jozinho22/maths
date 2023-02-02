@@ -29,7 +29,7 @@ const Applications = () => {
 
     return (
         <> 
-            <p className="Title1">Mesurer une longueur dans le plan</p>    
+            <p className="Title1">a) Mesurer une longueur dans le plan</p>    
             <ImageZoom src={pythagoreApplication} name="Une longueur AB dans le plan" n={6} />
             <p>Nous disposons d'un plan à deux dimensions <MathJaxInline toShow={"$\\vec{x}, \\vec{y}$"} /> dans lequel nous avons placé deux points <MathJaxInline toShow={"$A$"} /> et <MathJaxInline toShow={"$B$"} />. </p>
             <p>En prolongeant <MathJaxInline toShow={"$A$"} /> jusque <MathJaxInline toShow={"$x_b$"} /> et <MathJaxInline toShow={"$B$"} /> jusque <MathJaxInline toShow={"$y_a$"} />, on obtient un troisième point <MathJaxInline toShow={"$C$"} />.</p>
@@ -45,7 +45,7 @@ const Applications = () => {
             <p>Si l'on inverse <MathJaxInline toShow={"$A$"} /> et <MathJaxInline toShow={"$B$"} /> on aura le même résultat puisqu'on aura toujours : </p>
             <MathJaxDisplay toShow={ab22d} demo />
 
-            <p className="Title1">Mesurer une droite dans l'espace</p>    
+            <p className="Title1">b) Mesurer une droite dans l'espace</p>    
             <ImageZoom src={pythagoreApplication3d} name="Une longueur AB dans l'espace" n={9} />
             <p>Nous souhaitons à présent calculer la droite AB, mais dans un espace tridimensionnelle.</p>
             <p>Nous avons ajouté la longueur précédemment calculée (reportée pour former à présent <MathJaxInline toShow={"$AC$"} />) afin de former un nouveau triangle <MathJaxInline toShow={"$ABC$"} /> .</p>

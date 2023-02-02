@@ -66,8 +66,8 @@ const LienEntrePuissancesEtRacines = () => {
                     <MathJaxDisplay toShow={sqrtnInvPow} />
                 </Container>
                 <p className="Title2">Exemples</p>
-                <MathJaxDisplay toShow={sqrtnEx} />
-                <MathJaxDisplay toShow={sqrtnEx2} />
+                <MathJaxDisplay toShow={sqrtnEx} demo />
+                <MathJaxDisplay toShow={sqrtnEx2} demo />
             </>
     );
 }

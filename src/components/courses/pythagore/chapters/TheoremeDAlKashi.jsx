@@ -84,7 +84,7 @@ const TheoremeDAlKashi = () => {
             <p>On factorise par <MathJaxInline toShow={"$b^2$"} /> :</p>
             <MathJaxDisplay toShow={aCarre4} demo />
             <p>Mais on sait que <MathJaxInline toShow={"$cos(\\alpha) + sin (\\alpha) = 1$"} />, soit :</p>
-            <MathJaxDisplay toShow={alKashiA} />
+            <MathJaxDisplay toShow={alKashiA} demo />
             <p>
                 Nous avons projeté sur le côté <MathJaxInline toShow={"$c$"} /> pour trouver les expressions de <MathJaxInline toShow={"$a^2$"} /> et <MathJaxInline toShow={"$b^2$"} />.
                 {"\n"}De même, en projetant sur <MathJaxInline toShow={"$a$"} /> nous obtiendrons <MathJaxInline toShow={"$b^2$"} /> et <MathJaxInline toShow={"$c^2$"} />.
@@ -119,7 +119,7 @@ const TheoremeDAlKashi = () => {
             <p>
                 On sait de plus que <MathJaxInline toShow={"$cos(\\pi - \\gamma) = -cos(\\gamma)$"} />, donc :
             </p>
-            <MathJaxDisplay toShow={pyth7} />
+            <MathJaxDisplay toShow={pyth7} demo />
             <p>On aurait pu de même réaliser cette opération de l'autre côté en projetant sur <MathJaxInline toShow={"$b$"} /> au lieu de <MathJaxInline toShow={"$a$"} />.</p>
             <ImageZoom src={alKashiDemo3} name="Démonstration du théorème d'Al-Kashi - cas 2bis" n={14} />
         </>

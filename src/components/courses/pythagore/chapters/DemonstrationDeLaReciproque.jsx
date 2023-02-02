@@ -25,7 +25,7 @@ const DemonstrationDeLaReciproque = () => {
             <p>Cela nous amène à voir que : </p>
             <MathJaxDisplay toShow={alKashi2} demo />  
             <p>Soit que </p>
-            <MathJaxDisplay toShow={gamma} />
+            <MathJaxDisplay toShow={gamma} demo />
             <p>Dans notre cas, cela ressemble plus à la figure 5. </p>
             <ImageZoom src={pythagoreReciproqueDemo} name="Théorème d'Al-Kashi dans notre cas" n={5} />
             <p>

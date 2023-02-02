@@ -77,6 +77,10 @@
     right: 0;
 }
 
+.ZoomContainer img {
+    width: 50%;;
+}
+
 @media (width < 450px) {
     .ZoomContainer img {
         width: 80%;
@@ -85,12 +89,6 @@
         width: 110%;
         left: 50%;
         transform: translateX(-50%);
-    }
-}
-
-@media (min-width: 1268px) {
-    .ZoomContainer img {
-        width: 50%;
     }
 }
 

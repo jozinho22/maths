@@ -34,7 +34,7 @@ const LaTangente = () => {
                 Soit :
             </p>
             <Container className="Focus">
-                <MathJaxDisplay toShow={tan}  demo />
+                <MathJaxDisplay toShow={tan}  />
             </Container>
 
             <p className="Title2">Applications</p>
