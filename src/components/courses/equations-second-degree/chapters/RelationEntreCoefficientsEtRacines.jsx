@@ -26,10 +26,12 @@ const RelationEntreCoefficientsEtRacines = () => {
                 <MathJaxDisplay toShow={equSecondDegEquivDev3} demo />
                 <p>En identifiant les coefficients, on a les deux équations suivantes : </p>
 
+                <p>La somme <MathJaxInline toShow={"$S$"} /></p>
                 <Container className="Focus">
-                    <p>La somme <MathJaxInline toShow={"$S$"} /></p>
                     <MathJaxDisplay toShow={x1PlusX2}  />
-                    <p>La somme <MathJaxInline toShow={"$P$"} /></p>
+                </Container>
+                <p>Le produit <MathJaxInline toShow={"$P$"} /></p>
+                <Container className="Focus">
                     <MathJaxDisplay toShow={x1TimesX2}  />
                 </Container>
                 <p><MathJaxInline toShow={"$x_1$"} /> et <MathJaxInline toShow={"$x_2$"} /> sont alors aussi solutions de l'équation : </p>

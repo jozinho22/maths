@@ -1,6 +1,6 @@
 import Verification from './chapters/Verification';
 import EquationsDuSecondDegre from './chapters/EquationsDuSecondDegre';
-import RelationEntreCoefficientsEtRacines from './chapters/RelationEntreCoefficientsEtRacines';
+import RelationEntreCoefficientsEtRacines from './chapters/';
 
 const getEquationsSecondDegreeChapters = () => {
 
