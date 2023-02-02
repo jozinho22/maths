@@ -35,7 +35,9 @@ const RelationEntreCoefficientsEtRacines = () => {
                     <MathJaxDisplay toShow={x1TimesX2}  />
                 </Container>
                 <p><MathJaxInline toShow={"$x_1$"} /> et <MathJaxInline toShow={"$x_2$"} /> sont alors aussi solutions de l'équation : </p>
-                <MathJaxDisplay toShow={equSecondDegreWithSandP} demo  />
+                <Container className="Focus">
+                    <MathJaxDisplay toShow={equSecondDegreWithSandP} demo  />
+                </Container>
             </>
 
 }
