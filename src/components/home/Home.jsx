@@ -14,7 +14,7 @@ const Home = () => {
                 <Container className="TableOfContents">
                     <div className="TableOfContentsLink" ><NavLink to={'/cours'} ><p>- Des cours de mathématiques sur de nombreux sujets</p></NavLink></div>
                     <div className="TableOfContentsLink" ><NavLink to={'/bds-de-jpp'} ><p>- Des BDs de Jean-Pierre Petit</p> </NavLink></div>
-                    <div className="TableOfContentsLink" ><NavLink to={'/jeux'} ><p>- Des petits jeux pour s'améliorer</p>  </NavLink></div>         
+                    <div className="TableOfContentsLink" ><NavLink to={'/jeux'} ><p>- Des petits jeux pour s'entraîner</p>  </NavLink></div>         
                 </Container>
             </Container>  
     );
