@@ -1,10 +1,12 @@
-const Link = ( {link, internalLink, children} ) => {
+const Link = ( {link, children} ) => {
 
     return (
         <a 
             className="Link" 
             href={link} 
-            target={internalLink ? "_self" : "_blank"} rel="noopener">{children}</a>
+            target={"_blank"} rel="noreferrer">
+            {children}
+        </a>
     );
 }
 

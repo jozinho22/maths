@@ -1,7 +1,7 @@
 .RelativeContainer {
     position: relative;
-    padding-top: calc(100px + 10px);
-    padding-bottom: calc(100px + 20px); 
+    padding-top: calc(100px + 20px);
+    padding-bottom: calc(100px + 60px); 
     min-height: 100vh;
     color: var(--simple-text-color);
     /* display: flex;
@@ -9,15 +9,9 @@
     align-items: center; */
 }
 
-@media (min-width: 450px) {
-    .RelativeContainer {
-        padding-top: calc(100px + 20px);
-    }
-}
-
 .RelativeContainer.PlayMode {
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 40px;
+    padding-bottom: 40px;
 }
 
 a, p {

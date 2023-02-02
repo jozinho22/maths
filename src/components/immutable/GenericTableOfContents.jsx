@@ -11,9 +11,6 @@ const GenericTableOfContents = ( {items, prefix, title} ) => {
                 {
                     items.map(item => (     
                         <div key={item.id} className="TableOfContentsLink" >
-                            {/* <Link link={`/${prefix}/${item.relativePath}`} internalLink={true} >
-                                <div>{item.title}</div>
-                            </Link> */}
                             <NavLink  
                                     to={`/${prefix}/${item.relativePath}`} 
                                     state={
