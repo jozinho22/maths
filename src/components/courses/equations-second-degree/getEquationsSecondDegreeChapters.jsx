@@ -9,7 +9,7 @@ const getEquationsSecondDegreeChapters = () => {
         {
             id: k++,
             component: <EquationsDuSecondDegre />,
-            title: 'Résolution d\'équations du second degré',
+            title: 'Résolution d\'équations',
             relativePath: 'resolution-d-equations-du-second-degre'
         },
         {

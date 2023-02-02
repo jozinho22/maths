@@ -9,10 +9,11 @@ import coefficientDirecteurCalculus from '../assets/coefficientDirecteurCalculus
 import differentsCoefDirecteurs from '../assets/differentsCoefDirecteurs.png';
 import ordonneeAtOrigin from '../assets/ordonneeAtOrigin.png';
 
-const AspectDesEquationsDuPremierDegre = () => {
+const AspectDesEquationsDuSecondDegre = () => {
 
     const [a, setA] = React.useState(1);
     const [b, setB] = React.useState(1);
+    const [c, setC] = React.useState(1);
 
     var n = 0;
 
@@ -27,10 +28,10 @@ const AspectDesEquationsDuPremierDegre = () => {
         {
             mathJaxTitle: `${a === 0 || a === 1 || a === -1 ? "" : a} ${a === 0 ? "" : a === -1 ? "-x" : "x"} ${b > 0 && a !== 0 ? "+" : "" } ${b === 0 ? "" : b}`,
             color: "Green",
-            formula: (x) => {return a*x + b},
+            formula: (x) => {return a*x^2 + b*x + c},
             definition: "\\(\\xi = \\mathbb{R} = ]-\\infty; +\\infty[ \\)",
             derivative: a,
-            primitive: `${a}. \\frac{x^2}{2} + ${b}.x + K"`,
+            primitive: `${a} .\\frac{x^3}{3} + ${b}.\\frac{x^2}{2} +  ${c}.x +  K"`,
             limits: [
                 {
                     id: 0,
@@ -82,11 +83,7 @@ const AspectDesEquationsDuPremierDegre = () => {
 
     return  <>
                 <p>
-                    Les fonctions qui sont de type <MathJaxInline toShow={"$f(x) = ax + b$"} /> sont appelées fonctions affines, et forment des droites.
-                    {"\n"}{"\n"}
-                    Dans le cas où <MathJaxInline toShow={"$b = 0$"} />, elles sont alors appelées fonctions linéaires.
-                    {"\n"}
-                    Elles forment aussi des droites et sont de type <MathJaxInline toShow={"$f(x) = ax$"} />.
+                    Les fonctions qui sont de type <MathJaxInline toShow={"$f(x) = ax^2 + bx + c $"} /> sont appelées fonctions polynômes, et forment des paraboles dont <MathJaxInline toShow={"$a$"} /> va déterminer le sens.
                 </p>
 
                 <p className="Title1">a) Aspect dans un repère</p>
@@ -135,7 +132,10 @@ const AspectDesEquationsDuPremierDegre = () => {
                     <Button className="DefaultButton MiniButton" onClick={() => setB(b - 1)} >-</Button>
                     <MathJaxInline toShow={`$b= ${b}$`} />
                     <Button className="DefaultButton MiniButton" onClick={() => setB(b + 1)} >+</Button>
-                    {/* <Button className="DefaultButton" >Retracer la courbe</Button> */}
+
+                    <Button className="DefaultButton MiniButton" onClick={() => setC(c - 1)} >-</Button>
+                    <MathJaxInline toShow={`$b= ${c}$`} />
+                    <Button className="DefaultButton MiniButton" onClick={() => setC(c + 1)} >+</Button>
                 </div>
 
 
@@ -171,4 +171,4 @@ const AspectDesEquationsDuPremierDegre = () => {
             </>
 }
 
-export default AspectDesEquationsDuPremierDegre;
+export default AspectDesEquationsDuSecondDegre;

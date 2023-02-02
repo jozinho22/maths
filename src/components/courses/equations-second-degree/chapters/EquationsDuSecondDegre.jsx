@@ -27,6 +27,8 @@ const EquationsDuSecondDegre = () => {
     var x1Calculus2 = "\\( x_1  = - \\frac{b}{2a} + \\frac{\\sqrt{b^2 - 4ac}}{2a} \\)";
     var x2Calculus2 = "\\( x_2  = - \\frac{b}{2a} - \\frac{\\sqrt{b^2 - 4ac}}{2a} \\)";
 
+    var x0 = "\\( x_0  = - \\frac{b}{2a} \\)";
+
     var delta = "\\( \\Delta = b^2 - 4ac \\)";
 
     var x1Calculus3 = "\\( x_1  = \\frac{-b + \\sqrt{\\Delta}}{2a} \\)";
@@ -48,6 +50,7 @@ const EquationsDuSecondDegre = () => {
                 <MathJaxDisplay toShow={equSecondDegEquals0} fRef={1} demo />
                 <p>On factorise l'expression par <MathJaxInline toShow={"$a$"} /> : </p>
                 <MathJaxDisplay toShow={equSecondDegEquals0Fact} fRef={2} demo />
+                <p>On appelle <MathJaxInline toShow={"$(2)$"} /> la forme canonique.</p>
                 
                 <Aside>
                     <p>Or on sait que : </p>
@@ -87,11 +90,24 @@ const EquationsDuSecondDegre = () => {
                     <MathJaxDisplay toShow={x2Calculus3} fRef={5} />
                 </Container>
                 <p><MathJaxInline toShow={"$x_1$"} /> et <MathJaxInline toShow={"$x_2$"} /> sont alors deux solutions possibles vérifiant <MathJaxInline toShow={"$f(x) = 0$"} />.</p>
-                <p>Dans le cas ou <MathJaxInline toShow={"$\\Delta$"} /> serait négatif, l'équation n'aurait pas de solutions dans <MathJaxInline toShow={"$\\mathbb{R}$"} /> car la fonction <MathJaxInline toShow={"$\\sqrt{x}$"} /> n'est définie que sur <MathJaxInline toShow={"$ [ 0 ; +\\infty[ (\\mathbb{R^+})$"} />. </p>
-                <p>Étant donné que <MathJaxInline toShow={"$x_1$"} /> et <MathJaxInline toShow={"$x_2$"} /> sont deux solutions de l'équation <MathJaxInline toShow={"$(1)$"} />, on peut l'écrire sous la forme : </p>
+                
+                <p className="Title2">Cas où <MathJaxInline toShow={"$\\Delta > 0$"} /></p>
+                <p>Dans le cas où <MathJaxInline toShow={"$\\Delta > 0$"} />, l'équation admet bien deux solutions distinctes. </p>
+                <p>On alors peut écrire l'équation <MathJaxInline toShow={"$(1)$"} /> sous la forme : </p>
                 <Container className="Focus">
                     <MathJaxDisplay toShow={fact} fRef={6} />
                 </Container>
+
+                <p className="Title2">Cas où <MathJaxInline toShow={"$\\Delta = 0$"} /></p>
+                <p>Dans le cas où <MathJaxInline toShow={"$\\Delta = 0$"} />, les deux racines sont équivalentes à : </p>
+                <Container className="Focus">
+                    <MathJaxDisplay toShow={x0} />
+                </Container>
+                <p>On les appelle des racines doubles.</p>
+
+                <p className="Title2">Cas où <MathJaxInline toShow={"$\\Delta < 0$"} /></p>
+                <p>Dans le cas où <MathJaxInline toShow={"$\\Delta < 0$"} />, l'équation n'a pas de solutions dans <MathJaxInline toShow={"$\\mathbb{R}$"} /> car la fonction <MathJaxInline toShow={"$\\sqrt{x}$"} /> n'est définie que sur <MathJaxInline toShow={"$ [ 0 ; +\\infty[ (\\mathbb{R^+})$"} />. </p>
+
             </>
 
 }

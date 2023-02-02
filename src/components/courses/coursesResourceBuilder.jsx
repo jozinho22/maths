@@ -23,14 +23,14 @@ function coursesResourceBuilder() {
     }
     var equationsFirstDegree = {
       id: i++,
-      title: 'Les équations du premier degré',
+      title: 'Les équations du 1er degré',
       metaContent: "Cours sur les équations du premier degré : apprendre à résoudre les équations et inéquations de base et voir l'aspect de ses fonctions dans un repère",
       relativePath: 'les-equations-du-premier-degre',
       chapters: getEquationsFirstDegreeChapters()
     }
     var equationsSecondDegree = {
       id: i++,
-      title: 'Les équations du second degré',
+      title: 'Les équations du 2nd degré',
       metaContent: "Cours sur les équations du second degré : apprendre à résoudre les équations et voir l'aspect de ses fonctions dans un repère",
       relativePath: 'les-equations-du-second-degre',
       chapters: getEquationsSecondDegreeChapters()
