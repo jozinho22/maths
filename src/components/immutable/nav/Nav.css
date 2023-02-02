@@ -6,8 +6,10 @@
   font: inherit;
 }
 
-.CustomNav .navbar-nav {
-  margin-left: 30px;
+@media(min-width: 450px) {
+  .CustomNav .navbar-nav {
+    margin-left: 30px;
+  }
 }
 
 .CustomNav .navbar-brand a {
@@ -117,7 +119,7 @@
 @media (min-width: 450px) {
   .CustomNav .dropdown-item {
     font-size: small !important;
-    width: 300px;
+    width: fit-content;
   }
 }
 
