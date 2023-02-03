@@ -1,13 +1,20 @@
-.UsualFunctionsButtonContainer {
+/* .UsualFunctionsButtonContainer {
     display: flex;
-}
+} */
 
 @media (min-width: 450px) {
     .UsualFunctionsButtonsContainer {
         position: fixed;
         width: 20%;
-        align-items: center;
-        flex-direction: column;
+/*         align-items: center;
+        flex-direction: column; */
+        top: 30%;
+    }
+    .UsualFunctionsButtonsContainer.Left {
+        left: 0%;
+    }
+    .UsualFunctionsButtonsContainer.Right {
+        right: 0%;
     }
 }
 
@@ -39,7 +46,7 @@
     text-decoration: underline;
     color: var(--simple-text-color);
     padding-top: 10px;
-    text-align: center;
+    text-align: center !important;
 }
 
 .FunctionAttributesValue {
@@ -90,17 +97,17 @@
 }
 
 .GraphTitle {
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 40px !important;
+    margin-bottom: 40px !important;
 }
 
 .CoursesContainer .recharts-wrapper {
-    left: 15%;
+    left: 25%;
 }
 
 @media (width < 450px) {
     .CoursesContainer .recharts-wrapper {
-        left: 0%;
+        left: -5%;
     }
 }
 

@@ -3,7 +3,6 @@ import Home from './components/home/Home';
 import CoursesTableOfContents from './components/courses/CoursesTableOfContents';
 import ChaptersTableOfContents from './components/courses/ChaptersTableOfContents';
 import GenericChapter from './components/courses/GenericChapter';
-import LesFonctionsUsuelles from './components/courses/usual-functions/LesFonctionsUsuelles';
 import PdfTableOfContents from './components/pdf-viewer/PdfTableOfContents';
 import PDFViewerPage from './components/pdf-viewer/PDFViewerPage';
 import GamesTableOfContents from './components/games/GamesTableOfContents';
@@ -35,7 +34,6 @@ const AppRoutes = ( {courseItems, pdfItems, gameItems} ) => {
                                     element={<GenericChapter chapter={chapter} courseItem={courseItem} />} />
                     })
                 ))}
-                <Route path="/cours/les-fonctions-usuelles" element={<LesFonctionsUsuelles />} />
                 <Route path="/bds-de-jpp" element={<PdfTableOfContents pdfItems={pdfItems} />} />
                 {pdfItems.map(pdfItem => (
                     <Route 

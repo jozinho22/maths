@@ -2,12 +2,12 @@ import getCrossProductsChapters from './cross-product/getCrossProductsChapters';
 import getPowersChapters from './powers/getPowersChapters';
 import getEquationsFirstDegreeChapters from './equations-first-degree/getEquationsFirstDegreeChapters';
 import getEquationsSecondDegreeChapters from './equations-second-degree/getEquationsSecondDegreeChapters';
-
 import getPythagoreChapters from './pythagore/getPythagoreChapters';
 import getPiChapters from './pi/getChapters';
 import getGoldenRatioChapters from './nbOr/getGoldenRatioChapters';
 import getTrigoChapters from './trigo/getTrigoChapters';
 import getShapesChapters from './shapes/getShapesChapters';
+import getUsualFunctionsChapters from './usual-functions/getUsualFunctionsChapters';
 
 function coursesResourceBuilder() {
 
@@ -73,9 +73,16 @@ function coursesResourceBuilder() {
     var shapes = {
       id: i++,
       title: 'Les formes',
-      metaContent: "Les formes : les différentes formes usuelles (carré, cube, cercle, triangle...etc) et le calcul des aires et volumes",
+      metaContent: "Les formes : les formes usuelles (carré, cube, cercle, triangle...etc) et le calcul des aires et volumes",
       relativePath: 'les-formes',
       chapters: getShapesChapters()
+    }
+    var usualFunctions = {
+      id: i++,
+      title: 'Les fonctions usuelles',
+      metaContent: "Les fonctions usuelles : les fonctions usuelles (carrée, cube, racine carrée, exponentielle, cosinus, sinus...etc) et leur représentation sur un repère",
+      relativePath: 'les-fonctions-usuelles',
+      chapters: getUsualFunctionsChapters()
     }
 
     coursesItems.push(
@@ -87,7 +94,8 @@ function coursesResourceBuilder() {
         pi, 
         nbOr,
         trigo,
-        shapes
+        shapes,
+        usualFunctions
     );
 
     return coursesItems;

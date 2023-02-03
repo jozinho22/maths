@@ -9,6 +9,13 @@
     align-items: center; */
 }
 
+@media(width < 450px) {
+    .RelativeContainer {
+        padding-top: calc(100px);
+    }
+    
+}
+
 .RelativeContainer.PlayMode {
     padding-top: 40px;
     padding-bottom: 40px;
@@ -46,9 +53,9 @@ a:hover {
     margin: 0 auto;
     padding-top: 20px;
     padding-bottom: 40px;
-    width: fit-content;
+    /* width: fit-content; */
     font-size: large !important;
-    text-align: center;
+    text-align: center !important;
 }
 
 .Title1, .Title2 {
@@ -71,7 +78,7 @@ a:hover {
 
 @media (min-width: 450px) {
     .MainTitle {
-        font-size: x-large !important;
+        font-size: large !important;
     }
     .Title {
         font-size: x-large !important;
@@ -326,14 +333,6 @@ a:-webkit-any-link {
     font-size: medium !important;
     text-align: center !important;
     margin-top: 30px;
-}
-
-.Left {
-    left: 0px;
-}
-
-.Right {
-    right: 0px;
 }
 
 /* Tables */

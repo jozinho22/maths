@@ -3,16 +3,16 @@ import { useLocation } from 'react-router-dom';
 
 import { Container, Button } from "react-bootstrap";
 import { LineChart, XAxis, YAxis, ReferenceLine, ResponsiveContainer, Tooltip, Line } from 'recharts';
-import LoadingContext from "../../context/LoadingContext";
-import MathJaxDisplay from '../../mathjax-display/MathJaxDisplay';
-import buildUsualFunctions from "./buildUsualFunctions";
+import LoadingContext from "../../../context/LoadingContext";
+import MathJaxDisplay from '../../../mathjax-display/MathJaxDisplay';
+import buildUsualFunctions from "../buildUsualFunctions";
 
-import CustomHelmet from "../../immutable/seo/CustomHelmet";
+import CustomHelmet from "../../../immutable/seo/CustomHelmet";
 import Fractionnal from 'fractional';
 
-import './LesFonctionsUsuelles.css';
+import '../UsualFunctions.css';
 
-const LesFonctionsUsuelles = () => {
+const AspectDesFonctionsUsuelles = () => {
 
     var title = 'Les fonctions usuelles';
     var metaContent = "Les fonctions usuelles : les différentes fonctions usuelles (carré, cube, sinus, cosinus, exp...etc) et leur réprésention sur un axe ainsi que leur caractéritiques"
@@ -79,7 +79,7 @@ const LesFonctionsUsuelles = () => {
     }
 
     const getDerivativeExp = (derivative) => {
-        return "\\(\\frac{d(f(x))}{dx} = " + derivative + " \\)";
+        return "\\(f'(x) = " + derivative + " \\)";
     }
 
     const getPrimitiveExp = (primitive) => {
@@ -202,4 +202,4 @@ const LesFonctionsUsuelles = () => {
     );
 }
 
-export default LesFonctionsUsuelles;
+export default AspectDesFonctionsUsuelles;

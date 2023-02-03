@@ -53,12 +53,6 @@ const Header = ( {courseItems, pdfItems, gameItems} ) => {
                                     </NavLink>
                                 </NavDropdown.Item>
                             )}
-                            <NavDropdown.Divider />
-                            <NavDropdown.Item onClick={() => {retractToggleOnMobile()}}>                              
-                                <NavLink to={`/cours/les-fonctions-usuelles`} >
-                                    Les fonctions usuelles
-                                </NavLink>
-                            </NavDropdown.Item>
                         </NavDropdown> 
                         <NavDropdown title="BDs de Jean-Pierre Petit">
                             {pdfItems.map(pdfItem => 

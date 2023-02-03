@@ -21,20 +21,20 @@ const Presentation = () => {
         <>
             <p>Le nombre <MathJaxInline toShow={"$ \\pi $"} /> (pi), aussi appelée constante d'Archimède, est un nombre qui permet de mesurer le périmètre ou l'aire d'un cercle.</p>  
             <p>Pour le périmètre : </p>
-            <MathJaxDisplay toShow={pCercle} />
-                <Container className="Focus">
+            <MathJaxDisplay toShow={pCercle} demo />
+            <Container className="Focus">
                 <MathJaxDisplay toShow={p} />
             </Container>
             <p>Soit</p>
-            <MathJaxDisplay toShow={piP} />
+            <MathJaxDisplay toShow={piP} demo />
 
             <p>Et pour la surface : </p>
-            <MathJaxDisplay toShow={sCercle} />
+            <MathJaxDisplay toShow={sCercle} demo/>
             <Container className="Focus">
                 <MathJaxDisplay toShow={piS2} />
                 </Container>
                 <p>Soit</p>
-            <MathJaxDisplay toShow={piS} />
+            <MathJaxDisplay toShow={piS} demo />
             
             <p>C'est l'une des constantes les plus importantes des mathématiques, car on la retrouve impliquée dans de nombreuses formules.</p>
             <p>

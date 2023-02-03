@@ -11,55 +11,17 @@
     <lastmod>2023-01-23T18:44:36+00:00</lastmod>
     <priority>1.00</priority>
   </url>
+
+  <!-- Cours -->
   <url>
-    <loc>https://ma-thematique.netlify.app/liens</loc>
+    <loc>https://ma-thematique.netlify.app/cours</loc>
     <lastmod>2023-01-23T18:44:36+00:00</lastmod>
-    <priority>0.80</priority>
+    <priority>1.00</priority>
   </url>
   <url>
     <loc>https://ma-thematique.netlify.app/cours/le-produit-en-croix</loc>
     <lastmod>2023-01-23T18:44:36+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://ma-thematique.netlify.app/cours/les-puissances</loc>
-    <lastmod>2023-01-23T18:44:36+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://ma-thematique.netlify.app/cours/le-theoreme-de-pythagore</loc>
-    <lastmod>2023-01-23T18:44:36+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://ma-thematique.netlify.app/cours/le-nombre-pi</loc>
-    <lastmod>2023-01-23T18:44:36+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://ma-thematique.netlify.app/cours/le-nombre-d-or</loc>
-    <lastmod>2023-01-23T18:44:36+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://ma-thematique.netlify.app/cours/la-trigonometrie</loc>
-    <lastmod>2023-01-23T18:44:36+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://ma-thematique.netlify.app/cours/les-formes</loc>
-    <lastmod>2023-01-23T18:44:36+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://ma-thematique.netlify.app/cours/les-fonctions-usuelles</loc>
-    <lastmod>2023-01-23T18:44:36+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://ma-thematique.netlify.app/contact</loc>
-    <lastmod>2023-01-23T18:44:36+00:00</lastmod>
-    <priority>0.80</priority>
+    <priority>0.64</priority>
   </url>
   <url>
     <loc>https://ma-thematique.netlify.app/cours/le-produit-en-croix/presentation</loc>
@@ -73,6 +35,12 @@
   </url>
   <url>
     <loc>https://ma-thematique.netlify.app/cours/le-produit-en-croix/exercices</loc>
+    <lastmod>2023-01-23T18:44:36+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+
+  <url>
+    <loc>https://ma-thematique.netlify.app/cours/les-puissances</loc>
     <lastmod>2023-01-23T18:44:36+00:00</lastmod>
     <priority>0.64</priority>
   </url>
@@ -121,6 +89,54 @@
     <lastmod>2023-01-23T18:44:36+00:00</lastmod>
     <priority>0.64</priority>
   </url>
+
+  <url>
+    <loc>https://ma-thematique.netlify.app/cours/les-equations-du-premier-degre/</loc>
+    <lastmod>2023-01-23T18:44:36+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://ma-thematique.netlify.app/cours/les-equations-du-premier-degre/resolution-d-equations-du-premier-degre</loc>
+    <lastmod>2023-01-23T18:44:36+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://ma-thematique.netlify.app/cours/les-equations-du-premier-degre/aspect-des-equations-du-premier-degre</loc>
+    <lastmod>2023-01-23T18:44:36+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://ma-thematique.netlify.app/cours/les-equations-du-premier-degre/resolution-d-inequations-du-premier-degre</loc>
+    <lastmod>2023-01-23T18:44:36+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://ma-thematique.netlify.app/cours/les-equations-du-second-degre</loc>
+    <lastmod>2023-01-23T18:44:36+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://ma-thematique.netlify.app/cours/les-equations-du-second-degre/resolution-d-equations-du-second-degre</loc>
+    <lastmod>2023-01-23T18:44:36+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://ma-thematique.netlify.app/cours/les-equations-du-second-degre/verification-de-la-forme-factorisee</loc>
+    <lastmod>2023-01-23T18:44:36+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://ma-thematique.netlify.app/cours/les-equations-du-second-degre/relation-entre-coefficients-et-racines</loc>
+    <lastmod>2023-01-23T18:44:36+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://ma-thematique.netlify.app/cours/le-theoreme-de-pythagore</loc>
+    <lastmod>2023-01-23T18:44:36+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
   <url>
     <loc>https://ma-thematique.netlify.app/cours/le-theoreme-de-pythagore/presentation</loc>
     <lastmod>2023-01-23T18:44:36+00:00</lastmod>
@@ -146,6 +162,12 @@
     <lastmod>2023-01-23T18:44:36+00:00</lastmod>
     <priority>0.64</priority>
   </url>
+
+  <url>
+    <loc>https://ma-thematique.netlify.app/cours/le-nombre-pi</loc>
+    <lastmod>2023-01-23T18:44:36+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
   <url>
     <loc>https://ma-thematique.netlify.app/cours/le-nombre-pi/presentation</loc>
     <lastmod>2023-01-23T18:44:36+00:00</lastmod>
@@ -158,6 +180,12 @@
   </url>
   <url>
     <loc>https://ma-thematique.netlify.app/cours/le-nombre-pi/autres-formules</loc>
+    <lastmod>2023-01-23T18:44:36+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+
+  <url>
+    <loc>https://ma-thematique.netlify.app/cours/le-nombre-d-or</loc>
     <lastmod>2023-01-23T18:44:36+00:00</lastmod>
     <priority>0.64</priority>
   </url>
@@ -183,6 +211,12 @@
   </url>
   <url>
     <loc>https://ma-thematique.netlify.app/cours/le-nombre-d-or/formules-generales</loc>
+    <lastmod>2023-01-23T18:44:36+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+
+  <url>
+    <loc>https://ma-thematique.netlify.app/cours/la-trigonometrie</loc>
     <lastmod>2023-01-23T18:44:36+00:00</lastmod>
     <priority>0.64</priority>
   </url>
@@ -231,6 +265,12 @@
     <lastmod>2023-01-23T18:44:36+00:00</lastmod>
     <priority>0.64</priority>
   </url>
+
+  <url>
+    <loc>https://ma-thematique.netlify.app/cours/les-formes</loc>
+    <lastmod>2023-01-23T18:44:36+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
   <url>
     <loc>https://ma-thematique.netlify.app/cours/les-formes/le-carre-le-cube</loc>
     <lastmod>2023-01-23T18:44:36+00:00</lastmod>
@@ -250,6 +290,29 @@
     <loc>https://ma-thematique.netlify.app/cours/les-formes/le-triangle</loc>
     <lastmod>2023-01-23T18:44:36+00:00</lastmod>
     <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://ma-thematique.netlify.app/cours/les-formes/le-cone</loc>
+    <lastmod>2023-01-23T18:44:36+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+
+  <url>
+    <loc>https://ma-thematique.netlify.app/cours/les-fonctions-usuelles</loc>
+    <lastmod>2023-01-23T18:44:36+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://ma-thematique.netlify.app/cours/les-fonctions-usuelles/aspect-des-fonctions-usuelles</loc>
+    <lastmod>2023-01-23T18:44:36+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- Bds de JPP -->
+  <url>
+    <loc>https://ma-thematique.netlify.app/bds-de-jpp</loc>
+    <lastmod>2023-01-23T18:44:36+00:00</lastmod>
+    <priority>1.00</priority>
   </url>
   <url>
     <loc>https://ma-thematique.netlify.app/bds-de-jpp/l-aspirisouffle</loc>
@@ -321,6 +384,13 @@
     <lastmod>2022-10-09T16:34:11+00:00</lastmod>
     <priority>0.64</priority>
   </url>
+
+  <!-- Jeux -->
+  <url>
+    <loc>https://ma-thematique.netlify.app/jeux</loc>
+    <lastmod>2022-10-09T16:34:11+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
   <url>
     <loc>https://ma-thematique.netlify.app/jeux/reviser-ses-tables</loc>
     <lastmod>2022-10-09T16:34:11+00:00</lastmod>
@@ -329,6 +399,20 @@
   <url>
     <loc>https://ma-thematique.netlify.app/jeux/additionner</loc>
     <lastmod>2022-01-23T14:40:11+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+
+  <!-- Liens -->
+  <url>
+    <loc>https://ma-thematique.netlify.app/liens</loc>
+    <lastmod>2022-10-09T16:34:11+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+
+  <!-- Contact -->
+  <url>
+    <loc>https://ma-thematique.netlify.app/contact</loc>
+    <lastmod>2022-10-09T16:34:11+00:00</lastmod>
     <priority>0.64</priority>
   </url>
 </urlset>
