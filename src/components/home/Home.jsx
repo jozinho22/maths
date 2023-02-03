@@ -1,6 +1,6 @@
 import React, {Fragment} from "react";
 import HomeTitleContainer from "./HomeTitleContainer";
-import HomeTableOfContents from "./HomeTableOfContents";
+import HomeDescContainer from "./HomeDescContainer";
 
 import { Container/* , Row, Col */ } from 'react-bootstrap';
 /* import MathJaxDisplay from '../mathjax-display/MathJaxDisplay';
@@ -13,14 +13,19 @@ const Home = () => {
     return (
         <Fragment>
             <Container className="Home">
-                <HomeTitleContainer>
+                <Container className="HomeTitleContainer">
                     Ma thématique
-                </HomeTitleContainer>
-                <HomeTableOfContents>
-                    <div className="TableOfContentsLink" ><NavLink to={'/cours'} ><p>- Des cours de mathématiques sur de nombreux sujets</p></NavLink></div>
-                    <div className="TableOfContentsLink" ><NavLink to={'/bds-de-jpp'} ><p>- Des BDs de Jean-Pierre Petit</p> </NavLink></div>
-                    <div className="TableOfContentsLink" ><NavLink to={'/jeux'} ><p>- Des petits jeux pour s'entraîner</p>  </NavLink></div>         
-                </HomeTableOfContents>
+                </Container>
+                <Container className="HomeDescContainer">
+                    <p>Ce site est dédié à l'apprentissage des mathématiques pour tous.</p>
+                    <p>
+                        Il comprend <NavLink to={'/cours'}>de nombreux cours</NavLink> allant du collège à la terminale.
+                        {"\n"}
+                        Il comprend de même certaines explications et démonstrations des formules que l'on apprend en cours.
+                    </p>
+                    <p>Je dédie ce site à un grand homme de la science, Jean-Pierre Petit, et je vous partage <NavLink to={'/bds-de-jpp'}>ses bandes dessinées pédagogiques</NavLink> sur le thème de la science avec son accord.</p>
+                    <p>Pour en apprendre plus sur qui je suis, rendez-vous sur <NavLink to={'/contact'}>cette page.</NavLink></p>
+                </Container>
             </Container>  
         </Fragment>
     );

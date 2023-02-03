@@ -101,7 +101,7 @@ const AspectDesFonctionsUsuelles = () => {
                 {
                     ufLeft.map(f => (
                         <Button key={f.id}
-                            className={`DefaultButton UsualFunctionsButton ${f.color}Button`}
+                            className={`DefaultButton UsualFunctionsButton ${f.buttonColor}Button`}
                             onClick={() => setF(usualFunctions[f.id])} >
                             <MathJaxDisplay toShow={getButtonTitle(f.mathJaxTitle)} />
                         </Button>
@@ -112,7 +112,7 @@ const AspectDesFonctionsUsuelles = () => {
                 {
                     ufRight.map(f => (
                         <Button key={f.id}
-                            className={`DefaultButton UsualFunctionsButton ${f.color}Button`}
+                            className={`DefaultButton UsualFunctionsButton ${f.buttonColor}Button`}
                             onClick={() => setF(usualFunctions[f.id])} >
                             <MathJaxDisplay toShow={getButtonTitle(f.mathJaxTitle)} />
                         </Button>
@@ -121,10 +121,10 @@ const AspectDesFonctionsUsuelles = () => {
             </Container>
             { !isEmpty(f) ?
                 <>
-                    <Container className={`GraphTitle Focus${f.color}`}>
+                    <Container className={`GraphTitle Focus${f.buttonColor}`}>
                         <MathJaxDisplay 
                             toShow={getGraphTitle(f.mathJaxTitle)} 
-                            color={f.color}/>    
+                            color={f.buttonColor}/>    
                     </Container>
                     
                     <ResponsiveContainer 
@@ -139,7 +139,7 @@ const AspectDesFonctionsUsuelles = () => {
                             <Line 
                                 type={type} 
                                 dataKey="y" 
-                                stroke={f.color === "Default" ? 'blue' : f.color} 
+                                stroke={f.graphColor} 
                                 dot={false} />
                             <XAxis 
                                 dataKey="x" 
@@ -158,21 +158,21 @@ const AspectDesFonctionsUsuelles = () => {
                         <div className="FunctionAttributesValue">
                             <MathJaxDisplay 
                             toShow={f.definition} 
-                            color={f.color}/> 
+                            color={f.buttonColor}/> 
                         </div> 
 
                         <p className="FunctionAttributesTitle">Dérivée</p> 
                         <div className="FunctionAttributesValue">
                             <MathJaxDisplay 
                                 toShow={getDerivativeExp(f.derivative)} 
-                                color={f.color}/>    
+                                color={f.buttonColor}/>    
                         </div>
 
                         <p className="FunctionAttributesTitle">Primitives</p> 
                         <div className="FunctionAttributesValue">
                             <MathJaxDisplay 
                                 toShow={getPrimitiveExp(f.primitive)} 
-                                color={f.color}/> 
+                                color={f.buttonColor}/> 
                         </div>
 
                         <p className="FunctionAttributesTitle">Limites</p> 
@@ -183,14 +183,14 @@ const AspectDesFonctionsUsuelles = () => {
                                     <div key={limit.id} className="FunctionAttributesValue">
                                         <MathJaxDisplay  
                                             toShow={getLimitExp(limit.where, limit.value)} 
-                                            color={f.color}/> 
+                                            color={f.buttonColor}/> 
                                     </div>
                                 )) 
                                 
                                     :   <div className="FunctionAttributesValue">
                                             <MathJaxDisplay 
                                                 toShow={"\\(\\varnothing\\)"} 
-                                                color={f.color}/> 
+                                                color={f.buttonColor}/> 
                                         </div>
                         }
                    

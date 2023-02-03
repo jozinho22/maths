@@ -40,8 +40,6 @@
     text-align: center;
 }
 
-
-
 .FunctionAttributesTitle {
     text-decoration: underline;
     color: var(--simple-text-color);
@@ -55,6 +53,17 @@
     transform : translateX(-50%);
     width: fit-content;
 }
+
+.FunctionAttributesValue mjx-math {
+    font-size: 25px !important;
+}
+
+@media(width < 450px) {
+    .FunctionAttributesValue mjx-math {
+        font-size: 20px !important;
+    }
+}
+
 
 .UsualFunctionsButton mjx-container {
     display: flex !important; 

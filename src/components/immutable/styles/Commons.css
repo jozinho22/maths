@@ -1,7 +1,7 @@
 .RelativeContainer {
     position: relative;
     padding-top: calc(100px + 20px);
-    padding-bottom: calc(100px + 60px); 
+    padding-bottom: calc(100px + 20px); 
     min-height: 100vh;
     color: var(--simple-text-color);
     /* display: flex;
@@ -48,6 +48,11 @@ a:hover {
     position: relative;
     text-decoration: underline;
 }
+
+.Title {
+    text-align:center !important;
+}
+
 
 .MainTitle, .Title {
     margin: 0 auto;

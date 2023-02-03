@@ -37,7 +37,9 @@ const Footer = () => {
                             }} >   
                             {
                                 fonts.map(font => (
-                                    <NavDropdown.Item key={font.id}
+                                    <NavDropdown.Item 
+                                        key={font.id}
+                                        id="font-dropdown-item"
                                         className={font.name}
                                         eventKey={font.name}>
                                         {font.name}

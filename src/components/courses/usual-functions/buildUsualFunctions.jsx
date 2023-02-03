@@ -3,14 +3,31 @@ const buildUsualFunctions = () => {
     var i = -1;
     var j = -1;
 
-    const getFunctionColor = (id) => {
+    const getFunctionButtonColor = (id) => {
         var modulo = 3;
+        //"#4365ad"
         if(id % modulo === 0) {
             return "Default";
+            //"#54854d"
         } else if(id % modulo === 1) {
             return "Green";
+            //"#854242"
         } else if(id % modulo === 2) {
             return "Red";
+        } 
+    } 
+
+    const getFunctionGraphColor = (id) => {
+        var modulo = 3;
+        //"#4365ad"
+        if(id % modulo === 0) {
+            return "#4365ad";
+            //"#54854d"
+        } else if(id % modulo === 1) {
+            return "#54854d";
+            //"#854242"
+        } else if(id % modulo === 2) {
+            return "#854242";
         } 
     } 
 
@@ -18,7 +35,8 @@ const buildUsualFunctions = () => {
             {
                 id: ++i,
                 mathJaxTitle: "x^2",
-                color: getFunctionColor(i),
+                buttonColor: getFunctionButtonColor(i),
+                graphColor: getFunctionGraphColor(i),
                 formula: (x) => {return x*x},
                 definition: "\\(\\xi = ]-\\infty; +\\infty[ \\hspace{4cm} (\\mathbb{R} )\\)",
                 derivative: "2x",
@@ -45,7 +63,8 @@ const buildUsualFunctions = () => {
             {
                 id: ++i,
                 mathJaxTitle: "x^3",
-                color: getFunctionColor(i),
+                buttonColor: getFunctionButtonColor(i),
+                graphColor: getFunctionGraphColor(i),
                 formula: (x) => {return x*x*x},
                 definition: "\\(\\xi = ]-\\infty; +\\infty[ \\hspace{4cm} (\\mathbb{R}) \\)",
                 derivative: "3x^2",
@@ -72,7 +91,8 @@ const buildUsualFunctions = () => {
             {
                 id: ++i,
                 mathJaxTitle: "\\sqrt(x)",
-                color: getFunctionColor(i),
+                buttonColor: getFunctionButtonColor(i),
+                graphColor: getFunctionGraphColor(i),
                 formula: (x) => {return Math.sqrt(x)},
                 definition: "\\(\\xi = [ 0 ; +\\infty[ \\hspace{4cm} (\\mathbb{R^+}) \\)",
                 derivative: "\\frac{1}{2\\sqrt{x}}",
@@ -95,7 +115,8 @@ const buildUsualFunctions = () => {
             {
                 id: ++i,
                 mathJaxTitle: "e^x",
-                color: getFunctionColor(i),
+                buttonColor: getFunctionButtonColor(i),
+                graphColor: getFunctionGraphColor(i),
                 formula: (x) => {return Math.exp(x)},
                 definition: "\\(\\xi = ]-\\infty ; +\\infty[  \\hspace{4cm}(\\mathbb{R})\\)",
                 derivative: "e^x",
@@ -122,7 +143,8 @@ const buildUsualFunctions = () => {
             {
                 id: ++i,
                 mathJaxTitle: "ln(x)",
-                color: getFunctionColor(i),
+                buttonColor: getFunctionButtonColor(i),
+                graphColor: getFunctionGraphColor(i),
                 formula: (x) => {return Math.log(x)},
                 definition: "\\(\\xi = ] 0 ; +\\infty[ \\hspace{4cm} (\\mathbb{R^{+*}}) \\)",
                 derivative: "\\frac{1}{x}",
@@ -150,7 +172,8 @@ const buildUsualFunctions = () => {
             {
                 id: ++i,
                 mathJaxTitle: "\\frac{1}{x}",
-                color: getFunctionColor(i),
+                buttonColor: getFunctionButtonColor(i),
+                graphColor: getFunctionGraphColor(i),
                 formula: (x) => {return 1 / x},
                 definition: "\\(\\xi =  ]-\\infty ; 0[\\bigcup] 0 ; +\\infty[ \\hspace{4cm} (\\mathbb{R^{*}})\\)",
                 derivative: "-\\frac{1}{x^2}",
@@ -180,14 +203,15 @@ const buildUsualFunctions = () => {
                 scale : 100,
                 step : 1,
                 width: 150,
-                xInterval: 9,
+                xInterval: 10,
                 exclude: 0,
                 aspect: 1
             },
             {
                 id: ++i,
                 mathJaxTitle: "cos(x)",
-                color: getFunctionColor(i),
+                buttonColor: getFunctionButtonColor(i),
+                graphColor: getFunctionGraphColor(i),
                 formula: (x) => {return Math.cos(x)},
                 definition: "\\(\\xi  = ]-\\infty ; +\\infty[ \\hspace{4cm} (\\mathbb{R})\\)",
                 derivative: "-sin(x)",
@@ -204,7 +228,8 @@ const buildUsualFunctions = () => {
             {
                 id: ++i,
                 mathJaxTitle: "sin(x)",
-                color: getFunctionColor(i),
+                buttonColor: getFunctionButtonColor(i),
+                graphColor: getFunctionGraphColor(i),
                 formula: (x) => {return Math.sin(x)},
                 definition: "\\(\\xi = ]-\\infty ; +\\infty[ \\hspace{4cm} (\\mathbb{R})\\)",
                 derivative: "cos(x)",

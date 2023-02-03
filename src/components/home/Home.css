@@ -18,14 +18,16 @@
     color: var(--links-color);
     font-size: large;
     padding: 30px;
-    width: 75%;
+    width: 50%;
     box-shadow: 20px 20px 5px 5px var(--navbar-color);
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 @media (width < 450px) {
     .HomeTitleContainer {
+        top: 10px;
         width: 90%;
+        margin-bottom: 0px;
     }
 /*     .ExpressionsContainer .MathJaxDisplayContainer {
         padding: 25px;
@@ -43,16 +45,21 @@
 }
  */
 
- .Home .TableOfContents {
-    padding-top: 50px;
- }
+.HomeDescContainer {
+    position: relative;
+    top: 60px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+    font: var(--scholar-font);
+    text-align: justify;
+}
 
- .Home .TableOfContentsLink p {
-    font-size: medium !important;
- }
-
- @media(min-width: 450px) {
-    .Home .TableOfContentsLink p {
-        font-size: large !important;
+ 
+@media (max-width: 450px) {
+    .HomeDescContainer {
+        top: 30px;
     }
- }
+}

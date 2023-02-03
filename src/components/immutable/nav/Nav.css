@@ -39,11 +39,11 @@
   padding-right: 20px !important;
 }
 
-@media (width > 450px) {
+/* @media (width > 450px) {
   #nav-item-liens, #nav-item-contact {
     margin-top: 5px
   }
-}
+} */
 
 @media (width < 450px) {
     .CustomNav .nav-item a {
@@ -124,7 +124,3 @@
     width: fit-content;
   }
 }
-
-#theme-dropdown-item {
-    color: var(--simple-text-color) !important;
-} 

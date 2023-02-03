@@ -1,9 +1,15 @@
 .VCardContainer {
-    display: flex;
+/*     display: flex;
     justify-content: center;
-    align-items: stretch;
+    align-items: stretch; */
     overflow: hidden;
     position: relative; 
+}
+
+@media (min-width : 450px) {
+    .VCardContainer {
+        top: 40px;
+    }
 }
 
 .VCardRecto, .VCardVerso  {

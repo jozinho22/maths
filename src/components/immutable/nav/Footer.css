@@ -60,3 +60,12 @@
   cursor: pointer;
 }
 
+#font-dropdown-item {
+    width : 100%;
+    text-align: center;
+} 
+
+#theme-dropdown-item {
+    width : 100%;
+    color: var(--simple-text-color) !important;
+} 
