@@ -14,6 +14,7 @@ const app = <React.StrictMode>
                 </HelmetProvider>
             </React.StrictMode>;
 
+// v.16
 /* 
 const root = document.getElementById('root');
 if(root.hasChildNodes()) {
@@ -25,17 +26,12 @@ if(root.hasChildNodes()) {
 
 // v.18
 const domNode = document.getElementById('root');
-// marre du prerender avec React ^^
-/* if(domNode.hasChildNodes()) {
+if(domNode.hasChildNodes()) {
     hydrateRoot(domNode, app); 
 } else {
     const root = createRoot(domNode);
     root.render(app);
-} */
-
-const root = createRoot(domNode);
-root.render(app);
-
+}
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
