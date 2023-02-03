@@ -52,7 +52,7 @@ const getPowersChapters = () => {
         {
             id: k++,
             component: <AutresFormulesGenerales />,
-            title: 'Autre formules générales',
+            title: 'Autres formules générales',
             relativePath: 'autres-formules'
         },
         {

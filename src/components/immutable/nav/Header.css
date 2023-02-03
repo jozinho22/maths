@@ -4,7 +4,7 @@
     
 }
 
-@media(min-width: 450px) {
+@media(min-width: 1000px) {
     .CustomHeader {
         height: 100px;
     }
@@ -17,4 +17,26 @@
 .CustomHeader .navbar-toggler {
     margin-right: 20px;
 } 
+
+
+@media (width > 1000px) {
+  #nav-item-liens, #nav-item-contact {
+    margin-top: -5px
+  }
+}
+
+@media (width < 1000px) {
+    .CustomNav .nav-item.dropdown  {
+      padding-top: 10px !important;
+      padding-bottom: 10px !important;
+    }
+    #nav-item-liens, #nav-item-contact {
+      padding-top: 10px !important;
+      padding-bottom: 10px !important;
+    }
+    #nav-item-contact {
+      margin-bottom: 10px !important;
+    }
+
+}
 

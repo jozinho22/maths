@@ -122,6 +122,6 @@
     font-family: 'x-mas';
     font-style: normal;
     font-weight: normal;
-    size-adjust: 220%;
+    size-adjust: 250%;
     src: local('Xmas'), url('./fonts/x-mas.otf') format('opentype');
 }
