@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 const HomeTableOfContents = styled.span
     `   position: relative;
-        top: 120px;
+        top: 100px;
         padding: 30px;
         padding-left: 25%;
         display: flex;
@@ -12,7 +12,7 @@ const HomeTableOfContents = styled.span
 
         @media (max-width: 450px) {
             padding-left: 8%;
-            top: 100px;
+            top: 50px;
         }
     `
 ;

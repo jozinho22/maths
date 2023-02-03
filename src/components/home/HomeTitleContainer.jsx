@@ -9,12 +9,11 @@ const HomeTitleContainer = styled.span
         font-size: large;
         padding: 30px;
         box-shadow: 20px 20px 5px 5px var(--navbar-color);
-        margin-bottom: 100px;
+        display: inline-block;
 
         @media (min-width: 450px) {
             top: 50px;
             width: 400px;
-            display: inline-block;
         }
     `
 ;
