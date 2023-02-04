@@ -1,8 +1,5 @@
-import React, {Fragment} from "react";
-import HomeTitleContainer from "./HomeTitleContainer";
-import HomeDescContainer from "./HomeDescContainer";
 import MathJaxInline from "../mathjax-display/MathJaxInline";
-import { Container/* , Row, Col */ } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
 /* import MathJaxDisplay from '../mathjax-display/MathJaxDisplay';
 import useFunctionsExpressions from './useFunctionsExpressions'; */
 import { NavLink } from 'react-router-dom';
@@ -11,7 +8,7 @@ import './Home.css';
 const Home = () => {
   
     return (
-        <Fragment>
+        <>
             <Container className="Home">
                 <Container className="HomeTitleContainer">
                     Ma thématique
@@ -29,7 +26,7 @@ const Home = () => {
                     <p>Pour en apprendre plus sur qui je suis, rendez-vous sur <NavLink to={'/contact'}>cette page.</NavLink></p>
                 </Container>
             </Container>  
-        </Fragment>
+        </>
     );
 }
 

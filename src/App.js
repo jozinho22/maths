@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 
 import { BrowserRouter } from 'react-router-dom';
 import { Container } from 'react-bootstrap';
@@ -11,10 +11,7 @@ import './components/alert/Alert.css';
 import './App.css';
 
 import AppContext from './components/context/AppContext';
-import LoadingContext from './components/context/LoadingContext';
-
 import BlurryingSpinner from './components/immutable/spinners/BlurryingSpinner';
-import useIsLoading from './components/immutable/spinners/useIsLoading';
 
 import Header from './components/immutable/nav/Header';
 import Footer from './components/immutable/nav/Footer';
@@ -29,8 +26,6 @@ import AppRoutes from './AppRoutes';
 
 function App() {
 
-    const [isLoading, setIsLoading] = React.useState(true);
-
     const [font, setFont] = React.useState(getFontIfStoredFontExists(JSON.parse(sessionStorage.getItem('ma-thematique-font'))) ? JSON.parse(sessionStorage.getItem('ma-thematique-font')) : getRandomFont());
     const [playMode, setPlayMode] = React.useState(false);
     const [theme, setTheme] = React.useState(getThemeIfStoredThemeExists(JSON.parse(sessionStorage.getItem('ma-thematique-theme'))) ? JSON.parse(sessionStorage.getItem('ma-thematique-theme')) : "Brazil");
@@ -44,13 +39,6 @@ function App() {
         updateTheme: setTheme
     }
 
-    const loadingContext = {
-        isLoading: isLoading,
-        updateIsLoading: setIsLoading
-    }
-
-    useIsLoading(isLoading, setIsLoading);
-
     var courseItems = coursesResourceBuilder();
     var pdfItems = pdfResourceBuilder();
     var gameItems = gamesResourceBuilder();
@@ -58,18 +46,17 @@ function App() {
     return ( 
         <div className="App" >     
             <AppContext.Provider value={appContext} > 
-            <LoadingContext.Provider value={loadingContext} >
-                <div className={`${theme} ${font} CopyBook`}>
-                    <BrowserRouter>
-                        {isLoading ? <BlurryingSpinner /> : ''}
-                        <Header courseItems = {courseItems} pdfItems ={pdfItems} gameItems={gameItems} /> 
-                            <Container className = {` RelativeContainer ${playMode ? "PlayMode" : ''}  ${isLoading ? "Blur" : ''} `} >                           
-                                <AppRoutes courseItems={courseItems} pdfItems={pdfItems} gameItems={gameItems} />
-                            </Container> 
-                        <Footer /> 
-                    </BrowserRouter>
-                </div> 
-            </LoadingContext.Provider>
+                <Suspense fallback={<BlurryingSpinner />}>
+                    <div className={`${theme} ${font} CopyBook`}>
+                        <BrowserRouter>
+                            <Header courseItems = {courseItems} pdfItems ={pdfItems} gameItems={gameItems} /> 
+                                <Container className = {` RelativeContainer ${playMode ? "PlayMode" : ''} `} >                           
+                                    <AppRoutes courseItems={courseItems} pdfItems={pdfItems} gameItems={gameItems} />
+                                </Container> 
+                            <Footer /> 
+                        </BrowserRouter>
+                    </div> 
+                </Suspense>
             </AppContext.Provider> 
         </div>
     );
