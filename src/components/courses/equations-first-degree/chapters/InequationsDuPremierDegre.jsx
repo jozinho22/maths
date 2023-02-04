@@ -2,6 +2,7 @@ import { Container } from 'react-bootstrap';
 import MathJaxDisplay from '../../../mathjax-display/MathJaxDisplay';
 import MathJaxInline from '../../../mathjax-display/MathJaxInline';
 import Link from '../../../immutable/nav/Link';
+import Constants from '../../../immutable/Constants';
 
 const InequationsDuPremierDegre = () => {
 
@@ -11,20 +12,20 @@ const InequationsDuPremierDegre = () => {
     var equBaseLessThanOrEquals0 = "\\(2x + 3 \\leqslant 0\\)";
     var equBaseLessThanOrEquals0WithMinus = "\\(-2x + 3 \\leqslant 0\\)";
 
-    var equBaseMinus3 = "\\(2x + 3 {\\color{#E55151}{ - 3}} \\leqslant 0 {\\color{#E55151}{ - 3}}\\)";
-    var equBaseMinus3WithMinus = "\\(-2x + 3 {\\color{#E55151}{ - 3}} \\leqslant 0 {\\color{#E55151}{ - 3}}\\)";
+    var equBaseMinus3 = `\\(2x + 3 {\\color{${Constants.RED_COLOR}}{ - 3}} \\leqslant 0 {\\color{${Constants.RED_COLOR}}{ - 3}}\\)`;
+    var equBaseMinus3WithMinus = `\\(-2x + 3 {\\color{${Constants.RED_COLOR}}{ - 3}} \\leqslant 0 {\\color{${Constants.RED_COLOR}}{ - 3}}\\)`;
     
     var equBaseMinus32 = "\\(2x \\leqslant - 3\\)";
     var equBaseMinus32WithMinus = "\\(-2x \\leqslant - 3\\)";
 
-    var equBaseMinus32divBy2 = "\\(\\frac{2x}{{\\color{#E55151}{ 2}}} \\leqslant \\frac{-3}{{\\color{#E55151}{ 2}}} \\)";
-    var equBaseMinus32divBy2WithMinus = "\\(\\frac{-2x}{{\\color{#E55151}{ -2}}} \\leqslant \\frac{-3}{{\\color{#E55151}{ -2}}} \\)";
+    var equBaseMinus32divBy2 = `\\(\\frac{2x}{{\\color{${Constants.RED_COLOR}}{ 2}}} \\leqslant \\frac{-3}{{\\color{${Constants.RED_COLOR}}{ 2}}} \\)`;
+    var equBaseMinus32divBy2WithMinus = `\\(\\frac{-2x}{{\\color{${Constants.RED_COLOR}}{ -2}}} \\leqslant \\frac{-3}{{\\color{${Constants.RED_COLOR}}{ -2}}} \\)`;
 
     var equBaseMinus32divBy22 = "\\(x \\leqslant -\\frac{3}{2} \\)";
     var equBaseMinus32divBy22WithMinus = "\\(x \\geqslant -\\frac{3}{2} \\)";
 
     var exampleWithReels = "\\(3 \\leqslant 6\\)";
-    var exampleWithReelsMultByNegativeNumber = "\\(3 \\times {\\color{#E55151}{(-4)}} \\leqslant 6 \\times {\\color{#E55151}{(-4)}}\\)";
+    var exampleWithReelsMultByNegativeNumber = `\\(3 \\times {\\color{${Constants.RED_COLOR}}{(-4)}} \\leqslant 6 \\times {\\color{${Constants.RED_COLOR}}{(-4)}}\\)`;
     var exampleWithReelsMultByNegativeNumber2 = "\\(-12 \\geqslant -24\\)";
 
     var divideEqualsMultiplyByInverse = "\\( \\frac{a}{b} = a \\times \\frac{1}{b} \\)";
@@ -32,8 +33,8 @@ const InequationsDuPremierDegre = () => {
     var descrescantFunc = "\\( j(x) = -ax \\)";
     var descrescantFuncExample = "\\( j(x) = -4x \\)";
     var exampleWithReelsWithFunc = "\\(3 \\leqslant 6\\)";
-    var exampleWithReelsMultByNegativeNumberWithFunc = "\\( {\\color{#E55151}{j(}} 3 {\\color{#E55151}{)}} \\geqslant {\\color{#E55151}{j(}} 6 {\\color{#E55151}{)}} \\)";
-    var exampleWithReelsMultByNegativeNumberWithFunc2 = "\\({\\color{#E55151}{(-4)}} \\times 3 \\geqslant {\\color{#E55151}{(-4)}}  \\times 6  \\)";
+    var exampleWithReelsMultByNegativeNumberWithFunc = `\\( {\\color{${Constants.RED_COLOR}}{j(}} 3 {\\color{${Constants.RED_COLOR}}{)}} \\geqslant {\\color{${Constants.RED_COLOR}}{j(}} 6 {\\color{${Constants.RED_COLOR}}{)}} \\)`;
+    var exampleWithReelsMultByNegativeNumberWithFunc2 = `\\({\\color{${Constants.RED_COLOR}}{(-4)}} \\times 3 \\geqslant {\\color{${Constants.RED_COLOR}}{(-4)}}  \\times 6  \\)`;
 
     return  <>
                 <p>

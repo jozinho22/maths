@@ -8,7 +8,6 @@ const RelationEntreCoefficientsEtRacines = () => {
     var equSecondDegEquivDev = "\\( ax^2 + bx + c = a (x^2 - x.x_2 - x_1.x + x_1.x_2) \\)";
     var equSecondDegEquivDev2 = "\\( ax^2 + bx + c = a (x^2 - x. (x_2 + x_1) + x_1.x_2) \\)";
     var equSecondDegEquivDev3 = "\\( ax^2 + bx + c = a.x^2 - a. (x_2 + x_1).x + a.x_1.x_2) \\)";
-    var equSecondDegEquivDev3 = "\\( ax^2 + bx + c = a.x^2 - a. (x_2 + x_1).x + a.x_1.x_2) \\)";
     var x1PlusX2 = "\\( x_1 + x_2 = -\\frac{b}{a} \\)";
     var x1TimesX2 = "\\( x_1.x_2 = \\frac{c}{a} \\)";
     var equSecondDegreWithSandP = "\\( x^2 -S.x + P = 0 \\)";
@@ -26,11 +25,11 @@ const RelationEntreCoefficientsEtRacines = () => {
                 <MathJaxDisplay toShow={equSecondDegEquivDev3} demo />
                 <p>En identifiant les coefficients, on a les deux équations suivantes : </p>
 
-                <p>La somme <MathJaxInline toShow={"$S$"} /></p>
+                <p>La somme <MathJaxInline toShow={"$S$"} /> : </p>
                 <Container className="Focus">
                     <MathJaxDisplay toShow={x1PlusX2}  />
                 </Container>
-                <p>Le produit <MathJaxInline toShow={"$P$"} /></p>
+                <p>Le produit <MathJaxInline toShow={"$P$"} /> : </p>
                 <Container className="Focus">
                     <MathJaxDisplay toShow={x1TimesX2}  />
                 </Container>

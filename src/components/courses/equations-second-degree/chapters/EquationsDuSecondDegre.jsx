@@ -91,21 +91,22 @@ const EquationsDuSecondDegre = () => {
                 </Container>
                 <p><MathJaxInline toShow={"$x_1$"} /> et <MathJaxInline toShow={"$x_2$"} /> sont alors deux solutions possibles vérifiant <MathJaxInline toShow={"$f(x) = 0$"} />.</p>
                 
-                <p className="Title2">Cas où <MathJaxInline toShow={"$\\Delta > 0$"} /></p>
+                <p className="Title2">Trois cas possibles : </p>
+                <p><MathJaxInline toShow={"$\\underline{\\Delta > 0}$"} /></p>
                 <p>Dans le cas où <MathJaxInline toShow={"$\\Delta > 0$"} />, l'équation admet bien deux solutions distinctes. </p>
                 <p>On alors peut écrire l'équation <MathJaxInline toShow={"$(1)$"} /> sous la forme : </p>
                 <Container className="Focus">
                     <MathJaxDisplay toShow={fact} fRef={6} />
                 </Container>
 
-                <p className="Title2">Cas où <MathJaxInline toShow={"$\\Delta = 0$"} /></p>
+                <p><MathJaxInline toShow={"$\\underline{\\Delta = 0}$"} /></p>
                 <p>Dans le cas où <MathJaxInline toShow={"$\\Delta = 0$"} />, les deux racines sont équivalentes à : </p>
                 <Container className="Focus">
                     <MathJaxDisplay toShow={x0} />
                 </Container>
-                <p>On les appelle des racines doubles.</p>
+                <p>On les appelle racines doubles.</p>
 
-                <p className="Title2">Cas où <MathJaxInline toShow={"$\\Delta < 0$"} /></p>
+                <p><MathJaxInline toShow={"$\\underline{\\Delta < 0}$"} /></p>
                 <p>Dans le cas où <MathJaxInline toShow={"$\\Delta < 0$"} />, l'équation n'a pas de solutions dans <MathJaxInline toShow={"$\\mathbb{R}$"} /> car la fonction <MathJaxInline toShow={"$\\sqrt{x}$"} /> n'est définie que sur <MathJaxInline toShow={"$ [ 0 ; +\\infty[ (\\mathbb{R^+})$"} />. </p>
 
             </>

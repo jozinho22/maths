@@ -160,6 +160,78 @@ a:hover {
     justify-content: center;
 }
 
+@media (max-width: 450px) {
+    .MiniButton {
+        padding: 5px;
+        font-size: small !important;
+    }
+    .TextBetweenNavigationsButtons {
+        font-size: xx-small;
+    }
+}
+
+.RowAlignedButtons {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 10px;
+}
+
+@media (width < 450px) {
+    .RowAlignedButtons {
+        gap: 0px;
+    }
+    .RowAlignedButtons mjx-container {
+        font-size: large !important;
+    }
+}
+
+.DoubleLineButtons {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 20%;
+}
+
+@media (width < 450px) {
+    .DoubleLineButtons {
+        gap: 0px;
+    }
+}
+
+
+.LargeButton {
+    padding: 13px;
+}
+
+.GreenButton {
+    background-color: var(--green-color);
+}
+
+.GreenButton:hover, .GreenButton:focus, .GreenButton:active  {
+    background-color: var(--green-hover-color);
+}
+
+.OrangeButton {
+    background-color: var(--orange-color);
+}
+
+.OrangeButton:hover, .OrangeButton:focus, .OrangeButton:active {
+    background-color: var(--orange-hover-color);
+}
+
+.RedButton {
+    background-color: var(--red-color);
+}
+
+.RedButton:hover, .RedButton:focus, .RedButton:active {
+    background-color: var(--red-hover-color);
+}
+
+/* Table Of Contents */
 .TableOfContents {
     display: flex;
     flex-direction: column;
@@ -173,7 +245,6 @@ a:hover {
         padding-left: 8%;
     }
 }
-
 
 /* @media (min-width: 450px) {
     .TableOfContents {
@@ -207,62 +278,7 @@ a:-webkit-any-link {
     text-decoration: none !important;
 }
 
-@media (max-width: 450px) {
-    .MiniButton {
-        padding: 5px;
-        font-size: small !important;
-    }
-    .TextBetweenNavigationsButtons {
-        font-size: xx-small;
-    }
-}
-
-.RowAlignedButton {
-    display: flex;
-    align-items: stretch;
-    justify-content: space-evenly;
-    align-items: center;
-    gap: 10px;
-}
-
-@media (width < 450px) {
-    .RowAlignedButton {
-        gap: 0px;
-    }
-    .RowAlignedButton mjx-container {
-        font-size: large !important;
-    }
-}
-.LargeButton {
-    padding: 13px;
-}
-
-.GreenButton {
-    background-color: var(--green-color);
-}
-
-.GreenButton:hover, .GreenButton:focus, .GreenButton:active  {
-    background-color: var(--green-hover-color);
-}
-
-.OrangeButton {
-    background-color: var(--orange-color);
-}
-
-.OrangeButton:hover, .OrangeButton:focus, .OrangeButton:active {
-    background-color: var(--orange-hover-color);
-}
-
-.RedButton {
-    background-color: var(--red-color);
-}
-
-.RedButton:hover, .RedButton:focus, .RedButton:active {
-    background-color: var(--red-hover-color);
-}
-
 /* Icons */
-
 .Icon {
     text-align: center;
     width: 20px;

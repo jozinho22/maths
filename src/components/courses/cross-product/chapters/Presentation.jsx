@@ -2,6 +2,7 @@ import React from 'react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
 import MathJaxDisplay from '../../../mathjax-display/MathJaxDisplay';
 import MathJaxInline from '../../../mathjax-display/MathJaxInline';
+import Constants from '../../../immutable/Constants';
 
 const Presentation = () => {
 
@@ -9,13 +10,13 @@ const Presentation = () => {
     var adEqubc = "\\(a.d = b.c\\)";
 
     /* [a, d], [b, c]*/
-    const [abcd, setABCD] = React.useState([['20', '2'], ['10', '4']]);
-    var cross = "\\(\\frac{" + abcd[0][0] + "}{" + abcd[1][0] 
-                + "} = \\frac{" + abcd[1][1] + "}{" + abcd[0][1] + "}\\)";
+    const [abcd, setABCD] = React.useState([[`{\\color{${Constants.BLUE_COLOR}}{20}}`, `{\\color{${Constants.GREEN_COLOR}}{4}}`], [`{\\color{${Constants.ORANGE_COLOR}}{10}}`, `{\\color{${Constants.RED_COLOR}}{2}}`]]);
+    var cross = "\\(\\frac{" + abcd[0][0] + "}{" + abcd[0][1] 
+                + "} = \\frac{" + abcd[1][0] + "}{" + abcd[1][1] + "}\\)";
 
-    const [abcd2, setABCD2] = React.useState([['a', 'd'], ['c', 'b']]);
-    var cross2 = "\\(\\frac{" + abcd2[0][0] + "}{" + abcd2[1][0] 
-                + "} = \\frac{" + abcd2[1][1] + "}{" + abcd2[0][1] + "}\\)";
+    const [abcd2, setABCD2] = React.useState([[`{\\color{${Constants.BLUE_COLOR}}{a}}`, `{\\color{${Constants.GREEN_COLOR}}{b}}`], [`{\\color{${Constants.ORANGE_COLOR}}{c}}`, `{\\color{${Constants.RED_COLOR}}{d}}`]]);
+    var cross2 = "\\(\\frac{" + abcd2[0][0] + "}{" + abcd2[0][1] 
+                + "} = \\frac{" + abcd2[1][0] + "}{" + abcd2[1][1] + "}\\)";
 
     var divByA = "\\(\\frac{a}{b} \\times \\frac{1}{a}= \\frac{c}{d} \\times \\frac{1}{a}\\)";
     var divByAResult = "\\(\\frac{1}{b} = \\frac{c}{ad} \\)";
@@ -101,52 +102,38 @@ const Presentation = () => {
                 <MathJaxDisplay toShow={cross2}/>
                 <MathJaxDisplay toShow={cross}/>
             </Container>
-            <Row>
-                <Col xs={4}>
-                    <Button 
-                        className="DefaultButton OrangeButton MiniButton"
-                        onClick={() => invert( [0,0], [0,1] )}>
-                        Inverser a et d
-                    </Button>
-                </Col>
-                <Col xs={4}>
-                    <Button 
-                        className="DefaultButton MiniButton" 
-                        onClick={() => changeOne( [0,0], [0,1] )}>
-                        Changer a
-                    </Button>
-                </Col>
-                <Col xs={4}>
-                    <Button 
-                        className="DefaultButton MiniButton"
-                        onClick={() => changeOne( [1,0], [1,1] )}>
-                        Changer b
-                    </Button>
-                </Col>
-            </Row>
-            <Row>
-                <Col xs={4}>
-                    <Button 
-                        className="DefaultButton OrangeButton MiniButton"
-                        onClick={() => invert( [1,0], [1,1] )}>
-                        Inverser b et c
-                    </Button>
-                </Col>
-                <Col xs={4}>
-                    <Button 
-                        className="DefaultButton MiniButton" 
-                        onClick={() => changeOne( [1,1], [1,0] )}>
-                        Changer c
-                    </Button>
-                </Col>
-                <Col xs={4}>
-                    <Button 
-                        className="DefaultButton MiniButton"
-                        onClick={() => changeOne( [0,1], [0,0] )}>
-                        Changer d
-                    </Button>
-                </Col>
-            </Row>
+            <div className="DoubleLineButtons">
+                <Button 
+                    className="DefaultButton MiniButton"
+                    onClick={() => invert( [0,0], [1,1] )}>
+                    Inverser a et d
+                </Button>
+                <Button 
+                    className="DefaultButton MiniButton" 
+                    onClick={() => changeOne( [0,0], [1,1] )}>
+                    Changer a
+                </Button>
+                <Button 
+                    className="DefaultButton GreenButton MiniButton"
+                    onClick={() => changeOne( [0,1], [1,0] )}>
+                    Changer b
+                </Button>
+                <Button 
+                    className="DefaultButton MiniButton"
+                    onClick={() => invert( [0,1], [1,0] )}>
+                    Inverser b et c
+                </Button>
+                <Button 
+                    className="DefaultButton OrangeButton MiniButton" 
+                    onClick={() => changeOne( [1,0], [0,1] )}>
+                    Changer c
+                </Button>
+                <Button 
+                    className="DefaultButton RedButton MiniButton"
+                    onClick={() => changeOne( [1,1], [0,0] )}>
+                    Changer d
+                </Button>
+            </div>
 
             <p>Dans ce cas, diviser chaque membre par  <MathJaxInline toShow={"$a$"} /> (ou multiplier par son inverse) revient à le transposer de l'autre côté, au dénominateur.</p>
             <MathJaxDisplay toShow={abcdBase} demo />

@@ -124,7 +124,7 @@ const AspectDesEquationsDuSecondDegre = () => {
              
                 <p>Tentez-vous même de changer les valeurs pour voir comment la droite se comporte dans un repère :</p>
 
-                <div className="RowAlignedButton">
+                <div className="RowAlignedButtons">
                     <Button className="DefaultButton MiniButton" onClick={() => setA(a - 1)} >-</Button>
                     <MathJaxInline toShow={`$a = ${a}$`} />
                     <Button className="DefaultButton MiniButton" onClick={() => setA(a + 1)} >+</Button>

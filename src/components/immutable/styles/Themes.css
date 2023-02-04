@@ -1,7 +1,7 @@
 .App {
-    --blue-color: rgb(67, 101, 173);
+    --blue-color: #4365ad;
     --dark-color: rgb(47, 49, 53);
-    --green-color: rgb(84, 133, 77);
+    --green-color: #54854d;
     --grey-light-color: rgb(179, 178, 177);
     --grey-lighter-color: rgb(218, 218, 218);
     --grey-lighter-transparent-color: rgba(218, 218, 218, 0.459);
@@ -9,9 +9,9 @@
     --grey-color: rgb(117, 118, 119);
     --grey-dark-color: rgb(77, 78, 78);
     --grey-dark-transparent-color: rgba(77, 78, 78, 0.452);
-    --orange-color: rgb(167, 90, 27);
+    --orange-color: #a75a1b;
     --purple-color: rgb(179, 94, 187);
-    --red-color: rgb(133, 66, 66);
+    --red-color: #854242;
     --yellow-color: rgb(201, 193, 85);
     
     --blue-hover-color: rgb(54, 78, 131);

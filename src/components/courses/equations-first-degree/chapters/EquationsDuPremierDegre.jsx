@@ -3,15 +3,15 @@ import { Container } from 'react-bootstrap';
 import MathJaxDisplay from '../../../mathjax-display/MathJaxDisplay';
 import MathJaxInline from '../../../mathjax-display/MathJaxInline';
 import Link from '../../../immutable/nav/Link';
-
+import Constants from '../../../immutable/Constants';
 const EquationsDuPremierDegre = () => {
 
     var equPremierDeg = "\\(f(x) = ax + b\\)";
     var equBase = "\\(f(x) = 2x + 3\\)";
     var equBaseEquals0 = "\\(2x + 3 = 0\\)";
-    var equBaseMinus3 = "\\(2x + 3 {\\color{#E55151}{ - 3}} = 0 {\\color{#E55151}{ - 3}}\\)";
+    var equBaseMinus3 = `\\(2x + 3 {\\color{${Constants.RED_COLOR}}{ - 3}} = 0 {\\color{${Constants.RED_COLOR}}{ - 3}}\\)`;
     var equBaseMinus32 = "\\(2x = - 3\\)";
-    var equBaseMinus32divBy2 = "\\(\\frac{2x}{{\\color{#E55151}{ 2}}} = \\frac{-3}{{\\color{#E55151}{ 2}}} \\)";
+    var equBaseMinus32divBy2 = `\\(\\frac{2x}{{\\color{${Constants.RED_COLOR}}{ 2}}} = \\frac{-3}{{\\color{${Constants.RED_COLOR}}{ 2}}} \\)`;
     var equBaseMinus32divBy22 = "\\(x = -\\frac{3}{2} \\)";
 
     return  <>

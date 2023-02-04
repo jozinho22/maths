@@ -49,8 +49,8 @@ function App() {
                 <Suspense fallback={<BlurryingSpinner />}>
                     <div className={`${theme} ${font} CopyBook`}>
                         <BrowserRouter>
-                            <Header courseItems = {courseItems} pdfItems ={pdfItems} gameItems={gameItems} /> 
-                                <Container className = {` RelativeContainer ${playMode ? "PlayMode" : ''} `} >                           
+                            <Header courseItems={courseItems} pdfItems ={pdfItems} gameItems={gameItems} /> 
+                                <Container className={` RelativeContainer ${playMode ? "PlayMode" : ''} `} >                           
                                     <AppRoutes courseItems={courseItems} pdfItems={pdfItems} gameItems={gameItems} />
                                 </Container> 
                             <Footer /> 
