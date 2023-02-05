@@ -47,7 +47,7 @@ const getGoldenRatioChapters = () => {
             title: 'Quelques formules générales',
             metaContent: 'Quelques formules élégantes pour calculer le nombre d\'or.',
             hiddenTitle: 'Quelques formules générales du calcul du nombre d\'or',
-            relativePath: 'formules-generales'
+            relativePath: 'autres-formules-generales'
         }
     ];
 }

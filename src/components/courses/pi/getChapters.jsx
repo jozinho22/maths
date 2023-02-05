@@ -29,7 +29,7 @@ const getPiChapters = () => {
             title: 'Autre formules générales',
             metaContent: 'Quelques formules élégantes pour calculer le nombre Pi.',
             hiddenTitle: 'Quelques formules générales du calcul du nombre Pi',
-            relativePath: 'autres-formules'
+            relativePath: 'autres-formules-generales'
         }
     ];
 }

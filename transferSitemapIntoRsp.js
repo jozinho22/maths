@@ -5,12 +5,12 @@ var xml = fs.readFileSync('./public/sitemap.xml', 'utf8');
 var inspect = require('util').inspect;
  
 var xmlSitemap = inspect(parse(xml), { colors: true, depth: Infinity })
-console.log(xmlSitemap);
-
+/* console.log(xmlSitemap);
+ */
 var xmlDoc = parse(xml)
 
-console.log(xmlDoc.root.children);
-
+/* console.log(xmlDoc.root.children);
+ */
 var rspJson = {
     routes: [],
     engine : {
@@ -31,7 +31,7 @@ fs.writeFile ('.rsp.json', JSON.stringify(rspJson), function(err) {
     console.log('complete');
 });
 
-fs.writeFile ('routes.json', JSON.stringify(rspJson), function(err) {
+/* fs.writeFile ('routes.json', JSON.stringify(rspJson), function(err) {
     if (err) throw err;
     console.log('complete');
-});
+}); */

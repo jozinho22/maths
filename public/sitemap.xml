@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
   <url>
-    <loc>https://ma-thematique.netlify.app/</loc>
+    <loc>https://ma-thematique.netlify.app</loc>
     <lastmod>2023-01-23T18:44:36+00:00</lastmod>
     <priority>1.00</priority>
   </url>
@@ -18,6 +14,7 @@
     <lastmod>2023-01-23T18:44:36+00:00</lastmod>
     <priority>1.00</priority>
   </url>
+  <!-- Cours : produit en croix -->
   <url>
     <loc>https://ma-thematique.netlify.app/cours/le-produit-en-croix</loc>
     <lastmod>2023-01-23T18:44:36+00:00</lastmod>
@@ -38,7 +35,44 @@
     <lastmod>2023-01-23T18:44:36+00:00</lastmod>
     <priority>0.64</priority>
   </url>
-
+  <!-- Cours : équations du premier degré -->
+  <url>
+    <loc>https://ma-thematique.netlify.app/cours/les-equations-du-premier-degre</loc>
+    <lastmod>2023-01-23T18:44:36+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://ma-thematique.netlify.app/cours/les-equations-du-premier-degre/resolution-d-equations-du-premier-degre</loc>
+    <lastmod>2023-01-23T18:44:36+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://ma-thematique.netlify.app/cours/les-equations-du-premier-degre/aspect-des-equations-du-premier-degre</loc>
+    <lastmod>2023-01-23T18:44:36+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://ma-thematique.netlify.app/cours/les-equations-du-premier-degre/resolution-d-inequations-du-premier-degre</loc>
+    <lastmod>2023-01-23T18:44:36+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <!-- Cours : équations du second degré -->
+  <url>
+    <loc>https://ma-thematique.netlify.app/cours/les-equations-du-second-degre</loc>
+    <lastmod>2023-01-23T18:44:36+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://ma-thematique.netlify.app/cours/les-equations-du-second-degre/resolution-d-equations-du-second-degre</loc>
+    <lastmod>2023-01-23T18:44:36+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://ma-thematique.netlify.app/cours/les-equations-du-second-degre/relation-entre-coefficients-et-racines</loc>
+    <lastmod>2023-01-23T18:44:36+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <!-- Cours : puissances -->
   <url>
     <loc>https://ma-thematique.netlify.app/cours/les-puissances</loc>
     <lastmod>2023-01-23T18:44:36+00:00</lastmod>
@@ -89,44 +123,7 @@
     <lastmod>2023-01-23T18:44:36+00:00</lastmod>
     <priority>0.64</priority>
   </url>
-
-  <url>
-    <loc>https://ma-thematique.netlify.app/cours/les-equations-du-premier-degre/</loc>
-    <lastmod>2023-01-23T18:44:36+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://ma-thematique.netlify.app/cours/les-equations-du-premier-degre/resolution-d-equations-du-premier-degre</loc>
-    <lastmod>2023-01-23T18:44:36+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://ma-thematique.netlify.app/cours/les-equations-du-premier-degre/aspect-des-equations-du-premier-degre</loc>
-    <lastmod>2023-01-23T18:44:36+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://ma-thematique.netlify.app/cours/les-equations-du-premier-degre/resolution-d-inequations-du-premier-degre</loc>
-    <lastmod>2023-01-23T18:44:36+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
-
-  <url>
-    <loc>https://ma-thematique.netlify.app/cours/les-equations-du-second-degre</loc>
-    <lastmod>2023-01-23T18:44:36+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://ma-thematique.netlify.app/cours/les-equations-du-second-degre/resolution-d-equations-du-second-degre</loc>
-    <lastmod>2023-01-23T18:44:36+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://ma-thematique.netlify.app/cours/les-equations-du-second-degre/relation-entre-coefficients-et-racines</loc>
-    <lastmod>2023-01-23T18:44:36+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
-
+  <!-- Cours : pythagore -->
   <url>
     <loc>https://ma-thematique.netlify.app/cours/le-theoreme-de-pythagore</loc>
     <lastmod>2023-01-23T18:44:36+00:00</lastmod>
@@ -157,7 +154,7 @@
     <lastmod>2023-01-23T18:44:36+00:00</lastmod>
     <priority>0.64</priority>
   </url>
-
+  <!-- Cours : pi -->
   <url>
     <loc>https://ma-thematique.netlify.app/cours/le-nombre-pi</loc>
     <lastmod>2023-01-23T18:44:36+00:00</lastmod>
@@ -174,11 +171,11 @@
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://ma-thematique.netlify.app/cours/le-nombre-pi/autres-formules</loc>
+    <loc>https://ma-thematique.netlify.app/cours/le-nombre-pi/autres-formules-generales</loc>
     <lastmod>2023-01-23T18:44:36+00:00</lastmod>
     <priority>0.64</priority>
   </url>
-
+  <!-- Cours : nombre d'or -->
   <url>
     <loc>https://ma-thematique.netlify.app/cours/le-nombre-d-or</loc>
     <lastmod>2023-01-23T18:44:36+00:00</lastmod>
@@ -205,11 +202,11 @@
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://ma-thematique.netlify.app/cours/le-nombre-d-or/formules-generales</loc>
+    <loc>https://ma-thematique.netlify.app/cours/le-nombre-d-or/autres-formules-generales</loc>
     <lastmod>2023-01-23T18:44:36+00:00</lastmod>
     <priority>0.64</priority>
   </url>
-
+  <!-- Cours : trigonométrie -->
   <url>
     <loc>https://ma-thematique.netlify.app/cours/la-trigonometrie</loc>
     <lastmod>2023-01-23T18:44:36+00:00</lastmod>
@@ -260,7 +257,7 @@
     <lastmod>2023-01-23T18:44:36+00:00</lastmod>
     <priority>0.64</priority>
   </url>
-
+  <!-- Cours : formes -->
   <url>
     <loc>https://ma-thematique.netlify.app/cours/les-formes</loc>
     <lastmod>2023-01-23T18:44:36+00:00</lastmod>
@@ -291,7 +288,7 @@
     <lastmod>2023-01-23T18:44:36+00:00</lastmod>
     <priority>0.64</priority>
   </url>
-
+  <!-- Cours : fonctions usuelles -->
   <url>
     <loc>https://ma-thematique.netlify.app/cours/les-fonctions-usuelles</loc>
     <lastmod>2023-01-23T18:44:36+00:00</lastmod>
@@ -364,8 +361,18 @@
     <lastmod>2022-10-09T16:34:11+00:00</lastmod>
     <priority>0.64</priority>
   </url>
+    <url>
+    <loc>https://ma-thematique.netlify.app/bds-de-jpp/le-spondyloscope </loc>
+    <lastmod>2022-10-09T16:34:11+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
   <url>
     <loc>https://ma-thematique.netlify.app/bds-de-jpp/le-topologicon</loc>
+    <lastmod>2022-10-09T16:34:11+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://ma-thematique.netlify.app/bds-de-jpp/le-tour-du-monde-en-80-jours</loc>
     <lastmod>2022-10-09T16:34:11+00:00</lastmod>
     <priority>0.64</priority>
   </url>
