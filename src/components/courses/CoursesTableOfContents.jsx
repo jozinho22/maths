@@ -2,6 +2,7 @@ import GenericTableOfContents from '../immutable/GenericTableOfContents';
 import { Button } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 import CustomHelmet from '../immutable/seo/CustomHelmet';
+import Constants from '../immutable/Constants';
 
 const CoursesTableOfContents = ( {courseItems} ) => {
 
@@ -11,7 +12,7 @@ const CoursesTableOfContents = ( {courseItems} ) => {
 
     return (
         <>
-            <CustomHelmet title={title} metaContent={metaContent} relativePath={`/cours`} />
+            <CustomHelmet title={title} metaContent={metaContent} canonicalUrl={`${Constants.WEB_APP_URL}/cours`} />
             <div className="FlexButton">
                 <NavLink to={`/`}>
                     <Button className="DefaultButton GreenButton" >

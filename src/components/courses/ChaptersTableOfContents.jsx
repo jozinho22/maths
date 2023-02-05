@@ -1,12 +1,13 @@
 import { Container, Button } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
+import Constants from '../immutable/Constants';
 import CustomHelmet from '../immutable/seo/CustomHelmet';
 
 const ChaptersTableOfContents = ( {courseItem} ) => {
 
     return (
         <>
-            <CustomHelmet title={courseItem.title} metaContent={courseItem.metaContent} relativePath={`/cours/${courseItem.relativePath}`}/>
+            <CustomHelmet title={courseItem.title} metaContent={courseItem.metaContent} canonicalUrl={`${Constants.WEB_APP_URL}/cours/${courseItem.relativePath}`}/>
             <div className="FlexButton">
                 <NavLink to={`/cours`}>
                     <Button className="DefaultButton GreenButton" >

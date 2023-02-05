@@ -44,21 +44,21 @@ function App() {
     var gameItems = gamesResourceBuilder();
     
     return ( 
-        <div className="App" >     
-            <AppContext.Provider value={appContext} > 
-                <Suspense fallback={<BlurryingSpinner />}>
+            <div className="App" >     
+                <AppContext.Provider value={appContext} >                     
                     <div className={`${theme} ${font} CopyBook`}>
-                        <BrowserRouter>
-                            <Header courseItems={courseItems} pdfItems ={pdfItems} gameItems={gameItems} /> 
-                                <Container className={` RelativeContainer ${playMode ? "PlayMode" : ''} `} >                           
-                                    <AppRoutes courseItems={courseItems} pdfItems={pdfItems} gameItems={gameItems} />
-                                </Container> 
-                            <Footer /> 
-                        </BrowserRouter>
+                        <Suspense fallback={<BlurryingSpinner />}>
+                            <BrowserRouter>
+                                <Header courseItems={courseItems} pdfItems ={pdfItems} gameItems={gameItems} /> 
+                                    <Container className={`RelativeContainer ${playMode ? "PlayMode" : ''} `} >                           
+                                        <AppRoutes courseItems={courseItems} pdfItems={pdfItems} gameItems={gameItems} />
+                                    </Container> 
+                                <Footer /> 
+                            </BrowserRouter>
+                        </Suspense>
                     </div> 
-                </Suspense>
-            </AppContext.Provider> 
-        </div>
+                </AppContext.Provider> 
+            </div>
     );
 }
 

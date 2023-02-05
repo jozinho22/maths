@@ -1,4 +1,3 @@
-import Verification from './chapters/Verification';
 import EquationsDuSecondDegre from './chapters/EquationsDuSecondDegre';
 import RelationEntreCoefficientsEtRacines from './chapters/RelationEntreCoefficientsEtRacines';
 
@@ -12,12 +11,6 @@ const getEquationsSecondDegreeChapters = () => {
             component: <EquationsDuSecondDegre />,
             title: 'Résolution d\'équations',
             relativePath: 'resolution-d-equations-du-second-degre'
-        },
-        {
-            id: k++,
-            component: <Verification />,
-            title: 'Vérification de la forme factorisée',
-            relativePath: 'verification-de-la-forme-factorisee'
         },
         {
             id: k++,

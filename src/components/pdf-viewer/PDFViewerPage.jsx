@@ -11,7 +11,8 @@ import AppContext from '../context/AppContext'
 
 import Link from '../immutable/nav/Link';
 import CoursesLinks from '../courses/CoursesLinks';
-
+import CustomHelmet from '../immutable/seo/CustomHelmet';
+import Constants from '../immutable/Constants';
 import { useSwipeable } from 'react-swipeable';
 
 import './PDFViewerPage.css';
@@ -98,6 +99,8 @@ const PDFViewerPage = ({ pdfItem }) => {
 
         return (
           <> 
+            <CustomHelmet title={pdfItem.title} metaContent={pdfItem.metaContent} canonicalUrl={`${Constants.WEB_APP_URL}/bds-de-jpp/${pdfItem.relativePath}`}/>
+
             <NavLink to={"/"}>
                 <Button className="DefaultButton ReturnHomeButton" onClick={() => undoPlayMode()}>
                     Home

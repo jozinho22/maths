@@ -1,12 +1,13 @@
 import { Spinner } from 'react-bootstrap';
 import './BlurryingSpinner.css';
 
-const BlurryingSpinner = () => {
+const BlurryingSpinner = ( {children} ) => {
 
     return (
         <div className="BlurryingSpinner"> 
-            <p>Chargement</p>
+            <p className="MainTitle">Chargement</p>
             <Spinner animation="border" />
+            {children}
         </div>
     );
 }

@@ -1,5 +1,4 @@
 import React from "react";
-import { useLocation } from 'react-router-dom';
 
 import { Container, Button } from "react-bootstrap";
 import { LineChart, XAxis, YAxis, ReferenceLine, ResponsiveContainer, Tooltip, Line } from 'recharts';
@@ -7,16 +6,12 @@ import LoadingContext from "../../../context/LoadingContext";
 import MathJaxDisplay from '../../../mathjax-display/MathJaxDisplay';
 import buildUsualFunctions from "../buildUsualFunctions";
 
-import CustomHelmet from "../../../immutable/seo/CustomHelmet";
 import Fractionnal from 'fractional';
 
 import '../UsualFunctions.css';
 
 const AspectDesFonctionsUsuelles = () => {
 
-    var title = 'Les fonctions usuelles';
-    var metaContent = "Les fonctions usuelles : les différentes fonctions usuelles (carré, cube, sinus, cosinus, exp...etc) et leur réprésention sur un axe ainsi que leur caractéritiques"
-    var relativePath = useLocation();
     var usualFunctions = buildUsualFunctions();
 
     var ufLeft = usualFunctions.slice(0, usualFunctions.length /2);
@@ -96,7 +91,6 @@ const AspectDesFonctionsUsuelles = () => {
 
     return(
         <>
-            <CustomHelmet title={title} metaContent={metaContent} canonicalPath={`/cours/${relativePath}`}/>
             <Container className="UsualFunctionsButtonsContainer Left">
                 {
                     ufLeft.map(f => (
