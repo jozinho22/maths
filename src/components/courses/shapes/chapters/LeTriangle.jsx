@@ -135,12 +135,12 @@ const LeTriangle = () => {
             <p>De même, en divisant la seconde par <MathJaxInline toShow={"$c$"}/>, on a : </p>
             <MathJaxDisplay toShow={sinusGamma2} demo />
             <p>On voit alors l'égalité :</p>
-            <MathJaxDisplay toShow={sinAlphaAsinGammaC} />
+            <MathJaxDisplay toShow={sinAlphaAsinGammaC} demo />
             <p>En reproduisant cette opération sur les deux autres longueurs du triangle, on aura les autres équations :</p>
-            <MathJaxDisplay toShow={sinAlphaAsinBetaB} />
-            <MathJaxDisplay toShow={sinBetaBsinGammaC} />
+            <MathJaxDisplay toShow={sinAlphaAsinBetaB}  demo />
+            <MathJaxDisplay toShow={sinBetaBsinGammaC} demo />
             <p>On en déduit alors que :</p>
-            <MathJaxDisplay toShow={sinusRelation}/> 
+            <MathJaxDisplay toShow={sinusRelation} demo/> 
 
             <p className="Title1">Loi des cosinus</p>
             <p>

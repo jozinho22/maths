@@ -11,18 +11,24 @@ const getEquationsFirstDegreeChapters = () => {
             id: k++,
             component: <EquationsDuPremierDegre />,
             title: 'Résolution d\'équations',
+            metaContent: 'Résolution d\'équations du premier degré : explications.',
+            hiddenTitle: 'Résolution d\'équations du premier degré',
             relativePath: 'resolution-d-equations-du-premier-degre'
         },
         {
             id: k++,
             component: <AspectDesEquationsDuPremierDegre />,
             title: 'Aspect des équations',
+            metaContent: 'L\'aspect des equations du premier degré dans un repère.',
+            hiddenTitle: 'L\'aspect des equations du premier degré',
             relativePath: 'aspect-des-equations-du-premier-degre'
         },
         {
             id: k++,
             component: <InequationsDuPremierDegre />,
             title: 'Résolution d\'inéquations',
+            metaContent: 'Résolution d\'inéquations du premier degré : explications.',
+            hiddenTitle: 'Résolution d\'inéquations du premier degré',
             relativePath: 'resolution-d-inequations-du-premier-degre'
         }
     ];

@@ -66,14 +66,14 @@ const LaSphere = () => {
             <p>
                 La formule du volume de la sphère est :
             </p> 
-            <MathJaxDisplay toShow={sphVolume}/>
+            <MathJaxDisplay toShow={sphVolume} demo />
             <p>
                 Si alors on double seulement le rayon, le volume sera 8 fois plus grand.
             </p>
-            <MathJaxDisplay toShow={rTo2r}/>
-            <MathJaxDisplay toShow={sphDoubleVolume}/>
-            <MathJaxDisplay toShow={sphDoubleVolumeDev}/>
-            <MathJaxDisplay toShow={sphDoubleVolumeDev2}/>
+            <MathJaxDisplay toShow={rTo2r} demo />
+            <MathJaxDisplay toShow={sphDoubleVolume} demo />
+            <MathJaxDisplay toShow={sphDoubleVolumeDev} demo />
+            <MathJaxDisplay toShow={sphDoubleVolumeDev2} demo />
 
             <p className="Title1">Calcul du volume par intégration</p>
             <p>Calculons avec une méthode d'intégration le volume de la sphère.
@@ -166,7 +166,6 @@ const LaSphere = () => {
             <Container className="Focus">
                 <MathJaxDisplay toShow={circleAreaR}/>
             </Container>
-            <p>Youpi !!!</p>
         </>
     )
 }

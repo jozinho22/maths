@@ -3,6 +3,7 @@ import { Button } from 'react-bootstrap';
 import NavigationButtons from './NavigationButtons';
 import LoadingContext from '../context/LoadingContext';
 import CustomHelmet from '../immutable/seo/CustomHelmet';
+import HiddenTitle from '../immutable/seo/HiddenTitle';
 import { NavLink } from 'react-router-dom';
 import './GenericChapter.css';
 
@@ -17,8 +18,8 @@ const GenericChapter = ( {chapter, courseItem} ) => {
 
     return (
         <>
-            {/* <CustomHelmet title={chapter.title} metaContent={chapter.metaContent} relativePath={chapter.relativePath}/> */}
-               
+            <CustomHelmet title={chapter.title} metaContent={chapter.metaContent} relativePath={chapter.relativePath}/>
+            <HiddenTitle title={chapter.hiddenTitle} />  
             <div className="FlexButton">
                 <NavLink to={`/cours/${courseItem.relativePath}`}>
                     <Button className="DefaultButton GreenButton" >

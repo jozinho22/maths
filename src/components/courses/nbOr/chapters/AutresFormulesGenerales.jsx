@@ -3,7 +3,7 @@ import { Container } from 'react-bootstrap';
 import MathJaxDisplay from '../../../mathjax-display/MathJaxDisplay';
 import MathJaxInline from '../../../mathjax-display/MathJaxInline';
 
-const FormulesGenerales = () => {
+const AutresFormulesGenerales = () => {
 
     var approxPhi1Begin =  "\\( \\phi^2 = \\phi + 1  \\)";
     var approxPhi11 =  "\\( \\sqrt{\\phi^2} = \\sqrt{\\phi + 1} \\)";
@@ -68,4 +68,4 @@ const FormulesGenerales = () => {
     );
 }
 
-export default FormulesGenerales;
+export default AutresFormulesGenerales;

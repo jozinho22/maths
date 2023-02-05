@@ -1,7 +1,7 @@
 .RelativeContainer {
     position: relative;
     padding-top: calc(100px + 20px);
-    padding-bottom: calc(100px + 20px); 
+    padding-bottom: calc(100px + 40px); 
     min-height: 100vh;
     color: var(--simple-text-color);
     /* display: flex;
@@ -29,6 +29,10 @@ a, p {
 p {
     text-align: justify;
     white-space: pre-line;
+}
+
+h1 {
+    font-size: large;
 }
 
 a { 

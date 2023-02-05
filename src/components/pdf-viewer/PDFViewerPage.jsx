@@ -17,6 +17,7 @@ import { useSwipeable } from 'react-swipeable';
 
 import './PDFViewerPage.css';
 import './styles/Canevas.css';
+import HiddenTitle from '../immutable/seo/HiddenTitle';
 
 const PDFViewerPage = ({ pdfItem }) => {
 
@@ -100,7 +101,7 @@ const PDFViewerPage = ({ pdfItem }) => {
         return (
           <> 
             <CustomHelmet title={pdfItem.title} metaContent={pdfItem.metaContent} canonicalUrl={`${Constants.WEB_APP_URL}/bds-de-jpp/${pdfItem.relativePath}`}/>
-
+            <HiddenTitle title={pdfItem.hiddenTitle} />
             <NavLink to={"/"}>
                 <Button className="DefaultButton ReturnHomeButton" onClick={() => undoPlayMode()}>
                     Home
@@ -128,7 +129,7 @@ const PDFViewerPage = ({ pdfItem }) => {
 
             }
           
-            <h3 className="Title PdfTitle">{pdfItem.title}</h3>
+            <p className="MainTitle PdfTitle">{pdfItem.title}</p>
 
             {
                 pdfItem.type === 'courses' ?

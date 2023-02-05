@@ -62,7 +62,7 @@ const LeCercle = () => {
             <MathJaxDisplay toShow={pCercle2} demo />
             <p>Soit</p>
             <Container className="Focus">
-                <MathJaxDisplay toShow={pCercle3} demo />
+                <MathJaxDisplay toShow={pCercle3} />
             </Container>
 
             <p>2π est un tour complet du cercle. Mais la distance parcourue sur le cercle sera proportionnelle à l'angle créé par cette distance radiale.  </p>
@@ -75,9 +75,9 @@ const LeCercle = () => {
             <p>π se caractérise par le rapport de la surface sur le rayon comme ceci :</p>
             <MathJaxDisplay toShow={aOverR} demo />
             <p>Soit</p>
-            <MathJaxDisplay toShow={aCercle} />
+            <MathJaxDisplay toShow={aCercle} demo />
             <Container className="Focus">
-                <MathJaxDisplay toShow={aCercle4} demo />
+                <MathJaxDisplay toShow={aCercle4} />
             </Container>
             <p>Comme précédemment, on peut l'écrire sous cette forme :</p>
             <MathJaxDisplay toShow={aCercle2} demo/>
@@ -108,7 +108,7 @@ const LeCercle = () => {
 
             <ImageZoom src={circleAreaCalculus2} name="Surface balayée sur le cercle par un angle α" n={++n} />
             <p>Avec le tour complet, on a bien : </p>
-            <MathJaxDisplay toShow={aCalcComplet} />
+            <MathJaxDisplay toShow={aCalcComplet} demo />
             <Container className="Focus">
                 <MathJaxDisplay toShow={aCalcComplet2} />
             </Container> 
