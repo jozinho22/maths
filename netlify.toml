@@ -1,8 +1,15 @@
 [build]
-  publish = "build"
+publish = "build"
 
 [[plugins]]
-  package = "netlify-plugin-submit-sitemap"
+package = "@netlify/plugin-sitemap"
+
+	# optionnel car par défault c'est le publish qu'il prend
+	#[plugins.inputs]
+  	#buildDir = "build"
+
+[[plugins]]
+package = "netlify-plugin-submit-sitemap"
 
 	[plugins.inputs]
 
