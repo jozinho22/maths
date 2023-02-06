@@ -59,7 +59,7 @@ function pdfResourceBuilder() {
     var pdfEnerg = {
       id: i++,
       filePath: './albums/energetiquementVotre.pdf',
-      title: 'Énergetiquement vôtre',
+      title: 'Énergétiquement vôtre',
       hiddenTitle: 'Bande dessinée de Jean-Pierre Petit : Énergetiquement vôtre',
       metaContent: 'Énergetiquement vôtre : une bande dessinée pour avoir une introduction à l\'énergie nucléaire avec notamment une proposition de fusion avec du Bore et de l\'Hydrogène.',
       pdfFile : energetiquementVotre,

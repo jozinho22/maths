@@ -9,7 +9,6 @@ import coneVolCalculus from '../assets/coneVolCalculus.png'
 import coneAreaCalculus from '../assets/coneAreaCalculus.png'
 
 import Link from '../../../immutable/nav/Link';
-import CoursesLinks from '../../CoursesLinks';
 
 const LeCone = () => {
 

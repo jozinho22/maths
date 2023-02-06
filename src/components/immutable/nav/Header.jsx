@@ -11,11 +11,8 @@ const Header = ( {courseItems, pdfItems, gameItems} ) => {
     const {playMode} = React.useContext(AppContext);
 
     const [showToggle, setShowToggle] = React.useState(false);
-    const [showDropdown, setShowDropdown] = React.useState(false);
 
     var width = document.body.offsetWidth;
-
-    var monCv = "https://josselin-douineau-developer.netlify.app";
 
     React.useEffect(() => {
         setShowToggle(false);

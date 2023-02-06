@@ -1,10 +1,8 @@
 import LeCarreLeCube from './chapters/LeCarreLeCube';
 import LeCercle from './chapters/LeCercle';
 import LaSphere from './chapters/LaSphere';
-import LeCylindre from './chapters/LeCylindre';
 import LeTriangle from './chapters/LeTriangle';
 import LeCone from './chapters/LeCone';
-import LaPyramide from './chapters/LaPyramide';
 
 const getShapesChapters = () => {
 

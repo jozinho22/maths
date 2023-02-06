@@ -1,7 +1,7 @@
 
 var fs = require('fs');
 var parse = require('xml-parser');
-var xml = fs.readFileSync('./public/sitemap.xml', 'utf8');
+var xml = fs.readFileSync('./public/index-sitemap.xml', 'utf8');
 var inspect = require('util').inspect;
  
 var xmlSitemap = inspect(parse(xml), { colors: true, depth: Infinity })

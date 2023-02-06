@@ -110,6 +110,6 @@
 @media (min-width: 450px) {
   .CustomNav .dropdown-item {
     font-size: small !important;
-    width: fit-content;
+    width: 100%;
   }
 }
