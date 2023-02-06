@@ -20,8 +20,15 @@ var rspJson = {
     }
 };
 
+var i = 0;
+
 for(var url of xmlDoc.root.children) {
-    rspJson.routes.push(url.children[0].content.replace('https://ma-thematique.netlify.app/', '/'))
+    if( i === 0) {
+        rspJson.routes.push(url.children[0].content.replace('https://ma-thematique.netlify.app', '/'))
+    } else {
+        rspJson.routes.push(url.children[0].content.replace('https://ma-thematique.netlify.app', ''))
+    }
+    i++;  
 }
 
 console.log(rspJson) 
