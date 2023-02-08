@@ -10,11 +10,11 @@ const Presentation = () => {
     var adEqubc = "\\(a.d = b.c\\)";
 
     /* [a, d], [b, c]*/
-    const [abcd, setABCD] = React.useState([[`{\\color{${Constants.BLUE_COLOR}}{20}}`, `{\\color{${Constants.GREEN_COLOR}}{4}}`], [`{\\color{${Constants.ORANGE_COLOR}}{10}}`, `{\\color{${Constants.RED_COLOR}}{2}}`]]);
+    const [abcd, setABCD] = React.useState([["20", "4"], ["10", "2"]]);
     var cross = "\\(\\frac{" + abcd[0][0] + "}{" + abcd[0][1] 
                 + "} = \\frac{" + abcd[1][0] + "}{" + abcd[1][1] + "}\\)";
 
-    const [abcd2, setABCD2] = React.useState([[`{\\color{${Constants.BLUE_COLOR}}{a}}`, `{\\color{${Constants.GREEN_COLOR}}{b}}`], [`{\\color{${Constants.ORANGE_COLOR}}{c}}`, `{\\color{${Constants.RED_COLOR}}{d}}`]]);
+    const [abcd2, setABCD2] = React.useState([["a", "b"], ["c","d"]]);
     var cross2 = "\\(\\frac{" + abcd2[0][0] + "}{" + abcd2[0][1] 
                 + "} = \\frac{" + abcd2[1][0] + "}{" + abcd2[1][1] + "}\\)";
 

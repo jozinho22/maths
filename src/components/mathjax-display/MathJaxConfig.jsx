@@ -1,9 +1,9 @@
 const mathJaxConfig = () => {
 
     return {
-                loader: { load: ["[tex]/html", "[tex]/color"] },
+                loader: { load: ["[tex]/html"] },
                 tex: {
-                    packages: { "[+]": ["color"] },
+                    packages: { "[+]": ["html"] },
                     inlineMath: [["$", "$"]],
                     displayMath: [["\\(", "\\)"]],
                 }

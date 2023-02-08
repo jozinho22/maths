@@ -9,9 +9,9 @@ const EquationsDuPremierDegre = () => {
     var equPremierDeg = "\\(f(x) = ax + b\\)";
     var equBase = "\\(f(x) = 2x + 3\\)";
     var equBaseEquals0 = "\\(2x + 3 = 0\\)";
-    var equBaseMinus3 = `\\(2x + 3 {\\color{${Constants.RED_COLOR}}{ - 3}} = 0 {\\color{${Constants.RED_COLOR}}{ - 3}}\\)`;
+    var equBaseMinus3 = `\\(2x + 3 - 3 = 0 -3 \\)`;
     var equBaseMinus32 = "\\(2x = - 3\\)";
-    var equBaseMinus32divBy2 = `\\(\\frac{2x}{{\\color{${Constants.RED_COLOR}}{ 2}}} = \\frac{-3}{{\\color{${Constants.RED_COLOR}}{ 2}}} \\)`;
+    var equBaseMinus32divBy2 = `\\(\\frac{2x}{2} = \\frac{-3}{2} \\)`;
     var equBaseMinus32divBy22 = "\\(x = -\\frac{3}{2} \\)";
 
     return  <>
