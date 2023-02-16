@@ -4,6 +4,7 @@ import NavigationButtons from './NavigationButtons';
 import LoadingContext from '../context/LoadingContext';
 import CustomHelmet from '../immutable/seo/CustomHelmet';
 import HiddenTitle from '../immutable/seo/HiddenTitle';
+import Constants from '../immutable/Constants';
 import { NavLink } from 'react-router-dom';
 import './GenericChapter.css';
 
