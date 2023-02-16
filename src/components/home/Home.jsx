@@ -3,16 +3,21 @@ import { Container } from 'react-bootstrap';
 /* import MathJaxDisplay from '../mathjax-display/MathJaxDisplay';
 import useFunctionsExpressions from './useFunctionsExpressions'; */
 import { NavLink } from 'react-router-dom';
-import HiddenTitle from '../immutable/seo/HiddenTitle'
+import CustomHelmet from "../immutable/seo/CustomHelmet";
+import HiddenTitle from '../immutable/seo/HiddenTitle';
+import Constants from '../immutable/Constants';
 
 import './Home.css';
 
 const Home = () => {
 
+    var metaTitle = 'Ma Thématique : page d\'accueil';
+    var metaContent = 'Des cours de mathématiques du primaire au lycée, des bandes dessinées de Jean-Pierre Petit, des jeux pour s\'entraîner et la possibilité de cours particuliers.';
     var hiddenTitle = 'Page d\'accueil de Ma Thématique : présentation des contenus.'
     
-    return  <>
+    return  <>         
                 <Container className="Home">
+                    <CustomHelmet title={metaTitle} metaContent={metaContent} canonicalUrl={`${Constants.WEB_APP_URL}`}/>
                     <HiddenTitle title={hiddenTitle} />
                     <Container className="HomeTitleContainer">
                         Ma thématique

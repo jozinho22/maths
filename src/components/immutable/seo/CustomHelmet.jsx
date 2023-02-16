@@ -6,7 +6,7 @@ const CustomHelmet = ( {title, metaContent, canonicalUrl} ) => {
                 <title>
                     {title}
                 </title>
-                <meta name="description" content={metaContent} />
+                <meta data-rh="true" name="description" content={metaContent} />
                 <link rel="canonical" href={canonicalUrl} />
             </Helmet>
 }
