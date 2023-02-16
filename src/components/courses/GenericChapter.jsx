@@ -18,7 +18,7 @@ const GenericChapter = ( {chapter, courseItem} ) => {
 
     return (
         <>
-            <CustomHelmet title={chapter.title} metaContent={chapter.metaContent} relativePath={chapter.relativePath}/>
+            <CustomHelmet title={chapter.title} metaContent={chapter.metaContent} canonicalUrl={chapter.relativePath}/>
             <HiddenTitle title={chapter.hiddenTitle} />  
             <div className="FlexButton">
                 <NavLink to={`/cours/${courseItem.relativePath}`}>
