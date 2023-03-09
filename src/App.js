@@ -47,7 +47,7 @@ function App() {
             <div className="App" >     
                 <AppContext.Provider value={appContext} >                     
                     <div className={`${theme} ${font} CopyBook`}>
-                        <BrowserRouter basename="/ma-thematique">
+                        <BrowserRouter basename="/maths">
                             <Header courseItems={courseItems} pdfItems ={pdfItems} gameItems={gameItems} /> 
                                 <Suspense fallback={<BlurryingSpinner />}>
                                     <Container className={`RelativeContainer ${playMode ? "PlayMode" : ''} `} >                           
