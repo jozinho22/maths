@@ -12,7 +12,7 @@ const LaSphere = () => {
     var n = 0;
     var sphVolume = "\\(V_{sphere} = \\frac{4}{3}\\pi r^3\\)";
     var rTo2r = "\\(r \\to 2r\\)";
-    var sphDoubleVolume = "\\(V = \\frac{4}{3}\\pi (3r)^3\\)";
+    var sphDoubleVolume = "\\(V = \\frac{4}{3}\\pi (2r)^3\\)";
     var sphDoubleVolumeDev = "\\(V = \\frac{4}{3}\\pi 2^3 r^3\\)";
     var sphDoubleVolumeDev2 = "\\(V = \\frac{4}{3} 8\\pi r^3\\)";
 

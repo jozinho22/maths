@@ -1,21 +1,18 @@
 import React from 'react';
 import { Button } from 'react-bootstrap';
 import NavigationButtons from './NavigationButtons';
-import LoadingContext from '../context/LoadingContext';
 import CustomHelmet from '../immutable/seo/CustomHelmet';
 import HiddenTitle from '../immutable/seo/HiddenTitle';
 import Constants from '../immutable/Constants';
 import { NavLink } from 'react-router-dom';
+
 import './GenericChapter.css';
 
 const GenericChapter = ( {chapter, courseItem} ) => {
-
-    const {updateIsLoading} = React.useContext(LoadingContext);
     
     React.useEffect(() => {
         window.scrollTo(0, 0);
-        updateIsLoading(true);
-    }, [updateIsLoading]);
+    }, []);
 
     return (
         <>
@@ -36,7 +33,7 @@ const GenericChapter = ( {chapter, courseItem} ) => {
 
             <p className="MainTitle">{chapter.title}</p>
             <div className="CoursesContainer">
-                {chapter.component}          
+                {chapter.component}        
             </div>
                    
             <NavigationButtons 

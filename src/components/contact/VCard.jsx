@@ -1,6 +1,7 @@
 import React from "react";
 import { Container } from "react-bootstrap";
-import { ClipboardCheck } from "react-bootstrap-icons";
+/* import { ClipboardCheck } from "react-bootstrap-icons";
+ */
 import photoProfil from './assets/photo-profil.jpeg';
 import Link from "../immutable/nav/Link";
 import Constants from "../immutable/Constants";
@@ -23,12 +24,12 @@ const VCard = () => {
     }
 
     return  <>            
-                <CustomHelmet title={title} metaContent={metaContent} canonicalUrl={`${Constants.WEB_APP_URL}/contact/`}/>
+                <CustomHelmet title={title} metaContent={metaContent} canonicalUrl={`${Constants.WEB_APP_URL}/contact`}/>
                 <HiddenTitle title={hiddenTitle} />
                 <Container className="VCardContainer">
                     <p className="MainTitle">{title}</p>
                     <Container className={`VCardRecto ${active ? "Active" : ""}`} onClick={rotateY} >
-                        <img src={photoProfil} />
+                        <img src={photoProfil} alt="profil"/>
                         <p>
                             Professeur de mathématiques à domicile depuis dix ans, j'ai décidé de créer ce site pour apporter un support documentaire aux élèves.
                             <br /><br />

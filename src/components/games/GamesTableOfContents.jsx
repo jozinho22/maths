@@ -13,7 +13,7 @@ const GamesTableOfContents = ( {gameItems} ) => {
 
     return (
         <>
-            <CustomHelmet title={metaTitle} metaContent={metaContent} canonicalUrl={`${Constants.WEB_APP_URL}/jeux/`}/>
+            <CustomHelmet title={metaTitle} metaContent={metaContent} canonicalUrl={`${Constants.WEB_APP_URL}/jeux`}/>
             <HiddenTitle title={hiddenTitle} />
             <GenericTableOfContents items={gameItems} prefix={prefix} title={title} />
         </>

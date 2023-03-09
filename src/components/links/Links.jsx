@@ -17,7 +17,7 @@ const Links = () => {
     var links = linksResourceBuilder();
 
     return  <>
-                <CustomHelmet title={title} metaContent={metaContent} canonicalUrl={`${Constants.WEB_APP_URL}/liens/`}/>
+                <CustomHelmet title={title} metaContent={metaContent} canonicalUrl={`${Constants.WEB_APP_URL}/liens`}/>
                 <HiddenTitle title={hiddenTitle} />
                 <div className="Links">
                     <p className="MainTitle">Liens</p>

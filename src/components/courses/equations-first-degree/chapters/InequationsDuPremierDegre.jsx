@@ -2,7 +2,6 @@ import { Container } from 'react-bootstrap';
 import MathJaxDisplay from '../../../mathjax-display/MathJaxDisplay';
 import MathJaxInline from '../../../mathjax-display/MathJaxInline';
 import Link from '../../../immutable/nav/Link';
-import Constants from '../../../immutable/Constants';
 
 const InequationsDuPremierDegre = () => {
 
