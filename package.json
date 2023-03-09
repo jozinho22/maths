@@ -1,7 +1,6 @@
 {
   "name": "maths",
   "version": "0.1.0",
-  "homepage": "https://jozinho22.github.io/maths",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
@@ -14,7 +13,6 @@
     "buffer": "^6.0.3",
     "emailjs-com": "^3.2.0",
     "fractional": "^1.0.0",
-    "gh-pages": "^5.0.0",
     "react": "^18.2.0",
     "react-bootstrap": "^2.7.0",
     "react-bootstrap-icons": "^1.10.2",
@@ -34,10 +32,7 @@
     "start": "BROWSER=none react-scripts start",
     "build": "CI=false react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -b master -d build",
-    "clean": "gh-pages-clean"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
