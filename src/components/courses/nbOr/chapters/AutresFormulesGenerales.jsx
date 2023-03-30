@@ -23,13 +23,15 @@ const AutresFormulesGenerales = () => {
     var approxPhi26 =  "\\( \\phi = 1 + \\frac{1}{1 + \\frac{1}{1 + \\frac{1}{\\phi} } }  \\)";
     var approxPhi2End = "\\( \\phi = 1 + \\frac{1}{ 1 + \\frac{1}{ 1 + \\frac{1}{1 + \\frac{1}{1 + {...} }}}} \\)"
     
+    var nTermOfTheSequence =  "\\( F_n = \\frac{ (1 + \\sqrt{5})^2 - (1-\\sqrt{5})^2 } {2^n .\\sqrt{5}} \\)";
+
 /*     var approxPhi3 = "\\( \\phi = 4 \\sum_{k =0}^{+\\infty} \\enspace \\frac{-1}{2k + 1} \\big( \\big( \\phi^{-1} \\big)^{2k+1} + \\big( \\phi^{-3} \\big)^{2k+1}   \\big) \\)"
  */
     return (
             <>
                 <p className="Title2">a - Formule de la racine</p>
                 <p>À partir de la formule : </p>
-                <MathJaxDisplay toShow={approxPhi1Begin}/>
+                <MathJaxDisplay toShow={approxPhi1Begin} demo/>
                 <p>En mettant chaque terme sous la racine carrée, on a :</p>
                 <MathJaxDisplay toShow={approxPhi11} demo />
                 <MathJaxDisplay toShow={approxPhi12} demo />
@@ -44,21 +46,27 @@ const AutresFormulesGenerales = () => {
 
                 <p className="Title2">b - Formule du quotient</p>
                 <p>À partir de la formule </p>
-                <MathJaxDisplay toShow={approxPhi2Begin}/>
+                <MathJaxDisplay toShow={approxPhi2Begin} demo/>
                 <p> qu'on arrange en </p>
-                <MathJaxDisplay toShow={approxPhi2Begin2}/>
+                <MathJaxDisplay toShow={approxPhi2Begin2} demo/>
                 <p>On a :</p>
-                <MathJaxDisplay toShow={approxPhi21}/>
-                <MathJaxDisplay toShow={approxPhi22}/>
+                <MathJaxDisplay toShow={approxPhi21} demo/>
+                <MathJaxDisplay toShow={approxPhi22} demo/>
                 <p>On remplace <MathJaxInline toShow={"$ \\phi$"}/> par son expression</p>
-                <MathJaxDisplay toShow={approxPhi23}/>
-                <MathJaxDisplay toShow={approxPhi24}/>
+                <MathJaxDisplay toShow={approxPhi23} demo/>
+                <MathJaxDisplay toShow={approxPhi24} demo/>
                 <p>En ainsi de suite...</p>
-                <MathJaxDisplay toShow={approxPhi25}/>
-                <MathJaxDisplay toShow={approxPhi26}/>
+                <MathJaxDisplay toShow={approxPhi25} demo/>
+                <MathJaxDisplay toShow={approxPhi26} demo/>
                 <Container className="Focus FocusHuge">
                     <MathJaxDisplay toShow={approxPhi2End} infiniteFrac />
                 </Container>
+
+                <p className="Title2">c - Généralisation du n terme de la suite</p>
+                <Container className="Focus FocusHuge">
+                    <MathJaxDisplay toShow={nTermOfTheSequence} />
+                </Container>           
+
 
 {/*                 <p className="Title2"> c - Formule de la somme</p>
                 <Container className="Focus">
