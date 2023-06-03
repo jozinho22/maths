@@ -12,6 +12,7 @@ git checkout dev (la dernière version)
 ## Lancement
 
 ```npm
+npm install
 npm start
 ```
 
