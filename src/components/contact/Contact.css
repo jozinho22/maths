@@ -9,16 +9,13 @@
 }
 
 .ContactType, .FirstName, .LastName, .Email, .Subject, .Message  {
-    padding-top: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     text-align: center;
     margin: 0 auto;
 }
 
-.Subject {
-    width: 30%;
-}
-
-.Message {
+.Subject, .Message {
     width: 60%;
 }
 

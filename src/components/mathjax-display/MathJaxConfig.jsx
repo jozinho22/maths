@@ -5,7 +5,7 @@ const mathJaxConfig = () => {
                 tex: {
                     packages: { "[+]": ["html"] },
                     inlineMath: [["$", "$"]],
-                    displayMath: [["\\(", "\\)"]]
+                    displayMath: [["\\(", "\\)"]],
                 }
             }
 }

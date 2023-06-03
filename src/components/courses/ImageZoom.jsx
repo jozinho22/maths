@@ -1,20 +1,24 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
-import { HiOutlineZoomIn } from 'react-icons/hi';
-import getWidth from '../immutable/getWidth';
+import { ZoomIn, ZoomOut } from 'react-bootstrap-icons';
 
 const ImageZoom = ( {src, name, n} ) => {
 
     const [zoom, setZoom] = React.useState(false);
 
-    var mobile = getWidth() < 450;
+    var width = document.body.offsetWidth
+    var mobile = width < 450;
 
     return (
             <Container className="ZoomContainer">     
                 <div 
                     className={`${zoom && mobile ? "OnZoom" : ''}`}
                     onClick={() => setZoom(!zoom)} >
-                        <HiOutlineZoomIn className={`ZoomIcon ${!mobile ? "Hidden": ''}`}/>
+                        {
+                            !zoom ?
+                                <ZoomIn className={`ZoomInIcon ${!mobile ? "Hidden": ''}`}/>
+                                    :   <ZoomOut className={`ZoomOutIcon ${!mobile ? "Hidden": ''}`}/>
+                        }
                         <figure>
                             <img className={`${mobile ? "Clickable" : ''}`}
                                 alt={name}

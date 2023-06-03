@@ -1,20 +1,14 @@
 import { MathJax, MathJaxContext } from "better-react-mathjax";
-import { Container } from 'react-bootstrap';
+import mathJaxConfig from './MathJaxConfig';
 
-import './MathJaxDisplay.css';
+import './MathJax.css';
+
 const MathJaxInline = ({toShow}) => {
 
-    const config =  {
-                        loader: { load: ["[tex]/html"] },
-                        tex: {
-                            packages: { "[+]": ["html"] },
-                            inlineMath: [["$", "$"]],
-                            displayMath: [["\\(", "\\)"]]
-                        }
-                    }
+    const config = mathJaxConfig();
 
     return (
-            <MathJaxContext className="MathJaxInline" config={config}>
+            <MathJaxContext config={config}>
                 <MathJax dynamic hideUntilTypeset={ "every" } inline >
                     {toShow}
                 </MathJax>

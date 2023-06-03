@@ -1,0 +1,47 @@
+import React from 'react';
+import { Button } from 'react-bootstrap';
+import NavigationButtons from './NavigationButtons';
+import CustomHelmet from '../immutable/seo/CustomHelmet';
+import HiddenTitle from '../immutable/seo/HiddenTitle';
+import Constants from '../immutable/Constants';
+import { NavLink } from 'react-router-dom';
+
+import './GenericChapter.css';
+
+const GenericChapter = ( {chapter, courseItem} ) => {
+    
+    React.useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
+    return (
+        <>
+            <CustomHelmet title={chapter.title} metaContent={chapter.metaContent} canonicalUrl={`${Constants.WEB_APP_URL}/cours/${courseItem.relativePath}/${chapter.relativePath}`}/>
+            <HiddenTitle title={chapter.hiddenTitle} />  
+            <div className="FlexButton">
+                <NavLink to={`/cours/${courseItem.relativePath}`}>
+                    <Button className="DefaultButton GreenButton" >
+                        Retour au sommaire des chapitres
+                    </Button> 
+                </NavLink>
+            </div> 
+                     
+            <NavigationButtons 
+                chapter={chapter}
+                chapters={courseItem.chapters} 
+                courseRelativePath={courseItem.relativePath} />
+
+            <p className="MainTitle">{chapter.title}</p>
+            <div className="CoursesContainer">
+                {chapter.component}        
+            </div>
+                   
+            <NavigationButtons 
+                chapter={chapter}
+                chapters={courseItem.chapters} 
+                courseRelativePath={courseItem.relativePath} />      
+        </>
+    );
+}
+
+export default GenericChapter;

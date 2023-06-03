@@ -1,0 +1,91 @@
+/* mjx-container mjx-math {
+    white-space: normal
+}  */
+
+mjx-container {
+    text-align: justify !important;
+}
+
+button mjx-container {
+    margin: 0px !important;
+}
+
+table mjx-container {
+    color: var(--simple-text-color);
+}
+
+.Demo mjx-container {
+    margin-left: 250px !important;
+    margin-top: 25px !important;
+    margin-bottom: 25px !important;
+}  
+
+@media (width < 450px) {
+    .Demo mjx-container {
+        margin-left: 20px !important;
+    }
+}
+
+.InfiniteFrac mjx-container [size="s"] {
+    font-size: 100%;
+}
+
+.InfiniteFrac mjx-container [size="s"] mjx-script {
+    font-size: 70%;
+}
+
+.MathJaxDisplay mjx-math {
+    font-size: 20px; 
+}
+
+@media (width < 450px) {
+    .MathJaxDisplay mjx-math {
+        margin-left: 0px !important;
+        text-align: left !important;
+        font-size: 17px !important;
+    }
+    /* .MathJaxDisplay.Demo mjx-math {
+        font-size: 20px !important;
+    } */
+}
+
+.Focus .MathJaxDisplay mjx-math {
+    margin-left: 0px !important;
+}
+
+.Focus mjx-container {
+    margin-top: 20px !important;
+    margin-bottom: 20px !important;
+}
+
+@media (min-width: 1268px) {
+    mjx-math {
+        font-size: x-large !important;
+    }
+}
+
+@media (max-width: 450px) {
+    mjx-mtd {
+        text-align: left !important;
+    }
+}
+
+.InfiniteFrac mjx-math {
+    line-height: 0.75;
+}
+
+.DefaultMathJaxText {
+    color: var(--blue-color);
+}
+
+.GreenMathJaxText {
+    color: var(--green-color);
+}
+
+.OrangeMathJaxText {
+    color: var(--orange-color);
+}
+
+.RedMathJaxText {
+    color: var(--red-color);
+}

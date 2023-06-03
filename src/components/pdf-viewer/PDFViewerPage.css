@@ -4,25 +4,22 @@
 
 .SwitchButton .btn-lg {
     border-color: var(--grey-light-color);
-    font-size: xx-small !important;  
+    font-size: xx-small !important;
 }
 
-@media (min-width: 360px) {
+@media (min-width: 450px) {
     .SwitchButton .btn-lg {
         font-size: x-small !important;
     }
-    .SwitchButton {
-        width: 60%;
-    }
-
 }
 
 @media (min-width: 768px) {
     .SwitchButton .btn-lg {
         font-size: small !important;
     }
+
     .SwitchButton {
-        width: 50%;
+        width: 60%;
     }
 }
 
@@ -64,28 +61,36 @@
     background-color: var(--grey-light-color);
 }
 
-.UnPlayModeButton, .PlayModeButton {
+.ReturnHomeButton, .UnPlayModeButton {
     position: absolute;
-    right: 0px;
-    margin-top : 10px;
-    background-color: var(--green-color);
+    top: 0;
+    margin-top: 10px;
 }
 
-.UnPlayModeButton:hover, .UnPlayModeButton:focus, .PlayModeButton:hover, .PlayModeButton:focus {
-    background-color: var(--green-hover-color);
+.ReturnHomeButton {
+    background-color: var(--orange-color);
+    left: 0px;
+}
+
+.ReturnHomeButton:hover, .ReturnHomeButton:focus {
+    background-color: var(--orange-hover-color);
 }
 
 .UnPlayModeButton {
-    top: 0;
+    background-color: var(--green-color); 
+    right: 0px;
 }
 
-.PlayModeButton {
-    top: var(--customheader-height);
+.UnPlayModeButton:hover, .UnPlayModeButton:focus {
+    background-color: var(--green-hover-color);
 }
 
 .PagesMobile {
-    position: fixed;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.PdfTitle {
+    position: relative;
+    top: 30px;
 }

@@ -1,0 +1,1133 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <link rel="icon" href="/favicon-brasil-mini.png" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <link rel="apple-touch-icon" href="/favicon-brasil-512.png" />
+    <link rel="manifest" href="/manifest.json" />
+    <meta
+      name="google-site-verification"
+      content="1qZusjCQtdSxjMQi9K9fvG4ixMB8rB3kUeDiyTRuTjE"
+    />
+    <script defer="defer" src="/static/js/main.3cc7b4a7.js"></script>
+    <link href="/static/css/main.f5eed269.css" rel="stylesheet" />
+    <style type="text/css">
+      /*\
+|*|  :: Bootstrap Switch Button ::
+|*|
+|*|  Bootstrap Switch Button (React)
+|*|  https://github.com/gitbrent/bootstrap-switch-button-react
+|*|
+|*|  This library is released under the MIT Public License (MIT)
+|*|
+|*|  Bootstrap Switch Button (C) 2019-present Brent Ely (https://github.com/gitbrent)
+|*|
+|*|  Permission is hereby granted, free of charge, to any person obtaining a copy
+|*|  of this software and associated documentation files (the "Software"), to deal
+|*|  in the Software without restriction, including without limitation the rights
+|*|  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+|*|  copies of the Software, and to permit persons to whom the Software is
+|*|  furnished to do so, subject to the following conditions:
+|*|
+|*|  The above copyright notice and this permission notice shall be included in all
+|*|  copies or substantial portions of the Software.
+|*|
+|*|  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+|*|  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+|*|  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+|*|  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+|*|  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+|*|  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+|*|  SOFTWARE.
+\*/
+
+      .btn-group-xs > .btn,
+      .btn-xs {
+        padding: 0.35rem 0.4rem 0.25rem 0.4rem;
+        font-size: 0.875rem;
+        line-height: 0.5;
+        border-radius: 0.2rem;
+      }
+
+      .switch {
+        position: relative;
+        overflow: hidden;
+      }
+      .switch.btn.btn-light,
+      .switch.btn.btn-outline-light {
+        border-color: rgba(
+          0,
+          0,
+          0,
+          0.15
+        ); /* Add a border so switch is delineated */
+      }
+      .switch input[type="checkbox"] {
+        display: none;
+      }
+      .switch-group {
+        position: absolute;
+        width: 200%;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        transition: left 0.35s;
+        -webkit-transition: left 0.35s;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+      }
+      .switch.off .switch-group {
+        left: -100%;
+      }
+      .switch-on {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 50%;
+        margin: 0;
+        border: 0;
+        border-radius: 0;
+      }
+      .switch-off {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        right: 0;
+        margin: 0;
+        border: 0;
+        border-radius: 0;
+        box-shadow: none;
+      }
+      .switch-handle {
+        position: relative;
+        margin: 0 auto;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        height: 100%;
+        width: 0px;
+        border-width: 0 1px;
+        background-color: #fff;
+      }
+
+      .switch.btn-outline-primary .switch-handle {
+        background-color: var(--primary);
+        border-color: var(--primary);
+      }
+      .switch.btn-outline-secondary .switch-handle {
+        background-color: var(--secondary);
+        border-color: var(--secondary);
+      }
+      .switch.btn-outline-success .switch-handle {
+        background-color: var(--success);
+        border-color: var(--success);
+      }
+      .switch.btn-outline-danger .switch-handle {
+        background-color: var(--danger);
+        border-color: var(--danger);
+      }
+      .switch.btn-outline-warning .switch-handle {
+        background-color: var(--warning);
+        border-color: var(--warning);
+      }
+      .switch.btn-outline-info .switch-handle {
+        background-color: var(--info);
+        border-color: var(--info);
+      }
+      .switch.btn-outline-light .switch-handle {
+        background-color: var(--light);
+        border-color: var(--light);
+      }
+      .switch.btn-outline-dark .switch-handle {
+        background-color: var(--dark);
+        border-color: var(--dark);
+      }
+      .switch[class*="btn-outline"]:hover .switch-handle {
+        background-color: var(--light);
+        opacity: 0.5;
+      }
+
+      /* NOTE: Must come first, so classes below override as needed */
+      /* bootstrap-4.x .form-control {height} values used as `min-height` to mirror output sizes */
+
+      .switch.btn {
+        min-width: 3.7rem;
+        min-height: calc(1.5em + 0.75rem + 2px);
+      }
+      .switch-on.btn {
+        padding-right: 1.5rem;
+      }
+      .switch-off.btn {
+        padding-left: 1.5rem;
+      }
+
+      .switch.btn-lg {
+        min-width: 5rem;
+        line-height: 1.5;
+        min-height: calc(1.5em + 1rem + 2px);
+      }
+      .switch-on.btn-lg {
+        padding-right: 2rem;
+      }
+      .switch-off.btn-lg {
+        padding-left: 2rem;
+      }
+      .switch-handle.btn-lg {
+        width: 2.5rem;
+      }
+
+      .switch.btn-sm {
+        min-width: 3.25rem;
+        min-height: calc(1.5em + 0.5rem + 2px);
+      }
+      .switch-on.btn-sm {
+        padding-right: 1rem;
+      }
+      .switch-off.btn-sm {
+        padding-left: 1rem;
+      }
+
+      /* `xs` (bootstrap-3.3 - .btn - h:22px) */
+      .switch.btn-xs {
+        min-width: 3.125rem;
+        min-height: 1.375rem;
+      }
+      .switch-on.btn-xs {
+        padding-right: 0.8rem;
+      }
+      .switch-off.btn-xs {
+        padding-left: 0.8rem;
+      }
+    </style>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.js"
+    ></script>
+    <title>Ma Thématique : page d'accueil</title>
+    <link
+      rel="canonical"
+      href="https://ma-thematique.netlify.app"
+      data-rh="true"
+    />
+    <meta
+      data-rh="true"
+      name="description"
+      content="Des cours de mathématiques du primaire au lycée, des bandes dessinées de Jean-Pierre Petit, des jeux pour s'entraîner et la possibilité de cours particuliers."
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/input/tex/extensions/html.js"
+      charset="UTF-8"
+    ></script>
+    <style type="text/css">
+      .CtxtMenu_InfoClose {
+        top: 0.2em;
+        right: 0.2em;
+      }
+      .CtxtMenu_InfoContent {
+        overflow: auto;
+        text-align: left;
+        font-size: 80%;
+        padding: 0.4em 0.6em;
+        border: 1px inset;
+        margin: 1em 0px;
+        max-height: 20em;
+        max-width: 30em;
+        background-color: #eeeeee;
+        white-space: normal;
+      }
+      .CtxtMenu_Info.CtxtMenu_MousePost {
+        outline: none;
+      }
+      .CtxtMenu_Info {
+        position: fixed;
+        left: 50%;
+        width: auto;
+        text-align: center;
+        border: 3px outset;
+        padding: 1em 2em;
+        background-color: #dddddd;
+        color: black;
+        cursor: default;
+        font-family: message-box;
+        font-size: 120%;
+        font-style: normal;
+        text-indent: 0;
+        text-transform: none;
+        line-height: normal;
+        letter-spacing: normal;
+        word-spacing: normal;
+        word-wrap: normal;
+        white-space: nowrap;
+        float: none;
+        z-index: 201;
+        border-radius: 15px; /* Opera 10.5 and IE9 */
+        -webkit-border-radius: 15px; /* Safari and Chrome */
+        -moz-border-radius: 15px; /* Firefox */
+        -khtml-border-radius: 15px; /* Konqueror */
+        box-shadow: 0px 10px 20px #808080; /* Opera 10.5 and IE9 */
+        -webkit-box-shadow: 0px 10px 20px #808080; /* Safari 3 & Chrome */
+        -moz-box-shadow: 0px 10px 20px #808080; /* Forefox 3.5 */
+        -khtml-box-shadow: 0px 10px 20px #808080; /* Konqueror */
+        filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color="gray", Positive="true"); /* IE */
+      }
+    </style>
+    <style type="text/css">
+      .CtxtMenu_MenuClose {
+        position: absolute;
+        cursor: pointer;
+        display: inline-block;
+        border: 2px solid #aaa;
+        border-radius: 18px;
+        -webkit-border-radius: 18px; /* Safari and Chrome */
+        -moz-border-radius: 18px; /* Firefox */
+        -khtml-border-radius: 18px; /* Konqueror */
+        font-family: "Courier New", Courier;
+        font-size: 24px;
+        color: #f0f0f0;
+      }
+      .CtxtMenu_MenuClose span {
+        display: block;
+        background-color: #aaa;
+        border: 1.5px solid;
+        border-radius: 18px;
+        -webkit-border-radius: 18px; /* Safari and Chrome */
+        -moz-border-radius: 18px; /* Firefox */
+        -khtml-border-radius: 18px; /* Konqueror */
+        line-height: 0;
+        padding: 8px 0 6px; /* may need to be browser-specific */
+      }
+      .CtxtMenu_MenuClose:hover {
+        color: white !important;
+        border: 2px solid #ccc !important;
+      }
+      .CtxtMenu_MenuClose:hover span {
+        background-color: #ccc !important;
+      }
+      .CtxtMenu_MenuClose:hover:focus {
+        outline: none;
+      }
+    </style>
+    <style type="text/css">
+      .CtxtMenu_Menu {
+        position: absolute;
+        background-color: white;
+        color: black;
+        width: auto;
+        padding: 5px 0px;
+        border: 1px solid #cccccc;
+        margin: 0;
+        cursor: default;
+        font: menu;
+        text-align: left;
+        text-indent: 0;
+        text-transform: none;
+        line-height: normal;
+        letter-spacing: normal;
+        word-spacing: normal;
+        word-wrap: normal;
+        white-space: nowrap;
+        float: none;
+        z-index: 201;
+        border-radius: 5px; /* Opera 10.5 and IE9 */
+        -webkit-border-radius: 5px; /* Safari and Chrome */
+        -moz-border-radius: 5px; /* Firefox */
+        -khtml-border-radius: 5px; /* Konqueror */
+        box-shadow: 0px 10px 20px #808080; /* Opera 10.5 and IE9 */
+        -webkit-box-shadow: 0px 10px 20px #808080; /* Safari 3 & Chrome */
+        -moz-box-shadow: 0px 10px 20px #808080; /* Forefox 3.5 */
+        -khtml-box-shadow: 0px 10px 20px #808080; /* Konqueror */
+      }
+      .CtxtMenu_MenuItem {
+        padding: 1px 2em;
+        background: transparent;
+      }
+      .CtxtMenu_MenuArrow {
+        position: absolute;
+        right: 0.5em;
+        padding-top: 0.25em;
+        color: #666666;
+        font-family: null;
+        font-size: 0.75em;
+      }
+      .CtxtMenu_MenuActive .CtxtMenu_MenuArrow {
+        color: white;
+      }
+      .CtxtMenu_MenuArrow.CtxtMenu_RTL {
+        left: 0.5em;
+        right: auto;
+      }
+      .CtxtMenu_MenuCheck {
+        position: absolute;
+        left: 0.7em;
+        font-family: null;
+      }
+      .CtxtMenu_MenuCheck.CtxtMenu_RTL {
+        right: 0.7em;
+        left: auto;
+      }
+      .CtxtMenu_MenuRadioCheck {
+        position: absolute;
+        left: 0.7em;
+      }
+      .CtxtMenu_MenuRadioCheck.CtxtMenu_RTL {
+        right: 0.7em;
+        left: auto;
+      }
+      .CtxtMenu_MenuInputBox {
+        padding-left: 1em;
+        right: 0.5em;
+        color: #666666;
+        font-family: null;
+      }
+      .CtxtMenu_MenuInputBox.CtxtMenu_RTL {
+        left: 0.1em;
+      }
+      .CtxtMenu_MenuComboBox {
+        left: 0.1em;
+        padding-bottom: 0.5em;
+      }
+      .CtxtMenu_MenuSlider {
+        left: 0.1em;
+      }
+      .CtxtMenu_SliderValue {
+        position: absolute;
+        right: 0.1em;
+        padding-top: 0.25em;
+        color: #333333;
+        font-size: 0.75em;
+      }
+      .CtxtMenu_SliderBar {
+        outline: none;
+        background: #d3d3d3;
+      }
+      .CtxtMenu_MenuLabel {
+        padding: 1px 2em 3px 1.33em;
+        font-style: italic;
+      }
+      .CtxtMenu_MenuRule {
+        border-top: 1px solid #dddddd;
+        margin: 4px 3px;
+      }
+      .CtxtMenu_MenuDisabled {
+        color: GrayText;
+      }
+      .CtxtMenu_MenuActive {
+        background-color: #606872;
+        color: white;
+      }
+      .CtxtMenu_MenuDisabled:focus {
+        background-color: #e8e8e8;
+      }
+      .CtxtMenu_MenuLabel:focus {
+        background-color: #e8e8e8;
+      }
+      .CtxtMenu_ContextMenu:focus {
+        outline: none;
+      }
+      .CtxtMenu_ContextMenu .CtxtMenu_MenuItem:focus {
+        outline: none;
+      }
+      .CtxtMenu_SelectionMenu {
+        position: relative;
+        float: left;
+        border-bottom: none;
+        -webkit-box-shadow: none;
+        -webkit-border-radius: 0px;
+      }
+      .CtxtMenu_SelectionItem {
+        padding-right: 1em;
+      }
+      .CtxtMenu_Selection {
+        right: 40%;
+        width: 50%;
+      }
+      .CtxtMenu_SelectionBox {
+        padding: 0em;
+        max-height: 20em;
+        max-width: none;
+        background-color: #ffffff;
+      }
+      .CtxtMenu_SelectionDivider {
+        clear: both;
+        border-top: 2px solid #000000;
+      }
+      .CtxtMenu_Menu .CtxtMenu_MenuClose {
+        top: -10px;
+        left: -10px;
+      }
+    </style>
+    <style id="MJX-CHTML-styles">
+      mjx-container[jax="CHTML"] {
+        line-height: 0;
+      }
+
+      mjx-container [space="1"] {
+        margin-left: 0.111em;
+      }
+
+      mjx-container [space="2"] {
+        margin-left: 0.167em;
+      }
+
+      mjx-container [space="3"] {
+        margin-left: 0.222em;
+      }
+
+      mjx-container [space="4"] {
+        margin-left: 0.278em;
+      }
+
+      mjx-container [space="5"] {
+        margin-left: 0.333em;
+      }
+
+      mjx-container [rspace="1"] {
+        margin-right: 0.111em;
+      }
+
+      mjx-container [rspace="2"] {
+        margin-right: 0.167em;
+      }
+
+      mjx-container [rspace="3"] {
+        margin-right: 0.222em;
+      }
+
+      mjx-container [rspace="4"] {
+        margin-right: 0.278em;
+      }
+
+      mjx-container [rspace="5"] {
+        margin-right: 0.333em;
+      }
+
+      mjx-container [size="s"] {
+        font-size: 70.7%;
+      }
+
+      mjx-container [size="ss"] {
+        font-size: 50%;
+      }
+
+      mjx-container [size="Tn"] {
+        font-size: 60%;
+      }
+
+      mjx-container [size="sm"] {
+        font-size: 85%;
+      }
+
+      mjx-container [size="lg"] {
+        font-size: 120%;
+      }
+
+      mjx-container [size="Lg"] {
+        font-size: 144%;
+      }
+
+      mjx-container [size="LG"] {
+        font-size: 173%;
+      }
+
+      mjx-container [size="hg"] {
+        font-size: 207%;
+      }
+
+      mjx-container [size="HG"] {
+        font-size: 249%;
+      }
+
+      mjx-container [width="full"] {
+        width: 100%;
+      }
+
+      mjx-box {
+        display: inline-block;
+      }
+
+      mjx-block {
+        display: block;
+      }
+
+      mjx-itable {
+        display: inline-table;
+      }
+
+      mjx-row {
+        display: table-row;
+      }
+
+      mjx-row > * {
+        display: table-cell;
+      }
+
+      mjx-mtext {
+        display: inline-block;
+      }
+
+      mjx-mstyle {
+        display: inline-block;
+      }
+
+      mjx-merror {
+        display: inline-block;
+        color: red;
+        background-color: yellow;
+      }
+
+      mjx-mphantom {
+        visibility: hidden;
+      }
+
+      _::-webkit-full-page-media,
+      _:future,
+      :root mjx-container {
+        will-change: opacity;
+      }
+
+      mjx-assistive-mml {
+        position: absolute !important;
+        top: 0px;
+        left: 0px;
+        clip: rect(1px, 1px, 1px, 1px);
+        padding: 1px 0px 0px 0px !important;
+        border: 0px !important;
+        display: block !important;
+        width: auto !important;
+        overflow: hidden !important;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      mjx-assistive-mml[display="block"] {
+        width: 100% !important;
+      }
+
+      mjx-math {
+        display: inline-block;
+        text-align: left;
+        line-height: 0;
+        text-indent: 0;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 100%;
+        font-size-adjust: none;
+        letter-spacing: normal;
+        word-wrap: normal;
+        word-spacing: normal;
+        white-space: nowrap;
+        direction: ltr;
+        padding: 1px 0;
+      }
+
+      mjx-container[jax="CHTML"][display="true"] {
+        display: block;
+        text-align: center;
+        margin: 1em 0;
+      }
+
+      mjx-container[jax="CHTML"][display="true"][width="full"] {
+        display: flex;
+      }
+
+      mjx-container[jax="CHTML"][display="true"] mjx-math {
+        padding: 0;
+      }
+
+      mjx-container[jax="CHTML"][justify="left"] {
+        text-align: left;
+      }
+
+      mjx-container[jax="CHTML"][justify="right"] {
+        text-align: right;
+      }
+
+      mjx-mi {
+        display: inline-block;
+        text-align: left;
+      }
+
+      mjx-c {
+        display: inline-block;
+      }
+
+      mjx-utext {
+        display: inline-block;
+        padding: 0.75em 0 0.2em 0;
+      }
+
+      mjx-c::before {
+        display: block;
+        width: 0;
+      }
+
+      .MJX-TEX {
+        font-family: MJXZERO, MJXTEX;
+      }
+
+      .TEX-B {
+        font-family: MJXZERO, MJXTEX-B;
+      }
+
+      .TEX-I {
+        font-family: MJXZERO, MJXTEX-I;
+      }
+
+      .TEX-MI {
+        font-family: MJXZERO, MJXTEX-MI;
+      }
+
+      .TEX-BI {
+        font-family: MJXZERO, MJXTEX-BI;
+      }
+
+      .TEX-S1 {
+        font-family: MJXZERO, MJXTEX-S1;
+      }
+
+      .TEX-S2 {
+        font-family: MJXZERO, MJXTEX-S2;
+      }
+
+      .TEX-S3 {
+        font-family: MJXZERO, MJXTEX-S3;
+      }
+
+      .TEX-S4 {
+        font-family: MJXZERO, MJXTEX-S4;
+      }
+
+      .TEX-A {
+        font-family: MJXZERO, MJXTEX-A;
+      }
+
+      .TEX-C {
+        font-family: MJXZERO, MJXTEX-C;
+      }
+
+      .TEX-CB {
+        font-family: MJXZERO, MJXTEX-CB;
+      }
+
+      .TEX-FR {
+        font-family: MJXZERO, MJXTEX-FR;
+      }
+
+      .TEX-FRB {
+        font-family: MJXZERO, MJXTEX-FRB;
+      }
+
+      .TEX-SS {
+        font-family: MJXZERO, MJXTEX-SS;
+      }
+
+      .TEX-SSB {
+        font-family: MJXZERO, MJXTEX-SSB;
+      }
+
+      .TEX-SSI {
+        font-family: MJXZERO, MJXTEX-SSI;
+      }
+
+      .TEX-SC {
+        font-family: MJXZERO, MJXTEX-SC;
+      }
+
+      .TEX-T {
+        font-family: MJXZERO, MJXTEX-T;
+      }
+
+      .TEX-V {
+        font-family: MJXZERO, MJXTEX-V;
+      }
+
+      .TEX-VB {
+        font-family: MJXZERO, MJXTEX-VB;
+      }
+
+      mjx-stretchy-v mjx-c,
+      mjx-stretchy-h mjx-c {
+        font-family: MJXZERO, MJXTEX-S1, MJXTEX-S4, MJXTEX, MJXTEX-A !important;
+      }
+
+      @font-face /* 0 */ {
+        font-family: MJXZERO;
+        src: url("https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/output/chtml/fonts/woff-v2/MathJax_Zero.woff")
+          format("woff");
+      }
+
+      @font-face /* 1 */ {
+        font-family: MJXTEX;
+        src: url("https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/output/chtml/fonts/woff-v2/MathJax_Main-Regular.woff")
+          format("woff");
+      }
+
+      @font-face /* 2 */ {
+        font-family: MJXTEX-B;
+        src: url("https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/output/chtml/fonts/woff-v2/MathJax_Main-Bold.woff")
+          format("woff");
+      }
+
+      @font-face /* 3 */ {
+        font-family: MJXTEX-I;
+        src: url("https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/output/chtml/fonts/woff-v2/MathJax_Math-Italic.woff")
+          format("woff");
+      }
+
+      @font-face /* 4 */ {
+        font-family: MJXTEX-MI;
+        src: url("https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/output/chtml/fonts/woff-v2/MathJax_Main-Italic.woff")
+          format("woff");
+      }
+
+      @font-face /* 5 */ {
+        font-family: MJXTEX-BI;
+        src: url("https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/output/chtml/fonts/woff-v2/MathJax_Math-BoldItalic.woff")
+          format("woff");
+      }
+
+      @font-face /* 6 */ {
+        font-family: MJXTEX-S1;
+        src: url("https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/output/chtml/fonts/woff-v2/MathJax_Size1-Regular.woff")
+          format("woff");
+      }
+
+      @font-face /* 7 */ {
+        font-family: MJXTEX-S2;
+        src: url("https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/output/chtml/fonts/woff-v2/MathJax_Size2-Regular.woff")
+          format("woff");
+      }
+
+      @font-face /* 8 */ {
+        font-family: MJXTEX-S3;
+        src: url("https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/output/chtml/fonts/woff-v2/MathJax_Size3-Regular.woff")
+          format("woff");
+      }
+
+      @font-face /* 9 */ {
+        font-family: MJXTEX-S4;
+        src: url("https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/output/chtml/fonts/woff-v2/MathJax_Size4-Regular.woff")
+          format("woff");
+      }
+
+      @font-face /* 10 */ {
+        font-family: MJXTEX-A;
+        src: url("https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/output/chtml/fonts/woff-v2/MathJax_AMS-Regular.woff")
+          format("woff");
+      }
+
+      @font-face /* 11 */ {
+        font-family: MJXTEX-C;
+        src: url("https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/output/chtml/fonts/woff-v2/MathJax_Calligraphic-Regular.woff")
+          format("woff");
+      }
+
+      @font-face /* 12 */ {
+        font-family: MJXTEX-CB;
+        src: url("https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/output/chtml/fonts/woff-v2/MathJax_Calligraphic-Bold.woff")
+          format("woff");
+      }
+
+      @font-face /* 13 */ {
+        font-family: MJXTEX-FR;
+        src: url("https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/output/chtml/fonts/woff-v2/MathJax_Fraktur-Regular.woff")
+          format("woff");
+      }
+
+      @font-face /* 14 */ {
+        font-family: MJXTEX-FRB;
+        src: url("https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/output/chtml/fonts/woff-v2/MathJax_Fraktur-Bold.woff")
+          format("woff");
+      }
+
+      @font-face /* 15 */ {
+        font-family: MJXTEX-SS;
+        src: url("https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/output/chtml/fonts/woff-v2/MathJax_SansSerif-Regular.woff")
+          format("woff");
+      }
+
+      @font-face /* 16 */ {
+        font-family: MJXTEX-SSB;
+        src: url("https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/output/chtml/fonts/woff-v2/MathJax_SansSerif-Bold.woff")
+          format("woff");
+      }
+
+      @font-face /* 17 */ {
+        font-family: MJXTEX-SSI;
+        src: url("https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/output/chtml/fonts/woff-v2/MathJax_SansSerif-Italic.woff")
+          format("woff");
+      }
+
+      @font-face /* 18 */ {
+        font-family: MJXTEX-SC;
+        src: url("https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/output/chtml/fonts/woff-v2/MathJax_Script-Regular.woff")
+          format("woff");
+      }
+
+      @font-face /* 19 */ {
+        font-family: MJXTEX-T;
+        src: url("https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/output/chtml/fonts/woff-v2/MathJax_Typewriter-Regular.woff")
+          format("woff");
+      }
+
+      @font-face /* 20 */ {
+        font-family: MJXTEX-V;
+        src: url("https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/output/chtml/fonts/woff-v2/MathJax_Vector-Regular.woff")
+          format("woff");
+      }
+
+      @font-face /* 21 */ {
+        font-family: MJXTEX-VB;
+        src: url("https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/output/chtml/fonts/woff-v2/MathJax_Vector-Bold.woff")
+          format("woff");
+      }
+
+      mjx-c.mjx-c1D70B.TEX-I::before {
+        padding: 0.431em 0.57em 0.011em 0;
+        content: "\3C0";
+      }
+
+      mjx-c.mjx-c1D719.TEX-I::before {
+        padding: 0.694em 0.596em 0.205em 0;
+        content: "\3D5";
+      }
+    </style>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root">
+      <div class="App">
+        <div class="Brazil Scribe CopyBook">
+          <nav
+            class="CustomNav CustomHeader navbar navbar-expand-lg navbar-dark fixed-top"
+          >
+            <span class="Clickable navbar-brand"
+              ><a aria-current="page" class="active" href="/">Accueil</a></span
+            ><button
+              aria-controls="basic-navbar-nav"
+              type="button"
+              aria-label="Toggle navigation"
+              class="navbar-toggler collapsed"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse" id="responsive-navbar-nav">
+              <div class="navbar-nav">
+                <div class="nav-item dropdown">
+                  <a
+                    aria-expanded="false"
+                    role="button"
+                    class="dropdown-toggle nav-link"
+                    tabindex="0"
+                    href="#"
+                    >Cours</a
+                  >
+                </div>
+                <div class="nav-item dropdown">
+                  <a
+                    aria-expanded="false"
+                    role="button"
+                    class="dropdown-toggle nav-link"
+                    tabindex="0"
+                    href="#"
+                    >BDs de Jean-Pierre Petit</a
+                  >
+                </div>
+                <div class="nav-item dropdown">
+                  <a
+                    aria-expanded="false"
+                    role="button"
+                    class="dropdown-toggle nav-link"
+                    tabindex="0"
+                    href="#"
+                    >Jeux</a
+                  >
+                </div>
+                <div class="nav-item" title="Liens" id="nav-item-liens">
+                  <a class="" href="/liens">Liens</a>
+                </div>
+                <div
+                  class="nav-item"
+                  title="Cours à domicile"
+                  id="nav-item-contact"
+                >
+                  <a class="" href="/contact">Cours à domicile</a>
+                </div>
+              </div>
+            </div>
+          </nav>
+          <div class="RelativeContainer container">
+            <div class="Home container">
+              <h1 class="Hidden">
+                Page d'accueil de Ma Thématique : présentation des contenus.
+              </h1>
+              <div class="HomeTitleContainer container">Ma thématique</div>
+              <div class="HomeDescContainer container">
+                <p>
+                  Ce site est dédié à l'apprentissage des mathématiques pour
+                  tous.
+                </p>
+                <p>
+                  Il comprend
+                  <a class="" href="/cours">de nombreux cours</a> allant du
+                  collège à la terminale. Ces cours incluent notamment certaines
+                  explications et démonstrations des formules que l'on apprend
+                  en cours. Je vous propose de même une présentation des nombres
+                  <a class="" href="/cours/le-nombre-pi"
+                    ><span style="display: inline; visibility: visible"
+                      ><mjx-container
+                        class="MathJax CtxtMenu_Attached_0"
+                        jax="CHTML"
+                        tabindex="0"
+                        ctxtmenu_counter="0"
+                        style="font-size: 125.7%; position: relative"
+                        ><mjx-math class="MJX-TEX" aria-hidden="true"
+                          ><mjx-mi class="mjx-i"
+                            ><mjx-c
+                              class="mjx-c1D70B TEX-I"
+                            ></mjx-c></mjx-mi></mjx-math
+                        ><mjx-assistive-mml unselectable="on" display="inline"
+                          ><mjx-container
+                            class="MathJax CtxtMenu_Attached_0"
+                            jax="CHTML"
+                            tabindex="0"
+                            ctxtmenu_counter="2"
+                            style="font-size: 130%; position: relative"
+                            ><mjx-math class="MJX-TEX" aria-hidden="true"
+                              ><mjx-mi class="mjx-i"
+                                ><mjx-c
+                                  class="mjx-c1D70B TEX-I"
+                                ></mjx-c></mjx-mi></mjx-math
+                            ><mjx-assistive-mml
+                              unselectable="on"
+                              display="inline"
+                              ><math xmlns="http://www.w3.org/1998/Math/MathML"
+                                ><mi>π</mi></math
+                              ></mjx-assistive-mml
+                            ></mjx-container
+                          ></mjx-assistive-mml
+                        ></mjx-container
+                      ></span
+                    >
+                    (Pi)</a
+                  >
+                  et
+                  <a class="" href="/cours/le-nombre-d-or"
+                    ><span style="display: inline; visibility: visible"
+                      ><mjx-container
+                        class="MathJax CtxtMenu_Attached_0"
+                        jax="CHTML"
+                        tabindex="0"
+                        ctxtmenu_counter="1"
+                        style="font-size: 125.7%; position: relative"
+                        ><mjx-math class="MJX-TEX" aria-hidden="true"
+                          ><mjx-mi class="mjx-i"
+                            ><mjx-c
+                              class="mjx-c1D719 TEX-I"
+                            ></mjx-c></mjx-mi></mjx-math
+                        ><mjx-assistive-mml unselectable="on" display="inline"
+                          ><mjx-container
+                            class="MathJax CtxtMenu_Attached_0"
+                            jax="CHTML"
+                            tabindex="0"
+                            ctxtmenu_counter="3"
+                            style="font-size: 130%; position: relative"
+                            ><mjx-math class="MJX-TEX" aria-hidden="true"
+                              ><mjx-mi class="mjx-i"
+                                ><mjx-c
+                                  class="mjx-c1D719 TEX-I"
+                                ></mjx-c></mjx-mi></mjx-math
+                            ><mjx-assistive-mml
+                              unselectable="on"
+                              display="inline"
+                              ><math xmlns="http://www.w3.org/1998/Math/MathML"
+                                ><mi>ϕ</mi></math
+                              ></mjx-assistive-mml
+                            ></mjx-container
+                          ></mjx-assistive-mml
+                        ></mjx-container
+                      ></span
+                    >
+                    (Phi, le nombre d'or)</a
+                  >.
+                </p>
+                <p>
+                  Je dédie ce site à un grand homme de la science, Jean-Pierre
+                  Petit, et je vous partage
+                  <a class="" href="/bds-de-jpp"
+                    >ses bandes dessinées pédagogiques</a
+                  >
+                  sur le thème de la science avec son accord.
+                </p>
+                <p>
+                  Pour en apprendre plus sur qui je suis, rendez-vous sur
+                  <a class="" href="/contact">cette page.</a>
+                </p>
+              </div>
+            </div>
+          </div>
+          <nav
+            class="CustomFooter CustomNav navbar navbar-expand-lg navbar-dark fixed-bottom"
+          >
+            <button
+              aria-controls="basic-nav-nav"
+              type="button"
+              aria-label="Toggle navigation"
+              class="navbar-toggler collapsed"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse" id="responsive-navbar-nav">
+              <div class="navbar-nav">
+                <div class="nav-item dropup">
+                  <a
+                    id="basic-nav-dropdown"
+                    aria-expanded="false"
+                    role="button"
+                    class="dropdown-toggle nav-link"
+                    tabindex="0"
+                    href="#"
+                    >Fonts</a
+                  >
+                </div>
+                <div class="nav-item dropup">
+                  <a
+                    id="basic-nav-dropdown"
+                    aria-expanded="false"
+                    role="button"
+                    class="dropdown-toggle nav-link"
+                    tabindex="0"
+                    href="#"
+                    >Themes</a
+                  >
+                </div>
+              </div>
+            </div>
+            <p class="CopyRight">Copyright © Jozinho 2023</p>
+            <a class="" href="/contact"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 16 16"
+                width="1em"
+                height="1em"
+                fill="currentColor"
+                class="ContactIcon"
+              >
+                <path
+                  d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"
+                ></path></svg
+            ></a>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

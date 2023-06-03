@@ -1,48 +1,65 @@
+.ExpressionsContainer {
+    margin: auto;
+    position: relative;
+    /* top: 20%;
+    bottom: 20%; */
+} 
+
 .HomeContainer {
-    position: absolute;
-    top: 50%; /* Position Y halfway in */
-    left: 50%; /* Position X halfway in */
-    transform: translate(-50%,-50%); /* Move it halfway back(x,y) */
+    margin-top: 80px;
 }
 
 .HomeTitleContainer {
-    position: absolute;
-    top: 50%; /* Position Y halfway in */
-    left: 50%; /* Position X halfway in */
-    transform: translate(-50%,-50%); /* Move it halfway back(x,y) */
-    background-color: var(--front-color);
+    position: relative;
+    top: 30px;
+    /* background-color: var(--front-color); */
+    background-image: linear-gradient(to bottom right, var(--front-color), grey);    
     border-radius: 10px;
     color: var(--links-color);
-    font-size: small;
+    font-size: large;
     padding: 30px;
-    margin-top: 20px;
-    width: 40%;
-    z-index: 1;
+    width: 50%;
+    box-shadow: 20px 20px 5px 5px var(--navbar-color);
+    margin-bottom: 20px;
 }
 
-@media (min-width : 768px) {
+@media (width < 450px) {
     .HomeTitleContainer {
-        width: 40%;
-        font-size: medium;
-        padding: 40px;
+        top: 10px;
+        width: 90%;
+        margin-bottom: 0px;
     }
+/*     .ExpressionsContainer .MathJaxDisplayContainer {
+        padding: 25px;
+    } */
 }
 
-@media (min-width : 768px) {
-    .HomeTitleContainer {
-        width: 30%;
-        font-size: large;
-        padding: 50px;
-    }
+/* @media (min-width : 768px) {
     .ExpressionsContainer .MathJaxDisplayContainer {
-        padding: 10px;
+        padding: 35px;
     }
 
     .ExpressionsContainer mjx-math {
         font-size: large !important;
     }
 }
+ */
 
-.ExpressionsContainer .MathJaxDisplayContainer {
-    padding: 0px;
+.HomeDescContainer {
+    position: relative;
+    top: 60px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+    font: var(--scholar-font);
+    text-align: justify;
+}
+
+ 
+@media (max-width: 450px) {
+    .HomeDescContainer {
+        top: 30px;
+    }
 }

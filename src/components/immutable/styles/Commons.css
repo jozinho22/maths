@@ -1,14 +1,51 @@
 .RelativeContainer {
     position: relative;
-    padding-top: calc(var(--customheader-height));
-    padding-bottom: calc(var(--customfooter-height) + 20px); 
+    padding-top: calc(100px + 20px);
+    padding-bottom: calc(100px + 40px); 
     min-height: 100vh;
-    font-size: x-small;
+    color: var(--simple-text-color);
+    /* display: flex;
+    flex-direction: column;
+    align-items: center; */
+}
+
+@media(width < 450px) {
+    .RelativeContainer {
+        padding-top: calc(100px);
+    }
+    
 }
 
 .RelativeContainer.PlayMode {
-    padding-top: 20px;
-    padding-bottom: 20px; 
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+a, p {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: medium;
+}
+
+p {
+    text-align: justify;
+    white-space: pre-line;
+}
+
+h1 {
+    font-size: large;
+}
+
+a { 
+    color: rgb(86, 86, 158); 
+} 
+
+a:hover {
+    color: rgb(61, 61, 139);
+}
+
+.MainTitle {
+    font: inherit;
+    text-decoration: underline;
 }
 
 .Title, .Title1 {
@@ -17,52 +54,47 @@
 }
 
 .Title {
-   margin: 0 auto;
-   padding-top: 20px;
-   font-size: small; 
-   padding-bottom: 20px;
-   block-size: fit-content;
-   width: fit-content;
+    text-align:center !important;
+}
+
+
+.MainTitle, .Title {
+    margin: 0 auto;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    /* width: fit-content; */
+    font-size: large !important;
+    text-align: center !important;
+}
+
+.Title1, .Title2 {
+    text-align: left;
 }
 
 .Title1 {
-   padding-top: 10px;
-   text-align: left;
-   padding-bottom: 5px;
-   text-decoration: underline;
-   font-weight: bold;
+    font-size: large !important;
+    padding-top: 20px;
+    padding-bottom: 5px;
+    font-weight: bold;
 }
 
 .Title2 {
-   padding-top: 10px;
-   text-align: left;
-   text-decoration: underline;
-   font-style: italic;
+    font-size: large !important;
+    padding-top: 10px;
+    text-decoration: underline;
+    font-style: italic;
 }
 
-@media (min-width: 768px) {
-    .RelativeContainer {
-        font-size: small;
-        padding-top: calc(var(--customheader-height) + 20px);
+@media (min-width: 450px) {
+    .MainTitle {
+        font-size: large !important;
     }
     .Title {
-        font-size: medium;
+        font-size: x-large !important;
     }
-}
-
-@media (min-width: 1268px) {
-    .RelativeContainer {
-        font-size: medium;
+    a, p {
+        font-size: large !important;
     }
-    .Title {
-        font-size: large;
-    }
-}
-
-.LoadingSpinner {
-    position: relative;
-    /* or absolute */
-    color: var(--front-color);
 }
 
 /* Buttons */
@@ -75,29 +107,23 @@
     margin-bottom: 20px;
     margin-left: 10px;
     margin-right: 10px;
-    padding: 10px;
-    font-size: xx-small;
+/*     padding: 10px;
+ */    font-size: medium;
+    font-family: 'Times New Roman', Times, serif !important;
+    width: fit-content;
 }
 
-@media (min-width: 360px) {
+@media (min-width: 450px) {
     .DefaultButton {
         padding: 10px;
         margin-top: 25px;
         margin-bottom: 25px;
-    }
-}
-
-@media (min-width: 768px) {
-    .DefaultButton {
-        font-size: small;
-        margin-top: 20px;
-        margin-bottom: 20px;
+        font-size: large;
     }
 }
 
 @media (min-width: 1268px) {
     .DefaultButton {
-        font-size: medium;
         margin-top: 20px;
         margin-bottom: 20px;
     }
@@ -105,18 +131,25 @@
 
 .DefaultButton:hover {
     background-color: var(--blue-hover-color);
+    border-color: var(--grey-color);
 }
 
 .DefaultButton:focus {
     background-color: var(--blue-hover-color);
+    border-color: var(--grey-color);
     border-width: 0px;
+}
+
+.DefaultButton:disabled {
+    background-color: var(--blue-hover-color);
+    border-color: var(--grey-color);
 }
 
 .DefaultButton mjx-math {
     font-size: medium !important;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 450px) {
     .DefaultButton mjx-math {
         font-size: large !important;
     }
@@ -126,21 +159,63 @@
     margin: 0px;
 }
 
-.MiniButton {
-    padding: 5px;
-    font-size: x-small;
-    margin: 20px;
+.FlexButton {
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 450px) {
+    .MiniButton {
+        padding: 5px;
+        font-size: small !important;
+    }
+    .TextBetweenNavigationsButtons {
+        font-size: xx-small;
+    }
+}
+
+.RowAlignedButtons {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 10px;
+}
+
+@media (width < 450px) {
+    .RowAlignedButtons {
+        gap: 0px;
+    }
+    .RowAlignedButtons mjx-container {
+        font-size: large !important;
+    }
+}
+
+.DoubleLineButtons {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 20%;
+}
+
+@media (width < 450px) {
+    .DoubleLineButtons {
+        gap: 0px;
+    }
+}
+
+
+.LargeButton {
+    padding: 13px;
 }
 
 .GreenButton {
     background-color: var(--green-color);
 }
 
-.GreenButton:hover {
-    background-color: var(--green-hover-color);
-}
-
-.GreenButton:focus {
+.GreenButton:hover, .GreenButton:focus, .GreenButton:active  {
     background-color: var(--green-hover-color);
 }
 
@@ -148,11 +223,7 @@
     background-color: var(--orange-color);
 }
 
-.OrangeButton:hover {
-    background-color: var(--orange-hover-color);
-}
-
-.OrangeButton:focus {
+.OrangeButton:hover, .OrangeButton:focus, .OrangeButton:active {
     background-color: var(--orange-hover-color);
 }
 
@@ -160,16 +231,58 @@
     background-color: var(--red-color);
 }
 
-.RedButton:hover {
+.RedButton:hover, .RedButton:focus, .RedButton:active {
     background-color: var(--red-hover-color);
 }
 
-.RedButton:focus {
-    background-color: var(--red-hover-color);
+/* Table Of Contents */
+.TableOfContents {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    padding-left: 25%;
+}
+
+@media (width < 450px) {
+    .TableOfContents {
+        padding-left: 8%;
+    }
+}
+
+/* @media (min-width: 450px) {
+    .TableOfContents {
+        margin-left: 80px;
+    }
+} */
+
+.TableOfContentsLink {
+    position: relative;
+    font-size: large;
+    cursor: pointer;
+    text-decoration: none !important;
+}
+
+@media (width < 450px) {
+    .TableOfContentsLink, .TableOfContentsLink a, .TableOfContentsLink p {
+        font-size: medium !important;
+    }
+}
+
+.TableOfContentsLink a, .TableOfContentsLink p {
+    font-family: var(--scholar-font);
+    font-size: large;
+    text-align: left;
+    transform: translateX(5%);
+    color: var(--simple-text-color);
+    text-decoration: none !important;
+}
+
+a:-webkit-any-link {
+    text-decoration: none !important;
 }
 
 /* Icons */
-
 .Icon {
     text-align: center;
     width: 20px;
@@ -177,10 +290,10 @@
 }
 
 .InlineIcon {
-   padding-left: 5px;
+    padding-left: 5px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 450px) {
     .Icon {
         width: 30px;
         height: 30px;
@@ -191,22 +304,34 @@
     .Icon {
         width: 35px;
         height: 35px;
-    }  
+    }
 }
 
 .CheckIcon {
-    color:  var(--green-color);
+    color: var(--green-color);
 }
 
 .QuestionIcon {
-    color:  var(--orange-color);
+    color: var(--orange-color);
 }
 
 .WrongIcon {
-    color:  var(--red-color);
+    color: var(--red-color);
+}
+
+.NavigationIcon {
+    color: var(--back-color);
 }
 
 /* Page tricks */
+
+.Blur {
+    filter: blur(6px);
+    /* -webkit-filter: blur(10px);
+    -moz-filter: blur(10px);
+    -o-filter: blur(10px);
+    -ms-filter: blur(10px); */
+}
 
 .CenterText {
     margin: auto;
@@ -229,26 +354,30 @@
 }
 
 .AuthorCopyRight {
-    font-family: 'Times New Roman', Times, serif;
-    font-size: medium;
+    font-family: 'Times New Roman', Times, serif !important;
+    font-size: medium !important;
+    text-align: center !important;
+    margin-top: 30px;
 }
 
 /* Tables */
 
 .TableContainer {
     margin-bottom: 20px;
-/*     overflow: hidden;
- */    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    /*     overflow: hidden;
+ */
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: small;
 }
 
 @media(min-width: 450px) {
     .TableContainer {
         margin-bottom: 40px;
+        width: 80%;
     }
 }
 
-.TableContainer td, th { 
+.TableContainer td, th {
     vertical-align: middle;
 }
 
@@ -257,6 +386,14 @@ table::-webkit-scrollbar {
 }
 
 table::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-    box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.Error {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }

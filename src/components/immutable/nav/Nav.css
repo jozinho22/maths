@@ -1,0 +1,115 @@
+.CustomNav {
+    background-color : var(--navbar-color);
+}
+
+.CustomNav a {
+  font: inherit;
+}
+
+@media(min-width: 450px) {
+  .CustomNav .navbar-nav {
+    margin-left: 30px;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.CustomNav .navbar-brand a {
+  color: var(--links-color);
+  padding-left: 20px;
+}
+
+.CustomNav button .nav-toggler .collapsed {
+  margin-right: 40px !important;
+}
+
+.CustomNav .navbar-collapse {
+  background-color: var(--navbar-color);
+  margin-top: 5px;
+}
+
+/* nav-item (items de la navbar) */
+.CustomNav .nav-item a {
+  color: var(--grey-light-color) !important;
+  font-size: small !important ;
+}
+
+.CustomNav .nav-item {
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+}
+
+@media (width < 450px) {
+    .CustomNav .nav-item a {
+      font-size: small;
+    }
+}
+
+@media (width < 1000px) {
+    .CustomNav .nav-item.dropdown  {
+      padding-top: 10px !important;
+      padding-bottom: 10px !important;
+    }
+}
+
+/* .dropdown-menu (l'ensemble) */
+.CustomNav .dropdown-menu {
+  background-color : var(--navbar-color);
+  border: 0px;
+  max-height: 400px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* dropdown-toggle (le titre du toggle) */
+.CustomNav .dropdown-toggle {
+  margin-bottom: 0px !important;
+}
+
+.CustomNav .dropdown-toggle.show {
+  color: var(--grey-lighter-color) !important;
+}
+
+/* dropdown-item (les sous-titres du toogle) */
+.CustomNav .dropdown-item {
+  padding: 10px;
+  text-align: center;
+}
+
+.CustomNav .dropdown-item.active, .CustomNav .dropdown-item:hover {
+  background-color: var(--front-color) !important;
+}
+
+@media (width < 450px) {
+  .CustomNav .dropdown-item {
+    padding: 5px;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+
+.CustomNav .dropdown-item a {
+  font-size: small !important;
+  color: var(--links-color) !important;
+}
+
+@media (width < 450px) {
+  .CustomNav .dropdown-item a {
+      font-size: x-small !important;
+  }
+}
+
+.CustomNav .dropdown-item:hover, .CustomNav .dropdown-item:hover {
+  background-color : var(--navbar-hover-color);
+}
+
+.CustomNav .dropdown-item:focus, .CustomNav .dropdown-item:focus {
+  background-color : var(--navbar-hover-color);
+}
+
+@media (min-width: 450px) {
+  .CustomNav .dropdown-item {
+    font-size: small !important;
+    width: 100%;
+  }
+}

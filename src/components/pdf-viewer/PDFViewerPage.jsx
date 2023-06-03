@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { Container, Button } from 'react-bootstrap';
+import { NavLink } from 'react-router-dom';
 import BootstrapSwitchButton from 'bootstrap-switch-button-react'
 
 import PDF from "react-pdf-js";
@@ -8,13 +9,15 @@ import PaginationPageByPage from './PaginationPageByPage';
 import PaginationFullDocument from './PaginationFullDocument';
 import AppContext from '../context/AppContext'
 
-import getWidth from '../immutable/getWidth';
-import CustomSpinner from '../general-content/CustomSpinner';
-
+import Link from '../immutable/nav/Link';
+import CoursesLinks from '../courses/CoursesLinks';
+import CustomHelmet from '../immutable/seo/CustomHelmet';
+import Constants from '../immutable/Constants';
 import { useSwipeable } from 'react-swipeable';
 
 import './PDFViewerPage.css';
 import './styles/Canevas.css';
+import HiddenTitle from '../immutable/seo/HiddenTitle';
 
 const PDFViewerPage = ({ pdfItem }) => {
 
@@ -30,12 +33,12 @@ const PDFViewerPage = ({ pdfItem }) => {
         const [withAnswers, setWithAnswers] = React.useState(false);
         const step = 5;
 
-        const {playMode, updatePlayMode} = React.useContext(AppContext);
+        const {updatePlayMode} = React.useContext(AppContext);
 
         const swipers = useSwipeable(
             {
-                onSwipedRight: () =>  setPage(page - 1 > 0 ? page - 1 : 1),
-                onSwipedLeft: () =>  setPage(page + 1 > pages ? pages : page + 1)
+                onSwipedRight: () =>  {setPage(page - 1 > 0 ? page - 1 : 1);},
+                onSwipedLeft: () =>  {setPage(page + 1 > pages ? pages : page + 1);}
             }
         );
 
@@ -50,12 +53,9 @@ const PDFViewerPage = ({ pdfItem }) => {
             swipeRef.current = el;
         }
 
-        var mobile = getWidth() < 450;
+        var width = document.body.offsetWidth
+        var mobile = width < 450;
 
-        React.useEffect(() => {
-            updatePlayMode(true);
-        }, []);
-       
         function addPagesToList(begin) {
             var list = [];
 
@@ -86,28 +86,33 @@ const PDFViewerPage = ({ pdfItem }) => {
             return page - (page % step);
         }
 
+        function undoPlayMode() {
+            updatePlayMode(false);
+        }
+
+        React.useEffect(() => {
+            updatePlayMode(true);
+        });
+
         React.useEffect(() => {
             window.scrollTo(0, 0);
         }, [page, pagesList]);
 
         return (
           <> 
-            {
-                playMode ?
-                    <>
-                        <Button 
-                            className="DefaultButton UnPlayModeButton"
-                            onClick={() => updatePlayMode(false)}>
-                            Retour
-                        </Button>
-                    </> 
-                        :   <Button 
-                                className="DefaultButton PlayModeButton"
-                                onClick={() => updatePlayMode(true)}>
-                                Play mode
-                            </Button>
-            }
-
+            <CustomHelmet title={pdfItem.title} metaContent={pdfItem.metaContent} canonicalUrl={`${Constants.WEB_APP_URL}/bds-de-jpp/${pdfItem.relativePath}`}/>
+            <HiddenTitle title={pdfItem.hiddenTitle} />
+            <NavLink to={"/"}>
+                <Button className="DefaultButton ReturnHomeButton" onClick={() => undoPlayMode()}>
+                    Home
+                </Button>
+            </NavLink>
+            <NavLink to={"/bds-de-jpp"} onClick={() => undoPlayMode()}>
+                <Button className="DefaultButton UnPlayModeButton" >
+                    Toutes les BDs
+                </Button>
+            </NavLink>
+                   
             {
                 !mobile ?
                     <Container className="SwitchButton">
@@ -117,14 +122,14 @@ const PDFViewerPage = ({ pdfItem }) => {
                             onstyle='primary'
                             offlabel={`Page par page`}
                             offstyle='warning'
-                            style='w-50 mx-3'
+                            style={'w-50 mx-3'}
                             onChange={() => switchView()} />  
                     </Container>
                         : <></>
 
             }
           
-            <h3 className="Title">{pdfItem.title}</h3>
+            <p className="MainTitle PdfTitle">{pdfItem.title}</p>
 
             {
                 pdfItem.type === 'courses' ?
@@ -135,7 +140,7 @@ const PDFViewerPage = ({ pdfItem }) => {
                             onstyle='success'
                             offlabel={`Afficher les réponses`}
                             offstyle='danger'
-                            style='w-50 mx-3'
+                            style={'w-50 mx-3'}
                             onChange={() => setWithAnswers(!withAnswers)} />  
                     </Container>
                         : <></>
@@ -146,12 +151,12 @@ const PDFViewerPage = ({ pdfItem }) => {
 
                     <>
                         {
-                            !mobile ?
-                                <PaginationPageByPage
-                                    page={page}
-                                    pages={pages} 
-                                    setPage={setPage} />
-                                        : <></>
+                            mobile ?
+                                <div className="PagesMobile">page : {page} / {pages}</div>
+                                    : <PaginationPageByPage
+                                            page={page}
+                                            pages={pages} 
+                                            setPage={setPage} />
                         }
                         <div {...swipers} ref={refPassthrough} >
                             <PDF 
@@ -164,14 +169,13 @@ const PDFViewerPage = ({ pdfItem }) => {
                                 }} />
                         </div>   
                         {
-                            mobile && playMode ?
-                                <div className="PagesMobile">page : {page} / {pages}</div>
+                            mobile ?
+                                <></>
                                     :   <PaginationPageByPage
                                             page={page}
                                             pages={pages} 
                                             setPage={setPage} />                 
                         }
-                        
                     </> :
 
                         <>
@@ -198,12 +202,8 @@ const PDFViewerPage = ({ pdfItem }) => {
                                 addPagesToList={addPagesToList} />
                         </>
                 }
-                {
-                    !playMode ?
-                        <p className="AuthorCopyRight">Avec l'accord de Mr Petit - <a href="http://www.savoir-sans-frontieres.com/JPP/telechargeables/free_downloads.htm" target="_blank" rel="noreferrer">toutes ses BDs</a></p>
-                            : <></>
-                }
-                
+
+                <p className="AuthorCopyRight">Avec l'accord de Mr Petit - <Link link={CoursesLinks.SAVOIR_SANS_FRONTIERES} >toutes ses BDs</Link></p>     
           </>     
         );
       }

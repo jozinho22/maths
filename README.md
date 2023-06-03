@@ -1,3 +1,21 @@
+# Ma Thématique
+
+Ce site est dédié aux mathématiques, il comprend de nombreux cours de niveau collège/lycée avec de même certaines démonstrations.
+
+## Installation
+
+```git
+git clone git@github.com:jozinho22/maths.git
+git checkout dev (la dernière version)
+```
+
+## Lancement
+
+```npm
+npm install
+npm start
+```
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

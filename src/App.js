@@ -1,4 +1,7 @@
-import React from 'react';
+import React, { Suspense } from 'react';
+
+import { BrowserRouter } from 'react-router-dom';
+import { Container } from 'react-bootstrap';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './components/immutable/styles/Fonts.css';
@@ -7,57 +10,55 @@ import './components/immutable/styles/Commons.css';
 import './components/alert/Alert.css';
 import './App.css';
 
-import { Container } from 'react-bootstrap';
 import AppContext from './components/context/AppContext';
+import BlurryingSpinner from './components/immutable/spinners/BlurryingSpinner';
+
+import Header from './components/immutable/nav/Header';
+import Footer from './components/immutable/nav/Footer';
+
+import coursesResourceBuilder from './components/courses/coursesResourceBuilder';
 import pdfResourceBuilder from './components/pdf-viewer/pdfResourceBuilder';
-import initDimensions from './components/immutable/initDimensions';
-import Header from './components/immutable/Header';
-import Home from './components/home/Home';
-import Footer from './components/immutable/Footer';
-import LeNombreDOr from './components/courses/nbOr/LeNombreDOr';
+import gamesResourceBuilder from './components/games/gamesResourceBuilder';
+
+import { getFontIfStoredFontExists, getRandomFont } from './components/immutable/styles/getFonts';
+import { getThemeIfStoredThemeExists } from './components/immutable/styles/getThemes';
+import AppRoutes from './AppRoutes';
 
 function App() {
 
-    const [font, setFont] = React.useState("Dragons");
+    const [font, setFont] = React.useState(getFontIfStoredFontExists(JSON.parse(sessionStorage.getItem('ma-thematique-font'))) ? JSON.parse(sessionStorage.getItem('ma-thematique-font')) : getRandomFont());
     const [playMode, setPlayMode] = React.useState(false);
-    const [theme, setTheme] = React.useState("Brazil");
-
-    const [component, setComponent] = React.useState( 
-        process.env.NODE_ENV === 'development' ? 
-            <LeNombreDOr /> 
-                : <Home />
-    );
-
+    const [theme, setTheme] = React.useState(getThemeIfStoredThemeExists(JSON.parse(sessionStorage.getItem('ma-thematique-theme'))) ? JSON.parse(sessionStorage.getItem('ma-thematique-theme')) : "Brazil");
+ 
     const appContext = {
-        component: component,
-        updateComponent: setComponent,
         font: font,
-        updateFont: setFont,
+        updateFont: setFont, 
         playMode: playMode,
         updatePlayMode: setPlayMode,
         theme: theme,
         updateTheme: setTheme
     }
 
+    var courseItems = coursesResourceBuilder();
     var pdfItems = pdfResourceBuilder();
-
-    React.useEffect(() => {
-        initDimensions();
-    }, []);
-
+    var gameItems = gamesResourceBuilder();
+    
     return ( 
-        <div className = "App" >     
-            <AppContext.Provider value = {appContext} >
-                <div className = {`${theme} ${font}`} >
-                    <Header 
-                        pdfItems = {pdfItems} /> 
-                    <Container className = {`RelativeContainer ${playMode ? "PlayMode" : ''}`} > 
-                        {component} 
-                    </Container> 
-                    <Footer /> 
-                </div> 
-            </AppContext.Provider> 
-        </div>
+            <div className="App" >     
+                <AppContext.Provider value={appContext} >                     
+                    <div className={`${theme} ${font} CopyBook`}>
+                        <BrowserRouter>
+                            <Header courseItems={courseItems} pdfItems ={pdfItems} gameItems={gameItems} /> 
+                                <Suspense fallback={<BlurryingSpinner />}>
+                                    <Container className={`RelativeContainer ${playMode ? "PlayMode" : ''} `} >                           
+                                        <AppRoutes courseItems={courseItems} pdfItems={pdfItems} gameItems={gameItems} />
+                                    </Container> 
+                                </Suspense>
+                            <Footer /> 
+                        </BrowserRouter>
+                    </div> 
+                </AppContext.Provider> 
+            </div>
     );
 }
 

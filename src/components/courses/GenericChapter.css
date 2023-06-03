@@ -1,0 +1,172 @@
+.CoursesContainer {
+    position: relative;
+    margin-bottom: 20px;
+    /* display: flex;
+    flex-direction: column;
+    align-items: flex-start; */
+    /* width: 80%; */
+}
+
+@media (min-width: 1268px) {
+   .CoursesContainer p, a {
+        font-size: large;
+    } 
+}
+
+.CoursesContainer p {
+    text-align: justify;
+    margin-left: 100px;
+    margin-right: 100px;
+} 
+
+@media (width < 450px) {
+    .CoursesContainer p {
+        text-align: justify;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+
+
+@media (min-width: 1268px) {
+   .CoursesContainer p, a {
+        font-size: large;
+    } 
+}
+
+.CoursesContainer a {
+    color : #0d6efd;
+}
+
+.ZoomContainer {
+    position: relative;
+}
+
+.CoursesContainer img {
+    border-radius: 10px;
+    filter: contrast(var(--contrast));
+}
+
+@media (width < 450px) {
+    .CoursesContainer img {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+}
+
+.ZoomContainer {
+    padding-bottom: 10px;
+}
+
+.ZoomContainer figcaption {
+    margin-top: 20px;
+    text-decoration: underline;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: medium;
+}
+
+@media (width < 450px) {
+    .ZoomContainer figcaption {
+        margin-top: 0px;
+    }
+}
+
+.ZoomContainer .OnZoom img {
+    width: 80%;
+    position: relative;
+    right: 0;
+}
+
+.ZoomContainer img {
+    width: 50%;;
+}
+
+@media (width < 450px) {
+    .ZoomContainer img {
+        width: 80%;
+    }
+    .ZoomContainer .OnZoom img {
+        width: 110%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+.ZoomInIcon, .ZoomOutIcon  {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    z-index: 1;
+}
+
+.ZoomInIcon  {
+    transform: translate(-300%, 200%);
+}
+
+.ZoomOutIcon  {
+    transform: translate(-100%, 250%);
+}
+
+.CoursesAnswers {
+    color: var(--green-color);
+}
+
+.Focus, .FocusDefault, .FocusGreen, .FocusRed {
+    border-width: 2px;
+    border-style: solid;
+    /* border-color: var(--front-color); */
+    border-color: var(--navbar-color);
+    width: fit-content;
+    display: table;
+    margin: 0 auto;
+    padding: 0px 5px 0px 5px;
+    margin-bottom: 20px;
+}
+
+.FocusDefault {
+    border-color: var(--blue-color);
+}
+
+.FocusGreen {
+    border-color: var(--green-color);
+}
+
+.FocusRed {
+    border-color: var(--red-color);
+}
+
+@media (max-width: 450px) {
+    .Focus {
+        border-width: 1.5px;
+    }
+    .FocusHuge {
+        position: relative;
+    }
+    .FocusHuge mjx-math {
+        font-size: 50% !important;
+    }
+}
+
+.Ref {
+    display: inline-block !important;
+}
+
+/* .CoursesContainer hr {
+    height: 10px !important;
+    background-color: var(--grey-lighter-color);
+    border: none !important;
+} */
+
+.Aside {
+    background-color: var(--grey-lighter-transparent-color);
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.Title {
+    margin : 0px auto !important;
+}

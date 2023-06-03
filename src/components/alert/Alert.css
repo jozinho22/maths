@@ -1,25 +1,33 @@
 .DefaultAlert {
-    font-size: small;
+    font-size: medium;
     color: var(--red-color);
     font-family: fantasy;
 }
 
-.GreenAlert {
+.GreenAlert, .RedAlert {
     color: var(--green-color);
 }
 
-.TablesTestQuestionDisplayAlert {
-    position: absolute;
+.OperationsTestQuestionDisplayAlert {
+    height: 30px;
+    color: var(--back-color);
     margin-top: 10px;
     left: 0; 
     right: 0; 
 }
 
-.ContactAlert {
+.ContactAlert {  
     position: absolute;
-    margin-top: 0px;
-    display: inline-block;
-    margin-left: 20px;
+    margin-top: 7px;
+}
+
+@media (min-width : 768px) {
+    .ContactAlert {
+        position: absolute;
+        margin-top: 0px;
+        display: inline-block;
+        margin-left: 20px;
+    }
 }
 
 @media (min-width : 768px) {

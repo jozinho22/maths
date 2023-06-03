@@ -2,32 +2,30 @@ import { Button, Row, Col } from 'react-bootstrap';
 
 const PaginationFullDocument = ({pages, beginIndex, step, addPagesToList}) => {
 
-    const BackButton = ({disabled}) => {
+    const BackButton = () => {
         return (
             <Button 
                 className="DefaultButton"
-                disabled={disabled} 
                 onClick={() => {
                     if(beginIndex >= step) {
                         addPagesToList(beginIndex - step);
                     }
                 }} >
-                Prev
+                Précédent
             </Button>
         );
     }
 
-    const NextButton = ({disabled}) => {
+    const NextButton = () => {
         return (
             <Button 
                 className="DefaultButton"
-                disabled={disabled}
                 onClick={() => {
                     if(beginIndex < pages) {
                         addPagesToList(beginIndex + step);
                     }
                 }} >
-                Next
+                Suivant
             </Button>
         );
     }
@@ -35,10 +33,13 @@ const PaginationFullDocument = ({pages, beginIndex, step, addPagesToList}) => {
     return (
         <Row>
             <Col style={{textAlign:"right"}}>
-                <BackButton disabled={ !(beginIndex > 0) } /> 
+                { beginIndex > 0 ?
+                    <BackButton /> 
+                        : <></>
+                }
             </Col>
             <Col className="CenterText">
-                <p>pages : 
+                pages : 
                 {
                     beginIndex > pages ? 
                         pages : 
@@ -46,10 +47,14 @@ const PaginationFullDocument = ({pages, beginIndex, step, addPagesToList}) => {
                             + ' - ' 
                             + ((beginIndex + step) < pages ? (beginIndex + step) : pages)
                 } 
-                / {pages} </p>
+                / {pages}
             </Col>
             <Col style={{textAlign:"left"}}>
-                <NextButton disabled={ !(beginIndex + step < pages) } /> 
+                {
+                    beginIndex + step < pages ? 
+                        <NextButton /> 
+                            : <></>
+                }
             </Col>
         </Row>
     );

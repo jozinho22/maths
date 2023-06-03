@@ -1,0 +1,29 @@
+[build]
+publish = "build"
+
+[[plugins]]
+package = "@netlify/plugin-sitemap"
+
+	# optionnel car par défault c'est le publish qu'il prend
+	#[plugins.inputs]
+  	#buildDir = "build"
+
+[[plugins]]
+package = "netlify-plugin-submit-sitemap"
+
+	[plugins.inputs]
+
+	# The base url of your site (optional, default = main URL set in Netlify)
+	baseUrl = "https://ma-thematique.netlify.app"
+
+	# Path to the sitemap URL (optional, default = /sitemap.xml)
+	sitemapPath = "/sitemap.xml"
+
+	# Time in seconds to not submit the sitemap after successful submission
+	ignorePeriod = 0
+
+	# Enabled providers to submit sitemap to (optional, default = 'google', 'yandex'). Possible providers are currently only 'google', 'yandex'.
+	providers = [
+		"google",
+		"yandex"
+	]

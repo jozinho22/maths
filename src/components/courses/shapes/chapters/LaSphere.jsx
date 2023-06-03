@@ -1,6 +1,4 @@
 import { Container } from 'react-bootstrap';
-import GenericShape from '../GenericShape';
-import ShapeType from '../ShapeType';
 import ImageZoom from '../../ImageZoom';
 
 import sphereVolCalculus from '../assets/sphereVolCalculus.png';
@@ -14,11 +12,11 @@ const LaSphere = () => {
     var n = 0;
     var sphVolume = "\\(V_{sphere} = \\frac{4}{3}\\pi r^3\\)";
     var rTo2r = "\\(r \\to 2r\\)";
-    var sphDoubleVolume = "\\(V = \\frac{4}{3}\\pi (3r)^3\\)";
+    var sphDoubleVolume = "\\(V = \\frac{4}{3}\\pi (2r)^3\\)";
     var sphDoubleVolumeDev = "\\(V = \\frac{4}{3}\\pi 2^3 r^3\\)";
     var sphDoubleVolumeDev2 = "\\(V = \\frac{4}{3} 8\\pi r^3\\)";
 
-    var circleAreaX = "\\(S(x) = \\pi x^2\\)"
+    var circleAreaX = "\\(S(x) = \\pi x^2\\)";
 
     var pyth = "\\(R^2 = y^2 + x^2 \\)";
     var rfH = "\\(x = \\sqrt{R^2 - y^2} \\)";
@@ -44,7 +42,7 @@ const LaSphere = () => {
 
     var lfAlpha = "\\(l = R \\alpha \\)"
     var dlfAlpha = "\\(dl = R.d\\alpha \\)"
-    var dS = "\\(d(S(y)) = P(y).dl\\)"
+    var dS = "\\(d[S(y)] = P(y).dl\\)"
     var intDS = "\\(\\int_0^{\\frac{\\pi}{2}} d(S(y)) = \\int_0^{\\frac{\\pi}{2}} P(y) .dl\\)"
 
     var circleDemiArea = "\\(S(y) = \\int_0^{\\frac{\\pi}{2}} P(y) .dl \\)"
@@ -68,23 +66,15 @@ const LaSphere = () => {
             <p>
                 La formule du volume de la sphère est :
             </p> 
-            <MathJaxDisplay toShow={sphVolume}/>
+            <MathJaxDisplay toShow={sphVolume} demo />
             <p>
                 Si alors on double seulement le rayon, le volume sera 8 fois plus grand.
             </p>
-            <MathJaxDisplay toShow={rTo2r}/>
-            <MathJaxDisplay toShow={sphDoubleVolume}/>
-            <MathJaxDisplay toShow={sphDoubleVolumeDev}/>
-            <MathJaxDisplay toShow={sphDoubleVolumeDev2}/>
-            <p>
-                Cliquez sur l'image ci-dessous pour illlustrer ce propos.           
-            </p> 
-            <Container className="ShapesContainer">
-                <GenericShape 
-                    className="ShapesContainer"
-                    type={ShapeType.SPHERE}
-                    dimensions={1} /> 
-            </Container>
+            <MathJaxDisplay toShow={rTo2r} demo />
+            <MathJaxDisplay toShow={sphDoubleVolume} demo />
+            <MathJaxDisplay toShow={sphDoubleVolumeDev} demo />
+            <MathJaxDisplay toShow={sphDoubleVolumeDev2} demo />
+
             <p className="Title1">Calcul du volume par intégration</p>
             <p>Calculons avec une méthode d'intégration le volume de la sphère.
                 {"\n"}
@@ -176,7 +166,6 @@ const LaSphere = () => {
             <Container className="Focus">
                 <MathJaxDisplay toShow={circleAreaR}/>
             </Container>
-            <p>Youpi !!!</p>
         </>
     )
 }

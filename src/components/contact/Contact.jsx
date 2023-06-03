@@ -1,12 +1,11 @@
-import React from 'react';
+/* import React from 'react';
 import { Container, Form, FormControl, InputGroup, Button, Col, Row } from 'react-bootstrap';
 import Alert from '../alert/Alert';
 import ContactManager from './ContactManager';
 import { updateAlert, reInitAlert } from '../alert/alertFunctions';
 import emailjs from 'emailjs-com';
 import { loadCaptchaEnginge, LoadCanvasTemplate, validateCaptcha } from 'react-simple-captcha';
-import ContactItem from './ContactItem';
-import AppContext from '../context/AppContext';
+
 import './Contact.css';
 
 export const ContactContext = React.createContext(null);
@@ -20,25 +19,6 @@ const Contact = () => {
     const [subject, setSubject] =  React.useState("");
     const [message, setMessage] =  React.useState("");
 
-    const alertInitialValue = {show: false, message: '', color: ''};
-
-    const alertReducer = (alert, action) => {
-        switch(action.type) {
-            case ContactItem.FIRSTNAME: 
-                return {show: true, message: 'trop long !!!', color: ''};
-            case ContactItem.LASTNAME: 
-                return {show: true, message: 'really bro ?', color: ''};
-            case ContactItem.RE_INIT:
-                return alertInitialValue;
-            default: 
-                return alert;
-        }
-    }
-    const [alert, dispatch] = React.useReducer(alertReducer, alertInitialValue);
-
-    const firstNameRef = React.useRef(null)
-    const lastNameRef = React.useRef(null)
-
     const [firstNameAlert, setFirstNameAlert] = React.useState({show: false, message: ''});
     const [lastNameAlert, setLastNameAlert] = React.useState({show: false, message: ''});
     var maxName = 20;
@@ -49,7 +29,6 @@ const Contact = () => {
     const [messageAlert, setMessageAlert] = React.useState({show: false, message: ''});
     const [globalAlert, setGlobalAlert] = React.useState({show: false, message: '', color: ''});
 
-    const [nbLines, setNbLines] = React.useState(4);
     const maxLength = 500;
 
     const [captchaOk, setCaptchaOk] = React.useState(false);
@@ -78,18 +57,18 @@ const Contact = () => {
      // Prénom
     React.useEffect(() => {
         if(firstName.length > maxName - 1) {
-            dispatch({ type : ContactItem.FIRSTNAME })
+            setFirstNameAlert(updateAlert(true, 'too long'))
         } else {
-            dispatch({ type : ContactItem.RE_INIT })
+            setFirstNameAlert(reInitAlert())
         }
     }, [firstName]);
 
     // Nom
     React.useEffect(() => {
         if(lastName.length > maxName - 1) {
-            dispatch({ type : ContactItem.LASTNAME })
+            setLastNameAlert(updateAlert(true, 'really bro ?'))
         } else {
-            dispatch({ type : ContactItem.RE_INIT })
+            setLastNameAlert(reInitAlert())
         }
     }, [lastName]);
 
@@ -128,8 +107,6 @@ const Contact = () => {
 
     // Hauteur de la zone de texte
     React.useEffect(() => {
-        var nbLinesToCheck = message.split(/\r\n|\r|\n/).length;
-        setNbLines(nbLinesToCheck);
         if(message.length > maxLength - 1) {
             setMessageAlert(updateAlert(true, 'Trop, trop, trop long !'));
         } else {
@@ -208,11 +185,6 @@ const Contact = () => {
                             <Form.Group className="FirstName" >
                                 <Form.Label>
                                     Prénom
-                                    <Alert 
-                                        ref={firstNameRef}
-                                        show={alert.show}
-                                        message={alert.message}
-                                        component="Contact" />
                                 </Form.Label>
                                 <FormControl
                                     value={firstName} 
@@ -223,17 +195,16 @@ const Contact = () => {
                                             setFirstName(e.target.value.slice(0, e.target.value.length - 1))
                                         }
                                     }} />
+                                <Alert 
+                                    show={firstNameAlert.show}
+                                    message={firstNameAlert.message}
+                                    component="Contact" />
                             </Form.Group>
                         </Col>
                         <Col>
                             <Form.Group className="LastName" >
                                 <Form.Label>
                                     Nom
-                                    <Alert                                     
-                                        ref={lastNameRef}
-                                        show={alert.show}
-                                        message={alert.message}
-                                        component="Contact" />
                                 </Form.Label>
                                 <FormControl
                                     value={lastName} 
@@ -244,6 +215,10 @@ const Contact = () => {
                                             setLastName(e.target.value.slice(0, e.target.value.length - 1))
                                         }
                                     }} />
+                                <Alert                                     
+                                    show={lastNameAlert.show}
+                                    message={lastNameAlert.message}
+                                    component="Contact" />
                             </Form.Group>
                         </Col>
                     </Row>
@@ -252,19 +227,19 @@ const Contact = () => {
                             <Form.Group className="Email">
                                 <Form.Label>
                                     @
-                                    <Alert 
-                                        show={emailAlert.show}
-                                        message={emailAlert.message}
-                                        component="Contact" />
                                 </Form.Label>
                                 <FormControl
                                     value={email} 
                                     onChange={e => setEmail(e.target.value)} />
+                                <Alert 
+                                    show={emailAlert.show}
+                                    message={emailAlert.message}
+                                    component="Contact" />
                             </Form.Group>
                         </Col>
                         <Col>
                             <Form.Group className="ContactType">
-                                <Form.Label>Vous êtes ?</Form.Label>
+                                <Form.Label>Vous</Form.Label>
                                 <Form.Control 
                                     value={contactType} 
                                     as="select" 
@@ -281,23 +256,19 @@ const Contact = () => {
                 <Form.Group className="Subject" >
                     <Form.Label>
                         Sujet
-                        <Alert 
-                            show={subjectAlert.show}
-                            message={subjectAlert.message}
-                            component="Contact" />
                     </Form.Label>
                     <FormControl 
                         value={subject} 
                         onChange={e => setSubject(e.target.value)}/>
+                    <Alert 
+                        show={subjectAlert.show}
+                        message={subjectAlert.message}
+                        component="Contact" />
                 </Form.Group>
 
                 <Form.Group className="Message" >
                     <Form.Label>
                         Message
-                        <Alert 
-                            show={messageAlert.show}
-                            message={messageAlert.message}
-                            component="Contact" />
                     </Form.Label>
                     <FormControl 
                         as="textarea" 
@@ -305,6 +276,10 @@ const Contact = () => {
                         maxLength={maxLength}
                         value={message}
                         onChange={e => setMessage(e.target.value)} />
+                    <Alert 
+                        show={messageAlert.show}
+                        message={messageAlert.message}
+                        component="Contact" />
                 </Form.Group>
             
                 {captchaOk === false ?
@@ -338,4 +313,4 @@ const Contact = () => {
     );
 }
 
-export default Contact;
+export default Contact; */

@@ -1,23 +1,36 @@
 .App {
-    --blue-color: rgb(67, 101, 173);
+    --blue-color: #4365ad;
     --dark-color: rgb(47, 49, 53);
-    --green-color: rgb(84, 133, 77);
+    --green-color: #54854d;
     --grey-light-color: rgb(179, 178, 177);
+    --grey-lighter-color: rgb(218, 218, 218);
+    --grey-lighter-transparent-color: rgba(218, 218, 218, 0.459);
+    --grey-light-transparent-color: rgba(138, 137, 137, 0.432);
     --grey-color: rgb(117, 118, 119);
     --grey-dark-color: rgb(77, 78, 78);
-    --orange-color: rgb(167, 90, 27);
+    --grey-dark-transparent-color: rgba(77, 78, 78, 0.452);
+    --orange-color: #a75a1b;
     --purple-color: rgb(179, 94, 187);
-    --red-color: rgb(202, 76, 76);
+    --red-color: #854242;
     --yellow-color: rgb(201, 193, 85);
     
     --blue-hover-color: rgb(54, 78, 131);
     --green-hover-color: rgb(60, 100, 55);
     --orange-hover-color: rgb(145, 78, 24);
     --red-hover-color: rgb(105, 21, 21);
+
+    --contrast: 70%;
+
+}
+
+.CopyBook {
+    background-size: 20px 20px;
+    background-image: linear-gradient(90deg, var(--copybook-color) 1px, transparent 0px), 
+                        linear-gradient(var(--copybook-color) 1px, transparent 0px);
 }
 
 .Algeria {
-    background: var(--back-color);
+    background-color: var(--back-color);
     --links-color: var(--back-color);
     --button-text-color: var(--back-color);
     --mirror-button-text-color: var(--dark-color);
@@ -28,10 +41,11 @@
     --back-color: var(--grey-light-color);
     --front-color: var(--red-color);
     --simple-text-color: var(--dark-color);
+    --copybook-color: var(--grey-light-transparent-color);
 }
 
 .Brazil {
-    background: var(--back-color);
+    background-color: var(--back-color);
     --links-color: var(--back-color);
     --button-text-color: var(--back-color);
     --mirror-button-text-color: var(--grey-color);
@@ -42,12 +56,14 @@
     --back-color: var(--yellow-color);
     --front-color: var(--blue-color);
     --simple-text-color: var(--dark-color);
+    --copybook-color: var(--grey-light-transparent-color);
+
 }
 
 
 .Darcula {
     /* Le seul à avoir un début différent...*/
-    background: var(--back-color);
+    background-color: var(--back-color);
     --links-color: var(--red-color);
     --button-text-color: var(--grey-light-color);
     --mirror-button-text-color: var(--grey-light-color);
@@ -56,26 +72,29 @@
     --navbar-color: var(--dark-color);
     --navbar-hover-color: var(--grey-light-color);
     --back-color: var(--dark-color);
-    --front-color: var(--grey-dark-color);
-    --simple-text-color: var(--grey-color);
+    --front-color: var(--grey-color);
+    --simple-text-color: var(--grey-light-color);
+    --copybook-color: var(--grey-dark-transparent-color);
+    --contrast: 40%;
 }
 
 .Germany {
-    background: var(--back-color);
+    background-color: var(--back-color);
     --links-color: var(--back-color);
     --button-text-color: var(--back-color);
     --mirror-button-text-color: var(--dark-color);
 
-    color: var(--grey-color); 
+    color: var(--dark-color); 
     --navbar-color: var(--dark-color);
-    --navbar-hover-color: var(--grey-light-color);
+    --navbar-hover-color: var(--grey-color);
     --back-color: var(--yellow-color);
     --front-color: var(--red-color);
     --simple-text-color: var(--dark-color);
+    --copybook-color: var(--grey-light-transparent-color);
 }
 
 .France {
-    background: var(--back-color);
+    background-color: var(--back-color);
     --button-text-color: var(--back-color);
     --links-color: var(--back-color);
     --mirror-button-text-color: var(--dark-color);
@@ -86,10 +105,11 @@
     --back-color: var(--grey-light-color);
     --front-color: var(--red-color);
     --simple-text-color: var(--dark-color);
+    --copybook-color: var(--grey-light-transparent-color);
 }
 
 .Senegal {
-    background: var(--back-color);
+    background-color: var(--back-color);
     --links-color: var(--back-color);
     --button-text-color: var(--back-color);
     --mirror-button-text-color: var(--dark-color);
@@ -100,5 +120,6 @@
     --back-color: var(--yellow-color);
     --front-color: var(--red-color);
     --simple-text-color: var(--dark-color);
+    --copybook-color: var(--grey-light-transparent-color);
 }
 

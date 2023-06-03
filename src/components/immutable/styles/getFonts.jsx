@@ -14,4 +14,22 @@ const getFonts = () => {
                 ];
 }
 
-export default getFonts;
+const getFontIfStoredFontExists = (font) => {
+    var fonts = getFonts();
+    for(var f of fonts) {
+        if(f.name === font) {
+            return f.name;
+        }
+    }
+}
+
+const getRandomFont = () => {
+    var fonts = getFonts();
+    return fonts[getRandomInt(fonts.length - 1)].name;
+}
+
+const getRandomInt = (max) => {
+  return Math.floor(Math.random() * max);
+}
+
+export {getFonts, getFontIfStoredFontExists, getRandomFont};

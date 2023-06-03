@@ -1,20 +1,17 @@
 import React from 'react';
-import { Container, Button, Table } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
 import MathJaxDisplay from '../../../mathjax-display/MathJaxDisplay';
 import MathJaxInline from '../../../mathjax-display/MathJaxInline';
 import ImageZoom from '../../ImageZoom';
-import GenericShape from '../GenericShape';
-import ShapeType from '../ShapeType';
-import AppContext from '../../../context/AppContext';
-import LeNombrePi from '../../pi/LeNombrePi';
+
 import circleTurnAround from '../assets/circleTurnAround.png'
 import circleAreaCalculus from '../assets/circleAreaCalculus.png'
 import circleAreaCalculus2 from '../assets/circleAreaCalculus2.png';
-import LaTrigonometrie from '../../trigo/LaTrigonometrie';
+
+import Link from '../../../immutable/nav/Link';
+import CoursesLinks from '../../CoursesLinks';
 
 const LeCercle = () => {
-
-    const {updateComponent} = React.useContext(AppContext);
 
     var n = 0;
     var pOverD = "\\(\\pi = \\frac{P_{cercle}}  {D_{cercle}} \\)"
@@ -48,28 +45,21 @@ const LeCercle = () => {
     var aCalcComplet = "\\( S_{(2\\pi)} = \\frac{R^2}{2} 2\\pi  \\)"
     var aCalcComplet2 = "\\( S_{(2\\pi)} = \\pi R^2  \\)"
 
-
     return (
         <>
             <p>
-                Le cercle est caractérisé par sa relation avec le nombre π (Pi).
+                Le cercle est caractérisé par sa relation avec <Link link={CoursesLinks.PI} >le nombre π (Pi)</Link>.
                 π n'est autre que la rapport de la circonférence (périmètre) sur le diamètre.
                 {"\n"}Cette valeur vaut environ 3,14. Mais c'est une valeur approchée...
             </p>
 
-            <Button 
-                className="DefaultButton" 
-                onClick={() => updateComponent(<LeNombrePi />)}>
-                    Chapitre sur le nombre π
-            </Button>
-
             <p className="Title1">Le périmètre du cercle</p>
             <p>π se caractérise par le rapport du périmètre sur le diamètre comme ceci :</p>
-            <MathJaxDisplay toShow={pOverD} />
+            <MathJaxDisplay toShow={pOverD} demo />
              <p>Soit</p>
-            <MathJaxDisplay toShow={pCercle} />
+            <MathJaxDisplay toShow={pCercle} demo />
             <p>Étant donné que le rayon est la moitié du diamètre</p>
-            <MathJaxDisplay toShow={pCercle2} />
+            <MathJaxDisplay toShow={pCercle2} demo />
             <p>Soit</p>
             <Container className="Focus">
                 <MathJaxDisplay toShow={pCercle3} />
@@ -81,17 +71,17 @@ const LeCercle = () => {
                 <MathJaxDisplay toShow={pCercle4} />
             </Container>
 
-            <p className="Title">La surface du cercle</p>
+            <p className="Title1">La surface du cercle</p>
             <p>π se caractérise par le rapport de la surface sur le rayon comme ceci :</p>
-            <MathJaxDisplay toShow={aOverR} />
+            <MathJaxDisplay toShow={aOverR} demo />
             <p>Soit</p>
-            <MathJaxDisplay toShow={aCercle} />
+            <MathJaxDisplay toShow={aCercle} demo />
             <Container className="Focus">
                 <MathJaxDisplay toShow={aCercle4} />
             </Container>
             <p>Comme précédemment, on peut l'écrire sous cette forme :</p>
-            <MathJaxDisplay toShow={aCercle2} />
-            <MathJaxDisplay toShow={aCercle3} />
+            <MathJaxDisplay toShow={aCercle2} demo/>
+            <MathJaxDisplay toShow={aCercle3} demo />
             <p>De même façon que pour le périmètre, la surface balayée par un angle <MathJaxInline toShow="$\\alpha$" /> sera de : </p>
             <Container className="Focus">
                 <MathJaxDisplay toShow={aCercle5} />
@@ -118,15 +108,10 @@ const LeCercle = () => {
 
             <ImageZoom src={circleAreaCalculus2} name="Surface balayée sur le cercle par un angle α" n={++n} />
             <p>Avec le tour complet, on a bien : </p>
-            <MathJaxDisplay toShow={aCalcComplet} />
-            <MathJaxDisplay toShow={aCalcComplet2} />
-
-            <Button 
-                className="DefaultButton" 
-                onClick={() => updateComponent(<LaTrigonometrie />)}>
-                    Chapitre sur la trigonométrie
-            </Button>
-            
+            <MathJaxDisplay toShow={aCalcComplet} demo />
+            <Container className="Focus">
+                <MathJaxDisplay toShow={aCalcComplet2} />
+            </Container> 
         </>
     )
 }

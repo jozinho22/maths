@@ -1,6 +1,6 @@
 import React from 'react';
 import SendResult from './SendResult';
-import CustomSpinner from '../general-content/CustomSpinner';
+import BlurryingSpinner from '../immutable/spinners/BlurryingSpinner';
 import { ContactContext } from './Contact';
 
 const ContactManager = ({children}) => {
@@ -9,7 +9,7 @@ const ContactManager = ({children}) => {
 
     return (
                 isLoading ?
-                    <CustomSpinner /> : 
+                    <BlurryingSpinner /> : 
                         success || error ?
                             <SendResult /> :  
                                     children

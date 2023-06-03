@@ -1,0 +1,124 @@
+/* .UsualFunctionsButtonContainer {
+    display: flex;
+} */
+
+@media (min-width: 450px) {
+    .UsualFunctionsButtonsContainer {
+        position: fixed;
+        width: 20%;
+/*         align-items: center;
+        flex-direction: column; */
+        top: 30%;
+    }
+    .UsualFunctionsButtonsContainer.Left {
+        left: 0%;
+    }
+    .UsualFunctionsButtonsContainer.Right {
+        right: 0%;
+    }
+}
+
+.UsualFunctionsButton {
+    margin-top: 0px;
+    padding: 0px;
+    width: 100px;
+    height: 60px;
+}
+
+@media (min-width: 450px) {
+    .UsualFunctionsButton {
+        margin-top: 10px;
+    }
+}
+
+/* .UsualFunctionsButton mjx-container {
+    margin: 0px;
+} */
+
+.FunctionAttributes {
+    padding: 20px;
+    text-align: center;
+}
+
+.FunctionAttributesTitle {
+    text-decoration: underline;
+    color: var(--simple-text-color);
+    padding-top: 10px;
+    text-align: center !important;
+}
+
+.FunctionAttributesValue {
+    position: relative;
+    left: 50%;
+    transform : translateX(-50%);
+    width: fit-content;
+}
+
+.FunctionAttributesValue mjx-math {
+    font-size: 25px !important;
+}
+
+@media(width < 450px) {
+    .FunctionAttributesValue mjx-math {
+        font-size: 20px !important;
+    }
+}
+
+
+.UsualFunctionsButton mjx-container {
+    display: flex !important; 
+    justify-content: center;
+}
+
+.Graph {
+    /* position: relative; */
+    padding-bottom: 10px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+@media (min-width: 450px) {
+    .Graph {
+        font-size: large;
+        width: 65% !important;
+        padding-bottom: 20px;
+    }
+}
+
+@media (min-width: 450px) {
+    .Graph {
+        width: 65% !important;
+        height: 80% !important;
+        padding-bottom: 20px;
+        font-size: large;
+    }
+}
+
+@media (min-width: 1268px) {
+    .Graph {
+        font-size: x-large;
+    }
+}
+
+@media (min-width: 1000px) {
+    .recharts-wrapper {
+        left: 25%;
+    }
+}
+
+.GraphTitle {
+    margin-top: 40px !important;
+    margin-bottom: 40px !important;
+}
+
+.CoursesContainer .recharts-wrapper {
+    left: 25%;
+}
+
+@media (width < 450px) {
+    .CoursesContainer .recharts-wrapper {
+        left: -5%;
+    }
+}
+
+
+
