@@ -44,7 +44,8 @@ function App() {
     var gameItems = gamesResourceBuilder();
     
     return ( 
-            <div className="App" >     
+        <>
+            <div className="App" id="capture">     
                 <AppContext.Provider value={appContext} >                     
                     <div className={`${theme} ${font} CopyBook`}>
                         <BrowserRouter>
@@ -59,6 +60,8 @@ function App() {
                     </div> 
                 </AppContext.Provider> 
             </div>
+            <div id="doc-to-print"></div>
+        </>
     );
 }
 

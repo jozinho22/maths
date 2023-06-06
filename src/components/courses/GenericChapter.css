@@ -40,6 +40,8 @@
 
 .ZoomContainer {
     position: relative;
+    width: 100%;
+    padding-bottom: 10px;
 }
 
 .CoursesContainer img {
@@ -52,10 +54,6 @@
         margin-top: 20px;
         margin-bottom: 20px;
     }
-}
-
-.ZoomContainer {
-    padding-bottom: 10px;
 }
 
 .ZoomContainer figcaption {
@@ -78,7 +76,7 @@
 }
 
 .ZoomContainer img {
-    width: 50%;;
+    width: 50%;
 }
 
 @media (width < 450px) {
@@ -170,3 +168,7 @@
 .Title {
     margin : 0px auto !important;
 }
+
+/* .ChapterTitle {
+    visibility: hidden;
+} */
