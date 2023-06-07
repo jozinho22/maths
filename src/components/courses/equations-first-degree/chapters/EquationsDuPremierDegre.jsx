@@ -2,8 +2,8 @@ import React from 'react';
 import { Container } from 'react-bootstrap';
 import MathJaxDisplay from '../../../mathjax-display/MathJaxDisplay';
 import MathJaxInline from '../../../mathjax-display/MathJaxInline';
-import Link from '../../../immutable/nav/Link';
-import Constants from '../../../immutable/Constants';
+import { NavLink } from 'react-router-dom';
+import pathBuilder from '../../../helpers/pathBuilder';
 const EquationsDuPremierDegre = () => {
 
     var equPremierDeg = "\\(f(x) = ax + b\\)";
@@ -24,7 +24,7 @@ const EquationsDuPremierDegre = () => {
                 <MathJaxDisplay toShow={equPremierDeg} demo />
                 <p>Avec <MathJaxInline toShow={"$a$"} /> et <MathJaxInline toShow={"$b$"} /> des nombres réels.</p>
                 <p>Elles sont définies sur <MathJaxInline toShow={"$\\mathbb{R}$"} />, l'ensemble des réels.</p>
-                <p>Pour plus de détails, voir <Link link={'/cours/les-equations/aspect-des-equations-du-premier-degre'}>le chapitre suivant.</Link></p>
+                <p>Pour plus de détails, voir <NavLink to={pathBuilder('/cours/les-equations/aspect-des-equations-du-premier-degre')}>le chapitre suivant.</NavLink></p>
 
                 <p className="Title1">a) Résolution d'équations du premier degré</p>
                 <p>Nous allons prendre par exemple cette fonction :</p>

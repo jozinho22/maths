@@ -1,8 +1,9 @@
 import React from 'react';
 import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
-import AppContext from '../../context/AppContext'
+import AppContext from '../../context/AppContext';
 
+import pathBuilder from '../../helpers/pathBuilder';
 import './Nav.css';
 import './Header.css';
 
@@ -35,7 +36,7 @@ const Header = ( {courseItems, pdfItems, gameItems} ) => {
                 variant="dark" 
                 expand="lg">
                 <Navbar.Brand className="Clickable" onClick={() => {retractToggleOnMobile()}}>
-                    <NavLink to={`/`}>
+                    <NavLink to={pathBuilder("/")}>
                         Accueil
                     </NavLink>
                 </Navbar.Brand>
@@ -45,7 +46,7 @@ const Header = ( {courseItems, pdfItems, gameItems} ) => {
                         <NavDropdown title="Cours" >
                             {courseItems.map(courseItem => 
                                 <NavDropdown.Item key={courseItem.id} eventKey={courseItem.id} onClick={() => {retractToggleOnMobile()}} >
-                                    <NavLink key={courseItem.id} to={`/cours/${courseItem.relativePath}`}>
+                                    <NavLink key={courseItem.id} to={pathBuilder(`/cours/${courseItem.relativePath}`)}>
                                         {courseItem.title}
                                     </NavLink>
                                 </NavDropdown.Item>
@@ -54,7 +55,7 @@ const Header = ( {courseItems, pdfItems, gameItems} ) => {
                         <NavDropdown title="BDs de Jean-Pierre Petit">
                             {pdfItems.map(pdfItem => 
                                 <NavDropdown.Item key={pdfItem.id} onClick={() => {retractToggleOnMobile()}} >
-                                    <NavLink to={`/bds-de-jpp/${pdfItem.relativePath}`}>
+                                    <NavLink key={pdfItem.id} to={pathBuilder(`/bds-de-jpp/${pdfItem.relativePath}`)}>
                                         {pdfItem.minTitle ? pdfItem.minTitle : pdfItem.title}
                                     </NavLink>
                                 </NavDropdown.Item>
@@ -63,19 +64,19 @@ const Header = ( {courseItems, pdfItems, gameItems} ) => {
                         <NavDropdown title="Jeux">
                             {gameItems.map(gameItem => 
                                 <NavDropdown.Item key={gameItem.id} onClick={() => {retractToggleOnMobile()}} >
-                                    <NavLink to={`/jeux/${gameItem.relativePath}`} >
+                                    <NavLink to={pathBuilder(`/jeux/${gameItem.relativePath}`)} >
                                         {gameItem.title}
                                     </NavLink>
                                 </NavDropdown.Item>
                             )}
                         </NavDropdown> 
                         <Nav.Item title="Liens" id="nav-item-liens" onClick={() => {retractToggleOnMobile()}} >
-                            <NavLink to={"/liens"} >
+                            <NavLink to={pathBuilder("/liens")} >
                                 Liens
                             </NavLink>  
                         </Nav.Item>
                         <Nav.Item title="Cours à domicile" id="nav-item-contact" onClick={() => {retractToggleOnMobile()}} >
-                            <NavLink to={"/contact"} >
+                            <NavLink to={pathBuilder("/contact")} >
                                 Cours à domicile
                             </NavLink>  
                         </Nav.Item>

@@ -5,6 +5,8 @@ import CustomHelmet from '../immutable/seo/CustomHelmet';
 import Constants from '../immutable/Constants';
 import HiddenTitle from '../immutable/seo/HiddenTitle';
 
+import pathBuilder from '../helpers/pathBuilder';
+
 const CoursesTableOfContents = ( {courseItems} ) => {
 
     var prefix = 'cours';
@@ -19,7 +21,7 @@ const CoursesTableOfContents = ( {courseItems} ) => {
             <HiddenTitle title={hiddenTitle} />
 
             <div className="FlexButton">
-                <NavLink to={`/`}>
+                <NavLink to={pathBuilder(`/`)}>
                     <Button className="DefaultButton GreenButton" >
                         Retour à l'accueil
                     </Button> 

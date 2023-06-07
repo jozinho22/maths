@@ -1,6 +1,7 @@
 import { Container } from 'react-bootstrap';
 /* import Link from '../immutable/nav/Link'; */
 import { NavLink } from 'react-router-dom';
+import pathBuilder from '../helpers/pathBuilder';
 
 const GenericTableOfContents = ( {items, prefix, title} ) => {
 
@@ -12,7 +13,7 @@ const GenericTableOfContents = ( {items, prefix, title} ) => {
                     items.map(item => (     
                         <div key={item.id} className="TableOfContentsLink" >
                             <NavLink  
-                                    to={`/${prefix}/${item.relativePath}`} 
+                                    to={pathBuilder(`/${prefix}/${item.relativePath}`)} 
                                     state={
                                             { 
                                                 title: item.title,

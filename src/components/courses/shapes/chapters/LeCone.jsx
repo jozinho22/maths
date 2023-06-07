@@ -8,7 +8,8 @@ import cone from '../assets/cone.png'
 import coneVolCalculus from '../assets/coneVolCalculus.png'
 import coneAreaCalculus from '../assets/coneAreaCalculus.png'
 
-import Link from '../../../immutable/nav/Link';
+import { NavLink } from 'react-router-dom';
+import pathBuilder from '../../../helpers/pathBuilder';
 
 const LeCone = () => {
 
@@ -59,7 +60,7 @@ const LeCone = () => {
     return (
         <>
             <p>Le cône est une pyramide avec un base circulaire. Il est caractérise par sa hauteur <MathJaxInline toShow={"$h$"}/> et le rayon de sa base <MathJaxInline toShow={"$r$"}/>, qu'on appelle aussi apothème.</p>
-            <p>Sa base a donc une surface de <MathJaxInline toShow={"$\\pi.r^2$"}/> (voir <Link link={'/cours/les-formes/le-cercle'} >la chapitre sur le cercle</Link>)</p>
+            <p>Sa base a donc une surface de <MathJaxInline toShow={"$\\pi.r^2$"}/> (voir <NavLink to={pathBuilder('/cours/les-formes/le-cercle')} >la chapitre sur le cercle</NavLink>)</p>
             <ImageZoom src={cone} name="Le cône" n={++n}/>
 
 

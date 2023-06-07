@@ -6,6 +6,7 @@ import AppContext from '../../context/AppContext'
 
 import { getFonts } from '../styles/getFonts';
 import { getThemes } from '../styles/getThemes'; 
+import pathBuilder from '../../helpers/pathBuilder';
 
 import './Nav.css';
 import './Footer.css';
@@ -72,7 +73,7 @@ const Footer = () => {
                 <p className="CopyRight" > 
                     Copyright &copy; Jozinho {(new Date().getFullYear())}
                 </p>
-                <NavLink to={"/contact"}>
+                <NavLink to={pathBuilder("/contact")}>
                     <Envelope className="ContactIcon" />
                 </NavLink>
             </Navbar>

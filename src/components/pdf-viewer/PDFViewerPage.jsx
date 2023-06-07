@@ -18,6 +18,7 @@ import { useSwipeable } from 'react-swipeable';
 import './PDFViewerPage.css';
 import './styles/Canevas.css';
 import HiddenTitle from '../immutable/seo/HiddenTitle';
+import pathBuilder from '../helpers/pathBuilder';
 
 const PDFViewerPage = ({ pdfItem }) => {
 
@@ -102,12 +103,12 @@ const PDFViewerPage = ({ pdfItem }) => {
           <> 
             <CustomHelmet title={pdfItem.title} metaContent={pdfItem.metaContent} canonicalUrl={`${Constants.WEB_APP_URL}/bds-de-jpp/${pdfItem.relativePath}`}/>
             <HiddenTitle title={pdfItem.hiddenTitle} />
-            <NavLink to={"/"}>
+            <NavLink to={pathBuilder("/")}>
                 <Button className="DefaultButton ReturnHomeButton" onClick={() => undoPlayMode()}>
                     Home
                 </Button>
             </NavLink>
-            <NavLink to={"/bds-de-jpp"} onClick={() => undoPlayMode()}>
+            <NavLink to={pathBuilder("/bds-de-jpp")} onClick={() => undoPlayMode()}>
                 <Button className="DefaultButton UnPlayModeButton" >
                     Toutes les BDs
                 </Button>

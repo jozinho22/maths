@@ -9,6 +9,7 @@ import { useReactToPrint } from 'react-to-print';
 import pageStyle from '../helpers/pageStyle';
 
 import './GenericChapter.css';
+import pathBuilder from '../helpers/pathBuilder';
 
 const GenericChapter = ( {chapter, courseItem} ) => {
     
@@ -54,7 +55,7 @@ const GenericChapter = ( {chapter, courseItem} ) => {
             <HiddenTitle title={chapter.hiddenTitle} /> 
             
             <div className="FlexButton">
-                <NavLink to={`/cours/${courseItem.relativePath}`}>
+                <NavLink to={pathBuilder(`/cours/${courseItem.relativePath}`)}>
                     <Button className="DefaultButton GreenButton" >
                         Retour au sommaire des chapitres
                     </Button> 

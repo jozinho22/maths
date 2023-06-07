@@ -16,8 +16,10 @@ import triangleSinusRelationDemo from '../assets/triangleSinusRelationDemo.png'
 import pythagore from '../../pythagore/assets/pythagore.png';
 import alKashi from '../../pythagore/assets/alKashi.png';
 
-import Link from '../../../immutable/nav/Link';
 import CoursesLinks from '../../CoursesLinks';
+
+import pathBuilder from '../../../helpers/pathBuilder';
+import { NavLink } from 'react-router-dom';
 
 const LeTriangle = () => {
 
@@ -121,7 +123,7 @@ const LeTriangle = () => {
                 <MathJaxDisplay toShow={sinusRelation}/> 
             </Container>
             <ImageZoom src={triangleSinusRelation} name="Loi des sinus" n={++n}/>
-            <p>Au cas où vous ne seriez pas familier avec les sinus et cosinus, se référer au chapitre sur <Link link={CoursesLinks.TRIGO}>la trigonométrie</Link>.</p>
+            <p>Au cas où vous ne seriez pas familier avec les sinus et cosinus, se référer au chapitre sur <NavLink to={pathBuilder(CoursesLinks.TRIGO)}>la trigonométrie</NavLink>.</p>
             <p>
                 Ce théorème se démontre simplement.
                 {"\n"}Prenons le même triangle et projetons une hauteur <MathJaxInline toShow={"$h_b$"}/> sur une des longueurs, la longueur <MathJaxInline toShow={"$b$"}/>.
@@ -144,7 +146,7 @@ const LeTriangle = () => {
 
             <p className="Title1">Loi des cosinus</p>
             <p>
-                La loi des cosinus, ou théorème d'Al-Kashi est la généralisation du <Link link={CoursesLinks.PYTHAGORE}>théorème de Pythagore</Link>.
+                La loi des cosinus, ou théorème d'Al-Kashi est la généralisation du <NavLink to={pathBuilder(CoursesLinks.PYTHAGORE)}>théorème de Pythagore</NavLink>.
                 Là où dans un triangle <MathJaxInline toShow={"$\\{a, \\; b, \\; c\\}$"} /> rectangle entre <MathJaxInline toShow={"$a$"} /> et <MathJaxInline toShow={"$b$"} /> :
             </p>
             <Container className="Focus">
@@ -159,7 +161,7 @@ const LeTriangle = () => {
                 <MathJaxDisplay toShow={alKashiC}/>
             </Container>
             <ImageZoom src={alKashi} name="Théorème d'Al-Kashi" n={++n}/>
-            <p>La démonstration de ce deux théorèmes se trouve dans le chapitre sur <Link link={CoursesLinks.PYTHAGORE}>théorème de Pythagore</Link>.</p>
+            <p>La démonstration de ce deux théorèmes se trouve dans le chapitre sur <NavLink to={pathBuilder(CoursesLinks.PYTHAGORE)}>théorème de Pythagore</NavLink>.</p>
         </>
     )
 }
