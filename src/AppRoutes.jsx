@@ -16,7 +16,7 @@ const AppRoutes = ( {courseItems, pdfItems, gameItems} ) => {
                 {
                     process.env.NODE_ENV === 'development' ?
                         <Route exact path="/" element={<Home />} />
-                            :   <Route exact path="/" element={<Home />} />
+                            :   <Route exact path="/maths" element={<Home />} />
                 }
                 <Route path="/cours" element={<CoursesTableOfContents courseItems={courseItems} />} />
                 {courseItems.map(courseItem => {
