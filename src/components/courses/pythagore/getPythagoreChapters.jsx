@@ -25,14 +25,14 @@ const getPythagoreChapters = () => {
             hiddenTitle: 'Proposition de démonstration du théorème de Pythagore',
             relativePath: '/demonstration'
         },
-        {
+        /* {
             id: k++,
             component: <DemonstrationDeLaReciproque />,
             title: 'Démonstration de la réciproque théorème de Pythagore',
             metaContent: 'Démonstration de la réciproque du théorème de Pythagore en faisant intervenir Al-Kashi.',
             hiddenTitle: 'Proposition de démonstration de la réciproque du théorème de Pythagore',
             relativePath: '/reciproque'
-        },
+        }, */
         {
             id: k++,
             component: <Applications />,

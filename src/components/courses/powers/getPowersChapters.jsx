@@ -27,7 +27,7 @@ const getPowersChapters = () => {
             title: 'Multiplication de puissances',
             metaContent: 'La formule générale pour calculer le résultat de puissances mulitpliées.',
             hiddenTitle: 'Les formules de multiplication de puissances',
-            relativePath: '/multiplication-de-puissance'
+            relativePath: '/multiplication-de-puissances'
         },
         {
             id: k++,
