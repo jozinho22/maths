@@ -42,17 +42,17 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://jozinho22.github.io/maths/cours/les-equations-du-premier-degre/resolution-d-equations-du-premier-degre</loc>
+    <loc>https://jozinho22.github.io/maths/cours/les-equations-du-premier-degre/resolution</loc>
     <lastmod>2023-01-23T18:44:36+00:00</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://jozinho22.github.io/maths/cours/les-equations-du-premier-degre/aspect-des-equations-du-premier-degre</loc>
+    <loc>https://jozinho22.github.io/maths/cours/les-equations-du-premier-degre/aspect</loc>
     <lastmod>2023-01-23T18:44:36+00:00</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://jozinho22.github.io/maths/cours/les-equations-du-premier-degre/resolution-d-inequations-du-premier-degre</loc>
+    <loc>https://jozinho22.github.io/maths/cours/les-equations-du-premier-degre/resolution-d-inequations</loc>
     <lastmod>2023-01-23T18:44:36+00:00</lastmod>
     <priority>0.80</priority>
   </url>
@@ -63,7 +63,7 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://jozinho22.github.io/maths/cours/les-equations-du-second-degre/resolution-d-equations-du-second-degre</loc>
+    <loc>https://jozinho22.github.io/maths/cours/les-equations-du-second-degre/resolution</loc>
     <lastmod>2023-01-23T18:44:36+00:00</lastmod>
     <priority>0.80</priority>
   </url>
@@ -84,7 +84,7 @@
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://jozinho22.github.io/maths/cours/les-puissances/multiplication-de-puissance</loc>
+    <loc>https://jozinho22.github.io/maths/cours/les-puissances/multiplication-de-puissances</loc>
     <lastmod>2023-01-23T18:44:36+00:00</lastmod>
     <priority>0.64</priority>
   </url>
@@ -109,7 +109,7 @@
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://jozinho22.github.io/maths/cours/les-puissances/autres-formules</loc>
+    <loc>https://jozinho22.github.io/maths/cours/les-puissances/autres-formules-generales</loc>
     <lastmod>2023-01-23T18:44:36+00:00</lastmod>
     <priority>0.64</priority>
   </url>
@@ -139,11 +139,11 @@
     <lastmod>2023-01-23T18:44:36+00:00</lastmod>
     <priority>0.64</priority>
   </url>
-  <url>
+  <!-- <url>
     <loc>https://jozinho22.github.io/maths/cours/le-theoreme-de-pythagore/reciproque</loc>
     <lastmod>2023-01-23T18:44:36+00:00</lastmod>
     <priority>0.64</priority>
-  </url>
+  </url> -->
   <url>
     <loc>https://jozinho22.github.io/maths/cours/le-theoreme-de-pythagore/applications</loc>
     <lastmod>2023-01-23T18:44:36+00:00</lastmod>
@@ -166,7 +166,7 @@
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://jozinho22.github.io/maths/cours/le-nombre-pi/calcul-de-pi</loc>
+    <loc>https://jozinho22.github.io/maths/cours/le-nombre-pi/calcul</loc>
     <lastmod>2023-01-23T18:44:36+00:00</lastmod>
     <priority>0.64</priority>
   </url>
@@ -187,17 +187,17 @@
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://jozinho22.github.io/maths/cours/le-nombre-d-or/caracteristiques-du-nombre-d-or</loc>
+    <loc>https://jozinho22.github.io/maths/cours/le-nombre-d-or/caracteristiques</loc>
     <lastmod>2023-01-23T18:44:36+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://jozinho22.github.io/maths/cours/le-nombre-d-or/caracteristiques-du-nombre-d-or-en-sens-contraire</loc>
+    <loc>https://jozinho22.github.io/maths/cours/le-nombre-d-or/caracteristiques-en-sens-contraire</loc>
     <lastmod>2023-01-23T18:44:36+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://jozinho22.github.io/maths/cours/le-nombre-d-or/formule-de-phi</loc>
+    <loc>https://jozinho22.github.io/maths/cours/le-nombre-d-or/formules</loc>
     <lastmod>2023-01-23T18:44:36+00:00</lastmod>
     <priority>0.64</priority>
   </url>
