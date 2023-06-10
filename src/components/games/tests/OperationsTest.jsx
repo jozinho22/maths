@@ -2,21 +2,12 @@ import React from 'react';
 
 import OperationsTestQuestionDisplay from './OperationsTestQuestionDisplay';
 import OperationsTestManager from './OperationsTestManager';
-import CustomHelmet from '../../immutable/seo/CustomHelmet';
-import Constants from '../../immutable/Constants';
+
 import './OperationsTest.css';
-import HiddenTitle from '../../immutable/seo/HiddenTitle';
-import PagesConstants from '../../immutable/nav/PagesConstants';
 
 export const OperationsTestContext = React.createContext(null);
 
 const OperationsTest = ( {operationType} ) => {
-
-    var title = 'Jeux : ' + (operationType === 'x' ? 'Réviser ses tables de multiplication' : operationType === '+' ? 'S\'entraîner aux additions' : <></>)
-    var metaContent = `Jeux des ${operationType === 'x' ? 'multiplications' : operationType === '+' ? 'additions' : <></>} : un jeu original pour s'entraîner à effectuer des ${operationType === 'x' ? 'multiplications et réviser ses tables' : operationType === '+' ? 'additions' : <></>}.`
-    var canonicalUrl = `${Constants.WEB_APP_URL}${PagesConstants.JEUX}${operationType === 'x' ? '/reviser-ses-tables/' : operationType === '+' ? '/additionner/' : <></>}`
-
-    var hiddenTitle = title;
 
     const [gameStarted, setGameStarted] =  React.useState(false);
 
@@ -112,8 +103,6 @@ const OperationsTest = ( {operationType} ) => {
     }
 
     return  <>
-                <CustomHelmet title={title} metaContent={metaContent} canonicalUrl={canonicalUrl}/>
-                <HiddenTitle title={hiddenTitle} />
                 <OperationsTestContext.Provider value={context}>
                     <OperationsTestManager>
                         <OperationsTestQuestionDisplay operationType={operationType} /> 

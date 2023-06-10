@@ -1,4 +1,5 @@
-import OperationsTest from "./tests/OperationsTest";
+import Addition from "./tests/Addition";
+import Multiplication from "./tests/Multiplication";
 
 function gamesResourceBuilder() {
 
@@ -10,7 +11,7 @@ function gamesResourceBuilder() {
       title: 'Tables de multiplication',
       metaContent: 'Jeux des tables de multiplications : un jeu original pour réviser ses tables et s\'entraîner à calculer des multiplications.',
       relativePath: '/reviser-ses-tables',
-      component: <OperationsTest operationType={'x'} />
+      component: <Multiplication />
     }
 
     var additionsTest = {
@@ -18,7 +19,7 @@ function gamesResourceBuilder() {
       title: 'Additions',
       metaContent: 'Jeux des tables de additions : un jeu original et s\'entraîner à calculer des additions.',
       relativePath: '/additionner',
-      component: <OperationsTest operationType={'+'} />
+      component: <Addition />
     }
 
     gameItems.push(
