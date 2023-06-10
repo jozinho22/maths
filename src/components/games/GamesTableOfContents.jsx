@@ -2,6 +2,8 @@ import GenericTableOfContents from '../immutable/GenericTableOfContents';
 import CustomHelmet from '../immutable/seo/CustomHelmet';
 import Constants from '../immutable/Constants';
 import HiddenTitle from '../immutable/seo/HiddenTitle';
+import PagesConstants from '../immutable/nav/PagesConstants';
+
 
 const GamesTableOfContents = ( {gameItems} ) => {
 
@@ -13,8 +15,9 @@ const GamesTableOfContents = ( {gameItems} ) => {
 
     return (
         <>
-            <CustomHelmet title={metaTitle} metaContent={metaContent} canonicalUrl={`${Constants.WEB_APP_URL}/jeux`}/>
+            <CustomHelmet title={metaTitle} metaContent={metaContent} canonicalUrl={`${Constants.WEB_APP_URL}${PagesConstants.JEUX}`}/>
             <HiddenTitle title={hiddenTitle} />
+
             <GenericTableOfContents items={gameItems} prefix={prefix} title={title} />
         </>
     )

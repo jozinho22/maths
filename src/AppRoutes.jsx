@@ -10,6 +10,7 @@ import Links from './components/links/Links';
 import VCard from './components/contact/VCard';
 import Error from './components/immutable/Error';
 
+import PagesConstants from './components/immutable/nav/PagesConstants';
 import pathBuilder from './components/helpers/pathBuilder';
 
 const AppRoutes = ( {courseItems, pdfItems, gameItems} ) => {
@@ -19,11 +20,11 @@ const AppRoutes = ( {courseItems, pdfItems, gameItems} ) => {
     return  <Routes>
             
                 <Route exact path={pathBuilder("/")} element={<Home />} />
-                <Route path={pathBuilder("/cours")} element={<CoursesTableOfContents courseItems={courseItems} />} />
+                <Route path={pathBuilder(PagesConstants.COURS)} element={<CoursesTableOfContents courseItems={courseItems} />} />
                 {courseItems.map(courseItem => {
                     return  <Route 
                                 key={courseItem.id}
-                                path={pathBuilder(`/cours/${courseItem.relativePath}`)} 
+                                path={pathBuilder(`${PagesConstants.COURS}${courseItem.relativePath}`)} 
                                 element={<ChaptersTableOfContents courseItem={courseItem} />} />
                 
                 })}
@@ -31,26 +32,26 @@ const AppRoutes = ( {courseItems, pdfItems, gameItems} ) => {
                     courseItem.chapters.map(chapter => {
                         return  <Route 
                                     key={chapter.id}
-                                    path={pathBuilder(`/cours/${courseItem.relativePath}/${chapter.relativePath}`)} 
+                                    path={pathBuilder(`${PagesConstants.COURS}${courseItem.relativePath}${chapter.relativePath}`)} 
                                     element={<GenericChapter chapter={chapter} courseItem={courseItem} />} />
                     })
                 ))}
-                <Route path={pathBuilder("/bds-de-jpp")} element={<PdfTableOfContents pdfItems={pdfItems} />} />
+                <Route path={pathBuilder(PagesConstants.BDS_DE_JPP)} element={<PdfTableOfContents pdfItems={pdfItems} />} />
                 {pdfItems.map(pdfItem => (
                     <Route 
                         key={pdfItem.id}
-                        path={pathBuilder(`/bds-de-jpp/${pdfItem.relativePath}`)}
+                        path={pathBuilder(`${PagesConstants.BDS_DE_JPP}${pdfItem.relativePath}`)}
                         element={<PDFViewerPage pdfItem={pdfItem} />} />
                 ))}
-                <Route path="/jeux" element={<GamesTableOfContents gameItems={gameItems} />} />
+                <Route path={pathBuilder(PagesConstants.JEUX)} element={<GamesTableOfContents gameItems={gameItems} />} />
                 {gameItems.map(gameItem => (
                     <Route 
                         key={gameItem.id}
-                        path={pathBuilder(`/jeux/${gameItem.relativePath}`)}
+                        path={pathBuilder(`${PagesConstants.JEUX}${gameItem.relativePath}`)}
                         element={gameItem.component} />
                 ))}
-                <Route path={pathBuilder("/liens")} element={<Links />} />
-                <Route path={pathBuilder("/contact")} element={<VCard />} />
+                <Route path={pathBuilder(PagesConstants.LIENS)} element={<Links />} />
+                <Route path={pathBuilder(PagesConstants.CONTACT)} element={<VCard />} />
                 <Route path={pathBuilder("*")} element={<Error />} status={404} />
             </Routes>
 }

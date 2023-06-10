@@ -1,8 +1,11 @@
 import { Container } from 'react-bootstrap';
 import MathJaxDisplay from '../../../mathjax-display/MathJaxDisplay';
 import MathJaxInline from '../../../mathjax-display/MathJaxInline';
-import { NavLink } from 'react-router-dom';
 import pathBuilder from '../../../helpers/pathBuilder';
+
+import Link from '../../../immutable/nav/Link';
+import PagesConstants from '../../../immutable/nav/PagesConstants';
+import CoursesConstants from '../../CoursesConstants';
 
 const InequationsDuPremierDegre = () => {
 
@@ -110,7 +113,7 @@ const InequationsDuPremierDegre = () => {
                 <p>Les inéquations du premier degré fonctionnent comme les équations du premier degré, sauf que l'on change de signe (<MathJaxInline toShow={"$\\leqslant$"} /> devient <MathJaxInline toShow={"$\\geqslant$"} /> ou inversement) si l'on multiplie (ou divise) par un nombre négatif.</p>
                 <p>Il est à noter que c'est lors d'une multiplication, ou d'une division. Les deux reviennent au même, car diviser un nombre <MathJaxInline toShow={"$a$"} /> par un nombre <MathJaxInline toShow={"$b$"} /> revient à multiplier par l'inverse de <MathJaxInline toShow={"$b$"} />.</p>
                 <MathJaxDisplay toShow={divideEqualsMultiplyByInverse} demo />
-                <p>L'inverse de <MathJaxInline toShow={"$b$"} /> se note <MathJaxInline toShow={"$\\frac{1}{b}$"} /> ou encore <MathJaxInline toShow={"$b^{-1}$"} /> (voir <NavLink to={pathBuilder('/cours/les-puissances/inverse-de-puissances')}>chapitre sur l'inverse</NavLink>).</p>
+                <p>L'inverse de <MathJaxInline toShow={"$b$"} /> se note <MathJaxInline toShow={"$\\frac{1}{b}$"} /> ou encore <MathJaxInline toShow={"$b^{-1}$"} /> (voir <Link url={pathBuilder(`${PagesConstants.COURS}${CoursesConstants.PUISSANCES}/inverse-de-puissances`)}>chapitre sur l'inverse</Link>).</p>
             </>
 }
 

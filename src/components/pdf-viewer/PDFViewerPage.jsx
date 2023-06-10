@@ -19,6 +19,7 @@ import './PDFViewerPage.css';
 import './styles/Canevas.css';
 import HiddenTitle from '../immutable/seo/HiddenTitle';
 import pathBuilder from '../helpers/pathBuilder';
+import PagesConstants from '../immutable/nav/PagesConstants';
 
 const PDFViewerPage = ({ pdfItem }) => {
 
@@ -101,14 +102,14 @@ const PDFViewerPage = ({ pdfItem }) => {
 
         return (
           <> 
-            <CustomHelmet title={pdfItem.title} metaContent={pdfItem.metaContent} canonicalUrl={`${Constants.WEB_APP_URL}/bds-de-jpp/${pdfItem.relativePath}`}/>
+            <CustomHelmet title={pdfItem.title} metaContent={pdfItem.metaContent} canonicalUrl={`${Constants.WEB_APP_URL}${PagesConstants.BDS_DE_JPP}${pdfItem.relativePath}`}/>
             <HiddenTitle title={pdfItem.hiddenTitle} />
             <NavLink to={pathBuilder("/")}>
                 <Button className="DefaultButton ReturnHomeButton" onClick={() => undoPlayMode()}>
                     Home
                 </Button>
             </NavLink>
-            <NavLink to={pathBuilder("/bds-de-jpp")} onClick={() => undoPlayMode()}>
+            <NavLink to={pathBuilder(PagesConstants.BDS_DE_JPP)} onClick={() => undoPlayMode()}>
                 <Button className="DefaultButton UnPlayModeButton" >
                     Toutes les BDs
                 </Button>
@@ -204,7 +205,7 @@ const PDFViewerPage = ({ pdfItem }) => {
                         </>
                 }
 
-                <p className="AuthorCopyRight">Avec l'accord de Mr Petit - <Link link={CoursesLinks.SAVOIR_SANS_FRONTIERES} >toutes ses BDs</Link></p>     
+                <p className="AuthorCopyRight">Avec l'accord de Mr Petit - <Link url={CoursesLinks.SAVOIR_SANS_FRONTIERES} >toutes ses BDs</Link></p>     
           </>     
         );
       }

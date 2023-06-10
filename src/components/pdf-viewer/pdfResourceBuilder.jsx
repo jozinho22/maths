@@ -27,7 +27,7 @@ function pdfResourceBuilder() {
       hiddenTitle: 'Bande dessinée de Jean-Pierre Petit : L\'aspirisouffle',
       metaContent: 'L\'aspririsouffle : une bande dessinée pour comprendre les principes qui soutendent la capacité des appareils à voler dans les airs.',
       pdfFile : aspirisouffle,
-      relativePath: 'l-aspirisouffle'
+      relativePath: '/l-aspirisouffle'
     }
     var pdfBigBang = {
       id: i++,
@@ -36,7 +36,7 @@ function pdfResourceBuilder() {
       hiddenTitle: 'Bande dessinée de Jean-Pierre Petit : Le big bang',
       metaContent: 'Le Big Bang: une bande dessinée pour comprendre les conditions (température, pression, volume) présentes au commencement des temps.',
       pdfFile : bigBang,
-      relativePath: 'le-big-bang'
+      relativePath: '/le-big-bang'
     }
     var pdfChrono = {
       id: i++,
@@ -45,7 +45,7 @@ function pdfResourceBuilder() {
       hiddenTitle: 'Bande dessinée de Jean-Pierre Petit : Le chronologicon',
       metaContent: 'Le chronologicon: une bande dessinée pour comprendre les principes du temps, du mouvement des particules, de l\'entropie et des univers jumeaux.',
       pdfFile : chronologicon,
-      relativePath: 'le-chronologicon'
+      relativePath: '/le-chronologicon'
     }
     var pdfEco = {
       id: i++,
@@ -54,7 +54,7 @@ function pdfResourceBuilder() {
       hiddenTitle: 'Bande dessinée de Jean-Pierre Petit : L\' économicon',
       metaContent: 'L\'économicon : une bande dessinée modélisant les principes de base de l\'économie avec une approche historique et scientifique.',
       pdfFile : economicon,
-      relativePath: 'l-economicon'
+      relativePath: '/l-economicon'
     }
     var pdfEnerg = {
       id: i++,
@@ -63,7 +63,7 @@ function pdfResourceBuilder() {
       hiddenTitle: 'Bande dessinée de Jean-Pierre Petit : Énergetiquement vôtre',
       metaContent: 'Énergetiquement vôtre : une bande dessinée pour avoir une introduction à l\'énergie nucléaire avec notamment une proposition de fusion avec du Bore et de l\'Hydrogène.',
       pdfFile : energetiquementVotre,
-      relativePath: 'energetiquement-votre'
+      relativePath: '/energetiquement-votre'
     }
     var pdfGeo = {
       id: i++,
@@ -72,7 +72,7 @@ function pdfResourceBuilder() {
       hiddenTitle: 'Bande dessinée de Jean-Pierre Petit : Le géometricon',
       metaContent: 'Le géometricon : une bande dessinée avec une approche historique et expérimentale de la géométrie, avec un plongeon dans l\'époque d\'Euclide.',
       pdfFile : geometricon,
-      relativePath: 'le-geometricon'
+      relativePath: '/le-geometricon'
     }
     var pdfJoyeuseApo = {
       id: i++,
@@ -81,7 +81,7 @@ function pdfResourceBuilder() {
       hiddenTitle: 'Bande dessinée de Jean-Pierre Petit : Joyeuse apocalypse',
       metaContent: 'Joyeuse apocalypse : une bande dessinée avec une approche historique de l\'arrivée progressive de la technologie militaire et des ses conséquences sur le monde.',
       pdfFile : joyeuseApo,
-      relativePath: 'joyeuse-apocalypse'
+      relativePath: '/joyeuse-apocalypse'
     }
     var pdfMecaVol = {
       id: i++,
@@ -90,7 +90,7 @@ function pdfResourceBuilder() {
       hiddenTitle: 'Bande dessinée de Jean-Pierre Petit : Mécavol',
       metaContent: 'Mécavol : une bande dessinée pour appréhender les principes du vol plané et de la portance par une initiation au deltaplane et au parapente.',
       pdfFile : mecavol,
-      relativePath: 'mecavol'
+      relativePath: '/mecavol'
     }
     var pdfMilleEtUneNuits = {
       id: i++,
@@ -100,7 +100,7 @@ function pdfResourceBuilder() {
       metaContent: 'Les 1001 nuits scientifiques : une bande dessinée nous amenant à résoudre de nombreuses tours de magie mathématiques, en nous immergeant dans l\'univers des 1001 nuits.',
       minTitle: 'Les 1001 nuits...',
       pdfFile : milleEtUnenuits,
-      relativePath: 'les-mille-et-une-nuits-scientifiques'
+      relativePath: '/les-mille-et-une-nuits-scientifiques'
     }
     var pdfMurSilence = {
       id: i++,
@@ -109,7 +109,7 @@ function pdfResourceBuilder() {
       hiddenTitle: 'Bande dessinée de Jean-Pierre Petit : Le mur du silence',
       metaContent: 'Le mur du silence : une bande dessinée nous amenant à comprendre les principes de base de la magnéto-hydro-dynamique (MHD) par une série d\'éxpérimentations mettant en jeu l\'impact de l\'électro-magnétisme dans l\'écoulement d\'un fluide.',
       pdfFile : murDuSilence,
-      relativePath: 'le-mur-du-silence'
+      relativePath: '/le-mur-du-silence'
     }
     var pdfPourQqesAmperes = {
       id: i++,
@@ -119,7 +119,7 @@ function pdfResourceBuilder() {
       metaContent: 'Pour quelques ampères de plus : une bande dessinée pour appréhender les concepts de l\'électricité (tension, intensité, résistance, forces de Laplace, moteur électrique...etc.)',
       minTitle: 'Pour quelques ampères...',
       pdfFile : pourQqesAmperesDePlus,
-      relativePath: 'pour-quelques-amperes-de-plus'
+      relativePath: '/pour-quelques-amperes-de-plus'
     }
     var pdfSpondyloscope = {
       id: i++,
@@ -128,7 +128,7 @@ function pdfResourceBuilder() {
       hiddenTitle: 'Bande dessinée de Jean-Pierre Petit : Le spondyloscope',
       metaContent: 'Le spondyloscope : une bande dessinée nous amenant à comprendre l\'anotomie du corps humain de manière ludique.',
       pdfFile : spondyloscope,
-      relativePath: 'le-spondyloscope'
+      relativePath: '/le-spondyloscope'
     }
     var pdfTopo = {
       id: i++,
@@ -137,7 +137,7 @@ function pdfResourceBuilder() {
       hiddenTitle: 'Bande dessinée de Jean-Pierre Petit : Le topologicon',
       metaContent: 'Le topologicon : une bande dessinée nous montrant différentes manipulations possibles en jouant avec des objets géométriques (ruban de Mœbius, objets contractiles, hypersphères, tore, bouteille de Klein, surface de Boy...etc.).',
       pdfFile : topologicon,
-      relativePath: 'le-topologicon'
+      relativePath: '/le-topologicon'
     }
     var pdfTourDuMondeEn80jours = {
       id: i++,
@@ -146,7 +146,7 @@ function pdfResourceBuilder() {
       hiddenTitle: 'Bande dessinée de Jean-Pierre Petit : Le tour du monde en 80 jours',
       metaContent: 'Le tour du monde en 80 jours : une bande dessinée avec une introduction aux montages de fusées et aux principes physiques de lancement et navigation (mise en orbite, rentrée atmosphérique, vitesse de libération...etc.).',
       pdfFile : tourDuMondeEn80jours,
-      relativePath: 'le-tour-du-monde-en-80-jours'
+      relativePath: '/le-tour-du-monde-en-80-jours'
     }
     var pdfToutEstRelatif = {
       id: i++,
@@ -155,7 +155,7 @@ function pdfResourceBuilder() {
       hiddenTitle: 'Bande dessinée de Jean-Pierre Petit : Tout est relatif',
       metaContent: 'Tout est relatif : une bande dessinée nous offrant une introduction à la théorie de la relativité (notamment les notions de temps relatif et de contrations des longueurs), avec une personnification de Mr Einstein en personne.',
       pdfFile : toutEstRelatif,
-      relativePath: 'tout-est-relatif'
+      relativePath: '/tout-est-relatif'
     }
     var pdfTrouNoir = {
       id: i++,
@@ -164,7 +164,7 @@ function pdfResourceBuilder() {
       hiddenTitle: 'Bande dessinée de Jean-Pierre Petit : Le trou noir',
       metaContent: 'Le trou noir : une bande dessinée proposant une approche didactique de la géométrie des trous nours (courbure de l\'espace-temps, patchwork, masse-matière, cône de lumière...etc.).',
       pdfFile : trouNoir,
-      relativePath: 'le-trou-noir'
+      relativePath: '/le-trou-noir'
     }
     
     pdfItems.push(

@@ -10,6 +10,7 @@ import sohcahtoa from '../assets/sohcahtoa.png';
 
 import pathBuilder from '../../../helpers/pathBuilder';
 import { NavLink } from 'react-router-dom';
+import Link from '../../../immutable/nav/Link';
 
 const Definition = () => {
 
@@ -35,7 +36,7 @@ const Definition = () => {
                 <p>Nous verrons la tangente par la suite. </p>
                 <ImageZoom src={circleTrigo} name="Cosinus et sinus" n={1} />
                 <p>
-                    Dans le cercle trigonométrique, on utilisera π comme une mesure d'angle (voir le chapitre sur <NavLink to={pathBuilder(CoursesLinks.PI)} >le nombre π</NavLink>)
+                    Dans le cercle trigonométrique, on utilisera π comme une mesure d'angle (voir le chapitre sur <Link url={pathBuilder(CoursesLinks.PI)} external>le nombre π</Link>)
                     {"\n"}
                     L'unité est le radian, où un tour complet vaut <MathJaxInline toShow={"$2 \\pi$"} />  radians (équivalent à 360°)
                     {"\n"}

@@ -7,6 +7,7 @@ import Constants from '../immutable/Constants';
 
 import './Links.css';
 import HiddenTitle from '../immutable/seo/HiddenTitle';
+import PagesConstants from '../immutable/nav/PagesConstants';
 
 const Links = () => {
 
@@ -17,7 +18,7 @@ const Links = () => {
     var links = linksResourceBuilder();
 
     return  <>
-                <CustomHelmet title={title} metaContent={metaContent} canonicalUrl={`${Constants.WEB_APP_URL}/liens`}/>
+                <CustomHelmet title={title} metaContent={metaContent} canonicalUrl={`${Constants.WEB_APP_URL}${PagesConstants.LIENS}`}/>
                 <HiddenTitle title={hiddenTitle} />
                 <div className="Links">
                     <p className="MainTitle">Liens</p>
@@ -26,7 +27,7 @@ const Links = () => {
                             links.map(link => (
                                 <div key={link.id} >     
                                     <p className="Title">{link.title}</p>
-                                    <Link link={link.link}>{link.link}</Link>
+                                    <Link url={link.url} external>{link.url}</Link>
                                     <div className="LinksDesc" >   
                                         <p>{link.desc}</p>
                                     </div>

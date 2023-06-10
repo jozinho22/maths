@@ -5,6 +5,8 @@ import {ChevronLeft, ChevronRight} from 'react-bootstrap-icons'
 
 import pathBuilder from '../helpers/pathBuilder';
 
+import PagesConstants from '../immutable/nav/PagesConstants';
+
 const NavigationButtons = ( {chapter, chapters, courseRelativePath} ) => {
 
     var width = document.body.offsetWidth;
@@ -15,7 +17,7 @@ const NavigationButtons = ( {chapter, chapters, courseRelativePath} ) => {
             <Col style={{textAlign:"right"}}>
                 {
                     chapter.id > 0 ?  
-                        <NavLink to={pathBuilder(`/cours/${courseRelativePath}/${chapters[chapter.id - 1].relativePath}`)} >
+                        <NavLink to={pathBuilder(`${PagesConstants.COURS}${courseRelativePath}${chapters[chapter.id - 1].relativePath}`)} >
                             <Button 
                                 className="DefaultButton" >
                                 { !mobile ? <ChevronLeft className="NavigationIcon" /> : <></> }
@@ -36,7 +38,7 @@ const NavigationButtons = ( {chapter, chapters, courseRelativePath} ) => {
             <Col style={{textAlign:"left"}}>
                 {
                     chapter.id < chapters.length - 1 ?
-                        <NavLink to={pathBuilder(`/cours/${courseRelativePath}/${chapters[chapter.id + 1].relativePath}`)} >
+                        <NavLink to={pathBuilder(`${PagesConstants.COURS}${courseRelativePath}${chapters[chapter.id + 1].relativePath}`)} >
                             <Button 
                                 className="DefaultButton" >
                                 {

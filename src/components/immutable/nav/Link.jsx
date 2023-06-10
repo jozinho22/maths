@@ -1,12 +1,20 @@
-const Link = ( {link, children} ) => {
+import pathBuilder from "../../helpers/pathBuilder";
+import { NavLink } from "react-router-dom";
+
+const Link = ( {url, external, children} ) => {
 
     return (
-        <a 
-            className="Link" 
-            href={link} 
-            target={"_blank"} rel="noreferrer">
-            {children}
-        </a>
+        
+            external ?
+                <a 
+                    className="Link" 
+                    href={url} 
+                    target={"_blank"} rel="noreferrer">
+                    {children}
+                </a> : 
+                        <NavLink to={pathBuilder(url)}>
+                            {children}
+                        </NavLink>
     );
 }
 

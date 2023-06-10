@@ -3,12 +3,12 @@ import MathJaxDisplay from '../../../mathjax-display/MathJaxDisplay';
 import MathJaxInline from '../../../mathjax-display/MathJaxInline';
 
 import ImageZoom from '../../ImageZoom';
-import { NavLink } from 'react-router-dom';
 import CoursesLinks from '../../CoursesLinks';
 import square from '../assets/square.png';
 import squareWithDiag from '../assets/squareWithDiag.png';
 
 import pathBuilder from '../../../helpers/pathBuilder';
+import Link from '../../../immutable/nav/Link';
 
 const LeCarreLeCube = () => {
 
@@ -69,7 +69,7 @@ const LeCarreLeCube = () => {
             <p>Appelons les diagonales <MathJaxInline toShow={"$d_1$"}/> et <MathJaxInline toShow={"$d_2$"}/>. </p>
             <p>
                 <u>Propriété 1 : </u>
-                {"\n"} Grâce au <NavLink to={pathBuilder(CoursesLinks.PYTHAGORE)}>théorème de Pythagore</NavLink>, on peut calculer que :
+                {"\n"} Grâce au <Link url={pathBuilder(CoursesLinks.PYTHAGORE)} external>théorème de Pythagore</Link>, on peut calculer que :
                 <MathJaxDisplay toShow={diag} demo />
                 <MathJaxDisplay toShow={diagBis} demo />
                 Elles sont alors égales, appelons les <MathJaxInline toShow={"$d$"}/>.
@@ -81,7 +81,7 @@ const LeCarreLeCube = () => {
             </p>
             <p>
                 <u>Propriété 2 : </u>
-                {"\n"} Encore grâce au <NavLink to={pathBuilder(CoursesLinks.PYTHAGORE)}>théorème de Pythagore</NavLink>, on voit que :
+                {"\n"} Encore grâce au <Link url={pathBuilder(CoursesLinks.PYTHAGORE)} external>théorème de Pythagore</Link>, on voit que :
                 {"\n"} Si l'on calcule la demi-diagonale en utilisant la moitié du côté du carré, on a :
                 <MathJaxDisplay toShow={demiDiag} demo />
                 <MathJaxDisplay toShow={demiDiag2} demo />
@@ -96,7 +96,7 @@ const LeCarreLeCube = () => {
             </p>
             <p>
                 <u>Propriété 3 : </u>
-                {"\n"} Nous allons maintenant utiliser la réciproque du <NavLink to={pathBuilder(CoursesLinks.PYTHAGORE)}>théorème de Pythagore</NavLink>.
+                {"\n"} Nous allons maintenant utiliser la réciproque du <Link url={pathBuilder(CoursesLinks.PYTHAGORE)} external>théorème de Pythagore</Link>.
                 {"\n"} S'il existe des angles droits au niveau de l'intersection, on aura alors :
                 <MathJaxDisplay toShow={angDroit} demo />
                 En injectant (2) dans l'équation, on a : 

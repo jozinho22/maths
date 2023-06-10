@@ -6,7 +6,8 @@ import FibonacciTable from '../helpers/FibonacciTable';
 
 import ImageZoom from '../../ImageZoom';
 import euclideStuff from '../assets/euclideStuff.png';
-import { NavLink } from 'react-router-dom';
+
+import Link from '../../../immutable/nav/Link';
 import CoursesLinks from '../../CoursesLinks';
 
 import pathBuilder from '../../../helpers/pathBuilder';
@@ -70,7 +71,7 @@ const Caracteristiques = () => {
                 <MathJaxDisplay toShow={euclideStuff1} />
                 <p>Autrement dit que : </p>
                 <MathJaxDisplay toShow={euclideStuff2} />
-                <p>Avec <NavLink to={pathBuilder(CoursesLinks.PRODUIT_EN_CROIX)}>le produit en croix</NavLink>, on sait que cela peut s'écrire :</p>
+                <p>Avec <Link url={pathBuilder(CoursesLinks.PRODUIT_EN_CROIX)} external>le produit en croix</Link>, on sait que cela peut s'écrire :</p>
                 <MathJaxDisplay toShow={euclideStuff3} />
                 <p>Soit :</p>
                 <Container className="Focus">

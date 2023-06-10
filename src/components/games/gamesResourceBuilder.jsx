@@ -9,7 +9,7 @@ function gamesResourceBuilder() {
       id: i++,
       title: 'Tables de multiplication',
       metaContent: 'Jeux des tables de multiplications : un jeu original pour réviser ses tables et s\'entraîner à calculer des multiplications.',
-      relativePath: 'reviser-ses-tables',
+      relativePath: '/reviser-ses-tables',
       component: <OperationsTest operationType={'x'} />
     }
 
@@ -17,7 +17,7 @@ function gamesResourceBuilder() {
       id: i++,
       title: 'Additions',
       metaContent: 'Jeux des tables de additions : un jeu original et s\'entraîner à calculer des additions.',
-      relativePath: 'additionner',
+      relativePath: '/additionner',
       component: <OperationsTest operationType={'+'} />
     }
 

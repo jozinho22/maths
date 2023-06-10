@@ -13,7 +13,7 @@ const getCrossProductsChapters = () => {
             title: 'Présentation',
             metaContent: 'Présentation du produit en croix : explications de la méthode',
             hiddenTitle: 'Présentation du produit en croix',
-            relativePath: 'presentation'
+            relativePath: '/presentation'
         },  
         {
             id: k++,
@@ -21,7 +21,7 @@ const getCrossProductsChapters = () => {
             title: 'Démonstration',
             metaContent: 'Démonstration de la méthode de calcul du produit en croix',
             hiddenTitle: 'Démonstration du calcul du produit en croix',
-            relativePath: 'demonstration'
+            relativePath: '/demonstration'
         },
         {
             id: k++,
@@ -29,7 +29,7 @@ const getCrossProductsChapters = () => {
             title: 'Exercices',
             metaContent: 'Exercices pour s\'entraîner à patiquer le produit en croix',
             hiddenTitle: 'Exercices sur le produit en croix',
-            relativePath: 'exercices'
+            relativePath: '/exercices'
         }
     ];
 }

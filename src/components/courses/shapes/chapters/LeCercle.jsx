@@ -8,7 +8,7 @@ import circleTurnAround from '../assets/circleTurnAround.png'
 import circleAreaCalculus from '../assets/circleAreaCalculus.png'
 import circleAreaCalculus2 from '../assets/circleAreaCalculus2.png';
 
-import { NavLink } from 'react-router-dom';
+import Link from '../../../immutable/nav/Link';
 import CoursesLinks from '../../CoursesLinks';
 import pathBuilder from '../../../helpers/pathBuilder';
 
@@ -49,7 +49,7 @@ const LeCercle = () => {
     return (
         <>
             <p>
-                Le cercle est caractérisé par sa relation avec <NavLink to={pathBuilder(CoursesLinks.PI)} >le nombre π (Pi)</NavLink>.
+                Le cercle est caractérisé par sa relation avec <Link url={pathBuilder(CoursesLinks.PI)} external>le nombre π (Pi)</Link>.
                 π n'est autre que la rapport de la circonférence (périmètre) sur le diamètre.
                 {"\n"}Cette valeur vaut environ 3,14. Mais c'est une valeur approchée...
             </p>

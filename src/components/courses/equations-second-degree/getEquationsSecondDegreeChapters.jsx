@@ -12,7 +12,7 @@ const getEquationsSecondDegreeChapters = () => {
             title: 'Résolution d\'équations',
             metaContent: 'Résolution d\'équations du second degré : explications.',
             hiddenTitle: 'Résolution d\'équations du second degré',
-            relativePath: 'resolution-d-equations-du-second-degre'
+            relativePath: '/resolution'
         },
         {
             id: k++,
@@ -20,7 +20,7 @@ const getEquationsSecondDegreeChapters = () => {
             title: 'Relation entre coefficients et racines',
             metaContent: 'La relation qu\'il existe entre les coefficients et les racines du pôlynome.',
             hiddenTitle: 'Relation entre coefficients et racines',
-            relativePath: 'relation-entre-coefficients-et-racines'
+            relativePath: '/relation-entre-coefficients-et-racines'
         }
     ];
 }

@@ -10,6 +10,7 @@ import pageStyle from '../helpers/pageStyle';
 
 import './GenericChapter.css';
 import pathBuilder from '../helpers/pathBuilder';
+import PagesConstants from '../immutable/nav/PagesConstants';
 
 const GenericChapter = ( {chapter, courseItem} ) => {
     
@@ -51,11 +52,11 @@ const GenericChapter = ( {chapter, courseItem} ) => {
 
     return (
         <>
-            <CustomHelmet title={chapter.title} metaContent={chapter.metaContent} canonicalUrl={`${Constants.WEB_APP_URL}/cours/${courseItem.relativePath}/${chapter.relativePath}`}/>
+            <CustomHelmet title={chapter.title} metaContent={chapter.metaContent} canonicalUrl={`${Constants.WEB_APP_URL}${PagesConstants}${courseItem.relativePath}${chapter.relativePath}`}/>
             <HiddenTitle title={chapter.hiddenTitle} /> 
             
             <div className="FlexButton">
-                <NavLink to={pathBuilder(`/cours/${courseItem.relativePath}`)}>
+                <NavLink to={pathBuilder(`${PagesConstants.COURS}${courseItem.relativePath}`)}>
                     <Button className="DefaultButton GreenButton" >
                         Retour au sommaire des chapitres
                     </Button> 

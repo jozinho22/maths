@@ -4,6 +4,7 @@ import { NavLink } from 'react-router-dom';
 import AppContext from '../../context/AppContext';
 
 import pathBuilder from '../../helpers/pathBuilder';
+import PagesConstants from './PagesConstants';
 import './Nav.css';
 import './Header.css';
 
@@ -46,7 +47,7 @@ const Header = ( {courseItems, pdfItems, gameItems} ) => {
                         <NavDropdown title="Cours" >
                             {courseItems.map(courseItem => 
                                 <NavDropdown.Item key={courseItem.id} eventKey={courseItem.id} onClick={() => {retractToggleOnMobile()}} >
-                                    <NavLink key={courseItem.id} to={pathBuilder(`/cours/${courseItem.relativePath}`)}>
+                                    <NavLink key={courseItem.id} to={pathBuilder(`${PagesConstants.COURS}${courseItem.relativePath}`)}>
                                         {courseItem.title}
                                     </NavLink>
                                 </NavDropdown.Item>
@@ -55,7 +56,7 @@ const Header = ( {courseItems, pdfItems, gameItems} ) => {
                         <NavDropdown title="BDs de Jean-Pierre Petit">
                             {pdfItems.map(pdfItem => 
                                 <NavDropdown.Item key={pdfItem.id} onClick={() => {retractToggleOnMobile()}} >
-                                    <NavLink key={pdfItem.id} to={pathBuilder(`/bds-de-jpp/${pdfItem.relativePath}`)}>
+                                    <NavLink key={pdfItem.id} to={pathBuilder(`${PagesConstants.BDS_DE_JPP}${pdfItem.relativePath}`)}>
                                         {pdfItem.minTitle ? pdfItem.minTitle : pdfItem.title}
                                     </NavLink>
                                 </NavDropdown.Item>
@@ -64,19 +65,19 @@ const Header = ( {courseItems, pdfItems, gameItems} ) => {
                         <NavDropdown title="Jeux">
                             {gameItems.map(gameItem => 
                                 <NavDropdown.Item key={gameItem.id} onClick={() => {retractToggleOnMobile()}} >
-                                    <NavLink to={pathBuilder(`/jeux/${gameItem.relativePath}`)} >
+                                    <NavLink to={pathBuilder(`${PagesConstants.JEUX}${gameItem.relativePath}`)} >
                                         {gameItem.title}
                                     </NavLink>
                                 </NavDropdown.Item>
                             )}
                         </NavDropdown> 
                         <Nav.Item title="Liens" id="nav-item-liens" onClick={() => {retractToggleOnMobile()}} >
-                            <NavLink to={pathBuilder("/liens")} >
+                            <NavLink to={pathBuilder(PagesConstants.LIENS)} >
                                 Liens
                             </NavLink>  
                         </Nav.Item>
                         <Nav.Item title="Cours à domicile" id="nav-item-contact" onClick={() => {retractToggleOnMobile()}} >
-                            <NavLink to={pathBuilder("/contact")} >
+                            <NavLink to={pathBuilder(PagesConstants.CONTACT)} >
                                 Cours à domicile
                             </NavLink>  
                         </Nav.Item>

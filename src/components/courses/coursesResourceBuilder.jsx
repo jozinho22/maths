@@ -9,6 +9,9 @@ import getTrigoChapters from './trigo/getTrigoChapters';
 import getShapesChapters from './shapes/getShapesChapters';
 import getUsualFunctionsChapters from './usual-functions/getUsualFunctionsChapters';
 
+import CoursesConstants from './CoursesConstants';
+import getDerivativeChapters from './derivatives/getDerivativeChapters';
+
 function coursesResourceBuilder() {
 
     var coursesItems = [];
@@ -19,7 +22,7 @@ function coursesResourceBuilder() {
       title: 'Le produit en croix',
       hiddenTitle: 'Cours sur le produit en croix',
       metaContent: "Cours sur le produit en croix : un cours très important pour la vie de tous les jours",
-      relativePath: 'le-produit-en-croix',
+      relativePath: CoursesConstants.PRODUIT_EN_CROIX,
       chapters: getCrossProductsChapters()
     }
     var equationsFirstDegree = {
@@ -27,7 +30,7 @@ function coursesResourceBuilder() {
       title: 'Les équations du 1er degré',
       hiddenTitle: 'Cours sur les équations du 1er degré',
       metaContent: "Cours sur les équations du premier degré : apprendre à résoudre les équations et inéquations de base et voir l'aspect de ses fonctions dans un repère",
-      relativePath: 'les-equations-du-premier-degre',
+      relativePath: CoursesConstants.EQ_1_DEG,
       chapters: getEquationsFirstDegreeChapters()
     }
     var equationsSecondDegree = {
@@ -35,7 +38,7 @@ function coursesResourceBuilder() {
       title: 'Les équations du 2nd degré',
       hiddenTitle: 'Cours sur les équations du 2nd degré',
       metaContent: "Cours sur les équations du second degré : apprendre à résoudre les équations et voir l'aspect de ses fonctions dans un repère",
-      relativePath: 'les-equations-du-second-degre',
+      relativePath: CoursesConstants.EQ_2_DEG,
       chapters: getEquationsSecondDegreeChapters()
     }
     var powers = {
@@ -43,7 +46,7 @@ function coursesResourceBuilder() {
       title: 'Les puissances',
       hiddenTitle: 'Cours sur les puissances',
       metaContent: "Cours sur les puissances : comprendre les différentes (simples, composées, inverses)",
-      relativePath: 'les-puissances',
+      relativePath: CoursesConstants.PUISSANCES,
       chapters: getPowersChapters()
     }
     var pythagore = {
@@ -51,7 +54,7 @@ function coursesResourceBuilder() {
       title: 'Le théorème de Pythagore',
       hiddenTitle: 'Cours sur le théorème de Pythagore',
       metaContent: "Le théorème de Pythagore : explications, démonstrations, réciproque et exemples",
-      relativePath: 'le-theoreme-de-pythagore',
+      relativePath: CoursesConstants.PYTHAGORE,
       chapters: getPythagoreChapters()
     }
     var pi = {
@@ -59,7 +62,7 @@ function coursesResourceBuilder() {
       title: 'Le nombre Pi',
       hiddenTitle: 'Cours sur le nombre Pi',
       metaContent: "Le nombre Pi : ses mystères et une manière de le calculer géométriquement",
-      relativePath: 'le-nombre-pi',
+      relativePath: CoursesConstants.PI,
       chapters: getPiChapters()
     }
     var nbOr = {
@@ -67,7 +70,7 @@ function coursesResourceBuilder() {
       title: 'Le nombre d\'or (Phi)',
       hiddenTitle: 'Cours sur le nombre d\'or',
       metaContent: "Le nombre Phi : son histoire, son calcul et son lien avec la suite de Fibonacci",
-      relativePath: 'le-nombre-d-or',
+      relativePath: CoursesConstants.NB_OR,
       chapters: getGoldenRatioChapters()
     }
     var trigo = {
@@ -75,15 +78,23 @@ function coursesResourceBuilder() {
       title: 'La trigonométrie',
       hiddenTitle: 'Cours sur la trigonométrie',
       metaContent: "La trigonométrie : explications et toutes les formules associées",
-      relativePath: 'la-trigonometrie',
+      relativePath: CoursesConstants.TRIGO,
       chapters: getTrigoChapters()
+    }
+    var trigo = {
+      id: i++,
+      title: 'La dérivée',
+      hiddenTitle: 'Cours sur la détivée',
+      metaContent: "La dérivée : construction pas-à-pas, exemple et démonstrations",
+      relativePath: CoursesConstants.DERIVEE,
+      chapters: getDerivativeChapters()
     }
     var shapes = {
       id: i++,
       title: 'Les formes',
       hiddenTitle: 'Cours sur les formes géométriques',
       metaContent: "Les formes : les formes usuelles (carré, cube, cercle, triangle...etc) et le calcul des aires et volumes",
-      relativePath: 'les-formes',
+      relativePath: CoursesConstants.FORMES,
       chapters: getShapesChapters()
     }
     var usualFunctions = {
@@ -91,7 +102,7 @@ function coursesResourceBuilder() {
       title: 'Les fonctions usuelles',
       hiddenTitle: 'Cours sur les fonctions usuelles',
       metaContent: "Les fonctions usuelles : les fonctions usuelles (carrée, cube, racine carrée, exponentielle, cosinus, sinus...etc) et leur représentation sur un repère",
-      relativePath: 'les-fonctions-usuelles',
+      relativePath: CoursesConstants.FONCTIONS_USUELLES,
       chapters: getUsualFunctionsChapters()
     }
 

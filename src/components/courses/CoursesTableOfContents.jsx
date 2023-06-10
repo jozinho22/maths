@@ -6,6 +6,7 @@ import Constants from '../immutable/Constants';
 import HiddenTitle from '../immutable/seo/HiddenTitle';
 
 import pathBuilder from '../helpers/pathBuilder';
+import PagesConstants from '../immutable/nav/PagesConstants';
 
 const CoursesTableOfContents = ( {courseItems} ) => {
 
@@ -17,7 +18,7 @@ const CoursesTableOfContents = ( {courseItems} ) => {
 
     return (
         <>
-            <CustomHelmet title={title} metaContent={metaContent} canonicalUrl={`${Constants.WEB_APP_URL}/cours`} />
+            <CustomHelmet title={title} metaContent={metaContent} canonicalUrl={`${Constants.WEB_APP_URL}${PagesConstants.COURS}`} />
             <HiddenTitle title={hiddenTitle} />
 
             <div className="FlexButton">

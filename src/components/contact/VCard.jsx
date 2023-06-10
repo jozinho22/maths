@@ -5,6 +5,7 @@ import { Container } from "react-bootstrap";
 import photoProfil from './assets/photo-profil.jpeg';
 import Link from "../immutable/nav/Link";
 import Constants from "../immutable/Constants";
+import PagesConstants from "../immutable/nav/PagesConstants";
 import CustomHelmet from "../immutable/seo/CustomHelmet";
 
 import './VCard.css';
@@ -24,7 +25,7 @@ const VCard = () => {
     }
 
     return  <>            
-                <CustomHelmet title={title} metaContent={metaContent} canonicalUrl={`${Constants.WEB_APP_URL}/contact`}/>
+                <CustomHelmet title={title} metaContent={metaContent} canonicalUrl={`${Constants.WEB_APP_URL}${PagesConstants.CONTACT}`}/>
                 <HiddenTitle title={hiddenTitle} />
                 <Container className="VCardContainer">
                     <p className="MainTitle">{title}</p>

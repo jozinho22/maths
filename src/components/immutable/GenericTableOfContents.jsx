@@ -13,7 +13,7 @@ const GenericTableOfContents = ( {items, prefix, title} ) => {
                     items.map(item => (     
                         <div key={item.id} className="TableOfContentsLink" >
                             <NavLink  
-                                    to={pathBuilder(`/${prefix}/${item.relativePath}`)} 
+                                    to={pathBuilder(`/${prefix}${item.relativePath}`)} 
                                     state={
                                             { 
                                                 title: item.title,

@@ -9,7 +9,8 @@ const CoursesLinks = {
         FORMES: '/cours/les-formes',
         FONCTIONS: '/cours/les-fonctions-usuelles',
         
-        UNSPLASH:'http://unsplash.com'
+        UNSPLASH:'http://unsplash.com',
+        SAVOIR_SANS_FRONTIERES:'http://www.savoir-sans-frontieres.com/'
 }
 
 export default CoursesLinks;
