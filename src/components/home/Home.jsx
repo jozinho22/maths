@@ -32,9 +32,9 @@ const Home = () => {
                             {"\n"}
                             Ces cours incluent notamment certaines explications et démonstrations des formules que l'on apprend en cours.
                             {"\n"}
-                            Je vous propose de même une présentation des nombres <Link url={pathBuilder(`${PagesConstants.COURS}${CoursesConstants.PI}`)} external><MathJaxInline toShow={"$\\pi$"} /> (Pi)</Link> et <Link url={`${PagesConstants.COURS}${CoursesConstants.NB_OR}`} external><MathJaxInline toShow={"$\\phi$"} /> (Phi, le nombre d'or)</Link>.
+                            Je vous propose de même une présentation des nombres <Link url={pathBuilder(`${PagesConstants.COURS}${CoursesConstants.PI}`)} external><MathJaxInline toShow={"$\\pi$"} /> (Pi)</Link> et <Link url={pathBuilder(`${PagesConstants.COURS}${CoursesConstants.NB_OR}`)} external><MathJaxInline toShow={"$\\phi$"} /> (Phi, le nombre d'or)</Link>.
                         </p>
-                        <p>Je dédie ce site à un grand homme de la science, Jean-Pierre Petit, et je vous partage <Link url={pathBuilder(PagesConstants.BDS_DE_JPP)}>ses bandes dessinées pédagogiques</Link> sur le thème de la science avec son accord.</p>
+                        <p>Je dédie ce site à un grand homme de la science, Jean-Pierre Petit, et je vous partage <Link url={pathBuilder(PagesConstants.BDS_DE_JPP)} external>ses bandes dessinées pédagogiques</Link> sur le thème de la science avec son accord.</p>
                         <p>Pour en apprendre plus sur qui je suis, rendez-vous sur <Link url={pathBuilder(PagesConstants.CONTACT)} external>cette page.</Link></p>
                     </Container>
                 </Container>  

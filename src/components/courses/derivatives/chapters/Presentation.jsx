@@ -20,7 +20,7 @@ const Presentation = () => {
     var tauxVar4 = "\\(a = \\frac{f(x_0+h) - f(x_0)}{h }\\)";
 
     var limTauxVar = "\\(a = lim_{ h \\to 0} \\frac{f(x_0+h) - f(x_0)}{h}\\)";
-    var limTauxVar2 = "\\(f'(x) = lim_{h \\to 0} \\frac{f(x+h) - f(x)}{h}\\)";
+    var limTauxVar2 = "\\(f'(x) = lim_{h \\to 0} \\enspace  \\frac{f(x+h) - f(x)}{h}\\)";
 
     return  <>
                 <p>

@@ -81,10 +81,10 @@ function coursesResourceBuilder() {
       relativePath: CoursesConstants.TRIGO,
       chapters: getTrigoChapters()
     }
-    var trigo = {
+    var derivee = {
       id: i++,
       title: 'La dérivée',
-      hiddenTitle: 'Cours sur la détivée',
+      hiddenTitle: 'Cours sur la dérivée',
       metaContent: "La dérivée : construction pas-à-pas, exemple et démonstrations",
       relativePath: CoursesConstants.DERIVEE,
       chapters: getDerivativeChapters()
@@ -115,6 +115,7 @@ function coursesResourceBuilder() {
         pi, 
         nbOr,
         trigo,
+        derivee,
         shapes,
         usualFunctions
     );
