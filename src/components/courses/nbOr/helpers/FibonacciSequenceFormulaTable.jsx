@@ -1,18 +1,16 @@
 import NiceTable from '../../../immutable/NiceTable';
-import useFibonacciFormulas from './useFibonacciFormulas';
 
 import MathJaxDisplay from '../../../mathjax-display/MathJaxDisplay';
+import useFibonacciSequenceFormula from './useFibonacciSequenceFormula';
 
-const FibonacciFormulasTable = () => {
+const FibonacciSequenceFormulaTable = () => {
 
-    var values = useFibonacciFormulas();
+    var values = useFibonacciSequenceFormula();
     var phiMain = "\\(F_{n+2} = F_{n+1} + F_{n} \\)";
-    var phiGen =  "\\(\\phi^{n+1} =  F_{n+1}.\\phi +  F_{n} \\)";
-    var phiGen2 =  "\\(\\phi^{n+2} =  \\phi^{n+1} +  \\phi^{n} \\)";
 
     return (
             <NiceTable>
-                <thead id="FibonacciFormulasTable">
+                <thead>
                     <tr>
                         <th>
                             <MathJaxDisplay toShow={"\\( n \\)"} />
@@ -21,10 +19,7 @@ const FibonacciFormulasTable = () => {
                             <MathJaxDisplay toShow={phiMain} />
                         </td>
                         <td>
-                            <MathJaxDisplay toShow={phiGen} />
-                        </td>
-                        <td>
-                            <MathJaxDisplay toShow={phiGen2} />
+                            <MathJaxDisplay toShow={"\\( Résultat \\)"} />
                         </td>
                     </tr>
                 </thead>
@@ -35,13 +30,10 @@ const FibonacciFormulasTable = () => {
                                  <MathJaxDisplay toShow={`\\( ${value.id} \\)`} />  
                             </td>
                             <td>
-                                <MathJaxDisplay toShow={value.formula0} /> 
+                                <MathJaxDisplay toShow={value.formula} /> 
                             </td> 
                             <td>
-                                <MathJaxDisplay toShow={value.formula1} /> 
-                            </td>  
-                            <td>
-                                <MathJaxDisplay toShow={value.formula2} /> 
+                                <MathJaxDisplay toShow={`\\( ${value.result} \\)`} /> 
                             </td> 
                         </tr>
                     ))}  
@@ -50,4 +42,4 @@ const FibonacciFormulasTable = () => {
     ); 
 }
 
-export default FibonacciFormulasTable;
+export default FibonacciSequenceFormulaTable;

@@ -1,7 +1,9 @@
 import EvolutionDeLapins from './chapters/EvolutionDeLapins';
 import Caracteristiques from './chapters/Caracteristiques';
 import CaracteristiquesEnSensContraire from './chapters/CaracteristiquesEnSensContraire';
-import FormulesDePhiPuissN from './chapters/FormulesDePhiPuissN';
+import FormuleDeLaSuiteDeFibonacci from './chapters/FormuleDeLaSuiteDeFibonacci';
+import FormuleDePhi1 from './chapters/FormuleDePhi2';
+import FormuleDePhi2 from './chapters/FormuleDePhi1';
 import AutresFormulesGenerales from './chapters/AutresFormulesGenerales';
 
 const getGoldenRatioChapters = () => {
@@ -35,11 +37,27 @@ const getGoldenRatioChapters = () => {
         },
         {
             id: k++,
-            component: <FormulesDePhiPuissN />,
-            title: 'Formules de Phi en fonction de n',
-            metaContent: 'La pattern des formules de puissances concernant le nombre d\'or.',
-            hiddenTitle: 'Les formules de Phi élevées à une certaine puissance',
-            relativePath: '/formules'
+            component: <FormuleDeLaSuiteDeFibonacci />,
+            title: 'Formules de la suite de Fibonacci',
+            metaContent: 'Un tableau récapitulatif du pattern de la suite de Fibonacci.',
+            hiddenTitle: 'Tableau récapitulatif de la suite de Fibonacci',
+            relativePath: '/formule-de-la-suite-de-fibonacci'
+        }, 
+        {
+            id: k++,
+            component: <FormuleDePhi1 />,
+            title: 'Formule de Phi en fonction de n (1)',
+            metaContent: 'Un tableau récapitulatif d\'une formule du nombre d\'or.',
+            hiddenTitle: 'Tableau récapitulatif d\'une formule du nombre d\'or.',
+            relativePath: '/formule-de-phi-puissance-n-1'
+        },   
+        {
+            id: k++,
+            component: <FormuleDePhi2 />,
+            title: 'Formule de Phi en fonction de n (2)',
+            metaContent: 'Un tableau récapitulatif d\'une formule du nombre d\'or.',
+            hiddenTitle: 'Tableau récapitulatif d\'une formule du nombre d\'or.',
+            relativePath: '/formule-de-phi-puissance-n-2'
         },   
         {
             id: k++,

@@ -1,6 +1,6 @@
 {
   "name": "maths",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "homepage": "https://jozinho22.github.io/maths",
   "private": true,
   "dependencies": {
@@ -64,6 +64,7 @@
     "node-fetch": "$node-fetch"
   },
   "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@netlify/plugin-sitemap": "^0.8.1",
     "@svgr/webpack": "^8.0.1",
     "mini-css-extract-plugin": "2.4.5",

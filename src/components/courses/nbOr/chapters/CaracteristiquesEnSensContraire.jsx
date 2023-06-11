@@ -46,7 +46,7 @@ const CaracteristiquesEnSensContraire = () => {
 
     return (
             <>             
-                <p>En effet, avec la formule vu précédemment :</p>
+                <p>En effet, avec la formule vue précédemment :</p>
                 <Container className="Focus">
                     <MathJaxDisplay toShow={phiMain} />
                 </Container>

@@ -94,7 +94,7 @@ const Caracteristiques = () => {
                 <MathJaxDisplay toShow={calcNbOr5} demo />
                 <MathJaxDisplay toShow={calcNbOr6} demo />
                  <MathJaxDisplay toShow={calcNbOrR} demo />
-                <Container className="Focus LittleFocus">
+                <Container className="Focus">
                     <MathJaxDisplay toShow={calcNbOrRwithPhi} />
                 </Container>            
 
