@@ -32,6 +32,11 @@
     padding-right: 0px;
 }
 
+.Enounce, .AnswerDisplay {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: x-large;
+}
+
 @media (min-width : 450px) {
     .QuestionContainer {
         font-size: medium;
@@ -41,9 +46,6 @@
     .CiferKeyboard {
         width: 150px;
     }
-    .Enounce, .AnswerDisplay {
-        font-size: medium;
-    }
 }
 
 @media (min-width : 768px) {
@@ -51,22 +53,33 @@
         font-size: large;
         width: 400px;
     }
-    .Enounce, .AnswerDisplay {
-        font-size: large;
-    }
+
 }
 
 .OperationsAlert {
     height: 30px;
 }
+
 .AnswerDisplay {
     width: 30%;
     text-align: center;
 }
 
 .CiferKeyboard {
-    margin-top: 10px;
     width: 200px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: small;
+}
+
+.CiferKeyboard .col {
+    padding: 5px;
+}
+
+.CiferKeyboard .KeyboardButton {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
 .KeyboardButton {
@@ -103,16 +116,6 @@
     text-align: center !important;
 }
 /* Operations Test Results */
-
-.table {
-    --bs-table-bg: var(--back-color) !important;
-    --bs-table-color: var(--simple-text-color);
-}
-
-.Darcula .table {
-    --bs-table-bg: var(--front-color) !important;
-    --bs-table-border-color: var(--simple-text-color) !important;
-}
 
 .ResultsContainer {
     font-size: small;

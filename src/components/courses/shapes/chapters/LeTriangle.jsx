@@ -16,7 +16,8 @@ import triangleSinusRelationDemo from '../assets/triangleSinusRelationDemo.png'
 import pythagore from '../../pythagore/assets/pythagore.png';
 import alKashi from '../../pythagore/assets/alKashi.png';
 
-import CoursesLinks from '../../CoursesLinks';
+import PagesConstants from '../../../immutable/nav/PagesConstants';
+import CoursesConstants from '../../CoursesConstants';
 
 import pathBuilder from '../../../helpers/pathBuilder';
 import Link from '../../../immutable/nav/Link';
@@ -123,7 +124,7 @@ const LeTriangle = () => {
                 <MathJaxDisplay toShow={sinusRelation}/> 
             </Container>
             <ImageZoom src={triangleSinusRelation} name="Loi des sinus" n={++n}/>
-            <p>Au cas où vous ne seriez pas familier avec les sinus et cosinus, se référer au chapitre sur <Link url={pathBuilder(CoursesLinks.TRIGO)} external>la trigonométrie</Link>.</p>
+            <p>Au cas où vous ne seriez pas familier avec les sinus et cosinus, se référer au chapitre sur <Link url={pathBuilder(`${PagesConstants.COURS}${CoursesConstants.TRIGO}`)} external>la trigonométrie</Link>.</p>
             <p>
                 Ce théorème se démontre simplement.
                 {"\n"}Prenons le même triangle et projetons une hauteur <MathJaxInline toShow={"$h_b$"}/> sur une des longueurs, la longueur <MathJaxInline toShow={"$b$"}/>.
@@ -146,7 +147,7 @@ const LeTriangle = () => {
 
             <p className="Title1">Loi des cosinus</p>
             <p>
-                La loi des cosinus, ou théorème d'Al-Kashi est la généralisation du <Link url={pathBuilder(CoursesLinks.PYTHAGORE)} external>théorème de Pythagore</Link>.
+                La loi des cosinus, ou théorème d'Al-Kashi est la généralisation du <Link url={pathBuilder(CoursesConstants.PYTHAGORE)} external>théorème de Pythagore</Link>.
                 Là où dans un triangle <MathJaxInline toShow={"$\\{a, \\; b, \\; c\\}$"} /> rectangle entre <MathJaxInline toShow={"$a$"} /> et <MathJaxInline toShow={"$b$"} /> :
             </p>
             <Container className="Focus">
@@ -161,7 +162,7 @@ const LeTriangle = () => {
                 <MathJaxDisplay toShow={alKashiC}/>
             </Container>
             <ImageZoom src={alKashi} name="Théorème d'Al-Kashi" n={++n}/>
-            <p>La démonstration de ce deux théorèmes se trouve dans le chapitre sur <Link url={pathBuilder(CoursesLinks.PYTHAGORE)} external>théorème de Pythagore</Link>.</p>
+            <p>La démonstration de ce deux théorèmes se trouve dans le chapitre sur <Link url={pathBuilder(`${PagesConstants.COURS}${CoursesConstants.PYTHAGORE}`)} external>théorème de Pythagore</Link>.</p>
         </>
     )
 }

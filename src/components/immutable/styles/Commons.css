@@ -376,6 +376,17 @@ a:-webkit-any-link {
 
 /* Tables */
 
+.table {
+    --bs-table-bg: var(--back-color) !important;
+    --bs-table-color: var(--simple-text-color);
+}
+
+.Darcula .table {
+    --bs-table-bg: var(--front-color) !important;
+    --bs-table-border-color: var(--simple-text-color) !important;
+    --bs-table-striped-color: var(--simple-text-color);
+}
+
 .NiceTableContainer {
     margin-bottom: 20px;
     /*     overflow: hidden;

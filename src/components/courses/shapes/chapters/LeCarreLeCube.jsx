@@ -3,7 +3,8 @@ import MathJaxDisplay from '../../../mathjax-display/MathJaxDisplay';
 import MathJaxInline from '../../../mathjax-display/MathJaxInline';
 
 import ImageZoom from '../../ImageZoom';
-import CoursesLinks from '../../CoursesLinks';
+import PagesConstants from '../../../immutable/nav/PagesConstants';
+import CoursesConstants from '../../CoursesConstants';
 import square from '../assets/square.png';
 import squareWithDiag from '../assets/squareWithDiag.png';
 
@@ -54,9 +55,9 @@ const LeCarreLeCube = () => {
             <p>
                 Si alors on double seulement le côté, la surface sera 4 fois plus grande.
             </p>
-            <MathJaxDisplay toShow={cTo2c}/>
-            <MathJaxDisplay toShow={sDoubleArea}/>
-            <MathJaxDisplay toShow={sDoubleAreaDev}/>
+            <MathJaxDisplay toShow={cTo2c} demo />
+            <MathJaxDisplay toShow={sDoubleArea} demo />
+            <MathJaxDisplay toShow={sDoubleAreaDev} demo />
             
             <p className="Title1">Propriétés du carré </p>
             <p>
@@ -69,7 +70,7 @@ const LeCarreLeCube = () => {
             <p>Appelons les diagonales <MathJaxInline toShow={"$d_1$"}/> et <MathJaxInline toShow={"$d_2$"}/>. </p>
             <p>
                 <u>Propriété 1 : </u>
-                {"\n"} Grâce au <Link url={pathBuilder(CoursesLinks.PYTHAGORE)} external>théorème de Pythagore</Link>, on peut calculer que :
+                {"\n"} Grâce au <Link url={pathBuilder(`${PagesConstants.COURS}${CoursesConstants.PYTHAGORE}`)} external>théorème de Pythagore</Link>, on peut calculer que :
                 <MathJaxDisplay toShow={diag} demo />
                 <MathJaxDisplay toShow={diagBis} demo />
                 Elles sont alors égales, appelons les <MathJaxInline toShow={"$d$"}/>.
@@ -81,7 +82,7 @@ const LeCarreLeCube = () => {
             </p>
             <p>
                 <u>Propriété 2 : </u>
-                {"\n"} Encore grâce au <Link url={pathBuilder(CoursesLinks.PYTHAGORE)} external>théorème de Pythagore</Link>, on voit que :
+                {"\n"} Encore grâce au <Link url={pathBuilder(`${PagesConstants.COURS}${CoursesConstants.PYTHAGORE}`)} external>théorème de Pythagore</Link>, on voit que :
                 {"\n"} Si l'on calcule la demi-diagonale en utilisant la moitié du côté du carré, on a :
                 <MathJaxDisplay toShow={demiDiag} demo />
                 <MathJaxDisplay toShow={demiDiag2} demo />
@@ -96,7 +97,7 @@ const LeCarreLeCube = () => {
             </p>
             <p>
                 <u>Propriété 3 : </u>
-                {"\n"} Nous allons maintenant utiliser la réciproque du <Link url={pathBuilder(CoursesLinks.PYTHAGORE)} external>théorème de Pythagore</Link>.
+                {"\n"} Nous allons maintenant utiliser la réciproque du <Link url={pathBuilder(`${PagesConstants.COURS}${CoursesConstants.PYTHAGORE}`)} external>théorème de Pythagore</Link>.
                 {"\n"} S'il existe des angles droits au niveau de l'intersection, on aura alors :
                 <MathJaxDisplay toShow={angDroit} demo />
                 En injectant (2) dans l'équation, on a : 

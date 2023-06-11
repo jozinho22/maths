@@ -5,7 +5,7 @@ import MathJaxDisplay from '../../../mathjax-display/MathJaxDisplay';
 
 const FibonacciTableInBothSenses = () => {
 
-    var values = useFibonacciInBothSenses().slice(1);
+    var values = useFibonacciInBothSenses().slice(2, 27);
 
     const F = (n) => {
         var begin = "\\(F_{";

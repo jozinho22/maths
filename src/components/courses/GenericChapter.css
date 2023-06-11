@@ -107,11 +107,13 @@
     color: var(--green-color);
 }
 
+.Focus {
+    border-color: var(--navbar-color);
+}
+
 .Focus, .FocusDefault, .FocusGreen, .FocusRed {
     border-width: 2px;
-    border-style: solid;
-    /* border-color: var(--front-color); */
-    border-color: var(--navbar-color);
+    border-style: solid;   
     width: fit-content;
     display: table;
     margin: 0 auto;
@@ -145,6 +147,11 @@
     .FocusHuge mjx-math {
         font-size: 50% !important;
     }
+}
+
+.LittleFocus {
+    border-width: 1px;
+    border-style: dashed;
 }
 
 .Ref {

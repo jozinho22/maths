@@ -5,7 +5,7 @@ import MathJaxDisplay from '../../../mathjax-display/MathJaxDisplay';
 
 const RatioTable = () => {
 
-    var ratios = useRatios();
+    var ratios = useRatios().slice(0, 12);
     var n = "\\(n \\)";
     var ratioMathJax = "\\(\\frac{F_{n+1}}{F_{n}}  \\)";
 

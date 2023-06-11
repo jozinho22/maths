@@ -5,7 +5,7 @@ import MathJaxDisplay from '../../../mathjax-display/MathJaxDisplay';
 
 const FibonacciTable = () => {
 
-    var values = useFibonacci();
+    var values = useFibonacci().slice(0, 12);
 
     const F = (n) => {
         var begin = "\\(F_{";

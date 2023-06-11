@@ -58,7 +58,7 @@ const Footer = () => {
                             {
                                 themes.map(theme => (
                                     <NavDropdown.Item 
-                                        /* key={index} */
+                                        key={theme}
                                         id="theme-dropdown-item"
                                         className={theme}
                                         eventKey={theme}>

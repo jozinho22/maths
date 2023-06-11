@@ -10,7 +10,7 @@ import PaginationFullDocument from './PaginationFullDocument';
 import AppContext from '../context/AppContext'
 
 import Link from '../immutable/nav/Link';
-import CoursesLinks from '../courses/CoursesLinks';
+import CoursesConstants from '../courses/CoursesConstants';
 import CustomHelmet from '../immutable/seo/CustomHelmet';
 import Constants from '../immutable/Constants';
 import { useSwipeable } from 'react-swipeable';
@@ -205,7 +205,7 @@ const PDFViewerPage = ({ pdfItem }) => {
                         </>
                 }
 
-                <p className="AuthorCopyRight">Avec l'accord de Mr Petit - <Link url={CoursesLinks.SAVOIR_SANS_FRONTIERES} >toutes ses BDs</Link></p>     
+                <p className="AuthorCopyRight">Avec l'accord de Mr Petit - <Link url={CoursesConstants.CoursesConstants} >toutes ses BDs</Link></p>     
           </>     
         );
       }

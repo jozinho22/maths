@@ -1,10 +1,10 @@
 import Link from "../immutable/nav/Link";
-import CoursesLinks from "./CoursesLinks";
+import CoursesConstants from "./CoursesConstants";
 
 const UnsplashCopyRight = ( { item } ) => {
 
     return (
-            <p className="AuthorCopyRight">{item} : &copy; <Link link={CoursesLinks.UNSPLASH} external>unsplash.com</Link></p> 
+            <p className="AuthorCopyRight">{item} : &copy; <Link link={CoursesConstants.UNSPLASH} external>unsplash.com</Link></p> 
         );  
 }
 

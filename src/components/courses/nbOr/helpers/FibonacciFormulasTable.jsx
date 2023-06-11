@@ -6,16 +6,20 @@ import MathJaxDisplay from '../../../mathjax-display/MathJaxDisplay';
 const FibonacciFormulasTable = () => {
 
     var values = useFibonacciFormulas();
+    var phiMain = "\\(F_{n+2} = F_{n+1} + F_{n} \\)";
     var phiGen =  "\\(\\phi^{n+1} =  F_{n+1}.\\phi +  F_{n} \\)";
-    var phiGen2 =  "\\(\\phi^{n+1} =  \\phi^{n} +  \\phi^{n - 1} \\)";
+    var phiGen2 =  "\\(\\phi^{n+2} =  \\phi^{n+1} +  \\phi^{n} \\)";
 
     return (
-            <NiceTable >
-                <thead>
+            <NiceTable>
+                <thead id="FibonacciFormulasTable">
                     <tr>
                         <th>
                             <MathJaxDisplay toShow={"\\( n \\)"} />
                         </th>
+                        <td>
+                            <MathJaxDisplay toShow={phiMain} />
+                        </td>
                         <td>
                             <MathJaxDisplay toShow={phiGen} />
                         </td>
@@ -30,6 +34,9 @@ const FibonacciFormulasTable = () => {
                             <td>
                                  <MathJaxDisplay toShow={`\\( ${value.id} \\)`} />  
                             </td>
+                            <td>
+                                <MathJaxDisplay toShow={value.formula0} /> 
+                            </td> 
                             <td>
                                 <MathJaxDisplay toShow={value.formula1} /> 
                             </td>  

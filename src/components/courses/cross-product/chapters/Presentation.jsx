@@ -2,7 +2,6 @@ import React from 'react';
 import { Container,Button } from 'react-bootstrap';
 import MathJaxDisplay from '../../../mathjax-display/MathJaxDisplay';
 import MathJaxInline from '../../../mathjax-display/MathJaxInline';
-import Constants from '../../../immutable/Constants';
 
 const Presentation = () => {
 
@@ -68,7 +67,7 @@ const Presentation = () => {
             abcdSlice[mirrorExpPos[0]][mirrorExpPos[1]] = exp;
             return abcdSlice;
            
-            }
+        }
 
         setABCD(processInvert(abcd, expPos, mirrorExpPos));
         setABCD2(processInvert(abcd2, expPos, mirrorExpPos));

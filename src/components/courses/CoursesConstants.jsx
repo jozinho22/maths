@@ -10,6 +10,9 @@ const CoursesConstants = {
     DERIVEE: '/la-derivee',
     FORMES: '/les-formes',
     FONCTIONS_USUELLES:  '/les-fonctions-usuelles',
+
+    UNSPLASH: "https://unsplash.com/",
+    SAVOIR_SANS_FRONTIERES: "http://www.savoir-sans-frontieres.com/"
 }
 
 export default CoursesConstants;

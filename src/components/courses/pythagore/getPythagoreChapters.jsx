@@ -1,6 +1,6 @@
 import Presentation from './chapters/Presentation';
 import DemonstrationDuTheoreme from './chapters/DemonstrationDuTheoreme';
-import DemonstrationDeLaReciproque from './chapters/DemonstrationDeLaReciproque';
+/* import DemonstrationDeLaReciproque from './chapters/DemonstrationDeLaReciproque'; */
 import TheoremeDAlKashi from './chapters/TheoremeDAlKashi';
 import Applications from './chapters/Applications';
 

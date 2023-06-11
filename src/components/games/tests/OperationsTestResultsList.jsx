@@ -8,7 +8,10 @@ const OperationsTestResultsList = ({ question, answer }) => {
                     {question.enounce} 
                 </td>
                 <td className="AnswersResults">
-                    {answer.input} 
+                    {
+                        answer.input === '' ?
+                            'rien'
+                                :   answer.input} 
                 </td>
                 <td>
                 {
