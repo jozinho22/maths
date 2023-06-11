@@ -4,7 +4,6 @@ import Constants from '../immutable/Constants';
 import HiddenTitle from '../immutable/seo/HiddenTitle';
 import PagesConstants from '../immutable/nav/PagesConstants';
 
-
 const GamesTableOfContents = ( {gameItems} ) => {
 
     var prefix = 'jeux';

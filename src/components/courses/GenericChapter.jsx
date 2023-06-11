@@ -52,7 +52,7 @@ const GenericChapter = ( {chapter, courseItem} ) => {
 
     return (
         <>
-            <CustomHelmet title={chapter.title} metaContent={chapter.metaContent} canonicalUrl={`${Constants.WEB_APP_URL}${PagesConstants}${courseItem.relativePath}${chapter.relativePath}`}/>
+            <CustomHelmet title={chapter.title} metaContent={chapter.metaContent} canonicalUrl={`${Constants.WEB_APP_URL}${PagesConstants.COURS}${courseItem.relativePath}${chapter.relativePath}`}/>
             <HiddenTitle title={chapter.hiddenTitle} /> 
             
             <div className="FlexButton">
