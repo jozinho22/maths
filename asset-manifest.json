@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/maths/static/css/main.6f00bfe5.css",
-    "main.js": "/maths/static/js/main.afe6566b.js",
+    "main.css": "/maths/static/css/main.8969813e.css",
+    "main.js": "/maths/static/js/main.1a6d5e57.js",
     "static/js/787.727f4605.chunk.js": "/maths/static/js/787.727f4605.chunk.js",
     "static/media/energetiquementVotre.pdf": "/maths/static/media/energetiquementVotre.ae46a881d6240ff7c375.pdf",
     "static/media/bigBang.pdf": "/maths/static/media/bigBang.9a7278fe34a3a9cbd1fe.pdf",
@@ -19,18 +19,12 @@
     "static/media/toutEstRelatif.pdf": "/maths/static/media/toutEstRelatif.5b0881cca8a70cc2976f.pdf",
     "static/media/mecavol.pdf": "/maths/static/media/mecavol.9bc27cf41ee7f13a2b27.pdf",
     "static/media/aspirisouffle.pdf": "/maths/static/media/aspirisouffle.e421cfc36c4ef88cfc07.pdf",
-    "static/media/x-mas.otf": "/maths/static/media/x-mas.a5949eaa2a93b76acb26.otf",
-    "static/media/x-files.ttf": "/maths/static/media/x-files.d267bafed773f3db9dac.ttf",
-    "static/media/gothic.ttf": "/maths/static/media/gothic.e8c8b9f31b2552fecf08.ttf",
     "static/media/rabbits.png": "/maths/static/media/rabbits.885dde103c517e4bba6d.png",
     "static/media/chinese.ttf": "/maths/static/media/chinese.915f54554d8605590e7c.ttf",
     "static/media/dragons.ttf": "/maths/static/media/dragons.4548b6f8762a50adcc12.ttf",
     "static/media/rabbitsEvolution.png": "/maths/static/media/rabbitsEvolution.c230ff8019977acc58c7.png",
-    "static/media/indian.ttf": "/maths/static/media/indian.fcba438bef1049a04a96.ttf",
     "static/media/black-chancery.ttf": "/maths/static/media/black-chancery.7d521baec2350e17620c.ttf",
     "static/media/scholar.otf": "/maths/static/media/scholar.eec7046063f4ddee44b0.otf",
-    "static/media/arabic.ttf": "/maths/static/media/arabic.1c69a3db228eceab39e0.ttf",
-    "static/media/scribe.otf": "/maths/static/media/scribe.f419472b687c385368c8.otf",
     "static/media/circlePiCalculus.png": "/maths/static/media/circlePiCalculus.f497ceab2de2b73cf493.png",
     "static/media/derivativeSquareFunction.png": "/maths/static/media/derivativeSquareFunction.fdc3d67e7ea0de42e13f.png",
     "static/media/sphereAreaCalculus.png": "/maths/static/media/sphereAreaCalculus.92767ad62e38f94d7a99.png",
@@ -64,12 +58,12 @@
     "static/media/pythagoreDemo2.png": "/maths/static/media/pythagoreDemo2.d59eafd0a52ebbe5bca2.png",
     "static/media/medianes.png": "/maths/static/media/medianes.f43b5dfe908b3022a3cb.png",
     "index.html": "/maths/index.html",
-    "main.6f00bfe5.css.map": "/maths/static/css/main.6f00bfe5.css.map",
-    "main.afe6566b.js.map": "/maths/static/js/main.afe6566b.js.map",
+    "main.8969813e.css.map": "/maths/static/css/main.8969813e.css.map",
+    "main.1a6d5e57.js.map": "/maths/static/js/main.1a6d5e57.js.map",
     "787.727f4605.chunk.js.map": "/maths/static/js/787.727f4605.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6f00bfe5.css",
-    "static/js/main.afe6566b.js"
+    "static/css/main.8969813e.css",
+    "static/js/main.1a6d5e57.js"
   ]
 }
