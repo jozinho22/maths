@@ -23,6 +23,10 @@
     width: 90%;
 }
 
+.Darcula .QuestionContainer {
+    color: var(--simple-text-color);
+}
+
 .QuestionContainer .col {
     padding-left: 2px;
     padding-right: 0px;
@@ -100,6 +104,16 @@
 }
 /* Operations Test Results */
 
+.table {
+    --bs-table-bg: var(--back-color) !important;
+    --bs-table-color: var(--simple-text-color);
+}
+
+.Darcula .table {
+    --bs-table-bg: var(--front-color) !important;
+    --bs-table-border-color: var(--simple-text-color) !important;
+}
+
 .ResultsContainer {
     font-size: small;
     width : 100%;
@@ -118,10 +132,6 @@
         font-size: large;
         width : 80%;
     }
-}
-
-.OperationsTestResults {
-    color: var(--simple-text-color);
 }
 
 .OperationsTestResults td p {

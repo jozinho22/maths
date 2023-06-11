@@ -1,18 +1,8 @@
 .App {
-    --arabic-font: 'arabic', Fallback, sans-serif;
     --black-chancery-font: 'black-chancery', Fallback, sans-serif;
     --chinese-font: 'chinese', Fallback, sans-serif;
     --dragons-font: 'dragons', Fallback, sans-serif;
-    --gothic-font: 'gothic', Fallback, sans-serif;
-    --indian-font: 'indian', Fallback, sans-serif;
     --scholar-font: 'scholar', Fallback, sans-serif;
-    --scribe-font: 'scribe', Fallback, sans-serif;
-    --xfiles-font: 'x-files', Fallback, sans-serif;
-    --xmas-font: 'x-mas', Fallback, sans-serif;
-}
-
-.Arabic {
-    font-family: var(--arabic-font) !important;
 }
 
 .BlackChancery {
@@ -25,34 +15,6 @@
 
 .Dragons {
     font-family: var(--dragons-font) !important;
-}
-
-.Gothic {
-    font-family: var(--gothic-font) !important;
-}
-
-.Indian {
-    font-family: var(--indian-font) !important;
-}
-
-.Scribe {
-    font-family: var(--scribe-font) !important;
-}
-
-.Xfiles {
-    font-family: var(--xfiles-font) !important;
-}
-
-.Xmas {
-    font-family: var(--xmas-font) !important;
-}
-
-@font-face {
-    font-family: 'arabic';
-    font-style: normal;
-    font-weight: normal;
-    size-adjust: 180%;
-    src: local('Arabic'), url('./fonts/arabic.ttf') format('truetype');
 }
 
 @font-face {
@@ -79,49 +41,9 @@
 }
 
 @font-face {
-    font-family: 'gothic';
-    font-style: normal;
-    font-weight: normal;
-    size-adjust: 200%;
-    src: local('Gothic'), url('./fonts/gothic.ttf') format('truetype');
-}
-
-@font-face {
-    font-family: 'indian';
-    font-style: normal;
-    font-weight: normal;
-    size-adjust: 180%;
-    src: local('Indian'), url('./fonts/indian.ttf') format('truetype');
-}
-
-@font-face {
     font-family: 'scholar';
     font-style: normal;
     font-weight: normal;
     size-adjust: 180%;
     src: local('Scholar'), url('./fonts/scholar.otf') format('opentype');
-}
-
-@font-face {
-    font-family: 'scribe';
-    font-style: normal;
-    font-weight: normal;
-    size-adjust: 180%;
-    src: local('Scribe'), url('./fonts/scribe.otf') format('opentype');
-}
-
-@font-face {
-    font-family: 'x-files';
-    font-style: normal;
-    font-weight: normal;
-    size-adjust: 150%;
-    src: local('X-files'), url('./fonts/x-files.ttf') format('truetype');
-}
-
-@font-face {
-    font-family: 'x-mas';
-    font-style: normal;
-    font-weight: normal;
-    size-adjust: 250%;
-    src: local('Xmas'), url('./fonts/x-mas.otf') format('opentype');
 }

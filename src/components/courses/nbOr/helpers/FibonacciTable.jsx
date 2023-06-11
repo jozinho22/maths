@@ -28,7 +28,7 @@ const FibonacciTable = () => {
                     <tr>
                         {Array.from(values).map( (value, index) => (
                             <td key={index}>
-                                {value.nb}    
+                                <MathJaxDisplay toShow={`\\( ${value.nb} \\)`} />    
                             </td>
                         ))}
                     </tr>   

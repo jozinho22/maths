@@ -5,8 +5,8 @@ import CustomHelmet from '../immutable/seo/CustomHelmet';
 import HiddenTitle from '../immutable/seo/HiddenTitle';
 import Constants from '../immutable/Constants';
 import { NavLink } from 'react-router-dom';
-import { useReactToPrint } from 'react-to-print';
-import pageStyle from '../helpers/pageStyle';
+/* import { useReactToPrint } from 'react-to-print';
+import pageStyle from '../helpers/pageStyle'; */
 
 import './GenericChapter.css';
 import pathBuilder from '../helpers/pathBuilder';
@@ -18,7 +18,7 @@ const GenericChapter = ( {chapter, courseItem} ) => {
         window.scrollTo(0, 0);
     }, []);
 
-    var catchedDiv = {};
+   /*  var catchedDiv = {};
 
     const buildElementToPrint = () => {
 
@@ -48,7 +48,7 @@ const GenericChapter = ( {chapter, courseItem} ) => {
             documentTitle:`${courseItem.title} - ${chapter.title}`,
             onAfterPrint: () => destroyElementToPrint()
         }
-    );
+    ); */
 
     return (
         <>

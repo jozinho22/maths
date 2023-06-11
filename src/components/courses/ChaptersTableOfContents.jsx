@@ -6,7 +6,6 @@ import pathBuilder from '../helpers/pathBuilder';
 
 import { NavLink } from 'react-router-dom';
 import PagesConstants from '../immutable/nav/PagesConstants';
-import pathBuilder from '../helpers/pathBuilder';
 
 const ChaptersTableOfContents = ( {courseItem} ) => {
 

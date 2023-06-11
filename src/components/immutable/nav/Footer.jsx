@@ -4,8 +4,7 @@ import { NavLink } from 'react-router-dom';
 import { Envelope } from 'react-bootstrap-icons';
 import AppContext from '../../context/AppContext'
 
-import { getFonts } from '../styles/getFonts';
-import { getThemes } from '../styles/getThemes'; 
+import Themes from '../styles/Themes';
 import pathBuilder from '../../helpers/pathBuilder';
 import PagesConstants from './PagesConstants';
 
@@ -14,10 +13,9 @@ import './Footer.css';
 
 const Footer = () => {
 
-    const {playMode, updateFont,  updateTheme} = React.useContext(AppContext);
+    const {playMode, updateTheme} = React.useContext(AppContext);
 
-    var fonts = getFonts(); 
-    var themes = getThemes(); 
+    var themes = Object.keys(Themes).map(key => Themes[key]);
 
     return (
             <Navbar 
@@ -29,7 +27,7 @@ const Footer = () => {
                 <Navbar.Toggle aria-controls="basic-nav-nav"/>
                 <Navbar.Collapse id="responsive-navbar-nav">
                    <Nav>
-                         <NavDropdown 
+                         {/* <NavDropdown 
                             drop="up"
                             title="Fonts" 
                             id="basic-nav-dropdown"
@@ -48,10 +46,10 @@ const Footer = () => {
                                     </NavDropdown.Item>
                                 ))
                             }                         
-                        </NavDropdown> 
+                        </NavDropdown>  */}
                         <NavDropdown 
                             drop="up"
-                            title="Themes" 
+                            title="Couleurs" 
                             id="basic-nav-dropdown"
                             onSelect={(event) => {
                                 updateTheme(event);
@@ -60,11 +58,11 @@ const Footer = () => {
                             {
                                 themes.map(theme => (
                                     <NavDropdown.Item 
-                                        key={theme.id}
+                                        /* key={index} */
                                         id="theme-dropdown-item"
-                                        className={theme.name}
-                                        eventKey={theme.name}>
-                                        {theme.name}
+                                        className={theme}
+                                        eventKey={theme}>
+                                        {theme}
                                     </NavDropdown.Item>
                                 ))
                             }                         

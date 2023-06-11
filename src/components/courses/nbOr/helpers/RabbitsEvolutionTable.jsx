@@ -1,6 +1,7 @@
 import React from 'react';
 import NiceTable from '../../../immutable/NiceTable';
 import getRabbitsEvolution from './useRabbitsEvolution';
+import MathJaxDisplay from '../../../mathjax-display/MathJaxDisplay';
 
 const RabbitsEvolutionTable = () => {
 
@@ -15,7 +16,7 @@ const RabbitsEvolutionTable = () => {
                         </th>
                         {Array.from(rabbitsEv).map( (value, index) => (
                             <th key={index}>
-                                {value.id}    
+                                <MathJaxDisplay toShow={`\\(${value.id} \\)`} /> 
                             </th>
                         ))}
                     </tr>
@@ -27,7 +28,7 @@ const RabbitsEvolutionTable = () => {
                         </td>
                         {Array.from(rabbitsEv).map( (value, index) => (
                             <td key={index}>
-                                {value.nb}    
+                                <MathJaxDisplay toShow={`\\(${value.nb} \\)`} />  
                             </td>
                         ))}
                     </tr>   

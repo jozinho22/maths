@@ -36,11 +36,11 @@ h1 {
 }
 
 a { 
-    color: rgb(86, 86, 158); 
+    color: var(--links-color);
 } 
 
 a:hover {
-    color: rgb(61, 61, 139);
+    color: var(--links-color-hover);
 }
 
 .MainTitle {
@@ -113,6 +113,12 @@ a:hover {
     width: fit-content;
 }
 
+.Darcula .DefaultButton {
+    background-color: var(--dark-blue-color);
+    border-color: var(--grey-color);
+    color: var(--back-color);
+}
+
 @media (min-width: 450px) {
     .DefaultButton {
         padding: 10px;
@@ -134,10 +140,18 @@ a:hover {
     border-color: var(--grey-color);
 }
 
+.Darcula .DefaultButton:hover {
+    background-color: var(--blue-color);
+}
+
 .DefaultButton:focus {
     background-color: var(--blue-hover-color);
     border-color: var(--grey-color);
     border-width: 0px;
+}
+
+.Darcula .DefaultButton:focus {
+    background-color: var(--blue-color);
 }
 
 .DefaultButton:disabled {
@@ -212,27 +226,27 @@ a:hover {
 }
 
 .GreenButton {
-    background-color: var(--green-color);
+    background-color: var(--green-color) !important;
 }
 
 .GreenButton:hover, .GreenButton:focus, .GreenButton:active  {
-    background-color: var(--green-hover-color);
+    background-color: var(--green-hover-color) !important;
 }
 
 .OrangeButton {
-    background-color: var(--orange-color);
+    background-color: var(--orange-color) !important;
 }
 
 .OrangeButton:hover, .OrangeButton:focus, .OrangeButton:active {
-    background-color: var(--orange-hover-color);
+    background-color: var(--orange-hover-color) !important;
 }
 
 .RedButton {
-    background-color: var(--red-color);
+    background-color: var(--red-color) !important;
 }
 
 .RedButton:hover, .RedButton:focus, .RedButton:active {
-    background-color: var(--red-hover-color);
+    background-color: var(--red-hover-color) !important;
 }
 
 /* Table Of Contents */
@@ -362,7 +376,7 @@ a:-webkit-any-link {
 
 /* Tables */
 
-.TableContainer {
+.NiceTableContainer {
     margin-bottom: 20px;
     /*     overflow: hidden;
  */
@@ -371,14 +385,23 @@ a:-webkit-any-link {
 }
 
 @media(min-width: 450px) {
-    .TableContainer {
+    .NiceTableContainer {
         margin-bottom: 40px;
         width: 80%;
     }
 }
 
-.TableContainer td, th {
-    vertical-align: middle;
+.NiceTableContainer td .MathJaxDisplay span, .NiceTableContainer th .MathJaxDisplay span {
+    display: table !important;
+    margin: 0 auto;
+}
+
+.NiceTableContainer thead th, .NiceTableContainer thead td {
+    border: solid var(--navbar-color) 2px;
+}
+
+.Darcula .NiceTableContainer thead th, .Darcula .NiceTableContainer thead td {
+    border: solid var(--links-color) 2px;
 }
 
 table::-webkit-scrollbar {

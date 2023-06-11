@@ -9,8 +9,8 @@ const CaracteristiquesEnSensContraire = () => {
 
     var phi22 =  "\\(\\phi^2 = \\phi + 1  \\)";
 
-    var phiMain = "\\(F_{n+1} = F_{n} + F_{n-1} \\)";
-    var phiMainReverse = "\\( F_{n-1} = F_{n+1} - F_{n} \\)";
+    var phiMain = "\\(F_{n+2} = F_{n+1} + F_{n} \\)";
+    var phiMainReverse = "\\( F_{n} = F_{n+2} - F_{n+1} \\)";
 
     var f0 = "\\( F_{0} = F_{2} - F_{1} \\)";
     var f01 = "\\( F_{0} = 1 - 1 \\)";
@@ -46,7 +46,6 @@ const CaracteristiquesEnSensContraire = () => {
 
     return (
             <>             
-                <p className="Title1">Caractéristiques du nombre d'or en sens contraire</p>
                 <p>En effet, avec la formule ci-dessous</p>
                 <MathJaxDisplay toShow={phiMain} demo/>
                 <p>On peut l'arranger pour aller en sens contraire</p>

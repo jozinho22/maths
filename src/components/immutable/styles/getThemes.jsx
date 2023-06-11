@@ -1,24 +1,14 @@
-const getThemes = () => {
-    
-    var j = -1;
-    return [
-                {id: ++j, name: 'Algeria'},
-                {id: ++j, name: 'Brazil'},
-                {id: ++j, name: 'Darcula'},
-                {id: ++j, name: 'Germany'},
-                {id: ++j, name: 'France'},
-                {id: ++j, name: 'Senegal'}
-            ];
-}
+import Themes from "./Themes";
 
 const getThemeIfStoredThemeExists = (theme) => {
 
-    var themes = getThemes();
-    for(var t of themes) {
-        if(t.name === theme) {
-            return t.name;
+    for(var key of Object.keys(Themes)) {
+
+        if(Themes[key] === theme) {
+            console.log(Themes[key])
+            return Themes[key];
         }
-    }
+    } 
 }
 
-export {getThemes, getThemeIfStoredThemeExists};
+export {getThemeIfStoredThemeExists};
