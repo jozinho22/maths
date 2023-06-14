@@ -32,6 +32,8 @@ for(var url of xmlDoc.root.children) {
 }
 
 console.log(rspJson) 
+console.log("----------") 
+console.log(rspJson.routes.length + " urls") 
 
 fs.writeFile ('.rsp.json', JSON.stringify(rspJson), function(err) {
     if (err) throw err;

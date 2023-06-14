@@ -147,7 +147,7 @@ const LeTriangle = () => {
 
             <p className="Title1">Loi des cosinus</p>
             <p>
-                La loi des cosinus, ou théorème d'Al-Kashi est la généralisation du <Link url={pathBuilder(CoursesConstants.PYTHAGORE)} external>théorème de Pythagore</Link>.
+                La loi des cosinus, ou théorème d'Al-Kashi est la généralisation du <Link url={pathBuilder(`${PagesConstants.COURS}${CoursesConstants.PYTHAGORE}`)} external>théorème de Pythagore</Link>.
                 Là où dans un triangle <MathJaxInline toShow={"$\\{a, \\; b, \\; c\\}$"} /> rectangle entre <MathJaxInline toShow={"$a$"} /> et <MathJaxInline toShow={"$b$"} /> :
             </p>
             <Container className="Focus">
