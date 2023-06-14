@@ -3,10 +3,11 @@
     padding-top: calc(100px + 20px);
     padding-bottom: calc(100px + 40px); 
     min-height: 100vh;
+    max-width: fit-content !important;
     color: var(--simple-text-color);
     /* display: flex;
     flex-direction: column;
-    align-items: center; */
+    align-items: center;  */
 }
 
 @media(width < 450px) {
@@ -29,6 +30,7 @@ a, p {
 p {
     text-align: justify;
     white-space: pre-line;
+    margin-top: 2rem !important;
 }
 
 h1 {
@@ -61,7 +63,7 @@ a:hover {
 .MainTitle, .Title {
     margin: 0 auto;
     padding-top: 20px;
-    padding-bottom: 40px;
+    padding-bottom: 10px;
     /* width: fit-content; */
     font-size: large !important;
     text-align: center !important;
@@ -430,4 +432,23 @@ table::-webkit-scrollbar-track {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+
+::-webkit-scrollbar-track {
+  /* border: 1px solid #615e5e; */
+  padding: 1px 0;
+  background-color: #817f7f00;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar {
+  width: 2px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  box-shadow: inset 0 0 6px rgba(153, 151, 151, 0.13);
+  background-color: #73727273;
+  border: 1px solid #5f5d5d;
 }

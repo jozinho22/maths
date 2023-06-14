@@ -2,6 +2,13 @@
     white-space: normal
 }  */
 
+.MathJaxDisplay {
+    max-width: 100vw !important;
+    height: fit-content;
+    overflow-x: visible;
+    overflow-y: hidden;
+}
+
 mjx-container {
     text-align: justify !important;
 }
@@ -15,9 +22,9 @@ table mjx-container {
 }
 
 .Demo mjx-container {
-    margin-left: 250px !important;
-    margin-top: 25px !important;
-    margin-bottom: 25px !important;
+    margin-left: 180px !important;
+    margin-top: 15px !important;
+    margin-bottom: 15px !important;
 }  
 
 @media (width < 450px) {
@@ -89,3 +96,4 @@ table mjx-container {
 .RedMathJaxText {
     color: var(--red-color);
 }
+

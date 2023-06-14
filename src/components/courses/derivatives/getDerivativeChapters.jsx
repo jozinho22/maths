@@ -1,6 +1,7 @@
 
 import Presentation from "./chapters/Presentation";
 import Exemple from "./chapters/Exemple";
+import DeriveeSurDesOperations from "./chapters/DeriveeSurDesOperations";
 
 const getDerivativeChapters = () => {
 
@@ -22,6 +23,14 @@ const getDerivativeChapters = () => {
             metaContent: 'Exemple de calcul de dérivée : la fonction carrée.',
             hiddenTitle: 'Exemple de calcul de dérivée',
             relativePath: '/exemple'
+        },
+        {
+            id: k++,
+            component: <DeriveeSurDesOperations />,
+            title: 'Dérivée d\'une somme, d\'un produit ou d\'un quotient de fonctions',
+            metaContent: 'Dérivée d\'une somme, d\'un produit ou d\'un quotient de fonctions : formule et démonstration.',
+            hiddenTitle: 'Dérivée d\'une somme, d\'un produit ou d\'un quotient de fonctions',
+            relativePath: '/derivee-d-operations-de-fonctions'
         }
     ];
 }

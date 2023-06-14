@@ -19,17 +19,18 @@ const Presentation = () => {
     var tauxVar3 = "\\(a = \\frac{f(x_0+h) - f(x_0)}{x_0  +h -x_0}\\)";
     var tauxVar4 = "\\(a = \\frac{f(x_0+h) - f(x_0)}{h }\\)";
 
-    var limTauxVar = "\\(a = lim_{ h \\to 0} \\frac{f(x_0+h) - f(x_0)}{h}\\)";
+    var limTauxVar = "\\(a = lim_{ h \\to 0} \\enspace \\frac{f(x_0+h) - f(x_0)}{h}\\)";
     var limTauxVar2 = "\\(f'(x) = lim_{h \\to 0} \\enspace  \\frac{f(x+h) - f(x)}{h}\\)";
+    var leibnizNotation = "\\(f'(x) \\Leftrightarrow \\frac{df}{dx}\\)";
 
     return  <>
                 <p>
                     La dérivée est une notion clef dans l’analyse de fonctions, car elle sous-tend toute la
-science physique.
+                    science physique.
                 </p>
                 <p>
                    Elles nous serviront de base pour étudier par la suite le calcul différentiel ainsi que les
-intégrales.
+                    intégrales.
                 </p>
                 <p>
                     Prenons une fonction <MathJaxInline toShow={"$ y = f(x) $"} /> au hasard, en vert sur la figure.
@@ -85,6 +86,11 @@ intégrales.
                 </p>
                 <Container className="Focus">
                      <MathJaxDisplay toShow={limTauxVar2}  />  
+                </Container>
+                <p>On dit que la dérivée est la limite du taux de variation quand <MathJaxInline toShow={"$ h $"} /> tend vers <MathJaxInline toShow={"$ 0 $"} />.</p>
+                <p>En physique, on pourra aussi utiliser la notation différentielle de Leibniz : </p>
+                <Container className="Focus">
+                     <MathJaxDisplay toShow={leibnizNotation} />  
                 </Container>
             </>
 }
