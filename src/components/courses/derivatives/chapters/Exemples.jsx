@@ -9,20 +9,20 @@ import Link from '../../../immutable/nav/Link';
 import PagesConstants from '../../../immutable/nav/PagesConstants';
 import CoursesConstants from '../../CoursesConstants';
 
-const Exemple = () => {
+const Exemples = () => {
 
     var n = 0;
 
     var fCarree = "\\( \\forall x \\in \\mathbb{R}, f(x)= x^2\\)";
-    var tauxVar = "\\(a = \\frac{f(x+h) - f(x)}{h }\\)";
-    var tauxVar2 = "\\(a = \\frac{(x+h)^2 - (x)^2}{h }\\)";
-    var tauxVar3 = "\\(a = \\frac{x^2 + 2xh + h^2 - x^2}{h }\\)";
-    var tauxVar4 = "\\(a = \\frac{2xh + h^2}{h }\\)";
-    var tauxVar5 = "\\(a = h. \\frac{(2x + h)}{h }\\)";
-    var tauxVar6 = "\\(a = 2xh + h\\)";
+    var fCarreeTauxVar = "\\(a = \\frac{f(x+h) - f(x)}{h }\\)";
+    var fCarreeTauxVar2 = "\\(a = \\frac{(x+h)^2 - (x)^2}{h }\\)";
+    var fCarreeTauxVar3 = "\\(a = \\frac{x^2 + 2xh + h^2 - x^2}{h }\\)";
+    var fCarreeTauxVar4 = "\\(a = \\frac{2xh + h^2}{h }\\)";
+    var fCarreeTauxVar5 = "\\(a = h. \\frac{(2x + h)}{h }\\)";
+    var fCarreeTauxVar6 = "\\(a = 2x + h\\)";
 
-    var limTauxVar = "\\(f'(x) = lim_{ x \\to 0} \\enspace (2xh + h)\\)";
-    var limTauxVar2 = "\\(f'(x) =2x\\)";
+    var limFCarreeTauxVar = "\\(f'(x) = lim_{ h \\to 0} \\enspace (2x + h)\\)";
+    var limFCarreeTauxVar2 = "\\(f'(x) =2x\\)";
 
     var g = "\\(g(x) = ax + b\\)";
 
@@ -35,8 +35,21 @@ const Exemple = () => {
     var eqDroiteCalculus3 = "\\(g(x) = 2x - 1\\)";
 
     var eqDroiteGen = "\\(g(x) = f'(a)(x -a ) + f(a)\\)";
+    
+    var fSqr = "\\( \\forall x \\in \\mathbb{R_+^*}, f(x)=  \\sqrt{x}\\)";
+    var fSqrTauxVar = "\\( a = \\frac{ \\sqrt{x + h} - \\sqrt{x } }{h} \\)";
+    var fSqrTauxVar2 = "\\( a =  \\frac{ \\left( \\sqrt{x + h} - \\sqrt{x } \\right).\\left( \\sqrt{x + h} + \\sqrt{x } \\right) } {h. \\left(\\sqrt{x + h} + \\sqrt{x} \\right)} \\)";
+    var fSqrTauxVar3 = "\\( a =  \\frac{ x + h - x } {h. \\left(\\sqrt{x + h} + \\sqrt{x} \\right)} \\)";
+    var fSqrTauxVar4 = "\\( a = \\frac{h}{h.\\left( \\sqrt{x + h} + \\sqrt{x } \\right)} \\)";
+    var fSqrTauxVar5 = "\\( a = \\frac{1}{ \\sqrt{x + h} + \\sqrt{x }} \\)";
+    
+    var limFSqrTauxVar = "\\( f'(x) =  lim_{ h \\to 0} \\enspace \\frac{1}{ \\left( \\sqrt{x + h} + \\sqrt{x } \\right)} \\)";
+    var limFSqrTauxVar2 = "\\( f'(x) =  \\frac{1}{2. \\sqrt{x }} \\)";
 
     return  <>
+                <p>Nous allons voir dans ce chapitre quelques calculs de dérivée de fonctions usuelles.</p>
+                
+                <p className="Title1">a) La fonction carrée</p>
                 <p>
                     La fonction carrée est définie de la manière suivante :
                 </p>
@@ -45,21 +58,21 @@ const Exemple = () => {
                    Calculons sa dérivée :
                 </p>
 
-                <p className="Title1">a) Calcul de la pente</p>
+                <p className="Title2">Calcul de la pente</p>
                 <p>On calcule la pente, puis on cherchera la limite quand <MathJaxInline toShow={"$ h \\to 0 $"} /> ( h tend vers 0 ).</p>
                 <p>Avec la formule suivante vue plus haut, on a :</p>
-                <MathJaxDisplay toShow={tauxVar} demo />  
-                <MathJaxDisplay toShow={tauxVar2} demo />  
-                <MathJaxDisplay toShow={tauxVar3} demo />  
-                <MathJaxDisplay toShow={tauxVar4} demo /> 
+                <MathJaxDisplay toShow={fCarreeTauxVar} demo />  
+                <MathJaxDisplay toShow={fCarreeTauxVar2} demo />  
+                <MathJaxDisplay toShow={fCarreeTauxVar3} demo />  
+                <MathJaxDisplay toShow={fCarreeTauxVar4} demo /> 
                 <p>On factorise par <MathJaxInline toShow={"$ h $"} /> :</p> 
-                <MathJaxDisplay toShow={tauxVar5} demo /> 
-                <MathJaxDisplay toShow={tauxVar6} demo /> 
+                <MathJaxDisplay toShow={fCarreeTauxVar5} demo /> 
+                <MathJaxDisplay toShow={fCarreeTauxVar6} demo /> 
 
-                <p className="Title1">a) Calcul de la limite</p>
+                <p className="Title2">Calcul de la limite</p>
                 <p>Calculons à présent la limite de ce qu’on vient de trouver :</p>
-                <MathJaxDisplay toShow={limTauxVar} demo /> 
-                <MathJaxDisplay toShow={limTauxVar2} demo /> 
+                <MathJaxDisplay toShow={limFCarreeTauxVar} demo /> 
+                <MathJaxDisplay toShow={limFCarreeTauxVar2} demo /> 
                 <p>Pour <MathJaxInline toShow={"$ x= 1 $"} />, on a bien <MathJaxInline toShow={"$ f'(1)=2 $"} />.  </p>
                 <ImageZoom src={derivativeSquareFunction} name="Calcul du nombre dérivée de la fonction carrée en x = 1" n={++n} />
                 <p>Le nombre <MathJaxInline toShow={"$ f'(1)= 2  $"} /> est la pente de la droite <MathJaxInline toShow={"$ g  $"} /> en rouge.
@@ -86,7 +99,32 @@ const Exemple = () => {
                 <Container className="Focus">
                      <MathJaxDisplay toShow={eqDroiteGen} />  
                 </Container>
+
+                 <p className="Title1">a) La fonction racine carrée</p>
+                <p>
+                    La fonction racine carrée est définie de la manière suivante :
+                </p>
+                <MathJaxDisplay toShow={fSqr} demo />  
+                <p>
+                   Calculons sa dérivée en procédant de la même manière que plus haut :
+                </p>
+
+                <p className="Title2">Calcul de la pente</p>
+                <MathJaxDisplay toShow={fSqrTauxVar} demo /> 
+                <p>Pour traiter avec les racines, il est souvent utile de faire appel à son conjugué : </p>
+                <MathJaxDisplay toShow={fSqrTauxVar2} demo /> 
+                <MathJaxDisplay toShow={fSqrTauxVar3} demo /> 
+                <MathJaxDisplay toShow={fSqrTauxVar4} demo /> 
+                <p>On simplifie les <MathJaxInline toShow={"$ h $"} /> : </p>
+                <MathJaxDisplay toShow={fSqrTauxVar5} demo /> 
+
+                <p className="Title2">Calcul de la limite</p>
+                <MathJaxDisplay toShow={limFSqrTauxVar} demo /> 
+                <Container className="Focus">
+                     <MathJaxDisplay toShow={limFSqrTauxVar2} />  
+                </Container>
+
             </>
 }
 
-export default Exemple;
+export default Exemples;

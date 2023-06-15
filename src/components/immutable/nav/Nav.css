@@ -36,7 +36,7 @@
 /* nav-item (items de la navbar) */
 .CustomNav .nav-item a {
   color: var(--grey-light-color) !important;
-  font-size: small !important ;
+  font-size: small ;
 }
 
 .CustomNav .nav-item {
@@ -48,6 +48,10 @@
     .CustomNav .nav-item a {
       font-size: small;
     }
+}
+
+.CustomNav .nav-item.dropdown  {
+    font-size: small !important;
 }
 
 @media (width < 1000px) {
@@ -117,10 +121,10 @@
   background-color : var(--navbar-hover-color);
 }
 
-@media (min-width: 450px) {
+/* @media (min-width: 450px) {
   .CustomNav .dropdown-item {
-    font-size: small !important;
+    font-size: large !important;
     width: 100%;
   }
-}
+} */
 

@@ -13,6 +13,7 @@
 }
 
 .VCardRecto, .VCardVerso  {
+    margin-top: 30px;
     border-radius: 10px;
     background-color: var(--front-color);
     color: var(--simple-text-color);

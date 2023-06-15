@@ -21,7 +21,7 @@ const GenericTableOfContents = ( {items, prefix, title} ) => {
                                                 relativePath: item.relativePath
                                             }
                                         } >
-                                {item.title}
+                                <p>{item.title}</p>
                             </NavLink>
                         </div>    
                     ))
