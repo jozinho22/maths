@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/maths/static/css/main.fac7df49.css",
-    "main.js": "/maths/static/js/main.e2bd7a78.js",
+    "main.css": "/maths/static/css/main.39bd3fe8.css",
+    "main.js": "/maths/static/js/main.1a1ba9df.js",
     "static/js/787.727f4605.chunk.js": "/maths/static/js/787.727f4605.chunk.js",
     "static/media/energetiquementVotre.pdf": "/maths/static/media/energetiquementVotre.ae46a881d6240ff7c375.pdf",
     "static/media/bigBang.pdf": "/maths/static/media/bigBang.9a7278fe34a3a9cbd1fe.pdf",
@@ -25,8 +25,9 @@
     "static/media/rabbitsEvolution.png": "/maths/static/media/rabbitsEvolution.c230ff8019977acc58c7.png",
     "static/media/black-chancery.ttf": "/maths/static/media/black-chancery.7d521baec2350e17620c.ttf",
     "static/media/scholar.otf": "/maths/static/media/scholar.eec7046063f4ddee44b0.otf",
+    "static/media/derivativeSquareFunctionSensVar.png": "/maths/static/media/derivativeSquareFunctionSensVar.c998a918119302265272.png",
     "static/media/circlePiCalculus.png": "/maths/static/media/circlePiCalculus.f497ceab2de2b73cf493.png",
-    "static/media/derivativeSquareFunction.png": "/maths/static/media/derivativeSquareFunction.fdc3d67e7ea0de42e13f.png",
+    "static/media/derivativeSquareFunction.png": "/maths/static/media/derivativeSquareFunction.821578ec9a2263c4f4df.png",
     "static/media/sphereAreaCalculus.png": "/maths/static/media/sphereAreaCalculus.92767ad62e38f94d7a99.png",
     "static/media/circleTrigoValues.png": "/maths/static/media/circleTrigoValues.55196b1b99267412d12d.png",
     "static/media/sphereVolCalculus.png": "/maths/static/media/sphereVolCalculus.801808ebc0ce771699ab.png",
@@ -58,12 +59,12 @@
     "static/media/pythagoreDemo2.png": "/maths/static/media/pythagoreDemo2.d59eafd0a52ebbe5bca2.png",
     "static/media/medianes.png": "/maths/static/media/medianes.f43b5dfe908b3022a3cb.png",
     "index.html": "/maths/index.html",
-    "main.fac7df49.css.map": "/maths/static/css/main.fac7df49.css.map",
-    "main.e2bd7a78.js.map": "/maths/static/js/main.e2bd7a78.js.map",
+    "main.39bd3fe8.css.map": "/maths/static/css/main.39bd3fe8.css.map",
+    "main.1a1ba9df.js.map": "/maths/static/js/main.1a1ba9df.js.map",
     "787.727f4605.chunk.js.map": "/maths/static/js/787.727f4605.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.fac7df49.css",
-    "static/js/main.e2bd7a78.js"
+    "static/css/main.39bd3fe8.css",
+    "static/js/main.1a1ba9df.js"
   ]
 }
