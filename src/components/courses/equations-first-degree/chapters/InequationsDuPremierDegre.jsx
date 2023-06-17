@@ -113,7 +113,7 @@ const InequationsDuPremierDegre = () => {
                 <p>Les inéquations du premier degré fonctionnent comme les équations du premier degré, sauf que l'on change de signe (<MathJaxInline toShow={"$\\leqslant$"} /> devient <MathJaxInline toShow={"$\\geqslant$"} /> ou inversement) si l'on multiplie (ou divise) par un nombre négatif.</p>
                 <p>Il est à noter que c'est lors d'une multiplication, ou d'une division. Les deux reviennent au même, car diviser un nombre <MathJaxInline toShow={"$a$"} /> par un nombre <MathJaxInline toShow={"$b$"} /> revient à multiplier par l'inverse de <MathJaxInline toShow={"$b$"} />.</p>
                 <MathJaxDisplay toShow={divideEqualsMultiplyByInverse} demo />
-                <p>L'inverse de <MathJaxInline toShow={"$b$"} /> se note <MathJaxInline toShow={"$\\frac{1}{b}$"} /> ou encore <MathJaxInline toShow={"$b^{-1}$"} /> (voir <Link url={pathBuilder(`${PagesConstants.COURS}${CoursesConstants.PUISSANCES}/inverse-de-puissances`)}>chapitre sur l'inverse</Link>).</p>
+                <p>L'inverse de <MathJaxInline toShow={"$b$"} /> se note <MathJaxInline toShow={"$\\frac{1}{b}$"} /> ou encore <MathJaxInline toShow={"$b^{-1}$"} /> (voir <Link url={pathBuilder(`${PagesConstants.COURS}${CoursesConstants.PUISSANCES}/inverse-de-puissances`)} external>chapitre sur l'inverse</Link>).</p>
             </>
 }
 

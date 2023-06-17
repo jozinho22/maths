@@ -2,15 +2,14 @@ import MathJaxInline from "../mathjax-display/MathJaxInline";
 import { Container } from 'react-bootstrap';
 /* import MathJaxDisplay from '../mathjax-display/MathJaxDisplay';
 import useFunctionsExpressions from './useFunctionsExpressions'; */
-import { NavLink } from 'react-router-dom';
 import CustomHelmet from "../immutable/seo/CustomHelmet";
 import HiddenTitle from '../immutable/seo/HiddenTitle';
 import Constants from '../immutable/Constants';
 import pathBuilder from "../helpers/pathBuilder";
 import PagesConstants from "../immutable/nav/PagesConstants";
 import CoursesConstants from "../courses/CoursesConstants";
-import './Home.css';
 import Link from "../immutable/nav/Link";
+import './Home.css';
 
 const Home = () => {
 

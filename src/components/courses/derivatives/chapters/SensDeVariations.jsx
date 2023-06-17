@@ -1,13 +1,13 @@
 import React from 'react';
-import { Container } from 'react-bootstrap';
-import MathJaxDisplay from '../../../mathjax-display/MathJaxDisplay';
+
 import MathJaxInline from '../../../mathjax-display/MathJaxInline';
 import ImageZoom from '../../ImageZoom';
 
 import derivativeSquareFunctionSensVar from '../assets/derivativeSquareFunctionSensVar.png';
-import Link from '../../../immutable/nav/Link';
-import PagesConstants from '../../../immutable/nav/PagesConstants';
-import CoursesConstants from '../../CoursesConstants';
+
+import TableauDeSignesEtDeVariationsTable from '../../helpers/TableauDeSignesEtDeVariationsTable';
+import useTableauDeVariationsFonctionCarreeValues from '../helpers/useTableauDeVariationsFonctionCarreeValues';
+import useTableauDeVariationsGenericValues from '../helpers/useTableauDeVariationsGenericValues';
 
 const SensDeVariations = () => {
 
@@ -19,15 +19,20 @@ const SensDeVariations = () => {
                 <ImageZoom src={derivativeSquareFunctionSensVar} name="Variations de la fonction carrée" n={++n} />
                 <p>On voit que le nombre dérivée en un point nous indique le sens de variation de la fonction.</p>
                 
-                <p><MathJaxInline toShow={"$\\underline{cas \\enspace 1 : \\a < 0}$"} /></p>
+                <p><MathJaxInline toShow={"$\\underline{cas \\enspace 1 : a < 0}$"} /></p>
                 <p>La courbe de la fonction <MathJaxInline toShow={"$f$"} /> est décroissante.</p>
-                <p><MathJaxInline toShow={"$\\underline{cas \\enspace 2 : \\a = 0}$"} /></p>
+                <p><MathJaxInline toShow={"$\\underline{cas \\enspace 2 : a = 0}$"} /></p>
                 <p>La courbe de la fonction <MathJaxInline toShow={"$f$"} /> admet un point d'inflexion.</p>
-                <p><MathJaxInline toShow={"$\\underline{cas \\enspace 3 : \\a > 0}$"} /></p>
+                <p><MathJaxInline toShow={"$\\underline{cas \\enspace 3 : a > 0}$"} /></p>
                 <p>La courbe de la fonction <MathJaxInline toShow={"$f$"} /> est croissante.</p>
                 
-                {/* <p className="Title1">a) La fonction carrée</p> */}
                 
+                <p>Dans notre cas, voici son tableau de variation :</p>
+                <TableauDeSignesEtDeVariationsTable tableValues={useTableauDeVariationsFonctionCarreeValues()} />
+
+                <p className="Title1">Cas générique</p>
+                <p>Voici le cas générique avec par exemple deux racines (c'est-à-dire deux valeurs de <MathJaxInline toShow={"$x$"} /> pour lesquelles la fonction dérivée <MathJaxInline toShow={"$f'$"} /> s'annule) : </p>
+                <TableauDeSignesEtDeVariationsTable tableValues={useTableauDeVariationsGenericValues()} />
             </>
 }
 

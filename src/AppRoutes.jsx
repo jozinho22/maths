@@ -15,11 +15,8 @@ import pathBuilder from './components/helpers/pathBuilder';
 
 const AppRoutes = ( {courseItems, pdfItems, gameItems} ) => {
 
-
-
     return  <Routes>
-            
-                <Route exact path={pathBuilder("/")} element={<Home />} />
+                <Route exact path={pathBuilder("/")} element={process.env.NODE_ENV === 'development' ?  <Home /> : <Home />} />
                 <Route path={pathBuilder(PagesConstants.COURS)} element={<CoursesTableOfContents courseItems={courseItems} />} />
                 {courseItems.map(courseItem => {
                     return  <Route 

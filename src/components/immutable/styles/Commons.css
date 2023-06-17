@@ -385,10 +385,12 @@ a:-webkit-any-link {
 
 .NiceTableContainer {
     margin-bottom: 20px;
-    /*     overflow: hidden;
- */
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: small;
+}
+
+.NiceTableContainer .row {
+    flex-wrap: nowrap;
 }
 
 @media(min-width: 450px) {
@@ -396,6 +398,19 @@ a:-webkit-any-link {
         margin-bottom: 40px;
         width: 80%;
     }
+    .table-responsive {
+        overflow-x: auto !important;
+    }
+}
+
+@media(max-width: 450px) {
+    .table-responsive {
+        overflow-x: auto !important;
+    }
+}
+
+.NiceTableContainer tr {
+    vertical-align: middle;
 }
 
 .NiceTableContainer td .MathJaxDisplay span, .NiceTableContainer th .MathJaxDisplay span {
@@ -435,6 +450,7 @@ table::-webkit-scrollbar-track {
 
     ::-webkit-scrollbar {
         height: 7px;
+        width: 3.5px;
         cursor: auto;
     }
 

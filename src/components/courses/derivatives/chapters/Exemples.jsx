@@ -21,8 +21,8 @@ const Exemples = () => {
     var fCarreeTauxVar5 = "\\(a = h. \\frac{(2x + h)}{h }\\)";
     var fCarreeTauxVar6 = "\\(a = 2x + h\\)";
 
-    var limFCarreeTauxVar = "\\(f'(x) = lim_{ h \\to 0} \\enspace (2x + h)\\)";
-    var limFCarreeTauxVar2 = "\\(f'(x) =2x\\)";
+    var limFCarreeTauxVar = "\\( (x^2)' = lim_{ h \\to 0} \\enspace (2x + h)\\)";
+    var limFCarreeTauxVar2 = "\\( (x^2)' = 2x\\)";
 
     var g = "\\(g(x) = ax + b\\)";
 
@@ -43,8 +43,8 @@ const Exemples = () => {
     var fSqrTauxVar4 = "\\( a = \\frac{h}{h.\\left( \\sqrt{x + h} + \\sqrt{x } \\right)} \\)";
     var fSqrTauxVar5 = "\\( a = \\frac{1}{ \\sqrt{x + h} + \\sqrt{x }} \\)";
     
-    var limFSqrTauxVar = "\\( f'(x) =  lim_{ h \\to 0} \\enspace \\frac{1}{ \\left( \\sqrt{x + h} + \\sqrt{x } \\right)} \\)";
-    var limFSqrTauxVar2 = "\\( f'(x) =  \\frac{1}{2. \\sqrt{x }} \\)";
+    var limFSqrTauxVar = "\\( (\\sqrt{x})' =  lim_{ h \\to 0} \\enspace \\frac{1}{ \\left( \\sqrt{x + h} + \\sqrt{x } \\right)} \\)";
+    var limFSqrTauxVar2 = "\\( (\\sqrt{x})' =  \\frac{1}{2. \\sqrt{x }} \\)";
 
     return  <>
                 <p>Nous allons voir dans ce chapitre quelques calculs de dérivée de fonctions usuelles.</p>
@@ -72,7 +72,9 @@ const Exemples = () => {
                 <p className="Title2">Calcul de la limite</p>
                 <p>Calculons à présent la limite de ce qu’on vient de trouver :</p>
                 <MathJaxDisplay toShow={limFCarreeTauxVar} demo /> 
-                <MathJaxDisplay toShow={limFCarreeTauxVar2} demo /> 
+                <Container className="Focus">
+                     <MathJaxDisplay toShow={limFCarreeTauxVar2} />  
+                </Container>
                 <p>Pour <MathJaxInline toShow={"$ x= 1 $"} />, on a bien <MathJaxInline toShow={"$ f'(1)=2 $"} />.  </p>
                 <ImageZoom src={derivativeSquareFunction} name="Calcul du nombre dérivée de la fonction carrée en x = 1" n={++n} />
                 <p>Le nombre <MathJaxInline toShow={"$ f'(1)= 2  $"} /> est la pente de la droite <MathJaxInline toShow={"$ g  $"} /> en rouge.

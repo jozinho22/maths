@@ -5,7 +5,7 @@ const NiceTable = ( {children} ) => {
 
     const memoizedTable = 
             React.useMemo(() => (
-                    <Container className="NiceTableContainer" >
+                    <Container className={`NiceTableContainer`} >
                         <Table responsive striped bordered >
                             {children}
                         </Table>

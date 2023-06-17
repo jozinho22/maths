@@ -36,8 +36,9 @@ const EquationsDuSecondDegre = () => {
     var x2Calculus3 = "\\( x_2  = \\frac{-b - \\sqrt{\\Delta}}{2a} \\)";
 
 
-    var fact = "\\( a (x - x_1)(x - x_2) = 0 \\)";
-    
+    var factX1X2 = "\\( a (x - x_1)(x - x_2) = 0 \\)";
+    var factX0 = "\\( a (x - x_0)^2 = 0 \\)";
+
     var factEntirely = "\\( a \\Biggl( x - \\biggl(\\frac{- b + \\sqrt{b^2 - 4ac}}{2a} \\biggr) \\Biggr) \\Biggl( x - \\biggl(\\frac{- b - \\sqrt{b^2 - 4ac}}{2a} \\biggr) \\Biggr) = 0\\)";
     
     var devAfterFact = "\\( a \\Biggl( x^2 - x . \\biggl(\\frac{- b + \\sqrt{b^2 - 4ac}}{2a} \\biggr) - x . \\biggl( \\frac{- b - \\sqrt{b^2 - 4ac}}{2a} \\biggr)  + \\frac{b^2}{4a^2} - \\frac{b^2 - 4ac}{4a^2}  \\Biggr) = 0 \\)";
@@ -103,7 +104,7 @@ const EquationsDuSecondDegre = () => {
                 <p>Dans le cas où <MathJaxInline toShow={"$\\Delta > 0$"} />, l'équation admet bien deux solutions distinctes. </p>
                 <p>On alors peut écrire l'équation <MathJaxInline toShow={"$(1)$"} /> sous la forme : </p>
                 <Container className="Focus">
-                    <MathJaxDisplay toShow={fact} fRef={6} />
+                    <MathJaxDisplay toShow={factX1X2} fRef={6} />
                 </Container>
 
                 <p><MathJaxInline toShow={"$\\underline{cas \\enspace 2 : \\Delta = 0}$"} /></p>
@@ -112,6 +113,10 @@ const EquationsDuSecondDegre = () => {
                     <MathJaxDisplay toShow={x0} />
                 </Container>
                 <p>On les appelle racines doubles.</p>
+                 <p>On alors peut écrire l'équation <MathJaxInline toShow={"$(1)$"} /> sous la forme : </p>
+                <Container className="Focus">
+                    <MathJaxDisplay toShow={factX0} />
+                </Container>
 
                 <p><MathJaxInline toShow={"$\\underline{cas \\enspace 3 : \\Delta < 0}$"} /></p>
                 <p>Dans le cas où <MathJaxInline toShow={"$\\Delta < 0$"} />, l'équation n'a pas de solutions dans <MathJaxInline toShow={"$\\mathbb{R}$"} /> car la fonction <MathJaxInline toShow={"$\\sqrt{x}$"} /> n'est définie que sur <MathJaxInline toShow={"$ [ 0 ; +\\infty[ (\\mathbb{R^+})$"} />. </p>

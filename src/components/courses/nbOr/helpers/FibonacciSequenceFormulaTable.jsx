@@ -27,7 +27,7 @@ const FibonacciSequenceFormulaTable = () => {
                     {Array.from(values).map( (value, index) => (
                         <tr key={index}>
                             <td>
-                                 <MathJaxDisplay toShow={`\\( ${value.id} \\)`} />  
+                                <MathJaxDisplay toShow={`\\( ${value.id} \\)`} />  
                             </td>
                             <td>
                                 <MathJaxDisplay toShow={value.formula} /> 
