@@ -2,7 +2,7 @@ import React from 'react';
 import { Container } from 'react-bootstrap';
 import MathJaxDisplay from '../../../mathjax-display/MathJaxDisplay';
 import MathJaxInline from '../../../mathjax-display/MathJaxInline';
-import ImageZoom from '../../ImageZoom';
+import ImageZoom from '../../helpers/ImageZoom';
 
 import cone from '../assets/cone.png'
 import coneVolCalculus from '../assets/coneVolCalculus.png'
@@ -10,7 +10,8 @@ import coneAreaCalculus from '../assets/coneAreaCalculus.png'
 
 import pathBuilder from '../../../helpers/pathBuilder';
 import Link from '../../../immutable/nav/Link';
-import CoursesConstants from '../../CoursesConstants';
+import CoursesConstants from '../../helpers/CoursesConstants';
+import Title1 from '../../helpers/Title1';
 
 const LeCone = () => {
 
@@ -65,7 +66,7 @@ const LeCone = () => {
             <ImageZoom src={cone} name="Le cône" n={++n}/>
 
 
-            <p className="Title1">a) Calcul du volume par intégration</p>
+            <Title1 title={"a) Calcul du volume par intégration"} />
             <p>Pour calculer le volume du cône, nous allons retourner la forme par mesure de simplicité.</p>
             <ImageZoom src={coneVolCalculus} name="Calcul du volume du cône" n={++n}/>
             <p>
@@ -99,7 +100,7 @@ const LeCone = () => {
                 <MathJaxDisplay toShow={circleVolYResult} />
             </Container>
 
-            <p className="Title1">b) Calcul de la surface par intégration</p>
+            <Title1 title={"b) Calcul de la surface par intégration"} />
             <p>La surface du cône est composée de la surface le long de l'axe <MathJaxInline toShow={"$y$"}/> que nous appelerons <MathJaxInline toShow={"$S_{axe}$"}/> ainsi que la surface de sa base, <MathJaxInline toShow={"$S_{base}$"}/>.</p>
             <MathJaxDisplay toShow={areasSum} demo />
             <p>Nous l'avons déjà vu plus, la surface de sa base est :</p>

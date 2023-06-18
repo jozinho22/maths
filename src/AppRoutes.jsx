@@ -1,11 +1,11 @@
 import { Route, Routes } from 'react-router-dom';
 import Home from './components/home/Home';
-import CoursesTableOfContents from './components/courses/CoursesTableOfContents';
-import ChaptersTableOfContents from './components/courses/ChaptersTableOfContents';
+import CoursesTableOfContents from './components/courses/helpers/CoursesTableOfContents';
+import ChaptersTableOfContents from './components/courses/helpers/ChaptersTableOfContents';
 import GenericChapter from './components/courses/GenericChapter';
-import PdfTableOfContents from './components/pdf-viewer/PdfTableOfContents';
+import PdfTableOfContents from './components/pdf-viewer/helpers/PdfTableOfContents';
 import PDFViewerPage from './components/pdf-viewer/PDFViewerPage';
-import GamesTableOfContents from './components/games/GamesTableOfContents';
+import GamesTableOfContents from './components/games/helpers/GamesTableOfContents';
 import Links from './components/links/Links';
 import VCard from './components/contact/VCard';
 import Error from './components/immutable/Error';

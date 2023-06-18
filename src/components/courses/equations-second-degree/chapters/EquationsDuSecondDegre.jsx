@@ -1,7 +1,8 @@
 import { Container } from 'react-bootstrap';
 import MathJaxDisplay from '../../../mathjax-display/MathJaxDisplay';
 import MathJaxInline from '../../../mathjax-display/MathJaxInline';
-import Aside from '../../Aside';
+import Aside from '../../helpers/Aside';
+import Title2 from '../../helpers/Title2';
 
 const EquationsDuSecondDegre = () => {
 
@@ -99,7 +100,7 @@ const EquationsDuSecondDegre = () => {
                 </Container>
                 <p><MathJaxInline toShow={"$x_1$"} /> et <MathJaxInline toShow={"$x_2$"} /> sont alors deux solutions possibles vérifiant <MathJaxInline toShow={"$f(x) = 0$"} />.</p>
                 
-                <p className="Title2">Trois cas possibles : </p>
+                <Title2 title={"Trois cas possibles :"} />
                 <p><MathJaxInline toShow={"$\\underline{cas \\enspace 1 : \\Delta > 0}$"} /></p>
                 <p>Dans le cas où <MathJaxInline toShow={"$\\Delta > 0$"} />, l'équation admet bien deux solutions distinctes. </p>
                 <p>On alors peut écrire l'équation <MathJaxInline toShow={"$(1)$"} /> sous la forme : </p>
@@ -121,7 +122,7 @@ const EquationsDuSecondDegre = () => {
                 <p><MathJaxInline toShow={"$\\underline{cas \\enspace 3 : \\Delta < 0}$"} /></p>
                 <p>Dans le cas où <MathJaxInline toShow={"$\\Delta < 0$"} />, l'équation n'a pas de solutions dans <MathJaxInline toShow={"$\\mathbb{R}$"} /> car la fonction <MathJaxInline toShow={"$\\sqrt{x}$"} /> n'est définie que sur <MathJaxInline toShow={"$ [ 0 ; +\\infty[ (\\mathbb{R^+})$"} />. </p>
     
-                <p className="Title2">Vérification de la forme factorisée</p>
+                <Title2 title={"Vérification de la forme factorisée"} />
                 <p>Nous allons maintenant redévelopper notre expression pour voir si notre hypothèse s'avère être juste.</p>
                 <p>On injecte <MathJaxInline toShow={"$(4)$"} /> et <MathJaxInline toShow={"$(5)$"} /> dans <MathJaxInline toShow={"$(6)$"} />  : </p>
                 <MathJaxDisplay toShow={factEntirely} demo />

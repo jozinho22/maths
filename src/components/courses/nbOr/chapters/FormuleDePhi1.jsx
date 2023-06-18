@@ -3,7 +3,7 @@ import { Container } from 'react-bootstrap';
 import MathJaxDisplay from '../../../mathjax-display/MathJaxDisplay';
 
 import Link  from '../../../immutable/nav/Link';
-import CoursesConstants from '../../CoursesConstants';
+import CoursesConstants from '../../helpers/CoursesConstants';
 import pathBuilder from '../../../helpers/pathBuilder';
 import PhiFormula1Table from '../helpers/PhiFormula1Table';
 

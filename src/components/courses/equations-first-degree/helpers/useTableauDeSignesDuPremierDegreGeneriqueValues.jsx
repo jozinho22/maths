@@ -14,8 +14,8 @@ const useTableauDeSignesDuPremierDegreGeneriqueValues = () => {
     tableauxDeVariationValues.push(
          {
             id: k++,
-            title: "f(x)",
-            values: ["lim_{x \\to -\\infty} \\enspace f(x)", "- \\left[signe \\enspace de \\enspace a \\right]", "0", "\\left[signe \\enspace de \\enspace a \\right]", "lim_{x \\to +\\infty} \\enspace f(x)"]
+            title: "f(x) = ax + b",
+            values: ["-\\left[signe \\enspace de \\enspace a \\right]\\infty", "- \\left[signe \\enspace de \\enspace a \\right]", "0", "\\left[signe \\enspace de \\enspace a \\right]", "\\left[signe \\enspace de \\enspace a \\right]\\infty"]
         }
     )
 

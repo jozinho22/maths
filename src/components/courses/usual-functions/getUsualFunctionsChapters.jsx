@@ -10,7 +10,6 @@ const getUsualFunctionsChapters = () => {
             component: <AspectDesFonctionsUsuelles />,
             title: 'Aspect des fonctions usuelles',
             metaContent: 'L\'aspect des fonctions mathématiques usuelles (carrée, cube, racine carréé...etc) dans une repère.',
-            hiddenTitle: 'L\'aspect des fonctions mathématiques usuelles dans un repère',
             relativePath: '/aspect'
         }
     ];

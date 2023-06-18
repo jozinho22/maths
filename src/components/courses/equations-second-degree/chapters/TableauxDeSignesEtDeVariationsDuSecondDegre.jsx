@@ -6,11 +6,14 @@ import Link from '../../../immutable/nav/Link';
 import pathBuilder from '../../../helpers/pathBuilder';
 import PagesConstants from '../../../immutable/nav/PagesConstants';
 
-import CoursesConstants from '../../CoursesConstants';
+import CoursesConstants from '../../helpers/CoursesConstants';
 import TableauDeSignesEtDeVariationsTable from '../../helpers/TableauDeSignesEtDeVariationsTable';
 import useTableauDeSignesDuSecondDegreExempleValues from '../helpers/useTableauDeSignesDuSecondDegreExempleValues';
 import useTableauDeVariationsDuSecondDegreExempleValues from '../helpers/useTableauDeVariationsDuSecondDegreExempleValues';
-import useTableauDeSignesEtDeVariationsDuSecondDegreExempleValues from '../helpers/useTableauDeSignesEtDeVariationsDuSecondDegreExempleValues';
+import useTableauDeSignesDuSecondDegreGeneriqueValues from '../helpers/useTableauDeSignesDuSecondDegreGeneriqueValues';
+import Title1 from '../../helpers/Title1';
+import Title2 from '../../helpers/Title2';
+import useTableauDeVariationsDuSecondDegreGeneriqueValues from '../helpers/useTableauDeVariationsDuSecondDegreGeneriqueValues';
 
 const TableauxDeSignesEtDeVariationsDuSecondDegre = () => {
 
@@ -40,13 +43,14 @@ const TableauxDeSignesEtDeVariationsDuSecondDegre = () => {
 
 
     return  <>
+                <Title1 title={"a) Exemple de fonction"} />
                 <p>Prenons une fonction au hasard du second degré avec <MathJaxInline toShow={"$ a, b, c \\neq 0 $"} />. </p>
                 <MathJaxDisplay toShow={equSecondDeg} demo/>
                 <p>
                     Tentons de résoudre <MathJaxInline toShow={"$ f(x) = 0 $"} /> pour trouver ses racines.
                 </p>
 
-                <p className="Title1">Calcul du déterminant</p>
+                <Title2 title={"Calcul du déterminant"} />
                 <MathJaxDisplay toShow={det} demo/>
                 <MathJaxDisplay toShow={det2} demo/>
                 <MathJaxDisplay toShow={det3} demo/>
@@ -62,14 +66,14 @@ const TableauxDeSignesEtDeVariationsDuSecondDegre = () => {
                 <MathJaxDisplay toShow={x2_3} demo/>    
                 <MathJaxDisplay toShow={x2_4} demo/>            
 
-                <p className="Title1">Écriture sous forme factorisée</p>
+                <Title2 title={"Écriture sous forme factorisée"} />
                 <p>On peut alors écrire notre équation sous la forme factorisée : </p> 
                 <MathJaxDisplay toShow={fact} demo/> 
                 <MathJaxDisplay toShow={fact2} demo/>   
 
                 <p>C'est cette forme qui va nous servir pour faire le tableau de signe :</p>         
                 
-                <p className="Title1">Tableau de signes</p>
+                <Title2 title={"Tableau de signes"} />
                 <TableauDeSignesEtDeVariationsTable tableValues={useTableauDeSignesDuSecondDegreExempleValues()} />
                 
                 <p>De plus, on a vu dans <Link url={pathBuilder(`${PagesConstants.COURS}${CoursesConstants.DERIVEE}/sens-de-variations`)} external>le chapitre sur le calcul des variations d'une fonction</Link> qu'on peut trouver ses variations grâce à la dérivée.</p>
@@ -80,15 +84,17 @@ const TableauxDeSignesEtDeVariationsDuSecondDegre = () => {
                 <MathJaxDisplay toShow={cancelDeriveeF2} demo/> 
 
                 <p>Étudions le signe de cette dérivée, puis trouvons les variations de la fonction.</p> 
-                <p className="Title1">Tableau de variations</p>
+                
+                <Title2 title={"Tableau de variations"} />
                 <TableauDeSignesEtDeVariationsTable tableValues={useTableauDeVariationsDuSecondDegreExempleValues()} />
 
-                <p className="Title1">Résumé des signes et de variations de la fonctions</p>
-                <TableauDeSignesEtDeVariationsTable tableValues={useTableauDeSignesEtDeVariationsDuSecondDegreExempleValues()} />
+                <Title1 title={"b) Cas générique"} />
+                
+                <Title2 title={"Tableau de signes"} />
+                <TableauDeSignesEtDeVariationsTable tableValues={useTableauDeSignesDuSecondDegreGeneriqueValues()} />
 
-                {/* <p className="Title1">Cas générique</p>
-                <p>Voici le cas générique avec la racine <MathJaxInline toShow={"$ x_0$"} /> (c'est-à-dire deux valeurs de <MathJaxInline toShow={"$x$"} /> pour lesquelles la fonction dérivée <MathJaxInline toShow={"$f$"} /> s'annule) : </p>
-                <TableauDeSigneDuSecondDegreGeneriqueTable /> */}
+                <Title2 title={"Tableau de variations"} />
+                <TableauDeSignesEtDeVariationsTable tableValues={useTableauDeVariationsDuSecondDegreGeneriqueValues()} />
                     
             </>
 }

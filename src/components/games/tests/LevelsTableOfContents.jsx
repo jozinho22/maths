@@ -2,6 +2,7 @@ import { Container, Button } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 import PagesConstants from '../../immutable/nav/PagesConstants';
 import pathBuilder from '../../helpers/pathBuilder';
+import MainTitle from '../../immutable/MainTitle';
 
 const LevelsTableOfContents = ( {title, levels, launchGame} ) => {
 
@@ -14,7 +15,7 @@ const LevelsTableOfContents = ( {title, levels, launchGame} ) => {
                     </Button> 
                 </NavLink>
             </div> 
-            {title ? <p className="MainTitle">{title}</p> : <></>}
+            {title ? <MainTitle title={title} /> : <></>}
             <Container className="GamesContainer">
                 {
                     levels.map(level => (

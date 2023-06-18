@@ -2,6 +2,7 @@ import React from 'react';
 import { Container } from 'react-bootstrap';
 import MathJaxDisplay from '../../../mathjax-display/MathJaxDisplay';
 import MathJaxInline from '../../../mathjax-display/MathJaxInline';
+import Title1 from '../../helpers/Title1';
 
 const AutresFormulesGenerales = () => {
 
@@ -30,7 +31,7 @@ const AutresFormulesGenerales = () => {
  */
     return (
             <>
-                <p className="Title1">a) Formule de la racine</p>
+                <Title1 title={"a) Formule de la racine"} />
                 <p>À partir de la formule : </p>
                 <MathJaxDisplay toShow={approxPhi1Begin} demo/>
                 <p>En mettant chaque terme sous la racine carrée, on a :</p>
@@ -45,7 +46,7 @@ const AutresFormulesGenerales = () => {
                     <MathJaxDisplay toShow={approxPhi1End} />
                 </Container>
 
-                <p className="Title1">b) Formule du quotient</p>
+                <Title1 title={"b) Formule du quotient"} />
                 <p>À partir de la formule </p>
                 <MathJaxDisplay toShow={approxPhi2Begin} demo/>
                 <p> qu'on arrange en </p>
@@ -63,7 +64,7 @@ const AutresFormulesGenerales = () => {
                     <MathJaxDisplay toShow={approxPhi2End} infiniteFrac />
                 </Container>
 
-                <p className="Title1">c) Généralisation du n terme de la suite de Fibonacci</p>
+                <Title1 title={"c) Généralisation du n terme de la suite de Fibonacci"} />
                 <Container className="Focus FocusHuge">
                     <MathJaxDisplay toShow={nTermOfTheSequence} />
                 </Container>       

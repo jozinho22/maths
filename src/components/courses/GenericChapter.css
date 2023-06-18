@@ -13,28 +13,6 @@
     } 
 }
 
-.CoursesContainer p {
-    text-align: justify;
-    margin-left: 100px;
-    margin-right: 100px;
-    margin-top: 2rem !important;
-} 
-
-@media (width < 450px) {
-    .CoursesContainer p {
-        text-align: justify;
-        margin-left: 10px;
-        margin-right: 10px;
-    }
-}
-
-
-@media (min-width: 1268px) {
-   .CoursesContainer p, a {
-        font-size: large;
-    } 
-}
-
 .ZoomContainer {
     position: relative;
     width: 100%;
@@ -179,11 +157,19 @@
     margin-bottom: 20px;
 }
 
-.Title {
+.CenterTitle {
     margin : 0px auto !important;
+    text-decoration: none;
 }
 
 /* .ChapterTitle {
     visibility: hidden;
 } */
+
+
+@media (min-width: 450px) {
+    .CoursesContainer .NiceTableContainer {
+        width: 80%;
+    }
+}
 

@@ -1,10 +1,10 @@
 import React from 'react';
-import ImageZoom from '../../ImageZoom';
+import ImageZoom from '../../helpers/ImageZoom';
 import MathJaxInline from '../../../mathjax-display/MathJaxInline';
 import MathJaxDisplay from '../../../mathjax-display/MathJaxDisplay';
 
 import PagesConstants from '../../../immutable/nav/PagesConstants';
-import CoursesConstants from '../../CoursesConstants';
+import CoursesConstants from '../../helpers/CoursesConstants';
 
 import circleTrigo from '../assets/circleTrigo.png';
 import sohcahtoa from '../assets/sohcahtoa.png';

@@ -2,12 +2,13 @@ import { Container } from 'react-bootstrap';
 /* import Link from '../immutable/nav/Link'; */
 import { NavLink } from 'react-router-dom';
 import pathBuilder from '../helpers/pathBuilder';
+import MainTitle from './MainTitle';
 
 const GenericTableOfContents = ( {items, prefix, title} ) => {
 
     return (
         <>
-            <p className="MainTitle">{title}</p>
+            <MainTitle title={title} />
             <Container className="TableOfContents">
                 {
                     items.map(item => (     

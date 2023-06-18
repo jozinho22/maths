@@ -1,16 +1,17 @@
 import React from 'react';
 import { Container, Button } from 'react-bootstrap';
-import NavigationButtons from './NavigationButtons';
+import NavigationButtons from './helpers/NavigationButtons';
 import CustomHelmet from '../immutable/seo/CustomHelmet';
-import HiddenTitle from '../immutable/seo/HiddenTitle';
 import Constants from '../immutable/Constants';
 import { NavLink } from 'react-router-dom';
+import MainTitle from '../immutable/MainTitle';
 /* import { useReactToPrint } from 'react-to-print';
 import pageStyle from '../helpers/pageStyle'; */
 
 import './GenericChapter.css';
 import pathBuilder from '../helpers/pathBuilder';
 import PagesConstants from '../immutable/nav/PagesConstants';
+import MainSubTitle from '../immutable/MainSubTitle';
 
 const GenericChapter = ( {chapter, courseItem} ) => {
     
@@ -53,7 +54,6 @@ const GenericChapter = ( {chapter, courseItem} ) => {
     return (
         <>
             <CustomHelmet title={chapter.title} metaContent={chapter.metaContent} canonicalUrl={`${Constants.WEB_APP_URL}${PagesConstants.COURS}${courseItem.relativePath}${chapter.relativePath}`}/>
-            <HiddenTitle title={chapter.hiddenTitle} /> 
             
             <div className="FlexButton">
                 <NavLink to={pathBuilder(`${PagesConstants.COURS}${courseItem.relativePath}`)}>
@@ -73,8 +73,8 @@ const GenericChapter = ( {chapter, courseItem} ) => {
                 courseRelativePath={courseItem.relativePath} />
             
             <Container id="capture">
-                {/* <p className="MainTitle">{`Cours : ${courseItem.title}`}</p> */}
-                <p className="MainTitle">{`Chapitre ${chapter.id + 1} : ${chapter.title}`}</p>
+                <MainTitle title={`${courseItem.title}`} />
+                <MainSubTitle title={`Chapitre ${chapter.id + 1} : ${chapter.title}`} />
                 <div className="CoursesContainer">
                     {chapter.component}        
                 </div>

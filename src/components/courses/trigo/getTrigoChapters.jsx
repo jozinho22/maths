@@ -18,7 +18,6 @@ const getTrigoChapters = () => {
             component: <Presentation />,
             title: 'Présentation',
             metaContent: 'Introduction aux notions de base de la trigonométrie (sinus, cosinus et tangente).',
-            hiddenTitle: 'Présentation des notions de bases de la trigonométrie',
             relativePath: '/presentation'
         },
         {
@@ -26,7 +25,6 @@ const getTrigoChapters = () => {
             component: <ValeursDeSinEtCos />,
             title: 'Valeurs de sinus et cosinus sur le cercle',
             metaContent: 'Toutes les valeurs usuelles des sinus et cosinus sur le cercle et le schéma répétitif.',
-            hiddenTitle: 'Les valeurs des sinus et cosinus sur le cercle trigonométrique',
             relativePath: '/valeurs-de-sin-cos'
         },
         {
@@ -34,7 +32,6 @@ const getTrigoChapters = () => {
             component: <PythagoreAppliqueALatrigo />,
             title: 'Pythagore appliqué à la trigonométrie',
             metaContent: 'L\'application du théorème de Pythagore dans le cercle trigonométrique.',
-            hiddenTitle: 'Le théorème de Pythagore appliqué à la trigonométrie',
             relativePath: '/pythagore-et-trigonometrie'
         },
         {
@@ -42,7 +39,6 @@ const getTrigoChapters = () => {
             component: <FormulesDAddition />,
             title: 'Formules d\'addition',
             metaContent: 'Les formules des sinus et cosinus impliquant une addition d\'angles.',
-            hiddenTitle: 'Les formules d\'addition d\'angles',
             relativePath: '/formules-d-addition'
         },
         {
@@ -50,7 +46,6 @@ const getTrigoChapters = () => {
             component: <FormulesDeDuplication />,
             title: 'Formules de duplication',
             metaContent: 'Les formules des sinus et cosinus impliquant une duplication de lui-même.',
-            hiddenTitle: 'Les formules de duplication',
             relativePath: '/formules-de-duplication'
         },
         {
@@ -58,7 +53,6 @@ const getTrigoChapters = () => {
             component: <FormulesDeLinearisation />,
             title: 'Formules de linéarisation',
             metaContent: 'Les formules des sinus et cosinus impliquant une linéarisation.',
-            hiddenTitle: 'Les formules de linéarisation',
             relativePath: '/formules-de-linearisation'
         },
         {
@@ -66,7 +60,6 @@ const getTrigoChapters = () => {
             component: <DeriveesDeSinEtCos />,
             title: 'Dérivées de sinus et cosinus',
             metaContent: 'Les dérivées des sinus et cosinus et le détail du calcul.',
-            hiddenTitle: 'Les dérivées des sinus et cosinus',
             relativePath: '/derivees'
         },
         {
@@ -74,7 +67,6 @@ const getTrigoChapters = () => {
             component: <LaTangente />,
             title: 'La tangente',
             metaContent: 'Introduction au concept de tangente sur le cercle trigonométrique et ses applications.',
-            hiddenTitle: 'Présentation de la tangente sur le cercle trigonométrique',
             relativePath: '/la-tangente'
         },
         {
@@ -82,7 +74,6 @@ const getTrigoChapters = () => {
             component: <ValeursDeTan />,
             title: 'Valeurs de la tangente sur le cercle',
             metaContent: 'Toutes les valeurs usuelles des tangentes sur le cercle et le schéma répétitif.',
-            hiddenTitle: 'Les valeurs des tangentes sur le cercle trigonométrique',
             relativePath: '/valeurs-de-tan'
         }
     ];

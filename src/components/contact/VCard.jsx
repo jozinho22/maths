@@ -9,7 +9,7 @@ import PagesConstants from "../immutable/nav/PagesConstants";
 import CustomHelmet from "../immutable/seo/CustomHelmet";
 
 import './VCard.css';
-import HiddenTitle from "../immutable/seo/HiddenTitle";
+import MainTitle from "../immutable/MainTitle";
 
 const VCard = () => {
 
@@ -19,16 +19,14 @@ const VCard = () => {
     var title = 'Ma carte de visite';
     var metaContent = 'Ma carte de visite : professeur de mathématiques et développeur.';
 
-    var hiddenTitle = 'Ma carte de visite : mon activité et comment me contacter'
     const rotateY = () => {
         setActive(!active);
     }
 
     return  <>            
                 <CustomHelmet title={title} metaContent={metaContent} canonicalUrl={`${Constants.WEB_APP_URL}${PagesConstants.CONTACT}`}/>
-                <HiddenTitle title={hiddenTitle} />
                 <Container className="VCardContainer">
-                    <p className="MainTitle">{title}</p>
+                    <MainTitle title={title} />
                     <Container className={`VCardRecto ${active ? "Active" : ""}`} onClick={rotateY} >
                         <img src={photoProfil} alt="profil"/>
                         <p>

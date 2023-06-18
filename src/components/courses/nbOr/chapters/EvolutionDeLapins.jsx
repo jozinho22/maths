@@ -2,8 +2,8 @@ import React from 'react';
 import { Container } from 'react-bootstrap';
 import MathJaxDisplay from '../../../mathjax-display/MathJaxDisplay';
 import MathJaxInline from '../../../mathjax-display/MathJaxInline';
-import UnsplashCopyRight from '../../UnsplashCopyRight';
-import ImageZoom from '../../ImageZoom';
+import UnsplashCopyRight from '../../helpers/UnsplashCopyRight';
+import ImageZoom from '../../helpers/ImageZoom';
 import rabbits from '../assets/rabbits.png';
 import rabbitsEvolution from '../assets/rabbitsEvolution.png';
 
@@ -12,8 +12,9 @@ import RatioTable from '../helpers/RatioTable';
 import FibonacciTable from '../helpers/FibonacciTable';
 
 import Link from '../../../immutable/nav/Link';
-import CoursesConstants from '../../CoursesConstants';
+import CoursesConstants from '../../helpers/CoursesConstants';
 import pathBuilder from '../../../helpers/pathBuilder';
+import Title1 from '../../helpers/Title1';
 
 
 const EvolutionDeLapins = () => {
@@ -42,7 +43,7 @@ const EvolutionDeLapins = () => {
                     {"\n"}{"\n"}
                 </p>
 
-                <p className="Title1">Évolution du nombre de couples de lapins chaque mois</p>
+                <Title1 title={"Évolution du nombre de couples de lapins chaque mois"} />
                 <ImageZoom src={rabbitsEvolution} name="Évolution du nombre de couple de lapins sur un an" n={++n} />
                 <RabbitsEvolutionTable />
                 <p>

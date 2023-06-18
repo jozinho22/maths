@@ -4,13 +4,15 @@ import MathJaxDisplay from '../../../mathjax-display/MathJaxDisplay';
 import MathJaxInline from '../../../mathjax-display/MathJaxInline';
 import FibonacciTable from '../helpers/FibonacciTable';
 
-import ImageZoom from '../../ImageZoom';
+import ImageZoom from '../../helpers/ImageZoom';
 import euclideStuff from '../assets/euclideStuff.png';
 
 import Link from '../../../immutable/nav/Link';
 import PagesConstants from '../../../immutable/nav/PagesConstants';
-import CoursesConstants from '../../CoursesConstants';
+import CoursesConstants from '../../helpers/CoursesConstants';
 import pathBuilder from '../../../helpers/pathBuilder';
+import Title1 from '../../helpers/Title1';
+import Title2 from '../../helpers/Title2';
 
 const Caracteristiques = () => {
 
@@ -62,7 +64,7 @@ const Caracteristiques = () => {
 
     return (
             <>
-                <p className="Title1">a) Découverte du nombre d'or par Euclide</p>
+                <Title1 title={"a) Découverte du nombre d'or par Euclide"} />
                 <p>
                     Euclide s’est intéressé à ce nombre et voulu le calculer de la manière suivante.
                 </p>
@@ -98,7 +100,7 @@ const Caracteristiques = () => {
                     <MathJaxDisplay toShow={calcNbOrRwithPhi} />
                 </Container>            
 
-                <p className="Title1">b) Caractéristiques du nombre d'or</p>
+                <Title1 title={"b) Caractéristiques du nombre d'or"} />
                 <p>On a vu plus haut que ce nombre vérifiait l'équation suivante </p>
                 <MathJaxDisplay toShow={euclideStuff4} demo/>
                 <p>Soit</p>
@@ -112,7 +114,7 @@ const Caracteristiques = () => {
                     <MathJaxDisplay toShow={phi221} />
                 </Container>
 
-                <p className="Title2">Calcul de <MathJaxInline toShow={"$\\phi^3$"} /></p>
+                <Title2 title={`Calcul de ${<MathJaxInline toShow={"$\\phi^3$"} />}`} />
                 <MathJaxDisplay toShow={phi33} demo />
                 <p>On remplace <MathJaxInline toShow={"$\\phi^2$"} /> par <MathJaxInline toShow={"$\\phi + 1$"} /> </p>
                 <MathJaxDisplay toShow={phi331} demo />
@@ -138,7 +140,7 @@ const Caracteristiques = () => {
                     <MathJaxDisplay toShow={phi335} />
                 </Container>
 
-                <p className="Title2">Calcul de <MathJaxInline toShow={"$\\phi^4$"} /></p>
+                <Title2 title={`Calcul de ${<MathJaxInline toShow={"$\\phi^4$"} />}`} />
                 <MathJaxDisplay toShow={phi44} demo />
                 <p>On remplace par ce qu'on connait de <MathJaxInline toShow={"$\\phi^3$"} /> </p>
                 <MathJaxDisplay toShow={phi441} demo />

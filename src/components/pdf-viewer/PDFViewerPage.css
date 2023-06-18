@@ -1,3 +1,12 @@
+.PdfViewerContainer h1 {
+    padding-top: 30px;
+}
+
+.PdfViewerContainer .SwitchButton {
+    padding-top: 30px;
+    font-family: 'Times New Roman', Times, serif !important;
+}
+
 .SwitchButton {
     position: relative;
 }
@@ -90,7 +99,7 @@
     margin-bottom: 10px;
 }
 
-.PdfTitle {
+/* .PdfTitle {
     position: relative;
     top: 30px;
-}
+} */

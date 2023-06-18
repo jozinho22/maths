@@ -3,9 +3,9 @@ import {Row, Col, Button} from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 import {ChevronLeft, ChevronRight} from 'react-bootstrap-icons'
 
-import pathBuilder from '../helpers/pathBuilder';
+import pathBuilder from '../../helpers/pathBuilder';
 
-import PagesConstants from '../immutable/nav/PagesConstants';
+import PagesConstants from '../../immutable/nav/PagesConstants';
 
 const NavigationButtons = ( {chapter, chapters, courseRelativePath} ) => {
 
@@ -32,7 +32,7 @@ const NavigationButtons = ( {chapter, chapters, courseRelativePath} ) => {
                             : <></> 
                 } 
             </Col>
-            <Col className="CenterText TextBetweenNavigationsButtons">
+            <Col className="CenterTitle TextBetweenNavigationsButtons">
                 {chapter.id + 1} / {chapters.length} 
             </Col>
             <Col style={{textAlign:"left"}}>

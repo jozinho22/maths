@@ -4,10 +4,12 @@ import MathJaxDisplay from '../../../mathjax-display/MathJaxDisplay';
 import MathJaxInline from '../../../mathjax-display/MathJaxInline';
 
 import PagesConstants from '../../../immutable/nav/PagesConstants';
-import CoursesConstants from '../../CoursesConstants';
+import CoursesConstants from '../../helpers/CoursesConstants';
 import Link from '../../../immutable/nav/Link';
 import pathBuilder from '../../../helpers/pathBuilder';
-import Aside from '../../Aside';
+import Aside from '../../helpers/Aside';
+import Title1 from '../../helpers/Title1';
+import Title2 from '../../helpers/Title2';
 
 const DeriveeSurDesOperations = () => {
 
@@ -33,7 +35,7 @@ const DeriveeSurDesOperations = () => {
 
 
     return  <>
-               <p className="Title1">a) Dérivée de la somme de fonctions</p>
+               <Title1 title={"a) Dérivée de la somme de fonctions"} />
                <p>
                     La dérivée d'une somme de fonctions n'est autre que la somme des dérivées. 
                </p>
@@ -41,7 +43,7 @@ const DeriveeSurDesOperations = () => {
                     <MathJaxDisplay toShow={deriveeSomme} />  
                </Container>
                
-               <p className="Title2">Démonstration</p>
+               <Title2 title={"Démonstration"} />
                <p>On souhaite calculer la dérivée d'une somme de deux fonctions <MathJaxInline toShow={"$ f $"} /> et <MathJaxInline toShow={"$ g $"} />.</p>
                <p>Dans <Link url={pathBuilder(`${PagesConstants.COURS}${CoursesConstants.DERIVEE}/presentation`)} external>le premier chapitre sur la dérivée</Link> , on a vu que : </p>
                <Container className="Focus">
@@ -61,14 +63,15 @@ const DeriveeSurDesOperations = () => {
                     <MathJaxDisplay toShow={deriveeDiff}  />  
                </Container> 
 
-               <p className="Title1">b) Dérivée du produit de fonctions</p>
+               <Title1 title={"b) Dérivée du produit de fonctions"} />
                <p>
                     La dérivée d'un produit de fonctions répond à la formule suivante. 
                </p>
                <Container className="Focus">
                     <MathJaxDisplay toShow={deriveeProduit}  />  
                </Container>
-               <p className="Title2">Démonstration</p>
+
+               <Title2 title={"Démonstration"} />
                <p>En partant comme précédemment de la formule générale de la dérivée, on a : </p>
                <MathJaxDisplay toShow={deriveeProduitDemo} demo /> 
                <p>Nous allons ici user de ruse et ajouter un terme <MathJaxInline toShow={"$ f(x + h).g(x) $"} /> pour le retirer aussitôt, ce qui va faciliter nos affaires.</p>

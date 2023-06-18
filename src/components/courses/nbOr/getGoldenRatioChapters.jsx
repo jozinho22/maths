@@ -16,7 +16,6 @@ const getGoldenRatioChapters = () => {
             component: <EvolutionDeLapins />,
             title: 'Évolutions de lapins',
             metaContent: 'La modélisation de la suite de Fibonacci avec l\'image de l\'évolution d\'une reproduction de lapins.',
-            hiddenTitle: 'Évolutions de lapins pour modéliser la suite de Fibonacci',
             relativePath: '/evolutions-de-lapins'
         },  
         {
@@ -24,7 +23,6 @@ const getGoldenRatioChapters = () => {
             component: <Caracteristiques />,
             title: 'Caractéristiques du nombre d\'or',
             metaContent: 'Les particularités du nombre d\'or et le détail historique de son calcul.',
-            hiddenTitle: 'Les caractéristiques du nombre d\'or et son calcul',
             relativePath: '/caracteristiques'
         },
         {
@@ -32,7 +30,6 @@ const getGoldenRatioChapters = () => {
             component: <CaracteristiquesEnSensContraire />,
             title: 'Caractéristiques du nombre d\'or en sens contraire',
             metaContent: 'L\'évolution de la suite de Fibonacci, mais cette fois-ci, en sons contraire.',
-            hiddenTitle: 'Les caractéristiques du nombre d\'or en sens contraire',
             relativePath: '/caracteristiques-en-sens-contraire'
         },
         {
@@ -40,7 +37,6 @@ const getGoldenRatioChapters = () => {
             component: <FormuleDeLaSuiteDeFibonacci />,
             title: 'Formules de la suite de Fibonacci',
             metaContent: 'Un tableau récapitulatif du pattern de la suite de Fibonacci.',
-            hiddenTitle: 'Tableau récapitulatif de la suite de Fibonacci',
             relativePath: '/formule-de-la-suite-de-fibonacci'
         }, 
         {
@@ -48,7 +44,6 @@ const getGoldenRatioChapters = () => {
             component: <FormuleDePhi1 />,
             title: 'Formule de Phi en fonction de n (1)',
             metaContent: 'Un tableau récapitulatif d\'une formule du nombre d\'or.',
-            hiddenTitle: 'Tableau récapitulatif d\'une formule du nombre d\'or.',
             relativePath: '/formule-de-phi-puissance-n-1'
         },   
         {
@@ -56,7 +51,6 @@ const getGoldenRatioChapters = () => {
             component: <FormuleDePhi2 />,
             title: 'Formule de Phi en fonction de n (2)',
             metaContent: 'Un tableau récapitulatif d\'une formule du nombre d\'or.',
-            hiddenTitle: 'Tableau récapitulatif d\'une formule du nombre d\'or.',
             relativePath: '/formule-de-phi-puissance-n-2'
         },   
         {
@@ -64,7 +58,6 @@ const getGoldenRatioChapters = () => {
             component: <AutresFormulesGenerales />,
             title: 'Quelques formules générales',
             metaContent: 'Quelques formules élégantes pour calculer le nombre d\'or.',
-            hiddenTitle: 'Quelques formules générales du calcul du nombre d\'or',
             relativePath: '/autres-formules-generales'
         }
     ];

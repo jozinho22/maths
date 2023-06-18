@@ -12,7 +12,6 @@ const getEquationsSecondDegreeChapters = () => {
             component: <EquationsDuSecondDegre />,
             title: 'Résolution d\'équations',
             metaContent: 'Résolution d\'équations du second degré : explications.',
-            hiddenTitle: 'Résolution d\'équations du second degré',
             relativePath: '/resolution'
         },
         {
@@ -20,7 +19,6 @@ const getEquationsSecondDegreeChapters = () => {
             component: <RelationEntreCoefficientsEtRacines />,
             title: 'Relation entre coefficients et racines',
             metaContent: 'La relation qu\'il existe entre les coefficients et les racines du pôlynome.',
-            hiddenTitle: 'Relation entre coefficients et racines',
             relativePath: '/relation-entre-coefficients-et-racines'
         },
         {
@@ -28,7 +26,6 @@ const getEquationsSecondDegreeChapters = () => {
             component: <TableauxDeSigneEtDeVariationsDuSecondDegre />,
             title: 'Tableaux de signes et de variations',
             metaContent: 'Tableaux de signes et de variations.',
-            hiddenTitle: 'Tableaux de signes et de variations',
             relativePath: '/tableaux-de-signes-et-de-variations'
         }
     ];

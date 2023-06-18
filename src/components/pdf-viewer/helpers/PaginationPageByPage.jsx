@@ -36,7 +36,7 @@ const PaginationPageByPage = ( {page, pages, setPage} ) => {
                             :  <></>
                 }
             </Col>
-            <Col className="CenterText">
+            <Col className="CenterTitle">
                 page : {page} / {pages} 
             </Col>
             <Col style={{textAlign:"left"}}>

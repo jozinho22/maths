@@ -1,12 +1,13 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
-import ImageZoom from '../../ImageZoom';
+import ImageZoom from '../../helpers/ImageZoom';
 import MathJaxInline from '../../../mathjax-display/MathJaxInline';
 import MathJaxDisplay from '../../../mathjax-display/MathJaxDisplay';
 
 import tangente from '../assets/tangente.png';
 import circleTrigo2 from '../assets/circleTrigo2.png';
 import tangenteApplication from '../assets/tangenteApplication.png';
+import Title2 from '../../helpers/Title2';
 
 const LaTangente = () => {
 
@@ -37,7 +38,7 @@ const LaTangente = () => {
                 <MathJaxDisplay toShow={tan}  />
             </Container>
 
-            <p className="Title2">Applications</p>
+            <Title2 title={"Applications"} />
             <p>En utilisant la tangente, on peut mesurer la longueur d'un côté d'un triangle, en connaissant l'angle opposé au côté que l'on cherche.</p>
             <ImageZoom src={tangenteApplication} name="La tangente de manière générale" n={6} />
             <p>Avec la formule vue précédemment : </p>

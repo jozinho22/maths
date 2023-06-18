@@ -2,7 +2,7 @@ import React from 'react';
 import { Container } from 'react-bootstrap';
 import MathJaxDisplay from '../../../mathjax-display/MathJaxDisplay';
 import MathJaxInline from '../../../mathjax-display/MathJaxInline';
-
+import Title2 from '../../helpers/Title2';
 import FibonacciTableInBothSenses from '../helpers/FibonacciTableInBothSenses';
 
 const CaracteristiquesEnSensContraire = () => {
@@ -76,7 +76,7 @@ const CaracteristiquesEnSensContraire = () => {
                 <p>Voici les éléments de la suite ajoutée de leur mirroir</p>
                 <FibonacciTableInBothSenses />
                 
-                <p className="Title2">Calcul de <MathJaxInline toShow={"$\\phi^{-1}$"} /></p>
+                <Title2 title={`Calcul de ${<MathJaxInline toShow={"$\\phi^{-1}$"} />}`} />
                 <p>On sait que : </p>
                 <MathJaxDisplay toShow={phi22} demo/>
                 <p>Divisons tout par <MathJaxInline toShow={"$\\phi$"} /> pour transformer <MathJaxInline toShow={"$1$"} /> en <MathJaxInline toShow={"$\\frac{1}{\\phi}$"} /></p>
@@ -87,7 +87,7 @@ const CaracteristiquesEnSensContraire = () => {
                     <MathJaxDisplay toShow={phiPowMinus12} />
                 </Container>
               
-                <p className="Title2">Calcul de <MathJaxInline toShow={"$\\phi^{-2}$"} /></p>
+                <Title2 title={`Calcul de ${<MathJaxInline toShow={"$\\phi^{-2}$"} />}`} />
                 <p>On sait que : </p>
                 <MathJaxDisplay toShow={phiPowMinus2} demo/>
                 <p>Soit que </p>
@@ -99,7 +99,7 @@ const CaracteristiquesEnSensContraire = () => {
                     <MathJaxDisplay toShow={phiPowMinus24} />
                 </Container>
 
-                <p className="Title2">Calcul de <MathJaxInline toShow={"$\\phi^{-3}$"} /></p>
+                <Title2 title={`Calcul de ${<MathJaxInline toShow={"$\\phi^{-3}$"} />}`} />
                 <p>On sait que : </p>
                 <MathJaxDisplay toShow={phiPowMinus3} demo/>
                 <p>Soit que </p>

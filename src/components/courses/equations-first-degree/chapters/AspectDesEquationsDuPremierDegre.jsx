@@ -3,11 +3,13 @@ import { Container, Button } from 'react-bootstrap';
 import MathJaxDisplay from '../../../mathjax-display/MathJaxDisplay';
 import MathJaxInline from '../../../mathjax-display/MathJaxInline';
 import { LineChart, XAxis, YAxis, ReferenceLine, /* ResponsiveContainer , */ CartesianGrid, Tooltip, Line } from 'recharts';
-import ImageZoom from '../../ImageZoom';
+import ImageZoom from '../../helpers/ImageZoom';
 
 import coefficientDirecteurCalculus from '../assets/coefficientDirecteurCalculus.png';
 import differentsCoefDirecteurs from '../assets/differentsCoefDirecteurs.png';
 import ordonneeAtOrigin from '../assets/ordonneeAtOrigin.png';
+import Title1 from '../../helpers/Title1';
+import Title2 from '../../helpers/Title2';
 
 const AspectDesEquationsDuPremierDegre = () => {
 
@@ -95,7 +97,7 @@ const AspectDesEquationsDuPremierDegre = () => {
                     Elles forment aussi des droites et sont de type <MathJaxInline toShow={"$f(x) = ax$"} />.
                 </p>
 
-                <p className="Title1">a) Aspect dans un repère</p>
+                <Title1 title={"a) Aspect dans un repère"} />
                 <Container className={`GraphTitle Focus${f.color}`}>
                     <MathJaxDisplay 
                         toShow={"\\(f(x) = " + f.mathJaxTitle + " \\)"} 
@@ -144,12 +146,11 @@ const AspectDesEquationsDuPremierDegre = () => {
                     {/* <Button className="DefaultButton" >Retracer la courbe</Button> */}
                 </div>
 
-
-                <p className="Title1">b) Explications des nombres <MathJaxInline toShow={"$a$"} /> et <MathJaxInline toShow={"$b$"} /></p>
+                <Title1 title={"b) Explications des nombres a et b"} />
                 <p><MathJaxInline toShow={"$a$"} /> est appelé coefficient directeur, il donnera l'aspect de la droite.</p>
                 <p><MathJaxInline toShow={"$b$"} /> est appelé l'ordonnée à l'origine, il sera le résultat de <MathJaxInline toShow={"$f(0)$"} />.</p>
                 
-                <p className="Title2">Le coefficient directeur <MathJaxInline toShow={"$a$"} /></p>
+                <Title2 title={"Le coefficient directeur a"} />
                 <p>Le coefficient directeur détermine le taux de variation de la droite, il est aussi appelé pente car comme une pente sur une route, on observe de combien on monte comparé à ce que l'on avance horizontalement.</p>
                 <p>Il se détermine de la manière suivante : </p>
                 <p>Il suffit de prendre deux points <MathJaxInline toShow={"$A(x_a; y_a)$"} /> et <MathJaxInline toShow={"$B(x_b; y_b)$"} /> de la droite, et de calculer le ratio de leur différence.</p>
@@ -173,7 +174,7 @@ const AspectDesEquationsDuPremierDegre = () => {
                 <ImageZoom src={differentsCoefDirecteurs} name="Aspect des droites selon différents coefficients directeurs" n={++n} />
                 <p>Si <MathJaxInline toShow={"$b=0 $"} />, la droite passera par l'origine <MathJaxInline toShow={"$ (0 ; 0) $"} />.</p>
                 
-                <p className="Title2">L'ordonnée à l'origine <MathJaxInline toShow={"$b$"} /></p>
+                <Title2 title={"L'ordonnée à l'origine b"} />
                 <p>L'ordonnée à l'origine sera simplement le résultat de <MathJaxInline toShow={"$f(0)$"} />.</p>
                 <p>Effectivement, pour <MathJaxInline toShow={"$x = 0$"} /> :</p>
                 <MathJaxDisplay toShow={ordAtOrigin} demo />

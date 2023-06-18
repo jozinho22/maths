@@ -2,7 +2,7 @@ import React from 'react';
 import { Container } from 'react-bootstrap';
 import MathJaxDisplay from '../../../mathjax-display/MathJaxDisplay';
 import MathJaxInline from '../../../mathjax-display/MathJaxInline';
-import ImageZoom from '../../ImageZoom';
+import ImageZoom from '../../helpers/ImageZoom';
 
 import triangles from '../assets/triangles.png'
 import heights from '../assets/heights.png'
@@ -17,10 +17,11 @@ import pythagore from '../../pythagore/assets/pythagore.png';
 import alKashi from '../../pythagore/assets/alKashi.png';
 
 import PagesConstants from '../../../immutable/nav/PagesConstants';
-import CoursesConstants from '../../CoursesConstants';
+import CoursesConstants from '../../helpers/CoursesConstants';
 
 import pathBuilder from '../../../helpers/pathBuilder';
 import Link from '../../../immutable/nav/Link';
+import Title1 from '../../helpers/Title1';
 
 const LeTriangle = () => {
 
@@ -57,7 +58,7 @@ const LeTriangle = () => {
                 {"\n"} - ses longueurs
             </p>
 
-            <p className="Title1">Les différents triangles</p>
+            <Title1 title={"a) Les différents types de triangles"} />
             <p>Il existe quatre triangles remarquables :</p>
             <ImageZoom src={triangles} name="Les différents triangles" n={++n}/>
             <p>
@@ -67,7 +68,7 @@ const LeTriangle = () => {
                 {"\n"} - scalène : un angle obtus (supérieur à <MathJaxInline toShow={"$\\frac{\\pi}{2}$"}/> ou 90°)
             </p>
 
-            <p className="Title1">La hauteur</p>
+            <Title1 title={"b) La hauteur"} />
             <p>
                 La hauteur est le segment de droite projeté orthogonalement (à angle droit) à partir d'un sommet sur la longueur opposée.
                 Il y a donc trois hauteurs à projeter.
@@ -78,7 +79,7 @@ const LeTriangle = () => {
             <ImageZoom src={heights2} name="Les trois hauteurs dans un triangle scalène" n={++n}/>
             <p>On les a représentées respectivement <MathJaxInline toShow={"$h_a, \\; h_b, \\; h_c$"}/>.</p>
 
-            <p className="Title1">La médiane</p>
+            <Title1 title={"c) La médiane"} />
             <p>La médiane d'un triangle est le segment de droite projeté à partir d'un sommet sur la longueur opposée, et coupant cette longueur en deux.</p>
             <ImageZoom src={medianes} name="Les trois médianes dans un triangle" n={++n}/>
             <p>
@@ -101,7 +102,7 @@ const LeTriangle = () => {
                 <MathJaxDisplay toShow={appolonius3}/> 
             </Container>
 
-            <p className="Title1">La bissectrice</p>
+            <Title1 title={"d) La bissectrice"} />
             <p>La bissectrice est la droite qui coupe un sommet en deux angles égaux.</p>
             <ImageZoom src={bissectrices} name="Les bissectrices dans un triangle" n={++n}/>
             <p>Son intersection est le centre du cercle inscrit au triangle.</p>
@@ -113,12 +114,12 @@ const LeTriangle = () => {
                 {"\n"}{"\n"}L'intersection des cercle indique le chemin pour tracer la bissectrice.
             </p>
 
-            <p className="Title1">La médiatrice</p> 
+            <Title1 title={"e) La médiatrice"} />
             <p>La médiatrice est la droite qui passe par le centre d'un côté de manière orthogonale.</p>
             <ImageZoom src={mediatrices} name="Les médiatrices dans un triangle" n={++n}/>
             <p>Son intersection est le centre du cercle circonscrit au triangle.</p>
 
-            <p className="Title1">Loi des sinus</p>
+            <Title1 title={"f) Loi des sinus"} />
             <p>La loi des sinus s'exprime de la manière suivante :</p>
             <Container className="Focus">
                 <MathJaxDisplay toShow={sinusRelation}/> 
@@ -145,7 +146,7 @@ const LeTriangle = () => {
             <p>On en déduit alors que :</p>
             <MathJaxDisplay toShow={sinusRelation} demo/> 
 
-            <p className="Title1">Loi des cosinus</p>
+            <Title1 title={"g) Loi des cosinus"} />
             <p>
                 La loi des cosinus, ou théorème d'Al-Kashi est la généralisation du <Link url={pathBuilder(`${PagesConstants.COURS}${CoursesConstants.PYTHAGORE}`)} external>théorème de Pythagore</Link>.
                 Là où dans un triangle <MathJaxInline toShow={"$\\{a, \\; b, \\; c\\}$"} /> rectangle entre <MathJaxInline toShow={"$a$"} /> et <MathJaxInline toShow={"$b$"} /> :

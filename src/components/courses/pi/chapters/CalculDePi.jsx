@@ -1,10 +1,12 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
-import ImageZoom from '../../ImageZoom';
+import ImageZoom from '../../helpers/ImageZoom';
 import MathJaxDisplay from '../../../mathjax-display/MathJaxDisplay';
 import MathJaxInline from '../../../mathjax-display/MathJaxInline';
 
 import circlePiCalculus from '../assets/circlePiCalculus.png';
+import Title1 from '../../helpers/Title1';
+import Title2 from '../../helpers/Title2';
 
 const CalculDePi = () => {
 
@@ -77,7 +79,7 @@ const CalculDePi = () => {
             <p>Mais lorsque <MathJaxInline toShow="$R = 1$" />, on a :</p>
             <MathJaxDisplay toShow={pi1} demo />
 
-            <p className="Title2">Première approximation : par le côté du carré interne</p>
+            <Title2 title={"Première approximation : par le côté du carré interne"} />
             <p>Nous allons effectuer une première approximation plutôt grossière, nous allons dire que le périmètre du demi-cercle s'approche de la longueur de deux côtés du carré interne additionnés.   </p>
             <p>Soit</p>
             <MathJaxDisplay toShow={pi2a} demo />
@@ -91,7 +93,7 @@ const CalculDePi = () => {
             <MathJaxDisplay toShow={pi2aR} demo />
             <p>Mais nous restons encore loin du but, prenons un segment plus proche du cercle, comme <MathJaxInline toShow="$b$" />.</p>
             
-            <p className="Title2"> Deuxième approximation : par la base du triangle isocèle</p>
+            <Title2 title={"Deuxième approximation : par la base du triangle isocèle"} />
             <p> C'est la base du triangle isocèle formée par deux rayons du cercle (en rouge sur la figure).
                 {"\n"} Nous avions auparavant additioné deux longueurs <MathJaxInline toShow="$a$" />. Pour suivre la même longueur du demi-cercle mais d'un peu plus près, nous additionnerons 4 longueurs <MathJaxInline toShow="$b$" />.
             </p>
@@ -110,7 +112,7 @@ const CalculDePi = () => {
             <MathJaxDisplay toShow={pi4bR} demo />
             <p>Nous commençons à nous approcher de 3,14. Continuons maintenant sur <MathJaxInline toShow="$c$" />, obtenue de la même façon que <MathJaxInline toShow="$b$" /> par rapport à <MathJaxInline toShow="$a$" />.</p>
             
-            <p className="Title2">Troisième approximation : par la base du triangle isocèle suivant</p>
+            <Title2 title={"Troisième approximation : par la base du triangle isocèle suivant"} />
             <MathJaxDisplay toShow={pi8c} demo />
             <MathJaxDisplay toShow={c} demo />
             <MathJaxDisplay toShow={c2} demo />  
@@ -133,7 +135,7 @@ const CalculDePi = () => {
             <MathJaxDisplay toShow={pi8c2} demo /> 
             <MathJaxDisplay toShow={pi8cR} demo /> 
 
-            <p className="Title2">Quatrième approximation : par la base du triangle isocèle suivant</p>
+            <Title2 title={"Quatrième approximation : par la base du triangle isocèle suivant"} />
             <p>Continuons maintenant en imaginant une nouvelle longueur, <MathJaxInline toShow={"$d$"} /> (trop petite pour être dessinée), trouvée par le même procédé que <MathJaxInline toShow="$b$" /> et <MathJaxInline toShow="$c$" /> </p>
             <MathJaxDisplay toShow={pi16d} demo />
             <MathJaxDisplay toShow={d} demo />
@@ -153,7 +155,7 @@ const CalculDePi = () => {
             <MathJaxDisplay toShow={pi16d2} demo /> 
             <MathJaxDisplay toShow={pi16dR} demo /> 
 
-            <p className="Title1">Généralisation</p>
+            <Title1 title={"Généralisation"} />
             <p>Nous pouvons à présent donner une formule générale pour <MathJaxInline toShow={"$\\pi$"} /></p>
             <Container className="Focus FocusHuge">
                 <MathJaxDisplay toShow={piG} />  

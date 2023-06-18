@@ -6,7 +6,8 @@ import Link from '../../../immutable/nav/Link';
 import pathBuilder from '../../../helpers/pathBuilder';
 import PagesConstants from '../../../immutable/nav/PagesConstants';
 
-import CoursesConstants from '../../CoursesConstants';
+import CoursesConstants from '../../helpers/CoursesConstants';
+import Title1 from '../../helpers/Title1';
 
 const EquationsDuPremierDegre = () => {
 
@@ -30,7 +31,7 @@ const EquationsDuPremierDegre = () => {
                 <p>Elles sont définies sur <MathJaxInline toShow={"$\\mathbb{R}$"} />, l'ensemble des réels.</p>
                 <p>Pour plus de détails, voir <Link url={pathBuilder(`${PagesConstants.COURS}${CoursesConstants.EQ_1_DEG}/aspect`)} external>le chapitre suivant.</Link></p>
 
-                <p className="Title1">a) Résolution d'équations du premier degré</p>
+                <Title1 title={"Résolution d'équations du premier degré"} />
                 <p>Nous allons prendre par exemple cette fonction :</p>
                 <MathJaxDisplay toShow={equBase} demo />
                 <p>Nous allons essayer de résoudre <MathJaxInline toShow={"$f(x)=0$"} />, et ainsi trouver une valeur pour <MathJaxInline toShow={"$x$"} />.</p>

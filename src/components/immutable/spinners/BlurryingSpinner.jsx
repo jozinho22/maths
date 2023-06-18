@@ -1,11 +1,12 @@
 import { Spinner } from 'react-bootstrap';
 import './BlurryingSpinner.css';
+import MainTitle from '../MainTitle';
 
 const BlurryingSpinner = ( {children} ) => {
 
     return (
         <div className="BlurryingSpinner"> 
-            <p className="MainTitle">Chargement</p>
+            <MainTitle title={"Chargement"} />
             <Spinner animation="border" />
             {children}
         </div>

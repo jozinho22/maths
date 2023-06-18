@@ -5,6 +5,7 @@ import { OperationsTestContext } from './OperationsTest';
 import LevelsTableOfContents from './LevelsTableOfContents';
 
 import NiceTable from '../../immutable/NiceTable';
+import MainTitle from '../../immutable/MainTitle';
 
 const OperationsTestResults = () => {
 
@@ -12,7 +13,7 @@ const OperationsTestResults = () => {
 
     return (
         <>
-            <p className="MainTitle">Résultats</p>
+            <MainTitle title={"Résultats"} />
             <Container className="ResultsContainer">
                 <NiceTable className="OperationsTestResults">
                     <thead>
@@ -35,7 +36,7 @@ const OperationsTestResults = () => {
                 </NiceTable>
             </Container> 
 
-            <p className="Title">Score : {user.score}/{questions.length}</p>
+            <p className="CenterTitle">Score : {user.score}/{questions.length}</p>
             <br></br>
             <div>Une autre ?</div>
             <br></br>

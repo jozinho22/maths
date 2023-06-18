@@ -14,7 +14,6 @@ const getDerivativeChapters = () => {
             component: <Presentation />,
             title: 'Présentation de la dérivée',
             metaContent: 'Présentation de la dérivée et construction.',
-            hiddenTitle: 'Présentation de la dérivée',
             relativePath: '/presentation'
         },
         {
@@ -22,7 +21,6 @@ const getDerivativeChapters = () => {
             component: <Exemples />,
             title: 'Exemples de calcul de dérivée : la fonction carrée, la fonction racine carrée',
             metaContent: 'Exemples de calcul de dérivée : la fonction carrée, la fonction racine carrée.',
-            hiddenTitle: 'Exemples de calcul de dérivée',
             relativePath: '/exemples'
         },
         {
@@ -30,7 +28,6 @@ const getDerivativeChapters = () => {
             component: <DeriveeSurDesOperations />,
             title: 'Dérivée d\'une somme, d\'un produit ou d\'un quotient de fonctions',
             metaContent: 'Dérivées d\'opérations de fonctions : dérivée d\'une somme, d\'un produit ou d\'un quotient de fonctions : formule et démonstration.',
-            hiddenTitle: 'Dérivée d\'une somme, d\'un produit ou d\'un quotient de fonctions',
             relativePath: '/derivee-d-operations-de-fonctions'
         },
         {
@@ -38,7 +35,6 @@ const getDerivativeChapters = () => {
             component: <SensDeVariations />,
             title: 'Sens de variations des fonctions',
             metaContent: 'Sens de variations des fonctions : le nombre dérivée indique le sens.',
-            hiddenTitle: 'Sens de variations des fonctions',
             relativePath: '/sens-de-variations'
         }
         

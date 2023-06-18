@@ -2,6 +2,7 @@ import React from 'react';
 import { Container,Button } from 'react-bootstrap';
 import MathJaxDisplay from '../../../mathjax-display/MathJaxDisplay';
 import MathJaxInline from '../../../mathjax-display/MathJaxInline';
+import Title1 from '../../helpers/Title1';
 
 const Presentation = () => {
 
@@ -83,7 +84,8 @@ const Presentation = () => {
                 La règle de trois (ou produit en croix ) est une méthode servant à effectuer des conversions dans une autre unité, calculer le nombre de couverts pour un repas, calculer une surface à peindre...etc.
                 {"\n"} Par simplicité, nous enlèverons les signes <MathJaxInline toShow={"$x$"} /> dans les équations, inutiles ici.
             </p>
-            <p className="Title1">a) Explication</p>
+            
+            <Title1 title={"Explications"} />
             <p>
                 Posons comme hypothèse que pour tout <MathJaxInline toShow={"$a,b,c,d \\neq 0$"} />
             </p>

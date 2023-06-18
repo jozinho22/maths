@@ -1,6 +1,6 @@
 /* Home */
 .GamesContainer button {
-    width: 30%;
+    width: 70%;
 }
 
 @media (width < 450px) {
@@ -119,14 +119,12 @@
 
 .ResultsContainer {
     font-size: small;
-    width : 100%;
     margin-top: 30px;
 }
 
 @media (min-width: 450px) {
     .ResultsContainer{
         font-size: large;
-        width : 70%;
     }
 }
 
@@ -147,19 +145,8 @@
     width: 60%;
 }
 
-.AnswersResults {
-    text-align: center;
-    font-size: x-small;
-}
-
 .GoodAnswer {
     color: var(--green-color);
-}
-
-@media (min-width: 450px) {
-    .AnswersResults, .GoodAnswer {
-        font-size: small;
-    }
 }
 
 @media (min-width: 450px) {

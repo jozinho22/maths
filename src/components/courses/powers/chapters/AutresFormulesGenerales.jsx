@@ -2,6 +2,7 @@ import React from 'react';
 import { Container } from 'react-bootstrap';
 import MathJaxDisplay from '../../../mathjax-display/MathJaxDisplay';
 import MathJaxInline from '../../../mathjax-display/MathJaxInline';
+import Title1 from '../../helpers/Title1';
 
 const AutresFormulesGenerales = () => {
 
@@ -22,7 +23,7 @@ const AutresFormulesGenerales = () => {
 
     return (
             <>
-                <p className="Title2">Puissance de produit</p>
+                <Title1 title={"Puissance de produit"} />
                 <Container className="Focus"> 
                     <MathJaxDisplay toShow={xTimesYPowA}/>
                 </Container>
@@ -31,7 +32,7 @@ const AutresFormulesGenerales = () => {
                 <MathJaxDisplay toShow={xTimesYPowADemo2} demo />
                 <MathJaxDisplay toShow={xTimesYPowA} demo />
 
-                <p className="Title2">Puissance de quotient</p>
+                <Title1 title={"Puissance de quotient"} />
                 <Container className="Focus"> 
                     <MathJaxDisplay toShow={xOnYPowA}/>
                     <MathJaxDisplay toShow={yDiff0} />
@@ -41,7 +42,7 @@ const AutresFormulesGenerales = () => {
                 <MathJaxDisplay toShow={xOnYPowADemo2} demo />
                 <MathJaxDisplay toShow={xOnYPowA} demo />
 
-                <p className="Title2">Quotient de puissance</p>
+                <Title1 title={"Quotient de puissance"} />
                 <Container className="Focus"> 
                     <MathJaxDisplay toShow={xPowAOnXPowB}/>
                     <MathJaxDisplay toShow={xDiff0} />

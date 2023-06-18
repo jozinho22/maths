@@ -12,7 +12,6 @@ const getCrossProductsChapters = () => {
             component: <Presentation />,
             title: 'Présentation',
             metaContent: 'Présentation du produit en croix : explications de la méthode',
-            hiddenTitle: 'Présentation du produit en croix',
             relativePath: '/presentation'
         },  
         {
@@ -20,7 +19,6 @@ const getCrossProductsChapters = () => {
             component: <Demonstration />,
             title: 'Démonstration',
             metaContent: 'Démonstration de la méthode de calcul du produit en croix',
-            hiddenTitle: 'Démonstration du calcul du produit en croix',
             relativePath: '/demonstration'
         },
         {
@@ -28,7 +26,6 @@ const getCrossProductsChapters = () => {
             component: <Exercices />,
             title: 'Exercices',
             metaContent: 'Exercices pour s\'entraîner à patiquer le produit en croix',
-            hiddenTitle: 'Exercices sur le produit en croix',
             relativePath: '/exercices'
         }
     ];

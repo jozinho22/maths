@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
 
-import ImageZoom from '../../ImageZoom';
+import ImageZoom from '../../helpers/ImageZoom';
 import MathJaxInline from '../../../mathjax-display/MathJaxInline';
 import MathJaxDisplay from '../../../mathjax-display/MathJaxDisplay';
 
@@ -9,6 +9,8 @@ import alKashi from '../assets/alKashi.png';
 import alKashiDemo from '../assets/alKashiDemo.png';
 import alKashiDemo2 from '../assets/alKashiDemo2.png';
 import alKashiDemo3 from '../assets/alKashiDemo3.png';
+import Title1 from '../../helpers/Title1';
+import Title2 from '../../helpers/Title2';
 
 const TheoremeDAlKashi = () => {
 
@@ -59,8 +61,8 @@ const TheoremeDAlKashi = () => {
             <p>Le triangle supposé est representé sur la figure suivante.</p>
             <ImageZoom src={alKashi} name="Théorème d'Al-Kashi" n={11} />
 
-            <p className="Title1">Démonstration</p>
-            <p className="Title2">1er cas : un triangle avec des angles aigus</p>
+            <Title1 title={"Démonstration"} />
+            <Title2 title={"1er cas : un triangle avec des angles aigus"} />
             <p>Nous avons projeté sur <MathJaxInline toShow={"$c$"} /> le sommet de l'angle <MathJaxInline toShow={"$\\gamma$"} /> pour obtenir la figure suivante:</p>
             <ImageZoom src={alKashiDemo} name="Démonstration du théorème d'Al-Kashi - cas 1" n={12} />
             <p>Avec les règles de trigonométrie bien connues, on peut écrire :</p>
@@ -91,7 +93,7 @@ const TheoremeDAlKashi = () => {
                 {"\n"}Enfin, en projetant sur <MathJaxInline toShow={"$b$"} /> nous obtiendrons <MathJaxInline toShow={"$a^2$"} /> et <MathJaxInline toShow={"$c^2$"} />.
             </p>
 
-            <p className="Title2">2nd cas : un triangle avec un angle obtus</p>
+            <Title2 title={"2nd cas : un triangle avec un angle obtus"} />
             <p>
                 Un deuxième cas se présente, celui de la présence d'un angle obtus dans le triangle.
                 {"\n"}La hauteur sera alors à l'extérieur du triangle.

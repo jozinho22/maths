@@ -2,12 +2,13 @@ import React from 'react';
 import { Container } from 'react-bootstrap';
 import MathJaxDisplay from '../../../mathjax-display/MathJaxDisplay';
 import MathJaxInline from '../../../mathjax-display/MathJaxInline';
-import ImageZoom from '../../ImageZoom';
-
+import ImageZoom from '../../helpers/ImageZoom';
+import Title1 from '../../helpers/Title1';
 import derivativeSquareFunction from '../assets/derivativeSquareFunction.png';
 import Link from '../../../immutable/nav/Link';
 import PagesConstants from '../../../immutable/nav/PagesConstants';
-import CoursesConstants from '../../CoursesConstants';
+import CoursesConstants from '../../helpers/CoursesConstants';
+import Title2 from '../../helpers/Title2';
 
 const Exemples = () => {
 
@@ -49,7 +50,7 @@ const Exemples = () => {
     return  <>
                 <p>Nous allons voir dans ce chapitre quelques calculs de dérivée de fonctions usuelles.</p>
                 
-                <p className="Title1">a) La fonction carrée</p>
+                <Title1 title={"a) La fonction carrée"} />
                 <p>
                     La fonction carrée est définie de la manière suivante :
                 </p>
@@ -58,7 +59,7 @@ const Exemples = () => {
                    Calculons sa dérivée :
                 </p>
 
-                <p className="Title2">Calcul de la pente</p>
+                <Title2 title={"Calcul de la pente"} />
                 <p>On calcule la pente, puis on cherchera la limite quand <MathJaxInline toShow={"$ h \\to 0 $"} /> ( h tend vers 0 ).</p>
                 <p>Avec la formule suivante vue plus haut, on a :</p>
                 <MathJaxDisplay toShow={fCarreeTauxVar} demo />  
@@ -69,7 +70,7 @@ const Exemples = () => {
                 <MathJaxDisplay toShow={fCarreeTauxVar5} demo /> 
                 <MathJaxDisplay toShow={fCarreeTauxVar6} demo /> 
 
-                <p className="Title2">Calcul de la limite</p>
+                <Title2 title={"Calcul de la limite"} />
                 <p>Calculons à présent la limite de ce qu’on vient de trouver :</p>
                 <MathJaxDisplay toShow={limFCarreeTauxVar} demo /> 
                 <Container className="Focus">
@@ -102,7 +103,7 @@ const Exemples = () => {
                      <MathJaxDisplay toShow={eqDroiteGen} />  
                 </Container>
 
-                 <p className="Title1">a) La fonction racine carrée</p>
+                <Title1 title={"b) La fonction racine carrée"} />
                 <p>
                     La fonction racine carrée est définie de la manière suivante :
                 </p>
@@ -111,7 +112,7 @@ const Exemples = () => {
                    Calculons sa dérivée en procédant de la même manière que plus haut :
                 </p>
 
-                <p className="Title2">Calcul de la pente</p>
+                <Title2 title={"Calcul de la pente"} />
                 <MathJaxDisplay toShow={fSqrTauxVar} demo /> 
                 <p>Pour traiter avec les racines, il est souvent utile de faire appel à son conjugué : </p>
                 <MathJaxDisplay toShow={fSqrTauxVar2} demo /> 
@@ -120,7 +121,7 @@ const Exemples = () => {
                 <p>On simplifie les <MathJaxInline toShow={"$ h $"} /> : </p>
                 <MathJaxDisplay toShow={fSqrTauxVar5} demo /> 
 
-                <p className="Title2">Calcul de la limite</p>
+                <Title2 title={"Calcul de la limite"} />
                 <MathJaxDisplay toShow={limFSqrTauxVar} demo /> 
                 <Container className="Focus">
                      <MathJaxDisplay toShow={limFSqrTauxVar2} />  

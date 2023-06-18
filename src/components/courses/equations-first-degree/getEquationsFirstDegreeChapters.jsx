@@ -13,7 +13,6 @@ const getEquationsFirstDegreeChapters = () => {
             component: <EquationsDuPremierDegre />,
             title: 'Résolution d\'équations',
             metaContent: 'Résolution d\'équations du premier degré : explications.',
-            hiddenTitle: 'Résolution d\'équations du premier degré',
             relativePath: '/resolution'
         },
         {
@@ -21,7 +20,6 @@ const getEquationsFirstDegreeChapters = () => {
             component: <AspectDesEquationsDuPremierDegre />,
             title: 'Aspect des équations',
             metaContent: 'L\'aspect des equations du premier degré dans un repère.',
-            hiddenTitle: 'L\'aspect des equations du premier degré',
             relativePath: '/aspect'
         },
         {
@@ -29,7 +27,6 @@ const getEquationsFirstDegreeChapters = () => {
             component: <InequationsDuPremierDegre />,
             title: 'Résolution d\'inéquations',
             metaContent: 'Résolution d\'inéquations du premier degré : explications.',
-            hiddenTitle: 'Résolution d\'inéquations du premier degré',
             relativePath: '/resolution-d-inequations'
         },
         {
@@ -37,7 +34,6 @@ const getEquationsFirstDegreeChapters = () => {
             component: <TableauxDeSignesDuPremierDegre />,
             title: 'Tableaux de signes',
             metaContent: 'Tableaux de signes pour les inéquations du premier degré.',
-            hiddenTitle: 'Tableaux de signes',
             relativePath: '/tableaux-de-signes'
         }
     ];

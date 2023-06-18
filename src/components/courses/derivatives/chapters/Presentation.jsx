@@ -2,8 +2,8 @@ import React from 'react';
 import { Container } from 'react-bootstrap';
 import MathJaxDisplay from '../../../mathjax-display/MathJaxDisplay';
 import MathJaxInline from '../../../mathjax-display/MathJaxInline';
-import ImageZoom from '../../ImageZoom';
-
+import ImageZoom from '../../helpers/ImageZoom';
+import Title1 from '../../helpers/Title1';
 import derivativeFirstApprox from '../assets/derivativeFirstApprox.png';
 import coefficientDirecteurCalculus from '../assets/coefficientDirecteurCalculus.png';
 import derivativeBetterApprox from '../assets/derivativeBetterApprox.png';
@@ -43,7 +43,7 @@ const Presentation = () => {
                 <p>Leur image étant respectivement <MathJaxInline toShow={"$ f(x_0) $"} /> et <MathJaxInline toShow={"$ f(x_0 +h) $"} />, on obtient deux points <MathJaxInline toShow={"$ A $"} /> et <MathJaxInline toShow={"$ B $"} />.</p>
                 <p>Nous obtenons alors en traçant la droite qui les relie, une pente approximative de la variation de la fonction.</p>
 
-                <p className="Title1">a) Calcul de la pente</p>
+                <Title1 title={"a) Calcul de la pente"} />
                 <p>Cette pente nous pouvons la calculer avec la formule suivante.</p>
                 <MathJaxDisplay toShow={tauxVar} demo />  
                 <MathJaxDisplay toShow={tauxVar2} demo />  
@@ -54,7 +54,7 @@ const Presentation = () => {
                      <MathJaxDisplay toShow={tauxVar4} />  
                 </Container>
 
-                <p className="Title1">b) Première approximation</p>
+                <Title1 title={"b) Première approximation"} />
                 <p>Nous allons à présent réduire cette distance <MathJaxInline toShow={"$ h $"} /> qui sépare nos deux points sur l’axe des abscisses.
                 </p>
                 <ImageZoom src={derivativeBetterApprox} name="Première approximation de la dérivée" n={++n} />
@@ -64,7 +64,7 @@ const Presentation = () => {
                     courbe.
                 </p>
 
-                <p className="Title1">c) Meilleure approximation</p>
+                <Title1 title={"c) Meilleure approximation"} />
                 <p>
                     De la même manière, nous allons encore réduire la distance <MathJaxInline toShow={"$ h $"} />
                     celle-ci s’approche de <MathJaxInline toShow={"$ 0 $"} />.

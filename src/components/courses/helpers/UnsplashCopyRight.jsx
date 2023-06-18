@@ -1,4 +1,4 @@
-import Link from "../immutable/nav/Link";
+import Link from "../../immutable/nav/Link";
 import CoursesConstants from "./CoursesConstants";
 
 const UnsplashCopyRight = ( { item } ) => {

@@ -3,8 +3,8 @@ import MathJaxInline from '../../../mathjax-display/MathJaxInline';
 import Link from '../../../immutable/nav/Link';
 import pathBuilder from '../../../helpers/pathBuilder';
 import PagesConstants from '../../../immutable/nav/PagesConstants';
-
-import CoursesConstants from '../../CoursesConstants';
+import Title1 from '../../helpers/Title1';
+import CoursesConstants from '../../helpers/CoursesConstants';
 import TableauDeSignesEtDeVariationsTable from '../../helpers/TableauDeSignesEtDeVariationsTable';
 import useTableauDeSignesDuPremierDegreExempleValues from '../helpers/useTableauDeSignesDuPremierDegreExempleValues';
 import useTableauDeSignesDuPremierDegreGeneriqueValues from '../helpers/useTableauDeSignesDuPremierDegreGeneriqueValues';
@@ -20,7 +20,7 @@ const TableauxDeSignesDuPremierDegre = () => {
                 <p>Comme son coefficient directeur <MathJaxInline toShow={"$ a$"} /> est positif, la courbe est croissante.</p>
                 <p>On a donc un signe <MathJaxInline toShow={"$  - $"} /> avant <MathJaxInline toShow={"$ x_0$"} /> et un signe <MathJaxInline toShow={"$ + $"} /> après.</p>
                 
-                <p className="Title1">Cas générique</p>
+                <Title1 title={"Cas générique"} />
                 <p>Voici le cas générique avec la racine <MathJaxInline toShow={"$ x_0$"} /> (c'est-à-dire deux valeurs de <MathJaxInline toShow={"$x$"} /> pour lesquelles la fonction dérivée <MathJaxInline toShow={"$f$"} /> s'annule) : </p>
                 <TableauDeSignesEtDeVariationsTable tableValues={useTableauDeSignesDuPremierDegreGeneriqueValues()} />
                     

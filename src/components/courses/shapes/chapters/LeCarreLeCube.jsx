@@ -2,14 +2,16 @@ import { Container } from 'react-bootstrap';
 import MathJaxDisplay from '../../../mathjax-display/MathJaxDisplay';
 import MathJaxInline from '../../../mathjax-display/MathJaxInline';
 
-import ImageZoom from '../../ImageZoom';
+import ImageZoom from '../../helpers/ImageZoom';
 import PagesConstants from '../../../immutable/nav/PagesConstants';
-import CoursesConstants from '../../CoursesConstants';
+import CoursesConstants from '../../helpers/CoursesConstants';
 import square from '../assets/square.png';
 import squareWithDiag from '../assets/squareWithDiag.png';
 
 import pathBuilder from '../../../helpers/pathBuilder';
 import Link from '../../../immutable/nav/Link';
+import Title1 from '../../helpers/Title1';
+import Title2 from '../../helpers/Title2';
 
 const LeCarreLeCube = () => {
 
@@ -48,7 +50,8 @@ const LeCarreLeCube = () => {
         <>
             <p>Le carré est une forme à deux dimensions avec quatre côtés de longueur unique <MathJaxInline toShow={"$c$"}/></p>
             <ImageZoom src={square} name="Le carré" n={++n}/>
-            <p className="Title1">La surface du carré </p>
+
+            <Title1 title={"a) La surface du carré"} />
             <Container className="Focus">
                 <MathJaxDisplay toShow={sCarre}/>
             </Container>
@@ -59,14 +62,15 @@ const LeCarreLeCube = () => {
             <MathJaxDisplay toShow={sDoubleArea} demo />
             <MathJaxDisplay toShow={sDoubleAreaDev} demo />
             
-            <p className="Title1">Propriétés du carré </p>
+            <Title1 title={"b) Propriétés du carré"} />
             <p>
                 <u>Propriété 1 :</u> ses diagonales sont de longueurs égales
                 {"\n"} <u>Propriété 2 :</u> ses diagonales se coupent au centre de l'objet et au milieu de ces dernières
                 {"\n"} <u>Propriété 3 :</u> ses diagonales forment quatre angles droit
             </p>
             <ImageZoom src={squareWithDiag} name="Le carré avec ses diagonales" n={++n}/>
-            <p className="Title2">Démonstration</p>
+            
+            <Title2 title={"Démonstration"} />
             <p>Appelons les diagonales <MathJaxInline toShow={"$d_1$"}/> et <MathJaxInline toShow={"$d_2$"}/>. </p>
             <p>
                 <u>Propriété 1 : </u>
@@ -108,7 +112,7 @@ const LeCarreLeCube = () => {
                 On a donc bien quatre angles droits à l'intersection des diagonales.
             </p>
 
-            <p className="Title1">Calcul de la surface du cube </p>
+            <Title1 title={"c) La surface du cube"} />
             <p>
                 Étant donné que le cube est un volume, on obtient cinq carrés de plus.
                 {"\n"}Un derrière et quatre sur les côtés, on a donc :
@@ -117,7 +121,7 @@ const LeCarreLeCube = () => {
                 <MathJaxDisplay toShow={sCube}/>
             </Container>
 
-            <p className="Title1">Le volume du cube </p>
+            <Title1 title={"d) Le volume du cube"} />
             <p>
                 La formule du volume du cube est :
             </p> 
@@ -127,11 +131,9 @@ const LeCarreLeCube = () => {
             <p>
                 Si alors on double seulement le côté, le volume sera 8 fois plus grand.
             </p>
-            <MathJaxDisplay toShow={cTo2c}/>
-            <MathJaxDisplay toShow={cDoubleVolume}/>
-            <MathJaxDisplay toShow={cDoubleVolumeDev}/>
-
-       
+            <MathJaxDisplay toShow={cTo2c} demo/>
+            <MathJaxDisplay toShow={cDoubleVolume} demo/>
+            <MathJaxDisplay toShow={cDoubleVolumeDev} demo/>
         </>
     )
 }

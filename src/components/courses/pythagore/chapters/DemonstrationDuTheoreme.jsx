@@ -1,14 +1,14 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
 
-import ImageZoom from '../../ImageZoom';
+import ImageZoom from '../../helpers/ImageZoom';
 import MathJaxInline from '../../../mathjax-display/MathJaxInline';
 import MathJaxDisplay from '../../../mathjax-display/MathJaxDisplay';
 
 import pythagoreDemo1 from '../assets/pythagoreDemo1.png';
 import pythagoreDemo2 from '../assets/pythagoreDemo2.png';
 import PagesConstants from '../../../immutable/nav/PagesConstants';
-import CoursesConstants from '../../CoursesConstants';
+import CoursesConstants from '../../helpers/CoursesConstants';
 
 import pathBuilder from '../../../helpers/pathBuilder';
 import Link from '../../../immutable/nav/Link';
