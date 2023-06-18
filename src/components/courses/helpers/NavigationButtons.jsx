@@ -32,7 +32,7 @@ const NavigationButtons = ( {chapter, chapters, courseRelativePath} ) => {
                             : <></> 
                 } 
             </Col>
-            <Col className="CenterTitle TextBetweenNavigationsButtons">
+            <Col className="CenterTitle">
                 {chapter.id + 1} / {chapters.length} 
             </Col>
             <Col style={{textAlign:"left"}}>

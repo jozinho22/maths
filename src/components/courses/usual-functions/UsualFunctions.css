@@ -72,24 +72,31 @@
 
 .Graph {
     /* position: relative; */
-    padding-bottom: 10px;
     font-family: 'Times New Roman', Times, serif;
+    font-size: large;
+    padding-bottom: 20px;
 }
 
 @media (min-width: 450px) {
-    .Graph {
-        font-size: large;
-        width: 65% !important;
-        padding-bottom: 20px;
+    .CoursesContainer .Graph {
+        width: 50% !important;
+        height: 50% !important;
+    }
+    .CoursesContainer .Graph .recharts-wrapper {
+        left: 45%;
+    }
+    .CoursesContainer .UsualFunctionsContainer .Graph {
+        width: 90% !important;
+        height: 90% !important;
+    }
+    .CoursesContainer .UsualFunctionsContainer .Graph .recharts-wrapper {
+        left: 5%;
     }
 }
 
-@media (min-width: 450px) {
-    .Graph {
-        width: 65% !important;
-        height: 80% !important;
-        padding-bottom: 20px;
-        font-size: large;
+@media (max-width: 450px) {
+    .CoursesContainer .recharts-wrapper {
+        left: -5%;
     }
 }
 
@@ -99,26 +106,12 @@
     }
 }
 
-@media (min-width: 1000px) {
-    .recharts-wrapper {
-        left: 25%;
-    }
-}
-
 .GraphTitle {
     margin-top: 40px !important;
     margin-bottom: 40px !important;
 }
 
-.CoursesContainer .recharts-wrapper {
-    left: 25%;
-}
 
-@media (width < 450px) {
-    .CoursesContainer .recharts-wrapper {
-        left: -5%;
-    }
-}
 
 
 

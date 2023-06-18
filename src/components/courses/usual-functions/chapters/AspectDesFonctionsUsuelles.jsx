@@ -1,12 +1,12 @@
 import React from "react";
 
 import { Container, Button } from "react-bootstrap";
-import { LineChart, XAxis, YAxis, ReferenceLine, ResponsiveContainer, Tooltip, Line } from 'recharts';
-import LoadingContext from "../../../context/LoadingContext";
 import MathJaxDisplay from '../../../mathjax-display/MathJaxDisplay';
-import buildUsualFunctions from "../buildUsualFunctions";
+import buildUsualFunctions from "../helpers/buildUsualFunctions";
 
 import Fractionnal from 'fractional';
+
+import FunctionDisplay from "../helpers/FunctionDisplay";
 
 import '../UsualFunctions.css';
 
@@ -18,11 +18,6 @@ const AspectDesFonctionsUsuelles = () => {
     var ufRight = usualFunctions.slice(usualFunctions.length /2);
     const [f, setF] = React.useState({});
     const [fData, setFData] = React.useState({});
-
-/*     'basis' | 'basisClosed' | 'basisOpen' | 'linear' | 'linearClosed' | 'natural' | 'monotoneX' | 'monotoneY' | 'monotone' | 'step' | 'stepBefore' | 'stepAfter' | CurveFactory;
- */
-    const type = "natural";
-    const {updateIsLoading} = React.useContext(LoadingContext);
  
     React.useEffect(() => {
 
@@ -41,9 +36,9 @@ const AspectDesFonctionsUsuelles = () => {
 
         var datas = []
         for(var k = -it; k <= it; k++) {
-            var num = new Fractionnal.Fraction(x / Math.PI).numerator
-            var den = new Fractionnal.Fraction(x / Math.PI).denominator
             if(f.type === 'trigo') {
+                var num = new Fractionnal.Fraction(x / Math.PI).numerator
+                var den = new Fractionnal.Fraction(x / Math.PI).denominator
                 let d = {
                     x: num + `${den !== 1 ? "/" + den :""}` + 'π',
                     y: f.formula(x)
@@ -61,16 +56,10 @@ const AspectDesFonctionsUsuelles = () => {
         } 
 
         setFData(datas);
-        updateIsLoading(true);
-
-    }, [f, updateIsLoading]);
+    }, [f]);
 
     const getButtonTitle = (exp) => {
         return "\\(" + exp + " \\)";
-    }
-
-    const getGraphTitle = (exp) => {
-        return "\\(f(x) = " + exp + " \\)";
     }
 
     const getDerivativeExp = (derivative) => {
@@ -90,12 +79,12 @@ const AspectDesFonctionsUsuelles = () => {
     }
 
     return(
-        <>
+        <Container className="UsualFunctionsContainer">
             <Container className="UsualFunctionsButtonsContainer Left">
                 {
                     ufLeft.map(f => (
                         <Button key={f.id}
-                            className={`DefaultButton UsualFunctionsButton ${f.buttonColor}Button`}
+                            className={`DefaultButton UsualFunctionsButton ${f.themeColor}Button`}
                             onClick={() => setF(usualFunctions[f.id])} >
                             <MathJaxDisplay toShow={getButtonTitle(f.mathJaxTitle)} />
                         </Button>
@@ -106,7 +95,7 @@ const AspectDesFonctionsUsuelles = () => {
                 {
                     ufRight.map(f => (
                         <Button key={f.id}
-                            className={`DefaultButton UsualFunctionsButton ${f.buttonColor}Button`}
+                            className={`DefaultButton UsualFunctionsButton ${f.themeColor}Button`}
                             onClick={() => setF(usualFunctions[f.id])} >
                             <MathJaxDisplay toShow={getButtonTitle(f.mathJaxTitle)} />
                         </Button>
@@ -115,58 +104,28 @@ const AspectDesFonctionsUsuelles = () => {
             </Container>
             { !isEmpty(f) ?
                 <>
-                    <Container className={`GraphTitle Focus${f.buttonColor}`}>
-                        <MathJaxDisplay 
-                            toShow={getGraphTitle(f.mathJaxTitle)} 
-                            color={f.buttonColor}/>    
-                    </Container>
-                    
-                    <ResponsiveContainer 
-                        width="100%" 
-                        aspect={f.aspect} 
-                        className="Graph">
-                        <LineChart
-                            width={f.width}
-                            height={f.height}
-                            data={fData}
-                            margin={{ top: 5, right: 20, bottom: 5, left: 0 }} >
-                            <Line 
-                                type={type} 
-                                dataKey="y" 
-                                stroke={f.graphColor} 
-                                dot={false} />
-                            <XAxis 
-                                dataKey="x" 
-                                interval={f.xInterval} 
-                                domain={f.domain && f.domain.length > 0 ? f.domain : []}/>
-                            <YAxis 
-                                 />
-                            <Tooltip itemStyle={{backgroundColor: "grey"}} wrapperStyle={{backgroundColor: "dimgray"}}/> 
-                            <ReferenceLine x={0} />
-                            <ReferenceLine y={0} />
-                        </LineChart>
-                    </ResponsiveContainer>
+                    <FunctionDisplay f={f} fData={fData} />
 
                     <Container className="FunctionAttributes">
                         <p className="FunctionAttributesTitle">Définie sur</p> 
                         <div className="FunctionAttributesValue">
                             <MathJaxDisplay 
                             toShow={f.definition} 
-                            color={f.buttonColor}/> 
+                            color={f.themeColor}/> 
                         </div> 
 
                         <p className="FunctionAttributesTitle">Dérivée</p> 
                         <div className="FunctionAttributesValue">
                             <MathJaxDisplay 
                                 toShow={getDerivativeExp(f.derivative)} 
-                                color={f.buttonColor}/>    
+                                color={f.themeColor}/>    
                         </div>
 
                         <p className="FunctionAttributesTitle">Primitives</p> 
                         <div className="FunctionAttributesValue">
                             <MathJaxDisplay 
                                 toShow={getPrimitiveExp(f.primitive)} 
-                                color={f.buttonColor}/> 
+                                color={f.themeColor}/> 
                         </div>
 
                         <p className="FunctionAttributesTitle">Limites</p> 
@@ -177,14 +136,14 @@ const AspectDesFonctionsUsuelles = () => {
                                     <div key={limit.id} className="FunctionAttributesValue">
                                         <MathJaxDisplay  
                                             toShow={getLimitExp(limit.where, limit.value)} 
-                                            color={f.buttonColor}/> 
+                                            color={f.themeColor}/> 
                                     </div>
                                 )) 
                                 
                                     :   <div className="FunctionAttributesValue">
                                             <MathJaxDisplay 
                                                 toShow={"\\(\\varnothing\\)"} 
-                                                color={f.buttonColor}/> 
+                                                color={f.themeColor}/> 
                                         </div>
                         }
                    
@@ -192,7 +151,7 @@ const AspectDesFonctionsUsuelles = () => {
                 </>
                 : <p className="Title">Choisissez une fonction à afficher</p>
             }
-        </>
+        </Container>
     );
 }
 

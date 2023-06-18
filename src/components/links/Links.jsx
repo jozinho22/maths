@@ -8,6 +8,7 @@ import Constants from '../immutable/Constants';
 import './Links.css';
 import PagesConstants from '../immutable/nav/PagesConstants';
 import MainTitle from '../immutable/MainTitle';
+import Title1 from '../courses/helpers/Title1';
 
 const Links = () => {
 
@@ -24,7 +25,7 @@ const Links = () => {
                         {
                             links.map(link => (
                                 <div key={link.id} >     
-                                    <p className="CenterTitle">{link.title}</p>
+                                    <h3 className="CenterTitle">{link.title}</h3>
                                     <Link url={link.url} external>{link.url}</Link>
                                     <div className="LinksDesc" >   
                                         <p>{link.desc}</p>

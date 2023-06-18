@@ -7,7 +7,6 @@ import PagesConstants from '../../../immutable/nav/PagesConstants';
 import CoursesConstants from '../../helpers/CoursesConstants';
 import Link from '../../../immutable/nav/Link';
 import pathBuilder from '../../../helpers/pathBuilder';
-import Aside from '../../helpers/Aside';
 import Title1 from '../../helpers/Title1';
 import Title2 from '../../helpers/Title2';
 
@@ -74,14 +73,7 @@ const DeriveeSurDesOperations = () => {
                <Title2 title={"Démonstration"} />
                <p>En partant comme précédemment de la formule générale de la dérivée, on a : </p>
                <MathJaxDisplay toShow={deriveeProduitDemo} demo /> 
-               <p>Nous allons ici user de ruse et ajouter un terme <MathJaxInline toShow={"$ f(x + h).g(x) $"} /> pour le retirer aussitôt, ce qui va faciliter nos affaires.</p>
-               
-               {/* {
-                    width < 450 ?
-                         <Aside><p style={{fontStyle: "italic"}}>(À partir d'ici, les formules sont un peu remaniées pour les faire tenir sur mobile (merci de votre compréhension ^^))</p></Aside>
-                              : <></>
-               } */}
-               
+               <p>Nous allons ici user de ruse et ajouter un terme <MathJaxInline toShow={"$ f(x + h).g(x) $"} /> pour le retirer aussitôt, ce qui va faciliter nos affaires.</p>     
                <MathJaxDisplay toShow={deriveeProduitDemo2} demo /> 
                <p>On factorise par <MathJaxInline toShow={"$ f(x + h) $"} /> et <MathJaxInline toShow={"$ g(x) $"} />:</p>
                <MathJaxDisplay toShow={deriveeProduitDemo3} demo  />  

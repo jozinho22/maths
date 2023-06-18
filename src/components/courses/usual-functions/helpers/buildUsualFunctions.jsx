@@ -1,9 +1,11 @@
+import Constants from '../../../immutable/Constants';
+
 const buildUsualFunctions = () => {
 
     var i = -1;
     var j = -1;
 
-    const getFunctionButtonColor = (id) => {
+    const getFunctionThemeColor = (id) => {
         var modulo = 3;
         //"#4365ad"
         if(id % modulo === 0) {
@@ -19,15 +21,13 @@ const buildUsualFunctions = () => {
 
     const getFunctionGraphColor = (id) => {
         var modulo = 3;
-        //"#4365ad"
+       
         if(id % modulo === 0) {
-            return "#4365ad";
-            //"#54854d"
+            return Constants.BLUE_COLOR;
         } else if(id % modulo === 1) {
-            return "#54854d";
-            //"#854242"
+            return Constants.GREEN_COLOR;
         } else if(id % modulo === 2) {
-            return "#854242";
+            return Constants.RED_COLOR;
         } 
     } 
 
@@ -35,7 +35,7 @@ const buildUsualFunctions = () => {
             {
                 id: ++i,
                 mathJaxTitle: "x^2",
-                buttonColor: getFunctionButtonColor(i),
+                themeColor: getFunctionThemeColor(i),
                 graphColor: getFunctionGraphColor(i),
                 formula: (x) => {return x*x},
                 definition: "\\(\\xi = ]-\\infty; +\\infty[ \\hspace{4cm} (\\mathbb{R} )\\)",
@@ -56,14 +56,13 @@ const buildUsualFunctions = () => {
                 ],
                 scale : 10,
                 step : 1,
-                width: 200,
                 xInterval: 4,
                 aspect: 1
             },
             {
                 id: ++i,
                 mathJaxTitle: "x^3",
-                buttonColor: getFunctionButtonColor(i),
+                themeColor: getFunctionThemeColor(i),
                 graphColor: getFunctionGraphColor(i),
                 formula: (x) => {return x*x*x},
                 definition: "\\(\\xi = ]-\\infty; +\\infty[ \\hspace{4cm} (\\mathbb{R}) \\)",
@@ -84,14 +83,13 @@ const buildUsualFunctions = () => {
                 ],
                 scale : 10,
                 step : 1,
-                width: 200,
                 xInterval: 1,
                 aspect: 1
             },
             {
                 id: ++i,
                 mathJaxTitle: "\\sqrt(x)",
-                buttonColor: getFunctionButtonColor(i),
+                themeColor: getFunctionThemeColor(i),
                 graphColor: getFunctionGraphColor(i),
                 formula: (x) => {return Math.sqrt(x)},
                 definition: "\\(\\xi = [ 0 ; +\\infty[ \\hspace{4cm} (\\mathbb{R^+}) \\)",
@@ -107,7 +105,6 @@ const buildUsualFunctions = () => {
                 ],
                 scale : 100,
                 step : 1,
-                width: 150,
                 xInterval: 9,
                 beginAtZero: true,
                 aspect: 2
@@ -115,7 +112,7 @@ const buildUsualFunctions = () => {
             {
                 id: ++i,
                 mathJaxTitle: "e^x",
-                buttonColor: getFunctionButtonColor(i),
+                themeColor: getFunctionThemeColor(i),
                 graphColor: getFunctionGraphColor(i),
                 formula: (x) => {return Math.exp(x)},
                 definition: "\\(\\xi = ]-\\infty ; +\\infty[  \\hspace{4cm}(\\mathbb{R})\\)",
@@ -136,14 +133,13 @@ const buildUsualFunctions = () => {
                 ],
                 scale : 3,
                 step : 1,
-                width: 200,
                 xInterval: 1,
                 aspect: 1
             },
             {
                 id: ++i,
                 mathJaxTitle: "ln(x)",
-                buttonColor: getFunctionButtonColor(i),
+                themeColor: getFunctionThemeColor(i),
                 graphColor: getFunctionGraphColor(i),
                 formula: (x) => {return Math.log(x)},
                 definition: "\\(\\xi = ] 0 ; +\\infty[ \\hspace{4cm} (\\mathbb{R^{+*}}) \\)",
@@ -163,7 +159,6 @@ const buildUsualFunctions = () => {
                 ],
                 scale : 10,
                 step : 0.1,
-                width: 150,
                 xInterval: 10,
                 beginAtZero: true,
                 exclude: 0,
@@ -172,7 +167,7 @@ const buildUsualFunctions = () => {
             {
                 id: ++i,
                 mathJaxTitle: "\\frac{1}{x}",
-                buttonColor: getFunctionButtonColor(i),
+                themeColor: getFunctionThemeColor(i),
                 graphColor: getFunctionGraphColor(i),
                 formula: (x) => {return 1 / x},
                 definition: "\\(\\xi =  ]-\\infty ; 0[\\bigcup] 0 ; +\\infty[ \\hspace{4cm} (\\mathbb{R^{*}})\\)",
@@ -200,9 +195,9 @@ const buildUsualFunctions = () => {
                         value: "0^{+}"
                     }
                 ],
-                scale : 100,
+                scale : 10,
+                domain:[-10, 10],
                 step : 1,
-                width: 150,
                 xInterval: 10,
                 exclude: 0,
                 aspect: 1
@@ -210,7 +205,7 @@ const buildUsualFunctions = () => {
             {
                 id: ++i,
                 mathJaxTitle: "cos(x)",
-                buttonColor: getFunctionButtonColor(i),
+                themeColor: getFunctionThemeColor(i),
                 graphColor: getFunctionGraphColor(i),
                 formula: (x) => {return Math.cos(x)},
                 definition: "\\(\\xi  = ]-\\infty ; +\\infty[ \\hspace{4cm} (\\mathbb{R})\\)",
@@ -220,15 +215,13 @@ const buildUsualFunctions = () => {
                 scale : 2*Math.PI,
                 domain:[-Math.PI, Math.PI],
                 step : Math.PI/4,
-                width: 200,
-                height: 100,
                 xInterval: 1,
-                aspect: 3
+                aspect: 2.5
             },
             {
                 id: ++i,
                 mathJaxTitle: "sin(x)",
-                buttonColor: getFunctionButtonColor(i),
+                themeColor: getFunctionThemeColor(i),
                 graphColor: getFunctionGraphColor(i),
                 formula: (x) => {return Math.sin(x)},
                 definition: "\\(\\xi = ]-\\infty ; +\\infty[ \\hspace{4cm} (\\mathbb{R})\\)",
@@ -238,10 +231,8 @@ const buildUsualFunctions = () => {
                 scale : 2*Math.PI,
                 domain:[-Math.PI, Math.PI],
                 step : Math.PI/4,
-                width: 200,
-                height: 100,
                 xInterval: 1,
-                aspect: 3
+                aspect: 2.5
             }
         ]
 }

@@ -2,10 +2,10 @@
     white-space: normal
 }  */
 
-.MathJaxDisplay {
+.MathJaxDisplay, .Focus {
     max-width: 100vw !important;
     height: fit-content;
-    overflow-x: visible;
+    overflow-x: auto;
     overflow-y: hidden;
 }
 
@@ -42,18 +42,15 @@ table mjx-container {
 }
 
 .MathJaxDisplay mjx-math {
-    font-size: 20px; 
+    font-size: 23px; 
 }
 
 @media (width < 450px) {
     .MathJaxDisplay mjx-math {
         margin-left: 0px !important;
         text-align: left !important;
-        font-size: 17px !important;
-    }
-    /* .MathJaxDisplay.Demo mjx-math {
         font-size: 20px !important;
-    } */
+    }
 }
 
 .Focus .MathJaxDisplay mjx-math {

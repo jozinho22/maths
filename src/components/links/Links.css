@@ -10,6 +10,11 @@
     padding-top: 10px;
 }
 
+.Links a {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: large;
+}
+
 .Links .TableOfContents {
     align-items: center;
 }

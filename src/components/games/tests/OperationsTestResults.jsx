@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Table } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
 import OperationsTestResultsList from './OperationsTestResultsList';
 import { OperationsTestContext } from './OperationsTest';
 import LevelsTableOfContents from './LevelsTableOfContents';
