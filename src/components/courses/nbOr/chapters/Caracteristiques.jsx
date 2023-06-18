@@ -4,10 +4,15 @@ import MathJaxDisplay from '../../../mathjax-display/MathJaxDisplay';
 import MathJaxInline from '../../../mathjax-display/MathJaxInline';
 import FibonacciTable from '../helpers/FibonacciTable';
 
-import ImageZoom from '../../ImageZoom';
+import ImageZoom from '../../helpers/ImageZoom';
 import euclideStuff from '../assets/euclideStuff.png';
+
 import Link from '../../../immutable/nav/Link';
-import CoursesLinks from '../../CoursesLinks';
+import PagesConstants from '../../../immutable/nav/PagesConstants';
+import CoursesConstants from '../../helpers/CoursesConstants';
+import pathBuilder from '../../../helpers/pathBuilder';
+import Title1 from '../../helpers/Title1';
+import Title2 from '../../helpers/Title2';
 
 const Caracteristiques = () => {
 
@@ -55,21 +60,21 @@ const Caracteristiques = () => {
     var phi448 = "\\(\\phi^4 = F_4.\\phi + F_3 \\)";
 
     var phiGen =  "\\(\\phi^{n+1} =  F_{n+1}.\\phi +  F_{n} \\)";
-    var phiGen2 =  "\\(\\phi^{n+1} =  \\phi^{n} +  \\phi^{n - 1} \\)";
+    var phiGen2 =  "\\(\\phi^{n+2} =  \\phi^{n+1} +  \\phi^{n} \\)";
 
     return (
             <>
-                <p className="Title1">Découverte du nombre d'or par Euclide</p>
+                <Title1 title={"a) Découverte du nombre d'or par Euclide"} />
                 <p>
                     Euclide s’est intéressé à ce nombre et voulu le calculer de la manière suivante.
                 </p>
                 <ImageZoom src={euclideStuff} name="Questionnement d'Euclide" n={++n} />
                 <p>{"\n"}Il souhaitait trouver une sorte de ratio "magique"; un nombre qui vérifiait l’équation suivante :</p>
-                <MathJaxDisplay toShow={euclideStuff1} />
+                <MathJaxDisplay toShow={euclideStuff1} demo/>
                 <p>Autrement dit que : </p>
-                <MathJaxDisplay toShow={euclideStuff2} />
-                <p>Avec <Link link={CoursesLinks.PRODUIT_EN_CROIX}>le produit en croix</Link>, on sait que cela peut s'écrire :</p>
-                <MathJaxDisplay toShow={euclideStuff3} />
+                <MathJaxDisplay toShow={euclideStuff2} demo/>
+                <p>Avec <Link url={pathBuilder(`${PagesConstants.COURS}${CoursesConstants.PRODUIT_EN_CROIX}`)} external>le produit en croix</Link>, on sait que cela peut s'écrire :</p>
+                <MathJaxDisplay toShow={euclideStuff3} demo/>
                 <p>Soit :</p>
                 <Container className="Focus">
                     <MathJaxDisplay toShow={euclideStuff4} />
@@ -95,46 +100,47 @@ const Caracteristiques = () => {
                     <MathJaxDisplay toShow={calcNbOrRwithPhi} />
                 </Container>            
 
-                <p className="Title1">Caractéristiques du nombre d'or</p>
+                <Title1 title={"b) Caractéristiques du nombre d'or"} />
                 <p>On a vu plus haut que ce nombre vérifiait l'équation suivante </p>
-                <MathJaxDisplay toShow={euclideStuff4} />
+                <MathJaxDisplay toShow={euclideStuff4} demo/>
                 <p>Soit</p>
-                <MathJaxDisplay toShow={euclideStuff5} />
+                <MathJaxDisplay toShow={euclideStuff5} demo/>
                 <p>Donc on peut remplacer <MathJaxInline toShow={"$x$"} /> par <MathJaxInline toShow={"$\\phi$"} /></p>
-                <Container className="Focus">
+                <Container className="Focus LittleFocus">
                     <MathJaxDisplay toShow={phi22} />
                 </Container>
                 <p>On peut aussi l'écrire sous cette forme</p>
-                <Container className="Focus">
+                <Container className="Focus LittleFocus">
                     <MathJaxDisplay toShow={phi221} />
                 </Container>
-                <p className="Title2">Calcul de <MathJaxInline toShow={"$\\phi^3$"} /></p>
+
+                <Title2 title={`Calcul de ${<MathJaxInline toShow={"$\\phi^3$"} />}`} />
                 <MathJaxDisplay toShow={phi33} demo />
                 <p>On remplace <MathJaxInline toShow={"$\\phi^2$"} /> par <MathJaxInline toShow={"$\\phi + 1$"} /> </p>
                 <MathJaxDisplay toShow={phi331} demo />
                 <p>On applique la distributivité et on obtient</p>
-                <Container className="Focus">
+                <Container className="Focus LittleFocus">
                     <MathJaxDisplay toShow={phi332} />
                 </Container>
                 <p>On remplace maintenant  <MathJaxInline toShow={"$\\phi + 1$"} />  par <MathJaxInline toShow={"$\\phi^2$"} /></p>
                 <MathJaxDisplay toShow={phi333} demo />
-                <Container className="Focus">
+                <Container className="Focus LittleFocus">
                     <MathJaxDisplay toShow={phi334} />
                 </Container>
                 <p>Mais nous avons vu dans le chapitre précédent l'évolution des <MathJaxInline toShow={"$F_n$"} /></p>
                 <FibonacciTable />
                 <p>Sur cette seconde expression, <MathJaxInline toShow={"$2$"} /> correspond à <MathJaxInline toShow={"$F_3$"} /> et <MathJaxInline toShow={"$1$"} /> correspond à <MathJaxInline toShow={"$F_2$"} /> </p>
                 <p>On peut donc écrire que :</p>
-                <Container className="Focus">
+                <Container className="Focus LittleFocus">
                     <MathJaxDisplay toShow={phi335} />
                 </Container>
                 <p>On obtient alors ces deux expressions à la suite des calculs :</p>
-                <Container className="Focus">
+                <Container className="Focus LittleFocus">
                     <MathJaxDisplay toShow={phi332} />
                     <MathJaxDisplay toShow={phi335} />
                 </Container>
 
-                <p className="Title2">Calcul de <MathJaxInline toShow={"$\\phi^4$"} /></p>
+                <Title2 title={`Calcul de ${<MathJaxInline toShow={"$\\phi^4$"} />}`} />
                 <MathJaxDisplay toShow={phi44} demo />
                 <p>On remplace par ce qu'on connait de <MathJaxInline toShow={"$\\phi^3$"} /> </p>
                 <MathJaxDisplay toShow={phi441} demo />
@@ -144,12 +150,12 @@ const Caracteristiques = () => {
                 <MathJaxDisplay toShow={phi443} demo />
                 <MathJaxDisplay toShow={phi444} demo />
                 <p>On obtient alors cette première expression</p>
-                <Container className="Focus">
+                <Container className="Focus LittleFocus">
                     <MathJaxDisplay toShow={phi447} />
                 </Container>
                 <p>Mais on sait qu <MathJaxInline toShow={"$3$"} /> correspond à <MathJaxInline toShow={"$F_4$"} /> et <MathJaxInline toShow={"$2$"} /> correspond à <MathJaxInline toShow={"$F_3$"} /> </p>
                 <p>On peut donc l'écrire sous la forme :</p>
-                <Container className="Focus">
+                <Container className="Focus LittleFocus">
                     <MathJaxDisplay toShow={phi448} />
                 </Container>
                 <p>Par la suite, on peut décomposer l'expression suivante en <MathJaxInline toShow={"$\\phi^3$"} /> et <MathJaxInline toShow={"$\\phi^2$"} /></p>
@@ -157,7 +163,7 @@ const Caracteristiques = () => {
                 <MathJaxDisplay toShow={phi445} demo />
                 <MathJaxDisplay toShow={phi446} demo />
                 <p>On alors comme pour  <MathJaxInline toShow={"$\\phi^3$"} /> ce couple d'équations :</p>
-                <Container className="Focus">
+                <Container className="Focus LittleFocus">
                     <MathJaxDisplay toShow={phi446} />
                     <MathJaxDisplay toShow={phi448} />
                 </Container>

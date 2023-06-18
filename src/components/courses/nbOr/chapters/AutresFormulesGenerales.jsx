@@ -2,6 +2,7 @@ import React from 'react';
 import { Container } from 'react-bootstrap';
 import MathJaxDisplay from '../../../mathjax-display/MathJaxDisplay';
 import MathJaxInline from '../../../mathjax-display/MathJaxInline';
+import Title1 from '../../helpers/Title1';
 
 const AutresFormulesGenerales = () => {
 
@@ -23,13 +24,14 @@ const AutresFormulesGenerales = () => {
     var approxPhi26 =  "\\( \\phi = 1 + \\frac{1}{1 + \\frac{1}{1 + \\frac{1}{\\phi} } }  \\)";
     var approxPhi2End = "\\( \\phi = 1 + \\frac{1}{ 1 + \\frac{1}{ 1 + \\frac{1}{1 + \\frac{1}{1 + {...} }}}} \\)"
     
-    var nTermOfTheSequence =  "\\( F_n = \\frac{ (1 + \\sqrt{5})^2 - (1-\\sqrt{5})^2 } {2^n .\\sqrt{5}} \\)";
+    var nTermOfTheSequence =  "\\( F_n = \\frac{ (1 + \\sqrt{5})^n - (1-\\sqrt{5})^n } {2^n .\\sqrt{5}} \\)";
+    var nTermOfTheSequence2 =  "\\( F_n = \\frac{ (\\phi)^n - (-\\phi)^{-n} } {\\sqrt{5}} \\)";
 
 /*     var approxPhi3 = "\\( \\phi = 4 \\sum_{k =0}^{+\\infty} \\enspace \\frac{-1}{2k + 1} \\big( \\big( \\phi^{-1} \\big)^{2k+1} + \\big( \\phi^{-3} \\big)^{2k+1}   \\big) \\)"
  */
     return (
             <>
-                <p className="Title2">a - Formule de la racine</p>
+                <Title1 title={"a) Formule de la racine"} />
                 <p>À partir de la formule : </p>
                 <MathJaxDisplay toShow={approxPhi1Begin} demo/>
                 <p>En mettant chaque terme sous la racine carrée, on a :</p>
@@ -44,7 +46,7 @@ const AutresFormulesGenerales = () => {
                     <MathJaxDisplay toShow={approxPhi1End} />
                 </Container>
 
-                <p className="Title2">b - Formule du quotient</p>
+                <Title1 title={"b) Formule du quotient"} />
                 <p>À partir de la formule </p>
                 <MathJaxDisplay toShow={approxPhi2Begin} demo/>
                 <p> qu'on arrange en </p>
@@ -62,10 +64,14 @@ const AutresFormulesGenerales = () => {
                     <MathJaxDisplay toShow={approxPhi2End} infiniteFrac />
                 </Container>
 
-                <p className="Title2">c - Généralisation du n terme de la suite</p>
+                <Title1 title={"c) Généralisation du n terme de la suite de Fibonacci"} />
                 <Container className="Focus FocusHuge">
                     <MathJaxDisplay toShow={nTermOfTheSequence} />
-                </Container>           
+                </Container>       
+                <p>Cette formule peut aussi s'écrire sous la forme :</p> 
+                <Container className="Focus FocusHuge">
+                    <MathJaxDisplay toShow={nTermOfTheSequence2} />
+                </Container>       
 
 
 {/*                 <p className="Title2"> c - Formule de la somme</p>

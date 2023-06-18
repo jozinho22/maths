@@ -4,6 +4,11 @@
 
 .CustomNav a {
   font: inherit;
+  color: var(--back-color);
+}
+
+.Darcula .CustomNav a {
+  color: var(--links-color);
 }
 
 @media(min-width: 450px) {
@@ -15,7 +20,7 @@
 }
 
 .CustomNav .navbar-brand a {
-  color: var(--links-color);
+  /* color: var(--links-color); */
   padding-left: 20px;
 }
 
@@ -31,7 +36,7 @@
 /* nav-item (items de la navbar) */
 .CustomNav .nav-item a {
   color: var(--grey-light-color) !important;
-  font-size: small !important ;
+  font-size: small ;
 }
 
 .CustomNav .nav-item {
@@ -43,6 +48,10 @@
     .CustomNav .nav-item a {
       font-size: small;
     }
+}
+
+.CustomNav .nav-item.dropdown  {
+    font-size: small !important;
 }
 
 @media (width < 1000px) {
@@ -90,6 +99,11 @@
 
 .CustomNav .dropdown-item a {
   font-size: small !important;
+  color: var(--back-color) !important;
+}
+
+.Darcula .CustomNav .dropdown-item a {
+  font-size: small !important;
   color: var(--links-color) !important;
 }
 
@@ -107,9 +121,10 @@
   background-color : var(--navbar-hover-color);
 }
 
-@media (min-width: 450px) {
+/* @media (min-width: 450px) {
   .CustomNav .dropdown-item {
-    font-size: small !important;
+    font-size: large !important;
     width: 100%;
   }
-}
+} */
+

@@ -141,7 +141,7 @@ const OperationsTestQuestionDisplay = () => {
                 cols: [
                         {
                             id: 'col' + index++, 
-                            cifer: 'C'
+                            cifer: 'c'
                         },
                         {
                             id: 'col' + index++, 
@@ -203,7 +203,7 @@ const OperationsTestQuestionDisplay = () => {
                 <CiferKeyboard /> 
             </Container>
 
-            <Container className="ButtonPlacement">
+            <Container>
                 <Button className="DefaultButton" 
                         /* type="submit" */ 
                         onClick={doNext}>

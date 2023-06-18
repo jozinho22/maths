@@ -1,11 +1,12 @@
 import { Container } from 'react-bootstrap';
-import ImageZoom from '../../ImageZoom';
+import ImageZoom from '../../helpers/ImageZoom';
 
 import sphereVolCalculus from '../assets/sphereVolCalculus.png';
 import sphereAreaCalculus from '../assets/sphereAreaCalculus.png';
 
 import MathJaxDisplay from '../../../mathjax-display/MathJaxDisplay';
 import MathJaxInline from '../../../mathjax-display/MathJaxInline';
+import Title1 from '../../helpers/Title1';
 
 const LaSphere = () => {
 
@@ -75,7 +76,7 @@ const LaSphere = () => {
             <MathJaxDisplay toShow={sphDoubleVolumeDev} demo />
             <MathJaxDisplay toShow={sphDoubleVolumeDev2} demo />
 
-            <p className="Title1">Calcul du volume par intégration</p>
+            <Title1 title={"a) Calcul du volume par intégration"} />
             <p>Calculons avec une méthode d'intégration le volume de la sphère.
                 {"\n"}
                 Par facilité, nous allons d'abord calculer le demi-volume.
@@ -119,7 +120,7 @@ const LaSphere = () => {
                <MathJaxDisplay toShow={circleVolR}/>
             </Container>
 
-            <p className="Title1">Calcul de la surface par intégration</p>
+            <Title1 title={"b) Calcul de la surface par intégration"} />
             <p>
                 On peut faire la même chose pour calculer la surface.
                 {"\n"}

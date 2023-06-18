@@ -1,11 +1,13 @@
 import { Button } from 'react-bootstrap';
+import MainTitle from './MainTitle';
 
 const Error = () => {
     return (
         <div className={"Error"}>
-            <p className="MainTitle">Erreur...</p>
+            <MainTitle title={"Erreur"} />
+            <p>Cette url ne correspond à aucune page du site...</p>
             <Button className="DefaultButton" href="/">
-                Retour au lobby
+                Retour à la page d'accueil
             </Button>
         </div> 
     );

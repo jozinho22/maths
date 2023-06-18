@@ -1,23 +1,29 @@
 .App {
     --blue-color: #4365ad;
+    --dark-blue-color: rgb(71, 97, 153);
     --dark-color: rgb(47, 49, 53);
     --green-color: #54854d;
     --grey-light-color: rgb(179, 178, 177);
     --grey-lighter-color: rgb(218, 218, 218);
     --grey-lighter-transparent-color: rgba(218, 218, 218, 0.459);
     --grey-light-transparent-color: rgba(138, 137, 137, 0.432);
-    --grey-color: rgb(117, 118, 119);
+    --grey-color: rgb(77, 77, 77);
     --grey-dark-color: rgb(77, 78, 78);
     --grey-dark-transparent-color: rgba(77, 78, 78, 0.452);
     --orange-color: #a75a1b;
     --purple-color: rgb(179, 94, 187);
-    --red-color: #854242;
+    --red-color: #a34040;
     --yellow-color: rgb(201, 193, 85);
     
     --blue-hover-color: rgb(54, 78, 131);
     --green-hover-color: rgb(60, 100, 55);
     --orange-hover-color: rgb(145, 78, 24);
     --red-hover-color: rgb(105, 21, 21);
+
+    --light-link-color: rgb(86, 86, 158);  ;
+    --light-link-color-hover: rgb(86, 86, 158); ;
+    --dark-link-color: rgb(108, 108, 196);  ;
+    --dark-link-color-hover: rgb(108, 108, 172); ;
 
     --contrast: 70%;
 
@@ -29,24 +35,10 @@
                         linear-gradient(var(--copybook-color) 1px, transparent 0px);
 }
 
-.Algeria {
-    background-color: var(--back-color);
-    --links-color: var(--back-color);
-    --button-text-color: var(--back-color);
-    --mirror-button-text-color: var(--dark-color);
-
-    color: var(--dark-color); 
-    --navbar-color: var(--green-color);
-    --navbar-hover-color: var(--green-hover-color);
-    --back-color: var(--grey-light-color);
-    --front-color: var(--red-color);
-    --simple-text-color: var(--dark-color);
-    --copybook-color: var(--grey-light-transparent-color);
-}
-
 .Brazil {
     background-color: var(--back-color);
-    --links-color: var(--back-color);
+    --links-color: var(--light-link-color);
+    --links-color-hover: var(--light-link-color-hover);
     --button-text-color: var(--back-color);
     --mirror-button-text-color: var(--grey-color);
 
@@ -60,11 +52,11 @@
 
 }
 
-
 .Darcula {
     /* Le seul à avoir un début différent...*/
     background-color: var(--back-color);
-    --links-color: var(--red-color);
+    --links-color: var(--dark-link-color);
+    --links-color-hover: var(--dark-link-color-hover);
     --button-text-color: var(--grey-light-color);
     --mirror-button-text-color: var(--grey-light-color);
 
@@ -77,49 +69,3 @@
     --copybook-color: var(--grey-dark-transparent-color);
     --contrast: 40%;
 }
-
-.Germany {
-    background-color: var(--back-color);
-    --links-color: var(--back-color);
-    --button-text-color: var(--back-color);
-    --mirror-button-text-color: var(--dark-color);
-
-    color: var(--dark-color); 
-    --navbar-color: var(--dark-color);
-    --navbar-hover-color: var(--grey-color);
-    --back-color: var(--yellow-color);
-    --front-color: var(--red-color);
-    --simple-text-color: var(--dark-color);
-    --copybook-color: var(--grey-light-transparent-color);
-}
-
-.France {
-    background-color: var(--back-color);
-    --button-text-color: var(--back-color);
-    --links-color: var(--back-color);
-    --mirror-button-text-color: var(--dark-color);
-
-    color: var(--dark-color); 
-    --navbar-color: var(--blue-color);
-    --navbar-hover-color: var(--blue-hover-color);
-    --back-color: var(--grey-light-color);
-    --front-color: var(--red-color);
-    --simple-text-color: var(--dark-color);
-    --copybook-color: var(--grey-light-transparent-color);
-}
-
-.Senegal {
-    background-color: var(--back-color);
-    --links-color: var(--back-color);
-    --button-text-color: var(--back-color);
-    --mirror-button-text-color: var(--dark-color);
-
-    color: var(--front-color); 
-    --navbar-color: var(--green-color);
-    --navbar-hover-color: var(--green-hover-color);
-    --back-color: var(--yellow-color);
-    --front-color: var(--red-color);
-    --simple-text-color: var(--dark-color);
-    --copybook-color: var(--grey-light-transparent-color);
-}
-

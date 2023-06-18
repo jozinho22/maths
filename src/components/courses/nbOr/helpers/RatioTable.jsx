@@ -5,7 +5,7 @@ import MathJaxDisplay from '../../../mathjax-display/MathJaxDisplay';
 
 const RatioTable = () => {
 
-    var ratios = useRatios();
+    var ratios = useRatios().slice(0, 12);
     var n = "\\(n \\)";
     var ratioMathJax = "\\(\\frac{F_{n+1}}{F_{n}}  \\)";
 
@@ -18,7 +18,7 @@ const RatioTable = () => {
                         </th>
                         {Array.from(ratios).map( (ratio, index) => (
                             <th key={index}>
-                                {ratio.id}    
+                                <MathJaxDisplay toShow={`\\(${ratio.id}  \\)`} />    
                             </th>
                         ))}
                     </tr>
@@ -30,7 +30,7 @@ const RatioTable = () => {
                         </td>
                         {Array.from(ratios).map( (ratio, index) => (
                             <td key={index}>
-                                {ratio.ratio}    
+                                <MathJaxDisplay toShow={`\\(${ratio.ratio} \\)`} /> 
                             </td>
                         ))}
                     </tr>   

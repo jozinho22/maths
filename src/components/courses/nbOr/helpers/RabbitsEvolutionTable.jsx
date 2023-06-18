@@ -1,21 +1,22 @@
 import React from 'react';
 import NiceTable from '../../../immutable/NiceTable';
-import getRabbitsEvolution from './useRabbitsEvolution';
+import useRabbitsEvolution from './useRabbitsEvolution';
+import MathJaxDisplay from '../../../mathjax-display/MathJaxDisplay';
 
 const RabbitsEvolutionTable = () => {
 
-    var rabbitsEv = getRabbitsEvolution();
+    var rabbitsEv = useRabbitsEvolution().slice(0, 12);
 
     return (
             <NiceTable>
                 <thead>
                     <tr>
                         <th>
-                            Mois
+                            <MathJaxDisplay toShow={`\\( Mois \\)`} /> 
                         </th>
                         {Array.from(rabbitsEv).map( (value, index) => (
                             <th key={index}>
-                                {value.id}    
+                                <MathJaxDisplay toShow={`\\(${value.id} \\)`} /> 
                             </th>
                         ))}
                     </tr>
@@ -23,11 +24,11 @@ const RabbitsEvolutionTable = () => {
                 <tbody> 
                     <tr>
                         <td>
-                            Nombre de couples
+                            <MathJaxDisplay toShow={`\\( Nombre \\enspace de \\enspace  couples \\)`} /> 
                         </td>
                         {Array.from(rabbitsEv).map( (value, index) => (
                             <td key={index}>
-                                {value.nb}    
+                                <MathJaxDisplay toShow={`\\(${value.nb} \\)`} />  
                             </td>
                         ))}
                     </tr>   

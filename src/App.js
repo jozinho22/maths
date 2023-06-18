@@ -16,19 +16,20 @@ import BlurryingSpinner from './components/immutable/spinners/BlurryingSpinner';
 import Header from './components/immutable/nav/Header';
 import Footer from './components/immutable/nav/Footer';
 
-import coursesResourceBuilder from './components/courses/coursesResourceBuilder';
-import pdfResourceBuilder from './components/pdf-viewer/pdfResourceBuilder';
-import gamesResourceBuilder from './components/games/gamesResourceBuilder';
+import coursesResourceBuilder from './components/courses/helpers/coursesResourceBuilder';
+import pdfResourceBuilder from './components/pdf-viewer/helpers/pdfResourceBuilder';
+import gamesResourceBuilder from './components/games/helpers/gamesResourceBuilder';
 
-import { getFontIfStoredFontExists, getRandomFont } from './components/immutable/styles/getFonts';
 import { getThemeIfStoredThemeExists } from './components/immutable/styles/getThemes';
 import AppRoutes from './AppRoutes';
+import Fonts from './components/immutable/styles/Fonts';
+import Themes from './components/immutable/styles/Themes';
 
 function App() {
 
-    const [font, setFont] = React.useState(getFontIfStoredFontExists(JSON.parse(sessionStorage.getItem('ma-thematique-font'))) ? JSON.parse(sessionStorage.getItem('ma-thematique-font')) : getRandomFont());
+    const [font, setFont] = React.useState(Fonts.BLACK_CHANCELRY);
     const [playMode, setPlayMode] = React.useState(false);
-    const [theme, setTheme] = React.useState(getThemeIfStoredThemeExists(JSON.parse(sessionStorage.getItem('ma-thematique-theme'))) ? JSON.parse(sessionStorage.getItem('ma-thematique-theme')) : "Brazil");
+    const [theme, setTheme] = React.useState(getThemeIfStoredThemeExists(JSON.parse(sessionStorage.getItem('ma-thematique-theme'))) ? JSON.parse(sessionStorage.getItem('ma-thematique-theme')) : Themes.BRAZIL);
  
     const appContext = {
         font: font,
@@ -44,7 +45,8 @@ function App() {
     var gameItems = gamesResourceBuilder();
     
     return ( 
-            <div className="App" >     
+        <>
+            <div className="App" id="capture">     
                 <AppContext.Provider value={appContext} >                     
                     <div className={`${theme} ${font} CopyBook`}>
                         <BrowserRouter>
@@ -59,6 +61,8 @@ function App() {
                     </div> 
                 </AppContext.Provider> 
             </div>
+            <div id="doc-to-print"></div>
+        </>
     );
 }
 

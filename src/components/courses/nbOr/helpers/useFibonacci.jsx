@@ -9,7 +9,7 @@ const useFibonacci = () => {
     var fibo = useRabbitsEvolution();
   
     var k = 0;
-    for(k; k < 13 ; k++) {
+    for(k; k < 14 ; k++) {
         fibo.push(
             {
                 id: k,
@@ -18,7 +18,7 @@ const useFibonacci = () => {
         );
     }
     
-    return fibo.slice(0, 12);
+    return fibo.slice(0, 14);
    
 }
 

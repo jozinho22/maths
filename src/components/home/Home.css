@@ -13,14 +13,19 @@
     position: relative;
     top: 30px;
     /* background-color: var(--front-color); */
-    background-image: linear-gradient(to bottom right, var(--front-color), grey);    
+    background-image: linear-gradient(to bottom right, var(--front-color), rgb(121, 116, 116));    
     border-radius: 10px;
-    color: var(--links-color);
+    color: var(--back-color);
     font-size: large;
     padding: 30px;
     width: 50%;
     box-shadow: 20px 20px 5px 5px var(--navbar-color);
     margin-bottom: 20px;
+}
+
+.Darcula .HomeTitleContainer {
+    background-image: linear-gradient(to bottom right, rgb(61, 60, 60), var(--grey-color));    
+    color: var(--links-color);
 }
 
 @media (width < 450px) {

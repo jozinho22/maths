@@ -50,14 +50,23 @@
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+.Darcula .CopyRight {
+  color: var(--links-color);
+}
+
+
 .ContactIcon {
   position : relative;
   right: 0;
   margin-right: 30px;
-  color: var(--links-color);
+  color: var(--back-color);
   width: 30px;
   height: 30px;
   cursor: pointer;
+}
+
+.Darcula .ContactIcon {
+  color: var(--links-color);
 }
 
 #font-dropdown-item {

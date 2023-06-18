@@ -2,6 +2,7 @@ import React from 'react';
 import { Container } from 'react-bootstrap';
 import MathJaxDisplay from '../../../mathjax-display/MathJaxDisplay';
 import MathJaxInline from '../../../mathjax-display/MathJaxInline';
+import Title2 from '../../helpers/Title2';
 
 const LienEntrePuissancesEtRacines = () => {
 
@@ -65,7 +66,8 @@ const LienEntrePuissancesEtRacines = () => {
                 <Container className="Focus"> 
                     <MathJaxDisplay toShow={sqrtnInvPow} />
                 </Container>
-                <p className="Title2">Exemples</p>
+
+                <Title2 title={"Exemples"} />
                 <MathJaxDisplay toShow={sqrtnEx} demo />
                 <MathJaxDisplay toShow={sqrtnEx2} demo />
             </>

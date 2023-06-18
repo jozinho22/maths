@@ -1,7 +1,13 @@
 import { Container } from 'react-bootstrap';
 import MathJaxDisplay from '../../../mathjax-display/MathJaxDisplay';
 import MathJaxInline from '../../../mathjax-display/MathJaxInline';
+import pathBuilder from '../../../helpers/pathBuilder';
+
 import Link from '../../../immutable/nav/Link';
+import PagesConstants from '../../../immutable/nav/PagesConstants';
+import CoursesConstants from '../../helpers/CoursesConstants';
+import Title1 from '../../helpers/Title1';
+import Title2 from '../../helpers/Title2';
 
 const InequationsDuPremierDegre = () => {
 
@@ -39,7 +45,8 @@ const InequationsDuPremierDegre = () => {
                 <p>
                     On appelle inéquations les équations qui portent non pas un signe <MathJaxInline toShow={"$=$"} /> mais une signe <MathJaxInline toShow={"$\\leqslant$"} /> ou <MathJaxInline toShow={"$\\geqslant$"} />.
                 </p>
-                <p className="Title1">a) Exemple</p>
+
+                <Title1 title={"a) Exemple"} />
                 <p>Nous allons reprendre notre fonction précédente:</p>
                 <MathJaxDisplay toShow={equBase} demo />
                 <p>Mais cette fois-ci, nous allons essayer de résoudre <MathJaxInline toShow={"$f(x) \\leqslant 0$"} />, c'est-à-dire lorsque cette fonction est inférieure ou égale à <MathJaxInline toShow={"$0$"} />.</p>
@@ -62,7 +69,7 @@ const InequationsDuPremierDegre = () => {
                     <MathJaxDisplay toShow={equBaseMinus32divBy22} />
                 </Container>
 
-                <p className="Title1">b) Subtilité par rapport aux équations</p>
+                <Title1 title={"b) Subtilité par rapport aux équations"} />
                 <p>On dirait que la résolution d'inéquations ressemble trait pour trait à la résolution d'équations, cependant il y a une subtilité à connaître.</p>
                 <p>Si nous avions eu, à la place de :</p>
                 <MathJaxDisplay toShow={equBase} demo />
@@ -85,7 +92,7 @@ const InequationsDuPremierDegre = () => {
                     <MathJaxDisplay toShow={equBaseMinus32divBy22WithMinus} />
                 </Container>
 
-                <p className="Title2">Explications</p>
+                <Title2 title={"Explications"} />
                 <p>Supposons une situation avec des nombres réels, par exemple :</p>
                 <MathJaxDisplay toShow={exampleWithReels} demo />
                 <p>Appliquons maintenant une multiplication (ou division) par un nombre négatif.</p>
@@ -105,11 +112,11 @@ const InequationsDuPremierDegre = () => {
                 <MathJaxDisplay toShow={exampleWithReelsMultByNegativeNumberWithFunc2} demo />
                 <MathJaxDisplay toShow={exampleWithReelsMultByNegativeNumber2} demo />
 
-                <p className="Title1">3) Conclusion</p>
+                <Title1 title={"c) Conclusion"} />
                 <p>Les inéquations du premier degré fonctionnent comme les équations du premier degré, sauf que l'on change de signe (<MathJaxInline toShow={"$\\leqslant$"} /> devient <MathJaxInline toShow={"$\\geqslant$"} /> ou inversement) si l'on multiplie (ou divise) par un nombre négatif.</p>
                 <p>Il est à noter que c'est lors d'une multiplication, ou d'une division. Les deux reviennent au même, car diviser un nombre <MathJaxInline toShow={"$a$"} /> par un nombre <MathJaxInline toShow={"$b$"} /> revient à multiplier par l'inverse de <MathJaxInline toShow={"$b$"} />.</p>
                 <MathJaxDisplay toShow={divideEqualsMultiplyByInverse} demo />
-                <p>L'inverse de <MathJaxInline toShow={"$b$"} /> se note <MathJaxInline toShow={"$\\frac{1}{b}$"} /> ou encore <MathJaxInline toShow={"$b^{-1}$"} /> (voir <Link link={'/cours/les-puissances/inverse-de-puissances'}>chapitre sur l'inverse</Link>).</p>
+                <p>L'inverse de <MathJaxInline toShow={"$b$"} /> se note <MathJaxInline toShow={"$\\frac{1}{b}$"} /> ou encore <MathJaxInline toShow={"$b^{-1}$"} /> (voir <Link url={pathBuilder(`${PagesConstants.COURS}${CoursesConstants.PUISSANCES}/inverse-de-puissances`)} external>chapitre sur l'inverse</Link>).</p>
             </>
 }
 

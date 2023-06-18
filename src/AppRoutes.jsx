@@ -1,28 +1,27 @@
 import { Route, Routes } from 'react-router-dom';
 import Home from './components/home/Home';
-import CoursesTableOfContents from './components/courses/CoursesTableOfContents';
-import ChaptersTableOfContents from './components/courses/ChaptersTableOfContents';
+import CoursesTableOfContents from './components/courses/helpers/CoursesTableOfContents';
+import ChaptersTableOfContents from './components/courses/helpers/ChaptersTableOfContents';
 import GenericChapter from './components/courses/GenericChapter';
-import PdfTableOfContents from './components/pdf-viewer/PdfTableOfContents';
+import PdfTableOfContents from './components/pdf-viewer/helpers/PdfTableOfContents';
 import PDFViewerPage from './components/pdf-viewer/PDFViewerPage';
-import GamesTableOfContents from './components/games/GamesTableOfContents';
+import GamesTableOfContents from './components/games/helpers/GamesTableOfContents';
 import Links from './components/links/Links';
 import VCard from './components/contact/VCard';
 import Error from './components/immutable/Error';
 
+import PagesConstants from './components/immutable/nav/PagesConstants';
+import pathBuilder from './components/helpers/pathBuilder';
+
 const AppRoutes = ( {courseItems, pdfItems, gameItems} ) => {
 
     return  <Routes>
-                {
-                    process.env.NODE_ENV === 'development' ?
-                        <Route exact path="/" element={<Home />} />
-                            :   <Route exact path="/" element={<Home />} />
-                }
-                <Route path="/cours" element={<CoursesTableOfContents courseItems={courseItems} />} />
+                <Route exact path={pathBuilder("/")} element={process.env.NODE_ENV === 'development' ?  <Home /> : <Home />} />
+                <Route path={pathBuilder(PagesConstants.COURS)} element={<CoursesTableOfContents courseItems={courseItems} />} />
                 {courseItems.map(courseItem => {
                     return  <Route 
                                 key={courseItem.id}
-                                path={`/cours/${courseItem.relativePath}`}
+                                path={pathBuilder(`${PagesConstants.COURS}${courseItem.relativePath}`)} 
                                 element={<ChaptersTableOfContents courseItem={courseItem} />} />
                 
                 })}
@@ -30,27 +29,27 @@ const AppRoutes = ( {courseItems, pdfItems, gameItems} ) => {
                     courseItem.chapters.map(chapter => {
                         return  <Route 
                                     key={chapter.id}
-                                    path={`/cours/${courseItem.relativePath}/${chapter.relativePath}`}
+                                    path={pathBuilder(`${PagesConstants.COURS}${courseItem.relativePath}${chapter.relativePath}`)} 
                                     element={<GenericChapter chapter={chapter} courseItem={courseItem} />} />
                     })
                 ))}
-                <Route path="/bds-de-jpp" element={<PdfTableOfContents pdfItems={pdfItems} />} />
+                <Route path={pathBuilder(PagesConstants.BDS_DE_JPP)} element={<PdfTableOfContents pdfItems={pdfItems} />} />
                 {pdfItems.map(pdfItem => (
                     <Route 
                         key={pdfItem.id}
-                        path={`/bds-de-jpp/${pdfItem.relativePath}`}
+                        path={pathBuilder(`${PagesConstants.BDS_DE_JPP}${pdfItem.relativePath}`)}
                         element={<PDFViewerPage pdfItem={pdfItem} />} />
                 ))}
-                <Route path="/jeux" element={<GamesTableOfContents gameItems={gameItems} />} />
+                <Route path={pathBuilder(PagesConstants.JEUX)} element={<GamesTableOfContents gameItems={gameItems} />} />
                 {gameItems.map(gameItem => (
                     <Route 
                         key={gameItem.id}
-                        path={`/jeux/${gameItem.relativePath}`}
+                        path={pathBuilder(`${PagesConstants.JEUX}${gameItem.relativePath}`)}
                         element={gameItem.component} />
                 ))}
-                <Route path="/liens" element={<Links />} />
-                <Route path="/contact" element={<VCard />} />
-                <Route path="*" element={<Error />} status={404} />
+                <Route path={pathBuilder(PagesConstants.LIENS)} element={<Links />} />
+                <Route path={pathBuilder(PagesConstants.CONTACT)} element={<VCard />} />
+                <Route path={pathBuilder("*")} element={<Error />} status={404} />
             </Routes>
 }
 

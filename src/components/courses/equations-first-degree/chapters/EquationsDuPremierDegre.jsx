@@ -3,7 +3,12 @@ import { Container } from 'react-bootstrap';
 import MathJaxDisplay from '../../../mathjax-display/MathJaxDisplay';
 import MathJaxInline from '../../../mathjax-display/MathJaxInline';
 import Link from '../../../immutable/nav/Link';
-import Constants from '../../../immutable/Constants';
+import pathBuilder from '../../../helpers/pathBuilder';
+import PagesConstants from '../../../immutable/nav/PagesConstants';
+
+import CoursesConstants from '../../helpers/CoursesConstants';
+import Title1 from '../../helpers/Title1';
+
 const EquationsDuPremierDegre = () => {
 
     var equPremierDeg = "\\(f(x) = ax + b\\)";
@@ -24,9 +29,9 @@ const EquationsDuPremierDegre = () => {
                 <MathJaxDisplay toShow={equPremierDeg} demo />
                 <p>Avec <MathJaxInline toShow={"$a$"} /> et <MathJaxInline toShow={"$b$"} /> des nombres réels.</p>
                 <p>Elles sont définies sur <MathJaxInline toShow={"$\\mathbb{R}$"} />, l'ensemble des réels.</p>
-                <p>Pour plus de détails, voir <Link link={'/cours/les-equations/aspect-des-equations-du-premier-degre'}>le chapitre suivant.</Link></p>
+                <p>Pour plus de détails, voir <Link url={pathBuilder(`${PagesConstants.COURS}${CoursesConstants.EQ_1_DEG}/aspect`)} external>le chapitre suivant.</Link></p>
 
-                <p className="Title1">a) Résolution d'équations du premier degré</p>
+                <Title1 title={"Résolution d'équations du premier degré"} />
                 <p>Nous allons prendre par exemple cette fonction :</p>
                 <MathJaxDisplay toShow={equBase} demo />
                 <p>Nous allons essayer de résoudre <MathJaxInline toShow={"$f(x)=0$"} />, et ainsi trouver une valeur pour <MathJaxInline toShow={"$x$"} />.</p>

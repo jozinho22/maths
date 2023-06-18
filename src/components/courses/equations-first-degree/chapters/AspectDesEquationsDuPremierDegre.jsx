@@ -2,12 +2,14 @@ import React from 'react';
 import { Container, Button } from 'react-bootstrap';
 import MathJaxDisplay from '../../../mathjax-display/MathJaxDisplay';
 import MathJaxInline from '../../../mathjax-display/MathJaxInline';
-import { LineChart, XAxis, YAxis, ReferenceLine, ResponsiveContainer, CartesianGrid, Tooltip, Line } from 'recharts';
-import ImageZoom from '../../ImageZoom';
+import { LineChart, XAxis, YAxis, ReferenceLine, /* ResponsiveContainer , */ CartesianGrid, Tooltip, Line } from 'recharts';
+import ImageZoom from '../../helpers/ImageZoom';
 
 import coefficientDirecteurCalculus from '../assets/coefficientDirecteurCalculus.png';
 import differentsCoefDirecteurs from '../assets/differentsCoefDirecteurs.png';
 import ordonneeAtOrigin from '../assets/ordonneeAtOrigin.png';
+import Title1 from '../../helpers/Title1';
+import Title2 from '../../helpers/Title2';
 
 const AspectDesEquationsDuPremierDegre = () => {
 
@@ -22,6 +24,12 @@ const AspectDesEquationsDuPremierDegre = () => {
     var tauxVar2 = "\\(a = \\frac{y_b - y_a}{x_b - x_a}\\)";
     var ordAtOrigin = "\\(f(0) = a \\times 0 + b\\)";
     var ordAtOrigin2 = "\\(f(0) = b\\)";
+
+    var equForA = "\\(f(x_A) = a.x_A + b \\)";
+    var equForA2 = "\\( b = y_A - a.x_A\\)";
+    var equForA3 = "\\( b = y_A - \\frac{y_b - y_a}{x_b - x_a}.x_A\\)";
+
+    var equForB = "\\(f(x_B) = a.x_B + b \\)";
 
     var f = 
         {
@@ -89,7 +97,7 @@ const AspectDesEquationsDuPremierDegre = () => {
                     Elles forment aussi des droites et sont de type <MathJaxInline toShow={"$f(x) = ax$"} />.
                 </p>
 
-                <p className="Title1">a) Aspect dans un repère</p>
+                <Title1 title={"a) Aspect dans un repère"} />
                 <Container className={`GraphTitle Focus${f.color}`}>
                     <MathJaxDisplay 
                         toShow={"\\(f(x) = " + f.mathJaxTitle + " \\)"} 
@@ -138,36 +146,54 @@ const AspectDesEquationsDuPremierDegre = () => {
                     {/* <Button className="DefaultButton" >Retracer la courbe</Button> */}
                 </div>
 
-
-                <p className="Title1">b) Explications des nombres <MathJaxInline toShow={"$a$"} /> et <MathJaxInline toShow={"$b$"} /></p>
+                <Title1 title={"b) Explications des nombres a et b"} />
                 <p><MathJaxInline toShow={"$a$"} /> est appelé coefficient directeur, il donnera l'aspect de la droite.</p>
                 <p><MathJaxInline toShow={"$b$"} /> est appelé l'ordonnée à l'origine, il sera le résultat de <MathJaxInline toShow={"$f(0)$"} />.</p>
                 
-                <p className="Title2">Le coefficient directeur <MathJaxInline toShow={"$a$"} /></p>
+                <Title2 title={"Le coefficient directeur a"} />
                 <p>Le coefficient directeur détermine le taux de variation de la droite, il est aussi appelé pente car comme une pente sur une route, on observe de combien on monte comparé à ce que l'on avance horizontalement.</p>
                 <p>Il se détermine de la manière suivante : </p>
                 <p>Il suffit de prendre deux points <MathJaxInline toShow={"$A(x_a; y_a)$"} /> et <MathJaxInline toShow={"$B(x_b; y_b)$"} /> de la droite, et de calculer le ratio de leur différence.</p>
-                <MathJaxDisplay toShow={tauxVar} demo />  
-                <MathJaxDisplay toShow={tauxVar2} demo />          
+                <Container className="Focus">
+                    <MathJaxDisplay toShow={tauxVar}  /> 
+                </Container>
+                <p>Ou encore : </p>
+                <Container className="Focus">
+                    <MathJaxDisplay toShow={tauxVar2}  /> 
+                </Container>
                 <ImageZoom src={coefficientDirecteurCalculus} name="Calcul du coefficient directeur" n={++n} />
                 <p>Il n'y pas d'importance ici dans l'ordre des points car si l'on inverse l'ordre, les signes <MathJaxInline toShow={"$-$"} /> s'annuleront au dénominateur et au numérateur.</p>
-                <p>
-                    Si <MathJaxInline toShow={"$a > 0$"} />, la droite sera croissante.
-                    {"\n"}
-                    Si <MathJaxInline toShow={"$a < 0$"} />, la droite sera décroissante.
-                    {"\n"}
-                    Enfin si <MathJaxInline toShow={"$a = 0$"} />, la droite sera plate.
-                </p>
+                
+                <p><MathJaxInline toShow={"$\\underline{cas \\enspace 1 : a > 0}$"} /></p>
+                <p>La droite sera croissante.</p>
+                <p><MathJaxInline toShow={"$\\underline{cas \\enspace 2 : a = 0}$"} /></p>
+                <p>La droite sera plate.</p>
+                <p><MathJaxInline toShow={"$\\underline{cas \\enspace 3 : a < 0}$"} /></p>
+                <p>La droite sera décroissante.</p>
+                
                 <ImageZoom src={differentsCoefDirecteurs} name="Aspect des droites selon différents coefficients directeurs" n={++n} />
                 <p>Si <MathJaxInline toShow={"$b=0 $"} />, la droite passera par l'origine <MathJaxInline toShow={"$ (0 ; 0) $"} />.</p>
                 
-                <p className="Title2">L'ordonnée à l'origine <MathJaxInline toShow={"$b$"} /></p>
+                <Title2 title={"L'ordonnée à l'origine b"} />
                 <p>L'ordonnée à l'origine sera simplement le résultat de <MathJaxInline toShow={"$f(0)$"} />.</p>
                 <p>Effectivement, pour <MathJaxInline toShow={"$x = 0$"} /> :</p>
                 <MathJaxDisplay toShow={ordAtOrigin} demo />
                 <p>Soit :</p>
-                <MathJaxDisplay toShow={ordAtOrigin2} demo />
+                <Container className="Focus">
+                    <MathJaxDisplay toShow={ordAtOrigin2}  /> 
+                </Container>
                 <ImageZoom src={ordonneeAtOrigin} name="L'ordonnée à l'origine" n={++n} />
+                <p>Ce sera le point d'intersection entre l'axe des ordonnées et la droite, d'où son nom.</p>
+                <p>Pour trouver <MathJaxInline toShow={"$b$"} /> à l'aide des deux points <MathJaxInline toShow={"$A$"} /> et <MathJaxInline toShow={"$B$"} /> dont on dispose, on part du principe qu'ils sont tous les deux sur la droite, ils répondent donc à l'équation <MathJaxInline toShow={"$f(x) = ax + b$"} />, et que l'on peut alors écrire :</p>
+                <MathJaxDisplay toShow={equForA} demo />  
+                <MathJaxDisplay toShow={equForB} demo /> 
+                <p>On peut prendre soit l'une, soit l'autre. Prenons la première :</p> 
+                <MathJaxDisplay toShow={equForA} demo />  
+                <MathJaxDisplay toShow={equForA2} demo />
+                <p>Si on n'a pas encore calculé <MathJaxInline toShow={"$a$"} />, on peut l'avoir sous cette forme :</p>  
+                <Container className="Focus">
+                    <MathJaxDisplay toShow={equForA3}  /> 
+                </Container>
             </>
 }
 

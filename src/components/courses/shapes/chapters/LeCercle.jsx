@@ -2,14 +2,16 @@ import React from 'react';
 import { Container } from 'react-bootstrap';
 import MathJaxDisplay from '../../../mathjax-display/MathJaxDisplay';
 import MathJaxInline from '../../../mathjax-display/MathJaxInline';
-import ImageZoom from '../../ImageZoom';
-
+import ImageZoom from '../../helpers/ImageZoom';
+import Title1 from '../../helpers/Title1';
 import circleTurnAround from '../assets/circleTurnAround.png'
 import circleAreaCalculus from '../assets/circleAreaCalculus.png'
 import circleAreaCalculus2 from '../assets/circleAreaCalculus2.png';
 
 import Link from '../../../immutable/nav/Link';
-import CoursesLinks from '../../CoursesLinks';
+import PagesConstants from '../../../immutable/nav/PagesConstants';
+import CoursesConstants from '../../helpers/CoursesConstants';
+import pathBuilder from '../../../helpers/pathBuilder';
 
 const LeCercle = () => {
 
@@ -48,12 +50,12 @@ const LeCercle = () => {
     return (
         <>
             <p>
-                Le cercle est caractérisé par sa relation avec <Link link={CoursesLinks.PI} >le nombre π (Pi)</Link>.
+                Le cercle est caractérisé par sa relation avec <Link url={pathBuilder(`${PagesConstants.COURS}${CoursesConstants.PI}`)} external>le nombre π (Pi)</Link>.
                 π n'est autre que la rapport de la circonférence (périmètre) sur le diamètre.
                 {"\n"}Cette valeur vaut environ 3,14. Mais c'est une valeur approchée...
             </p>
 
-            <p className="Title1">Le périmètre du cercle</p>
+            <Title1 title={"a) Le périmètre du cercle"} />
             <p>π se caractérise par le rapport du périmètre sur le diamètre comme ceci :</p>
             <MathJaxDisplay toShow={pOverD} demo />
              <p>Soit</p>
@@ -71,7 +73,7 @@ const LeCercle = () => {
                 <MathJaxDisplay toShow={pCercle4} />
             </Container>
 
-            <p className="Title1">La surface du cercle</p>
+            <Title1 title={"b) La surface du cercle"} />
             <p>π se caractérise par le rapport de la surface sur le rayon comme ceci :</p>
             <MathJaxDisplay toShow={aOverR} demo />
             <p>Soit</p>

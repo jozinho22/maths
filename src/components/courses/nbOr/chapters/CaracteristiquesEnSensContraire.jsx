@@ -2,15 +2,15 @@ import React from 'react';
 import { Container } from 'react-bootstrap';
 import MathJaxDisplay from '../../../mathjax-display/MathJaxDisplay';
 import MathJaxInline from '../../../mathjax-display/MathJaxInline';
-
+import Title2 from '../../helpers/Title2';
 import FibonacciTableInBothSenses from '../helpers/FibonacciTableInBothSenses';
 
 const CaracteristiquesEnSensContraire = () => {
 
     var phi22 =  "\\(\\phi^2 = \\phi + 1  \\)";
 
-    var phiMain = "\\(F_{n+1} = F_{n} + F_{n-1} \\)";
-    var phiMainReverse = "\\( F_{n-1} = F_{n+1} - F_{n} \\)";
+    var phiMain = "\\(F_{n+2} = F_{n+1} + F_{n} \\)";
+    var phiMainReverse = "\\( F_{n} = F_{n+2} - F_{n+1} \\)";
 
     var f0 = "\\( F_{0} = F_{2} - F_{1} \\)";
     var f01 = "\\( F_{0} = 1 - 1 \\)";
@@ -46,47 +46,48 @@ const CaracteristiquesEnSensContraire = () => {
 
     return (
             <>             
-                <p className="Title1">Caractéristiques du nombre d'or en sens contraire</p>
-                <p>En effet, avec la formule ci-dessous</p>
-                <MathJaxDisplay toShow={phiMain} demo/>
+                <p>En effet, avec la formule vue précédemment :</p>
+                <Container className="Focus">
+                    <MathJaxDisplay toShow={phiMain} />
+                </Container>
                 <p>On peut l'arranger pour aller en sens contraire</p>
                 <MathJaxDisplay toShow={phiMainReverse} demo/>
                 <p>À ce moment là, on peut calculer par exemple <MathJaxInline toShow={"$F_{0}$"} />, puis  <MathJaxInline toShow={"$F_{-1}$"} />,  <MathJaxInline toShow={"$F_{-2}$"} /> ...etc.</p>
                 <MathJaxDisplay toShow={f0} demo/>
                 <MathJaxDisplay toShow={f01} demo/>
-                <Container className="Focus">
+                <Container className="Focus LittleFocus">
                     <MathJaxDisplay toShow={f02} />
                 </Container>
                 <MathJaxDisplay toShow={fMinus1} demo/>
                 <MathJaxDisplay toShow={fMinus11} demo/>
-                <Container className="Focus">
+                <Container className="Focus LittleFocus">
                     <MathJaxDisplay toShow={fMinus12} />
                 </Container>
                 <MathJaxDisplay toShow={fMinus2} demo/>
                 <MathJaxDisplay toShow={fMinus21} demo/>
-                <Container className="Focus">
+                <Container className="Focus LittleFocus">
                     <MathJaxDisplay toShow={fMinus22} />
                 </Container>
                 <MathJaxDisplay toShow={fMinus3} demo/>
                 <MathJaxDisplay toShow={fMinus31} demo/>
-                <Container className="Focus">
+                <Container className="Focus LittleFocus">
                     <MathJaxDisplay toShow={fMinus32} />
                 </Container>
                 <p>Voici les éléments de la suite ajoutée de leur mirroir</p>
                 <FibonacciTableInBothSenses />
                 
-                <p className="Title2">Calcul de <MathJaxInline toShow={"$\\phi^{-1}$"} /></p>
+                <Title2 title={`Calcul de ${<MathJaxInline toShow={"$\\phi^{-1}$"} />}`} />
                 <p>On sait que : </p>
                 <MathJaxDisplay toShow={phi22} demo/>
                 <p>Divisons tout par <MathJaxInline toShow={"$\\phi$"} /> pour transformer <MathJaxInline toShow={"$1$"} /> en <MathJaxInline toShow={"$\\frac{1}{\\phi}$"} /></p>
                 <MathJaxDisplay toShow={phiPowMinus1} demo/>
                 <MathJaxDisplay toShow={phiPowMinus11} demo/>
                 <p>Soit :</p>
-                <Container className="Focus">
+                <Container className="Focus LittleFocus">
                     <MathJaxDisplay toShow={phiPowMinus12} />
                 </Container>
               
-                <p className="Title2">Calcul de <MathJaxInline toShow={"$\\phi^{-2}$"} /></p>
+                <Title2 title={`Calcul de ${<MathJaxInline toShow={"$\\phi^{-2}$"} />}`} />
                 <p>On sait que : </p>
                 <MathJaxDisplay toShow={phiPowMinus2} demo/>
                 <p>Soit que </p>
@@ -94,11 +95,11 @@ const CaracteristiquesEnSensContraire = () => {
                 <p>On divise encore tout par <MathJaxInline toShow={"$\\phi$"} /></p>
                 <MathJaxDisplay toShow={phiPowMinus22} demo/>
                 <MathJaxDisplay toShow={phiPowMinus23} demo/>
-                <Container className="Focus">
+                <Container className="Focus LittleFocus">
                     <MathJaxDisplay toShow={phiPowMinus24} />
                 </Container>
 
-                <p className="Title2">Calcul de <MathJaxInline toShow={"$\\phi^{-3}$"} /></p>
+                <Title2 title={`Calcul de ${<MathJaxInline toShow={"$\\phi^{-3}$"} />}`} />
                 <p>On sait que : </p>
                 <MathJaxDisplay toShow={phiPowMinus3} demo/>
                 <p>Soit que </p>
@@ -106,7 +107,7 @@ const CaracteristiquesEnSensContraire = () => {
                 <p>On divise encore tout par <MathJaxInline toShow={"$\\phi$"} /></p>
                 <MathJaxDisplay toShow={phiPowMinus32} demo/>
                 <MathJaxDisplay toShow={phiPowMinus33} demo/>
-                <Container className="Focus">
+                <Container className="Focus LittleFocus">
                     <MathJaxDisplay toShow={phiPowMinus34} />
                 </Container>
             </>

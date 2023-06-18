@@ -1,18 +1,18 @@
 const useRabbitsEvolution = () => {
    
-    var values = [];
+    var rabbitsValues = [];
     var k = 0;
 
-    for(k; k < 12; k++) {
-        values.push(
+    for(k; k < 14; k++) {
+        rabbitsValues.push(
             {
                 id: k + 1,
-                nb: (values[k-2] ? values[k-2].nb : 0) + (values[k-1] ? values[k-1].nb : 1)
+                nb: (rabbitsValues[k-2] ? rabbitsValues[k-2].nb : 0) + (rabbitsValues[k-1] ? rabbitsValues[k-1].nb : 1)
             }
         );
     }
 
-    return values;
+    return rabbitsValues;
 
 };
 

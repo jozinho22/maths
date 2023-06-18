@@ -1,10 +1,21 @@
 import { Container, Button } from 'react-bootstrap';
+import { NavLink } from 'react-router-dom';
+import PagesConstants from '../../immutable/nav/PagesConstants';
+import pathBuilder from '../../helpers/pathBuilder';
+import MainTitle from '../../immutable/MainTitle';
 
 const LevelsTableOfContents = ( {title, levels, launchGame} ) => {
 
     return (
         <>
-            {title ? <p className="MainTitle">{title}</p> : <></>}
+            <div className="FlexButton">
+                <NavLink to={pathBuilder(PagesConstants.JEUX)} >
+                    <Button className="DefaultButton GreenButton" >
+                        Tous les jeux
+                    </Button> 
+                </NavLink>
+            </div> 
+            {title ? <MainTitle title={title} /> : <></>}
             <Container className="GamesContainer">
                 {
                     levels.map(level => (

@@ -13,33 +13,10 @@
     } 
 }
 
-.CoursesContainer p {
-    text-align: justify;
-    margin-left: 100px;
-    margin-right: 100px;
-} 
-
-@media (width < 450px) {
-    .CoursesContainer p {
-        text-align: justify;
-        margin-left: 10px;
-        margin-right: 10px;
-    }
-}
-
-
-@media (min-width: 1268px) {
-   .CoursesContainer p, a {
-        font-size: large;
-    } 
-}
-
-.CoursesContainer a {
-    color : #0d6efd;
-}
-
 .ZoomContainer {
     position: relative;
+    width: 100%;
+    padding-bottom: 10px;
 }
 
 .CoursesContainer img {
@@ -52,10 +29,6 @@
         margin-top: 20px;
         margin-bottom: 20px;
     }
-}
-
-.ZoomContainer {
-    padding-bottom: 10px;
 }
 
 .ZoomContainer figcaption {
@@ -78,7 +51,13 @@
 }
 
 .ZoomContainer img {
-    width: 50%;;
+    width: 40%;
+}
+
+@media (width < 768px) {
+    .ZoomContainer img {
+        width: 50%;
+    }
 }
 
 @media (width < 450px) {
@@ -113,16 +92,22 @@
     color: var(--green-color);
 }
 
+.Focus {
+    border-color: var(--navbar-color);
+}
+
 .Focus, .FocusDefault, .FocusGreen, .FocusRed {
     border-width: 2px;
-    border-style: solid;
-    /* border-color: var(--front-color); */
-    border-color: var(--navbar-color);
+    border-style: solid;   
     width: fit-content;
     display: table;
     margin: 0 auto;
     padding: 0px 5px 0px 5px;
     margin-bottom: 20px;
+}
+
+.Darcula .Focus {
+    border-color: var(--links-color);
 }
 
 .FocusDefault {
@@ -149,6 +134,11 @@
     }
 }
 
+.LittleFocus {
+    border-width: 1px;
+    border-style: dashed;
+}
+
 .Ref {
     display: inline-block !important;
 }
@@ -167,6 +157,19 @@
     margin-bottom: 20px;
 }
 
-.Title {
+.CenterTitle {
     margin : 0px auto !important;
+    text-decoration: none;
 }
+
+/* .ChapterTitle {
+    visibility: hidden;
+} */
+
+
+@media (min-width: 450px) {
+    .CoursesContainer .NiceTableContainer {
+        width: 80%;
+    }
+}
+

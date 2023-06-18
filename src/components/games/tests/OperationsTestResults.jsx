@@ -4,22 +4,24 @@ import OperationsTestResultsList from './OperationsTestResultsList';
 import { OperationsTestContext } from './OperationsTest';
 import LevelsTableOfContents from './LevelsTableOfContents';
 
+import NiceTable from '../../immutable/NiceTable';
+import MainTitle from '../../immutable/MainTitle';
+
 const OperationsTestResults = () => {
 
     const {questions, user, levels, launchGame} = React.useContext(OperationsTestContext);
 
     return (
         <>
-            <p className="MainTitle">Résultats</p>
+            <MainTitle title={"Résultats"} />
             <Container className="ResultsContainer">
-
-                <Table className="OperationsTestResults">
+                <NiceTable className="OperationsTestResults">
                     <thead>
                         <tr>
-                            {/* <th>Question</th>
+                            <th>Question</th>
                             <th>Vous avez répondu</th>
                             <th>Résultat</th>
-                            <th>La bonne réponse</th> */}
+                            <th>La bonne réponse</th> 
                         </tr>
                     </thead>
                     <tbody>
@@ -31,11 +33,10 @@ const OperationsTestResults = () => {
                             />
                         ))}
                     </tbody>
-                </Table>
-
+                </NiceTable>
             </Container> 
 
-            <p className="Title">Score : {user.score}/{questions.length}</p>
+            <p className="CenterTitle">Score : {user.score}/{questions.length}</p>
             <br></br>
             <div>Une autre ?</div>
             <br></br>

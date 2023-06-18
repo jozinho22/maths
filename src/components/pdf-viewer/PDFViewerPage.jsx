@@ -5,19 +5,21 @@ import { NavLink } from 'react-router-dom';
 import BootstrapSwitchButton from 'bootstrap-switch-button-react'
 
 import PDF from "react-pdf-js";
-import PaginationPageByPage from './PaginationPageByPage';
-import PaginationFullDocument from './PaginationFullDocument';
+import PaginationPageByPage from './helpers/PaginationPageByPage';
+import PaginationFullDocument from './helpers/PaginationFullDocument';
 import AppContext from '../context/AppContext'
 
 import Link from '../immutable/nav/Link';
-import CoursesLinks from '../courses/CoursesLinks';
+import CoursesConstants from '../courses/helpers/CoursesConstants';
 import CustomHelmet from '../immutable/seo/CustomHelmet';
 import Constants from '../immutable/Constants';
 import { useSwipeable } from 'react-swipeable';
 
 import './PDFViewerPage.css';
 import './styles/Canevas.css';
-import HiddenTitle from '../immutable/seo/HiddenTitle';
+import pathBuilder from '../helpers/pathBuilder';
+import PagesConstants from '../immutable/nav/PagesConstants';
+import MainTitle from '../immutable/MainTitle';
 
 const PDFViewerPage = ({ pdfItem }) => {
 
@@ -99,15 +101,14 @@ const PDFViewerPage = ({ pdfItem }) => {
         }, [page, pagesList]);
 
         return (
-          <> 
-            <CustomHelmet title={pdfItem.title} metaContent={pdfItem.metaContent} canonicalUrl={`${Constants.WEB_APP_URL}/bds-de-jpp/${pdfItem.relativePath}`}/>
-            <HiddenTitle title={pdfItem.hiddenTitle} />
-            <NavLink to={"/"}>
+          <Container className="PdfViewerContainer"> 
+            <CustomHelmet title={pdfItem.title} metaContent={pdfItem.metaContent} canonicalUrl={`${Constants.WEB_APP_URL}${PagesConstants.BDS_DE_JPP}${pdfItem.relativePath}`}/>
+            <NavLink to={pathBuilder("/")}>
                 <Button className="DefaultButton ReturnHomeButton" onClick={() => undoPlayMode()}>
                     Home
                 </Button>
             </NavLink>
-            <NavLink to={"/bds-de-jpp"} onClick={() => undoPlayMode()}>
+            <NavLink to={pathBuilder(PagesConstants.BDS_DE_JPP)} onClick={() => undoPlayMode()}>
                 <Button className="DefaultButton UnPlayModeButton" >
                     Toutes les BDs
                 </Button>
@@ -129,7 +130,7 @@ const PDFViewerPage = ({ pdfItem }) => {
 
             }
           
-            <p className="MainTitle PdfTitle">{pdfItem.title}</p>
+           <MainTitle title={pdfItem.title} />
 
             {
                 pdfItem.type === 'courses' ?
@@ -203,8 +204,8 @@ const PDFViewerPage = ({ pdfItem }) => {
                         </>
                 }
 
-                <p className="AuthorCopyRight">Avec l'accord de Mr Petit - <Link link={CoursesLinks.SAVOIR_SANS_FRONTIERES} >toutes ses BDs</Link></p>     
-          </>     
+                <p className="AuthorCopyRight">Avec l'accord de Mr Petit - <Link url={CoursesConstants.CoursesConstants} >toutes ses BDs</Link></p>     
+          </Container>     
         );
       }
 

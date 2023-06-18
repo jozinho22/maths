@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container, Button } from 'react-bootstrap';
 import MathJaxDisplay from '../../../mathjax-display/MathJaxDisplay';
+import Title1 from '../../helpers/Title1';
 
 const Exercices = () => {
 
@@ -42,7 +43,7 @@ const Exercices = () => {
 
     return (
         <>
-            <p className="Title1">Exo 1</p>
+            <Title1 title={"Exo 1"} />
             <p>On sait que 1 kg = 1 000 g.
                 {"\n"}Combien fait 3000 kg convertit en g ?
             </p>
@@ -63,7 +64,7 @@ const Exercices = () => {
                 <MathJaxDisplay toShow={answerExo1Results} demo />
             </Container>
 
-            <p className="Title1">Exo 2</p>
+            <Title1 title={"Exo 2"} />
             <p>
                 Ma voiture diesel consomme 3 litre / (100 km).
                 {"\n"}Combien me faut-il de litre d’essence pour aller jusqu’à Paris depuis Rennes ?
@@ -80,7 +81,7 @@ const Exercices = () => {
                 <MathJaxDisplay toShow={answerExo2Results} demo />
             </Container>
 
-            <p className="Title1">Exo 2-b</p>
+            <Title1 title={"Exo 3"} />
             <p>
                 Sachant que le gasoil vaut 1,45 € / litre, combien cela va-t-il me coûter pour un aller-retour Paris-Rennes ?
             </p>

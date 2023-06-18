@@ -1,11 +1,11 @@
 import { Container } from 'react-bootstrap';
 import MathJaxDisplay from '../../../mathjax-display/MathJaxDisplay';
 import MathJaxInline from '../../../mathjax-display/MathJaxInline';
-import Aside from '../../Aside';
+import Aside from '../../helpers/Aside';
+import Title2 from '../../helpers/Title2';
 
 const EquationsDuSecondDegre = () => {
 
-    var mobile = document.body.offsetWidth < 450;
 
     var equSecondDeg = "\\(f(x) = ax^2 + bx + c \\)";
     var equSecondDegEquals0 = "\\( ax^2 + bx + c = 0 \\)";
@@ -37,16 +37,14 @@ const EquationsDuSecondDegre = () => {
     var x2Calculus3 = "\\( x_2  = \\frac{-b - \\sqrt{\\Delta}}{2a} \\)";
 
 
-    var fact = "\\( a (x - x_1)(x - x_2) = 0 \\)";
-    
+    var factX1X2 = "\\( a (x - x_1)(x - x_2) = 0 \\)";
+    var factX0 = "\\( a (x - x_0)^2 = 0 \\)";
+
     var factEntirely = "\\( a \\Biggl( x - \\biggl(\\frac{- b + \\sqrt{b^2 - 4ac}}{2a} \\biggr) \\Biggr) \\Biggl( x - \\biggl(\\frac{- b - \\sqrt{b^2 - 4ac}}{2a} \\biggr) \\Biggr) = 0\\)";
-    var factEntirelyMobile = "\\( \\displaylines { a \\Biggl( x - \\biggl(\\frac{- b + \\sqrt{b^2 - 4ac}}{2a} \\biggr) \\Biggr) \\\\ . \\Biggl( x - \\biggl(\\frac{- b - \\sqrt{b^2 - 4ac}}{2a} \\biggr) \\Biggr) = 0 } \\)";
     
     var devAfterFact = "\\( a \\Biggl( x^2 - x . \\biggl(\\frac{- b + \\sqrt{b^2 - 4ac}}{2a} \\biggr) - x . \\biggl( \\frac{- b - \\sqrt{b^2 - 4ac}}{2a} \\biggr)  + \\frac{b^2}{4a^2} - \\frac{b^2 - 4ac}{4a^2}  \\Biggr) = 0 \\)";
-    var devAfterFactMobile = "\\( \\displaylines { a \\Biggl( x^2 - x . \\biggl(\\frac{- b + \\sqrt{b^2 - 4ac}}{2a} \\biggr) \\\\ - x . \\biggl( \\frac{- b - \\sqrt{b^2 - 4ac}}{2a} \\biggr)  \\\\ + \\frac{b^2}{4a^2} - \\frac{b^2 - 4ac}{4a^2}  \\Biggr) = 0 } \\)";
     
     var factByX = "\\( a \\Biggl( x^2 - x . \\biggl(\\frac{-2b}{2a} \\biggr) + \\frac{b^2 - b^2 + 4ac}{4a^2} \\Biggr) = 0\\)";
-    var factByXMobile = "\\(  \\displaylines { a \\Biggl( x^2 - x . \\biggl(\\frac{-2b}{2a} \\biggr) + \\\\ \\frac{b^2 - b^2 + 4ac}{4a^2} \\Biggr) = 0 } \\)";
 
     return  <>
                 <p>
@@ -102,32 +100,36 @@ const EquationsDuSecondDegre = () => {
                 </Container>
                 <p><MathJaxInline toShow={"$x_1$"} /> et <MathJaxInline toShow={"$x_2$"} /> sont alors deux solutions possibles vérifiant <MathJaxInline toShow={"$f(x) = 0$"} />.</p>
                 
-                <p className="Title2">Trois cas possibles : </p>
-                <p><MathJaxInline toShow={"$\\underline{\\Delta > 0}$"} /></p>
+                <Title2 title={"Trois cas possibles :"} />
+                <p><MathJaxInline toShow={"$\\underline{cas \\enspace 1 : \\Delta > 0}$"} /></p>
                 <p>Dans le cas où <MathJaxInline toShow={"$\\Delta > 0$"} />, l'équation admet bien deux solutions distinctes. </p>
                 <p>On alors peut écrire l'équation <MathJaxInline toShow={"$(1)$"} /> sous la forme : </p>
                 <Container className="Focus">
-                    <MathJaxDisplay toShow={fact} fRef={6} />
+                    <MathJaxDisplay toShow={factX1X2} fRef={6} />
                 </Container>
 
-                <p><MathJaxInline toShow={"$\\underline{\\Delta = 0}$"} /></p>
+                <p><MathJaxInline toShow={"$\\underline{cas \\enspace 2 : \\Delta = 0}$"} /></p>
                 <p>Dans le cas où <MathJaxInline toShow={"$\\Delta = 0$"} />, les deux racines sont équivalentes à : </p>
                 <Container className="Focus">
                     <MathJaxDisplay toShow={x0} />
                 </Container>
                 <p>On les appelle racines doubles.</p>
+                 <p>On alors peut écrire l'équation <MathJaxInline toShow={"$(1)$"} /> sous la forme : </p>
+                <Container className="Focus">
+                    <MathJaxDisplay toShow={factX0} />
+                </Container>
 
-                <p><MathJaxInline toShow={"$\\underline{\\Delta < 0}$"} /></p>
+                <p><MathJaxInline toShow={"$\\underline{cas \\enspace 3 : \\Delta < 0}$"} /></p>
                 <p>Dans le cas où <MathJaxInline toShow={"$\\Delta < 0$"} />, l'équation n'a pas de solutions dans <MathJaxInline toShow={"$\\mathbb{R}$"} /> car la fonction <MathJaxInline toShow={"$\\sqrt{x}$"} /> n'est définie que sur <MathJaxInline toShow={"$ [ 0 ; +\\infty[ (\\mathbb{R^+})$"} />. </p>
     
-                <p className="Title2">Vérification de la forme factorisée</p>
+                <Title2 title={"Vérification de la forme factorisée"} />
                 <p>Nous allons maintenant redévelopper notre expression pour voir si notre hypothèse s'avère être juste.</p>
                 <p>On injecte <MathJaxInline toShow={"$(4)$"} /> et <MathJaxInline toShow={"$(5)$"} /> dans <MathJaxInline toShow={"$(6)$"} />  : </p>
-                <MathJaxDisplay toShow={mobile ? factEntirelyMobile : factEntirely} demo />
+                <MathJaxDisplay toShow={factEntirely} demo />
                 <p>On développe : </p>
-                <MathJaxDisplay toShow={mobile ? devAfterFactMobile : devAfterFact} demo />
+                <MathJaxDisplay toShow={devAfterFact} demo />
                 <p>On factorise par <MathJaxInline toShow={"$x$"} /> à l'intérieur des parenthèses : </p>
-                <MathJaxDisplay toShow={mobile ? factByXMobile : factByX} demo />
+                <MathJaxDisplay toShow={factByX} demo />
                 <MathJaxDisplay toShow={equSecondDegEquals0Fact} demo /> 
                 <p>En redéveloppant, on retrouve bien notre expression de départ.</p>
                 <MathJaxDisplay toShow={equSecondDegEquals0} fRef={1} demo />

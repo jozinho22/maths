@@ -4,10 +4,11 @@ import MathJaxDisplay from '../../../mathjax-display/MathJaxDisplay';
 import MathJaxInline from '../../../mathjax-display/MathJaxInline';
 import { LineChart, XAxis, YAxis, ReferenceLine, ResponsiveContainer, CartesianGrid, Tooltip, Line } from 'recharts';
 import ImageZoom from '../../ImageZoom';
-
+import Title1 from '../../helpers/Title1';
 import coefficientDirecteurCalculus from '../assets/coefficientDirecteurCalculus.png';
 import differentsCoefDirecteurs from '../assets/differentsCoefDirecteurs.png';
 import ordonneeAtOrigin from '../assets/ordonneeAtOrigin.png';
+import Title2 from '../../helpers/Title2';
 
 const AspectDesEquationsDuSecondDegre = () => {
 
@@ -86,7 +87,7 @@ const AspectDesEquationsDuSecondDegre = () => {
                     Les fonctions qui sont de type <MathJaxInline toShow={"$f(x) = ax^2 + bx + c $"} /> sont appelées fonctions polynômes, et forment des paraboles dont <MathJaxInline toShow={"$a$"} /> va déterminer le sens.
                 </p>
 
-                <p className="Title1">a) Aspect dans un repère</p>
+                <Title1 title={"a) Aspect dans un repère"} />
                 <Container className={`GraphTitle Focus${f.color}`}>
                     <MathJaxDisplay 
                         toShow={"\\(f(x) = " + f.mathJaxTitle + " \\)"} 
@@ -134,40 +135,15 @@ const AspectDesEquationsDuSecondDegre = () => {
                     <Button className="DefaultButton MiniButton" onClick={() => setB(b + 1)} >+</Button>
 
                     <Button className="DefaultButton MiniButton" onClick={() => setC(c - 1)} >-</Button>
-                    <MathJaxInline toShow={`$b= ${c}$`} />
+                    <MathJaxInline toShow={`$c= ${c}$`} />
                     <Button className="DefaultButton MiniButton" onClick={() => setC(c + 1)} >+</Button>
                 </div>
 
-
-                <p className="Title1">b) Explications des nombres <MathJaxInline toShow={"$a$"} /> et <MathJaxInline toShow={"$b$"} /></p>
+                <Title1 title={"b) Explications des nombres a et <MathJaxInline b"} />
                 <p><MathJaxInline toShow={"$a$"} /> est appelé coefficient directeur, il donnera l'aspect de la droite.</p>
                 <p><MathJaxInline toShow={"$b$"} /> est appelé l'ordonnée à l'origine, il sera le résultat de <MathJaxInline toShow={"$f(0)$"} />.</p>
                 
-                <p className="Title2">Le coefficient directeur <MathJaxInline toShow={"$a$"} /></p>
-                <p>Le coefficient directeur détermine le taux de variation de la droite, il est aussi appelé pente car comme une pente sur une route, on observe de combien on monte comparé à ce que l'on avance horizontalement.</p>
-                <p>Il se détermine de la manière suivante : </p>
-                <p>Il suffit de prendre deux points <MathJaxInline toShow={"$A(x_a; y_a)$"} /> et <MathJaxInline toShow={"$B(x_b; y_b)$"} /> de la droite, et de calculer le ratio de leur différence.</p>
-                <MathJaxDisplay toShow={tauxVar} demo />  
-                <MathJaxDisplay toShow={tauxVar2} demo />          
-                <ImageZoom src={coefficientDirecteurCalculus} name="Calcul du coefficient directeur" n={++n} />
-                <p>Il n'y pas d'importance ici dans l'ordre des points car si l'on inverse l'ordre, les signes <MathJaxInline toShow={"$-$"} /> s'annuleront au dénominateur et au numérateur.</p>
-                <p>
-                    Si <MathJaxInline toShow={"$a > 0$"} />, la droite sera croissante.
-                    {"\n"}
-                    Si <MathJaxInline toShow={"$a < 0$"} />, la droite sera décroissante.
-                    {"\n"}
-                    Enfin si <MathJaxInline toShow={"$a = 0$"} />, la droite sera plate.
-                </p>
-                <ImageZoom src={differentsCoefDirecteurs} name="Aspect des droites selon différents coefficients directeurs" n={++n} />
-                <p>Si <MathJaxInline toShow={"$b=0 $"} />, la droite passera par l'origine <MathJaxInline toShow={"$ (0 ; 0) $"} />.</p>
                 
-                <p className="Title2">L'ordonnée à l'origine <MathJaxInline toShow={"$b$"} /></p>
-                <p>L'ordonnée à l'origine sera simplement le résultat de <MathJaxInline toShow={"$f(0)$"} />.</p>
-                <p>Effectivement, pour <MathJaxInline toShow={"$x = 0$"} /> :</p>
-                <MathJaxDisplay toShow={ordAtOrigin} demo />
-                <p>Soit :</p>
-                <MathJaxDisplay toShow={ordAtOrigin2} demo />
-                <ImageZoom src={ordonneeAtOrigin} name="L'ordonnée à l'origine" n={++n} />
             </>
 }
 

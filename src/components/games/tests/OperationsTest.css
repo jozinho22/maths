@@ -1,6 +1,6 @@
 /* Home */
 .GamesContainer button {
-    width: 30%;
+    width: 70%;
 }
 
 @media (width < 450px) {
@@ -23,9 +23,18 @@
     width: 90%;
 }
 
+.Darcula .QuestionContainer {
+    color: var(--simple-text-color);
+}
+
 .QuestionContainer .col {
     padding-left: 2px;
     padding-right: 0px;
+}
+
+.Enounce, .AnswerDisplay {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: x-large;
 }
 
 @media (min-width : 450px) {
@@ -37,9 +46,6 @@
     .CiferKeyboard {
         width: 150px;
     }
-    .Enounce, .AnswerDisplay {
-        font-size: medium;
-    }
 }
 
 @media (min-width : 768px) {
@@ -47,22 +53,33 @@
         font-size: large;
         width: 400px;
     }
-    .Enounce, .AnswerDisplay {
-        font-size: large;
-    }
+
 }
 
 .OperationsAlert {
     height: 30px;
 }
+
 .AnswerDisplay {
     width: 30%;
     text-align: center;
 }
 
 .CiferKeyboard {
-    margin-top: 10px;
     width: 200px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: small;
+}
+
+.CiferKeyboard .col {
+    padding: 5px;
+}
+
+.CiferKeyboard .KeyboardButton {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
 .KeyboardButton {
@@ -102,14 +119,12 @@
 
 .ResultsContainer {
     font-size: small;
-    width : 100%;
     margin-top: 30px;
 }
 
 @media (min-width: 450px) {
     .ResultsContainer{
         font-size: large;
-        width : 70%;
     }
 }
 
@@ -118,10 +133,6 @@
         font-size: large;
         width : 80%;
     }
-}
-
-.OperationsTestResults {
-    color: var(--simple-text-color);
 }
 
 .OperationsTestResults td p {
@@ -134,19 +145,8 @@
     width: 60%;
 }
 
-.AnswersResults {
-    text-align: center;
-    font-size: x-small;
-}
-
 .GoodAnswer {
     color: var(--green-color);
-}
-
-@media (min-width: 450px) {
-    .AnswersResults, .GoodAnswer {
-        font-size: small;
-    }
 }
 
 @media (min-width: 450px) {
