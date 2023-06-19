@@ -21,14 +21,24 @@
     padding-bottom: 40px;
 }
 
+p {
+    padding-top: 10px;
+    hyphens: auto;
+}
+
 p, h3, h4 {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     text-align: justify;
     white-space: pre-line;
     margin-left: 100px;
     margin-right: 100px;
-    margin-top: 10px;
     font-size: large;
+}
+
+@media(width < 450px) {
+    p {
+        padding-top: 5px;
+    }
 }
 
 h1, h2 {
@@ -278,12 +288,11 @@ a:hover {
     text-decoration: none !important;
 }
 
-@media (min-width: 450px) {
+@media (max-width: 450px) {
     .TableOfContentsLink {
         transform: translateX(-20%);
     }
 }
-
 
 .TableOfContentsLink p {
     font-family: var(--scholar-font);
@@ -292,6 +301,12 @@ a:hover {
     color: var(--simple-text-color);
     text-decoration: none !important;
     margin-bottom: 25px;
+}
+
+@media (max-width: 450px) {
+    .TableOfContentsLink p {
+        font-size: medium;
+    }
 }
 
 a:-webkit-any-link {

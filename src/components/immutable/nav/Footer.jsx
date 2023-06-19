@@ -69,9 +69,6 @@ const Footer = () => {
                         </NavDropdown>
                     </Nav>
                 </Navbar.Collapse>        
-                <p className="CopyRight" > 
-                    Copyright &copy; Jozinho {(new Date().getFullYear())}
-                </p>
                 <NavLink to={pathBuilder(PagesConstants.CONTACT)}>
                     <Envelope className="ContactIcon" />
                 </NavLink>

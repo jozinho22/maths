@@ -14,8 +14,10 @@ const FunctionDisplay = ( {f, fData, reduced} ) => {
         return "\\(f(x) = " + exp + " \\)";
     }
 
+    console.log(fData)
+
     return <>
-            <Container className={`GraphTitle Focus${f.themeColor ? f.themeColor :"Green"} ${reduced ? "Reduced" : ""}`}>
+            <Container className={`GraphTitle Focus${f.themeColor ? f.themeColor :"Green"}`}>
                 <MathJaxDisplay 
                     toShow={getGraphTitle(f.mathJaxTitle)} 
                     color={f.themeColor ? f.themeColor :"Green"}/>    
@@ -24,7 +26,7 @@ const FunctionDisplay = ( {f, fData, reduced} ) => {
             <ResponsiveContainer 
                 width="100%" 
                 aspect={f.aspect} 
-                className="Graph">
+                className={`Graph ${reduced ? "Reduced" : ""}`}>
                 <LineChart
                     data={fData}
                     margin={{ top: 5, right: 20, bottom: 5, left: 0 }} >
@@ -36,8 +38,13 @@ const FunctionDisplay = ( {f, fData, reduced} ) => {
                     <XAxis 
                         dataKey="x" 
                         interval={f.xInterval} 
-                        domain={f.domain && f.domain.length > 0 ? f.domain : [-f.scale, f.scale]}/>
-                    <YAxis />
+                        domain={f.xDomain} />
+                    <YAxis 
+                        dataKey="y" 
+                        type="number"
+                        domain={f.yDomain}
+                        allowDecimals={false} 
+                        allowDataOverflow={false} />
                     <Tooltip labelStyle={{backgroundColor: "silver"}} contentStyle={{backgroundColor: "silver"}} itemStyle={{backgroundColor: "silver"}} wrapperStyle={{backgroundColor: "dimgray"}}/> 
                     <ReferenceLine x={0} stroke={Constants.RED_COLOR} />
                     <ReferenceLine y={0} stroke={Constants.RED_COLOR} />

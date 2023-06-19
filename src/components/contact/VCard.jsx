@@ -32,7 +32,7 @@ const VCard = () => {
                         <p>
                             Professeur de mathématiques à domicile depuis dix ans, j'ai décidé de créer ce site pour apporter un support documentaire aux élèves.
                             <br /><br />
-                            J'ai de même eu l'opportunité de dispenser des cours aux élèves de <Link link={gdsLink} >l'école démocratique de Brocéliande</Link>.
+                            J'ai de même eu l'opportunité de dispenser des cours aux élèves de <Link url={gdsLink} external>l'école démocratique de Brocéliande</Link>.
                             <br /><br />
                             Développeur de métier par ailleurs, il est possible d'apporter une introduction à la programmation durant les cours.
                             <br /><br/>

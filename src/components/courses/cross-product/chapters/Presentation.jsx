@@ -3,6 +3,7 @@ import { Container,Button } from 'react-bootstrap';
 import MathJaxDisplay from '../../../mathjax-display/MathJaxDisplay';
 import MathJaxInline from '../../../mathjax-display/MathJaxInline';
 import Title1 from '../../helpers/Title1';
+import Constants from '../../../immutable/Constants';
 
 const Presentation = () => {
 
@@ -90,7 +91,7 @@ const Presentation = () => {
                 Posons comme hypothèse que pour tout <MathJaxInline toShow={"$a,b,c,d \\neq 0$"} />
             </p>
             <MathJaxDisplay toShow={abcdBase} demo />
-            <p style={{color: "red"}}>Rappel : il est interdit de diviser par 0 !</p>
+            <p style={{color: Constants.RED_COLOR}}>Rappel : il est interdit de diviser par 0 !</p>
             <p>
                 Le produit en croix nous dit que :
             </p>
@@ -140,7 +141,7 @@ const Presentation = () => {
             <MathJaxDisplay toShow={abcdBase} demo />
             <MathJaxDisplay toShow={divByA} demo />
             <MathJaxDisplay toShow={divByAResult} demo />
-            <p>De même, si je multiplie tout par <MathJaxInline toShow={"$d$"} /></p>
+            <p>De même, si on multiplie tout par <MathJaxInline toShow={"$d$"} /></p>
             <MathJaxDisplay toShow={multByD} demo />
             <MathJaxDisplay toShow={multByDResults} demo />
             <p>

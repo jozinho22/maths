@@ -82,8 +82,15 @@
         width: 50% !important;
         height: 50% !important;
     }
+    .CoursesContainer .Graph.Reduced {
+        width: 30% !important;
+        height: 30% !important;
+    }
     .CoursesContainer .Graph .recharts-wrapper {
         left: 45%;
+    }
+    .CoursesContainer .Graph.Reduced .recharts-wrapper {
+        left: 100%;
     }
     .CoursesContainer .UsualFunctionsContainer .Graph {
         width: 90% !important;
@@ -93,6 +100,25 @@
         left: 5%;
     }
 }
+
+
+@media (max-width: 450px) {
+    .CoursesContainer .Graph {
+        width: 100% !important;
+        height: 100% !important;
+    }
+    .CoursesContainer .Graph .recharts-wrapper {
+        left: -5%;
+    }
+    .CoursesContainer .UsualFunctionsContainer .Graph {
+        width: 120% !important;
+        height: 120% !important;
+    }
+    .CoursesContainer .UsualFunctionsContainer .Graph .recharts-wrapper {
+        left: -15%;
+    }
+}
+
 
 @media (max-width: 450px) {
     .CoursesContainer .recharts-wrapper {

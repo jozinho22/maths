@@ -9,18 +9,26 @@ const AspectDesEquationsDuSecondDegre = () => {
     const [a, setA] = React.useState(2);
     const [b, setB] = React.useState(-3);
     const [c, setC] = React.useState(1);
+    const [scale, setScale] = React.useState(12);
 
-    var mobile = document.body.offsetWidth < 450;
+    const [zoomed, setZoomed] = React.useState(false);
+
+    const zoom = () => {
+        setScale(zoomed ? 12 : 6);
+        setZoomed(!zoomed);
+    }
 
     var f = 
         {
-            mathJaxTitle: `${a === 0 || a === 1 || a === -1 ? "" : a} ${a === 0 ? "" : a === -1 ? "-x^2" : "x^2"} ${b > 0 && a !== 0 ? "+" : "" } ${b === 0 ? "" : `${b}x`} ${c > 0 && b !== 0 ? "+" : "" } ${c === 0 ? "" : c}`,
+            mathJaxTitle: `${a === 0 || a === 1 || a === -1 ? "" : a} ${a === 0 ? "" : a === -1 ? "-x^2" : "x^2"} ${b > 0 && a !== 0 ? "+" : "" } ${b === 0 ? "" : `${b}x`} ${c > 0 && (a !== 0 || b !== 0) ? "+" : "" } ${c === 0 ? "" : c}`,
             color: "Green",
             formula: (x) => {return a*x*x + b*x + c},
-            scale : 10,
+            xDomain:[-scale, scale],
+            yDomain:[-100, 100],
+            scale : scale,
             step : 1,
-            xInterval: 1,
-            aspect: 1.5
+            xInterval: scale/6,
+            aspect: 1
         }
 
     const [fData, setFData] = React.useState({});
@@ -43,7 +51,7 @@ const AspectDesEquationsDuSecondDegre = () => {
             x = x + step;
         } 
         setFData(datas);
-    }, [a, b]);
+    }, [a, b, c, zoomed]);
 
     return  <>
                 <p>
@@ -52,7 +60,13 @@ const AspectDesEquationsDuSecondDegre = () => {
 
                 <Title1 title={"a) Aspect dans un repère"} />
 
-                <FunctionDisplay f={f} fData={fData} />
+                <FunctionDisplay f={f} fData={fData} reduced />
+
+                <div className="FlexButton">
+                    <Button className="DefaultButton GreenButton" onClick={zoom}>
+                        {zoomed ? "Zoom out" : "Zoom in"}
+                    </Button> 
+                </div> 
              
                 <p>Tentez-vous même de changer les valeurs pour voir comment la droite se comporte dans un repère :</p>
 

@@ -63,26 +63,32 @@
 
 /* .dropdown-menu (l'ensemble) */
 .CustomNav .dropdown-menu {
-  background-color : var(--navbar-color);
-  border: 0px;
-  max-height: 400px;
-  overflow-y: auto;
-  overflow-x: hidden;
+    background-color : var(--navbar-color);
+    border: 0px;
+    max-height: 400px;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 /* dropdown-toggle (le titre du toggle) */
 .CustomNav .dropdown-toggle {
-  margin-bottom: 0px !important;
+    margin-bottom: 0px !important;
+}
+
+@media (width < 450px) {
+    .CustomNav .dropdown-toggle   {
+        font-size: smaller !important;
+    }
 }
 
 .CustomNav .dropdown-toggle.show {
-  color: var(--grey-lighter-color) !important;
+    color: var(--grey-lighter-color) !important;
 }
 
 /* dropdown-item (les sous-titres du toogle) */
 .CustomNav .dropdown-item {
-  padding: 10px;
-  text-align: center;
+    padding: 10px;
+    text-align: center;
 }
 
 .CustomNav .dropdown-item.active, .CustomNav .dropdown-item:hover {

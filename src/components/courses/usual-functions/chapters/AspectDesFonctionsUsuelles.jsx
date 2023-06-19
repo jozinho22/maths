@@ -21,41 +21,41 @@ const AspectDesFonctionsUsuelles = () => {
  
     React.useEffect(() => {
 
-        var scale = f.scale;
-        var step = f.step;
+        if(!isEmpty(f)) {
+            var scale = f.xDomain[1];
+            var step = f.step;
 
-        var it = scale / step;
+            var it = scale / step;
 
-        var x;
-        if(!f.beginAtZero) {
-            x = -scale;
-        } else {
-            x = 0;
-            it = it / 2;
-        }        
-
-        var datas = []
-        for(var k = -it; k <= it; k++) {
-            if(f.type === 'trigo') {
-                var num = new Fractionnal.Fraction(x / Math.PI).numerator
-                var den = new Fractionnal.Fraction(x / Math.PI).denominator
-                let d = {
-                    x: num + `${den !== 1 ? "/" + den :""}` + 'π',
-                    y: f.formula(x)
-                }
-                datas.push(d);
-                x = x + step;
+            var x;
+            if(!f.beginAtZero) {
+                x = -scale;
             } else {
-                let d = {
-                    x: Math.floor(x),
-                    y: x !== f.exclude ? f.formula(x) : undefined
-                }
-                datas.push(d);
-                x = x + step;
-            }
-        } 
+                x = 0;
+            }     
 
-        setFData(datas);
+            var datas = []
+            for(var k = -it; k <= it; k++) {
+                if(f.type === 'trigo') {
+                    var num = new Fractionnal.Fraction(x / Math.PI).numerator
+                    var den = new Fractionnal.Fraction(x / Math.PI).denominator
+                    let d = {
+                        x: (num === 0 ? 0 : (num === -1 ? '-π' : num === 1 ? 'π' : num + 'π') + (den !== 1 ? "/" + den : "")),
+                        y: f.formula(x)
+                    }
+                    datas.push(d);
+                    x = x + step;
+                } else {
+                    let d = {
+                        x: f.type === 'sensible' ? x : Math.round(x),
+                        y: (x !== f.exclude ? (f.type === 'sensible' ?  Math.round(f.formula(x) * 100) / 100 : Math.round(f.formula(x))) : undefined)
+                    }
+                    datas.push(d);
+                    x = Math.round((x + step)* 100) / 100;
+                }
+            } 
+            setFData(datas);
+        }
     }, [f]);
 
     const getButtonTitle = (exp) => {
@@ -111,6 +111,9 @@ const AspectDesFonctionsUsuelles = () => {
                         <div className="FunctionAttributesValue">
                             <MathJaxDisplay 
                             toShow={f.definition} 
+                            color={f.themeColor}/> 
+                            <MathJaxDisplay 
+                            toShow={f.definition2} 
                             color={f.themeColor}/> 
                         </div> 
 

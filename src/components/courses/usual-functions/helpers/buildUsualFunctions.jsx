@@ -38,7 +38,8 @@ const buildUsualFunctions = () => {
                 themeColor: getFunctionThemeColor(i),
                 graphColor: getFunctionGraphColor(i),
                 formula: (x) => {return x*x},
-                definition: "\\(\\xi = ]-\\infty; +\\infty[ \\hspace{4cm} (\\mathbb{R} )\\)",
+                definition: "\\(\\xi = ]-\\infty; +\\infty[  \\)",
+                definition2: "\\(\\xi = \\mathbb{R} \\)",
                 derivative: "2x",
                 primitive: "\\frac{x^3}{3} + K",
                 limits: [
@@ -54,9 +55,10 @@ const buildUsualFunctions = () => {
                     }
 
                 ],
-                scale : 10,
+                xDomain: [-10, 10],
+                yDomain: [0, 100],
                 step : 1,
-                xInterval: 4,
+                xInterval: 1,
                 aspect: 1
             },
             {
@@ -65,7 +67,8 @@ const buildUsualFunctions = () => {
                 themeColor: getFunctionThemeColor(i),
                 graphColor: getFunctionGraphColor(i),
                 formula: (x) => {return x*x*x},
-                definition: "\\(\\xi = ]-\\infty; +\\infty[ \\hspace{4cm} (\\mathbb{R}) \\)",
+                definition: "\\(\\xi = ]-\\infty; +\\infty[ \\)",
+                definition2: "\\(\\xi = \\mathbb{R} \\)",
                 derivative: "3x^2",
                 primitive: "\\frac{x^4}{4} + K",
                 limits: [
@@ -81,7 +84,8 @@ const buildUsualFunctions = () => {
                     }
 
                 ],
-                scale : 10,
+                xDomain: [-10, 10],
+                yDomain: [0, 1000],
                 step : 1,
                 xInterval: 1,
                 aspect: 1
@@ -92,7 +96,8 @@ const buildUsualFunctions = () => {
                 themeColor: getFunctionThemeColor(i),
                 graphColor: getFunctionGraphColor(i),
                 formula: (x) => {return Math.sqrt(x)},
-                definition: "\\(\\xi = [ 0 ; +\\infty[ \\hspace{4cm} (\\mathbb{R^+}) \\)",
+                definition: "\\(\\xi = [ 0 ; +\\infty[ \\hspace{4cm} \\)",
+                definition2: "\\(\\xi = \\mathbb{R^+} \\)",
                 derivative: "\\frac{1}{2\\sqrt{x}}",
                 primitive: "\\frac{2x^{\\frac{3}{2}}}{3} + K",
                 limits: [
@@ -103,8 +108,10 @@ const buildUsualFunctions = () => {
                     }
 
                 ],
-                scale : 100,
-                step : 1,
+                type: 'sensible',
+                xDomain: [0, 5],
+                yDomain: [0, 5],
+                step : 0.1,
                 xInterval: 9,
                 beginAtZero: true,
                 aspect: 2
@@ -115,14 +122,15 @@ const buildUsualFunctions = () => {
                 themeColor: getFunctionThemeColor(i),
                 graphColor: getFunctionGraphColor(i),
                 formula: (x) => {return Math.exp(x)},
-                definition: "\\(\\xi = ]-\\infty ; +\\infty[  \\hspace{4cm}(\\mathbb{R})\\)",
+                definition: "\\(\\xi = ]-\\infty ; +\\infty[ \\)",
+                definition2: "\\(\\xi = \\mathbb{R} \\)",
                 derivative: "e^x",
                 primitive: "e^x+ K",
                 limits: [
                     {
                         id: j++,
                         where: "-\\infty",
-                        value: "-\\infty"
+                        value: "0"
                     },
                     {
                         id: j++,
@@ -131,9 +139,11 @@ const buildUsualFunctions = () => {
                     }
 
                 ],
-                scale : 3,
+                type: 'sensible',
+                xDomain: [-5, 5],
+                yDomain: [0, 100],
                 step : 1,
-                xInterval: 1,
+                xInterval: 0,
                 aspect: 1
             },
             {
@@ -142,7 +152,8 @@ const buildUsualFunctions = () => {
                 themeColor: getFunctionThemeColor(i),
                 graphColor: getFunctionGraphColor(i),
                 formula: (x) => {return Math.log(x)},
-                definition: "\\(\\xi = ] 0 ; +\\infty[ \\hspace{4cm} (\\mathbb{R^{+*}}) \\)",
+                definition: "\\(\\xi = ] 0 ; +\\infty[ \\)",
+                definition2: "\\(\\xi = \\mathbb{R^{+*}} \\)",
                 derivative: "\\frac{1}{x}",
                 primitive: "x(ln(x) - 1) + K",
                 limits: [
@@ -157,9 +168,11 @@ const buildUsualFunctions = () => {
                         value: "+\\infty"
                     }
                 ],
-                scale : 10,
+                type: 'sensible',
+                xDomain: [0, 5],
+                yDomain: [-3, 3],
                 step : 0.1,
-                xInterval: 10,
+                xInterval: 9,
                 beginAtZero: true,
                 exclude: 0,
                 aspect: 2
@@ -170,7 +183,8 @@ const buildUsualFunctions = () => {
                 themeColor: getFunctionThemeColor(i),
                 graphColor: getFunctionGraphColor(i),
                 formula: (x) => {return 1 / x},
-                definition: "\\(\\xi =  ]-\\infty ; 0[\\bigcup] 0 ; +\\infty[ \\hspace{4cm} (\\mathbb{R^{*}})\\)",
+                definition: "\\(\\xi =  ]-\\infty ; 0[\\bigcup] 0 ; +\\infty[ \\)",
+                definition2: "\\(\\xi = \\mathbb{R^{*}} \\)",
                 derivative: "-\\frac{1}{x^2}",
                 primitive: "ln(|x|) + K",
                 limits: [
@@ -195,10 +209,11 @@ const buildUsualFunctions = () => {
                         value: "0^{+}"
                     }
                 ],
-                scale : 10,
-                domain:[-10, 10],
-                step : 1,
-                xInterval: 10,
+                type: 'sensible',
+                xDomain: [-5, 5],
+                yDomain: [-5, 5],
+                step : 0.1,
+                xInterval: 9,
                 exclude: 0,
                 aspect: 1
             },
@@ -208,15 +223,16 @@ const buildUsualFunctions = () => {
                 themeColor: getFunctionThemeColor(i),
                 graphColor: getFunctionGraphColor(i),
                 formula: (x) => {return Math.cos(x)},
-                definition: "\\(\\xi  = ]-\\infty ; +\\infty[ \\hspace{4cm} (\\mathbb{R})\\)",
+                definition: "\\(\\xi  = ]-\\infty ; +\\infty[ \\)",
+                definition2: "\\(\\xi = \\mathbb{R} \\)",
                 derivative: "-sin(x)",
                 primitive: "sin(x) + K",
                 type: 'trigo',
-                scale : 2*Math.PI,
-                domain:[-Math.PI, Math.PI],
+                xDomain: [-2*Math.PI, 2*Math.PI],
+                yDomain: [-1, 1],
                 step : Math.PI/4,
                 xInterval: 1,
-                aspect: 2.5
+                aspect: 3
             },
             {
                 id: ++i,
@@ -224,15 +240,16 @@ const buildUsualFunctions = () => {
                 themeColor: getFunctionThemeColor(i),
                 graphColor: getFunctionGraphColor(i),
                 formula: (x) => {return Math.sin(x)},
-                definition: "\\(\\xi = ]-\\infty ; +\\infty[ \\hspace{4cm} (\\mathbb{R})\\)",
+                definition: "\\(\\xi = ]-\\infty ; +\\infty[\\)",
+                definition2: "\\(\\xi = \\mathbb{R} \\)",
                 derivative: "cos(x)",
                 primitive: "-cos(x) + K",
                 type: 'trigo',
-                scale : 2*Math.PI,
-                domain:[-Math.PI, Math.PI],
+                xDomain: [-2*Math.PI, 2*Math.PI],
+                yDomain: [-1, 1],
                 step : Math.PI/4,
                 xInterval: 1,
-                aspect: 2.5
+                aspect: 3
             }
         ]
 }

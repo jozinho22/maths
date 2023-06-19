@@ -19,7 +19,6 @@
     color: var(--simple-text-color);
     padding: 30px;
     text-align: justify;
-    hyphens: auto;
     transition: transform 2s linear, visibility 0s linear 1s;
     cursor: pointer;
 }
@@ -54,6 +53,10 @@
     transform:
       rotateY(180deg);
     visibility: hidden;
+}
+
+.VCardRecto a {
+    color: var(--back-color);
 }
 
 .VCardVerso {
