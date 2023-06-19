@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/maths/static/css/main.23f65813.css",
-    "main.js": "/maths/static/js/main.0fc7fb9f.js",
+    "main.css": "/maths/static/css/main.e29ea562.css",
+    "main.js": "/maths/static/js/main.1c44ba86.js",
     "static/js/787.727f4605.chunk.js": "/maths/static/js/787.727f4605.chunk.js",
     "static/media/energetiquementVotre.pdf": "/maths/static/media/energetiquementVotre.ae46a881d6240ff7c375.pdf",
     "static/media/bigBang.pdf": "/maths/static/media/bigBang.9a7278fe34a3a9cbd1fe.pdf",
@@ -32,8 +32,10 @@
     "static/media/circleTrigoValues.png": "/maths/static/media/circleTrigoValues.55196b1b99267412d12d.png",
     "static/media/sphereVolCalculus.png": "/maths/static/media/sphereVolCalculus.801808ebc0ce771699ab.png",
     "static/media/coneAreaCalculus.png": "/maths/static/media/coneAreaCalculus.e34828a6c19f128c7e8a.png",
+    "static/media/pythagoreDemo2.png": "/maths/static/media/pythagoreDemo2.d32329243efba6f9043c.png",
     "static/media/derivativeBetterApprox.png": "/maths/static/media/derivativeBetterApprox.6d439efae4403b496b79.png",
     "static/media/circleAreaCalculus.png": "/maths/static/media/circleAreaCalculus.22c94f07dec374819cde.png",
+    "static/media/pythagoreDemo1.png": "/maths/static/media/pythagoreDemo1.6acd81d463369ac1bf19.png",
     "static/media/circleTrigo.png": "/maths/static/media/circleTrigo.2f073218bfbda5e3454a.png",
     "static/media/mediatrices.png": "/maths/static/media/mediatrices.6d3caa7e43e586983ea3.png",
     "static/media/circleAreaCalculus2.png": "/maths/static/media/circleAreaCalculus2.f1aa6d9a1b68e3193d38.png",
@@ -47,24 +49,25 @@
     "static/media/coefficientDirecteurCalculus.png": "/maths/static/media/coefficientDirecteurCalculus.051064cb8d84f6ebc2ca.png",
     "static/media/alKashiDemo.png": "/maths/static/media/alKashiDemo.a48d6dae615aef86b49a.png",
     "static/media/derivativeBetterBetterApprox.png": "/maths/static/media/derivativeBetterBetterApprox.144e66bae3d2a0c2a070.png",
+    "static/media/pythagoreReciproqueDemo.png": "/maths/static/media/pythagoreReciproqueDemo.9558ef22a27ac989c49c.png",
     "static/media/heights2.png": "/maths/static/media/heights2.444d385da33e5d1d17ad.png",
     "static/media/circleTurnAround.png": "/maths/static/media/circleTurnAround.c19c2efeb002ea30e70e.png",
     "static/media/circlePi.png": "/maths/static/media/circlePi.eb2f06e8e2af3110d305.png",
     "static/media/triangleSinusRelation.png": "/maths/static/media/triangleSinusRelation.a1e7d72576c1563ffbb5.png",
+    "static/media/sohcahtoa.png": "/maths/static/media/sohcahtoa.d7a0277ec992de0aa58e.png",
     "static/media/triangleSinusRelationDemo.png": "/maths/static/media/triangleSinusRelationDemo.cbe836ef02052fbdd6d9.png",
     "static/media/coneVolCalculus.png": "/maths/static/media/coneVolCalculus.8aedfc481f3305f6029d.png",
     "static/media/cone.png": "/maths/static/media/cone.932f2d629b76bceb7075.png",
     "static/media/ordonneeAtOrigin.png": "/maths/static/media/ordonneeAtOrigin.2ce7a6739aa96ece5798.png",
     "static/media/triangles.png": "/maths/static/media/triangles.fdd26930039530a6e929.png",
-    "static/media/pythagoreDemo2.png": "/maths/static/media/pythagoreDemo2.d59eafd0a52ebbe5bca2.png",
     "static/media/medianes.png": "/maths/static/media/medianes.f43b5dfe908b3022a3cb.png",
     "index.html": "/maths/index.html",
-    "main.23f65813.css.map": "/maths/static/css/main.23f65813.css.map",
-    "main.0fc7fb9f.js.map": "/maths/static/js/main.0fc7fb9f.js.map",
+    "main.e29ea562.css.map": "/maths/static/css/main.e29ea562.css.map",
+    "main.1c44ba86.js.map": "/maths/static/js/main.1c44ba86.js.map",
     "787.727f4605.chunk.js.map": "/maths/static/js/787.727f4605.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.23f65813.css",
-    "static/js/main.0fc7fb9f.js"
+    "static/css/main.e29ea562.css",
+    "static/js/main.1c44ba86.js"
   ]
 }
