@@ -9,7 +9,6 @@ import coefficientDirecteurCalculus from '../assets/coefficientDirecteurCalculus
 import derivativeBetterApprox from '../assets/derivativeBetterApprox.png';
 import derivativeBetterBetterApprox from '../assets/derivativeBetterBetterApprox.png';
 
-
 const Presentation = () => {
 
     var n = 0;
