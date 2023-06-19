@@ -6,7 +6,6 @@ import FormulesDeDuplication from './chapters/FormulesDeDuplication';
 import FormulesDeLinearisation from './chapters/FormulesDeLinearisation';
 import LaTangente from './chapters/LaTangente';
 import ValeursDeTan from './chapters/ValeursDeTan';
-import DeriveesDeSinEtCos from './chapters/DeriveesDeSinEtCos';
 
 const getTrigoChapters = () => {
 
@@ -54,13 +53,6 @@ const getTrigoChapters = () => {
             title: 'Formules de linéarisation',
             metaContent: 'Les formules des sinus et cosinus impliquant une linéarisation.',
             relativePath: '/formules-de-linearisation'
-        },
-        {
-            id: k++,
-            component: <DeriveesDeSinEtCos />,
-            title: 'Dérivées de sinus et cosinus',
-            metaContent: 'Les dérivées des sinus et cosinus et le détail du calcul.',
-            relativePath: '/derivees'
         },
         {
             id: k++,

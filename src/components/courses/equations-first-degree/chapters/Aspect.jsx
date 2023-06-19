@@ -11,7 +11,7 @@ import Title1 from '../../helpers/Title1';
 import Title2 from '../../helpers/Title2';
 import FunctionDisplay from '../../usual-functions/helpers/FunctionDisplay';
 
-const AspectDesEquationsDuPremierDegre = () => {
+const Aspect = () => {
 
     const [a, setA] = React.useState(1);
     const [b, setB] = React.useState(1);
@@ -141,4 +141,4 @@ const AspectDesEquationsDuPremierDegre = () => {
             </>
 }
 
-export default AspectDesEquationsDuPremierDegre;
+export default Aspect;

@@ -4,8 +4,7 @@ import MathJaxInline from '../../../mathjax-display/MathJaxInline';
 import Aside from '../../helpers/Aside';
 import Title2 from '../../helpers/Title2';
 
-const EquationsDuSecondDegre = () => {
-
+const Resolution = () => {
 
     var equSecondDeg = "\\(f(x) = ax^2 + bx + c \\)";
     var equSecondDegEquals0 = "\\( ax^2 + bx + c = 0 \\)";
@@ -137,4 +136,4 @@ const EquationsDuSecondDegre = () => {
 
 }
 
-export default EquationsDuSecondDegre;
+export default Resolution;

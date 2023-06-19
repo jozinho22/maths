@@ -9,7 +9,7 @@ import CoursesConstants from '../../helpers/CoursesConstants';
 import Title1 from '../../helpers/Title1';
 import Title2 from '../../helpers/Title2';
 
-const InequationsDuPremierDegre = () => {
+const Inequations = () => {
 
     var equBase = "\\(f(x) = 2x + 3\\)";
     var equBaseWithMinus = "\\(f(x) = -2x + 3\\)";
@@ -120,4 +120,4 @@ const InequationsDuPremierDegre = () => {
             </>
 }
 
-export default InequationsDuPremierDegre;
+export default Inequations;

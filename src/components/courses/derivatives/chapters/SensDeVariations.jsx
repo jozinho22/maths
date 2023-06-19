@@ -5,7 +5,7 @@ import ImageZoom from '../../helpers/ImageZoom';
 import Title1 from '../../helpers/Title1';
 import derivativeSquareFunctionSensVar from '../assets/derivativeSquareFunctionSensVar.png';
 
-import TableauDeSignesEtDeVariationsTable from '../../helpers/TableauDeSignesEtDeVariationsTable';
+import GenericMathsNiceTable from '../../helpers/GenericMathsNiceTable';
 import useTableauDeVariationsFonctionCarreeValues from '../helpers/useTableauDeVariationsFonctionCarreeValues';
 import useTableauDeVariationsGenericValues from '../helpers/useTableauDeVariationsGenericValues';
 
@@ -28,11 +28,11 @@ const SensDeVariations = () => {
                 
                 
                 <p>Dans notre cas, voici son tableau de variation :</p>
-                <TableauDeSignesEtDeVariationsTable tableValues={useTableauDeVariationsFonctionCarreeValues()} />
+                <GenericMathsNiceTable tableValues={useTableauDeVariationsFonctionCarreeValues()} />
 
                 <Title1 title={"Cas générique"} />
                 <p>Voici le cas générique avec par exemple deux racines (c'est-à-dire deux valeurs de <MathJaxInline toShow={"$x$"} /> pour lesquelles la fonction dérivée <MathJaxInline toShow={"$f'$"} /> s'annule) : </p>
-                <TableauDeSignesEtDeVariationsTable tableValues={useTableauDeVariationsGenericValues()} />
+                <GenericMathsNiceTable tableValues={useTableauDeVariationsGenericValues()} />
             </>
 }
 

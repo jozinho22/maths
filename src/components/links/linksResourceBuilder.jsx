@@ -33,6 +33,12 @@ function urlsResourceBuilder() {
       title: 'Le site de Gérard Villemin',
       desc: 'Le site Gérard Villemin contenant de nombreuses publications, notamment en mathématiques, en sciences, ainsi que des énigmes et des mystères mathématiques.'
     }
+    var mathLinux = {
+      id: i++,
+      url: 'https://www.math-linux.com/mathematiques/',
+      title: 'Math Linux',
+      desc: 'Un site dédié à Linux, au code et aux mathématiques.'
+    }
     var depannOnLine = {
       id: i++,
       url: 'https://www.depannonline.xyz/',
@@ -52,6 +58,7 @@ function urlsResourceBuilder() {
         integralCalc,
         savoirSansFrontieres,
         gerardVillemin,
+        mathLinux,
         sujetsBrevetsMath,
         depannOnLine
       );

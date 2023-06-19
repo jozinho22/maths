@@ -4,7 +4,7 @@ import MathJaxInline from '../../../mathjax-display/MathJaxInline';
 import Title1 from '../../helpers/Title1';
 import FunctionDisplay from '../../usual-functions/helpers/FunctionDisplay';
 
-const AspectDesEquationsDuSecondDegre = () => {
+const Aspect = () => {
 
     const [a, setA] = React.useState(2);
     const [b, setB] = React.useState(-3);
@@ -86,4 +86,4 @@ const AspectDesEquationsDuSecondDegre = () => {
             </>
 }
 
-export default AspectDesEquationsDuSecondDegre;
+export default Aspect;

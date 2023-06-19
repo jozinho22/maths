@@ -20,6 +20,7 @@ const Presentation = () => {
 
     var limTauxVar = "\\(a = lim_{ h \\to 0} \\enspace \\frac{f(x_0+h) - f(x_0)}{h}\\)";
     var limTauxVar2 = "\\(f'(x) = lim_{h \\to 0} \\enspace  \\frac{f(x+h) - f(x)}{h}\\)";
+
     var leibnizNotation = "\\(f'(x) \\Leftrightarrow \\frac{df}{dx}\\)";
 
     return  <>
@@ -53,7 +54,7 @@ const Presentation = () => {
                      <MathJaxDisplay toShow={tauxVar4} />  
                 </Container>
 
-                <Title1 title={"b) Première approximation"} />
+                <Title1 title={"b) Première approximation de la dérivée"} />
                 <p>Nous allons à présent réduire cette distance <MathJaxInline toShow={"$ h $"} /> qui sépare nos deux points sur l’axe des abscisses.
                 </p>
                 <ImageZoom src={derivativeBetterApprox} name="Première approximation de la dérivée" n={++n} />
@@ -63,7 +64,7 @@ const Presentation = () => {
                     courbe.
                 </p>
 
-                <Title1 title={"c) Meilleure approximation"} />
+                <Title1 title={"c) Meilleure approximation de la dérivée"} />
                 <p>
                     De la même manière, nous allons encore réduire la distance <MathJaxInline toShow={"$ h $"} />
                     celle-ci s’approche de <MathJaxInline toShow={"$ 0 $"} />.
@@ -91,6 +92,9 @@ const Presentation = () => {
                 <Container className="Focus">
                      <MathJaxDisplay toShow={leibnizNotation} />  
                 </Container>
+
+                <Title1 title={"d) Condition à la dérivabilité"} />
+                <p>On dit qu'une fonction est dérivable si et seulement si le nombre dérivée <MathJaxInline toShow={"$ f'(a) $"} /> au point d'abscisse <MathJaxInline toShow={"$ a $"} /> est un nombre réel.</p>
             </>
 }
 

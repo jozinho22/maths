@@ -1,8 +1,7 @@
-import EquationsDuSecondDegre from './chapters/EquationsDuSecondDegre';
+import Resolution from './chapters/Resolution';
 import RelationEntreCoefficientsEtRacines from './chapters/RelationEntreCoefficientsEtRacines';
-import AspectDesEquationsDuSecondDegre from './chapters/AspectDesEquationsDuSecondDegre';
-
-import TableauxDeSigneEtDeVariationsDuSecondDegre from './chapters/TableauxDeSignesEtDeVariationsDuSecondDegre';
+import Aspect from './chapters/Aspect';
+import TableauxDeSignesEtDeVariations from './chapters/TableauxDeSignesEtDeVariations';
 
 const getEquationsSecondDegreeChapters = () => {
 
@@ -11,7 +10,7 @@ const getEquationsSecondDegreeChapters = () => {
     return [      
         {
             id: k++,
-            component: <EquationsDuSecondDegre />,
+            component: <Resolution />,
             title: 'Résolution d\'équations',
             metaContent: 'Résolution d\'équations du second degré : explications.',
             relativePath: '/resolution'
@@ -25,14 +24,14 @@ const getEquationsSecondDegreeChapters = () => {
         },
         {
             id: k++,
-            component: <AspectDesEquationsDuSecondDegre />,
+            component: <Aspect />,
             title: 'Aspect des équations',
             metaContent: 'Aspect des équations du second degré.',
             relativePath: '/aspect'
         },
         {
             id: k++,
-            component: <TableauxDeSigneEtDeVariationsDuSecondDegre />,
+            component: <TableauxDeSignesEtDeVariations />,
             title: 'Tableaux de signes et de variations',
             metaContent: 'Tableaux de signes et de variations.',
             relativePath: '/tableaux-de-signes-et-de-variations'

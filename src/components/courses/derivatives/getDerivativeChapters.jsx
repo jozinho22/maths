@@ -1,4 +1,3 @@
-
 import Presentation from "./chapters/Presentation";
 import DeriveeSurDesOperations from "./chapters/DeriveeSurDesOperations";
 import SensDeVariations from "./chapters/SensDeVariations";
@@ -6,6 +5,8 @@ import DeriveeDeXPuissanceN from "./chapters/DeriveeDeXPuissanceN";
 import DeriveeDeXCarre from "./chapters/DeriveeDeXCarre";
 import DeriveeDeRacineDeX from "./chapters/DeriveeDeRacineDeX";
 import EquationDeLaTangente from "./chapters/EquationDeLaTangente";
+import DeriveesDeSinEtCos from "./chapters/DeriveesDeSinEtCos";
+import DeriveeDeFonctionComposee from "./chapters/DeriveeDeFonctionComposee";
 
 const getDerivativeChapters = () => {
 
@@ -31,7 +32,7 @@ const getDerivativeChapters = () => {
             component: <DeriveeSurDesOperations />,
             title: 'Dérivée d\'une somme, d\'un produit ou d\'un quotient de fonctions',
             metaContent: 'Dérivées d\'opérations de fonctions : dérivée d\'une somme, d\'un produit ou d\'un quotient de fonctions : formule et démonstration.',
-            relativePath: '/derivee-d-operations-de-fonctions'
+            relativePath: '/derivees-d-operations-de-fonctions'
         },
         {
             id: k++,
@@ -60,8 +61,21 @@ const getDerivativeChapters = () => {
             title: 'Dérivée de x à la puissance n',
             metaContent: 'Dérivée de x à la puissance n : démonstration.',
             relativePath: '/derivee-de-x-puissance-n'
+        },
+        {
+            id: k++,
+            component: <DeriveesDeSinEtCos />,
+            title: 'Dérivées de sinus et cosinus',
+            metaContent: 'Les dérivées des sinus et de cosinus : démonstration.',
+            relativePath: '/derivee-de-sin-et-cos'
+        },
+        {
+            id: k++,
+            component: <DeriveeDeFonctionComposee />,
+            title: 'Dérivée de fonction composée',
+            metaContent: 'Dérivée de fonction composée : démonstration.',
+            relativePath: '/derivee-fonction-composee'
         }
-        
     ];
 }
 

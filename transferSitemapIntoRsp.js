@@ -1,16 +1,12 @@
-
 var fs = require('fs');
 var parse = require('xml-parser');
 var xml = fs.readFileSync('./public/sitemap.xml', 'utf8');
-var inspect = require('util').inspect;
+/* var inspect = require('util').inspect; */
  
-var xmlSitemap = inspect(parse(xml), { colors: true, depth: Infinity })
-/* console.log(xmlSitemap);
- */
+/* var xmlSitemap = inspect(parse(xml), { colors: true, depth: Infinity }) */
+
 var xmlDoc = parse(xml)
 
-/* console.log(xmlDoc.root.children);
- */
 var rspJson = {
     routes: [],
     engine : {
@@ -33,7 +29,7 @@ for(var url of xmlDoc.root.children) {
 
 console.log(rspJson) 
 console.log("----------") 
-console.log(rspJson.routes.length + " urls") 
+console.log(rspJson.routes.length + " urls dans le rsp.json") 
 
 fs.writeFile ('.rsp.json', JSON.stringify(rspJson), function(err) {
     if (err) throw err;

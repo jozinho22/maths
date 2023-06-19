@@ -3,11 +3,10 @@ import MathJaxDisplay from '../../mathjax-display/MathJaxDisplay';
 
 import NiceTable from '../../immutable/NiceTable';
 
-const TableauDeSignesEtDeVariationsTable = ( {tableValues} ) => {
+const GenericMathsNiceTable = ( {tableValues} ) => {
 
     return  <>
                 <NiceTable>
-
                     <thead>
                         <tr>
                             <th>
@@ -25,7 +24,6 @@ const TableauDeSignesEtDeVariationsTable = ( {tableValues} ) => {
                             
                         </tr>
                     </thead>
-                    
                     <tbody> 
                         {
                             tableValues.slice(1, tableValues.length).map( (bodyValues, index) => {
@@ -52,4 +50,4 @@ const TableauDeSignesEtDeVariationsTable = ( {tableValues} ) => {
             </>
 }
 
-export default TableauDeSignesEtDeVariationsTable ;
+export default GenericMathsNiceTable ;

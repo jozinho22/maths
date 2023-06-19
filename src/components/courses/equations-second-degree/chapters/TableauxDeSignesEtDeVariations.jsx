@@ -7,7 +7,7 @@ import pathBuilder from '../../../helpers/pathBuilder';
 import PagesConstants from '../../../immutable/nav/PagesConstants';
 
 import CoursesConstants from '../../helpers/CoursesConstants';
-import TableauDeSignesEtDeVariationsTable from '../../helpers/TableauDeSignesEtDeVariationsTable';
+import GenericMathsNiceTable from '../../helpers/GenericMathsNiceTable';
 import useTableauDeSignesDuSecondDegreExempleValues from '../helpers/useTableauDeSignesDuSecondDegreExempleValues';
 import useTableauDeVariationsDuSecondDegreExempleValues from '../helpers/useTableauDeVariationsDuSecondDegreExempleValues';
 import useTableauDeSignesDuSecondDegreGeneriqueValues from '../helpers/useTableauDeSignesDuSecondDegreGeneriqueValues';
@@ -15,7 +15,7 @@ import Title1 from '../../helpers/Title1';
 import Title2 from '../../helpers/Title2';
 import useTableauDeVariationsDuSecondDegreGeneriqueValues from '../helpers/useTableauDeVariationsDuSecondDegreGeneriqueValues';
 
-const TableauxDeSignesEtDeVariationsDuSecondDegre = () => {
+const TableauxDeSignesEtDeVariations = () => {
 
      var equSecondDeg = "\\(f(x) = 2x^2 -3x + 1 \\)";
      var det = "\\( \\Delta = b^2 - 4c\\)";
@@ -74,7 +74,7 @@ const TableauxDeSignesEtDeVariationsDuSecondDegre = () => {
                 <p>C'est cette forme qui va nous servir pour faire le tableau de signe :</p>         
                 
                 <Title2 title={"Tableau de signes"} />
-                <TableauDeSignesEtDeVariationsTable tableValues={useTableauDeSignesDuSecondDegreExempleValues()} />
+                <GenericMathsNiceTable tableValues={useTableauDeSignesDuSecondDegreExempleValues()} />
                 
                 <p>De plus, on a vu dans <Link url={pathBuilder(`${PagesConstants.COURS}${CoursesConstants.DERIVEE}/sens-de-variations`)} external>le chapitre sur le calcul des variations d'une fonction</Link> qu'on peut trouver ses variations grâce à la dérivée.</p>
                 <MathJaxDisplay toShow={deriveeF} demo/> 
@@ -86,17 +86,17 @@ const TableauxDeSignesEtDeVariationsDuSecondDegre = () => {
                 <p>Étudions le signe de cette dérivée, puis trouvons les variations de la fonction.</p> 
                 
                 <Title2 title={"Tableau de variations"} />
-                <TableauDeSignesEtDeVariationsTable tableValues={useTableauDeVariationsDuSecondDegreExempleValues()} />
+                <GenericMathsNiceTable tableValues={useTableauDeVariationsDuSecondDegreExempleValues()} />
 
                 <Title1 title={"b) Cas générique"} />
                 
                 <Title2 title={"Tableau de signes"} />
-                <TableauDeSignesEtDeVariationsTable tableValues={useTableauDeSignesDuSecondDegreGeneriqueValues()} />
+                <GenericMathsNiceTable tableValues={useTableauDeSignesDuSecondDegreGeneriqueValues()} />
 
                 <Title2 title={"Tableau de variations"} />
-                <TableauDeSignesEtDeVariationsTable tableValues={useTableauDeVariationsDuSecondDegreGeneriqueValues()} />
+                <GenericMathsNiceTable tableValues={useTableauDeVariationsDuSecondDegreGeneriqueValues()} />
                     
             </>
 }
 
-export default TableauxDeSignesEtDeVariationsDuSecondDegre;
+export default TableauxDeSignesEtDeVariations;

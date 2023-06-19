@@ -24,6 +24,7 @@ import { getThemeIfStoredThemeExists } from './components/immutable/styles/getTh
 import AppRoutes from './AppRoutes';
 import Fonts from './components/immutable/styles/Fonts';
 import Themes from './components/immutable/styles/Themes';
+import verifyUrlCountInApp from './components/helpers/verifyUrlCountInApp';
 
 function App() {
 
@@ -43,7 +44,14 @@ function App() {
     var courseItems = coursesResourceBuilder();
     var pdfItems = pdfResourceBuilder();
     var gameItems = gamesResourceBuilder();
+
     
+if(process.env.NODE_ENV === 'development') {
+        verifyUrlCountInApp();
+    } 
+
+/*     <Link url={pathBuilder(`${PagesConstants.COURS}${CoursesConstants.DERIVEE}/presentation`)} external>le premier chapitre sur la dérivée</Link>
+ */    
     return ( 
         <>
             <div className="App" id="capture">     

@@ -9,7 +9,7 @@ import PagesConstants from '../../../immutable/nav/PagesConstants';
 import CoursesConstants from '../../helpers/CoursesConstants';
 import Title1 from '../../helpers/Title1';
 
-const EquationsDuPremierDegre = () => {
+const Resolution = () => {
 
     var equPremierDeg = "\\(f(x) = ax + b\\)";
     var equBase = "\\(f(x) = 2x + 3\\)";
@@ -56,4 +56,4 @@ const EquationsDuPremierDegre = () => {
             </>
 }
 
-export default EquationsDuPremierDegre;
+export default Resolution;
