@@ -99,8 +99,23 @@
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://jozinho22.github.io/maths/cours/la-derivee/exemples</loc>
+    <loc>https://jozinho22.github.io/maths/cours/la-derivee/sens-de-variations</loc>
     <lastmod>2023-06-10T19:45:36+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://jozinho22.github.io/maths/cours/la-derivee/derivee-de-x-au-carre</loc>
+    <lastmod>2023-06-19T13:48:00+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://jozinho22.github.io/maths/cours/la-derivee/equation-de-la-tangente</loc>
+    <lastmod>2023-06-19T13:48:00+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://jozinho22.github.io/maths/cours/derivee-de-racine-de-x</loc>
+    <lastmod>2023-06-19T13:48:00+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
@@ -109,8 +124,8 @@
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://jozinho22.github.io/maths/cours/la-derivee/sens-de-variations</loc>
-    <lastmod>2023-06-10T19:45:36+00:00</lastmod>
+    <loc>https://jozinho22.github.io/maths/cours/la-derivee/derivee-de-x-puissance-n</loc>
+    <lastmod>2023-06-19T13:48:00+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <!-- Cours : puissances -->
