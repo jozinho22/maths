@@ -6,8 +6,8 @@
     flex-direction: column;
     align-items: flex-start; */
     /* width: 80%; */
-    max-width: 80vw;
-    
+    min-width: 80vw;
+    /* overflow-x: auto;  */
 }
 
 @media (min-width: 1268px) {
@@ -173,9 +173,10 @@
 } */
 
 
-@media (min-width: 450px) {
-    .CoursesContainer .NiceTableContainer {
-        width: 80%;
-    }
+.CoursesContainer .NiceTableContainer {
+    width: fit-content;
+    overflow-x: auto;
+    max-width: 80vw;
 }
+
 

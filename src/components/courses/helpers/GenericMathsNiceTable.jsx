@@ -20,8 +20,6 @@ const GenericMathsNiceTable = ( {tableValues} ) => {
                                                     </td>
                                         })
                                     }
-                                              
-                            
                         </tr>
                     </thead>
                     <tbody> 
@@ -40,8 +38,6 @@ const GenericMathsNiceTable = ( {tableValues} ) => {
 
                                                         })
                                                     }
-                                                    
-                                             
                                         </tr>
                             })
                         }

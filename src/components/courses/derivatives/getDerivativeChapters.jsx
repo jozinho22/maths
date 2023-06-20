@@ -1,6 +1,8 @@
 import Presentation from "./chapters/Presentation";
 import SensDeVariations from "./chapters/SensDeVariations";
-import DeriveeSurDesOperations from "./chapters/DeriveeSurDesOperations";
+import DeriveeDUneSomme from "./chapters/DeriveeDUneSomme";
+import DeriveeDUnProduit from "./chapters/DeriveeDUnProduit";
+import DeriveeDunQuotient from "./chapters/DeriveeDunQuotient";
 import DeriveeDeConstanteEtFonctionAffine from "./chapters/DeriveeDeConstanteEtFonctionAffine";
 import DeriveeDeXPuissanceN from "./chapters/DeriveeDeXPuissanceN";
 import DeriveeDeXCarre from "./chapters/DeriveeDeXCarre";
@@ -8,6 +10,7 @@ import EquationDeLaTangente from "./chapters/EquationDeLaTangente";
 import DeriveeDeRacineDeX from "./chapters/DeriveeDeRacineDeX";
 import DeriveesDeSinEtCos from "./chapters/DeriveesDeSinEtCos";
 import DeriveeDeFonctionComposee from "./chapters/DeriveeDeFonctionComposee";
+import TableauRecapDesDerivees from "./chapters/TableauRecapDesDerivees";
 
 const getDerivativeChapters = () => {
 
@@ -30,10 +33,24 @@ const getDerivativeChapters = () => {
         },
         {
             id: k++,
-            component: <DeriveeSurDesOperations />,
-            title: 'Dérivée d\'une somme, d\'un produit ou d\'un quotient de fonctions',
-            metaContent: 'Dérivées d\'opérations de fonctions : dérivée d\'une somme, d\'un produit ou d\'un quotient de fonctions : formule et démonstration.',
-            relativePath: '/derivees-d-operations-de-fonctions'
+            component: <DeriveeDUneSomme />,
+            title: 'Dérivée d\'une somme de fonctions',
+            metaContent: 'Dérivée d\'une somme de fonctions : formule et démonstration.',
+            relativePath: '/derivee-d-une-somme-de-fonctions'
+        },
+        {
+            id: k++,
+            component: <DeriveeDUnProduit />,
+            title: 'Dérivée d\'un produit de fonctions',
+            metaContent: 'Dérivée d\'un produit de fonctions : formule et démonstration.',
+            relativePath: '/derivee-d-un-produit-de-fonctions'
+        },
+        {
+            id: k++,
+            component: <DeriveeDunQuotient />,
+            title: 'Dérivée d\'un quotient de fonctions',
+            metaContent: 'Dérivée d\'un quotient de fonctions : formule et démonstration.',
+            relativePath: '/derivee-d-un-quotient-de-fonctions'
         },
         {
             id: k++,
@@ -58,13 +75,6 @@ const getDerivativeChapters = () => {
         },
         {
             id: k++,
-            component: <DeriveeDeRacineDeX />,
-            title: 'Dérivée de la fonction racine de x',
-            metaContent: 'Dérivée de la fonction racine de x : démonstration.',
-            relativePath: '/derivee-de-racine-de-x'
-        },
-        {
-            id: k++,
             component: <DeriveeDeXPuissanceN />,
             title: 'Dérivée de x à la puissance n',
             metaContent: 'Dérivée de x à la puissance n : démonstration.',
@@ -72,10 +82,17 @@ const getDerivativeChapters = () => {
         },
         {
             id: k++,
+            component: <DeriveeDeRacineDeX />,
+            title: 'Dérivée de la fonction racine de x',
+            metaContent: 'Dérivée de la fonction racine de x : démonstration.',
+            relativePath: '/derivee-de-racine-de-x'
+        },
+        {
+            id: k++,
             component: <DeriveesDeSinEtCos />,
             title: 'Dérivées de sinus et cosinus',
             metaContent: 'Les dérivées des sinus et de cosinus : démonstration.',
-            relativePath: '/derivee-de-sin-et-cos'
+            relativePath: '/derivees-de-sin-et-cos'
         },
         {
             id: k++,
@@ -83,6 +100,13 @@ const getDerivativeChapters = () => {
             title: 'Dérivée de fonction composée',
             metaContent: 'Dérivée de fonction composée : démonstration.',
             relativePath: '/derivee-de-fonction-composee'
+        },
+        {
+            id: k++,
+            component: <TableauRecapDesDerivees />,
+            title: 'Tableau récapitulatif des dérivées',
+            metaContent: 'Tableau récapitulatif des dérivées.',
+            relativePath: '/tableau-recap-des-derivees'
         }
     ];
 }

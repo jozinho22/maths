@@ -1,11 +1,11 @@
 import { Container, Button } from 'react-bootstrap';
-import Constants from '../../immutable/Constants';
-import CustomHelmet from '../../immutable/seo/CustomHelmet';
-import pathBuilder from '../../helpers/pathBuilder';
+import Constants from '../immutable/Constants';
+import CustomHelmet from '../immutable/seo/CustomHelmet';
+import pathBuilder from '../helpers/pathBuilder';
 
 import { NavLink } from 'react-router-dom';
-import PagesConstants from '../../immutable/nav/PagesConstants';
-import MainTitle from '../../immutable/MainTitle';
+import PagesConstants from '../immutable/nav/PagesConstants';
+import MainTitle from '../immutable/MainTitle';
 
 const ChaptersTableOfContents = ( {courseItem} ) => {
 

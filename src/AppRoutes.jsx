@@ -1,7 +1,7 @@
 import { Route, Routes } from 'react-router-dom';
 import Home from './components/home/Home';
 import CoursesTableOfContents from './components/courses/CoursesTableOfContents';
-import ChaptersTableOfContents from './components/courses/helpers/ChaptersTableOfContents';
+import ChaptersTableOfContents from './components/courses/ChaptersTableOfContents';
 import GenericChapter from './components/courses/GenericChapter';
 import PdfTableOfContents from './components/pdf-viewer/helpers/PdfTableOfContents';
 import PDFViewerPage from './components/pdf-viewer/PDFViewerPage';

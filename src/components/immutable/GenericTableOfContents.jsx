@@ -3,8 +3,11 @@ import { Container } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 import pathBuilder from '../helpers/pathBuilder';
 import MainTitle from './MainTitle';
+import { useLocation } from 'react-router-dom';
 
 const GenericTableOfContents = ( {items, prefix, title} ) => {
+
+    console.log(useLocation())
 
     return (
         <>

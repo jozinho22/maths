@@ -2,12 +2,6 @@
     white-space: normal
 }  */
 
-.MathJaxDisplay, .Focus {
-    max-width: 100vw !important;
-    height: fit-content;
-    overflow-x: auto;
-    overflow-y: hidden;
-}
 
 mjx-container {
     text-align: justify !important;
@@ -45,12 +39,33 @@ table mjx-container {
     font-size: 23px; 
 }
 
+@media (width > 450px) {
+    .MathJaxDisplay mjx-math {
+        margin-left: 0px !important;
+        text-align: left !important;
+        font-size: 20px !important;
+    }
+    .MathJaxDisplay {
+        max-width: 100vw;
+    }
+}
+
+
 @media (width < 450px) {
     .MathJaxDisplay mjx-math {
         margin-left: 0px !important;
         text-align: left !important;
         font-size: 20px !important;
     }
+    .MathJaxDisplay {
+        max-width: 80vw;
+    }
+}
+
+.MathJaxDisplay, .Focus {
+    height: fit-content;
+    overflow-x: auto;
+    overflow-y: hidden;
 }
 
 .Focus .MathJaxDisplay mjx-math {
@@ -72,6 +87,11 @@ table mjx-container {
     mjx-mtd {
         text-align: left !important;
     }
+}
+
+/* fractions à l'intérieur d'une fraction */
+mjx-mfrac mjx-mfrac {
+    font-size: x-large;
 }
 
 .InfiniteFrac mjx-math {
