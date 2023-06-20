@@ -16,7 +16,7 @@ const VCard = () => {
     const [active, setActive] = React.useState(false);
 
     var gdsLink = 'https://www.bretagne-grainedesens.bzh/';
-    var title = 'Ma carte de visite';
+    var title = 'Ma carte de visite - cours à domicile';
     var metaContent = 'Ma carte de visite : professeur de mathématiques et développeur.';
 
     const rotateY = () => {

@@ -73,7 +73,7 @@ const GenericChapter = ( {chapter, courseItem} ) => {
                 courseRelativePath={courseItem.relativePath} />
             
             <Container id="capture">
-                <MainTitle title={`${courseItem.title}`} />
+                <MainTitle title={`Cours ${courseItem.id + 1} : ${courseItem.title}`} />
                 <MainSubTitle title={`Chapitre ${chapter.id + 1} : ${chapter.title}`} />
                 <div className="CoursesContainer">
                     {chapter.component}        

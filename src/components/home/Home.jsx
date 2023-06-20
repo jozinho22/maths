@@ -8,11 +8,12 @@ import pathBuilder from "../helpers/pathBuilder";
 import PagesConstants from "../immutable/nav/PagesConstants";
 import CoursesConstants from "../courses/helpers/CoursesConstants";
 import Link from "../immutable/nav/Link";
+import MainTitle from "../immutable/MainTitle";
 import './Home.css';
 
 const Home = () => {
 
-    var metaTitle = 'Ma Thématique : page d\'accueil';
+    var metaTitle = 'Page d\'accueil';
     var metaContent = 'Des cours de mathématiques du primaire au lycée, des bandes dessinées de Jean-Pierre Petit, des jeux pour s\'entraîner et la possibilité de cours particuliers.';
     
     return  <>         
@@ -22,6 +23,7 @@ const Home = () => {
                         Ma thématique
                     </Container>
                     <Container className="HomeDescContainer">
+                        <MainTitle title={"Présentation du site"} />
                         <p>Ce site est dédié à l'apprentissage des mathématiques pour tous.</p>
                         <p>
                             Il comprend <Link url={pathBuilder(PagesConstants.COURS)} external>de nombreux cours</Link> allant du collège à la terminale.
