@@ -28,7 +28,7 @@ const getPythagoreChapters = () => {
             component: <DemonstrationDeLaReciproque />,
             title: 'Démonstration de la réciproque théorème de Pythagore',
             metaContent: 'Démonstration de la réciproque du théorème de Pythagore en faisant intervenir Al-Kashi.',
-            relativePath: '/reciproque'
+            relativePath: '/demonstration-de-la-reciproque'
         },
         {
             id: k++,

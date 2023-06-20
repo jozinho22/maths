@@ -11,6 +11,9 @@ import Title2 from '../../helpers/Title2';
 
 const DeriveesDeSinEtCos = () => {
 
+    var sinX = "\\( \\forall x \\in [0; 2\\pi] \\enspace (modulo \\enspace 2\\pi), f(x)= sin(x) \\)";
+    var cosX = "\\( \\forall x \\in [0; 2\\pi] \\enspace (modulo \\enspace 2\\pi), f(x)= cos(x) \\)";
+
     var dSinX = "\\( d(sin(x)) = sin(x + dx) - sin(x) \\)";
     var dCosX = "\\( d(cos(x)) = cos(x + dx) - cos(x) \\)";
 
@@ -31,6 +34,10 @@ const DeriveesDeSinEtCos = () => {
 
     return (
         <>   
+            <p>Les fonction <MathJaxInline toShow={"$ sin(x) $"} /> et <MathJaxInline toShow={"$ cos(x) $"} /> sont définies comme ceci :</p>
+               <MathJaxDisplay toShow={sinX} demo /> 
+               <MathJaxDisplay toShow={cosX} demo /> 
+            <p>Nous allons démontrer leur dérivée à l'aide du calcul différentiel.</p> 
             <p>
                 Nous admettrons que <MathJaxInline toShow={"$dx$"} /> est une portion infinitésimale de <MathJaxInline toShow={"$x$"} />.
                 {"\n"}La définition même de la différentielle.

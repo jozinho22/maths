@@ -1,6 +1,8 @@
 import React from 'react';
 import MathJaxDisplay from '../../../mathjax-display/MathJaxDisplay';
 import MathJaxInline from '../../../mathjax-display/MathJaxInline';
+import Title1 from '../../helpers/Title1';
+import Title2 from '../../helpers/Title2';
 
 const EcritureScientifique = () => {
 
@@ -31,25 +33,30 @@ const EcritureScientifique = () => {
                     {"\n"}{"\n"}
                     Un nombre avec au moins chiffre significatif avant la virgule (autre que <MathJaxInline toShow={"$0$"} />), multiplié par une puissance de <MathJaxInline toShow={"$10$"} />.
                     {"\n"}Le (les) nombre(s) va (vont) apporter une précision et la puissance de <MathJaxInline toShow={"$10$"} /> un ordre de grandeur.
-                    {"\n"}{"\n"} Exemples :
                 </p>
-                <p className="Title1">Distance Terre-lune</p>
+                <Title1 title={"Exemples"} />
+
+                <Title2 title={"Distance Terre-lune"} />
                 <MathJaxDisplay toShow={terreLune} demo />
                 <MathJaxDisplay toShow={terreLune2}  demo />
-                <p className="Title1">Distance Terre-soleil</p>
+
+                <Title2 title={"Distance Terre-soleil"} />
                 <MathJaxDisplay toShow={terreSol}  demo />
                 <MathJaxDisplay toShow={terreSol2} demo  />
-                <p className="Title1">Vitesse de la lumière dans le vide</p>
+
+                <Title2 title={"Vitesse de la lumière dans le vide"} />
                 <MathJaxDisplay toShow={vLumiere}  demo />
                 <MathJaxDisplay toShow={vLumiere2} demo  />
-                <p className="Title1">Année-lumière</p>
+
+                <Title2 title={"Année-lumière"} />
                 <MathJaxDisplay toShow={aLumiere}  demo />
                 <MathJaxDisplay toShow={aLumiere2}  demo />
 
-                <p className="Title1">Microbe</p>
+                <Title2 title={"Microbe"} />
                 <MathJaxDisplay toShow={mic}  demo />
                 <MathJaxDisplay toShow={mic2} demo  />
-                <p className="Title1">Atome</p>
+
+                <Title2 title={"Atome"} />
                 <MathJaxDisplay toShow={atom}  demo />
                 <MathJaxDisplay toShow={atom2} demo  />
             </>

@@ -7,6 +7,8 @@ import Aside from '../../helpers/Aside';
 
 const DeriveeDeXPuissanceN = () => {
 
+    var xPuissanceN = "\\( \\forall x \\in (\\mathbb{R} \\enspace si \\enspace x >= 0, \\enspace \\mathbb{R^*} \\enspace si \\enspace x < 0), f(x)= x^n \\)";
+
     var deriveeXPuissanceN = "\\( (x^n)' = n . x^{n-1} \\)";
     var deriveeXPuissanceN2 = "\\( (x^n)' = lim_{ h \\to 0} \\enspace \\frac{ (x+h)^n - x^n }{h} \\)";
 
@@ -27,9 +29,11 @@ const DeriveeDeXPuissanceN = () => {
     var exemple4 = "\\( (x^{-1})' = -x^{-2} = -\\frac{1}{x^2} \\)";
 
     return  <>
-               <p>La dérivée de <MathJaxInline toShow={"$ f(x) = x^n $"} /> est définie comme ceci :</p>
+               <p>La fonction de <MathJaxInline toShow={"$ x^n $"} /> est définie comme ceci :</p>
+               <MathJaxDisplay toShow={xPuissanceN} demo />  
+               <p>Nous allons démontrer que sa dérivée est : </p>
                <Container className="Focus">
-                    <MathJaxDisplay toShow={deriveeXPuissanceN}/>  
+                    <MathJaxDisplay toShow={deriveeXPuissanceN} />  
                </Container>
 
                <Title1 title={"1) Démonstration"} />

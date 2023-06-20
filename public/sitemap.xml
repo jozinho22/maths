@@ -124,6 +124,11 @@
     <priority>0.64</priority>
   </url>
   <url>
+    <loc>https://jozinho22.github.io/maths/cours/la-derivee/derivee-de-constante-et-fonction-affine</loc>
+    <lastmod>2023-06-20T14:45:00+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
     <loc>https://jozinho22.github.io/maths/cours/la-derivee/derivee-de-x-puissance-n</loc>
     <lastmod>2023-06-19T13:48:00+00:00</lastmod>
     <priority>0.64</priority>
@@ -134,7 +139,7 @@
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://jozinho22.github.io/maths/cours/la-derivee/derivee-fonction-composee</loc>
+    <loc>https://jozinho22.github.io/maths/cours/la-derivee/derivee-de-fonction-composee</loc>
     <lastmod>2023-06-19T21:42:00+00:00</lastmod>
     <priority>0.64</priority>
   </url>
@@ -206,8 +211,8 @@
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://jozinho22.github.io/maths/cours/le-theoreme-de-pythagore/reciproque</loc>
-    <lastmod>2023-01-23T18:44:36+00:00</lastmod>
+    <loc>https://jozinho22.github.io/maths/cours/le-theoreme-de-pythagore/demonstration-de-la-reciproque</loc>
+    <lastmod>2023-06-20T13:00:00+00:00</lastmod>
     <priority>0.64</priority>
   </url> 
   <url>

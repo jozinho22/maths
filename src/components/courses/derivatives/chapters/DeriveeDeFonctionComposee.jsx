@@ -6,7 +6,8 @@ import Title1 from '../../helpers/Title1';
 
 const DeriveeDeFonctionComposee = () => {
     
-    var fRondG = "\\( (f \\circ g)(x) = f\\left(g(x)\\right)\\)";
+    var fRondG = "\\( \\forall x \\in \\xi(g(x))  \\)";
+    var fRondG2 = "\\( (f \\circ g)(x) = f\\left(g(x)\\right) \\)";
 
     var fRondGDecortX = "\\( x \\longmapsto g(x) = y \\longmapsto f(y) = (f \\circ g)(x) \\)";
     var fRondGDecortA = "\\( a\\longmapsto g(a) = b \\longmapsto f(b) = (f \\circ g)(a) \\)";
@@ -33,6 +34,7 @@ const DeriveeDeFonctionComposee = () => {
                 </p>
                 <Container className="Focus">
                      <MathJaxDisplay toShow={fRondG} />  
+                     <MathJaxDisplay toShow={fRondG2} />  
                 </Container>
                 <p>
                    On peut la décortiquer de la façon suivante :

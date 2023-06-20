@@ -1,10 +1,11 @@
 import Presentation from "./chapters/Presentation";
-import DeriveeSurDesOperations from "./chapters/DeriveeSurDesOperations";
 import SensDeVariations from "./chapters/SensDeVariations";
+import DeriveeSurDesOperations from "./chapters/DeriveeSurDesOperations";
+import DeriveeDeConstanteEtFonctionAffine from "./chapters/DeriveeDeConstanteEtFonctionAffine";
 import DeriveeDeXPuissanceN from "./chapters/DeriveeDeXPuissanceN";
 import DeriveeDeXCarre from "./chapters/DeriveeDeXCarre";
-import DeriveeDeRacineDeX from "./chapters/DeriveeDeRacineDeX";
 import EquationDeLaTangente from "./chapters/EquationDeLaTangente";
+import DeriveeDeRacineDeX from "./chapters/DeriveeDeRacineDeX";
 import DeriveesDeSinEtCos from "./chapters/DeriveesDeSinEtCos";
 import DeriveeDeFonctionComposee from "./chapters/DeriveeDeFonctionComposee";
 
@@ -33,6 +34,13 @@ const getDerivativeChapters = () => {
             title: 'Dérivée d\'une somme, d\'un produit ou d\'un quotient de fonctions',
             metaContent: 'Dérivées d\'opérations de fonctions : dérivée d\'une somme, d\'un produit ou d\'un quotient de fonctions : formule et démonstration.',
             relativePath: '/derivees-d-operations-de-fonctions'
+        },
+        {
+            id: k++,
+            component: <DeriveeDeConstanteEtFonctionAffine />,
+            title: 'Dérivée \'une fonction constante et d\'une fonction affine',
+            metaContent: 'Dérivée \'une fonction constante et d\'une fonction affine : démonstration.',
+            relativePath: '/derivee-de-constante-et-fonction-affine'
         },
         {
             id: k++,
@@ -74,7 +82,7 @@ const getDerivativeChapters = () => {
             component: <DeriveeDeFonctionComposee />,
             title: 'Dérivée de fonction composée',
             metaContent: 'Dérivée de fonction composée : démonstration.',
-            relativePath: '/derivee-fonction-composee'
+            relativePath: '/derivee-de-fonction-composee'
         }
     ];
 }
