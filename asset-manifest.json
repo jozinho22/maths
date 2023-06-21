@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/maths/static/css/main.24bce170.css",
-    "main.js": "/maths/static/js/main.d0bf2533.js",
+    "main.css": "/maths/static/css/main.848eb688.css",
+    "main.js": "/maths/static/js/main.d5ac372b.js",
     "static/js/787.727f4605.chunk.js": "/maths/static/js/787.727f4605.chunk.js",
     "static/media/energetiquementVotre.pdf": "/maths/static/media/energetiquementVotre.ae46a881d6240ff7c375.pdf",
     "static/media/bigBang.pdf": "/maths/static/media/bigBang.9a7278fe34a3a9cbd1fe.pdf",
@@ -64,12 +64,12 @@
     "static/media/thales.png": "/maths/static/media/thales.e9d5ab4625a8eb03374d.png",
     "static/media/medianes.png": "/maths/static/media/medianes.f43b5dfe908b3022a3cb.png",
     "index.html": "/maths/index.html",
-    "main.24bce170.css.map": "/maths/static/css/main.24bce170.css.map",
-    "main.d0bf2533.js.map": "/maths/static/js/main.d0bf2533.js.map",
+    "main.848eb688.css.map": "/maths/static/css/main.848eb688.css.map",
+    "main.d5ac372b.js.map": "/maths/static/js/main.d5ac372b.js.map",
     "787.727f4605.chunk.js.map": "/maths/static/js/787.727f4605.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.24bce170.css",
-    "static/js/main.d0bf2533.js"
+    "static/css/main.848eb688.css",
+    "static/js/main.d5ac372b.js"
   ]
 }
