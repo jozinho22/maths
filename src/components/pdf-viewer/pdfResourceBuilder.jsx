@@ -1,19 +1,19 @@
-import aspirisouffle from '../albums/aspirisouffle.pdf'; 
-import bigBang from '../albums/bigBang.pdf'; 
-import chronologicon from '../albums/chronologicon.pdf';
-import economicon from '../albums/economicon.pdf';
-import energetiquementVotre from '../albums/energetiquementVotre.pdf';
-import geometricon from '../albums/geometricon.pdf';
-import joyeuseApo from '../albums/joyeuseApo.pdf';
-import mecavol from '../albums/mecavol.pdf';
-import milleEtUnenuits from '../albums/milleEtUnenuits.pdf';
-import murDuSilence from '../albums/murDuSilence.pdf';
-import pourQqesAmperesDePlus from '../albums/pourQqesAmperesDePlus.pdf'; 
-import spondyloscope from '../albums/spondyloscope.pdf'; 
-import topologicon from '../albums/topologicon.pdf'; 
-import tourDuMondeEn80jours from '../albums/tourDuMondeEn80jours.pdf'; 
-import toutEstRelatif from '../albums/toutEstRelatif.pdf'; 
-import trouNoir from '../albums/trouNoir.pdf'; 
+import aspirisouffle from './albums/aspirisouffle.pdf'; 
+import bigBang from './albums/bigBang.pdf'; 
+import chronologicon from './albums/chronologicon.pdf';
+import economicon from './albums/economicon.pdf';
+import energetiquementVotre from './albums/energetiquementVotre.pdf';
+import geometricon from './albums/geometricon.pdf';
+import joyeuseApo from './albums/joyeuseApo.pdf';
+import mecavol from './albums/mecavol.pdf';
+import milleEtUnenuits from './albums/milleEtUnenuits.pdf';
+import murDuSilence from './albums/murDuSilence.pdf';
+import pourQqesAmperesDePlus from './albums/pourQqesAmperesDePlus.pdf'; 
+import spondyloscope from './albums/spondyloscope.pdf'; 
+import topologicon from './albums/topologicon.pdf'; 
+import tourDuMondeEn80jours from './albums/tourDuMondeEn80jours.pdf'; 
+import toutEstRelatif from './albums/toutEstRelatif.pdf'; 
+import trouNoir from './albums/trouNoir.pdf'; 
 
 function pdfResourceBuilder() {
 

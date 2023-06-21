@@ -1,28 +1,28 @@
-import getCrossProductsChapters from '../cross-product/getCrossProductsChapters';
-import getPowersChapters from '../powers/getPowersChapters';
-import getEquationsFirstDegreeChapters from '../equations-first-degree/getEquationsFirstDegreeChapters';
-import getEquationsSecondDegreeChapters from '../equations-second-degree/getEquationsSecondDegreeChapters';
-import getPythagoreChapters from '../pythagore/getPythagoreChapters';
-import getPiChapters from '../pi/getChapters';
-import getGoldenRatioChapters from '../nbOr/getGoldenRatioChapters';
-import getTrigoChapters from '../trigo/getTrigoChapters';
-import getShapesChapters from '../shapes/getShapesChapters';
-import getUsualFunctionsChapters from '../usual-functions/getUsualFunctionsChapters';
+import getElementaryCalculusChapters from './elementary-calculus/getElementaryCalculusChapters';
+import getPowersChapters from './powers/getPowersChapters';
+import getEquationsFirstDegreeChapters from './equations-first-degree/getEquationsFirstDegreeChapters';
+import getEquationsSecondDegreeChapters from './equations-second-degree/getEquationsSecondDegreeChapters';
+import getDerivativeChapters from './derivatives/getDerivativeChapters';
+import getPythagoreChapters from './pythagore/getPythagoreChapters';
+import getPiChapters from './pi/getChapters';
+import getGoldenRatioChapters from './nbOr/getGoldenRatioChapters';
+import getTrigoChapters from './trigo/getTrigoChapters';
+import getShapesChapters from './shapes/getShapesChapters';
+import getUsualFunctionsChapters from './usual-functions/getUsualFunctionsChapters';
 
-import CoursesConstants from './CoursesConstants';
-import getDerivativeChapters from '../derivatives/getDerivativeChapters';
+import CoursesConstants from './helpers/CoursesConstants';
 
 function coursesResourceBuilder() {
 
     var coursesItems = [];
     var i = 0;
 
-    var crossProduct = {
+    var elementaryCalculus = {
       id: i++,
-      title: 'Le produit en croix',
-      metaContent: "Cours sur le produit en croix : un cours très important pour la vie de tous les jours",
-      relativePath: CoursesConstants.PRODUIT_EN_CROIX,
-      chapters: getCrossProductsChapters()
+      title: 'Calcul élémentaire',
+      metaContent: "Calcul élémentaire : les opérations de base, le produit en croix, les fractions.",
+      relativePath: CoursesConstants.ELEM_CALCULUS,
+      chapters: getElementaryCalculusChapters()
     }
     var equationsFirstDegree = {
       id: i++,
@@ -96,7 +96,7 @@ function coursesResourceBuilder() {
     }
 
     coursesItems.push(
-        crossProduct,
+        elementaryCalculus,
         equationsFirstDegree,
         equationsSecondDegree,
         derivee,

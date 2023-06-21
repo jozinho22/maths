@@ -1,7 +1,7 @@
 import PagesConstants from "../immutable/nav/PagesConstants";
-import coursesResourceBuilder from "../courses/helpers/coursesResourceBuilder";
-import pdfResourceBuilder from "../pdf-viewer/helpers/pdfResourceBuilder";
-import gamesResourceBuilder from "../games/helpers/gamesResourceBuilder";
+import coursesResourceBuilder from "../courses/coursesResourceBuilder";
+import pdfResourceBuilder from "../pdf-viewer/pdfResourceBuilder";
+import gamesResourceBuilder from "../games/gamesResourceBuilder";
 
 const verifyUrlCountInApp = () => {
 

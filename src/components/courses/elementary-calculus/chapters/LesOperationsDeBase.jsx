@@ -1,4 +1,4 @@
-import React from 'react';
+/* import React from 'react';
 import { Container } from 'react-bootstrap';
 import MathJaxDisplay from '../../../mathjax-display/MathJaxDisplay';
 import MathJaxInline from '../../../mathjax-display/MathJaxInline';
@@ -22,4 +22,4 @@ const LesOperationsDeBase = () => {
             </>
 }
 
-export default LesOperationsDeBase;
+export default LesOperationsDeBase; */

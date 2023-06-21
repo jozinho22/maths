@@ -16,9 +16,9 @@ import BlurryingSpinner from './components/immutable/spinners/BlurryingSpinner';
 import Header from './components/immutable/nav/Header';
 import Footer from './components/immutable/nav/Footer';
 
-import coursesResourceBuilder from './components/courses/helpers/coursesResourceBuilder';
-import pdfResourceBuilder from './components/pdf-viewer/helpers/pdfResourceBuilder';
-import gamesResourceBuilder from './components/games/helpers/gamesResourceBuilder';
+import coursesResourceBuilder from './components/courses/coursesResourceBuilder';
+import pdfResourceBuilder from './components/pdf-viewer/pdfResourceBuilder';
+import gamesResourceBuilder from './components/games/gamesResourceBuilder';
 
 import { getThemeIfStoredThemeExists } from './components/immutable/styles/getThemes';
 import AppRoutes from './AppRoutes';

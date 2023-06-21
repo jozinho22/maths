@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Button, Row, Col } from 'react-bootstrap';
-import Timer from './Timer';
+import Timer from '../helpers/Timer';
 import Alert from '../../alert/Alert';
 import { updateAlert, reInitAlert } from '../../alert/alertFunctions';
 import { OperationsTestContext } from './OperationsTest';

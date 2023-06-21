@@ -1,5 +1,5 @@
-import Addition from "../tests/types/Addition";
-import Multiplication from "../tests/types/Multiplication";
+import Addition from "./tests/types/Addition";
+import Multiplication from "./tests/types/Multiplication";
 
 function gamesResourceBuilder() {
 
