@@ -5,10 +5,9 @@ import linksResourceBuilder from "./linksResourceBuilder";
 import CustomHelmet from '../immutable/seo/CustomHelmet';
 import Constants from '../immutable/Constants';
 
-import './Links.css';
 import PagesConstants from '../immutable/nav/PagesConstants';
 import MainTitle from '../immutable/MainTitle';
-import Title1 from '../courses/helpers/Title1';
+import './Links.css';
 
 const Links = () => {
 

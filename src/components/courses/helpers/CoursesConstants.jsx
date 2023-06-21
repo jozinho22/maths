@@ -4,6 +4,7 @@ const CoursesConstants = {
     EQ_2_DEG: '/les-equations-du-second-degre',
     PUISSANCES: '/les-puissances',
     PYTHAGORE: '/le-theoreme-de-pythagore',
+    THALES: '/le-theoreme-de-thales',
     PI: '/le-nombre-pi',
     NB_OR: '/le-nombre-d-or',
     TRIGO: '/la-trigonometrie',

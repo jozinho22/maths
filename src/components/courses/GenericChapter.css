@@ -3,12 +3,6 @@
     margin-bottom: 20px;
     margin: 0 auto;
     width: fit-content;
-    /* display: flex;
-    flex-direction: column;
-    align-items: flex-start; */
-    /* width: 80%; */
-    
-    /* overflow-x: auto;  */
 }
 
 @media (max-width: 1267px) {

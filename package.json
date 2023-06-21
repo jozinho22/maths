@@ -14,6 +14,7 @@
     "buffer": "^6.0.3",
     "emailjs-com": "^3.2.0",
     "fractional": "^1.0.0",
+    "fractions": "^1.0.2",
     "gh-pages": "^5.0.0",
     "react": "^18.2.0",
     "react-bootstrap": "^2.7.0",

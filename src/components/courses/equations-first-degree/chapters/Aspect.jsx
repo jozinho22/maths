@@ -18,8 +18,6 @@ const Aspect = () => {
 
     var n = 0;
 
-    var mobile = document.body.offsetWidth < 450;
-
     var tauxVar = "\\(a = \\frac{\\Delta y}{\\Delta x}\\)";
     var tauxVar2 = "\\(a = \\frac{y_b - y_a}{x_b - x_a}\\)";
     var ordAtOrigin = "\\(f(0) = a \\times 0 + b\\)";

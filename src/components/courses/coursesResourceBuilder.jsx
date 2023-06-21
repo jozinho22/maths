@@ -3,6 +3,7 @@ import getPowersChapters from './powers/getPowersChapters';
 import getEquationsFirstDegreeChapters from './equations-first-degree/getEquationsFirstDegreeChapters';
 import getEquationsSecondDegreeChapters from './equations-second-degree/getEquationsSecondDegreeChapters';
 import getDerivativeChapters from './derivatives/getDerivativeChapters';
+import getThalesChapters from './thales/getThalesChapters';
 import getPythagoreChapters from './pythagore/getPythagoreChapters';
 import getPiChapters from './pi/getChapters';
 import getGoldenRatioChapters from './nbOr/getGoldenRatioChapters';
@@ -59,6 +60,13 @@ function coursesResourceBuilder() {
       relativePath: CoursesConstants.PYTHAGORE,
       chapters: getPythagoreChapters()
     }
+    var thales = {
+      id: i++,
+      title: 'Le théorème de Thalès',
+      metaContent: "Le théorème de Thalès : explications, démonstration.",
+      relativePath: CoursesConstants.THALES,
+      chapters: getThalesChapters()
+    }
     var pi = {
       id: i++,
       title: 'Le nombre Pi',
@@ -102,6 +110,7 @@ function coursesResourceBuilder() {
         derivee,
         powers,
         pythagore,
+        thales,
         pi, 
         nbOr,
         trigo,
