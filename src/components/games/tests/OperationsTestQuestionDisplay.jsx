@@ -7,6 +7,11 @@ import { OperationsTestContext } from './OperationsTest';
 /* import CiferKeyboard from './CiferKeyboard';
  */
 
+import AppContext from '../../context/AppContext';
+import { NavLink } from 'react-router-dom';
+import pathBuilder from '../../helpers/pathBuilder';
+import PagesConstants from '../../immutable/nav/PagesConstants';
+
 const OperationsTestQuestionDisplay = () => {
 
     const {operationType, count, questions, user, setUser, next} = React.useContext(OperationsTestContext);
@@ -23,6 +28,12 @@ const OperationsTestQuestionDisplay = () => {
             message : ''
         }
     );
+
+    const {updatePlayMode} = React.useContext(AppContext);
+
+    React.useEffect(() => {
+        updatePlayMode(true);
+    });
 
     const doNext = () => {
 
@@ -210,6 +221,11 @@ const OperationsTestQuestionDisplay = () => {
                         Valider
                 </Button>   
             </Container>
+            <NavLink to={pathBuilder(PagesConstants.JEUX)} onClick={() => updatePlayMode(false)}>
+                <Button className="DefaultButton GreenButton" >
+                    Retour au menu des jeux
+                </Button> 
+            </NavLink>
         </>
     );
 }

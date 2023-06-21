@@ -1,17 +1,21 @@
+import React from 'react';
 import { Container, Button } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 import PagesConstants from '../../immutable/nav/PagesConstants';
 import pathBuilder from '../../helpers/pathBuilder';
 import MainTitle from '../../immutable/MainTitle';
+import AppContext from '../../context/AppContext';
 
 const LevelsTableOfContents = ( {title, levels, launchGame} ) => {
+    
+    const {updatePlayMode} = React.useContext(AppContext);
 
     return (
         <>
             <div className="FlexButton">
-                <NavLink to={pathBuilder(PagesConstants.JEUX)} >
+                <NavLink to={pathBuilder(PagesConstants.JEUX)} onClick={() => updatePlayMode(false)}>
                     <Button className="DefaultButton GreenButton" >
-                        Tous les jeux
+                        Retour au menu des jeux
                     </Button> 
                 </NavLink>
             </div> 

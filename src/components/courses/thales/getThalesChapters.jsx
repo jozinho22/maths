@@ -16,7 +16,7 @@ const getThalesChapters = () => {
         {
             id: k++,
             component: <DemonstrationDuTheoreme />,
-            title: 'Démonstration du théorème de Thalès',
+            title: 'Démonstration du théorème',
             metaContent: 'Démonstration du théorème de Thalès en dessinant une hauteur.',
             relativePath: '/demonstration'
         }

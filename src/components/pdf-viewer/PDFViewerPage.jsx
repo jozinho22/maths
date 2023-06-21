@@ -88,10 +88,6 @@ const PDFViewerPage = ({ pdfItem }) => {
             return page - (page % step);
         }
 
-        function undoPlayMode() {
-            updatePlayMode(false);
-        }
-
         React.useEffect(() => {
             updatePlayMode(true);
         });
@@ -104,11 +100,11 @@ const PDFViewerPage = ({ pdfItem }) => {
           <Container className="PdfViewerContainer"> 
             <CustomHelmet title={pdfItem.title} metaContent={pdfItem.metaContent} canonicalUrl={`${Constants.WEB_APP_URL}${PagesConstants.BDS_DE_JPP}${pdfItem.relativePath}`}/>
             <NavLink to={pathBuilder("/")}>
-                <Button className="DefaultButton ReturnHomeButton" onClick={() => undoPlayMode()}>
+                <Button className="DefaultButton ReturnHomeButton" onClick={() => updatePlayMode(false)}>
                     Home
                 </Button>
             </NavLink>
-            <NavLink to={pathBuilder(PagesConstants.BDS_DE_JPP)} onClick={() => undoPlayMode()}>
+            <NavLink to={pathBuilder(PagesConstants.BDS_DE_JPP)} onClick={() => updatePlayMode(false)}>
                 <Button className="DefaultButton UnPlayModeButton" >
                     Toutes les BDs
                 </Button>
