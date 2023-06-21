@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/maths/static/css/main.d909710a.css",
-    "main.js": "/maths/static/js/main.3287c9dc.js",
+    "main.css": "/maths/static/css/main.24bce170.css",
+    "main.js": "/maths/static/js/main.d0bf2533.js",
     "static/js/787.727f4605.chunk.js": "/maths/static/js/787.727f4605.chunk.js",
     "static/media/energetiquementVotre.pdf": "/maths/static/media/energetiquementVotre.ae46a881d6240ff7c375.pdf",
     "static/media/bigBang.pdf": "/maths/static/media/bigBang.9a7278fe34a3a9cbd1fe.pdf",
@@ -50,6 +50,7 @@
     "static/media/alKashiDemo.png": "/maths/static/media/alKashiDemo.a48d6dae615aef86b49a.png",
     "static/media/derivativeBetterBetterApprox.png": "/maths/static/media/derivativeBetterBetterApprox.144e66bae3d2a0c2a070.png",
     "static/media/pythagoreReciproqueDemo.png": "/maths/static/media/pythagoreReciproqueDemo.9558ef22a27ac989c49c.png",
+    "static/media/thalesWithHeight.png": "/maths/static/media/thalesWithHeight.346900853d58192e1318.png",
     "static/media/heights2.png": "/maths/static/media/heights2.444d385da33e5d1d17ad.png",
     "static/media/circleTurnAround.png": "/maths/static/media/circleTurnAround.c19c2efeb002ea30e70e.png",
     "static/media/circlePi.png": "/maths/static/media/circlePi.eb2f06e8e2af3110d305.png",
@@ -60,14 +61,15 @@
     "static/media/cone.png": "/maths/static/media/cone.932f2d629b76bceb7075.png",
     "static/media/ordonneeAtOrigin.png": "/maths/static/media/ordonneeAtOrigin.2ce7a6739aa96ece5798.png",
     "static/media/triangles.png": "/maths/static/media/triangles.fdd26930039530a6e929.png",
+    "static/media/thales.png": "/maths/static/media/thales.e9d5ab4625a8eb03374d.png",
     "static/media/medianes.png": "/maths/static/media/medianes.f43b5dfe908b3022a3cb.png",
     "index.html": "/maths/index.html",
-    "main.d909710a.css.map": "/maths/static/css/main.d909710a.css.map",
-    "main.3287c9dc.js.map": "/maths/static/js/main.3287c9dc.js.map",
+    "main.24bce170.css.map": "/maths/static/css/main.24bce170.css.map",
+    "main.d0bf2533.js.map": "/maths/static/js/main.d0bf2533.js.map",
     "787.727f4605.chunk.js.map": "/maths/static/js/787.727f4605.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d909710a.css",
-    "static/js/main.3287c9dc.js"
+    "static/css/main.24bce170.css",
+    "static/js/main.d0bf2533.js"
   ]
 }

@@ -14,25 +14,15 @@
     <lastmod>2023-01-23T18:44:36+00:00</lastmod>
     <priority>1.00</priority>
   </url>
-  <!-- Cours : produit en croix -->
+  <!-- Cours : calcul élémentaire -->
   <url>
-    <loc>https://jozinho22.github.io/maths/cours/le-produit-en-croix</loc>
-    <lastmod>2023-01-23T18:44:36+00:00</lastmod>
+    <loc>https://jozinho22.github.io/maths/cours/calcul-elementaire</loc>
+    <lastmod>2023-06-21T15:46:00+00:00</lastmod>
     <priority>0.64</priority>
   </url>
-  <url> 
-    <loc>https://jozinho22.github.io/maths/cours/le-produit-en-croix/presentation</loc>
-    <lastmod>2023-01-23T18:44:36+00:00</lastmod>
-    <priority>0.64</priority>
-  </url>
-  <url>
-    <loc>https://jozinho22.github.io/maths/cours/le-produit-en-croix/demonstration</loc>
-    <lastmod>2023-01-23T18:44:36+00:00</lastmod>
-    <priority>0.64</priority>
-  </url>
-  <url>
-    <loc>https://jozinho22.github.io/maths/cours/le-produit-en-croix/exercices</loc>
-    <lastmod>2023-01-23T18:44:36+00:00</lastmod>
+    <url>
+    <loc>https://jozinho22.github.io/maths/cours/calcul-elementaire/le-produit-en-croix</loc>
+    <lastmod>2023-06-21T15:46:00+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <!-- Cours : équations du premier degré -->
@@ -104,6 +94,26 @@
     <priority>0.64</priority>
   </url>
   <url>
+    <loc>https://jozinho22.github.io/maths/cours/la-derivee/derivee-d-une-somme-de-fonctions</loc>
+    <lastmod>2023-06-20T20:45:00+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://jozinho22.github.io/maths/cours/la-derivee/derivee-d-un-produit-de-fonctions</loc>
+    <lastmod>2023-06-20T20:45:00+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://jozinho22.github.io/maths/cours/la-derivee/derivee-d-un-quotient-de-fonctions</loc>
+    <lastmod>2023-06-20T20:45:00+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://jozinho22.github.io/maths/cours/la-derivee/derivee-de-constante-et-fonction-affine</loc>
+    <lastmod>2023-06-20T14:45:00+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
     <loc>https://jozinho22.github.io/maths/cours/la-derivee/derivee-de-x-au-carre</loc>
     <lastmod>2023-06-19T13:48:00+00:00</lastmod>
     <priority>0.64</priority>
@@ -114,22 +124,12 @@
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://jozinho22.github.io/maths/cours/derivee-de-racine-de-x</loc>
+    <loc>https://jozinho22.github.io/maths/cours/la-derivee/derivee-de-x-puissance-n</loc>
     <lastmod>2023-06-19T13:48:00+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://jozinho22.github.io/maths/cours/la-derivee/derivees-d-operations-de-fonctions</loc>
-    <lastmod>2023-06-10T19:45:36+00:00</lastmod>
-    <priority>0.64</priority>
-  </url>
-  <url>
-    <loc>https://jozinho22.github.io/maths/cours/la-derivee/derivee-de-constante-et-fonction-affine</loc>
-    <lastmod>2023-06-20T14:45:00+00:00</lastmod>
-    <priority>0.64</priority>
-  </url>
-  <url>
-    <loc>https://jozinho22.github.io/maths/cours/la-derivee/derivee-de-x-puissance-n</loc>
+    <loc>https://jozinho22.github.io/maths/cours/derivee-de-racine-de-x</loc>
     <lastmod>2023-06-19T13:48:00+00:00</lastmod>
     <priority>0.64</priority>
   </url>
@@ -141,6 +141,11 @@
   <url>
     <loc>https://jozinho22.github.io/maths/cours/la-derivee/derivee-de-fonction-composee</loc>
     <lastmod>2023-06-19T21:42:00+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://jozinho22.github.io/maths/cours/la-derivee/tableau-recap-des-derivees</loc>
+    <lastmod>2023-06-20T21:42:00+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <!-- Cours : puissances -->
@@ -222,6 +227,22 @@
   </url>
   <url>
     <loc>https://jozinho22.github.io/maths/cours/le-theoreme-de-pythagore/theoreme-d-al-kashi</loc>
+    <lastmod>2023-01-23T18:44:36+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <!-- Cours : thalès -->
+  <url>
+    <loc>https://jozinho22.github.io/maths/cours/le-theoreme-de-thales</loc>
+    <lastmod>2023-01-23T18:44:36+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://jozinho22.github.io/maths/cours/le-theoreme-de-thales/presentation</loc>
+    <lastmod>2023-01-23T18:44:36+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://jozinho22.github.io/maths/cours/le-theoreme-de-thales/demonstration</loc>
     <lastmod>2023-01-23T18:44:36+00:00</lastmod>
     <priority>0.64</priority>
   </url>
