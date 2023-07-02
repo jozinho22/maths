@@ -1,4 +1,6 @@
+import React from 'react';
 import { Route, Routes } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import Home from './components/home/Home';
 import CoursesTableOfContents from './components/courses/CoursesTableOfContents';
 import ChaptersTableOfContents from './components/courses/ChaptersTableOfContents';
@@ -13,8 +15,13 @@ import Error from './components/immutable/Error';
 import PagesConstants from './components/immutable/nav/PagesConstants';
 import pathBuilder from './components/helpers/pathBuilder';
 
-const AppRoutes = ( {courseItems, pdfItems, gameItems} ) => {
+const AppRoutes = ( {courseItems, pdfItems, gameItems, setLoc} ) => {
 
+    const loc = useLocation()
+    React.useEffect(() => {
+        setLoc(loc)
+    }, [])
+    
     return  <Routes>
                 <Route exact path={pathBuilder("/")} element={process.env.NODE_ENV === 'development' ?  <Home /> : <Home />} />
                 <Route path={pathBuilder(PagesConstants.COURS)} element={<CoursesTableOfContents courseItems={courseItems} />} />

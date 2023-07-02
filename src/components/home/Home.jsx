@@ -23,7 +23,7 @@ const Home = () => {
                         Ma thématique
                     </Container>
                     <Container className="HomeDescContainer">
-                        <MainTitle title={"Présentation du site"} />
+                        <MainTitle title={"Présentation du site"} hidden />
                         <p>Ce site est dédié à l'apprentissage des mathématiques pour tous.</p>
                         <p>
                             Il comprend <Link url={pathBuilder(PagesConstants.COURS)} external>de nombreux cours</Link> allant du collège à la terminale.

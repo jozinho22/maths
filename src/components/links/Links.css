@@ -12,7 +12,7 @@
 
 .Links a {
     font-family: 'Times New Roman', Times, serif;
-    font-size: large;
+    font-size: 23px;
 }
 
 .Links .TableOfContents {
@@ -21,4 +21,8 @@
 
 .LinksDesc {
     font-style: italic;
+}
+
+.Links h3 {
+    text-decoration: underline;
 }

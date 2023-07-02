@@ -1,5 +1,5 @@
-const MainTitle = ( {title} ) => {
-    return <h1>{title}</h1>
+const MainTitle = ( {title, hidden} ) => {
+    return <h1 className={`${hidden ? "Hidden" : ""}`}>{title}</h1>
 }
 
 export default MainTitle;

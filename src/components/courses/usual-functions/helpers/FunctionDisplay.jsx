@@ -14,8 +14,6 @@ const FunctionDisplay = ( {f, fData, reduced} ) => {
         return "\\(f(x) = " + exp + " \\)";
     }
 
-    console.log(fData)
-
     return <>
             <Container className={`GraphTitle Focus${f.themeColor ? f.themeColor :"Green"}`}>
                 <MathJaxDisplay 

@@ -12,9 +12,6 @@
 }
 
 @media (min-width: 1268px) {
-   .CoursesContainer p, a {
-        font-size: large;
-    } 
     .CoursesContainer {
         max-width:  75vw;
     }
@@ -104,7 +101,7 @@
 }
 
 .Focus, .FocusDefault, .FocusGreen, .FocusRed {
-    border-width: 2px;
+    border-width: 3px;
     border-style: solid;   
     width: fit-content;
     display: table;
@@ -131,13 +128,7 @@
 
 @media (max-width: 450px) {
     .Focus {
-        border-width: 1.5px;
-    }
-    .FocusHuge {
-        position: relative;
-    }
-    .FocusHuge mjx-math {
-        font-size: 50% !important;
+        border-width: 2px;
     }
 }
 
@@ -179,5 +170,4 @@
     overflow-x: auto;
     max-width: 80vw;
 }
-
 

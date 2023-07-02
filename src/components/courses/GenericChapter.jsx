@@ -1,55 +1,36 @@
 import React from 'react';
+import { useLocation } from 'react-router-dom';
 import { Container, Button } from 'react-bootstrap';
 import NavigationButtons from './helpers/NavigationButtons';
 import CustomHelmet from '../immutable/seo/CustomHelmet';
 import Constants from '../immutable/Constants';
 import { NavLink } from 'react-router-dom';
 import MainTitle from '../immutable/MainTitle';
-/* import { useReactToPrint } from 'react-to-print';
-import pageStyle from '../helpers/pageStyle'; */
 
 import './GenericChapter.css';
 import pathBuilder from '../helpers/pathBuilder';
 import PagesConstants from '../immutable/nav/PagesConstants';
 import MainSubTitle from '../immutable/MainSubTitle';
+import BlurryingSpinner from '../immutable/spinners/BlurryingSpinner';
+import AppContext from '../context/AppContext';
+/* import printCourse from './helpers/printCourse'; */
 
 const GenericChapter = ( {chapter, courseItem} ) => {
-    
+
+    const [count, setCount] = React.useState(chapter.id);
+    const {updateLoc} = React.useContext(AppContext);
+
+    const loc = useLocation()
     React.useEffect(() => {
-        window.scrollTo(0, 0);
-    }, []);
+        updateLoc(loc.pathname);
+    }, [loc])
 
-   /*  var catchedDiv = {};
+    React.useEffect(() => {
+        setTimeout(function(){
+            window.scrollTo(0, 0)
+        }, 2000);
 
-    const buildElementToPrint = () => {
-
-        var entirePage = document.querySelector("#capture").cloneNode(true);
-        document.getElementById("doc-to-print").appendChild(entirePage);
-
-        catchedDiv = document.getElementById("doc-to-print");
-        catchedDiv.getElementsByClassName("CustomHeader")[0].remove();
-        catchedDiv.getElementsByClassName("FlexButton")[0].remove();
-        catchedDiv.getElementsByClassName("row")[0].remove();
-        catchedDiv.getElementsByClassName("row")[0].remove();
-        catchedDiv.getElementsByClassName("printer-button")[0].remove();
-        catchedDiv.getElementsByClassName("CustomFooter")[0].remove();
-
-        return catchedDiv.getElementsByClassName("App")[0];
-
-    }
-
-    const destroyElementToPrint = () => {
-        catchedDiv.getElementsByClassName("App")[0].remove();
-    }
-
-    const print = useReactToPrint(
-        {
-            content: () => buildElementToPrint(), 
-            pageStyle: pageStyle(),
-            documentTitle:`${courseItem.title} - ${chapter.title}`,
-            onAfterPrint: () => destroyElementToPrint()
-        }
-    ); */
+    }, [count]); 
 
     return (
         <>
@@ -63,11 +44,13 @@ const GenericChapter = ( {chapter, courseItem} ) => {
                 </NavLink>
             </div> 
 
-            {/* <Button variant="warning" className="printer-button" onClick={print}>
+
+            {/* <Button variant="warning" className="printer-button" onClick={printCourse}>
                 PDF
             </Button> */}
                      
             <NavigationButtons 
+                setCount={setCount}
                 chapter={chapter}
                 chapters={courseItem.chapters} 
                 courseRelativePath={courseItem.relativePath} />
@@ -81,9 +64,10 @@ const GenericChapter = ( {chapter, courseItem} ) => {
             </Container>  
 
             <NavigationButtons 
+                setCount={setCount}
                 chapter={chapter}
                 chapters={courseItem.chapters} 
-                courseRelativePath={courseItem.relativePath} />     
+                courseRelativePath={courseItem.relativePath} /> 
         </>
     );
 }

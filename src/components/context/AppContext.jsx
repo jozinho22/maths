@@ -7,6 +7,8 @@ export default React.createContext(
         playMode: false,
         updatePlayMode: (playMode) => playMode,
         theme: "",
-        updateTheme: (name) => {}
+        updateTheme: (name) => {},
+        loc: "",
+        updateLoc: (name) => {}
     }
 );

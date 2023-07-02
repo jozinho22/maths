@@ -157,7 +157,7 @@ const CalculDePi = () => {
 
             <Title1 title={"Généralisation"} />
             <p>Nous pouvons à présent donner une formule générale pour <MathJaxInline toShow={"$\\pi$"} /></p>
-            <Container className="Focus FocusHuge">
+            <Container className="Focus">
                 <MathJaxDisplay toShow={piG} />  
                 <MathJaxDisplay toShow={"\\( avec \\enspace  n \\enspace le \\enspace nombre \\enspace de \\enspace 2 \\enspace additionés \\)"} />                
             </Container>

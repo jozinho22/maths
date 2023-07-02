@@ -1,4 +1,5 @@
 import React from 'react';
+import { useLocation } from 'react-router-dom';
 import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 import AppContext from '../../context/AppContext';
@@ -11,7 +12,7 @@ import './Header.css';
 const Header = ( {courseItems, pdfItems, gameItems} ) => {
 
     const {playMode} = React.useContext(AppContext);
-
+    
     const [showToggle, setShowToggle] = React.useState(false);
 
     var width = document.body.offsetWidth;
@@ -21,9 +22,9 @@ const Header = ( {courseItems, pdfItems, gameItems} ) => {
     }, []);
 
     const retractToggleOnMobile = () => {
-        if(width < 450) {
+        if(width < 450) { 
             setShowToggle(false);
-        } 
+        }  
     }
 
     return (
@@ -38,36 +39,30 @@ const Header = ( {courseItems, pdfItems, gameItems} ) => {
                 expand="lg">
                 <Navbar.Brand className="Clickable" onClick={() => {retractToggleOnMobile()}}>
                     <NavLink to={pathBuilder("/")}>
-                        Accueil
+                        Ma Thématique
                     </NavLink>
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav" >
                     <Nav /* onSelect={handleSelect} */>
-                        <NavDropdown title="Cours" >
+                        <NavDropdown title="Cours de maths" >
                             {courseItems.map(courseItem => 
-                                <NavDropdown.Item key={courseItem.id} eventKey={courseItem.id} onClick={() => {retractToggleOnMobile()}} >
-                                    <NavLink key={courseItem.id} to={pathBuilder(`${PagesConstants.COURS}${courseItem.relativePath}`)}>
-                                        {courseItem.title}
-                                    </NavLink>
+                                <NavDropdown.Item key={courseItem.id} eventkey={courseItem.id} as={NavLink} to={pathBuilder(`${PagesConstants.COURS}${courseItem.relativePath}`)} onClick={() => {retractToggleOnMobile()}} >
+                                    {courseItem.title}
                                 </NavDropdown.Item>
                             )}
                         </NavDropdown> 
                         <NavDropdown title="BDs de Jean-Pierre Petit">
                             {pdfItems.map(pdfItem => 
-                                <NavDropdown.Item key={pdfItem.id} onClick={() => {retractToggleOnMobile()}} >
-                                    <NavLink key={pdfItem.id} to={pathBuilder(`${PagesConstants.BDS_DE_JPP}${pdfItem.relativePath}`)}>
-                                        {pdfItem.minTitle ? pdfItem.minTitle : pdfItem.title}
-                                    </NavLink>
+                                <NavDropdown.Item key={pdfItem.id} eventkey={pdfItem.id} as={NavLink} to={pathBuilder(`${PagesConstants.BDS_DE_JPP}${pdfItem.relativePath}`)} onClick={() => {retractToggleOnMobile()}} >
+                                    {pdfItem.minTitle ? pdfItem.minTitle : pdfItem.title}
                                 </NavDropdown.Item>
                             )}
                         </NavDropdown>
                         <NavDropdown title="Jeux">
                             {gameItems.map(gameItem => 
-                                <NavDropdown.Item key={gameItem.id} onClick={() => {retractToggleOnMobile()}} >
-                                    <NavLink to={pathBuilder(`${PagesConstants.JEUX}${gameItem.relativePath}`)} >
-                                        {gameItem.title}
-                                    </NavLink>
+                                <NavDropdown.Item key={gameItem.id} eventkey={gameItem.id} as={NavLink} to={pathBuilder(`${PagesConstants.JEUX}${gameItem.relativePath}`)} onClick={() => {retractToggleOnMobile()}} >
+                                    {gameItem.title}
                                 </NavDropdown.Item>
                             )}
                         </NavDropdown> 

@@ -42,7 +42,7 @@ const AutresFormulesGenerales = () => {
                 <p>En ainsi de suite...</p>
                 <MathJaxDisplay toShow={approxPhi14} demo />    
                 <MathJaxDisplay toShow={approxPhi15} demo />
-                <Container className="Focus FocusHuge">
+                <Container className="Focus">
                     <MathJaxDisplay toShow={approxPhi1End} />
                 </Container>
 
@@ -58,18 +58,18 @@ const AutresFormulesGenerales = () => {
                 <MathJaxDisplay toShow={approxPhi23} demo/>
                 <MathJaxDisplay toShow={approxPhi24} demo/>
                 <p>En ainsi de suite...</p>
-                <MathJaxDisplay toShow={approxPhi25} demo/>
-                <MathJaxDisplay toShow={approxPhi26} demo/>
-                <Container className="Focus FocusHuge">
+                <MathJaxDisplay toShow={approxPhi25} demo infiniteFrac />
+                <MathJaxDisplay toShow={approxPhi26} demo infiniteFrac />
+                <Container className="Focus">
                     <MathJaxDisplay toShow={approxPhi2End} infiniteFrac />
                 </Container>
 
                 <Title1 title={"c) Généralisation du n terme de la suite de Fibonacci"} />
-                <Container className="Focus FocusHuge">
+                <Container className="Focus">
                     <MathJaxDisplay toShow={nTermOfTheSequence} />
                 </Container>       
                 <p>Cette formule peut aussi s'écrire sous la forme :</p> 
-                <Container className="Focus FocusHuge">
+                <Container className="Focus">
                     <MathJaxDisplay toShow={nTermOfTheSequence2} />
                 </Container>       
 

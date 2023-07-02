@@ -4,11 +4,6 @@
 
 .CustomNav a {
   font: inherit;
-  color: var(--back-color);
-}
-
-.Darcula .CustomNav a {
-  color: var(--links-color);
 }
 
 @media(min-width: 450px) {
@@ -20,8 +15,12 @@
 }
 
 .CustomNav .navbar-brand a {
-  /* color: var(--links-color); */
+  color: var(--back-color); 
   padding-left: 20px;
+}
+
+.Darcula .CustomNav .navbar-brand a {
+  color: var(--links-color); 
 }
 
 .CustomNav button .nav-toggler .collapsed {
@@ -36,7 +35,6 @@
 /* nav-item (items de la navbar) */
 .CustomNav .nav-item a {
   color: var(--grey-light-color) !important;
-  font-size: small ;
 }
 
 .CustomNav .nav-item {
@@ -45,13 +43,12 @@
 }
 
 @media (width < 450px) {
+    .CustomNav .nav-item.dropdown  {
+        font-size: small;
+    }
     .CustomNav .nav-item a {
       font-size: small;
     }
-}
-
-.CustomNav .nav-item.dropdown  {
-    font-size: small !important;
 }
 
 @media (width < 1000px) {
@@ -61,24 +58,33 @@
     }
 }
 
+@media (min-width: 450px) {
+    .CustomNav .nav-item.dropdown  {
+      margin-right: 20px;
+  }
+}
+
 /* .dropdown-menu (l'ensemble) */
 .CustomNav .dropdown-menu {
     background-color : var(--navbar-color);
     border: 0px;
-    max-height: 400px;
+    max-height: 800px;
+    max-width: 500px;
+    width: fit-content;
     overflow-y: auto;
     overflow-x: hidden;
+    text-align: center;
+}
+
+@media (max-width: 450px) {
+    .CustomNav .dropdown-menu {
+      margin: 0 auto;
+  }
 }
 
 /* dropdown-toggle (le titre du toggle) */
 .CustomNav .dropdown-toggle {
     margin-bottom: 0px !important;
-}
-
-@media (width < 450px) {
-    .CustomNav .dropdown-toggle   {
-        font-size: smaller !important;
-    }
 }
 
 .CustomNav .dropdown-toggle.show {
@@ -88,11 +94,22 @@
 /* dropdown-item (les sous-titres du toogle) */
 .CustomNav .dropdown-item {
     padding: 10px;
-    text-align: center;
 }
 
-.CustomNav .dropdown-item.active, .CustomNav .dropdown-item:hover {
+.CustomNav .nav-item a.dropdown-item {
+  color: var(--back-color) !important;
+}
+
+.Darcula .CustomNav .nav-item a.dropdown-item {
+  color: var(--links-color) !important;
+}
+
+.dropdown-item.active {
   background-color: var(--front-color) !important;
+}
+
+.Darcula .dropdown-item.active {
+  background-color: var(--grey-color) !important;
 }
 
 @media (width < 450px) {
@@ -125,6 +142,15 @@
 
 .CustomNav .dropdown-item:focus, .CustomNav .dropdown-item:focus {
   background-color : var(--navbar-hover-color);
+}
+
+
+.Darcula .CustomNav .dropdown-item:hover, .Darcula .CustomNav .dropdown-item:hover {
+  background-color : var(--grey-color);
+}
+
+.Darcula.CustomNav .dropdown-item:focus, .Darcula .CustomNav .dropdown-item:focus {
+  background-color : var(--grey-color);
 }
 
 /* @media (min-width: 450px) {

@@ -22,7 +22,7 @@
 }
 
 p {
-    padding-top: 10px;
+    /* padding-top: 5px; */
     hyphens: auto;
 }
 
@@ -30,13 +30,6 @@ p, h3, h4 {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     text-align: justify;
     white-space: pre-line;
-    font-size: large;
-}
-
-@media(width < 450px) {
-    p {
-        padding-top: 5px;
-    }
 }
 
 h1, h2 {
@@ -61,26 +54,39 @@ h3, h4 {
     padding-bottom: 10px;
 }
 
-h3 {
-    font-size: larger;
-}
-
 h4 {
     font-style: italic;
 }
 
 @media (width < 450px) {
     p, h3, h4 {
+        font-size: 16px;
         margin-left: 10px;
         margin-right: 10px;
     }
+    h1 {
+        font-size: 16px;
+    }
+    h2 {
+        font-size: 13px;
+    }
 }
 
-@media (min-width: 1268px) {
-   .CoursesContainer p, a {
-        font-size: large;
+@media (min-width: 450px) {
+    p, h3, h4 {
+        font-size: 23px !important;
     } 
+    h1 {
+        font-size: 20px;
+    }
+    h2 {
+        font-size: 18px;
+    }
+    .CenterTitle {
+        font-size: x-large !important;
+    }
 }
+
 
 a { 
     color: var(--links-color);
@@ -97,19 +103,6 @@ a:hover {
 }
 
 
-
-@media (min-width: 450px) {
-    h1 {
-        font-size: large !important;
-    }
-    .CenterTitle {
-        font-size: x-large !important;
-    }
-    p {
-        font-size: large !important;
-    } 
-}
-
 /* Buttons */
 
 .DefaultButton {
@@ -121,7 +114,7 @@ a:hover {
     margin-left: 10px;
     margin-right: 10px;
 /*     padding: 10px;
- */    font-size: medium;
+ */    font-size: x-large;
     font-family: 'Times New Roman', Times, serif !important;
     width: fit-content;
 }
@@ -132,12 +125,17 @@ a:hover {
     color: var(--back-color);
 }
 
+@media (max-width: 450px) {
+    .DefaultButton {
+        font-size: large !important;
+    }
+}
+
 @media (min-width: 450px) {
     .DefaultButton {
         padding: 10px;
         margin-top: 25px;
         margin-bottom: 25px;
-        font-size: large;
     }
 }
 
@@ -294,17 +292,10 @@ a:hover {
 
 .TableOfContentsLink p {
     font-family: var(--scholar-font);
-    font-size: large;
     text-align: left;
     color: var(--simple-text-color);
     text-decoration: none !important;
     margin-bottom: 25px;
-}
-
-@media (max-width: 450px) {
-    .TableOfContentsLink p {
-        font-size: medium;
-    }
 }
 
 a:-webkit-any-link {
@@ -465,7 +456,7 @@ table::-webkit-scrollbar-track {
 
     ::-webkit-scrollbar {
         height: 7px;
-        width: 5px;
+        width: 10px;
         cursor: auto;
     }
 
