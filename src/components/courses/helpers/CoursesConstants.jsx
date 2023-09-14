@@ -1,5 +1,5 @@
 const CoursesConstants = {
-    ELEM_CALCULUS: '/calcul-elementaire',
+    ELEM_CALCULUS: '/le-calcul-elementaire',
     EQ_1_DEG: '/les-equations-du-premier-degre',
     EQ_2_DEG: '/les-equations-du-second-degre',
     PUISSANCES: '/les-puissances',

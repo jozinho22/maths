@@ -1,6 +1,6 @@
-/* .UsualFunctionsButtonContainer {
+.UsualFunctionsButtonContainer {
     display: flex;
-} */
+} 
 
 @media (min-width: 450px) {
     .UsualFunctionsButtonsContainer {
@@ -21,8 +21,8 @@
 .UsualFunctionsButton {
     margin-top: 0px;
     padding: 0px;
-    width: 100px;
-    height: 60px;
+    width: 120px;
+    height: 80px;
 }
 
 @media (min-width: 450px) {
@@ -75,47 +75,36 @@
     font-family: 'Times New Roman', Times, serif;
     font-size: large;
     padding-bottom: 20px;
+
 }
+/* 
+.CoursesContainer .UsualFunctionsContainer .Graph {
+    width: 500px !important;
+    height: 500px !important;
+} */
 
 @media (min-width: 450px) {
-    .CoursesContainer .Graph {
-        width: 50% !important;
-        height: 50% !important;
-    }
-    .CoursesContainer .Graph.Reduced {
-        width: 30% !important;
-        height: 30% !important;
-    }
     .CoursesContainer .Graph .recharts-wrapper {
-        left: 45%;
+        width: 100% !important;
     }
     .CoursesContainer .Graph.Reduced .recharts-wrapper {
         left: 100%;
     }
-    .CoursesContainer .UsualFunctionsContainer .Graph {
-        width: 90% !important;
-        height: 90% !important;
-    }
     .CoursesContainer .UsualFunctionsContainer .Graph .recharts-wrapper {
         left: 5%;
+        width: 500px !important;
     }
 }
 
 
 @media (max-width: 450px) {
-    .CoursesContainer .Graph {
-        width: 100% !important;
-        height: 100% !important;
-    }
     .CoursesContainer .Graph .recharts-wrapper {
         left: -5%;
     }
-    .CoursesContainer .UsualFunctionsContainer .Graph {
-        width: 120% !important;
-        height: 120% !important;
-    }
+
     .CoursesContainer .UsualFunctionsContainer .Graph .recharts-wrapper {
-        left: -15%;
+        left: -10%;
+        width: 250px !important;
     }
 }
 

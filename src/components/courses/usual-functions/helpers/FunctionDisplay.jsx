@@ -4,7 +4,7 @@ import { LineChart, XAxis, YAxis, ReferenceLine, ResponsiveContainer, CartesianG
 import MathJaxDisplay from '../../../mathjax-display/MathJaxDisplay';
 import Constants from '../../../immutable/Constants';
 
-const FunctionDisplay = ( {f, fData, reduced} ) => {
+const FunctionDisplay = ( {f, fData} ) => {
 
     /*     'basis' | 'basisClosed' | 'basisOpen' | 'linear' | 'linearClosed' | 'natural' | 'monotoneX' | 'monotoneY' | 'monotone' | 'step' | 'stepBefore' | 'stepAfter' | CurveFactory;
  */
@@ -24,7 +24,7 @@ const FunctionDisplay = ( {f, fData, reduced} ) => {
             <ResponsiveContainer 
                 width="100%" 
                 aspect={f.aspect} 
-                className={`Graph ${reduced ? "Reduced" : ""}`}>
+                className={`Graph`}>
                 <LineChart
                     data={fData}
                     margin={{ top: 5, right: 20, bottom: 5, left: 0 }} >
