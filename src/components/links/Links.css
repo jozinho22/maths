@@ -15,6 +15,12 @@
     font-size: 23px;
 }
 
+@media(width < 450px) {
+    .Links a {
+        font-size: 17px;
+    } 
+}
+
 .Links .TableOfContents {
     align-items: center;
 }

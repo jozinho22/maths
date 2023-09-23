@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
 import MathJaxDisplay from '../../../mathjax-display/MathJaxDisplay';
+import MathJaxInline from '../../../mathjax-display/MathJaxInline';
 
 const PuissanceDePuissances = () => {
 
@@ -18,9 +19,16 @@ const PuissanceDePuissances = () => {
                 <p>On remarque cette fois que les exposants se multiplient.
                     {"\n"}Ce qui nous donne la formule suivante :
                 </p>
-                <Container className="Focus"> 
+                
+                <MathJaxDisplay toShow={powPow} demo />
+
+                <p>Avec <MathJaxInline toShow={"$a$"} /> et <MathJaxInline toShow={"$b$"} /> des entiers naturels (l'ensemble <MathJaxInline toShow={"$\\mathbb{N}$"} />) .</p>
+                
+                <p>Il est alors possible de démontrer que c'est le cas pour deux réels (l'ensemble <MathJaxInline toShow={"$\\mathbb{R}$"} />) : </p>
+                <Container className="Focus">
                     <MathJaxDisplay toShow={powPow} fRef={4}/>
-                </Container>
+                     <MathJaxDisplay toShow={"\\( avec \\enspace a \\enspace et \\enspace b \\in \\mathbb{R} \\)"} demo />
+                </Container> 
             </>
     );
 }

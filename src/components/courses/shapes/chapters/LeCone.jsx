@@ -7,6 +7,7 @@ import ImageZoom from '../../helpers/ImageZoom';
 import cone from '../assets/cone.png'
 import coneVolCalculus from '../assets/coneVolCalculus.png'
 import coneAreaCalculus from '../assets/coneAreaCalculus.png'
+import coneAreaCalculus2 from '../assets/coneAreaCalculus2.png'
 
 import pathBuilder from '../../../helpers/pathBuilder';
 import Link from '../../../immutable/nav/Link';
@@ -30,7 +31,7 @@ const LeCone = () => {
     var circleVolYResult = "\\(V = \\frac{\\pi. r^2.h}{3} \\)"; 
 
     var areasSum = "\\(S_{cone} = S_{axe} + S_{base} \\)";
-    var sBase = "\\(S_{base} = \\pi.x^2 \\)"; 
+    var sBase = "\\(S_{base} = \\pi.r^2 \\)"; 
 
     var circlePerimX = "\\(P(x) = 2\\pi x\\)"
     var circlePerimY = "\\(P(y) = 2\\pi.\\frac{y.r}{h}\\)";
@@ -55,9 +56,8 @@ const LeCone = () => {
     var coneArea10 = "\\(S_{axe} = 2\\pi.\\frac{rh}{2}.\\frac{1}{h}.\\sqrt{r^2 + h^2} \\)"
     var coneArea11 = "\\(S_{axe} = 2\\pi.r.\\sqrt{r^2 + h^2} \\)";
 
-    var aerasSumResult = "\\(S_{cone} = \\pi.x^2 + 2\\pi.r.\\sqrt{r^2 + h^2} \\)";
-    var aerasSumResult2 = "\\(S_{cone} = \\pi. (x^2 + 2.r.\\sqrt{r^2 + h^2}) \\)";
-
+    var aerasSumResult = "\\(S_{cone} = \\pi.r^2 + 2\\pi.r.\\sqrt{r^2 + h^2} \\)";
+    var aerasSumResult2 = "\\(S_{cone} = \\pir .(r + 2\\sqrt{r^2 + h^2}) \\)";
 
     return (
         <>
@@ -65,16 +65,16 @@ const LeCone = () => {
             <p>Sa base a donc une surface de <MathJaxInline toShow={"$\\pi.r^2$"}/> (voir <Link url={pathBuilder(`${CoursesConstants.FORMES}/le-cercle`)} external>la chapitre sur le cercle</Link>)</p>
             <ImageZoom src={cone} name="Le cône" n={++n}/>
 
-
             <Title1 title={"a) Calcul du volume par intégration"} />
             <p>Pour calculer le volume du cône, nous allons retourner la forme par mesure de simplicité.</p>
             <ImageZoom src={coneVolCalculus} name="Calcul du volume du cône" n={++n}/>
             <p>
                 Nous allons y introduire deux variables <MathJaxInline toShow={"$x$"}/> et <MathJaxInline toShow={"$y$"}/>.
                 {"\n"}
-                <MathJaxInline toShow={"$x$"}/> sera le rayon variable sur l'axe <MathJaxInline toShow={"$y$"}/>.
+                <MathJaxInline toShow={"$x$"}/> sera le rayon variable jusque <MathJaxInline toShow={"$r$"}/>.
                 {"\n"}
                 <MathJaxInline toShow={"$y$"}/> sera la hauteur variable jusque <MathJaxInline toShow={"$h$"}/>.
+                {"\n"}{"\n"}La variable <MathJaxInline toShow={"$x$"}/> est alors dépendant du mouvement de <MathJaxInline toShow={"$y$"}/>. C'est cette dernière qui mène la danse.
             </p>
             <p>Appliquons le théorème de Thalès dans les deux triangles formés par ces variables.</p>
             <p>On a : </p>
@@ -107,7 +107,7 @@ const LeCone = () => {
             <Container className="Focus">
                 <MathJaxDisplay toShow={sBase} />
             </Container>
-            <p>Il nous reste alors le second terme à calculer.</p>
+            <p>Il nous reste alors le second terme <MathJaxInline toShow={"$S_{axe}$"}/> à calculer.</p>
             <ImageZoom src={coneAreaCalculus} name="Calcul de la surface du cône" n={++n}/>
             <p>Notons <MathJaxInline toShow="$P(x)$" /> le périmètre du cercle en fonction du rayon variable <MathJaxInline toShow="$x$" /></p>
             <MathJaxDisplay toShow={circlePerimX} fRef={3} demo />
@@ -124,16 +124,17 @@ const LeCone = () => {
             <MathJaxDisplay toShow={coneArea} demo />
             <p>On sort les constantes :</p>
             <MathJaxDisplay toShow={coneArea2} fRef={4} demo />
-            <p>Or on voit sur la figure ci-dessus que :</p>
+            <p>Or on voit sur la figure ci-dessous que :</p>
             <MathJaxDisplay toShow={l} demo />
             <MathJaxDisplay toShow={dl} fRef={5} demo />
+            <ImageZoom src={coneAreaCalculus2} name="Calcul de la surface du cône (2)" n={++n}/>
             <p>Mais souvenez-vous que : </p>
             <MathJaxDisplay toShow={thales2} fRef={1} demo />
             <p>Soit en injectant <MathJaxInline toShow={"$S(1)$"}/> dans <MathJaxInline toShow={"$S(5)$"}/></p>
             <MathJaxDisplay toShow={dl2} demo />
             <MathJaxDisplay toShow={dl3} demo />
-            <MathJaxDisplay toShow={dl4} fRef={6} demo />
-            <MathJaxDisplay toShow={dl5} demo />
+            <MathJaxDisplay toShow={dl4} demo />
+            <MathJaxDisplay toShow={dl5} fRef={6} demo />
             <p>À présent on injecte <MathJaxInline toShow={"$(6)$"}/> dans <MathJaxInline toShow={"$(4)$"}/> : </p>
             <MathJaxDisplay toShow={coneArea3} demo />
             <p>On sort à nouveau les constantes : </p>
