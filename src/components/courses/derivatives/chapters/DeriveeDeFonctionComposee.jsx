@@ -3,34 +3,33 @@ import { Container } from 'react-bootstrap';
 import MathJaxDisplay from '../../../mathjax-display/MathJaxDisplay';
 import MathJaxInline from '../../../mathjax-display/MathJaxInline';
 import Title1 from '../../helpers/Title1';
+import Aside from '../../helpers/Aside';
+import Link from '../../../immutable/nav/Link';
+import PagesConstants from '../../../immutable/nav/PagesConstants';
+import CoursesConstants from '../../helpers/CoursesConstants';
+import pathBuilder from '../../../helpers/pathBuilder';
 
 const DeriveeDeFonctionComposee = () => {
     
     var fRondG = "\\( \\forall x \\in \\xi(g(x))  \\)";
     var fRondG2 = "\\( (f \\circ g)(x) = f\\left(g(x)\\right) \\)";
 
-    var fRondGDecortX = "\\( x \\longmapsto g(x) = y \\longmapsto f(y) = (f \\circ g)(x) \\)";
-    var fRondGDecortA = "\\( a\\longmapsto g(a) = b \\longmapsto f(b) = (f \\circ g)(a) \\)";
+    var fRondGDecortX = "\\( x \\longmapsto g(x) \\longmapsto f(g(x)) = (f \\circ g)(x) \\)";
 
-    var derivabilityInAGen = "\\( f'(x) = lim_{x  \\to a} \\enspace \\frac{f(x) - f(a)}{x-a}\\)";
+    var derivability = "\\(f'(x) = lim_{h \\to 0} \\enspace  \\frac{f(x+h) - f(x)}{h}\\)";
 
-    var derivabilityInA = "\\( (f \\circ g)'(x)  = lim_{x  \\to a} \\enspace \\frac{(f \\circ g)(x ) - (f \\circ g)(a)}{x-a}\\)";
-    var derivabilityInA2 = "\\( (f \\circ g)'(x)  = lim_{x  \\to a} \\enspace \\frac{f(y) - f(b)}{x-a}\\)";
-    var derivabilityInA3 = "\\( (f \\circ g)'(x)  = lim_{x  \\to a} \\enspace  \\frac{y-b}{x-a} . \\frac{f(y) - f(b)}{y-b} \\)";
-    var derivabilityInA4 = "\\( (f \\circ g)'(x)  = lim_{x  \\to a} \\enspace  \\frac{g(x)-g(a)}{x-a} . \\frac{f(y) - f(b)}{y-b} \\)";
-    var derivabilityInA5 = "\\( (f \\circ g)'(x)  = lim_{x  \\to a} \\enspace lim_{x  \\to a} \\enspace \\frac{g(x)-g(a)}{x-a} . \\frac{f(y) - f(b)}{y-b} \\)";
-
-    var derivabilityInA_fPrim = "\\( lim_{x  \\to a} \\enspace \\frac{f(y) - f(b)}{y-b} = lim_{y \\to b} \\enspace \\frac{g(y) - g(b)}{y-b} \\)";
-    
-    var derivabilityInA6 = "\\( (f \\circ g)'(x)  = lim_{x  \\to a} \\enspace \\frac{g(x)-g(a)}{x-a} . lim_{y  \\to b} \\enspace \\frac{f(y) - f(b)}{y-b} \\)";
-    var derivabilityInA7 = "\\( (f \\circ g)'(a)  = g'(a) . f'(b)\\)";
-    var derivabilityInA8 = "\\( (f \\circ g)'(a)  = g'(a) . f'(g(a))\\)";
+    var derivabilityInA = "\\( (f \\circ g)'(x)  = lim_{h \\to 0} \\enspace \\frac{(f \\circ g)(x + h) - (f \\circ g)(x)}{h}\\)";
+    var derivabilityInA2 = "\\( (f \\circ g)'(x)  = lim_{h \\to 0} \\enspace \\frac{f(g(x+h)) - f(g(x))}{h}\\)";
+    var derivabilityInA3 = "\\( (f \\circ g)'(x)  = lim_{h \\to 0} \\enspace  \\frac{f(g(x+h)) - f(g(x))}{h} .  \\frac{g(x+h) - g(x)}{g(x+h) - g(x)} \\)";
+    var derivabilityInA4 = "\\( (f \\circ g)'(x)  = lim_{h \\to 0} \\enspace  \\frac{f(g(x+h)) - f(g(x))}{g(x+h) - g(x)} .  \\frac{g(x+h) - g(x)}{h} \\)";
+    var derivabilityInA5 = "\\( (f \\circ g)'(x)  = lim_{h \\to 0} \\enspace \\frac{f(g(x+h)) - f(g(x))}{g(x+h) - g(x)} .  lim_{h \\to 0} \\enspace  \\frac{g(x+h) - g(x)}{h} \\)";
+    var derivabilityInA6 = "\\( (f \\circ g)'(x)  = \\underbrace { lim_{k \\to 0} \\enspace \\frac{f(g(x+h)) - f(g(x))}{k} }_\\text{ f'(g(x))} . \\underbrace { lim_{h \\to 0} \\enspace  \\frac{g(x+h) - g(x)}{h} }_\\text{ g'(x)} \\)";
 
     var fRondGPrim = "\\( (f \\circ g)'(x)  = g'(x) . f'(g(x))\\)";
 
     return  <>
                 <p>
-                    On définit une fonction composée <MathJaxInline toShow={"$ f \\circ g $"} /> de la façon suivante :
+                    On définit une fonction composée <MathJaxInline toShow={"$ (f \\circ g) $"} /> de la façon suivante :
                 </p>
                 <Container className="Focus">
                      <MathJaxDisplay toShow={fRondG} />  
@@ -40,32 +39,33 @@ const DeriveeDeFonctionComposee = () => {
                    On peut la décortiquer de la façon suivante :
                 </p>
                 <MathJaxDisplay toShow={fRondGDecortX} demo/>  
-                <MathJaxDisplay toShow={fRondGDecortA} demo/>  
+                <p>On applique tout d'abord la fonction <MathJaxInline toShow={"$ g $"} />, puis on applique la fonction <MathJaxInline toShow={"$ f $"} /> au résultat</p>
                 
                 <Title1 title={"Dérivabilité en a"} />
-                <p>Supposons que <MathJaxInline toShow={"$ g $"} /> est dérivable en <MathJaxInline toShow={"$ a $"} /> et que <MathJaxInline toShow={"$ f $"} /> est dérivable en <MathJaxInline toShow={"$ b $"} />.</p>
-                <p>Voyons si <MathJaxInline toShow={"$ f \\circ g $"} /> est dérivable en <MathJaxInline toShow={"$ a $"} /> :</p>
-                <p>La formule générale de la dérivée peut aussi se rencontrer sous cette forme : </p>
+                <p>Supposons que <MathJaxInline toShow={"$ g $"} /> est dérivable en <MathJaxInline toShow={"$ a $"} />.</p>
+                <p>Tentons de calculer une formule de la dérivée <MathJaxInline toShow={"$ (f \\circ g)(x) $"} /> :</p>
+                <p>On a vu dans <Link url={pathBuilder(`${PagesConstants.COURS}${CoursesConstants.DERIVEE}/presentation`)} external>la présentation</Link> la définition de la dérivée : </p>
                 <Container className="Focus">
-                     <MathJaxDisplay toShow={derivabilityInAGen} />  
+                     <MathJaxDisplay toShow={derivability} />  
                 </Container>
                 <p>Soit dans notre cas :</p>
                 <MathJaxDisplay toShow={derivabilityInA} demo/> 
                 <MathJaxDisplay toShow={derivabilityInA2} demo/>
+                <p>On ajoute un membre équivalent en haut et en bas, ce qui ne change rien :</p>
                 <MathJaxDisplay toShow={derivabilityInA3} demo/>
                 <MathJaxDisplay toShow={derivabilityInA4} demo/>
+                <p>La limite d'une somme est égale à la somme de ses limites, soit on peut écrire :</p>
                 <MathJaxDisplay toShow={derivabilityInA5} demo/>
-                <p>Mais : </p>
-                <MathJaxDisplay toShow={derivabilityInA_fPrim} demo/>
-                <p>Car si <MathJaxInline toShow={"$ x \\to a $"} />, alors <MathJaxInline toShow={"$ y = g(x) \\to g(a) = b $"} />.</p>
-                <p>Donc on a finalement :</p>
+                <Aside>
+                    <p>Posons que :</p>
+                    <MathJaxInline toShow={"$ g(x+h) - g(x) = k $"} />
+                    <p>Cela implique par conséquence que :</p>
+                    <p>Si <MathJaxInline toShow={"$ h \\to 0 $"} />, alors <MathJaxInline toShow={"$ k \\to 0 $"} />.</p> 
+                </Aside>
+                <p>Soit : </p>
                 <MathJaxDisplay toShow={derivabilityInA6} demo/>
-                <p>Et on reconnaît alors les dérivées des deux fonctions :</p>
-                <MathJaxDisplay toShow={derivabilityInA7} demo/>
-                <MathJaxDisplay toShow={derivabilityInA8} demo/>  
+                <p>Donc on a finalement :</p>
 
-                <Title1 title={"Conclusion"} />
-                <p>La composée de deux fonctions dérivables l'est aussi et sa dérivée est : </p>
                 <Container className="Focus">
                      <MathJaxDisplay toShow={fRondGPrim} />  
                 </Container>

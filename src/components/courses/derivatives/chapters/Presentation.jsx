@@ -23,6 +23,10 @@ const Presentation = () => {
 
     var leibnizNotation = "\\(f'(x) \\Leftrightarrow \\frac{df}{dx}\\)";
 
+    var derivabilityInAGen = "\\( f'(x) = lim_{x  \\to a} \\enspace \\frac{f(x) - f(a)}{x-a}\\)";
+
+    var derivabilityCondition = "\\(lim_{h \\to 0} \\enspace  \\frac{f(x+h) - f(x)}{h} = a \\)";
+
     return  <>
                 <p>
                     La dérivée est une notion clef dans l’analyse de fonctions, car elle sous-tend toute la
@@ -92,9 +96,22 @@ const Presentation = () => {
                 <Container className="Focus">
                      <MathJaxDisplay toShow={leibnizNotation} />  
                 </Container>
+                <p>On pourra enfin la retrouver aussi sous cette forme-ci</p>
+                <Container className="Focus">
+                     <MathJaxDisplay toShow={derivabilityInAGen} />  
+                </Container>
 
                 <Title1 title={"d) Condition à la dérivabilité"} />
-                <p>On dit qu'une fonction est dérivable si et seulement si le nombre dérivée <MathJaxInline toShow={"$ f'(a) $"} /> au point d'abscisse <MathJaxInline toShow={"$ a $"} /> est un nombre réel.</p>
+                <p>On dit qu'une fonction est dérivable si et seulement si le nombre dérivée de la fonction <MathJaxInline toShow={"$ f(x) $"} /> au point d'abscisse <MathJaxInline toShow={"$ a $"} />, <MathJaxInline toShow={"$ f'(a) $"} /> est-à-dire  est un nombre réel.</p>
+                <p>Soit :</p> 
+                <Container className="Focus">
+                     <MathJaxDisplay toShow={derivabilityCondition} />  
+                </Container>
+
+                <Title1 title={"e) Dérivable => continue"} />
+                <p>Toute fonction dérivable en <MathJaxInline toShow={"$ a $"} /> est alors continue à ce point.</p>
+                <p>Par conséquent, toute fonction qui n'est pas continue n'est pas dérivable là ou elle est discontinue.</p>
+                <p>Attention, une fonction peut cependant être continue mais non dérivable (exemple : la fonction valeur absolue en <MathJaxInline toShow={"$ a = 0 $"} />).</p>
             </>
 }
 
