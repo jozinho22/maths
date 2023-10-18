@@ -115,7 +115,7 @@ const LeCone = () => {
             <MathJaxDisplay toShow={thales2} fRef={1} demo />
             <p>Soit en injectant <MathJaxInline toShow={"$(1)$"}/> dans <MathJaxInline toShow={"$(3)$"}/>, on obitent le périmètre en fonction de <MathJaxInline toShow={"$y$"}/> : </p>
             <MathJaxDisplay toShow={circlePerimY} demo />
-            <p>Nous allons intégrer sur la distance <MathJaxInline toShow={"$l$"}/> qui est l'hypothénuse du triangle rectangle formé par <MathJaxInline toShow={"$x$"}/>, <MathJaxInline toShow={"$y$"}/> et <MathJaxInline toShow={"$l$"}/>.</p>
+            <p>Nous allons intégrer sur la distance <MathJaxInline toShow={"$l$"}/> qui est l'hypoténuse du triangle rectangle formé par <MathJaxInline toShow={"$x$"}/>, <MathJaxInline toShow={"$y$"}/> et <MathJaxInline toShow={"$l$"}/>.</p>
             <p>Notons <MathJaxInline toShow={"$S(y)$"}/> la surface du cône sur l'axe <MathJaxInline toShow={"$y$"}/>.</p>
             <p>On a alors : </p>
             <MathJaxDisplay toShow={dS} demo />

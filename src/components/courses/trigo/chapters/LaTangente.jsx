@@ -16,7 +16,7 @@ const LaTangente = () => {
 
     var tanAlpha = "\\(tan(\\alpha) = \\frac{a}{b}  \\)";
     var a = "\\( a = b.tan(\\alpha)  \\)";
-    var tanAlphaGen = "\\(tan(\\alpha) = \\frac{oppose}{adjacent} \\)";
+    var tanAlphaGen = "\\(tan(\\alpha) = \\frac{oppos \\acute{e}}{adjacent} \\)";
 
     return (
         <>

@@ -12,8 +12,8 @@ import pathBuilder from '../../../helpers/pathBuilder';
 
 const LesOperationsDeBase = () => {
    
-    var oppose = "\\( oppose(n) = -n \\)";
-    var oppose2 = "\\( oppose(-n) = n \\)";
+    var oppose = "\\( oppos \\acute{e}(n) = -n \\)";
+    var oppose2 = "\\( oppos \\acute{e}(-n) = n \\)";
 
     var nombPlusOppose = "\\( nombre + oppos \\acute{e} = 0\\)";
     var nombPlusOppose2 = "\\( 1 + (-1) = 0\\)";

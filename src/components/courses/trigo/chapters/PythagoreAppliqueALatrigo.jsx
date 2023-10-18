@@ -25,7 +25,7 @@ const PythagoreAppliqueALatrigo = () => {
     
     return (
             <>
-                <p>Sur la figure 1 du <Link url={pathBuilder(`${PagesConstants.COURS}${CoursesConstants.TRIGO}/presentation`)} external>premier chapitre sur la trigonométrie</Link> ci-dessous, on voit que nous sommes dans le cas d'un triangle rectangle formé par <MathJaxInline toShow={"$cos(\\alpha)$"} />, <MathJaxInline toShow={"$sin(\\alpha)$"} /> et son hypothénuse <MathJaxInline toShow={"$R$"} />.</p>
+                <p>Sur la figure 1 du <Link url={pathBuilder(`${PagesConstants.COURS}${CoursesConstants.TRIGO}/presentation`)} external>premier chapitre sur la trigonométrie</Link> ci-dessous, on voit que nous sommes dans le cas d'un triangle rectangle formé par <MathJaxInline toShow={"$cos(\\alpha)$"} />, <MathJaxInline toShow={"$sin(\\alpha)$"} /> et son hypoténuse <MathJaxInline toShow={"$R$"} />.</p>
                 <ImageZoom src={circleTrigo} name="Cosinus et sinus" n={1} />
                 <p>Grâce au théorème de Pythagore, on sait que :</p>
                 <MathJaxDisplay toShow={pyth} demo />

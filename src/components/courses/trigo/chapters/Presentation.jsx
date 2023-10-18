@@ -16,9 +16,9 @@ const Definition = () => {
 
     var sinDef = "\\(y =sin(\\alpha) \\)";
     var cosDef = "\\( x =cos(\\alpha) \\)";
-    var sin = "\\(sin(\\alpha) = \\frac{oppose}{hypothenuse} \\)";
-    var cos = "\\(cos(\\alpha) = \\frac{adjacent}{hypothenuse} \\)";
-    var tan = "\\(tan(\\alpha) = \\frac{oppose}{adjacent} \\)";
+    var sin = "\\(sin(\\alpha) = \\frac{oppos \\acute{e} }{hypot \\acute{e} use} \\)";
+    var cos = "\\(cos(\\alpha) = \\frac{adjacent}{hypot \\acute{e} use} \\)";
+    var tan = "\\(tan(\\alpha) = \\frac{oppos \\acute{e} }{adjacent} \\)";
 
     return (
             <>

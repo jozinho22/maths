@@ -29,7 +29,7 @@ const DeriveeDeFonctionComposee = () => {
 
     return  <>
                 <p>
-                    On définit une fonction composée <MathJaxInline toShow={"$ (f \\circ g) $"} /> de la façon suivante :
+                    On définit une fonction composée <MathJaxInline toShow={"$ (f \\circ g) $"} /> par :
                 </p>
                 <Container className="Focus">
                      <MathJaxDisplay toShow={fRondG} />  
@@ -39,10 +39,9 @@ const DeriveeDeFonctionComposee = () => {
                    On peut la décortiquer de la façon suivante :
                 </p>
                 <MathJaxDisplay toShow={fRondGDecortX} demo/>  
-                <p>On applique tout d'abord la fonction <MathJaxInline toShow={"$ g $"} />, puis on applique la fonction <MathJaxInline toShow={"$ f $"} /> au résultat</p>
+                <p>On applique tout d'abord la fonction <MathJaxInline toShow={"$ g $"} />, puis on applique la fonction <MathJaxInline toShow={"$ f $"} /> au résultat.</p>
                 
-                <Title1 title={"Dérivabilité en a"} />
-                <p>Supposons que <MathJaxInline toShow={"$ g $"} /> est dérivable en <MathJaxInline toShow={"$ a $"} />.</p>
+                <p>Supposons que <MathJaxInline toShow={"$ g $"} /> est continue pour tout <MathJaxInline toShow={"$ x$"} /> .</p>
                 <p>Tentons de calculer une formule de la dérivée <MathJaxInline toShow={"$ (f \\circ g)(x) $"} /> :</p>
                 <p>On a vu dans <Link url={pathBuilder(`${PagesConstants.COURS}${CoursesConstants.DERIVEE}/presentation`)} external>la présentation</Link> la définition de la dérivée : </p>
                 <Container className="Focus">
@@ -54,7 +53,7 @@ const DeriveeDeFonctionComposee = () => {
                 <p>On ajoute un membre équivalent en haut et en bas, ce qui ne change rien :</p>
                 <MathJaxDisplay toShow={derivabilityInA3} demo/>
                 <MathJaxDisplay toShow={derivabilityInA4} demo/>
-                <p>La limite d'une somme est égale à la somme de ses limites, soit on peut écrire :</p>
+                <p>La limite d'un produit est égal au produit des limites, soit on peut écrire :</p>
                 <MathJaxDisplay toShow={derivabilityInA5} demo/>
                 <Aside>
                     <p>Posons que :</p>

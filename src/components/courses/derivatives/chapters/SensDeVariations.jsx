@@ -14,7 +14,7 @@ const SensDeVariations = () => {
     var n = 0;
 
     return  <>
-                <p>La dérivée nous sert à calculer le sens de variations de fonctions.</p>
+                <p>La dérivée nous sert notamment à calculer le sens de variations de fonctions.</p>
                 <p>Reprenons notre exemple de tout à l'heure, la fonction <MathJaxInline toShow={"$ f(x) = x^2 $"} /> et observons ses tangentes issues de la dérivée pour <MathJaxInline toShow={"$ x = -1 $"} />, <MathJaxInline toShow={"$ x = 0 $"} /> et <MathJaxInline toShow={"$ x = 1 $"} />.</p>
                 <ImageZoom src={derivativeSquareFunctionSensVar} name="Variations de la fonction carrée" n={++n} />
                 <p>On voit que le nombre dérivée en un point nous indique le sens de variation de la fonction.</p>
