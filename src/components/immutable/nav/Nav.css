@@ -3,7 +3,7 @@
 }
 
 .CustomNav a {
-  font: inherit;
+  font-size: small;
 }
 
 @media(min-width: 450px) {
@@ -72,8 +72,16 @@
     max-width: 500px;
     width: fit-content;
     overflow-y: auto;
-    overflow-x: hidden;
+    overflow-x: hidden; 
     text-align: center;
+}
+
+/* .CustomNav .dropdown-menu.show {
+  height: fit-content;
+}
+ */
+#scrollable + .dropdown-menu.show {
+  height: 400px;
 }
 
 @media (max-width: 450px) {
@@ -121,12 +129,12 @@
 }
 
 .CustomNav .dropdown-item a {
-  font-size: small !important;
+  font-size: x-small !important;
   color: var(--back-color) !important;
 }
 
 .Darcula .CustomNav .dropdown-item a {
-  font-size: small !important;
+  font-size: x-small !important;
   color: var(--links-color) !important;
 }
 

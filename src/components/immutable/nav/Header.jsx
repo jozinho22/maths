@@ -45,17 +45,17 @@ const Header = ( {courseItems, pdfItems, gameItems} ) => {
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav" >
                     <Nav /* onSelect={handleSelect} */>
-                        <NavDropdown title="Cours de maths" >
+                        <NavDropdown id="scrollable" title="Cours de maths">
                             {courseItems.map(courseItem => 
                                 <NavDropdown.Item key={courseItem.id} eventkey={courseItem.id} as={NavLink} to={pathBuilder(`${PagesConstants.COURS}${courseItem.relativePath}`)} onClick={() => {retractToggleOnMobile()}} >
                                     {courseItem.title}
                                 </NavDropdown.Item>
                             )}
                         </NavDropdown> 
-                        <NavDropdown title="BDs de Jean-Pierre Petit">
+                        <NavDropdown id="scrollable" title="BDs de Jean-Pierre Petit">
                             {pdfItems.map(pdfItem => 
                                 <NavDropdown.Item key={pdfItem.id} eventkey={pdfItem.id} as={NavLink} to={pathBuilder(`${PagesConstants.BDS_DE_JPP}${pdfItem.relativePath}`)} onClick={() => {retractToggleOnMobile()}} >
-                                    {pdfItem.minTitle ? pdfItem.minTitle : pdfItem.title}
+                                    {pdfItem.title}
                                 </NavDropdown.Item>
                             )}
                         </NavDropdown>

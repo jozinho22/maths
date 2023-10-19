@@ -459,7 +459,7 @@ table::-webkit-scrollbar-track {
 
     ::-webkit-scrollbar {
         height: 7px;
-        width: 10px;
+        width: 7px;
         cursor: auto;
     }
 

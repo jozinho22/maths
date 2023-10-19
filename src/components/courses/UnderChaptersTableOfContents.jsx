@@ -15,7 +15,7 @@ const UnderChaptersTableOfContents = ( {courseItem, chapter} ) => {
             <div className="FlexButton">
                 <NavLink to={pathBuilder(`${PagesConstants.COURS}${courseItem.relativePath}`)} >
                     <Button className="DefaultButton GreenButton" >
-                        Retour au sommaire aux chapitres
+                        Retour au sommaire des chapitres
                     </Button> 
                 </NavLink>
             </div> 

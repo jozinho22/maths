@@ -2,9 +2,3 @@
   text-align: center;
   background-size: auto;
 }
-
-.AppScroll {
-  overflow-y: scroll;
-  height: 100vh;
-}
-

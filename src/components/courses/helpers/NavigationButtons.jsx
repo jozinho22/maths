@@ -12,8 +12,6 @@ const NavigationButtons = ( {setCount, chapter, chapters, courseRelativePath} ) 
     var width = document.body.offsetWidth;
     var mobile = width < 450; 
 
-    console.log(chapter)
-
     return (
         <Row>
             <Col style={{textAlign:"right"}}>

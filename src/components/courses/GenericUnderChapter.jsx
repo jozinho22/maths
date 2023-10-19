@@ -58,7 +58,7 @@ const GenericUnderChapter = ( {underChapter, chapter, courseItem} ) => {
             <Container id="capture">
                 <MainTitle title={`Cours ${courseItem.id + 1} : ${courseItem.title}`} />
                 <MainSubTitle title={`Chapitre ${chapter.id + 1} : ${chapter.title}`} />
-                <MainSubTitle title={`${underChapter.title}`} />
+                <MainSubTitle title={`${underChapter.id + 1}. ${underChapter.title}`} />
                 <div className="CoursesContainer">
                     {underChapter.component}        
                 </div>
