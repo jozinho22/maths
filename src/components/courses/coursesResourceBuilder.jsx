@@ -2,16 +2,17 @@ import getElementaryCalculusChapters from './elementary-calculus/getElementaryCa
 import getPowersChapters from './powers/getPowersChapters';
 import getEquationsFirstDegreeChapters from './equations-first-degree/getEquationsFirstDegreeChapters';
 import getEquationsSecondDegreeChapters from './equations-second-degree/getEquationsSecondDegreeChapters';
-import getDerivativeChapters from './derivatives/getDerivativeChapters';
+import getDerivativesChapters from './derivatives/getDerivativesChapters';
 import getThalesChapters from './thales/getThalesChapters';
 import getPythagoreChapters from './pythagore/getPythagoreChapters';
 import getPiChapters from './pi/getChapters';
 import getGoldenRatioChapters from './nbOr/getGoldenRatioChapters';
 import getTrigoChapters from './trigo/getTrigoChapters';
-import getShapesChapters from './shapes/getShapesChapters';
+import getSequencesChapters from './sequences/getSequencesChapters';
 import getUsualFunctionsChapters from './usual-functions/getUsualFunctionsChapters';
 
 import CoursesConstants from './helpers/CoursesConstants';
+import geometryCoursesResourceBuilder from './geometry/geometryCoursesResourceBuilder';
 
 function coursesResourceBuilder() {
 
@@ -44,7 +45,7 @@ function coursesResourceBuilder() {
       title: 'La dérivée',
       metaContent: "La dérivée : construction pas-à-pas, exemple et démonstrations",
       relativePath: CoursesConstants.DERIVEE,
-      chapters: getDerivativeChapters()
+      chapters: getDerivativesChapters()
     }
     var powers = {
       id: i++,
@@ -88,12 +89,20 @@ function coursesResourceBuilder() {
       relativePath: CoursesConstants.TRIGO,
       chapters: getTrigoChapters()
     }
-    var shapes = {
+    var seq = {
       id: i++,
-      title: 'Les formes',
-      metaContent: "Les formes : les formes usuelles (carré, cube, cercle, triangle...etc) et le calcul des aires et volumes",
-      relativePath: CoursesConstants.FORMES,
-      chapters: getShapesChapters()
+      title: 'Les suites numériques',
+      metaContent: "Les suites numériques : variations, suites arithmétiques, suites géométriques.",
+      relativePath: CoursesConstants.SEQUENCES,
+      chapters: getSequencesChapters()
+    }
+    var geo = {
+      id: i++,
+      title: 'La géométrie',
+      metaContent: "Les géométrie : les formes usuelles (carré, cube, cercle, triangle...etc) et le calcul des aires et volumes",
+      relativePath: CoursesConstants.GEOMETRY,
+      underChapters: true,
+      chapters: geometryCoursesResourceBuilder()
     }
     var usualFunctions = {
       id: i++,
@@ -114,7 +123,7 @@ function coursesResourceBuilder() {
         pi, 
         nbOr,
         trigo,
-        shapes,
+        geo,
         usualFunctions
     );
 

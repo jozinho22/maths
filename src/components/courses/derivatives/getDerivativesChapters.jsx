@@ -12,7 +12,7 @@ import DeriveesDeSinEtCos from "./chapters/DeriveesDeSinEtCos";
 import DeriveeDeFonctionComposee from "./chapters/DeriveeDeFonctionComposee";
 import TableauRecapDesDerivees from "./chapters/TableauRecapDesDerivees";
 
-const getDerivativeChapters = () => {
+const getDerivativesChapters = () => {
 
     var k = 0;
 
@@ -111,4 +111,4 @@ const getDerivativeChapters = () => {
     ];
 }
 
-export default getDerivativeChapters;
+export default getDerivativesChapters;
