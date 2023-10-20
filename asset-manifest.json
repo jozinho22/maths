@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/maths/static/css/main.82786d64.css",
-    "main.js": "/maths/static/js/main.7add3af2.js",
+    "main.css": "/maths/static/css/main.5537820e.css",
+    "main.js": "/maths/static/js/main.0f594dd9.js",
     "static/js/27.035b7279.chunk.js": "/maths/static/js/27.035b7279.chunk.js",
     "static/media/energetiquementVotre.pdf": "/maths/static/media/energetiquementVotre.ae46a881d6240ff7c375.pdf",
     "static/media/bigBang.pdf": "/maths/static/media/bigBang.9a7278fe34a3a9cbd1fe.pdf",
@@ -32,6 +32,7 @@
     "static/media/sphereAreaCalculus.png": "/maths/static/media/sphereAreaCalculus.92767ad62e38f94d7a99.png",
     "static/media/circleTrigoValues.png": "/maths/static/media/circleTrigoValues.55196b1b99267412d12d.png",
     "static/media/sphereVolCalculus.png": "/maths/static/media/sphereVolCalculus.801808ebc0ce771699ab.png",
+    "static/media/integration.png": "/maths/static/media/integration.2aa7c148f71d37b7e341.png",
     "static/media/pythagoreDemo2.png": "/maths/static/media/pythagoreDemo2.d32329243efba6f9043c.png",
     "static/media/derivativeBetterApprox.png": "/maths/static/media/derivativeBetterApprox.6d439efae4403b496b79.png",
     "static/media/circleAreaCalculus.png": "/maths/static/media/circleAreaCalculus.22c94f07dec374819cde.png",
@@ -54,11 +55,13 @@
     "static/media/thalesWithHeight.png": "/maths/static/media/thalesWithHeight.346900853d58192e1318.png",
     "static/media/heights2.png": "/maths/static/media/heights2.444d385da33e5d1d17ad.png",
     "static/media/circleTurnAround.png": "/maths/static/media/circleTurnAround.c19c2efeb002ea30e70e.png",
+    "static/media/integration3.png": "/maths/static/media/integration3.ee6ddb6f9ba231c3dc2b.png",
     "static/media/circlePi.png": "/maths/static/media/circlePi.eb2f06e8e2af3110d305.png",
     "static/media/triangleSinusRelation.png": "/maths/static/media/triangleSinusRelation.a1e7d72576c1563ffbb5.png",
     "static/media/distribFact.png": "/maths/static/media/distribFact.fcf1ea6d965f3abfc893.png",
     "static/media/sohcahtoa.png": "/maths/static/media/sohcahtoa.d7a0277ec992de0aa58e.png",
     "static/media/triangleSinusRelationDemo.png": "/maths/static/media/triangleSinusRelationDemo.cbe836ef02052fbdd6d9.png",
+    "static/media/integration2.png": "/maths/static/media/integration2.743b9b0aa0f05cc22a18.png",
     "static/media/coneVolCalculus.png": "/maths/static/media/coneVolCalculus.8aedfc481f3305f6029d.png",
     "static/media/cone.png": "/maths/static/media/cone.932f2d629b76bceb7075.png",
     "static/media/ordonneeAtOrigin.png": "/maths/static/media/ordonneeAtOrigin.2ce7a6739aa96ece5798.png",
@@ -68,7 +71,7 @@
     "index.html": "/maths/index.html"
   },
   "entrypoints": [
-    "static/css/main.82786d64.css",
-    "static/js/main.7add3af2.js"
+    "static/css/main.5537820e.css",
+    "static/js/main.0f594dd9.js"
   ]
 }
