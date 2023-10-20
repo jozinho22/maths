@@ -10,29 +10,29 @@ import pathBuilder from '../../../helpers/pathBuilder';
 
 const DeriveeDeFonctionComposee = () => {
     
-    var fRondG = "\\( \\forall x \\in \\xi(g(x))  \\)";
-    var fRondG2 = "\\( (f \\circ g)(x) = f\\left(g(x)\\right) \\)";
+    var fRondG = "\\( (f \\circ g)(x) = f\\left(g(x)\\right) \\)";
 
     var fRondGDecortX = "\\( x \\longmapsto g(x) \\longmapsto f(g(x)) = (f \\circ g)(x) \\)";
 
     var derivability = "\\(f'(x) = lim_{h \\to 0} \\enspace  \\frac{f(x+h) - f(x)}{h}\\)";
 
-    var derivabilityInA = "\\( (f \\circ g)'(x)  = lim_{h \\to 0} \\enspace \\frac{(f \\circ g)(x + h) - (f \\circ g)(x)}{h}\\)";
-    var derivabilityInA2 = "\\( (f \\circ g)'(x)  = lim_{h \\to 0} \\enspace \\frac{f(g(x+h)) - f(g(x))}{h}\\)";
-    var derivabilityInA3 = "\\( (f \\circ g)'(x)  = lim_{h \\to 0} \\enspace  \\frac{f(g(x+h)) - f(g(x))}{h} .  \\frac{g(x+h) - g(x)}{g(x+h) - g(x)} \\)";
-    var derivabilityInA4 = "\\( (f \\circ g)'(x)  = lim_{h \\to 0} \\enspace  \\frac{f(g(x+h)) - f(g(x))}{g(x+h) - g(x)} .  \\frac{g(x+h) - g(x)}{h} \\)";
-    var derivabilityInA5 = "\\( (f \\circ g)'(x)  = lim_{h \\to 0} \\enspace \\frac{f(g(x+h)) - f(g(x))}{g(x+h) - g(x)} .  lim_{h \\to 0} \\enspace  \\frac{g(x+h) - g(x)}{h} \\)";
-    var derivabilityInA6 = "\\( (f \\circ g)'(x)  = \\underbrace { lim_{k \\to 0} \\enspace \\frac{f(g(x+h)) - f(g(x))}{k} }_\\text{ f'(g(x))} . \\underbrace { lim_{h \\to 0} \\enspace  \\frac{g(x+h) - g(x)}{h} }_\\text{ g'(x)} \\)";
+    var derivabilityInA = "\\( (f \\circ g)'(x) =  lim_{h \\to 0} \\enspace \\frac{(f \\circ g)(x + h) - (f \\circ g)(x)}{h}\\)";
+    var derivabilityInA2 = "\\( \\Longleftrightarrow  lim_{h \\to 0} \\enspace \\frac{f(g(x+h)) - f(g(x))}{h}\\)";
+    var derivabilityInA3 = "\\( \\Longleftrightarrow  lim_{h \\to 0} \\enspace  \\frac{f(g(x+h)) - f(g(x))}{h} .  \\frac{g(x+h) - g(x)}{g(x+h) - g(x)} \\)";
+    var derivabilityInA4 = "\\( \\Longleftrightarrow  lim_{h \\to 0} \\enspace  \\frac{f(g(x+h)) - f(g(x))}{g(x+h) - g(x)} .  \\frac{g(x+h) - g(x)}{h} \\)";
+    var derivabilityInA5 = "\\( \\Longleftrightarrow  lim_{h \\to 0} \\enspace \\frac{f(g(x+h)) - f(g(x))}{g(x+h) - g(x)} .  lim_{h \\to 0} \\enspace  \\frac{g(x+h) - g(x)}{h} \\)";
+    var derivabilityInA6 = "\\( \\Longleftrightarrow  \\underbrace { lim_{k \\to 0} \\enspace \\frac{f(g(x+h)) - f(g(x))}{k} }_\\text{ f'(g(x))} . \\underbrace { lim_{h \\to 0} \\enspace  \\frac{g(x+h) - g(x)}{h} }_\\text{ g'(x)} \\)";
 
     var fRondGPrim = "\\( (f \\circ g)'(x)  = g'(x) . f'(g(x))\\)";
 
     return  <>
+                <p>Soit <MathJaxInline toShow={"$ (f: I \\to \\mathbb{R})  $"} /> et <MathJaxInline toShow={"$ (g: J \\to \\mathbb{R}) $"} /> deux fonctions.</p>
+                <p>On restreint si besoin l'ensemble de définition <MathJaxInline toShow={"$ J $"} /> de la fonction <MathJaxInline toShow={"$ g $"} /> pour qu'il soit inclu dans <MathJaxInline toShow={"$ I $"} />.</p>
                 <p>
                     On définit une fonction composée <MathJaxInline toShow={"$ (f \\circ g) $"} /> par :
                 </p>
                 <Container className="Focus">
                      <MathJaxDisplay toShow={fRondG} />  
-                     <MathJaxDisplay toShow={fRondG2} />  
                 </Container>
                 <p>
                    On peut la décortiquer de la façon suivante :

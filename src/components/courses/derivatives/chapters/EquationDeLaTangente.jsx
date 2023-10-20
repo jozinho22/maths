@@ -19,8 +19,8 @@ const EquationDeLaTangente = () => {
     var eqDroite3 = "\\(g(x) = f'(1)(x - 1 ) + f(1)\\)";
 
     var eqDroiteCalculus = "\\(g(x) = 2(x - 1 ) + 1\\)";
-    var eqDroiteCalculus2 = "\\(g(x) = 2x - 2 + 1\\)";
-    var eqDroiteCalculus3 = "\\(g(x) = 2x - 1\\)";
+    var eqDroiteCalculus2 = "\\(\\Longleftrightarrow 2x - 2 + 1\\)";
+    var eqDroiteCalculus3 = "\\(\\Longleftrightarrow 2x - 1\\)";
 
     var eqDroiteA = "\\(f'(a) = \\frac{g(x) - f(a)}{x - a }\\)";
     var eqDroiteGen = "\\(g(x) = f'(a)(x -a ) + f(a)\\)";

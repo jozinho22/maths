@@ -8,14 +8,14 @@ const DeriveeDunQuotient = () => {
 
     var deriveeQuotient = "\\( \\left( \\frac{f(x)}{g(x)} \\right)' = \\frac{f'(x).g(x) - g'(x).f(x)}{ (g(x))^2}   \\)";
     var deriveeQuotientDemo = "\\( \\left( \\frac{f(x)}{g(x)} \\right)' = lim_{ h \\to 0} \\enspace \\frac{ \\frac{f(x+h)}{g(x+h)} - \\frac{f(x)}{g(x)} }{h} \\)";
-    var deriveeQuotientDemo2 = "\\( \\left( \\frac{f(x)}{g(x)} \\right)' = lim_{ h \\to 0} \\enspace  \\frac{f(x+h).g(x) - f(x).g(x + h)}{h.(g(x+h)g(x))}  \\)";
-    var deriveeQuotientDemo3 = "\\( \\left( \\frac{f(x)}{g(x)} \\right)' = lim_{ h \\to 0} \\enspace \\frac{f(x+h).g(x) - f(x).g(x + h) + f(x).g(x) - f(x).g(x)}{h.(g(x+h)g(x))}  \\)";
-    var deriveeQuotientDemo4 = "\\( \\left( \\frac{f(x)}{g(x)} \\right)' = lim_{ h \\to 0} \\enspace \\frac{(f(x+h) - f(x)).g(x) - f(x).(g(x + h) - g(x)) }{h.(g(x+h)g(x))}  \\)";
-    var deriveeQuotientDemo5 = "\\( \\left( \\frac{f(x)}{g(x)} \\right)' = lim_{ h \\to 0} \\enspace \\left[ \\frac{(f(x+h) - f(x)).g(x)}{h} - \\frac{ f(x).(g(x + h) - g(x)) }{h} \\right]. \\left(\\frac{1}{{(g(x+h).g(x))}} \\right) \\)";
-    var deriveeQuotientDemo6 = "\\( \\left( \\frac{f(x)}{g(x)} \\right)' = \\left( lim_{ h \\to 0} \\enspace \\frac{(f(x+h) - f(x)).g(x)}{h} \\right) - \\left( lim_{ h \\to 0} \\enspace \\frac{ f(x).(g(x + h) - g(x)) }{h} \\right). \\left( lim_{ h \\to 0} \\enspace \\frac{1}{{(g(x+h).g(x))}} \\right) \\)";
-    var deriveeQuotientDemo7 = "\\( \\left( \\frac{f(x)}{g(x)} \\right)' = \\left( lim_{ h \\to 0} \\enspace \\frac{(f(x+h) - f(x))}{h} \\right).g(x) - f(x).\\left( lim_{ h \\to 0} \\enspace \\frac{ (g(x + h) - g(x)) }{h} \\right). \\left( lim_{ h \\to 0} \\enspace \\frac{1}{{(g(x+h).g(x))}} \\right) \\)";
+    var deriveeQuotientDemo2 = "\\( \\Longleftrightarrow lim_{ h \\to 0} \\enspace  \\frac{f(x+h).g(x) - f(x).g(x + h)}{h.(g(x+h)g(x))}  \\)";
+    var deriveeQuotientDemo3 = "\\( \\Longleftrightarrow lim_{ h \\to 0} \\enspace \\frac{f(x+h).g(x) - f(x).g(x + h) + f(x).g(x) - f(x).g(x)}{h.(g(x+h)g(x))}  \\)";
+    var deriveeQuotientDemo4 = "\\( \\Longleftrightarrow lim_{ h \\to 0} \\enspace \\frac{(f(x+h) - f(x)).g(x) - f(x).(g(x + h) - g(x)) }{h.(g(x+h)g(x))}  \\)";
+    var deriveeQuotientDemo5 = "\\( \\Longleftrightarrow lim_{ h \\to 0} \\enspace \\left[ \\frac{(f(x+h) - f(x)).g(x)}{h} - \\frac{ f(x).(g(x + h) - g(x)) }{h} \\right]. \\left(\\frac{1}{{(g(x+h).g(x))}} \\right) \\)";
+    var deriveeQuotientDemo6 = "\\( \\Longleftrightarrow \\left( lim_{ h \\to 0} \\enspace \\frac{(f(x+h) - f(x)).g(x)}{h} \\right) - \\left( lim_{ h \\to 0} \\enspace \\frac{ f(x).(g(x + h) - g(x)) }{h} \\right). \\left( lim_{ h \\to 0} \\enspace \\frac{1}{{(g(x+h).g(x))}} \\right) \\)";
+    var deriveeQuotientDemo7 = "\\( \\Longleftrightarrow \\left( lim_{ h \\to 0} \\enspace \\frac{(f(x+h) - f(x))}{h} \\right).g(x) - f(x).\\left( lim_{ h \\to 0} \\enspace \\frac{ (g(x + h) - g(x)) }{h} \\right). \\left( lim_{ h \\to 0} \\enspace \\frac{1}{{(g(x+h).g(x))}} \\right) \\)";
 
-    var deriveeQuotientDemo8 = "\\( \\left( \\frac{f(x)}{g(x)} \\right)' = \\frac{ f'(x).g(x) - f(x).g'(x) }{ (g(x))^2 } \\)";
+    var deriveeQuotientDemo8 = "\\( \\Longleftrightarrow \\frac{ f'(x).g(x) - f(x).g'(x) }{ (g(x))^2 } \\)";
 
     return  <>
                <p>

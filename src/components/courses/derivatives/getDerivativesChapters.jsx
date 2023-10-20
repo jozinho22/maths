@@ -57,7 +57,7 @@ const getDerivativesChapters = () => {
             id: k++,
             component: <DeriveeDeConstanteEtFonctionAffine />,
             title: 'Dérivée \'une fonction constante et d\'une fonction affine',
-            metaContent: 'Dérivée \'une fonction constante et d\'une fonction affine : démonstration.',
+            metaContent: 'Dérivée d\'une fonction constante et d\'une fonction affine : démonstration.',
             relativePath: '/derivee-de-constante-et-fonction-affine'
         },
         {

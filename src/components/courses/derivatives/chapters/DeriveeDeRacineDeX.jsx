@@ -5,14 +5,14 @@ import MathJaxInline from '../../../mathjax-display/MathJaxInline';
 
 const DeriveeDeRacineDeX = () => {
     
-    var fSqr = "\\( \\forall x \\in \\mathbb{R_+^*}, f(x)=  \\sqrt{x}\\)";
+    var fSqr = "\\( \\forall x \\in \\mathbb{R_+^*}, \\enspace f(x)=  \\sqrt{x}\\)";
     var fSqrPrim = "\\( (\\sqrt{x})' = lim_{ h \\to 0} \\enspace  \\frac{ \\sqrt{x + h} - \\sqrt{x } }{h} \\)";
-    var fSqrPrim2 = "\\( (\\sqrt{x})' = lim_{ h \\to 0} \\enspace  \\frac{ \\left( \\sqrt{x + h} - \\sqrt{x } \\right).\\left( \\sqrt{x + h} + \\sqrt{x } \\right) } {h. \\left(\\sqrt{x + h} + \\sqrt{x} \\right)} \\)";
-    var fSqrPrim3 = "\\( (\\sqrt{x})' = lim_{ h \\to 0} \\enspace  \\frac{ x + h - x } {h. \\left(\\sqrt{x + h} + \\sqrt{x} \\right)} \\)";
-    var fSqrPrim4 = "\\( (\\sqrt{x})' = lim_{ h \\to 0} \\enspace  \\frac{h}{h.\\left( \\sqrt{x + h} + \\sqrt{x } \\right)} \\)";
-    var fSqrPrim5 = "\\( (\\sqrt{x})' =  lim_{ h \\to 0} \\enspace  \\frac{1}{ \\sqrt{x + h} + \\sqrt{x }} \\)";
+    var fSqrPrim2 = "\\( \\Longleftrightarrow lim_{ h \\to 0} \\enspace  \\frac{ \\left( \\sqrt{x + h} - \\sqrt{x } \\right).\\left( \\sqrt{x + h} + \\sqrt{x } \\right) } {h. \\left(\\sqrt{x + h} + \\sqrt{x} \\right)} \\)";
+    var fSqrPrim3 = "\\( \\Longleftrightarrow lim_{ h \\to 0} \\enspace  \\frac{ x + h - x } {h. \\left(\\sqrt{x + h} + \\sqrt{x} \\right)} \\)";
+    var fSqrPrim4 = "\\( \\Longleftrightarrow lim_{ h \\to 0} \\enspace  \\frac{h}{h.\\left( \\sqrt{x + h} + \\sqrt{x } \\right)} \\)";
+    var fSqrPrim5 = "\\( \\Longleftrightarrow  lim_{ h \\to 0} \\enspace  \\frac{1}{ \\sqrt{x + h} + \\sqrt{x }} \\)";
     
-    var fSqrPrim6 = "\\( (\\sqrt{x})' =  lim_{ h \\to 0} \\enspace \\frac{1}{ \\left( \\sqrt{x + h} + \\sqrt{x } \\right)} \\)";
+    var fSqrPrim6 = "\\( \\Longleftrightarrow  lim_{ h \\to 0} \\enspace \\frac{1}{ \\left( \\sqrt{x + h} + \\sqrt{x } \\right)} \\)";
     var fSqrPrim7 = "\\( (\\sqrt{x})' =  \\frac{1}{2. \\sqrt{x }} \\)";
 
     return  <>

@@ -9,12 +9,11 @@ const DeriveeDUnProduit = () => {
     var deriveeProduit = "\\( \\big(f(x) . g(x) \\big)' = f'(x).g(x) + g'(x).f(x)  \\)";
 
     var deriveeProduitDemo = "\\( \\big(f(x) . g(x) \\big)' = lim_{ h \\to 0} \\enspace \\frac{ f(x+h).g(x+h) - f(x) . g(x) }{h}\\)";
-    var deriveeProduitDemo2 = "\\( \\big(f(x) . g(x) \\big)' = lim_{ h \\to 0} \\enspace \\frac{ f(x+h).g(x+h) + f(x + h).g(x) - f(x + h).g(x) - f(x).g(x) }{h} \\)";
-    var deriveeProduitDemo3 = "\\( \\big(f(x) . g(x) \\big)' = lim_{ h \\to 0} \\enspace \\frac{ f(x+h).(g(x + h) - g(x)) + g(x).(f(x + h) - f(x)) }{h}\\)";
-    var deriveeProduitDemo4 = "\\( \\big(f(x) . g(x) \\big)' = lim_{ h \\to 0} \\enspace \\frac{ f(x+h).(g(x + h) - g(x)) }{h} + lim_{ h \\to 0} \\enspace \\frac{ g(x).(f(x + h) - f(x)) }{h} \\)";
-    var deriveeProduitDemo5 = "\\( \\big(f(x) . g(x) \\big)' = \\left( lim_{ h \\to 0} \\enspace f(x+h) \\right). \\left( lim_{ h \\to 0} \\enspace \\frac{(g(x + h) - g(x)) }{h} \\right) + g(x). \\left( lim_{ h \\to 0} \\enspace \\frac{(f(x + h) - f(x)) }{h}\\right) \\)";
+    var deriveeProduitDemo2 = "\\( \\Longleftrightarrow lim_{ h \\to 0} \\enspace \\frac{ f(x+h).g(x+h) + f(x + h).g(x) - f(x + h).g(x) - f(x).g(x) }{h} \\)";
+    var deriveeProduitDemo3 = "\\( \\Longleftrightarrow lim_{ h \\to 0} \\enspace \\frac{ f(x+h).(g(x + h) - g(x)) + g(x).(f(x + h) - f(x)) }{h}\\)";
+    var deriveeProduitDemo4 = "\\( \\Longleftrightarrow lim_{ h \\to 0} \\enspace \\frac{ f(x+h).(g(x + h) - g(x)) }{h} + lim_{ h \\to 0} \\enspace \\frac{ g(x).(f(x + h) - f(x)) }{h} \\)";
+    var deriveeProduitDemo5 = "\\( \\Longleftrightarrow \\left( lim_{ h \\to 0} \\enspace f(x+h) \\right). \\left( lim_{ h \\to 0} \\enspace \\frac{(g(x + h) - g(x)) }{h} \\right) + g(x). \\left( lim_{ h \\to 0} \\enspace \\frac{(f(x + h) - f(x)) }{h}\\right) \\)";
     var deriveeProduitDemo6 = "\\( \\big(f(x) . g(x) \\big)' = f(x). g'(x) + g(x). f'(x) \\)";
-    var deriveeProduitDemo7 = "\\( \\big(f(x) . g(x) \\big)' =  f'(x). g(x) +  g'(x).f(x) \\)";
 
     return  <>
                <p>
@@ -39,7 +38,7 @@ const DeriveeDUnProduit = () => {
                <MathJaxDisplay toShow={deriveeProduitDemo6} demo /> 
                <p>Mais on la voit souvent sous cette forme :</p>
                <Container className="Focus">
-                    <MathJaxDisplay toShow={deriveeProduitDemo7}  />  
+                    <MathJaxDisplay toShow={deriveeProduitDemo6}  />  
                </Container>
             </>
 }

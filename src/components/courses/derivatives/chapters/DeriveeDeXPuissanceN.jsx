@@ -7,7 +7,7 @@ import Aside from '../../helpers/Aside';
 
 const DeriveeDeXPuissanceN = () => {
 
-    var xPuissanceN = "\\( \\forall x \\in (\\mathbb{R} \\enspace si \\enspace x >= 0, \\enspace \\mathbb{R^*} \\enspace si \\enspace x < 0), f(x)= x^n \\)";
+    var xPuissanceN = "\\( \\forall x \\in (\\mathbb{R} \\enspace si \\enspace x \\geq 0, \\enspace \\mathbb{R^*} \\enspace si \\enspace x < 0), f(x)= x^n \\)";
 
     var deriveeXPuissanceN = "\\( (x^n)' = n . x^{n-1} \\)";
     var deriveeXPuissanceN2 = "\\( (x^n)' = lim_{ h \\to 0} \\enspace \\frac{ (x+h)^n - x^n }{h} \\)";
@@ -17,15 +17,15 @@ const DeriveeDeXPuissanceN = () => {
     var xPlusHPuissanceN = "\\( (x + h)^n = \\sum_{k=0}^n \\binom{n}{k} x^{n-k} h^k \\)";
     var xPlusHPuissanceN2 = "\\( (x + h)^n =  x^n + \\binom{n}{1} x^{n-1} h + \\binom{n}{2} x^{n-2} h^2 + + \\binom{n}{3}  x^{n-3} h^3 + ... + \\binom{n}{k} x^{n-k} h^k + ... + h^n \\)";
     
-    var deriveeXPuissanceN3 = "\\( (x^n)' = lim_{ h \\to 0} \\enspace \\frac{ x^n + n x^{n-1} h + \\binom{n}{2} x^{n-2}.h^2 + + \\binom{n}{3} x^{n-3}.h^3 + ... + \\binom{n}{k} x^{n-k} h^k + ... + h^n - x^n }{h} \\)";
-    var deriveeXPuissanceN4 = "\\( (x^n)' = lim_{ h \\to 0} \\enspace \\frac{ n  x^{n-1}.h + \\binom{n}{2} x^{n-2} h^2 + + \\binom{n}{3} x^{n-3} h^3 + ... + \\binom{n}{k} x^{n-k} h^k + ... + h^n }{h} \\)";
-    var deriveeXPuissanceN5 = "\\( (x^n)' = lim_{ h \\to 0} \\enspace h.\\frac{ n  x^{n-1} + \\binom{n}{2} x^{n-2} h + + \\binom{n}{3} x^{n-3} h^2 + ... + \\binom{n}{k} x^{n-k} h^{k-1} + ... + h^{n-1} }{h} \\)";
+    var deriveeXPuissanceN3 = "\\( \\Longleftrightarrow lim_{ h \\to 0} \\enspace \\frac{ x^n + n x^{n-1} h + \\binom{n}{2} x^{n-2}.h^2 + + \\binom{n}{3} x^{n-3}.h^3 + ... + \\binom{n}{k} x^{n-k} h^k + ... + h^n - x^n }{h} \\)";
+    var deriveeXPuissanceN4 = "\\( \\Longleftrightarrow lim_{ h \\to 0} \\enspace \\frac{ n  x^{n-1}.h + \\binom{n}{2} x^{n-2} h^2 + + \\binom{n}{3} x^{n-3} h^3 + ... + \\binom{n}{k} x^{n-k} h^k + ... + h^n }{h} \\)";
+    var deriveeXPuissanceN5 = "\\( \\Longleftrightarrow lim_{ h \\to 0} \\enspace h.\\frac{ n  x^{n-1} + \\binom{n}{2} x^{n-2} h + + \\binom{n}{3} x^{n-3} h^2 + ... + \\binom{n}{k} x^{n-k} h^{k-1} + ... + h^{n-1} }{h} \\)";
 
-    var deriveeXPuissanceN6 = "\\( (x^n)' = lim_{ h \\to 0} \\enspace n x^{n-1} + \\binom{n}{2} x^{n-2} h + + \\binom{n}{3} x^{n-3} h^2 + ... + \\binom{n}{k} x^{n-k} h^{k-1} + ... + h^{n-1}  \\)";
+    var deriveeXPuissanceN6 = "\\( \\Longleftrightarrow lim_{ h \\to 0} \\enspace n x^{n-1} + \\binom{n}{2} x^{n-2} h + + \\binom{n}{3} x^{n-3} h^2 + ... + \\binom{n}{k} x^{n-k} h^{k-1} + ... + h^{n-1}  \\)";
 
     var exemple1 = "\\( (x^2)' = 2x \\)";
     var exemple2 = "\\( (x^3)' = 3x^2 \\)";
-     var exemple3 = "\\( (x^{10})' = 10x^9 \\)";
+    var exemple3 = "\\( (x^{10})' = 10x^9 \\)";
     var exemple4 = "\\( (x^{-1})' = -x^{-2} = -\\frac{1}{x^2} \\)";
 
     return  <>

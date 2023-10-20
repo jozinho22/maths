@@ -15,9 +15,9 @@ const DeriveeDUneSomme = () => {
     var deriveeRappel = "\\(f'(x) = lim_{ h \\to 0} \\enspace \\frac{f(x+h) - f(x)}{h}\\)";
 
     var deriveeSommeDemo = "\\( \\big(f(x) + g(x) \\big)' = lim_{ h \\to 0} \\enspace \\frac{ f(x+h) + g(x+h) - (f(x) + g(x)) }{h}\\)";
-    var deriveeSommeDemo2 = "\\( \\big(f(x) + g(x) \\big)' = lim_{ h \\to 0} \\enspace \\frac{ f(x+h) + g(x+h) - f(x) - g(x) }{h}\\)";
-    var deriveeSommeDemo3 = "\\( \\big(f(x) + g(x) \\big)' = lim_{ h \\to 0} \\enspace \\left(\\frac{ f(x+h) - f(x) }{h} + \\frac{ g(x+h) - g(x)}{h} \\right)\\)";
-    var deriveeSommeDemo4 = "\\( \\big(f(x) + g(x) \\big)' = lim_{ h \\to 0} \\enspace \\frac{ f(x+h) - f(x) }{h} + lim_{ h \\to 0} \\enspace \\frac{ g(x+h) - g(x)}{h} \\)";
+    var deriveeSommeDemo2 = "\\(\\Longleftrightarrow lim_{ h \\to 0} \\enspace \\frac{ f(x+h) + g(x+h) - f(x) - g(x) }{h}\\)";
+    var deriveeSommeDemo3 = "\\( \\Longleftrightarrow lim_{ h \\to 0} \\enspace \\left(\\frac{ f(x+h) - f(x) }{h} + \\frac{ g(x+h) - g(x)}{h} \\right)\\)";
+    var deriveeSommeDemo4 = "\\(\\Longleftrightarrow lim_{ h \\to 0} \\enspace \\frac{ f(x+h) - f(x) }{h} + lim_{ h \\to 0} \\enspace \\frac{ g(x+h) - g(x)}{h} \\)";
 
     var deriveeDiff = "\\( \\big(f(x) - g(x) \\big)' = f'(x) - g'(x)  \\)";
 
