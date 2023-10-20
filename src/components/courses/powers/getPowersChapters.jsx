@@ -3,10 +3,10 @@ import MultiplicationDePuissances from './chapters/MultiplicationDePuissances';
 import ALaPuissanceZero from './chapters/ALaPuissanceZero';
 import InverseDePuissances from './chapters/InverseDePuissances';
 import PuissanceDePuissances from './chapters/PuissanceDePuissances';
-import PuissancesComposees from './chapters/PuissancesComposees';
 import AutresFormulesGenerales from './chapters/AutresFormulesGenerales';
 import LienEntrePuissancesEtRacines from './chapters/LienEntrePuissancesEtRacines';
 import EcritureScientifique from './chapters/EcritureScientifique';
+import TableauRecapDesPuissances from './chapters/TableauRecapDesPuissances';
 
 const getPowersChapters = () => {
 
@@ -22,13 +22,6 @@ const getPowersChapters = () => {
         },
         {
             id: k++,
-            component: <MultiplicationDePuissances />,
-            title: 'Multiplication de puissances',
-            metaContent: 'La formule générale pour calculer le résultat de puissances mulitpliées.',
-            relativePath: '/multiplication-de-puissances'
-        },
-        {
-            id: k++,
             component: <ALaPuissanceZero />,
             title: 'À la puissance zéro',
             metaContent: 'La notion de nombre élevé à la puissance zéro.',
@@ -36,10 +29,10 @@ const getPowersChapters = () => {
         },
         {
             id: k++,
-            component: <InverseDePuissances />,
-            title: 'Inverse de puissances',
-            metaContent: 'La notion de d\'inverse de puissance et la notation mathématique.',
-            relativePath: '/inverse-de-puissances'
+            component: <MultiplicationDePuissances />,
+            title: 'Multiplication de puissances',
+            metaContent: 'La formule générale pour calculer le résultat de puissances mulitpliées.',
+            relativePath: '/multiplication-de-puissances'
         },
         {
             id: k++,
@@ -50,10 +43,10 @@ const getPowersChapters = () => {
         },
         {
             id: k++,
-            component: <PuissancesComposees />,
-            title: 'Puissances composées',
-            metaContent: 'La manière dont on peut composer une puissance avec toutes les règles.',
-            relativePath: '/puissances-composees'
+            component: <InverseDePuissances />,
+            title: 'Inverse de puissances',
+            metaContent: 'La notion de d\'inverse de puissance et la notation mathématique.',
+            relativePath: '/inverse-de-puissances'
         },
         {
             id: k++,
@@ -75,6 +68,13 @@ const getPowersChapters = () => {
             title: 'L\'écriture scientifique',
             metaContent: 'Introduction à l\'écriture scientifique et l\'utilité des puissances.',
             relativePath: '/ecriture-scientifique'
+        },
+        {
+            id: k++,
+            component: <TableauRecapDesPuissances />,
+            title: 'Tableau récapitulatif des puissances de x',
+            metaContent: 'Tableau récapitulatif des puissances de x.',
+            relativePath: '/tableau-recap-des-puissances-de-x'
         }
     ];
 }

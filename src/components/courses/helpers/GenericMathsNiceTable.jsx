@@ -5,6 +5,7 @@ import NiceTable from '../../immutable/NiceTable';
 
 const GenericMathsNiceTable = ( {tableValues} ) => {
 
+    console.log(tableValues)
     return  <>
                 <NiceTable>
                     <thead>
@@ -14,11 +15,13 @@ const GenericMathsNiceTable = ( {tableValues} ) => {
                             </th>
                            
                                     {
-                                        tableValues[0].values.map( (headervalue, index) => {
-                                            return <td key={index}>
-                                                        <MathJaxDisplay toShow={`\\( ${headervalue}  \\)`} />
-                                                    </td>
-                                        })
+                                        tableValues[0].values ? 
+                                            tableValues[0].values.map( (headervalue, index) => {
+                                                return <td key={index}>
+                                                            <MathJaxDisplay toShow={`\\( ${headervalue}  \\)`} />
+                                                        </td>
+                                            })
+                                                :   <></>
                                     }
                         </tr>
                     </thead>
@@ -30,13 +33,14 @@ const GenericMathsNiceTable = ( {tableValues} ) => {
                                                 <MathJaxDisplay toShow={`\\( ${bodyValues.title}  \\)`} /> 
                                             </td>
                                         
-                                                    {
-                                                        bodyValues.values.map( (value, index) => {
-                                                            return <td key={index}>
-                                                                        <MathJaxDisplay toShow={`\\( ${value}  \\)`} />
-                                                                    </td>
+                                                    {   tableValues[0].values ?
+                                                            bodyValues.values.map( (value, index) => {
+                                                                return <td key={index}>
+                                                                            <MathJaxDisplay toShow={`\\( ${value}  \\)`} />
+                                                                        </td>
 
-                                                        })
+                                                            })
+                                                                :   <></>
                                                     }
                                         </tr>
                             })

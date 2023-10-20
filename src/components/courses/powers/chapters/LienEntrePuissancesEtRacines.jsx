@@ -56,13 +56,13 @@ const LienEntrePuissancesEtRacines = () => {
                 <MathJaxDisplay toShow={sqrt33} demo/>
                 <p>On a alors pour tout <MathJaxInline toShow={"$n$"} /> :</p>
                 <Container className="Focus"> 
-                    <MathJaxDisplay toShow={sqrtn} fRef={5}/>
+                    <MathJaxDisplay toShow={sqrtn}/>
                 </Container>
-                <p>En mixant les formules <MathJaxInline toShow={"$(3)$"} /> et <MathJaxInline toShow={"$(5)$"} />, on peut voir par exemple que :</p>
+                <p>En prenant l'inverse de l'équation ci-dessus, on aura : </p>
                 <Container className="Focus"> 
                     <MathJaxDisplay toShow={sqrtnInv} />
                 </Container>
-                <p>Et y ajoutant la formule <MathJaxInline toShow={"$(4)$"} />, on a :   </p>
+                <p>Et alors en appliquant une puissance : </p>
                 <Container className="Focus"> 
                     <MathJaxDisplay toShow={sqrtnInvPow} />
                 </Container>

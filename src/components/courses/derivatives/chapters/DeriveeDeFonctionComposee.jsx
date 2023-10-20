@@ -2,7 +2,6 @@ import React from 'react';
 import { Container } from 'react-bootstrap';
 import MathJaxDisplay from '../../../mathjax-display/MathJaxDisplay';
 import MathJaxInline from '../../../mathjax-display/MathJaxInline';
-import Title1 from '../../helpers/Title1';
 import Aside from '../../helpers/Aside';
 import Link from '../../../immutable/nav/Link';
 import PagesConstants from '../../../immutable/nav/PagesConstants';

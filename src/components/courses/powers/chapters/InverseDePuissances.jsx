@@ -33,7 +33,7 @@ const InverseDePuissances = () => {
                 <MathJaxDisplay toShow={xTimesInvX5} demo />
                 <p>on en conclue que :</p>
                 <Container className="Focus"> 
-                    <MathJaxDisplay toShow={xTimesInvX7} fRef={3}/>
+                    <MathJaxDisplay toShow={xTimesInvX7}/>
                 </Container>
             </>
     );

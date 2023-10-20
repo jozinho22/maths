@@ -1,12 +1,10 @@
 import React from 'react';
-import { Container } from 'react-bootstrap';
-import ImageZoom from '../../helpers/ImageZoom';
+
 import MathJaxDisplay from '../../../mathjax-display/MathJaxDisplay';
 import MathJaxInline from '../../../mathjax-display/MathJaxInline';
 
 import Title1 from '../../helpers/Title1';
-import Title2 from '../../helpers/Title2';
-import Constants from '../../../immutable/Constants';
+
 import PagesConstants from '../../../immutable/nav/PagesConstants';
 import CoursesConstants from '../../helpers/CoursesConstants';
 import Link from '../../../immutable/nav/Link';

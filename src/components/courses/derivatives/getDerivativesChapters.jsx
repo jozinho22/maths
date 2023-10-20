@@ -10,7 +10,8 @@ import EquationDeLaTangente from "./chapters/EquationDeLaTangente";
 import DeriveeDeRacineDeX from "./chapters/DeriveeDeRacineDeX";
 import DeriveesDeSinEtCos from "./chapters/DeriveesDeSinEtCos";
 import DeriveeDeFonctionComposee from "./chapters/DeriveeDeFonctionComposee";
-import TableauRecapDesDerivees from "./chapters/TableauRecapDesDerivees";
+import TableauRecapFonctionsDerivees from "./chapters/TableauRecapFonctionsDerivees";
+import TableauRecapOperationsCompositionsDerivees from "./chapters/TableauRecapOperationsCompositionsDerivees";
 
 const getDerivativesChapters = () => {
 
@@ -103,10 +104,17 @@ const getDerivativesChapters = () => {
         },
         {
             id: k++,
-            component: <TableauRecapDesDerivees />,
-            title: 'Tableau récapitulatif des dérivées',
-            metaContent: 'Tableau récapitulatif des dérivées.',
-            relativePath: '/tableau-recap-des-derivees'
+            component: <TableauRecapFonctionsDerivees />,
+            title: 'Tableau récapitulatif des fonctions dérivées',
+            metaContent: 'Tableau récapitulatif des fonctions dérivées.',
+            relativePath: '/tableau-recap-des-fonctions-derivees'
+        },
+        {
+            id: k++,
+            component: <TableauRecapOperationsCompositionsDerivees />,
+            title: 'Tableau récapitulatif des opérations/compositions sur les dérivées',
+            metaContent: 'Tableau récapitulatif des opérations/compositions sur les dérivées.',
+            relativePath: '/tableau-recap-operations-compositions-sur-les-derivees'
         }
     ];
 }

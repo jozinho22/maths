@@ -176,5 +176,6 @@
     width: fit-content;
     overflow-x: auto;
     max-width: 80vw;
+    min-width: 40vw;
 }
 

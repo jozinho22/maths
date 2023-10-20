@@ -2,7 +2,7 @@ import React from 'react';
 import { Container } from 'react-bootstrap';
 import MathJaxDisplay from '../../../mathjax-display/MathJaxDisplay';
 import MathJaxInline from '../../../mathjax-display/MathJaxInline';
-import Title2 from '../../helpers/Title2';
+import Title1 from '../../helpers/Title1';
 import Link from '../../../immutable/nav/Link';
 
 const MultiplicationDePuissances = () => {
@@ -21,6 +21,8 @@ const MultiplicationDePuissances = () => {
     var ePowerLnAlphaBeta3 = "\\(x^\\alpha. x^\\beta = \\left(e^{ln(x)}\\right)^{\\alpha + \\beta} \\)";
  */
     var xPowAB = "\\(x^a. x^b = x^{a+b} \\)";
+
+    var xPowAOnXPowB = "\\( \\frac{x^a}{x^b} = x^{a - b} \\)";
 
     return (
             <>
@@ -50,9 +52,16 @@ const MultiplicationDePuissances = () => {
                 <MathJaxDisplay toShow={ePowerLnAlphaBeta3} demo />*/}
                 <p>Il est alors possible de <Link url={"https://math.stackexchange.com/questions/3766951/how-to-prove-that-amn-amn-where-a-m-n-are-real-numbers-and-a0"} external>démontrer que c'est le cas pour deux réels</Link> (l'ensemble <MathJaxInline toShow={"$\\mathbb{R}$"} />) : </p>
                 <Container className="Focus">
-                    <MathJaxDisplay toShow={xPowAB} fRef={1}/>
+                    <MathJaxDisplay toShow={xPowAB}/>
                     <MathJaxDisplay toShow={"\\( avec \\enspace a \\enspace et \\enspace b \\in \\mathbb{R} \\)"} demo />
                 </Container> 
+
+                <p>On déduit alors de cette formule une formule pour les quotients.</p>
+                <Title1 title={"Quotient de puissances"} />
+                <Container className="Focus"> 
+                    <MathJaxDisplay toShow={xPowAOnXPowB}/>
+                    <MathJaxDisplay toShow={"\\( avec \\enspace a \\enspace et \\enspace b \\in \\mathbb{R}, \\enspace x \\neq 0 \\)"} demo />
+                </Container>
             </>
     );
 }

@@ -17,7 +17,7 @@ const ALapuissanceZero = () => {
                 <MathJaxDisplay toShow={xPow02} demo />
                 <p>On en conclue que dans tous les cas : </p>
                 <Container className="Focus"> 
-                    <MathJaxDisplay toShow={xPow03} fRef={2} />
+                    <MathJaxDisplay toShow={xPow03} />
                 </Container>
             </>
     );
