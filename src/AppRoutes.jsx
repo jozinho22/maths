@@ -5,7 +5,7 @@ import Home from './components/home/Home';
 import CoursesTableOfContents from './components/courses/CoursesTableOfContents';
 import ChaptersTableOfContents from './components/courses/ChaptersTableOfContents';
 import GenericChapter from './components/courses/GenericChapter';
-import PdfTableOfContents from './components/pdf-viewer/helpers/PdfTableOfContents';
+import PdfTableOfContents from './components/pdf-viewer/PdfTableOfContents';
 import PDFViewerPage from './components/pdf-viewer/PDFViewerPage';
 import GamesTableOfContents from './components/games/GamesTableOfContents';
 import Links from './components/links/Links';

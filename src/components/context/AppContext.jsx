@@ -5,7 +5,7 @@ export default React.createContext(
         font: "",
         updateFont: (name) => {},
         playMode: false,
-        updatePlayMode: (playMode) => playMode,
+        updatePlayMode: (playMode) => {},
         theme: "",
         updateTheme: (name) => {},
         loc: "",

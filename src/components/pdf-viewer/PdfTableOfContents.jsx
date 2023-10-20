@@ -1,8 +1,8 @@
-import GenericTableOfContents from '../../immutable/GenericTableOfContents';
-import Link from '../../immutable/nav/Link';
-import CustomHelmet from '../../immutable/seo/CustomHelmet';
-import Constants from '../../immutable/Constants';
-import PagesConstants from '../../immutable/nav/PagesConstants';
+import GenericTableOfContents from '../immutable/GenericTableOfContents';
+import Link from '../immutable/nav/Link';
+import CustomHelmet from '../immutable/seo/CustomHelmet';
+import Constants from '../immutable/Constants';
+import PagesConstants from '../immutable/nav/PagesConstants';
 
 const PdfTableOfContents = ( {pdfItems} ) => {
 

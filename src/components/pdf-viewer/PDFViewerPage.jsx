@@ -88,13 +88,9 @@ const PDFViewerPage = ({ pdfItem }) => {
             return page - (page % step);
         }
 
-        React.useEffect(() => {
+        /* React.useEffect(() => {
             updatePlayMode(true);
-        });
-
-        React.useEffect(() => {
-            window.scrollTo(0, 0);
-        }, [page, pagesList]);
+        }, []); */
 
         return (
           <Container className="PdfViewerContainer"> 

@@ -3,7 +3,6 @@ function urlsResourceBuilder() {
     var pdfItems = [];
     var i = 0;
 
-
     var desmosCalculator = {
       id: i++,
       url: 'https://www.desmos.com/calculator/',
@@ -40,6 +39,12 @@ function urlsResourceBuilder() {
       title: 'Savoir sans frontières',
       desc: 'Le site de Jean-Pierre Petit, contenant toutes son oeuvre : ses BDs, ses publications et notamment son modèle Janus.'
     }
+    var mathStackExchange = {
+      id: i++,
+      url: 'https://math.stackexchange.com/',
+      title: 'Un site de questions réponses',
+      desc: 'Ce site est affilé à la plate-forme Stack Overflow, initialement un site de questions réponses dans le domaine de l\'informatique.'
+    }
     var gerardVillemin = {
       id: i++,
       url: 'http://villemin.gerard.free.fr/',
@@ -50,7 +55,7 @@ function urlsResourceBuilder() {
       id: i++,
       url: 'https://www.math-linux.com/mathematiques/',
       title: 'Math Linux',
-      desc: 'Un site dédié à Linux, au code et aux mathématiques.'
+      desc: 'Un site dédié à Linux, au code et aux mathématiques. Il comprend beaucoup de démonstrations mathématiques.'
     }
     var sujetsBrevetsMaths = {
       id: i++,
@@ -58,7 +63,7 @@ function urlsResourceBuilder() {
       title: 'Sujets de brevet de maths',
       desc: 'APMEP - Tous les sujets de brevets de maths en métropole et outre-mer.'
     }
-      var sujetsBacMaths = {
+    var sujetsBacMaths = {
       id: i++,
       url: 'https://www.apmep.fr/Annales-Terminale-Generale',
       title: 'Sujets de bac de maths',
@@ -72,6 +77,7 @@ function urlsResourceBuilder() {
         derivCalculator,
         integralCalc,
         savoirSansFrontieres,
+        mathStackExchange,
         gerardVillemin,
         mathLinux,
         sujetsBrevetsMaths,

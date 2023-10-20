@@ -287,12 +287,6 @@ a:hover {
     text-decoration: none !important;
 }
 
-@media (max-width: 450px) {
-    .TableOfContentsLink {
-        transform: translateX(-20%);
-    }
-}
-
 .TableOfContentsLink p {
     font-family: var(--scholar-font);
     text-align: left;

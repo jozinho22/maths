@@ -13,6 +13,7 @@ import getUsualFunctionsChapters from './usual-functions/getUsualFunctionsChapte
 
 import CoursesConstants from './helpers/CoursesConstants';
 import geometryCoursesResourceBuilder from './geometry/geometryCoursesResourceBuilder';
+import PagesConstants from '../immutable/nav/PagesConstants';
 
 function coursesResourceBuilder() {
 

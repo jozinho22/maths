@@ -1,9 +1,9 @@
-canvas {
+/* canvas {
     width: 100% !important;
     height: 100% !important;
-}
+} */
 
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
     canvas {
         width: 80% !important;
         padding: 10px;
@@ -14,4 +14,4 @@ canvas {
     canvas {
         width: 60% !important;
     }  
-}
+} */

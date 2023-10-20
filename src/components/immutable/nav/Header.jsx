@@ -11,7 +11,7 @@ import './Header.css';
 
 const Header = ( {courseItems, pdfItems, gameItems} ) => {
 
-    const {playMode} = React.useContext(AppContext);
+    const {playMode, updatePlayMode} = React.useContext(AppContext);
     
     const [showToggle, setShowToggle] = React.useState(false);
 
@@ -47,24 +47,36 @@ const Header = ( {courseItems, pdfItems, gameItems} ) => {
                     <Nav /* onSelect={handleSelect} */>
                         <NavDropdown id="scrollable" title="Cours de maths">
                             {courseItems.map(courseItem => 
-                                <NavDropdown.Item key={courseItem.id} eventkey={courseItem.id} as={NavLink} to={pathBuilder(`${PagesConstants.COURS}${courseItem.relativePath}`)} onClick={() => {retractToggleOnMobile()}} >
+                                <NavDropdown.Item key={`course-${courseItem.id}`} eventkey={courseItem.id} as={NavLink} to={pathBuilder(`${PagesConstants.COURS}${courseItem.relativePath}`)} onClick={() => {retractToggleOnMobile()}} >
                                     {courseItem.title}
                                 </NavDropdown.Item>
                             )}
+                            < hr/>
+                            <NavDropdown.Item key={"course-home"} as={NavLink} to={pathBuilder(`${PagesConstants.COURS}`)} onClick={() => {retractToggleOnMobile()}} >
+                                Tous les cours
+                            </NavDropdown.Item>
                         </NavDropdown> 
                         <NavDropdown id="scrollable" title="BDs de Jean-Pierre Petit">
                             {pdfItems.map(pdfItem => 
-                                <NavDropdown.Item key={pdfItem.id} eventkey={pdfItem.id} as={NavLink} to={pathBuilder(`${PagesConstants.BDS_DE_JPP}${pdfItem.relativePath}`)} onClick={() => {retractToggleOnMobile()}} >
+                                <NavDropdown.Item key={`pdf-${pdfItem.id}`} eventkey={pdfItem.id} as={NavLink} to={pathBuilder(`${PagesConstants.BDS_DE_JPP}${pdfItem.relativePath}`)} onClick={() => {retractToggleOnMobile(); updatePlayMode(true);}} >
                                     {pdfItem.title}
                                 </NavDropdown.Item>
                             )}
+                            < hr/>
+                            <NavDropdown.Item key={"pdf-home"} as={NavLink} to={pathBuilder(`${PagesConstants.BDS_DE_JPP}`)} onClick={() => {retractToggleOnMobile()}} >
+                                Toutes les BDs
+                            </NavDropdown.Item>
                         </NavDropdown>
                         <NavDropdown title="Jeux">
                             {gameItems.map(gameItem => 
-                                <NavDropdown.Item key={gameItem.id} eventkey={gameItem.id} as={NavLink} to={pathBuilder(`${PagesConstants.JEUX}${gameItem.relativePath}`)} onClick={() => {retractToggleOnMobile()}} >
+                                <NavDropdown.Item key={`game-${gameItem.id}`} eventkey={gameItem.id} as={NavLink} to={pathBuilder(`${PagesConstants.JEUX}${gameItem.relativePath}`)} onClick={() => {retractToggleOnMobile()}} >
                                     {gameItem.title}
                                 </NavDropdown.Item>
                             )}
+                            < hr/>
+                            <NavDropdown.Item key={"game-home"} as={NavLink} to={pathBuilder(`${PagesConstants.JEUX}`)} onClick={() => {retractToggleOnMobile()}} >
+                                Tous les jeux
+                            </NavDropdown.Item>
                         </NavDropdown> 
                         <Nav.Item title="Liens" id="nav-item-liens" onClick={() => {retractToggleOnMobile()}} >
                             <NavLink to={pathBuilder(PagesConstants.LIENS)} >
