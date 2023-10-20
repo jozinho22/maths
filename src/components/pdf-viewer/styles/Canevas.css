@@ -1,17 +1,16 @@
-/* canvas {
+canvas {
     width: 100% !important;
     height: 100% !important;
-} */
+} 
 
-/* @media (min-width: 768px) {
+@media (min-width: 768px) {
     canvas {
         width: 80% !important;
-        padding: 10px;
     }
 }
 
 @media (min-width: 1268px) {
     canvas {
-        width: 60% !important;
+        width: 80% !important;
     }  
-} */
+} 

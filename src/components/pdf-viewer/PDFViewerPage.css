@@ -1,9 +1,4 @@
-.PdfViewerContainer h1 {
-    padding-top: 30px;
-}
-
 .PdfViewerContainer .SwitchButton {
-    padding-top: 30px;
     font-family: 'Times New Roman', Times, serif !important;
 }
 
@@ -71,23 +66,35 @@
 }
 
 .ReturnHomeButton, .UnPlayModeButton {
-    position: absolute;
-    top: 0;
-    margin-top: 10px;
+    position: relative;
 }
 
 .ReturnHomeButton {
     background-color: var(--orange-color);
-    left: 0px;
-}
-
-.ReturnHomeButton:hover, .ReturnHomeButton:focus {
-    background-color: var(--orange-hover-color);
 }
 
 .UnPlayModeButton {
     background-color: var(--green-color); 
-    right: 0px;
+}
+
+@media (min-width: 450px) {
+    .ReturnHomeButton, .UnPlayModeButton {
+        position: fixed;
+        top: 50%;
+        margin-top: 10px;
+    }
+
+    .ReturnHomeButton {
+        left: 10%;
+    }
+
+    .UnPlayModeButton {
+        right: 10%;
+    }
+}
+
+.ReturnHomeButton:hover, .ReturnHomeButton:focus {
+    background-color: var(--orange-hover-color);
 }
 
 .UnPlayModeButton:hover, .UnPlayModeButton:focus {

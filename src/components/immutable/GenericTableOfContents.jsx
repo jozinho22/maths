@@ -5,7 +5,7 @@ import pathBuilder from '../helpers/pathBuilder';
 import MainTitle from './MainTitle';
 import { useLocation } from 'react-router-dom';
 
-const GenericTableOfContents = ( {items, prefix, title} ) => {
+const GenericTableOfContents = ( {items, prefix, title, action} ) => {
 
     console.log(useLocation())
 
@@ -24,7 +24,8 @@ const GenericTableOfContents = ( {items, prefix, title} ) => {
                                                 metaContent: item.metaContent,
                                                 relativePath: item.relativePath
                                             }
-                                        } >
+                                        } 
+                                    onClick={action} >
                                 <p>{item.title}</p>
                             </NavLink>
                         </div>    

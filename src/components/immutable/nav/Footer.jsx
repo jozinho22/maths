@@ -69,9 +69,9 @@ const Footer = () => {
                         </NavDropdown>
                     </Nav>
                 </Navbar.Collapse>        
-                <NavLink to={pathBuilder(PagesConstants.CONTACT)}>
+                {/* <NavLink to={pathBuilder(PagesConstants.CONTACT)}>
                     <Envelope className="ContactIcon" />
-                </NavLink>
+                </NavLink> */}
             </Navbar>
     );
 }

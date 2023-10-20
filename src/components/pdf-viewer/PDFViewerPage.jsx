@@ -95,16 +95,6 @@ const PDFViewerPage = ({ pdfItem }) => {
         return (
           <Container className="PdfViewerContainer"> 
             <CustomHelmet title={pdfItem.title} metaContent={pdfItem.metaContent} canonicalUrl={`${Constants.WEB_APP_URL}${PagesConstants.BDS_DE_JPP}${pdfItem.relativePath}`}/>
-            <NavLink to={pathBuilder("/")}>
-                <Button className="DefaultButton ReturnHomeButton" onClick={() => updatePlayMode(false)}>
-                    Home
-                </Button>
-            </NavLink>
-            <NavLink to={pathBuilder(PagesConstants.BDS_DE_JPP)} onClick={() => updatePlayMode(false)}>
-                <Button className="DefaultButton UnPlayModeButton" >
-                    Toutes les BDs
-                </Button>
-            </NavLink>
                    
             {
                 !mobile ?
@@ -121,8 +111,6 @@ const PDFViewerPage = ({ pdfItem }) => {
                         : <></>
 
             }
-          
-           <MainTitle title={pdfItem.title} />
 
             {
                 pdfItem.type === 'courses' ?
@@ -195,6 +183,18 @@ const PDFViewerPage = ({ pdfItem }) => {
                                 addPagesToList={addPagesToList} />
                         </>
                 }
+
+                <MainTitle title={pdfItem.title} />
+                <NavLink to={pathBuilder("/")}>
+                    <Button className="DefaultButton ReturnHomeButton" onClick={() => updatePlayMode(false)}>
+                        Home
+                    </Button>
+                </NavLink>
+                <NavLink to={pathBuilder(PagesConstants.BDS_DE_JPP)} onClick={() => updatePlayMode(false)}>
+                    <Button className="DefaultButton UnPlayModeButton" >
+                        Toutes les BDs
+                    </Button>
+                </NavLink>
 
                 <p className="AuthorCopyRight">Avec l'accord de Mr Petit - <Link url={CoursesConstants.CoursesConstants} >toutes ses BDs</Link></p>     
           </Container>     
