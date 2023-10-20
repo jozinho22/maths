@@ -4,6 +4,7 @@ import MathJaxDisplay from '../../../mathjax-display/MathJaxDisplay';
 import MathJaxInline from '../../../mathjax-display/MathJaxInline';
 
 import Title1 from '../../helpers/Title1';
+import Title2 from '../../helpers/Title2';
 
 const DeriveeDeConstanteEtFonctionAffine = () => {
 
@@ -25,10 +26,12 @@ const DeriveeDeConstanteEtFonctionAffine = () => {
                     Une fonction constante est définie de la manière suivante :
                 </p>
                 <MathJaxDisplay toShow={fCte} demo />  
-                <p>
-                   Calculons sa dérivée :
-                </p>
+                <p>Ele admet pour dérivée : </p>
+                <Container className="Focus">
+                     <MathJaxDisplay toShow={fCtePrim4} />  
+                </Container> 
 
+                <Title2 title={"Démonstration"} />
                 <p>Avec la formule suivante vue plus haut, on a :</p>
                 <MathJaxDisplay toShow={fCtePrim} demo />  
                 <MathJaxDisplay toShow={fCtePrim2} demo />  
@@ -41,9 +44,12 @@ const DeriveeDeConstanteEtFonctionAffine = () => {
                 
                 <Title1 title={"La fonction affine"} />
                 <MathJaxDisplay toShow={fAff} demo /> 
-                <p>
-                   Calculons sa dérivée :
-                </p>
+                <p>Ele admet pour dérivée : </p>
+                <Container className="Focus">
+                     <MathJaxDisplay toShow={fAffPrim4} />  
+                </Container> 
+
+                <Title2 title={"Démonstration"} />
                 <MathJaxDisplay toShow={fAffPrim} demo /> 
                 <MathJaxDisplay toShow={fAffPrim2} demo /> 
                 <MathJaxDisplay toShow={fAffPrim3} demo /> 

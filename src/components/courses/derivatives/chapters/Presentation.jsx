@@ -25,12 +25,6 @@ const Presentation = () => {
 
     var derivabilityInAGen = "\\( f'(x) = lim_{x  \\to a} \\enspace \\frac{f(x) - f(a)}{x-a}\\)";
 
-    var derivabilityCondition = "\\(lim_{h \\to 0} \\enspace  \\frac{f(x+h) - f(x)}{h} = a, (avec \\enspace a \\in  \\mathbb{R}) \\)";
-
-    var derivableImpliesContinue = "\\(f \\enspace d \\acute{e} rivable \\enspace en \\enspace a \\implies f \\enspace continue \\enspace en \\enspace a\\)";
-    
-    var nonContinueImpliesNonDerivable = "\\(f \\enspace non \\enspace continue \\enspace en \\enspace a \\implies f \\enspace non \\enspace d \\acute{e} rivable \\enspace en \\enspace a \\)";
-
     return  <>
                 <p>
                     La dérivée est une notion clef dans l’analyse de fonctions, car elle sous-tend toute la
@@ -96,28 +90,10 @@ const Presentation = () => {
                 <Container className="Focus">
                      <MathJaxDisplay toShow={leibnizNotation} />  
                 </Container>
-                <p>On pourra enfin la retrouver aussi sous cette forme-ci</p>
+                <p>On pourra enfin la retrouver aussi sous cette forme-ci :</p>
                 <Container className="Focus">
                      <MathJaxDisplay toShow={derivabilityInAGen} />  
                 </Container>
-
-                <Title1 title={"d) Condition à la dérivabilité"} />
-                <p>On dit qu'une fonction est dérivable si et seulement si le nombre dérivée de la fonction <MathJaxInline toShow={"$ f(x) $"} /> au point d'abscisse <MathJaxInline toShow={"$ a $"} />, c'est-à-dire <MathJaxInline toShow={"$ f'(a) $"} />,  est un nombre réel.</p>
-                <p>Soit <MathJaxInline toShow={"$ f $"} /> est dérivable en <MathJaxInline toShow={"$ a $"} /> si et seulement si :</p> 
-                <Container className="Focus">
-                     <MathJaxDisplay toShow={derivabilityCondition} />  
-                </Container>
-
-                <Title1 title={"e) Dérivable => continue"} />
-                <p>Toute fonction dérivable en <MathJaxInline toShow={"$ a $"} /> implique que la fonction est continue à ce point <MathJaxInline toShow={"$ a $"} />.</p>
-                <Container className="Focus">
-                    <MathJaxDisplay toShow={derivableImpliesContinue} />  
-                </Container>
-                <p>Par contraposée, toute fonction qui n'est pas continue en un point <MathJaxInline toShow={"$ a $"} /> n'est pas dérivable sur ce point <MathJaxInline toShow={"$ a $"} />.</p>
-                <Container className="Focus">
-                    <MathJaxDisplay toShow={nonContinueImpliesNonDerivable} />  
-                </Container>
-                <p>Attention, une fonction peut cependant être continue mais non dérivable (exemple : la fonction aleur absolue, <MathJaxInline toShow={"$ x \\longmapsto | x | $"} />, en <MathJaxInline toShow={"$ a = 0 $"} />).</p>
             </>
 }
 

@@ -7,6 +7,7 @@ import Link from '../../../immutable/nav/Link';
 import PagesConstants from '../../../immutable/nav/PagesConstants';
 import CoursesConstants from '../../helpers/CoursesConstants';
 import pathBuilder from '../../../helpers/pathBuilder';
+import Title1 from '../../helpers/Title1';
 
 const DeriveeDeFonctionComposee = () => {
     
@@ -34,6 +35,12 @@ const DeriveeDeFonctionComposee = () => {
                 <Container className="Focus">
                      <MathJaxDisplay toShow={fRondG} />  
                 </Container>
+                <p>Elle admet pour dérivée : </p>
+                <Container className="Focus">
+                     <MathJaxDisplay toShow={fRondGPrim} />  
+                </Container>
+                
+                <Title1 title={"Démonstration"} />
                 <p>
                    On peut la décortiquer de la façon suivante :
                 </p>

@@ -9,6 +9,7 @@ const CoursesConstants = {
     NB_OR: '/le-nombre-d-or',
     TRIGO: '/la-trigonometrie',
     DERIVEE: '/la-derivee',
+    PRIMITIVES_INTEGRATION: '/primitives-integration',
     SEQUENCES: '/les-suites-numériques',
     GEOMETRY: '/la-geometrie',
     FONCTIONS_USUELLES:  '/les-fonctions-usuelles',

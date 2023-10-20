@@ -43,6 +43,14 @@ const useTableauRecapOperationsDerivees = () => {
         }
     )
 
+    tableauRecapOperationsDerivees.push(
+         {
+            id: k++,
+            title: "\\f^{-1}",
+            values: ["\\frac{1}{f'(f^{-1})} "]
+        }
+    )
+
     return tableauRecapOperationsDerivees;
 
 };

@@ -33,6 +33,18 @@ function urlsResourceBuilder() {
       title: 'Calculateur d\'intégrales',
       desc: 'Un calculateur d\'intégrales pas à pas.'
     }
+    var sujetsBrevetsMaths = {
+      id: i++,
+      url: 'https://www.apmep.fr/Annales-du-Brevet-des-colleges',
+      title: 'Sujets de brevet de maths',
+      desc: 'APMEP - Tous les sujets de brevets de maths en métropole et outre-mer.'
+    }
+    var sujetsBacMaths = {
+      id: i++,
+      url: 'https://www.apmep.fr/Annales-Terminale-Generale',
+      title: 'Sujets de bac de maths',
+      desc: 'APMEP - Tous les sujets de bac de maths en métropole et outre-mer.'
+    }
     var savoirSansFrontieres = {
       id: i++,
       url: 'http://www.savoir-sans-frontieres.com/',
@@ -57,17 +69,11 @@ function urlsResourceBuilder() {
       title: 'Math Linux',
       desc: 'Un site dédié à Linux, au code et aux mathématiques. Il comprend beaucoup de démonstrations mathématiques.'
     }
-    var sujetsBrevetsMaths = {
+    var latex = {
       id: i++,
-      url: 'https://www.apmep.fr/Annales-du-Brevet-des-colleges',
-      title: 'Sujets de brevet de maths',
-      desc: 'APMEP - Tous les sujets de brevets de maths en métropole et outre-mer.'
-    }
-    var sujetsBacMaths = {
-      id: i++,
-      url: 'https://www.apmep.fr/Annales-Terminale-Generale',
-      title: 'Sujets de bac de maths',
-      desc: 'APMEP - Tous les sujets de bac de maths en métropole et outre-mer.'
+      url: "https://www.overleaf.com/learn",
+      title: 'Documentation du langage Latex',
+      desc: 'Latex : écriture de documents avec les symboles mathématiques.'
     }
     
     pdfItems.push(
@@ -76,12 +82,13 @@ function urlsResourceBuilder() {
         geoGebra3D,
         derivCalculator,
         integralCalc,
+        sujetsBrevetsMaths,
+        sujetsBacMaths,
         savoirSansFrontieres,
         mathStackExchange,
         gerardVillemin,
         mathLinux,
-        sujetsBrevetsMaths,
-        sujetsBacMaths
+        latex
       );
 
     return pdfItems;

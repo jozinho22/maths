@@ -2,6 +2,7 @@ import React from 'react';
 import { Container } from 'react-bootstrap';
 import MathJaxDisplay from '../../../mathjax-display/MathJaxDisplay';
 import MathJaxInline from '../../../mathjax-display/MathJaxInline';
+import Title1 from '../../helpers/Title1';
 
 const DeriveeDeXCarre = () => {
 
@@ -19,11 +20,13 @@ const DeriveeDeXCarre = () => {
                 <p>
                     La fonction carrée est définie de la manière suivante :
                 </p>
-                <MathJaxDisplay toShow={fCarree} demo />  
-                <p>
-                   Calculons sa dérivée :
-                </p>
+                <MathJaxDisplay toShow={fCarree} demo /> 
+                <p>Elle admet pour dérivée :</p> 
+                <Container className="Focus">
+                     <MathJaxDisplay toShow={fCarreePrim8} />  
+                </Container>
 
+                <Title1 title={"Démonstration"} />
                 <p>Avec la formule suivante vue plus haut, on a :</p>
                 <MathJaxDisplay toShow={fCarreePrim} demo />  
                 <MathJaxDisplay toShow={fCarreePrim2} demo />  

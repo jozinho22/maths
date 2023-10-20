@@ -2,9 +2,10 @@ import getElementaryCalculusChapters from './elementary-calculus/getElementaryCa
 import getPowersChapters from './powers/getPowersChapters';
 import getEquationsFirstDegreeChapters from './equations-first-degree/getEquationsFirstDegreeChapters';
 import getEquationsSecondDegreeChapters from './equations-second-degree/getEquationsSecondDegreeChapters';
-import getDerivativesChapters from './derivatives/getDerivativesChapters';
 import getThalesChapters from './thales/getThalesChapters';
 import getPythagoreChapters from './pythagore/getPythagoreChapters';
+import getDerivativesChapters from './derivatives/getDerivativesChapters';
+import getPrimitivesIntegrationChapters from './primitives-integration/getPrimitivesIntegrationChapters';
 import getPiChapters from './pi/getChapters';
 import getGoldenRatioChapters from './nbOr/getGoldenRatioChapters';
 import getTrigoChapters from './trigo/getTrigoChapters';
@@ -13,7 +14,6 @@ import getUsualFunctionsChapters from './usual-functions/getUsualFunctionsChapte
 
 import CoursesConstants from './helpers/CoursesConstants';
 import geometryCoursesResourceBuilder from './geometry/geometryCoursesResourceBuilder';
-import PagesConstants from '../immutable/nav/PagesConstants';
 
 function coursesResourceBuilder() {
 
@@ -41,13 +41,6 @@ function coursesResourceBuilder() {
       relativePath: CoursesConstants.EQ_2_DEG,
       chapters: getEquationsSecondDegreeChapters()
     }
-    var derivee = {
-      id: i++,
-      title: 'La dérivée',
-      metaContent: "La dérivée : construction pas-à-pas, exemple et démonstrations",
-      relativePath: CoursesConstants.DERIVEE,
-      chapters: getDerivativesChapters()
-    }
     var powers = {
       id: i++,
       title: 'Les puissances',
@@ -68,6 +61,27 @@ function coursesResourceBuilder() {
       metaContent: "Le théorème de Thalès : explications, démonstration.",
       relativePath: CoursesConstants.THALES,
       chapters: getThalesChapters()
+    }
+    var usualFunctions = {
+      id: i++,
+      title: 'Les fonctions usuelles',
+      metaContent: "Les fonctions usuelles : les fonctions usuelles (carrée, cube, racine carrée, exponentielle, cosinus, sinus...etc) et leur représentation sur un repère",
+      relativePath: CoursesConstants.FONCTIONS_USUELLES,
+      chapters: getUsualFunctionsChapters()
+    }
+    var derivee = {
+      id: i++,
+      title: 'La dérivée',
+      metaContent: "La dérivée : construction pas-à-pas, exemples, démonstrations et formules",
+      relativePath: CoursesConstants.DERIVEE,
+      chapters: getDerivativesChapters()
+    }
+    var primInt = {
+      id: i++,
+      title: 'Les primitives et l\'intégration',
+      metaContent: "Les primitives et l\'intégration : définitions, démonstrations et formules",
+      relativePath: CoursesConstants.PRIMITIVES_INTEGRATION,
+      chapters: getPrimitivesIntegrationChapters()
     }
     var pi = {
       id: i++,
@@ -105,27 +119,21 @@ function coursesResourceBuilder() {
       underChapters: true,
       chapters: geometryCoursesResourceBuilder()
     }
-    var usualFunctions = {
-      id: i++,
-      title: 'Les fonctions usuelles',
-      metaContent: "Les fonctions usuelles : les fonctions usuelles (carrée, cube, racine carrée, exponentielle, cosinus, sinus...etc) et leur représentation sur un repère",
-      relativePath: CoursesConstants.FONCTIONS_USUELLES,
-      chapters: getUsualFunctionsChapters()
-    }
 
     coursesItems.push(
         elementaryCalculus,
         equationsFirstDegree,
         equationsSecondDegree,
-        derivee,
         powers,
         pythagore,
         thales,
+        usualFunctions,
+        derivee,
+        primInt,
         pi, 
         nbOr,
         trigo,
-        geo,
-        usualFunctions
+        geo
     );
 
     return coursesItems;

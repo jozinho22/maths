@@ -54,7 +54,7 @@ function geometryCoursesResourceBuilder() {
         triangle,
         circle,
         sphere,
-        quadrilateres,
+        /* quadrilateres, */
         cone
     );
 

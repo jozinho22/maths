@@ -2,6 +2,7 @@ import React from 'react';
 import { Container } from 'react-bootstrap';
 import MathJaxDisplay from '../../../mathjax-display/MathJaxDisplay';
 import MathJaxInline from '../../../mathjax-display/MathJaxInline';
+import Title1 from '../../helpers/Title1';
 
 const DeriveeDeRacineDeX = () => {
     
@@ -19,11 +20,13 @@ const DeriveeDeRacineDeX = () => {
                 <p>
                     La fonction racine carrée est définie de la manière suivante :
                 </p>
-                <MathJaxDisplay toShow={fSqr} demo />  
-                <p>
-                   Calculons sa dérivée en procédant de la même manière que précédemment :
-                </p>
+                <MathJaxDisplay toShow={fSqr} demo /> 
+                <p>Elle admet pour dérivée :</p>
+                <Container className="Focus">
+                     <MathJaxDisplay toShow={fSqrPrim7} />  
+                </Container> 
 
+                <Title1 title={"Démonstration"} />
                 <MathJaxDisplay toShow={fSqrPrim} demo /> 
                 <p>Pour traiter avec les racines, il est souvent utile de faire appel à son conjugué : </p>
                 <MathJaxDisplay toShow={fSqrPrim2} demo /> 

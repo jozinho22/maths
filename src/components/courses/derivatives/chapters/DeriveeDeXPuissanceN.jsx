@@ -36,7 +36,7 @@ const DeriveeDeXPuissanceN = () => {
                     <MathJaxDisplay toShow={deriveeXPuissanceN} />  
                </Container>
 
-               <Title1 title={"1) Démonstration"} />
+               <Title1 title={"Démonstration"} />
                <p>
                     Par définition, cette dérivée s'écrit au départ : 
                </p>
@@ -67,7 +67,7 @@ const DeriveeDeXPuissanceN = () => {
                     <MathJaxDisplay toShow={deriveeXPuissanceN} />  
                </Container>
 
-               <Title1 title={"2) Exemples"} />
+               <Title1 title={"Exemples"} />
                <MathJaxDisplay toShow={exemple1} demo />
                <MathJaxDisplay toShow={exemple2} demo />
                <MathJaxDisplay toShow={exemple3} demo />
