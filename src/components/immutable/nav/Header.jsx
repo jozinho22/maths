@@ -71,11 +71,11 @@ const Header = ( {courseItems, pdfItems, gameItems} ) => {
                                 Liens
                             </NavLink>  
                         </Nav.Item>
-                        <Nav.Item title="Cours à domicile" id="nav-item-contact" onClick={() => {retractToggleOnMobile()}} >
+                        {/* <Nav.Item title="Cours à domicile" id="nav-item-contact" onClick={() => {retractToggleOnMobile()}} >
                             <NavLink to={pathBuilder(PagesConstants.CONTACT)} >
                                 Cours à domicile
                             </NavLink>  
-                        </Nav.Item>
+                        </Nav.Item> */}
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>

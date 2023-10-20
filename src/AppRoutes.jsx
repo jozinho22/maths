@@ -26,7 +26,7 @@ const AppRoutes = ( {courseItems, pdfItems, gameItems, setLoc} ) => {
     }, [])
     
     return  <Routes>
-                <Route exact path={pathBuilder("/")} element={process.env.NODE_ENV === 'development' ?  <Presentation /> : <Home />} />
+                <Route exact path={pathBuilder("/")} element={process.env.NODE_ENV === 'development' ?  <Home /> : <Home />} />
                 <Route path={pathBuilder(PagesConstants.COURS)} element={<CoursesTableOfContents courseItems={courseItems} />} />
                 {/* Index cours */}
                 {courseItems.map(courseItem => {
@@ -80,7 +80,7 @@ const AppRoutes = ( {courseItems, pdfItems, gameItems, setLoc} ) => {
                         element={gameItem.component} />
                 ))}
                 <Route path={pathBuilder(PagesConstants.LIENS)} element={<Links />} />
-                <Route path={pathBuilder(PagesConstants.CONTACT)} element={<VCard />} />
+                {/* <Route path={pathBuilder(PagesConstants.CONTACT)} element={<VCard />} /> */}
                 <Route path={pathBuilder("*")} element={<Error />} status={404} />
             </Routes>
 }

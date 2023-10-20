@@ -3,18 +3,31 @@ function urlsResourceBuilder() {
     var pdfItems = [];
     var i = 0;
 
-    var graineDeSens = {
+
+    var desmosCalculator = {
       id: i++,
-      url: 'https://www.bretagne-grainedesens.bzh/',
-      title: 'L\'école démocratique Graine de Sens',
-      desc: 'L\'école démocratique de Brocéliande (Graine de sens) ; une école pas comme les autres où sont mélangés apprentissage traditionnels et activités en tout genre (musique, arts, sport, jeux). La particularité de ce modèle d\'école est que les enfants participent à la vie de l\'école en assistant aux conseils et en votant notamment.'
-    } 
-    var noesis = {
+      url: 'https://www.desmos.com/calculator/',
+      title: 'Calculatrice scientifique',
+      desc: 'Une calculatrice graphique avec de nombreuses fonctionnalités (fonctions, séries, dérivées, intégrales, statistiques...etc.).'
+    }
+    var geoGebra = {
       id: i++,
-      url: 'https://ecolenoesis.org/accueil/bienvenue',
-      title: 'L\'école démocratique Noésis',
-      desc: 'L\'école démocratique du sud de Rennes (Noésis) ; une école basée sur le même modèle que Graine de Sens ci-dessus.'
-    } 
+      url: 'https://www.geogebra.org/graphing?lang=fr',
+      title: 'Calculatrice graphique',
+      desc: 'Une calculatrice graphique facile à prendre en main.'
+    }
+    var geoGebra3D = {
+      id: i++,
+      url: 'https://www.geogebra.org/graphing?lang=fr',
+      title: 'Calculatrice graphique en 3D',
+      desc: 'Une calculatrice graphique en trois dimensions.'
+    }
+    var derivCalculator = {
+      id: i++,
+      url: 'https://www.derivative-calculator.net/',
+      title: 'Calculateur de dérivées',
+      desc: 'Une calculatrice de dérivées avec chaque étape du calcul.'
+    }
     var integralCalc = {
       id: i++,
       url: 'https://www.integral-calculator.com/',
@@ -39,28 +52,30 @@ function urlsResourceBuilder() {
       title: 'Math Linux',
       desc: 'Un site dédié à Linux, au code et aux mathématiques.'
     }
-    var depannOnLine = {
+    var sujetsBrevetsMaths = {
       id: i++,
-      url: 'https://www.depannonline.xyz/',
-      title: 'Dépannage informatique à distance',
-      desc: 'Un dépannage à distance pour tout problème.'
-    }
-    var sujetsBrevetsMath = {
-      id: i++,
-      url: 'https://www.apmep.fr/-Brevet-344-sujets-tous-corriges-',
-      title: 'Sujets de brevets de maths',
+      url: 'https://www.apmep.fr/Annales-du-Brevet-des-colleges',
+      title: 'Sujets de brevet de maths',
       desc: 'APMEP - Tous les sujets de brevets de maths en métropole et outre-mer.'
+    }
+      var sujetsBacMaths = {
+      id: i++,
+      url: 'https://www.apmep.fr/Annales-Terminale-Generale',
+      title: 'Sujets de bac de maths',
+      desc: 'APMEP - Tous les sujets de bac de maths en métropole et outre-mer.'
     }
     
     pdfItems.push(
-        graineDeSens,
-        noesis,
+        desmosCalculator,
+        geoGebra,
+        geoGebra3D,
+        derivCalculator,
         integralCalc,
         savoirSansFrontieres,
         gerardVillemin,
         mathLinux,
-        sujetsBrevetsMath,
-        depannOnLine
+        sujetsBrevetsMaths,
+        sujetsBacMaths
       );
 
     return pdfItems;

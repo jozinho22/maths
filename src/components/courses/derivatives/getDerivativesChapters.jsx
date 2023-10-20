@@ -70,8 +70,8 @@ const getDerivativesChapters = () => {
         {
             id: k++,
             component: <EquationDeLaTangente />,
-            title: 'Équations de la tangente',
-            metaContent: 'Équations de la tangente du nombre dérivée d\'une fonction en point.',
+            title: 'Équation de la tangente',
+            metaContent: 'Équation de la tangente du nombre dérivée d\'une fonction en point.',
             relativePath: '/equation-de-la-tangente'
         },
         {
