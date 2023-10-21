@@ -19,7 +19,7 @@ const DeriveeDeLaReciproque = () => {
 
     var reciproqueDerivee = "\\( \\forall x \\in I, \\enspace (f^{-1})'(x) = \\frac{1}{f' \\circ f^{-1}(x)} \\)";
 
-    var reciproquePrim = "\\( (f \\circ f^{-1})'(x)  = (f^{-1})'(x) . f'(f^{-1}(x))\\)";
+    var reciproquePrim = "\\( (f \\circ f^{-1})'(x)  = (f^{-1})'(x) . f' \\circ f^{-1}(x) \\)";
     var id =  "\\( f \\circ f^{-1}(x) = x \\)";
     var reciproquePrim2 = "\\( (f \\circ f^{-1})'(x) = (x)' = 1  \\)";
     var reciproquePrim3 = "\\( \\Longleftrightarrow (f \\circ f^{-1})'(x) =  1  \\)";

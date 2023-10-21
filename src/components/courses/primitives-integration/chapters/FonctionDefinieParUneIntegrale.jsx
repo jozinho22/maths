@@ -6,7 +6,7 @@ import ImageZoom from '../../helpers/ImageZoom';
 import Title1 from '../../helpers/Title1';
 
 
-const FonctionDeinieParUneIntegrale = () => {
+const FonctionDefinieParUneIntegrale = () => {
 
     var n = 0;
 
@@ -44,4 +44,4 @@ const FonctionDeinieParUneIntegrale = () => {
             </>
 }
 
-export default FonctionDeinieParUneIntegrale;
+export default FonctionDefinieParUneIntegrale;

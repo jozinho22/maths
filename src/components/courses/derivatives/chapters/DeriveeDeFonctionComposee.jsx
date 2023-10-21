@@ -23,7 +23,7 @@ const DeriveeDeFonctionComposee = () => {
     var derivabilityInA5 = "\\( \\Longleftrightarrow  lim_{h \\to 0} \\enspace \\frac{f(g(x+h)) - f(g(x))}{g(x+h) - g(x)} .  lim_{h \\to 0} \\enspace  \\frac{g(x+h) - g(x)}{h} \\)";
     var derivabilityInA6 = "\\( \\Longleftrightarrow  \\underbrace { lim_{k \\to 0} \\enspace \\frac{f(g(x+h)) - f(g(x))}{k} }_\\text{ f'(g(x))} . \\underbrace { lim_{h \\to 0} \\enspace  \\frac{g(x+h) - g(x)}{h} }_\\text{ g'(x)} \\)";
 
-    var fRondGPrim = "\\( (f \\circ g)'(x)  = g'(x) . f'(g(x))\\)";
+    var fRondGPrim = "\\( (f \\circ g)'(x)  = g'(x) . f' \\circ g(x)\\)";
 
     return  <>
                 <p>Soit <MathJaxInline toShow={"$ (f: I \\to \\mathbb{R})  $"} /> et <MathJaxInline toShow={"$ (g: J \\to \\mathbb{R}) $"} /> deux fonctions.</p>

@@ -9,7 +9,7 @@ import Positivite from "./chapters/Positivite";
 import Croissance from "./chapters/Croissance";
 import ValeurMoyenne from "./chapters/ValeurMoyenne";
 import IntegrationParParties from "./chapters/IntegrationParParties";
-import FonctionDeinieParUneIntegrale from "./chapters/FonctionDeinieParUneIntegrale";
+import FonctionDefinieParUneIntegrale from "./chapters/FonctionDefinieParUneIntegrale";
 
 const getPrimitivesIntegrationChapters = () => {
 
@@ -88,7 +88,7 @@ const getPrimitivesIntegrationChapters = () => {
         }, 
         {
             id: k++,
-            component: <FonctionDeinieParUneIntegrale />,
+            component: <FonctionDefinieParUneIntegrale />,
             title: 'Fonction définie par une intégrale',
             metaContent: 'Fonction définie par une intégrale.',
             relativePath: '/fonction-definie-par-une-integrale'
