@@ -191,6 +191,63 @@
     <lastmod>2023-01-23T18:44:36+00:00</lastmod>
     <priority>0.64</priority>
   </url>
+  <!-- Cours : fonctions usuelles -->
+  <url>
+    <loc>https://jozinho22.github.io/maths/cours/les-fonctions-usuelles</loc>
+    <lastmod>2023-01-23T18:44:36+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://jozinho22.github.io/maths/cours/les-fonctions-usuelles/aspect</loc>
+    <lastmod>2023-01-23T18:44:36+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <!-- Cours : trigonométrie -->
+  <url>
+    <loc>https://jozinho22.github.io/maths/cours/la-trigonometrie</loc>
+    <lastmod>2023-01-23T18:44:36+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://jozinho22.github.io/maths/cours/la-trigonometrie/presentation</loc>
+    <lastmod>2023-01-23T18:44:36+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://jozinho22.github.io/maths/cours/la-trigonometrie/valeurs-de-sin-cos</loc>
+    <lastmod>2023-01-23T18:44:36+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://jozinho22.github.io/maths/cours/la-trigonometrie/pythagore-et-trigonometrie</loc>
+    <lastmod>2023-01-23T18:44:36+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://jozinho22.github.io/maths/cours/la-trigonometrie/formules-d-addition</loc>
+    <lastmod>2023-01-23T18:44:36+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://jozinho22.github.io/maths/cours/la-trigonometrie/formules-de-duplication</loc>
+    <lastmod>2023-01-23T18:44:36+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://jozinho22.github.io/maths/cours/la-trigonometrie/formules-de-linearisation</loc>
+    <lastmod>2023-01-23T18:44:36+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://jozinho22.github.io/maths/cours/la-trigonometrie/la-tangente</loc>
+    <lastmod>2023-01-23T18:44:36+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://jozinho22.github.io/maths/cours/la-trigonometrie/valeurs-de-tan</loc>
+    <lastmod>2023-01-23T18:44:36+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
     <!-- Cours : dérivée -->
   <url>
     <loc>https://jozinho22.github.io/maths/cours/la-derivee</loc>
@@ -303,12 +360,57 @@
     <lastmod>2023-10-20T20:0:00+00:00</lastmod>
     <priority>0.64</priority>
   </url>
-    <url>
+  <url>
     <loc>https://jozinho22.github.io/maths/cours/primitives-integration/interpretation-geometrique</loc>
     <lastmod>2023-10-20T20:0:00+00:00</lastmod>
     <priority>0.64</priority>
   </url>
-    <url>
+  <url>
+    <loc>https://jozinho22.github.io/maths/cours/primitives-integration/integration</loc>
+    <lastmod>2023-10-20T20:0:00+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://jozinho22.github.io/maths/cours/primitives-integration/proprietes-de-l-integrale</loc>
+    <lastmod>2023-10-20T20:0:00+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://jozinho22.github.io/maths/cours/primitives-integration/relation-de-chasles</loc>
+    <lastmod>2023-10-20T20:0:00+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://jozinho22.github.io/maths/cours/primitives-integration/linearite</loc>
+    <lastmod>2023-10-20T20:0:00+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://jozinho22.github.io/maths/cours/primitives-integration/positivite</loc>
+    <lastmod>2023-10-20T20:0:00+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://jozinho22.github.io/maths/cours/primitives-integration/croissance</loc>
+    <lastmod>2023-10-20T20:0:00+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <!-- <url>
+    <loc>https://jozinho22.github.io/maths/cours/primitives-integration/valeur-moyenne</loc>
+    <lastmod>2023-10-20T20:0:00+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://jozinho22.github.io/maths/cours/primitives-integration/integration-par-parties</loc>
+    <lastmod>2023-10-20T20:0:00+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://jozinho22.github.io/maths/cours/primitives-integration/fonction-definie-par-une-integrale</loc>
+    <lastmod>2023-10-20T20:0:00+00:00</lastmod>
+    <priority>0.64</priority>
+  </url> -->
+  <url>
     <loc>https://jozinho22.github.io/maths/cours/primitives-integration/tableau-recap-fonctions-primitives</loc>
     <lastmod>2023-10-20T20:0:00+00:00</lastmod>
     <priority>0.64</priority>
@@ -375,170 +477,7 @@
     <lastmod>2023-01-23T18:44:36+00:00</lastmod>
     <priority>0.64</priority>
   </url>
-  <!-- Cours : trigonométrie -->
-  <url>
-    <loc>https://jozinho22.github.io/maths/cours/la-trigonometrie</loc>
-    <lastmod>2023-01-23T18:44:36+00:00</lastmod>
-    <priority>0.64</priority>
-  </url>
-  <url>
-    <loc>https://jozinho22.github.io/maths/cours/la-trigonometrie/presentation</loc>
-    <lastmod>2023-01-23T18:44:36+00:00</lastmod>
-    <priority>0.64</priority>
-  </url>
-  <url>
-    <loc>https://jozinho22.github.io/maths/cours/la-trigonometrie/valeurs-de-sin-cos</loc>
-    <lastmod>2023-01-23T18:44:36+00:00</lastmod>
-    <priority>0.64</priority>
-  </url>
-  <url>
-    <loc>https://jozinho22.github.io/maths/cours/la-trigonometrie/pythagore-et-trigonometrie</loc>
-    <lastmod>2023-01-23T18:44:36+00:00</lastmod>
-    <priority>0.64</priority>
-  </url>
-  <url>
-    <loc>https://jozinho22.github.io/maths/cours/la-trigonometrie/formules-d-addition</loc>
-    <lastmod>2023-01-23T18:44:36+00:00</lastmod>
-    <priority>0.64</priority>
-  </url>
-  <url>
-    <loc>https://jozinho22.github.io/maths/cours/la-trigonometrie/formules-de-duplication</loc>
-    <lastmod>2023-01-23T18:44:36+00:00</lastmod>
-    <priority>0.64</priority>
-  </url>
-  <url>
-    <loc>https://jozinho22.github.io/maths/cours/la-trigonometrie/formules-de-linearisation</loc>
-    <lastmod>2023-01-23T18:44:36+00:00</lastmod>
-    <priority>0.64</priority>
-  </url>
-  <url>
-    <loc>https://jozinho22.github.io/maths/cours/la-trigonometrie/la-tangente</loc>
-    <lastmod>2023-01-23T18:44:36+00:00</lastmod>
-    <priority>0.64</priority>
-  </url>
-  <url>
-    <loc>https://jozinho22.github.io/maths/cours/la-trigonometrie/valeurs-de-tan</loc>
-    <lastmod>2023-01-23T18:44:36+00:00</lastmod>
-    <priority>0.64</priority>
-  </url>
-  <!-- Cours : géométrie -->
-  <url>
-    <loc>https://jozinho22.github.io/maths/cours/la-geometrie/</loc>
-    <lastmod>2023-01-23T18:44:36+00:00</lastmod>
-    <priority>0.64</priority>
-  </url>
-        <!-- Cours : géométrie : triangle -->
-  <url>
-    <loc>https://jozinho22.github.io/maths/cours/la-geometrie/le-triangle</loc>
-    <lastmod>2023-01-23T18:44:36+00:00</lastmod>
-    <priority>0.64</priority>
-  </url>
-  <url>
-    <loc>https://jozinho22.github.io/maths/cours/la-geometrie/le-triangle/presentation</loc>
-    <lastmod>2023-01-23T18:44:36+00:00</lastmod>
-    <priority>0.64</priority>
-  </url>
-  <url>
-    <loc>https://jozinho22.github.io/maths/cours/la-geometrie/le-triangle/la-hauteur</loc>
-    <lastmod>2023-01-23T18:44:36+00:00</lastmod>
-    <priority>0.64</priority>
-  </url>
-  <url>
-    <loc>https://jozinho22.github.io/maths/cours/la-geometrie/le-triangle/la-mediane</loc>
-    <lastmod>2023-01-23T18:44:36+00:00</lastmod>
-    <priority>0.64</priority>
-  </url>
-  <url>
-    <loc>https://jozinho22.github.io/maths/cours/la-geometrie/le-triangle/la-bissectrice</loc>
-    <lastmod>2023-01-23T18:44:36+00:00</lastmod>
-    <priority>0.64</priority>
-  </url>
-    <url>
-    <loc>https://jozinho22.github.io/maths/cours/la-geometrie/le-triangle/loi-des-sinus</loc>
-    <lastmod>2023-01-23T18:44:36+00:00</lastmod>
-    <priority>0.64</priority>
-  </url>
-  <url>
-    <loc>https://jozinho22.github.io/maths/cours/la-geometrie/le-triangle/loi-des-cosinus</loc>
-    <lastmod>2023-01-23T18:44:36+00:00</lastmod>
-    <priority>0.64</priority>
-  </url>
-         <!-- Cours : géométrie : cercle -->
-  <url>
-    <loc>https://jozinho22.github.io/maths/cours/la-geometrie/le-cercle</loc>
-    <lastmod>2023-01-23T18:44:36+00:00</lastmod>
-    <priority>0.64</priority>
-  </url>
-  <url>
-    <loc>https://jozinho22.github.io/maths/cours/la-geometrie/le-cercle/le-perimetre</loc>
-    <lastmod>2023-01-23T18:44:36+00:00</lastmod>
-    <priority>0.64</priority>
-  </url>
-  <url>
-    <loc>https://jozinho22.github.io/maths/cours/la-geometrie/le-cercle/la-surface</loc>
-    <lastmod>2023-01-23T18:44:36+00:00</lastmod>
-    <priority>0.64</priority>
-  </url>
-           <!-- Cours : géométrie : sphere -->
-  <url>
-    <loc>https://jozinho22.github.io/maths/cours/la-geometrie/la-sphere</loc>
-    <lastmod>2023-01-23T18:44:36+00:00</lastmod>
-    <priority>0.64</priority>
-  </url>
-  <url>
-    <loc>https://jozinho22.github.io/maths/cours/la-geometrie/la-sphere/la-surface</loc>
-    <lastmod>2023-01-23T18:44:36+00:00</lastmod>
-    <priority>0.64</priority>
-  </url>
-  <url>
-    <loc>https://jozinho22.github.io/maths/cours/la-geometrie/la-sphere/le-volume</loc>
-    <lastmod>2023-01-23T18:44:36+00:00</lastmod>
-    <priority>0.64</priority>
-  </url>
-            <!-- Cours : géométrie : quadrilateres -->
-  <url>
-    <loc>https://jozinho22.github.io/maths/cours/la-geometrie/les-quadrilateres</loc>
-    <lastmod>2023-01-23T18:44:36+00:00</lastmod>
-    <priority>0.64</priority>
-  </url>
-  <url>
-    <loc>https://jozinho22.github.io/maths/cours/la-geometrie/les-quadrilateres/le-carre</loc>
-    <lastmod>2023-01-23T18:44:36+00:00</lastmod>
-    <priority>0.64</priority>
-  </url>
-  <url>
-    <loc>https://jozinho22.github.io/maths/cours/la-geometrie/les-quadrilateres/le-carre</loc>
-    <lastmod>2023-01-23T18:44:36+00:00</lastmod>
-    <priority>0.64</priority>
-  </url>
-             <!-- Cours : géométrie : cone -->
-  <url>
-    <loc>https://jozinho22.github.io/maths/cours/la-geometrie/le-cone</loc>
-    <lastmod>2023-01-23T18:44:36+00:00</lastmod>
-    <priority>0.64</priority>
-  </url>
-  <url>
-    <loc>https://jozinho22.github.io/maths/cours/la-geometrie/le-cone/la-surface</loc>
-    <lastmod>2023-01-23T18:44:36+00:00</lastmod>
-    <priority>0.64</priority>
-  </url>
-  <url>
-    <loc>https://jozinho22.github.io/maths/cours/la-geometrie/le-cone/le-volume</loc>
-    <lastmod>2023-01-23T18:44:36+00:00</lastmod>
-    <priority>0.64</priority>
-  </url>
-  <!-- Cours : fonctions usuelles -->
-  <url>
-    <loc>https://jozinho22.github.io/maths/cours/les-fonctions-usuelles</loc>
-    <lastmod>2023-01-23T18:44:36+00:00</lastmod>
-    <priority>0.64</priority>
-  </url>
-  <url>
-    <loc>https://jozinho22.github.io/maths/cours/les-fonctions-usuelles/aspect</loc>
-    <lastmod>2023-01-23T18:44:36+00:00</lastmod>
-    <priority>0.64</priority>
-  </url>
-
+  
   <!-- Bds de JPP -->
   <url>
     <loc>https://jozinho22.github.io/maths/bds-de-jpp</loc>
