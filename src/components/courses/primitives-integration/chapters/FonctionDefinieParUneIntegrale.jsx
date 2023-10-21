@@ -2,45 +2,44 @@ import React from 'react';
 import { Container } from 'react-bootstrap';
 import MathJaxDisplay from '../../../mathjax-display/MathJaxDisplay';
 import MathJaxInline from '../../../mathjax-display/MathJaxInline';
-import ImageZoom from '../../helpers/ImageZoom';
 import Title1 from '../../helpers/Title1';
-
 
 const FonctionDefinieParUneIntegrale = () => {
 
-    var n = 0;
+    var F = "\\(  F(x) = \\int_a^x f(t)dt  \\)";
+    var intAA = "\\(  F(a) = \\int_a^a f(t)dt = 0 \\)";
+    var intf = "\\(   F(x) = \\int_a^x f(t)dt = \\Bigl[G(t)\\Bigr]_a^x \\)";
+    var intf2 = "\\(  F(x) = \\int_a^x f(t)dt = G(x) - G(a) \\)";
+    var intf3 = "\\(  F'(x) = \\int_a^x f(t)dt = G'(x) - \\underbrace { G'(a) } _\\text{= 0}  \\)";
+    var intfPrim = "\\( \\Biggl\\{\\begin{gather*}  \\enspace F'(x)= G'(x) \\\\ F'(x)= f(x) \\end{gather*}  \\)";
+    var FPrimAndFa = "\\( \\Biggl\\{\\begin{gather*} \\enspace \\enspace \\enspace  F'(x)= f(x) \\\\ F(a)= 0 \\end{gather*} \\)";
 
-    var intAB = "\\(  \\int_a^b f(t)dt = F(b) - F(a) \\)";
-    var intExample = "\\(  \\int_0^1 (2t+3)dt \\)";
-    var fExample = "\\(  f(t) = 2t +3 \\)";
-    var FExample = "\\(  F(t) = t^2 + 3t + K \\)";
-    var intExample2 = "\\(  \\int_0^1 (2t+3)dt  = [t^2 + 3t]_0^1 \\)";
-    var intExample3 = "\\(  \\int_0^1 (2t+3)dt  = F(1)  - F(0) \\)";
-    var intExample4 = "\\(  \\int_0^1 (2t+3)dt  = 1 + 3 + K - (0 + 0 + K) \\)";
-    var intExample5 = "\\(  \\int_0^1 (2t+3)dt  = 4 \\)";
+    var int1overT = "\\(  \\int_a^x \\frac{dt}{t} = ln(x)  \\)";
 
     return  <>
-                <p>Soit <MathJaxInline toShow={"$ f $"} /> une fonction continue sur un intervalle <MathJaxInline toShow={"$ I = [a, b] $"} /> et <MathJaxInline toShow={"$ a, b $"} /> deux réels.</p>
-                <p>On note l'intégrale de <MathJaxInline toShow={"$ a $"} /> vers <MathJaxInline toShow={"$ b $"} /> : </p>
+                <p>Soit <MathJaxInline toShow={"$ f $"} /> une fonction continue sur un intervalle <MathJaxInline toShow={"$ I $"} />.</p>
+                <p><MathJaxInline toShow={"$ a $"} /> est constant, <MathJaxInline toShow={"$ x $"} /> une variable et <MathJaxInline toShow={"$ a, x \\in I $"} />.</p>
+                <p>On définie une fonction <MathJaxInline toShow={"$ F $"} /> telle que : </p>
                 <Container className="Focus">
-                     <MathJaxDisplay toShow={intAB} />  
+                     <MathJaxDisplay toShow={F} />  
                 </Container>
-                <p><MathJaxInline toShow={"$ a $"} /> est la borne inférieure et <MathJaxInline toShow={"$ b $"} /> la borne supérieure.</p>
-                <p><MathJaxInline toShow={"$ dt $"} /> indique que la variable d'intégration est <MathJaxInline toShow={"$ t $"} />.</p>
-      
-                <Title1 title={"Exemple"} />
-                <p>Calculons</p>
-                <MathJaxDisplay toShow={intExample} demo />  
-                <p>On pose :</p>
-                <MathJaxDisplay toShow={fExample} demo />  
-                <MathJaxDisplay toShow={FExample} demo />  
-                <p>Alors : </p>
-                <MathJaxDisplay toShow={intExample2} demo /> 
-                <p>On ne note pas la constante <MathJaxInline toShow={"$ a $"} />, car elle va s'annuler par la suite en faisant la différence.</p> 
-                <MathJaxDisplay toShow={intExample3} demo />  
-                <MathJaxDisplay toShow={intExample4} demo />  
-                <MathJaxDisplay toShow={intExample5} demo />  
-                <p>Selon les vecteurs unitaires du repère, on dira que l'aire sous la courbe de cette fonction est égale à 4 unités d'aire (u.a.).</p>
+                <p>De fait, </p>
+                <MathJaxDisplay toShow={intAA} demo />    
+                <p>Soit <MathJaxInline toShow={"$ G $"} /> la primitive de <MathJaxInline toShow={"$ f $"} /> sur <MathJaxInline toShow={"$ I $"} />. </p>
+                <MathJaxDisplay toShow={intf} demo />  
+                <MathJaxDisplay toShow={intf2} demo />  
+                <MathJaxDisplay toShow={intf3} demo />
+                <MathJaxDisplay toShow={intfPrim} demo /> 
+                <p><MathJaxInline toShow={"$ F $"} /> est donc une primitive de  <MathJaxInline toShow={"$ f $"} />.</p> 
+                <p>Mais,</p>
+                <MathJaxDisplay toShow={F} demo />
+                <p>Alors <MathJaxInline toShow={"$ F $"} /> est la primitive de <MathJaxInline toShow={"$ f $"} /> qui s'annule en <MathJaxInline toShow={"$ a $"} />, c'est-à-dire : </p>
+                <MathJaxDisplay toShow={FPrimAndFa} demo />
+
+                <Title1 title="Exemple" />
+                <Container className="Focus">
+                     <MathJaxDisplay toShow={int1overT} />  
+                </Container>
             </>
 }
 

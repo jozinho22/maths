@@ -5,42 +5,42 @@ import MathJaxInline from '../../../mathjax-display/MathJaxInline';
 import ImageZoom from '../../helpers/ImageZoom';
 import Title1 from '../../helpers/Title1';
 
+import integrationPositivite from '../assets/integration-positivite.png';
 
 const ValeurMoyenne = () => {
 
     var n = 0;
 
-    var intAB = "\\(  \\int_a^b f(t)dt = F(b) - F(a) \\)";
-    var intExample = "\\(  \\int_0^1 (2t+3)dt \\)";
-    var fExample = "\\(  f(t) = 2t +3 \\)";
-    var FExample = "\\(  F(t) = t^2 + 3t + K \\)";
-    var intExample2 = "\\(  \\int_0^1 (2t+3)dt  = [t^2 + 3t]_0^1 \\)";
-    var intExample3 = "\\(  \\int_0^1 (2t+3)dt  = F(1)  - F(0) \\)";
-    var intExample4 = "\\(  \\int_0^1 (2t+3)dt  = 1 + 3 + K - (0 + 0 + K) \\)";
-    var intExample5 = "\\(  \\int_0^1 (2t+3)dt  = 4 \\)";
+    var mMinequ = "\\(  m \\leq f(x) \\leq M \\)";
+    var mMinequ2 = "\\( \\int_a^b m.dt \\leq \\int_a^b f(t).dt \\leq \\int_a^b M.dt \\)";
+    var mMinequ3 = "\\( [mt]_a^b \\leq \\int_a^b f(t).dt \\leq [Mt]_a^b \\)";
+    var mMinequ4 = "\\( m(b-a) \\leq \\int_a^b f(t).dt \\leq M(b-a) \\)";
+
+    var meanValue = "\\( \\mu = \\frac{1}{b-a}\\int_a^b f(t).dt \\)";
+    var meanValueInequ = "\\( m \\leq \\mu \\leq M\\)";
 
     return  <>
-                <p>Soit <MathJaxInline toShow={"$ f $"} /> une fonction continue sur un intervalle <MathJaxInline toShow={"$ I = [a, b] $"} /> et <MathJaxInline toShow={"$ a, b $"} /> deux réels.</p>
-                <p>On note l'intégrale de <MathJaxInline toShow={"$ a $"} /> vers <MathJaxInline toShow={"$ b $"} /> : </p>
+                <p>Soit <MathJaxInline toShow={"$ f $"} /> une fonction continue sur un intervalle <MathJaxInline toShow={"$ I = [a, b] $"} /> et <MathJaxInline toShow={"$ a, b $"} /> deux réels tels que  <MathJaxInline toShow={"$ a < b $"} />.</p>
+                <p>Sur la figure ci-dessous, on a noté <MathJaxInline toShow={"$ m $"} /> et <MathJaxInline toShow={"$ M $"} /> les valeurs minimales et maximales de <MathJaxInline toShow={"$ f $"} /> sur <MathJaxInline toShow={"$ [a, b] $"} />.</p>
+                <ImageZoom src={integrationPositivite} name="Calcul d'intégrale sur une fonction à valeurs négatives et positives" n={++n} />
+                <p><MathJaxInline toShow={"$ \\forall x \\in [a,b] $"} />,</p>
+                <MathJaxDisplay toShow={mMinequ} demo />  
+                <p>Grâce  à la croissance de l'intégrale, </p>
+                <MathJaxDisplay toShow={mMinequ2} demo />  
+                <MathJaxDisplay toShow={mMinequ3} demo />              
                 <Container className="Focus">
-                     <MathJaxDisplay toShow={intAB} />  
-                </Container>
-                <p><MathJaxInline toShow={"$ a $"} /> est la borne inférieure et <MathJaxInline toShow={"$ b $"} /> la borne supérieure.</p>
-                <p><MathJaxInline toShow={"$ dt $"} /> indique que la variable d'intégration est <MathJaxInline toShow={"$ t $"} />.</p>
-      
-                <Title1 title={"Exemple"} />
-                <p>Calculons</p>
-                <MathJaxDisplay toShow={intExample} demo />  
-                <p>On pose :</p>
-                <MathJaxDisplay toShow={fExample} demo />  
-                <MathJaxDisplay toShow={FExample} demo />  
-                <p>Alors : </p>
-                <MathJaxDisplay toShow={intExample2} demo /> 
-                <p>On ne note pas la constante <MathJaxInline toShow={"$ a $"} />, car elle va s'annuler par la suite en faisant la différence.</p> 
-                <MathJaxDisplay toShow={intExample3} demo />  
-                <MathJaxDisplay toShow={intExample4} demo />  
-                <MathJaxDisplay toShow={intExample5} demo />  
-                <p>Selon les vecteurs unitaires du repère, on dira que l'aire sous la courbe de cette fonction est égale à 4 unités d'aire (u.a.).</p>
+                     <MathJaxDisplay toShow={mMinequ4} />  
+                </Container> 
+
+                <Title1 title={"Valeur moyenne"} />
+                <p>On appelle valeur moyenne de <MathJaxInline toShow={"$ f $"} /> sur <MathJaxInline toShow={"$ [a, b] $"} /> le nombre :</p>
+                <Container className="Focus">
+                     <MathJaxDisplay toShow={meanValue} />  
+                </Container> 
+                <p>Ainsi, on a l'inégalite suivante :</p> 
+                <Container className="Focus">
+                     <MathJaxDisplay toShow={meanValueInequ} />  
+                </Container> 
             </>
 }
 

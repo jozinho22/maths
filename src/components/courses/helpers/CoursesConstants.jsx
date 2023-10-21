@@ -11,7 +11,7 @@ const CoursesConstants = {
     DERIVEE: '/la-derivee',
     PRIMITIVES_INTEGRATION: '/primitives-integration',
     SEQUENCES: '/les-suites-numériques',
-    GEOMETRY: '/la-geometrie',
+   /*  GEOMETRY: '/la-geometrie', */
     FONCTIONS_USUELLES:  '/les-fonctions-usuelles',
 
     UNSPLASH: "https://unsplash.com/",

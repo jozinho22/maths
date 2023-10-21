@@ -2,18 +2,13 @@ import React from 'react';
 import { Container } from 'react-bootstrap';
 import MathJaxDisplay from '../../../mathjax-display/MathJaxDisplay';
 import MathJaxInline from '../../../mathjax-display/MathJaxInline';
-import ImageZoom from '../../helpers/ImageZoom';
 import Title1 from '../../helpers/Title1';
-
 
 const LIntegration = () => {
 
-    var n = 0;
-
     var intAB = "\\(  \\int_a^b f(t)dt = F(b) - F(a) \\)";
     var intExample = "\\(  \\int_0^1 (2t+3)dt \\)";
-    var fExample = "\\( \\Biggl\\{ \\begin{gather*} f(t) = 2t +3 \\\\ F(t) = t^2 + 3t + K \\end{gather*} \\)";
-    var FExample = "\\(  F(t) = t^2 + 3t + K \\)";
+    var fFExample = "\\( \\Biggl\\{ \\begin{gather*} f(t) = 2t +3 \\\\ \\enspace \\enspace \\enspace  F(t) = t^2 + 3t + K \\end{gather*} \\)";
     var intExample2 = "\\(  \\int_0^1 (2t+3)dt  = [t^2 + 3t]_0^1 \\)";
     var intExample3 = "\\(  \\int_0^1 (2t+3)dt  = F(1)  - F(0) \\)";
     var intExample4 = "\\(  \\int_0^1 (2t+3)dt  = 1 + 3 + K - (0 + 0 + K) \\)";
@@ -32,8 +27,7 @@ const LIntegration = () => {
                 <p>Calculons</p>
                 <MathJaxDisplay toShow={intExample} demo />  
                 <p>On pose :</p>
-                <MathJaxDisplay toShow={fExample} demo />  
-                <MathJaxDisplay toShow={FExample} demo />  
+                <MathJaxDisplay toShow={fFExample} demo />  
                 <p>Alors : </p>
                 <MathJaxDisplay toShow={intExample2} demo /> 
                 <p>On ne note pas la constante <MathJaxInline toShow={"$ a $"} />, car elle va s'annuler par la suite en faisant la différence.</p> 
