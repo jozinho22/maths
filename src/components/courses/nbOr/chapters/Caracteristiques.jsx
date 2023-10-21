@@ -10,7 +10,6 @@ import euclideStuff from '../assets/euclideStuff.png';
 import Link from '../../../immutable/nav/Link';
 import PagesConstants from '../../../immutable/nav/PagesConstants';
 import CoursesConstants from '../../helpers/CoursesConstants';
-import pathBuilder from '../../../helpers/pathBuilder';
 import Title1 from '../../helpers/Title1';
 import Title2 from '../../helpers/Title2';
 
@@ -73,7 +72,7 @@ const Caracteristiques = () => {
                 <MathJaxDisplay toShow={euclideStuff1} demo/>
                 <p>Autrement dit que : </p>
                 <MathJaxDisplay toShow={euclideStuff2} demo/>
-                <p>Avec <Link url={pathBuilder(`${PagesConstants.COURS}${CoursesConstants.PRODUIT_EN_CROIX}`)} external>le produit en croix</Link>, on sait que cela peut s'écrire :</p>
+                <p>Avec <Link url={`${PagesConstants.COURS}${CoursesConstants.PRODUIT_EN_CROIX}`} external>le produit en croix</Link>, on sait que cela peut s'écrire :</p>
                 <MathJaxDisplay toShow={euclideStuff3} demo/>
                 <p>Soit :</p>
                 <Container className="Focus">

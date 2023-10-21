@@ -4,11 +4,10 @@ import { NavLink } from "react-router-dom";
 const Link = ( {url, external, children} ) => {
 
     return (
-        
             external ?
                 <a 
                     className="Link" 
-                    href={url} 
+                    href={pathBuilder(url)} 
                     target={"_blank"} rel="noreferrer">
                     {children}
                 </a> : 

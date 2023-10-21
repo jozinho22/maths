@@ -464,3 +464,20 @@ table::-webkit-scrollbar-track {
     }
 }
 
+.Error {
+    min-height: 100vh;
+    text-align: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Error p {
+    color: grey;
+}
+
+.Error .btn {
+    color: black;
+}
+

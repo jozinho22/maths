@@ -2,6 +2,7 @@ import React from 'react';
 
 import { Container, Button } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
+import Link from '../immutable/nav/Link';
 import BootstrapSwitchButton from 'bootstrap-switch-button-react'
 
 import PDF from "react-pdf-js";
@@ -9,15 +10,12 @@ import PaginationPageByPage from './helpers/PaginationPageByPage';
 import PaginationFullDocument from './helpers/PaginationFullDocument';
 import AppContext from '../context/AppContext'
 
-import Link from '../immutable/nav/Link';
-import CoursesConstants from '../courses/helpers/CoursesConstants';
-import CustomHelmet from '../immutable/seo/CustomHelmet';
 import Constants from '../immutable/Constants';
+import CustomHelmet from '../immutable/seo/CustomHelmet';
 import { useSwipeable } from 'react-swipeable';
 
 import './PDFViewerPage.css';
 import './styles/Canevas.css';
-import pathBuilder from '../helpers/pathBuilder';
 import PagesConstants from '../immutable/nav/PagesConstants';
 import MainTitle from '../immutable/MainTitle';
 
@@ -185,18 +183,18 @@ const PDFViewerPage = ({ pdfItem }) => {
                 }
 
                 <MainTitle title={pdfItem.title} />
-                <NavLink to={pathBuilder("/")}>
+                <NavLink to={"/"}>
                     <Button className="DefaultButton ReturnHomeButton" onClick={() => updatePlayMode(false)}>
                         Home
                     </Button>
                 </NavLink>
-                <NavLink to={pathBuilder(PagesConstants.BDS_DE_JPP)} onClick={() => updatePlayMode(false)}>
+                <NavLink to={PagesConstants.BDS_DE_JPP} onClick={() => updatePlayMode(false)}>
                     <Button className="DefaultButton UnPlayModeButton" >
                         Toutes les BDs
                     </Button>
                 </NavLink>
 
-                <p className="AuthorCopyRight">Avec l'accord de Mr Petit - <Link url={CoursesConstants.CoursesConstants} >toutes ses BDs</Link></p>     
+                <p className="AuthorCopyRight">Avec l'accord de Mr Petit - <Link url={Constants.SAVOIR_SANS_FRONTIERES} external>toutes ses BDs</Link></p>     
           </Container>     
         );
       }

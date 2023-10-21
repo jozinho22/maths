@@ -1,25 +1,26 @@
 import GenericTableOfContents from '../immutable/GenericTableOfContents';
 import { Button } from 'react-bootstrap';
-import { NavLink } from 'react-router-dom';
 import CustomHelmet from '../immutable/seo/CustomHelmet';
 import Constants from '../immutable/Constants';
 
 import pathBuilder from '../helpers/pathBuilder';
 import PagesConstants from '../immutable/nav/PagesConstants';
 
+import { NavLink } from 'react-router-dom';
+
 const CoursesTableOfContents = ( {courseItems} ) => {
 
     var prefix = 'cours';
     var title = 'Tous les cours du site';
 
-    var metaContent = "Tous les cours du site (calcul élémentaire, équations, dérivées, géométrie, le théorème de Pythagore, le nombre d'or...etc)";
+    var metaContent = "Tous les cours du site (calcul élémentaire, équations, le théorème de Pythagore, dérivées, primitives/intégration, le nombre d'or...etc)";
 
     return (
         <>
             <CustomHelmet title={title} metaContent={metaContent} canonicalUrl={`${Constants.WEB_APP_URL}${PagesConstants.COURS}`} />
 
             <div className="FlexButton">
-                <NavLink to={pathBuilder(`/`)}>
+                <NavLink url={pathBuilder(`/`)}>
                     <Button className="DefaultButton GreenButton" >
                         Retour à l'accueil
                     </Button> 

@@ -4,7 +4,6 @@ import MathJaxDisplay from '../../../mathjax-display/MathJaxDisplay';
 
 import Link  from '../../../immutable/nav/Link';
 import CoursesConstants from '../../helpers/CoursesConstants';
-import pathBuilder from '../../../helpers/pathBuilder';
 import FibonacciSequenceFormulaTable from '../helpers/FibonacciSequenceFormulaTable';
 
 const FormuleDeLaSuiteDeFibonacci = () => {
@@ -13,7 +12,7 @@ const FormuleDeLaSuiteDeFibonacci = () => {
 
     return (
         <>
-            <p>Voici un aperçu de la formule que nous avons vues dans <Link url={pathBuilder(`${CoursesConstants.NB_OR}/evolutions-de-lapins`)} external> le chapitre sur les évolutions de lapins</Link> :</p>
+            <p>Voici un aperçu de la formule que nous avons vues dans <Link url={`${CoursesConstants.NB_OR}/evolutions-de-lapins`} external> le chapitre sur les évolutions de lapins</Link> :</p>
             <Container className="Focus">
                 <MathJaxDisplay toShow={phiMain} />
             </Container>

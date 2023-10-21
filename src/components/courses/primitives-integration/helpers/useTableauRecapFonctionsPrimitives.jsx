@@ -30,7 +30,7 @@ const useTableauRecapFonctionsPrimitives = () => {
     tableauRecapFonctionsDerivees.push(
          {
             id: k++,
-            title: "\\x",
+            title: "x",
             values: ["\\frac{1}{2}.x^2 + k"]
         }
     )
@@ -38,7 +38,7 @@ const useTableauRecapFonctionsPrimitives = () => {
     tableauRecapFonctionsDerivees.push(
          {
             id: k++,
-            title: "\\x^2",
+            title: "x^2",
             values: ["\\frac{1}{3}.x^3 + k"]
         }
     )
@@ -63,7 +63,7 @@ const useTableauRecapFonctionsPrimitives = () => {
          {
             id: k++,
             title: "\\frac{1}{x}",
-            values: ["ln(|x|) + k"]
+            values: ["ln|x| + k"]
         }
     )
 
@@ -136,7 +136,7 @@ const useTableauRecapFonctionsPrimitives = () => {
          {
             id: k++,
             title: "tan(x)",
-            values: ["-ln(|cos(x)|) + k"]
+            values: ["-ln|cos(x)| + k"]
         }
     )
 
@@ -144,7 +144,7 @@ const useTableauRecapFonctionsPrimitives = () => {
          {
             id: k++,
             title: "sh(x)",
-            values: ["ch(x)"]
+            values: ["ch(x) + k"]
         }
     )
 
@@ -152,7 +152,7 @@ const useTableauRecapFonctionsPrimitives = () => {
          {
             id: k++,
             title: "ch(x)",
-            values: ["sh(x)"]
+            values: ["sh(x) + k"]
         }
     )
 

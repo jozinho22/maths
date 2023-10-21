@@ -4,7 +4,6 @@ import { Container } from 'react-bootstrap';
 import useFunctionsExpressions from './useFunctionsExpressions'; */
 import CustomHelmet from "../immutable/seo/CustomHelmet";
 import Constants from '../immutable/Constants';
-import pathBuilder from "../helpers/pathBuilder";
 import PagesConstants from "../immutable/nav/PagesConstants";
 import CoursesConstants from "../courses/helpers/CoursesConstants";
 import Link from "../immutable/nav/Link";
@@ -30,14 +29,13 @@ const Home = () => {
                         <p>Il est simplement conçu pour présenter certaines notions, notamment de niveau collège/lycée et pour encourager l'apprentissage de la matière.</p>
                         <Title1 title={"Contenu"} />
                         <p>
-                            Ce site <Link url={pathBuilder(PagesConstants.COURS)} external> aborde de nombreuses notions</Link> allant du collège à la terminale.
+                            Ce site <Link url={PagesConstants.COURS} external> aborde de nombreuses notions</Link> allant du collège à la terminale.
                             {"\n"}
                             Il comprend notamment certaines démonstrations de formules, ainsi que des récapitulatifs de cours.
                             {"\n"}
-                            Enfin, est proposé aussi certaines thématiques comme les nombres <Link url={pathBuilder(`${PagesConstants.COURS}${CoursesConstants.PI}`)} external><MathJaxInline toShow={"$\\pi$"} /> (Pi)</Link> et <Link url={pathBuilder(`${PagesConstants.COURS}${CoursesConstants.NB_OR}`)} external><MathJaxInline toShow={"$\\phi$"} /> (Phi, le nombre d'or)</Link>.
+                            Enfin, est proposé aussi certaines thématiques comme les nombres <Link url={`${PagesConstants.COURS}${CoursesConstants.PI}`} external><MathJaxInline toShow={"$\\pi$"} /> (Pi)</Link> et <Link url={`${PagesConstants.COURS}${CoursesConstants.NB_OR}`} external><MathJaxInline toShow={"$\\phi$"} /> (Phi, le nombre d'or)</Link>.
                         </p>
-                        <p>Je dédie ce site à un grand homme de la science, Jean-Pierre Petit, et je vous partage <Link url={pathBuilder(PagesConstants.BDS_DE_JPP)} external>ses bandes dessinées pédagogiques</Link> sur le thème de la science avec son accord.</p>
-                        {/* <p>Pour en apprendre plus sur qui je suis, rendez-vous sur <Link url={pathBuilder(PagesConstants.CONTACT)} external>cette page.</Link></p> */}
+                        <p>Je dédie ce site à un grand homme de la science, Jean-Pierre Petit, et je vous partage <Link url={PagesConstants.BDS_DE_JPP} external>ses bandes dessinées pédagogiques</Link> sur le thème de la science avec son accord.</p>
                     </Container>
                 </Container>  
             </>;

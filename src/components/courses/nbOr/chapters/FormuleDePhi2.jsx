@@ -4,7 +4,6 @@ import MathJaxDisplay from '../../../mathjax-display/MathJaxDisplay';
 
 import Link  from '../../../immutable/nav/Link';
 import CoursesConstants from '../../helpers/CoursesConstants';
-import pathBuilder from '../../../helpers/pathBuilder';
 import PhiFormula2Table from '../helpers/PhiFormula2Table';
 
 const FormuleDePhi2 = () => {
@@ -13,7 +12,7 @@ const FormuleDePhi2 = () => {
 
     return (
         <>
-            <p>Voici un aperçu de la seconde formule que nous avons vues dans <Link url={pathBuilder(`${CoursesConstants.NB_OR}/caracteristiques`)} external> le chapitre sur les caractéristiques du nombre d'or</Link> :</p>
+            <p>Voici un aperçu de la seconde formule que nous avons vues dans <Link url={`${CoursesConstants.NB_OR}/caracteristiques`} external> le chapitre sur les caractéristiques du nombre d'or</Link> :</p>
             <Container className="Focus">
                 <MathJaxDisplay toShow={phiGen} />
             </Container>

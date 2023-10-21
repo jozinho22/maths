@@ -10,7 +10,7 @@ const TheoremeDeLHopital = () => {
     var limFoverG = "\\(lim_{x \\to a} \\enspace \\left( \\frac{f}{g} \\right) \\enspace (avec \\enspace a \\in \\mathbb{R} \\enspace ou \\enspace a = \\pm \\infty) \\)";
 
     var theoreme = "\\( lim_{x \\to a} \\enspace \\left(\\frac{f}{g} \\right) = lim_{x \\to a} \\enspace \\left(\\frac{f'}{g'}\\right) = l \\enspace\\)";
-    var theoremeConditions = "\\( avec \\enspace a \\in \\mathbb{R} \\cup \\left\\{ \\pm \\infty \\right\\}, \\enspace l \\in \\mathbb{R}, \\enspace g'(a) \\neq 0 \\)";
+    var theoremeConditions = "\\( avec \\enspace a \\in \\mathbb{R} \\cup \\left\\{ \\pm \\infty \\right\\}, \\enspace l \\in \\mathbb{R} \\)";
 
     var precaution1 = "\\( a) \\enspace lim_{x \\to a} \\enspace f = lim_{x \\to a} \\enspace g = 0 \\)";
     var precaution2 = "\\( b) \\enspace lim_{x \\to a} \\enspace f = lim_{x \\to a} \\enspace g = \\pm \\infty \\)";
@@ -34,7 +34,6 @@ const TheoremeDeLHopital = () => {
                 <p>Il faut alors se trouver dans l'un de deux cas suivants : </p>
                 <MathJaxDisplay toShow={precaution1} demo /> 
                 <MathJaxDisplay toShow={precaution2} demo /> 
-                <p>Dans ce cas précis, il faut alors verifier que <MathJaxInline toShow={"$ g'(a) \\neq 0  $"} />.</p>
                 <p>On peut alors lever l'indéterminatin grâce au théorème.</p>
             </>
 }

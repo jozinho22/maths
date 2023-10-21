@@ -6,13 +6,13 @@ import ImageZoom from '../../helpers/ImageZoom';
 import Title1 from '../../helpers/Title1';
 
 
-const LIntegration = () => {
+const ValeurMoyenne = () => {
 
     var n = 0;
 
     var intAB = "\\(  \\int_a^b f(t)dt = F(b) - F(a) \\)";
     var intExample = "\\(  \\int_0^1 (2t+3)dt \\)";
-    var fExample = "\\( \\Biggl\\{ \\begin{gather*} f(t) = 2t +3 \\\\ F(t) = t^2 + 3t + K \\end{gather*} \\)";
+    var fExample = "\\(  f(t) = 2t +3 \\)";
     var FExample = "\\(  F(t) = t^2 + 3t + K \\)";
     var intExample2 = "\\(  \\int_0^1 (2t+3)dt  = [t^2 + 3t]_0^1 \\)";
     var intExample3 = "\\(  \\int_0^1 (2t+3)dt  = F(1)  - F(0) \\)";
@@ -20,7 +20,7 @@ const LIntegration = () => {
     var intExample5 = "\\(  \\int_0^1 (2t+3)dt  = 4 \\)";
 
     return  <>
-                <p>Soit <MathJaxInline toShow={"$ f $"} /> une fonction continue sur un intervalle <MathJaxInline toShow={"$ I = [a, b] $"} /> et <MathJaxInline toShow={"$ a, b $"} /> deux réels tels que  <MathJaxInline toShow={"$ a < b $"} />.</p>
+                <p>Soit <MathJaxInline toShow={"$ f $"} /> une fonction continue sur un intervalle <MathJaxInline toShow={"$ I = [a, b] $"} /> et <MathJaxInline toShow={"$ a, b $"} /> deux réels.</p>
                 <p>On note l'intégrale de <MathJaxInline toShow={"$ a $"} /> vers <MathJaxInline toShow={"$ b $"} /> : </p>
                 <Container className="Focus">
                      <MathJaxDisplay toShow={intAB} />  
@@ -44,4 +44,4 @@ const LIntegration = () => {
             </>
 }
 
-export default LIntegration;
+export default ValeurMoyenne;

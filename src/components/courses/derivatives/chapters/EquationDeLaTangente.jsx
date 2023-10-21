@@ -7,7 +7,6 @@ import derivativeSquareFunction from '../assets/derivativeSquareFunction.png';
 import Link from '../../../immutable/nav/Link';
 import PagesConstants from '../../../immutable/nav/PagesConstants';
 import CoursesConstants from '../../helpers/CoursesConstants';
-import pathBuilder from '../../../helpers/pathBuilder';
 
 const EquationDeLaTangente = () => {
 
@@ -27,7 +26,7 @@ const EquationDeLaTangente = () => {
 
     return  <>
                 <p>
-                    Reprenons l'exemple de <Link url={pathBuilder(`${PagesConstants.COURS}${CoursesConstants.DERIVEE}/derivee-de-x-au-carre`)} external>la fonction carrée</Link> vue au chapitre précédent :
+                    Reprenons l'exemple de <Link url={`${PagesConstants.COURS}${CoursesConstants.DERIVEE}/derivee-de-x-au-carre`} external>la fonction carrée</Link> vue au chapitre précédent :
                 </p>
                 
                 <p>Pour <MathJaxInline toShow={"$ x= 1 $"} />, on a bien <MathJaxInline toShow={"$ f'(1)=2 $"} />.  </p>

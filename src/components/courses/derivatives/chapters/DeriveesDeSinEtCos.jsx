@@ -6,7 +6,6 @@ import MathJaxInline from '../../../mathjax-display/MathJaxInline';
 import Link from '../../../immutable/nav/Link';
 import PagesConstants from '../../../immutable/nav/PagesConstants';
 import CoursesConstants from '../../helpers/CoursesConstants';
-import pathBuilder from '../../../helpers/pathBuilder';
 import Title1 from '../../helpers/Title1';
 import Title2 from '../../helpers/Title2';
 
@@ -50,7 +49,7 @@ const DeriveesDeSinEtCos = () => {
 
             <Title1 title={"Démonstration"} />
             <Title2 title={"Pour le sinus"} />
-            <p>Avec la formule <MathJaxInline toShow={"$(2)$"} /> vue dans <Link url={pathBuilder(`${PagesConstants.COURS}${CoursesConstants.TRIGO}/formules-d-addition`)} external>les formules d'addition</Link>, on a :</p>   
+            <p>Avec la formule <MathJaxInline toShow={"$(2)$"} /> vue dans <Link url={`${PagesConstants.COURS}${CoursesConstants.TRIGO}/formules-d-addition`} external>les formules d'addition</Link>, on a :</p>   
             <MathJaxDisplay toShow={sinXPlusDx} demo />
             <p>On factorise par <MathJaxInline toShow={"$ sin(x)$"} />:</p>
             <MathJaxDisplay toShow={sinXPlusDx2} demo />
@@ -62,7 +61,7 @@ const DeriveesDeSinEtCos = () => {
             </Container> 
             
             <Title2 title={"Pour le cosinus"} />
-            <p>Idem que précédemment, toujours dans <Link url={pathBuilder(`${PagesConstants.COURS}${CoursesConstants.TRIGO}/formules-d-addition`)} external>les formules d'addition</Link>, avec la formule <MathJaxInline toShow={"$(3)$"} />, on a :</p>   
+            <p>Idem que précédemment, toujours dans <Link url={`${PagesConstants.COURS}${CoursesConstants.TRIGO}/formules-d-addition`} external>les formules d'addition</Link>, avec la formule <MathJaxInline toShow={"$(3)$"} />, on a :</p>   
             <MathJaxDisplay toShow={cosXPlusDx} demo />
             <MathJaxDisplay toShow={cosXPlusDx2} demo />
             <Container className="Focus">

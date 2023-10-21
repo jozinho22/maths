@@ -13,7 +13,6 @@ import FibonacciTable from '../helpers/FibonacciTable';
 
 import Link from '../../../immutable/nav/Link';
 import CoursesConstants from '../../helpers/CoursesConstants';
-import pathBuilder from '../../../helpers/pathBuilder';
 import Title1 from '../../helpers/Title1';
 
 
@@ -74,7 +73,7 @@ const EvolutionDeLapins = () => {
                 <p>
                     Ce nombre est le nombre d’or, autrement appelée la divine proportion, désignée par la
                     lettre grecque <MathJaxInline toShow={"$\\phi$"} /> . 
-                    {"\n"}Un des plus célèbres nombres utilisés dans les mathématiques, notamment avec  <Link url={pathBuilder(`${CoursesConstants.NB_OR}/evolutions-de-lapins`)} external> le chapitre sur les évolutions de lapins</Link> et <Link url={pathBuilder(`${CoursesConstants.PI}`)} external>le nombre <MathJaxInline toShow={"$\\pi$"} /></Link> . 
+                    {"\n"}Un des plus célèbres nombres utilisés dans les mathématiques, notamment avec  <Link url={`${CoursesConstants.NB_OR}/evolutions-de-lapins`} external> le chapitre sur les évolutions de lapins</Link> et <Link url={`${CoursesConstants.PI}`} external>le nombre <MathJaxInline toShow={"$\\pi$"} /></Link> . 
                     {"\n"}Il est célèbre pour ces fascinantes caractéristiques mais aussi sa présence dans la nature.
                 </p>
                 <UnsplashCopyRight item="Images de lapins" />

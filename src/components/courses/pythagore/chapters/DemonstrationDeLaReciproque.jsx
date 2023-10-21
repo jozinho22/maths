@@ -11,7 +11,6 @@ import pythagoreReciproqueDemo2 from '../assets/pythagoreReciproqueDemo2.png';
 import PagesConstants from '../../../immutable/nav/PagesConstants';
 import CoursesConstants from '../../helpers/CoursesConstants';
 
-import pathBuilder from '../../../helpers/pathBuilder';
 import Link from '../../../immutable/nav/Link';
 
 const DemonstrationDeLaReciproque = () => {
@@ -72,7 +71,7 @@ const DemonstrationDeLaReciproque = () => {
             <MathJaxDisplay toShow={gen} demo />
             <MathJaxDisplay toShow={gen2} fRef={1} demo />
             <Aside>
-                <p>On sait grâce au <Link url={pathBuilder(`${PagesConstants.COURS}${CoursesConstants.PYTHAGORE}`)} external>théorème de Pythagore</Link> que : </p>
+                <p>On sait grâce au <Link url={`${PagesConstants.COURS}${CoursesConstants.PYTHAGORE}`} external>théorème de Pythagore</Link> que : </p>
                 <MathJaxDisplay toShow={pythA} demo />
                 <p>Soit</p>
                 <MathJaxDisplay toShow={pythA2} demo />

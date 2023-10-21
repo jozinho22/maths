@@ -6,7 +6,6 @@ import MathJaxInline from '../../../mathjax-display/MathJaxInline';
 import PagesConstants from '../../../immutable/nav/PagesConstants';
 import CoursesConstants from '../../helpers/CoursesConstants';
 import Link from '../../../immutable/nav/Link';
-import pathBuilder from '../../../helpers/pathBuilder';
 import Title1 from '../../helpers/Title1';
 
 const DeriveeDUneSomme = () => {
@@ -31,7 +30,7 @@ const DeriveeDUneSomme = () => {
                
                <Title1 title={"Démonstration"} />
                <p>On souhaite calculer la dérivée d'une somme de deux fonctions <MathJaxInline toShow={"$ f $"} /> et <MathJaxInline toShow={"$ g $"} />.</p>
-               <p>Dans <Link url={pathBuilder(`${PagesConstants.COURS}${CoursesConstants.DERIVEE}/presentation`)} external>le premier chapitre sur la dérivée</Link> , on a vu que : </p>
+               <p>Dans <Link url={`${PagesConstants.COURS}${CoursesConstants.DERIVEE}/presentation`} external>le premier chapitre sur la dérivée</Link> , on a vu que : </p>
                <Container className="Focus">
                     <MathJaxDisplay toShow={deriveeRappel} />  
                </Container> 

@@ -69,6 +69,13 @@ function coursesResourceBuilder() {
       relativePath: CoursesConstants.FONCTIONS_USUELLES,
       chapters: getUsualFunctionsChapters()
     }
+    var trigo = {
+      id: i++,
+      title: 'La trigonométrie',
+      metaContent: "La trigonométrie : explications et toutes les formules associées",
+      relativePath: CoursesConstants.TRIGO,
+      chapters: getTrigoChapters()
+    }
     var derivee = {
       id: i++,
       title: 'La dérivée',
@@ -97,13 +104,7 @@ function coursesResourceBuilder() {
       relativePath: CoursesConstants.NB_OR,
       chapters: getGoldenRatioChapters()
     }
-    var trigo = {
-      id: i++,
-      title: 'La trigonométrie',
-      metaContent: "La trigonométrie : explications et toutes les formules associées",
-      relativePath: CoursesConstants.TRIGO,
-      chapters: getTrigoChapters()
-    }
+
     var seq = {
       id: i++,
       title: 'Les suites numériques',
@@ -128,12 +129,12 @@ function coursesResourceBuilder() {
         pythagore,
         thales,
         usualFunctions,
+        trigo,
         derivee,
         primInt,
         pi, 
-        nbOr,
-        trigo,
-        geo
+        nbOr
+        /* geo */
     );
 
     return coursesItems;

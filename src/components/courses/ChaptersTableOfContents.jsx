@@ -3,9 +3,9 @@ import Constants from '../immutable/Constants';
 import CustomHelmet from '../immutable/seo/CustomHelmet';
 import pathBuilder from '../helpers/pathBuilder';
 
-import { NavLink } from 'react-router-dom';
 import PagesConstants from '../immutable/nav/PagesConstants';
 import MainTitle from '../immutable/MainTitle';
+import { NavLink } from 'react-router-dom';
 
 const ChaptersTableOfContents = ( {courseItem} ) => {
 
@@ -24,7 +24,7 @@ const ChaptersTableOfContents = ( {courseItem} ) => {
             <Container className="TableOfContents">
                 {
                     courseItem.chapters.map(chapter => (
-                        <NavLink 
+                        <NavLink  
                             key={chapter.id} 
                             to={pathBuilder(`${PagesConstants.COURS}${courseItem.relativePath}${courseItem.chapters[chapter.id].relativePath}`)} 
                             className="TableOfContentsLink" >

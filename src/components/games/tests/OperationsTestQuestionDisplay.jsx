@@ -9,8 +9,8 @@ import { OperationsTestContext } from './OperationsTest';
 
 import AppContext from '../../context/AppContext';
 import { NavLink } from 'react-router-dom';
-import pathBuilder from '../../helpers/pathBuilder';
 import PagesConstants from '../../immutable/nav/PagesConstants';
+import pathBuilder from '../../helpers/pathBuilder';
 
 const OperationsTestQuestionDisplay = () => {
 

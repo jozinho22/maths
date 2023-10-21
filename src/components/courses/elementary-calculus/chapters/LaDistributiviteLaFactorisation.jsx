@@ -9,7 +9,6 @@ import Title2 from '../../helpers/Title2';
 import PagesConstants from '../../../immutable/nav/PagesConstants';
 import CoursesConstants from '../../helpers/CoursesConstants';
 import Link from '../../../immutable/nav/Link';
-import pathBuilder from '../../../helpers/pathBuilder';
 
 import distribFact from '../assets/distribFact.png';
 
@@ -90,7 +89,7 @@ const LaDistributiviteLaFactorisation = () => {
                 <MathJaxDisplay toShow={idRem1Example2} demo />
                 <p>Soit : </p>
                 <MathJaxDisplay toShow={idRemCanonExample3} demo />
-                <p>Cette façon de factoriser va notamment nous servir pour <Link url={pathBuilder(`${PagesConstants.COURS}${CoursesConstants.EQ_2_DEG}/resolution`)} external>les équations du second degré</Link>.</p>
+                <p>Cette façon de factoriser va notamment nous servir pour <Link url={`${PagesConstants.COURS}${CoursesConstants.EQ_2_DEG}/resolution`} external>les équations du second degré</Link>.</p>
             </>
 }
 

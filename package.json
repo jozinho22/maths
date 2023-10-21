@@ -34,7 +34,6 @@
   },
   "scripts": {
     "start": "BROWSER=none react-scripts start",
-    "prebuild": "node transferSitemapIntoRsp.js",
     "build": "CI=false GENERATE_SOURCEMAP=false react-scripts build",
     "postbuild": "react-spa-prerender",
     "predeploy": "npm run build",
@@ -63,15 +62,23 @@
   "overrides": {
     "mini-css-extract-plugin": "2.4.5",
     "@svgr/webpack": "$@svgr/webpack",
-    "node-fetch": "$node-fetch"
+    "node-fetch": "$node-fetch",
+    "@adobe/css-tools": "$@adobe/css-tools",
+    "postcss": "$postcss",
+    "wordwrap": "$wordwrap",
+    "semver": "$semver"
   },
   "devDependencies": {
+    "@adobe/css-tools": "^4.3.1",
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@netlify/plugin-sitemap": "^0.8.1",
     "@svgr/webpack": "^8.0.1",
     "mini-css-extract-plugin": "2.4.5",
     "netlify-plugin-submit-sitemap": "^0.4.0",
     "node-fetch": "^3.3.1",
+    "postcss": "^8.4.31",
+    "semver": "^7.5.4",
+    "wordwrap": "^1.0.0",
     "xml-parser": "^1.2.1"
   }
 }

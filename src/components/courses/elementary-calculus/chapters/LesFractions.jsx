@@ -8,7 +8,6 @@ import Title1 from '../../helpers/Title1';
 import PagesConstants from '../../../immutable/nav/PagesConstants';
 import CoursesConstants from '../../helpers/CoursesConstants';
 import Link from '../../../immutable/nav/Link';
-import pathBuilder from '../../../helpers/pathBuilder';
 
 import Fraction from "fractions";
 
@@ -53,7 +52,7 @@ const LesFractions = () => {
                 <MathJaxDisplay toShow={ratioNumDen3} demo />
 
                 <p>
-                    Nous avons au chapitre sur <Link url={pathBuilder(`${PagesConstants.COURS}${CoursesConstants.ELEM_CALCULUS}/les-operations-de-base`)} external>les opérations de base</Link> que l'on observait des comportement communs entre :
+                    Nous avons au chapitre sur <Link url={`${PagesConstants.COURS}${CoursesConstants.ELEM_CALCULUS}/les-operations-de-base`} external>les opérations de base</Link> que l'on observait des comportement communs entre :
                     {"\n"} - l'addition et la soustraction
                     {"\n"} - la multiplication et la division
                 </p>
@@ -85,7 +84,7 @@ const LesFractions = () => {
                 <MathJaxDisplay toShow={multiplyExample3Reduc4} demo />
 
                 <Title1 title={"4) Fractions complexes"} />
-                <p>Pour les expressions de fractions contenant à la fois des additions/soustractions et des multiplications/divisions, <Link url={pathBuilder(`${PagesConstants.COURS}${CoursesConstants.ELEM_CALCULUS}/les-operations-de-base`)} external>les règles de priorités</Link> s'appliquent.</p>
+                <p>Pour les expressions de fractions contenant à la fois des additions/soustractions et des multiplications/divisions, <Link url={`${PagesConstants.COURS}${CoursesConstants.ELEM_CALCULUS}/les-operations-de-base`} external>les règles de priorités</Link> s'appliquent.</p>
                 <MathJaxDisplay toShow={complexFrac} demo />
                 <MathJaxDisplay toShow={complexFrac2} demo />
                 <MathJaxDisplay toShow={complexFrac3} demo />

@@ -54,6 +54,7 @@ function App() {
 
 /*     <Link url={pathBuilder(`${PagesConstants.COURS}${CoursesConstants.DERIVEE}/presentation`)} external>le premier chapitre sur la dérivée</Link>
  */    
+   /* "prebuild": "node transferSitemapIntoRsp.js", */
     return ( 
         <>
             <div className="App" id="capture">     

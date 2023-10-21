@@ -8,7 +8,6 @@ import CoursesConstants from '../../../helpers/CoursesConstants';
 import square from '../assets/square.png';
 import squareWithDiag from '../assets/squareWithDiag.png';
 
-import pathBuilder from '../../../../helpers/pathBuilder';
 import Link from '../../../../immutable/nav/Link';
 import Title1 from '../../../helpers/Title1';
 import Title2 from '../../../helpers/Title2';
@@ -68,7 +67,7 @@ const LeCarre = () => {
             <p>Appelons les diagonales <MathJaxInline toShow={"$d_1$"}/> et <MathJaxInline toShow={"$d_2$"}/>. </p>
             <p>
                 <u>Propriété 1 : </u>
-                {"\n"} Grâce au <Link url={pathBuilder(`${PagesConstants.COURS}${CoursesConstants.PYTHAGORE}`)} external>théorème de Pythagore</Link>, on peut calculer que :
+                {"\n"} Grâce au <Link url={`${PagesConstants.COURS}${CoursesConstants.PYTHAGORE}`} external>théorème de Pythagore</Link>, on peut calculer que :
                 <MathJaxDisplay toShow={diag} demo />
                 <MathJaxDisplay toShow={diagBis} demo />
                 Elles sont alors égales, appelons les <MathJaxInline toShow={"$d$"}/>.
@@ -80,7 +79,7 @@ const LeCarre = () => {
             </p>
             <p>
                 <u>Propriété 2 : </u>
-                {"\n"} Encore grâce au <Link url={pathBuilder(`${PagesConstants.COURS}${CoursesConstants.PYTHAGORE}`)} external>théorème de Pythagore</Link>, on voit que :
+                {"\n"} Encore grâce au <Link url={`${PagesConstants.COURS}${CoursesConstants.PYTHAGORE}`} external>théorème de Pythagore</Link>, on voit que :
                 {"\n"} Si l'on calcule la demi-diagonale en utilisant la moitié du côté du carré, on a :
                 <MathJaxDisplay toShow={demiDiag} demo />
                 <MathJaxDisplay toShow={demiDiag2} demo />
@@ -95,7 +94,7 @@ const LeCarre = () => {
             </p>
             <p>
                 <u>Propriété 3 : </u>
-                {"\n"} Nous allons maintenant utiliser la réciproque du <Link url={pathBuilder(`${PagesConstants.COURS}${CoursesConstants.PYTHAGORE}`)} external>théorème de Pythagore</Link>.
+                {"\n"} Nous allons maintenant utiliser la réciproque du <Link url={`${PagesConstants.COURS}${CoursesConstants.PYTHAGORE}`} external>théorème de Pythagore</Link>.
                 {"\n"} S'il existe des angles droits au niveau de l'intersection, on aura alors :
                 <MathJaxDisplay toShow={angDroit} demo />
                 En injectant (2) dans l'équation, on a : 
