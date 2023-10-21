@@ -395,7 +395,7 @@
     <lastmod>2023-10-20T20:0:00+00:00</lastmod>
     <priority>0.64</priority>
   </url>
-  <!-- <url>
+  <url>
     <loc>https://jozinho22.github.io/maths/cours/primitives-integration/valeur-moyenne</loc>
     <lastmod>2023-10-20T20:0:00+00:00</lastmod>
     <priority>0.64</priority>
@@ -409,9 +409,34 @@
     <loc>https://jozinho22.github.io/maths/cours/primitives-integration/fonction-definie-par-une-integrale</loc>
     <lastmod>2023-10-20T20:0:00+00:00</lastmod>
     <priority>0.64</priority>
-  </url> -->
+  </url>
   <url>
     <loc>https://jozinho22.github.io/maths/cours/primitives-integration/tableau-recap-fonctions-primitives</loc>
+    <lastmod>2023-10-20T20:0:00+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://jozinho22.github.io/maths/cours/primitives-integration/calcul-de-la-surface-du-cercle</loc>
+    <lastmod>2023-10-20T20:0:00+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://jozinho22.github.io/maths/cours/primitives-integration/calcul-de-la-surface-de-la-sphere</loc>
+    <lastmod>2023-10-20T20:0:00+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://jozinho22.github.io/maths/cours/primitives-integration/calcul-du-volume-de-la-sphere</loc>
+    <lastmod>2023-10-20T20:0:00+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://jozinho22.github.io/maths/cours/primitives-integration/calcul-de-la-surface-du-cone</loc>
+    <lastmod>2023-10-20T20:0:00+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://jozinho22.github.io/maths/cours/primitives-integration/calcul-du-volume-du-cone</loc>
     <lastmod>2023-10-20T20:0:00+00:00</lastmod>
     <priority>0.64</priority>
   </url>
