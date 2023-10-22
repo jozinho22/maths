@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/maths/static/css/main.09df741b.css",
-    "main.js": "/maths/static/js/main.51cd638f.js",
+    "main.js": "/maths/static/js/main.d76299fd.js",
     "static/js/27.035b7279.chunk.js": "/maths/static/js/27.035b7279.chunk.js",
     "static/media/energetiquementVotre.pdf": "/maths/static/media/energetiquementVotre.ae46a881d6240ff7c375.pdf",
     "static/media/bigBang.pdf": "/maths/static/media/bigBang.9a7278fe34a3a9cbd1fe.pdf",
@@ -24,12 +24,17 @@
     "static/media/dragons.ttf": "/maths/static/media/dragons.4548b6f8762a50adcc12.ttf",
     "static/media/rabbitsEvolution.png": "/maths/static/media/rabbitsEvolution.c230ff8019977acc58c7.png",
     "static/media/black-chancery.ttf": "/maths/static/media/black-chancery.7d521baec2350e17620c.ttf",
+    "static/media/derivativeSquareFunctionSensVar.png": "/maths/static/media/derivativeSquareFunctionSensVar.17c4f00ac0f9e534ad78.png",
     "static/media/scholar.otf": "/maths/static/media/scholar.eec7046063f4ddee44b0.otf",
-    "static/media/derivativeSquareFunctionSensVar.png": "/maths/static/media/derivativeSquareFunctionSensVar.c998a918119302265272.png",
+    "static/media/derivativeSquareFunctionSensVarFPrim.png": "/maths/static/media/derivativeSquareFunctionSensVarFPrim.e903ebed3349d37cc439.png",
+    "static/media/derivativeConvexity.png": "/maths/static/media/derivativeConvexity.f5ed629abb489b4fe6e0.png",
+    "static/media/derivativeConcavity.png": "/maths/static/media/derivativeConcavity.073af4412eccbdd8589e.png",
+    "static/media/derivativeInflexionPoint.png": "/maths/static/media/derivativeInflexionPoint.c773dc69af6dcc3f777b.png",
     "static/media/coneAreaCalculus2.png": "/maths/static/media/coneAreaCalculus2.34504176b88452286a78.png",
     "static/media/circlePiCalculus.png": "/maths/static/media/circlePiCalculus.f497ceab2de2b73cf493.png",
     "static/media/derivativeSquareFunction.png": "/maths/static/media/derivativeSquareFunction.821578ec9a2263c4f4df.png",
     "static/media/sphereAreaCalculus.png": "/maths/static/media/sphereAreaCalculus.92767ad62e38f94d7a99.png",
+    "static/media/derivative2XSensVar.png": "/maths/static/media/derivative2XSensVar.6fec6919027c76ae1458.png",
     "static/media/circleTrigoValues.png": "/maths/static/media/circleTrigoValues.55196b1b99267412d12d.png",
     "static/media/sphereVolCalculus.png": "/maths/static/media/sphereVolCalculus.801808ebc0ce771699ab.png",
     "static/media/integration.png": "/maths/static/media/integration.2ac3b789f5155e800fb3.png",
@@ -74,6 +79,6 @@
   },
   "entrypoints": [
     "static/css/main.09df741b.css",
-    "static/js/main.51cd638f.js"
+    "static/js/main.d76299fd.js"
   ]
 }
