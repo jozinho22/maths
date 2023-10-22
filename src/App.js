@@ -1,6 +1,5 @@
 import React, { Suspense } from 'react';
 
-import { BrowserRouter, useLocation } from 'react-router-dom';
 import { Container } from 'react-bootstrap';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -21,7 +20,9 @@ import pdfResourceBuilder from './components/pdf-viewer/pdfResourceBuilder';
 import gamesResourceBuilder from './components/games/gamesResourceBuilder';
 
 import { getThemeIfStoredThemeExists } from './components/immutable/styles/getThemes';
-import AppRoutes from './AppRoutes';
+import { HashRouter, /* RouterProvider */ } from 'react-router-dom';
+import AppRoutes from './AppRoutes'
+/* import useRouter from './useRouter'; */
 import Fonts from './components/immutable/styles/Fonts';
 import Themes from './components/immutable/styles/Themes';
 import verifyUrlCountInApp from './components/helpers/verifyUrlCountInApp';
@@ -31,7 +32,7 @@ function App() {
     const [font, setFont] = React.useState(Fonts.BLACK_CHANCELRY);
     const [playMode, setPlayMode] = React.useState(false);
     const [theme, setTheme] = React.useState(getThemeIfStoredThemeExists(JSON.parse(sessionStorage.getItem('ma-thematique-theme'))) ? JSON.parse(sessionStorage.getItem('ma-thematique-theme')) : Themes.BRAZIL);
-    const [loc, setLoc] = React.useState("");
+
 
     const appContext = {
         font: font,
@@ -39,9 +40,7 @@ function App() {
         playMode: playMode,
         updatePlayMode: setPlayMode,
         theme: theme,
-        updateTheme: setTheme,
-        loc: loc,
-        updateLoc: setLoc
+        updateTheme: setTheme
     }
 
     var courseItems = coursesResourceBuilder();
@@ -54,21 +53,22 @@ function App() {
 
 /*     <Link url={pathBuilder(`${PagesConstants.COURS}${CoursesConstants.DERIVEE}/presentation`)} external>le premier chapitre sur la dérivée</Link>
  */    
-   /* "prebuild": "node transferSitemapIntoRsp.js", */
+ 
     return ( 
         <>
             <div className="App" id="capture">     
                 <AppContext.Provider value={appContext} >                     
                     <div className={`${theme} ${font} CopyBook`}>
-                        <BrowserRouter>
-                            <Header courseItems={courseItems} pdfItems ={pdfItems} gameItems={gameItems} /> 
-                                <Suspense fallback={<BlurryingSpinner />}>
-                                    <Container className={`RelativeContainer ${playMode ? "PlayMode" : ''} `} >                           
-                                        <AppRoutes courseItems={courseItems} pdfItems={pdfItems} gameItems={gameItems} setLoc={setLoc}/>
-                                    </Container> 
-                                </Suspense>
-                            <Footer /> 
-                        </BrowserRouter>
+                        <HashRouter>
+                        <Header courseItems={courseItems} pdfItems ={pdfItems} gameItems={gameItems} /> 
+                            <Suspense fallback={<BlurryingSpinner />}>
+                                <Container className={`RelativeContainer ${playMode ? "PlayMode" : ''} `} >                           
+                                    {/* <RouterProvider router={useRouter(courseItems, pdfItems, gameItems)} /> */}
+                                    {<AppRoutes courseItems={courseItems} pdfItems={pdfItems} gameItems={gameItems} />}
+                                </Container> 
+                            </Suspense>
+                        <Footer /> 
+                       </HashRouter>
                     </div> 
                 </AppContext.Provider> 
             </div>

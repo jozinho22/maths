@@ -20,7 +20,7 @@ const CoursesTableOfContents = ( {courseItems} ) => {
             <CustomHelmet title={title} metaContent={metaContent} canonicalUrl={`${Constants.WEB_APP_URL}${PagesConstants.COURS}`} />
 
             <div className="FlexButton">
-                <NavLink url={pathBuilder(`/`)}>
+                <NavLink to={pathBuilder(PagesConstants.HOME)}>
                     <Button className="DefaultButton GreenButton" >
                         Retour à l'accueil
                     </Button> 

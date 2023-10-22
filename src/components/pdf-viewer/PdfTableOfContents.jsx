@@ -5,6 +5,9 @@ import CustomHelmet from '../immutable/seo/CustomHelmet';
 import Constants from '../immutable/Constants';
 import PagesConstants from '../immutable/nav/PagesConstants';
 import AppContext from '../context/AppContext';
+import { NavLink } from 'react-router-dom';
+import { Button } from 'react-bootstrap';
+import pathBuilder from '../helpers/pathBuilder';
 
 const PdfTableOfContents = ( {pdfItems} ) => {
 
@@ -19,6 +22,13 @@ const PdfTableOfContents = ( {pdfItems} ) => {
     return (
         <>
             <CustomHelmet title={title} metaContent={metaContent} canonicalUrl={`${Constants.WEB_APP_URL}${PagesConstants}`}/>
+            <div className="FlexButton">
+                <NavLink to={pathBuilder(PagesConstants.HOME)} >
+                    <Button className="DefaultButton GreenButton" >
+                        Retour à l'accueil
+                    </Button> 
+                </NavLink>
+            </div> 
             <GenericTableOfContents items={pdfItems} prefix={prefix} title={title} action={action} />
             <p className="AuthorCopyRight">Avec l'accord de Mr Petit - <Link link={Constants.SAVOIR_SANS_FRONTIERES} external>toutes ses BDs</Link></p>     
         </>

@@ -18,12 +18,6 @@ import AppContext from '../context/AppContext';
 const GenericChapter = ( {chapter, courseItem} ) => {
 
     const [count, setCount] = React.useState(chapter.id);
-    const {updateLoc} = React.useContext(AppContext);
-
-    const loc = useLocation()
-    React.useEffect(() => {
-        updateLoc(loc.pathname);
-    }, [loc])
 
     React.useEffect(() => {
         setTimeout(function(){

@@ -24,7 +24,6 @@
     "react-pdf-js": "^5.1.0",
     "react-router-dom": "^6.2.1",
     "react-scripts": "^5.0.0",
-    "react-spa-prerender": "^1.0.14",
     "react-swipeable": "^6.2.0",
     "react-to-print": "^2.14.12",
     "recharts": "^2.1.8",
@@ -35,7 +34,6 @@
   "scripts": {
     "start": "BROWSER=none react-scripts start",
     "build": "CI=false GENERATE_SOURCEMAP=false react-scripts build",
-    "postbuild": "react-spa-prerender",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "test": "react-scripts test",

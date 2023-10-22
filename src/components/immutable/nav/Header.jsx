@@ -38,7 +38,7 @@ const Header = ( {courseItems, pdfItems, gameItems} ) => {
                 variant="dark" 
                 expand="lg">
                 <Navbar.Brand className="Clickable" onClick={() => {retractToggleOnMobile()}}>
-                    <NavLink to={pathBuilder("/")}>
+                    <NavLink to={pathBuilder(PagesConstants.HOME)}>
                         Ma Thématique
                     </NavLink>
                 </Navbar.Brand>

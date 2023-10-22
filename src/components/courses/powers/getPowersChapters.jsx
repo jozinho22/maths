@@ -22,13 +22,6 @@ const getPowersChapters = () => {
         },
         {
             id: k++,
-            component: <ALaPuissanceZero />,
-            title: 'À la puissance zéro',
-            metaContent: 'La notion de nombre élevé à la puissance zéro.',
-            relativePath: '/a-la-puissance-zero'
-        },
-        {
-            id: k++,
             component: <MultiplicationDePuissances />,
             title: 'Multiplication de puissances',
             metaContent: 'La formule générale pour calculer le résultat de puissances mulitpliées.',
@@ -47,6 +40,13 @@ const getPowersChapters = () => {
             title: 'Inverse de puissances',
             metaContent: 'La notion de d\'inverse de puissance et la notation mathématique.',
             relativePath: '/inverse-de-puissances'
+        },
+        {
+            id: k++,
+            component: <ALaPuissanceZero />,
+            title: 'À la puissance zéro',
+            metaContent: 'La notion de nombre élevé à la puissance zéro.',
+            relativePath: '/a-la-puissance-zero'
         },
         {
             id: k++,

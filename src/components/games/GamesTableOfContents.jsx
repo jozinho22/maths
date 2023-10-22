@@ -2,6 +2,9 @@ import GenericTableOfContents from '../immutable/GenericTableOfContents';
 import CustomHelmet from '../immutable/seo/CustomHelmet';
 import Constants from '../immutable/Constants';
 import PagesConstants from '../immutable/nav/PagesConstants';
+import pathBuilder from '../helpers/pathBuilder';
+import { NavLink } from 'react-router-dom';
+import { Button } from 'react-bootstrap';
 
 const GamesTableOfContents = ( {gameItems} ) => {
 
@@ -13,6 +16,13 @@ const GamesTableOfContents = ( {gameItems} ) => {
     return (
         <>
             <CustomHelmet title={metaTitle} metaContent={metaContent} canonicalUrl={`${Constants.WEB_APP_URL}${PagesConstants.JEUX}`}/>
+            <div className="FlexButton">
+                <NavLink to={pathBuilder(PagesConstants.HOME)}>
+                    <Button className="DefaultButton GreenButton" >
+                        Retour à l'accueil
+                    </Button> 
+                </NavLink>
+            </div> 
             <GenericTableOfContents items={gameItems} prefix={prefix} title={title} />
         </>
     )

@@ -1,6 +1,5 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
-import { useLocation } from 'react-router-dom';
 import Home from './components/home/Home';
 import CoursesTableOfContents from './components/courses/CoursesTableOfContents';
 import ChaptersTableOfContents from './components/courses/ChaptersTableOfContents';
@@ -18,12 +17,7 @@ import Presentation from './components/courses/sequences/chapters/Presentation';
 import UnderChaptersTableOfContents from './components/courses/UnderChaptersTableOfContents';
 import GenericUnderChapter from './components/courses/GenericUnderChapter';
 
-const AppRoutes = ( {courseItems, pdfItems, gameItems, setLoc} ) => {
-
-    const loc = useLocation()
-    React.useEffect(() => {
-        setLoc(loc)
-    }, [])
+const AppRoutes = ( {courseItems, pdfItems, gameItems} ) => {
     
     return  <Routes>
                 <Route exact path={pathBuilder("/")} element={process.env.NODE_ENV === 'development' ?  <Home /> : <Home />} />

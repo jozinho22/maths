@@ -1,5 +1,4 @@
 import React from 'react';
-import { useLocation } from 'react-router-dom';
 import { Container, Button } from 'react-bootstrap';
 import NavigationButtons from './helpers/NavigationButtons';
 import CustomHelmet from '../immutable/seo/CustomHelmet';
@@ -18,12 +17,6 @@ import AppContext from '../context/AppContext';
 const GenericUnderChapter = ( {underChapter, chapter, courseItem} ) => {
 
     const [count, setCount] = React.useState(underChapter.id);
-    const {updateLoc} = React.useContext(AppContext);
-
-    const loc = useLocation()
-    React.useEffect(() => {
-        updateLoc(loc.pathname);
-    }, [loc])
 
     React.useEffect(() => {
         setTimeout(function(){
