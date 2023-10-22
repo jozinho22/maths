@@ -119,7 +119,7 @@ const useTableauRecapFonctionsDerivees = () => {
          {
             id: k++,
             title: "tan(x)",
-            values: ["1 + tan^2(x) = \\frac{1}{cos^2(x)}"]
+            values: ["1 + tan^2(x)"]
         }
     )
 
@@ -167,7 +167,7 @@ const useTableauRecapFonctionsDerivees = () => {
          {
             id: k++,
             title: "th(x)",
-            values: ["1 - tan^2(x) = \\frac{1}{ch^2(x)}"]
+            values: ["1 - tan^2(x)"]
         }
     )
 

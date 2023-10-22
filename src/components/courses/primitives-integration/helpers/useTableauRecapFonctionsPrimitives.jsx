@@ -71,7 +71,7 @@ const useTableauRecapFonctionsPrimitives = () => {
          {
             id: k++,
             title: "\\sqrt{x}",
-            values: ["\\frac{2}{3}.x^{\\frac{3}{2}} + k = \\frac{2}{3}.\\sqrt[3]{x^2} + k"]
+            values: ["\\frac{2}{3}.x^{\\frac{3}{2}} + k"]
         }
     )
 

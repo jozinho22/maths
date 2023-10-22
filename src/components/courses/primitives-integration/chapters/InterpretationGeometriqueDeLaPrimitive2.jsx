@@ -6,7 +6,6 @@ import ImageZoom from '../../helpers/ImageZoom';
 
 import integration2 from '../assets/integration2.png';
 import integration3 from '../assets/integration3.png';
-import Title1 from '../../helpers/Title1';
 
 const InterpretationGeometriqueDeLaPrimitive2 = () => {
 

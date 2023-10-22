@@ -14,7 +14,7 @@ const useTableauDeVariationsFonctionCarreeValues = () => {
     tableauxDeVariationsValues.push(
          {
             id: k++,
-            title: "(x^2)'",
+            title: "f'",
             values: ["-\\infty", "-", 0, "+", "+\\infty"]
         }
     )
@@ -22,8 +22,8 @@ const useTableauDeVariationsFonctionCarreeValues = () => {
     tableauxDeVariationsValues.push(
          {
             id: k++,
-            title: "x^2",
-            values: ["+\\infty", "\\searrow", 0, "\\nearrow", "+\\infty"]
+            title: "f",
+            values: ["+\\infty", "\\searrow", 1, "\\nearrow", "+\\infty"]
         }
     )
 

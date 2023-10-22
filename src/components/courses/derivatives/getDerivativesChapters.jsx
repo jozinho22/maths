@@ -1,6 +1,6 @@
 import Presentation from "./chapters/Presentation";
 import ConditionsEtConsequences from "./chapters/ConditionsEtConsequences";
-import SensDeVariations from "./chapters/SensDeVariations";
+import VariationsDuneFonction from "./chapters/VariationsDuneFonction";
 import DeriveeDUneSomme from "./chapters/DeriveeDUneSomme";
 import DeriveeDUnProduit from "./chapters/DeriveeDUnProduit";
 import DeriveeDunQuotient from "./chapters/DeriveeDunQuotient";
@@ -17,6 +17,8 @@ import TableauRecapOperationsCompositionsDerivees from "./chapters/TableauRecapO
 import TheoremeDeLHopital from "./chapters/TheoremeDeLHopital";
 import DeriveeDeNPuissanceX from "./chapters/DeriveeDeNPuissanceX";
 import DeriveeDeLN from "./chapters/DeriveeDeLN";
+import ConvexiteDUneFonction from "./chapters/ConvexiteDUneFonction";
+import PointDInflexion from "./chapters/PointDInflexion";
 
 const getDerivativesChapters = () => {
 
@@ -39,10 +41,24 @@ const getDerivativesChapters = () => {
         },
         {
             id: k++,
-            component: <SensDeVariations />,
-            title: 'Sens de variations des fonctions',
-            metaContent: 'Sens de variations des fonctions : le nombre dérivée indique le sens.',
-            relativePath: '/sens-de-variations'
+            component: <VariationsDuneFonction />,
+            title: 'Variations d\'une fonction',
+            metaContent: 'Variations d\'une fonction : le signe de la dérivée indique le sens.',
+            relativePath: '/variations-d-une-fonction'
+        },
+        {
+            id: k++,
+            component: <ConvexiteDUneFonction />,
+            title: 'Convexité d\'une fonction',
+            metaContent: 'Convexité d\'une fonction : le signe de la dérivée seconde indique la convexité.',
+            relativePath: '/convexite-d-une-fonction'
+        },
+        {
+            id: k++,
+            component: <PointDInflexion />,
+            title: 'Point d\'inflexion d\'une courbe',
+            metaContent: 'Point d\'inflexion d\'une courbe : le cas de la fonction cube.',
+            relativePath: '/point-d-inflexion'
         },
         {
             id: k++,

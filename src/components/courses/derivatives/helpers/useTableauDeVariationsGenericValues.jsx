@@ -23,7 +23,7 @@ const useTableauDeVariationsGenericValues = () => {
          {
             id: k++,
             title: "f(x)",
-            values: ["lim_{x \\to -\\infty} \\enspace f(x)", "\\left[variation \\enspace de \\enspace f \\right]", "f(x_1)", "\\left[variation \\enspace de \\enspace f \\right]", "f(x_2)", "\\left[variation \\enspace de \\enspace f \\right]", "lim_{x \\to +\\infty} \\enspace f(x)"]
+            values: ["lim_{x \\to -\\infty} \\enspace f(x)", "\\left[variation \\enspace de \\enspace f \\right]", "extremum \\enspace local \\enspace si \\ f' \\enspace change \\enspace de \\enspace signe", "\\left[variation \\enspace de \\enspace f \\right]", "extremum \\enspace local \\enspace si \\ f' \\enspace change \\enspace de \\enspace signe", "\\left[variation \\enspace de \\enspace f \\right]", "lim_{x \\to +\\infty} \\enspace f(x)"]
         }
     )
 

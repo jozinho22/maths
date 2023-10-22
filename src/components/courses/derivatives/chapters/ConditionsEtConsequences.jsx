@@ -21,7 +21,7 @@ const ConditionsEtConsequences = () => {
                      <MathJaxDisplay toShow={derivabilityCondition} />  
                 </Container>
 
-                <Title1 title={"La dérivabilité implique la ccontinuité"} />
+                <Title1 title={"La dérivabilité implique la continuité"} />
                 <p>Toute fonction dérivable en <MathJaxInline toShow={"$ a $"} /> implique que la fonction est continue à ce point <MathJaxInline toShow={"$ a $"} />.</p>
                 <Container className="Focus">
                     <MathJaxDisplay toShow={derivableImpliesContinue} />  

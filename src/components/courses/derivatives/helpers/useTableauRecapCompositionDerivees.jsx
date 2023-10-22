@@ -55,7 +55,7 @@ const useTableauRecapCompositionDerivees = () => {
          {
             id: k++,
             title: "\\sqrt[n]{u}",
-            values: ["u'.\\frac{u^{1-\\frac{1}{n}}}{n} = u'.\\left( \\frac{1}{n} . \\frac{1}{\\sqrt[n]{u}} \\right)^{n - 1} "]
+            values: ["u'.\\frac{u^{1-\\frac{1}{n}}}{n} "]
         }
     )
 
@@ -95,7 +95,7 @@ const useTableauRecapCompositionDerivees = () => {
          {
             id: k++,
             title: "tan(u)",
-            values: ["u'.(1 + tan(u)) = u'.\\frac{1}{cos^2(u)}"]
+            values: ["u'.(1 + tan(u))}"]
         }
     )
 
