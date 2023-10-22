@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/maths/static/css/main.09df741b.css",
-    "main.js": "/maths/static/js/main.877bc992.js",
+    "main.js": "/maths/static/js/main.d093425b.js",
     "static/js/27.035b7279.chunk.js": "/maths/static/js/27.035b7279.chunk.js",
     "static/media/energetiquementVotre.pdf": "/maths/static/media/energetiquementVotre.ae46a881d6240ff7c375.pdf",
     "static/media/bigBang.pdf": "/maths/static/media/bigBang.9a7278fe34a3a9cbd1fe.pdf",
@@ -29,10 +29,12 @@
     "static/media/derivativeSquareFunctionSensVarFPrim.png": "/maths/static/media/derivativeSquareFunctionSensVarFPrim.e903ebed3349d37cc439.png",
     "static/media/derivativeConvexity.png": "/maths/static/media/derivativeConvexity.f5ed629abb489b4fe6e0.png",
     "static/media/derivativeConcavity.png": "/maths/static/media/derivativeConcavity.073af4412eccbdd8589e.png",
+    "static/media/newtonMethod2.png": "/maths/static/media/newtonMethod2.743decbcc62082867ce7.png",
     "static/media/derivativeInflexionPoint.png": "/maths/static/media/derivativeInflexionPoint.c773dc69af6dcc3f777b.png",
     "static/media/coneAreaCalculus2.png": "/maths/static/media/coneAreaCalculus2.34504176b88452286a78.png",
     "static/media/circlePiCalculus.png": "/maths/static/media/circlePiCalculus.f497ceab2de2b73cf493.png",
     "static/media/derivativeSquareFunction.png": "/maths/static/media/derivativeSquareFunction.821578ec9a2263c4f4df.png",
+    "static/media/newtonMethod.png": "/maths/static/media/newtonMethod.3e70569ce67668c6e072.png",
     "static/media/sphereAreaCalculus.png": "/maths/static/media/sphereAreaCalculus.92767ad62e38f94d7a99.png",
     "static/media/derivative2XSensVar.png": "/maths/static/media/derivative2XSensVar.6fec6919027c76ae1458.png",
     "static/media/circleTrigoValues.png": "/maths/static/media/circleTrigoValues.55196b1b99267412d12d.png",
@@ -79,6 +81,6 @@
   },
   "entrypoints": [
     "static/css/main.09df741b.css",
-    "static/js/main.877bc992.js"
+    "static/js/main.d093425b.js"
   ]
 }
