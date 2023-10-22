@@ -19,6 +19,8 @@ import DeriveeDeNPuissanceX from "./chapters/DeriveeDeNPuissanceX";
 import DeriveeDeLN from "./chapters/DeriveeDeLN";
 import ConvexiteDUneFonction from "./chapters/ConvexiteDUneFonction";
 import PointDInflexion from "./chapters/PointDInflexion";
+import MethodeDeNewton from "./chapters/MethodeDeNewton";
+import MethodeDeNewtonExemple from "./chapters/MethodeDeNewtonExemple";
 
 const getDerivativesChapters = () => {
 
@@ -165,13 +167,27 @@ const getDerivativesChapters = () => {
             metaContent: 'Tableau récapitulatif des opérations/compositions sur les dérivées.',
             relativePath: '/tableau-recap-operations-compositions-sur-les-derivees'
         },
-                {
+        {
             id: k++,
             component: <TheoremeDeLHopital />,
             title: 'Théorème de l\'Hôpital',
             metaContent: 'Théorème de l\'Hôpital (ou règle de Bernouilli) : présentation.',
             relativePath: '/theoreme-de-l-hopital'
-        }
+        },
+        {
+            id: k++,
+            component: <MethodeDeNewton />,
+            title: 'Méthode de Newton',
+            metaContent: 'Méthode de Newton par projection des tangentes sur l\'axe des abscisses.',
+            relativePath: '/methode-de-newton'
+        },
+        {
+            id: k++,
+            component: <MethodeDeNewtonExemple />,
+            title: 'Méthode de Newton : approximer la valeur la racine de 2',
+            metaContent: 'Méthode de Newton : approximer la valeur la racine de 2.',
+            relativePath: '/methode-de-newton-exemple'
+        },
     ];
 }
 

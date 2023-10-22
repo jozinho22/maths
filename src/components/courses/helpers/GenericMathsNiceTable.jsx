@@ -5,7 +5,6 @@ import NiceTable from '../../immutable/NiceTable';
 
 const GenericMathsNiceTable = ( {tableValues} ) => {
 
-    console.log(tableValues)
     return  <>
                 <NiceTable>
                     <thead>
