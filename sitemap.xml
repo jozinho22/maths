@@ -10,633 +10,633 @@
 
   <!-- Cours -->
   <url>
-    <loc>https://jozinho22.github.io/maths/cours</loc>
+    <loc>https://jozinho22.github.io/maths/#/cours</loc>
     <lastmod>2023-01-23T18:44:36+00:00</lastmod>
     <priority>1.00</priority>
   </url>
   <!-- Cours : calcul élémentaire -->
   <url>
-    <loc>https://jozinho22.github.io/maths/cours/le-calcul-elementaire</loc>
+    <loc>https://jozinho22.github.io/maths/#/cours/le-calcul-elementaire</loc>
     <lastmod>2023-06-21T15:46:00+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://jozinho22.github.io/maths/cours/le-calcul-elementaire/les-operations-de-base</loc>
+    <loc>https://jozinho22.github.io/maths/#/cours/le-calcul-elementaire/les-operations-de-base</loc>
     <lastmod>2023-09-15T10:10:00+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://jozinho22.github.io/maths/cours/le-calcul-elementaire/la-distributivite-et-la-factorisation</loc>
+    <loc>https://jozinho22.github.io/maths/#/cours/le-calcul-elementaire/la-distributivite-et-la-factorisation</loc>
     <lastmod>2023-09-15T10:10:00+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://jozinho22.github.io/maths/cours/le-calcul-elementaire/les-fractions</loc>
+    <loc>https://jozinho22.github.io/maths/#/cours/le-calcul-elementaire/les-fractions</loc>
     <lastmod>2023-09-15T10:10:00+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://jozinho22.github.io/maths/cours/le-calcul-elementaire/le-produit-en-croix</loc>
+    <loc>https://jozinho22.github.io/maths/#/cours/le-calcul-elementaire/le-produit-en-croix</loc>
     <lastmod>2023-06-21T15:46:00+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <!-- Cours : équations du premier degré -->
   <url>
-    <loc>https://jozinho22.github.io/maths/cours/les-equations-du-premier-degre</loc>
+    <loc>https://jozinho22.github.io/maths/#/cours/les-equations-du-premier-degre</loc>
     <lastmod>2023-01-23T18:44:36+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://jozinho22.github.io/maths/cours/les-equations-du-premier-degre/resolution</loc>
+    <loc>https://jozinho22.github.io/maths/#/cours/les-equations-du-premier-degre/resolution</loc>
     <lastmod>2023-01-23T18:44:36+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://jozinho22.github.io/maths/cours/les-equations-du-premier-degre/aspect</loc>
+    <loc>https://jozinho22.github.io/maths/#/cours/les-equations-du-premier-degre/aspect</loc>
     <lastmod>2023-01-23T18:44:36+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://jozinho22.github.io/maths/cours/les-equations-du-premier-degre/resolution-d-inequations</loc>
+    <loc>https://jozinho22.github.io/maths/#/cours/les-equations-du-premier-degre/resolution-d-inequations</loc>
     <lastmod>2023-01-23T18:44:36+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://jozinho22.github.io/maths/cours/les-equations-du-premier-degre/tableaux-de-signes</loc>
+    <loc>https://jozinho22.github.io/maths/#/cours/les-equations-du-premier-degre/tableaux-de-signes</loc>
     <lastmod>2023-01-23T18:44:36+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <!-- Cours : équations du second degré -->
   <url>
-    <loc>https://jozinho22.github.io/maths/cours/les-equations-du-second-degre</loc>
+    <loc>https://jozinho22.github.io/maths/#/cours/les-equations-du-second-degre</loc>
     <lastmod>2023-01-23T18:44:36+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://jozinho22.github.io/maths/cours/les-equations-du-second-degre/resolution</loc>
+    <loc>https://jozinho22.github.io/maths/#/cours/les-equations-du-second-degre/resolution</loc>
     <lastmod>2023-01-23T18:44:36+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://jozinho22.github.io/maths/cours/les-equations-du-second-degre/relation-entre-coefficients-et-racines</loc>
+    <loc>https://jozinho22.github.io/maths/#/cours/les-equations-du-second-degre/relation-entre-coefficients-et-racines</loc>
     <lastmod>2023-01-23T18:44:36+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://jozinho22.github.io/maths/cours/les-equations-du-second-degre/tableaux-de-signes-et-de-variations</loc>
+    <loc>https://jozinho22.github.io/maths/#/cours/les-equations-du-second-degre/tableaux-de-signes-et-de-variations</loc>
     <lastmod>2023-01-23T18:44:36+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://jozinho22.github.io/maths/cours/les-equations-du-second-degre/aspect</loc>
+    <loc>https://jozinho22.github.io/maths/#/cours/les-equations-du-second-degre/aspect</loc>
     <lastmod>2023-06-17T22:39:00+00:00</lastmod>
     <priority>0.64</priority>
   </url>
 
   <!-- Cours : puissances -->
   <url>
-    <loc>https://jozinho22.github.io/maths/cours/les-puissances</loc>
+    <loc>https://jozinho22.github.io/maths/#/cours/les-puissances</loc>
     <lastmod>2023-01-23T18:44:36+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://jozinho22.github.io/maths/cours/les-puissances/presentation</loc>
+    <loc>https://jozinho22.github.io/maths/#/cours/les-puissances/presentation</loc>
     <lastmod>2023-01-23T18:44:36+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://jozinho22.github.io/maths/cours/les-puissances/a-la-puissance-zero</loc>
+    <loc>https://jozinho22.github.io/maths/#/cours/les-puissances/a-la-puissance-zero</loc>
     <lastmod>2023-01-23T18:44:36+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://jozinho22.github.io/maths/cours/les-puissances/multiplication-de-puissances</loc>
+    <loc>https://jozinho22.github.io/maths/#/cours/les-puissances/multiplication-de-puissances</loc>
     <lastmod>2023-01-23T18:44:36+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://jozinho22.github.io/maths/cours/les-puissances/inverse-de-puissances</loc>
+    <loc>https://jozinho22.github.io/maths/#/cours/les-puissances/inverse-de-puissances</loc>
     <lastmod>2023-01-23T18:44:36+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://jozinho22.github.io/maths/cours/les-puissances/puissance-de-puissances</loc>
+    <loc>https://jozinho22.github.io/maths/#/cours/les-puissances/puissance-de-puissances</loc>
     <lastmod>2023-01-23T18:44:36+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://jozinho22.github.io/maths/cours/les-puissances/autres-formules-generales</loc>
+    <loc>https://jozinho22.github.io/maths/#/cours/les-puissances/autres-formules-generales</loc>
     <lastmod>2023-01-23T18:44:36+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://jozinho22.github.io/maths/cours/les-puissances/liens-entre-puissances-et-racines</loc>
+    <loc>https://jozinho22.github.io/maths/#/cours/les-puissances/liens-entre-puissances-et-racines</loc>
     <lastmod>2023-01-23T18:44:36+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://jozinho22.github.io/maths/cours/les-puissances/ecriture-scientifique</loc>
+    <loc>https://jozinho22.github.io/maths/#/cours/les-puissances/ecriture-scientifique</loc>
     <lastmod>2023-01-23T18:44:36+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://jozinho22.github.io/maths/cours/les-puissances/tableau-recap-des-puissances-de-x</loc>
+    <loc>https://jozinho22.github.io/maths/#/cours/les-puissances/tableau-recap-des-puissances-de-x</loc>
     <lastmod>2023-10-20T20:0:00+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <!-- Cours : pythagore -->
   <url>
-    <loc>https://jozinho22.github.io/maths/cours/le-theoreme-de-pythagore</loc>
+    <loc>https://jozinho22.github.io/maths/#/cours/le-theoreme-de-pythagore</loc>
     <lastmod>2023-01-23T18:44:36+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://jozinho22.github.io/maths/cours/le-theoreme-de-pythagore/presentation</loc>
+    <loc>https://jozinho22.github.io/maths/#/cours/le-theoreme-de-pythagore/presentation</loc>
     <lastmod>2023-01-23T18:44:36+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://jozinho22.github.io/maths/cours/le-theoreme-de-pythagore/demonstration</loc>
+    <loc>https://jozinho22.github.io/maths/#/cours/le-theoreme-de-pythagore/demonstration</loc>
     <lastmod>2023-01-23T18:44:36+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://jozinho22.github.io/maths/cours/le-theoreme-de-pythagore/demonstration-de-la-reciproque</loc>
+    <loc>https://jozinho22.github.io/maths/#/cours/le-theoreme-de-pythagore/demonstration-de-la-reciproque</loc>
     <lastmod>2023-06-20T13:00:00+00:00</lastmod>
     <priority>0.64</priority>
   </url> 
   <url>
-    <loc>https://jozinho22.github.io/maths/cours/le-theoreme-de-pythagore/applications</loc>
+    <loc>https://jozinho22.github.io/maths/#/cours/le-theoreme-de-pythagore/applications</loc>
     <lastmod>2023-01-23T18:44:36+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://jozinho22.github.io/maths/cours/le-theoreme-de-pythagore/theoreme-d-al-kashi</loc>
+    <loc>https://jozinho22.github.io/maths/#/cours/le-theoreme-de-pythagore/theoreme-d-al-kashi</loc>
     <lastmod>2023-01-23T18:44:36+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <!-- Cours : thalès -->
   <url>
-    <loc>https://jozinho22.github.io/maths/cours/le-theoreme-de-thales</loc>
+    <loc>https://jozinho22.github.io/maths/#/cours/le-theoreme-de-thales</loc>
     <lastmod>2023-01-23T18:44:36+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://jozinho22.github.io/maths/cours/le-theoreme-de-thales/presentation</loc>
+    <loc>https://jozinho22.github.io/maths/#/cours/le-theoreme-de-thales/presentation</loc>
     <lastmod>2023-01-23T18:44:36+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://jozinho22.github.io/maths/cours/le-theoreme-de-thales/demonstration</loc>
+    <loc>https://jozinho22.github.io/maths/#/cours/le-theoreme-de-thales/demonstration</loc>
     <lastmod>2023-01-23T18:44:36+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <!-- Cours : fonctions usuelles -->
   <url>
-    <loc>https://jozinho22.github.io/maths/cours/les-fonctions-usuelles</loc>
+    <loc>https://jozinho22.github.io/maths/#/cours/les-fonctions-usuelles</loc>
     <lastmod>2023-01-23T18:44:36+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://jozinho22.github.io/maths/cours/les-fonctions-usuelles/aspect</loc>
+    <loc>https://jozinho22.github.io/maths/#/cours/les-fonctions-usuelles/aspect</loc>
     <lastmod>2023-01-23T18:44:36+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <!-- Cours : trigonométrie -->
   <url>
-    <loc>https://jozinho22.github.io/maths/cours/la-trigonometrie</loc>
+    <loc>https://jozinho22.github.io/maths/#/cours/la-trigonometrie</loc>
     <lastmod>2023-01-23T18:44:36+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://jozinho22.github.io/maths/cours/la-trigonometrie/presentation</loc>
+    <loc>https://jozinho22.github.io/maths/#/cours/la-trigonometrie/presentation</loc>
     <lastmod>2023-01-23T18:44:36+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://jozinho22.github.io/maths/cours/la-trigonometrie/valeurs-de-sin-cos</loc>
+    <loc>https://jozinho22.github.io/maths/#/cours/la-trigonometrie/valeurs-de-sin-cos</loc>
     <lastmod>2023-01-23T18:44:36+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://jozinho22.github.io/maths/cours/la-trigonometrie/pythagore-et-trigonometrie</loc>
+    <loc>https://jozinho22.github.io/maths/#/cours/la-trigonometrie/pythagore-et-trigonometrie</loc>
     <lastmod>2023-01-23T18:44:36+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://jozinho22.github.io/maths/cours/la-trigonometrie/formules-d-addition</loc>
+    <loc>https://jozinho22.github.io/maths/#/cours/la-trigonometrie/formules-d-addition</loc>
     <lastmod>2023-01-23T18:44:36+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://jozinho22.github.io/maths/cours/la-trigonometrie/formules-de-duplication</loc>
+    <loc>https://jozinho22.github.io/maths/#/cours/la-trigonometrie/formules-de-duplication</loc>
     <lastmod>2023-01-23T18:44:36+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://jozinho22.github.io/maths/cours/la-trigonometrie/formules-de-linearisation</loc>
+    <loc>https://jozinho22.github.io/maths/#/cours/la-trigonometrie/formules-de-linearisation</loc>
     <lastmod>2023-01-23T18:44:36+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://jozinho22.github.io/maths/cours/la-trigonometrie/la-tangente</loc>
+    <loc>https://jozinho22.github.io/maths/#/cours/la-trigonometrie/la-tangente</loc>
     <lastmod>2023-01-23T18:44:36+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://jozinho22.github.io/maths/cours/la-trigonometrie/valeurs-de-tan</loc>
+    <loc>https://jozinho22.github.io/maths/#/cours/la-trigonometrie/valeurs-de-tan</loc>
     <lastmod>2023-01-23T18:44:36+00:00</lastmod>
     <priority>0.64</priority>
   </url>
     <!-- Cours : dérivée -->
   <url>
-    <loc>https://jozinho22.github.io/maths/cours/la-derivee</loc>
+    <loc>https://jozinho22.github.io/maths/#/cours/la-derivee</loc>
     <lastmod>2023-06-10T19:45:36+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://jozinho22.github.io/maths/cours/la-derivee/presentation</loc>
+    <loc>https://jozinho22.github.io/maths/#/cours/la-derivee/presentation</loc>
     <lastmod>2023-10-20T20:0:00+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://jozinho22.github.io/maths/cours/la-derivee/conditions-et-consequences</loc>
+    <loc>https://jozinho22.github.io/maths/#/cours/la-derivee/conditions-et-consequences</loc>
     <lastmod>2023-10-20T20:0:00+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://jozinho22.github.io/maths/cours/la-derivee/variations-d-une-fonction</loc>
+    <loc>https://jozinho22.github.io/maths/#/cours/la-derivee/variations-d-une-fonction</loc>
     <lastmod>2023-06-10T19:45:36+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://jozinho22.github.io/maths/cours/la-derivee/convexite-d-une-fonction</loc>
+    <loc>https://jozinho22.github.io/maths/#/cours/la-derivee/convexite-d-une-fonction</loc>
     <lastmod>2023-06-10T19:45:36+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://jozinho22.github.io/maths/cours/la-derivee/point-d-inflexion</loc>
+    <loc>https://jozinho22.github.io/maths/#/cours/la-derivee/point-d-inflexion</loc>
     <lastmod>2023-06-10T19:45:36+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://jozinho22.github.io/maths/cours/la-derivee/derivee-d-une-somme-de-fonctions</loc>
+    <loc>https://jozinho22.github.io/maths/#/cours/la-derivee/derivee-d-une-somme-de-fonctions</loc>
     <lastmod>2023-06-20T20:45:00+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://jozinho22.github.io/maths/cours/la-derivee/derivee-d-un-produit-de-fonctions</loc>
+    <loc>https://jozinho22.github.io/maths/#/cours/la-derivee/derivee-d-un-produit-de-fonctions</loc>
     <lastmod>2023-06-20T20:45:00+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://jozinho22.github.io/maths/cours/la-derivee/derivee-d-un-quotient-de-fonctions</loc>
+    <loc>https://jozinho22.github.io/maths/#/cours/la-derivee/derivee-d-un-quotient-de-fonctions</loc>
     <lastmod>2023-06-20T20:45:00+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://jozinho22.github.io/maths/cours/la-derivee/derivee-de-constante-et-fonction-affine</loc>
+    <loc>https://jozinho22.github.io/maths/#/cours/la-derivee/derivee-de-constante-et-fonction-affine</loc>
     <lastmod>2023-10-20T20:0:00+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://jozinho22.github.io/maths/cours/la-derivee/derivee-de-x-au-carre</loc>
+    <loc>https://jozinho22.github.io/maths/#/cours/la-derivee/derivee-de-x-au-carre</loc>
     <lastmod>2023-10-20T20:0:00+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://jozinho22.github.io/maths/cours/la-derivee/derivee-de-x-puissance-n</loc>
+    <loc>https://jozinho22.github.io/maths/#/cours/la-derivee/derivee-de-x-puissance-n</loc>
     <lastmod>2023-10-20T20:0:00+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://jozinho22.github.io/maths/cours/la-derivee/derivee-de-n-puissance-x</loc>
+    <loc>https://jozinho22.github.io/maths/#/cours/la-derivee/derivee-de-n-puissance-x</loc>
     <lastmod>2023-10-20T20:0:00+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://jozinho22.github.io/maths/cours/la-derivee/derivee-de-racine-de-x</loc>
+    <loc>https://jozinho22.github.io/maths/#/cours/la-derivee/derivee-de-racine-de-x</loc>
     <lastmod>2023-10-20T20:0:00+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://jozinho22.github.io/maths/cours/la-derivee/derivee-de-ln-de-x</loc>
+    <loc>https://jozinho22.github.io/maths/#/cours/la-derivee/derivee-de-ln-de-x</loc>
     <lastmod>2023-10-20T20:0:00+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://jozinho22.github.io/maths/cours/la-derivee/derivees-de-sin-et-cos</loc>
+    <loc>https://jozinho22.github.io/maths/#/cours/la-derivee/derivees-de-sin-et-cos</loc>
     <lastmod>2023-10-20T20:0:00+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://jozinho22.github.io/maths/cours/la-derivee/equation-de-la-tangente</loc>
+    <loc>https://jozinho22.github.io/maths/#/cours/la-derivee/equation-de-la-tangente</loc>
     <lastmod>2023-06-19T13:48:00+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://jozinho22.github.io/maths/cours/la-derivee/derivee-de-fonction-composee</loc>
+    <loc>https://jozinho22.github.io/maths/#/cours/la-derivee/derivee-de-fonction-composee</loc>
     <lastmod>2023-06-19T21:42:00+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://jozinho22.github.io/maths/cours/la-derivee/derivee-de-fonction-reciproque</loc>
+    <loc>https://jozinho22.github.io/maths/#/cours/la-derivee/derivee-de-fonction-reciproque</loc>
     <lastmod>2023-10-20T20:0:00+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://jozinho22.github.io/maths/cours/la-derivee/tableau-recap-des-fonctions-derivees</loc>
+    <loc>https://jozinho22.github.io/maths/#/cours/la-derivee/tableau-recap-des-fonctions-derivees</loc>
     <lastmod>2023-10-20T20:0:00+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://jozinho22.github.io/maths/cours/la-derivee/tableau-recap-operations-compositions-sur-les-derivees</loc>
+    <loc>https://jozinho22.github.io/maths/#/cours/la-derivee/tableau-recap-operations-compositions-sur-les-derivees</loc>
     <lastmod>2023-10-20T20:0:00+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://jozinho22.github.io/maths/cours/la-derivee/theoreme-de-l-hopital</loc>
+    <loc>https://jozinho22.github.io/maths/#/cours/la-derivee/theoreme-de-l-hopital</loc>
     <lastmod>2023-10-20T20:0:00+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <!-- Cours : primitives-intégration -->
   <url>
-    <loc>https://jozinho22.github.io/maths/cours/primitives-integration</loc>
+    <loc>https://jozinho22.github.io/maths/#/cours/primitives-integration</loc>
     <lastmod>2023-10-20T20:0:00+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://jozinho22.github.io/maths/cours/primitives-integration/presentation</loc>
+    <loc>https://jozinho22.github.io/maths/#/cours/primitives-integration/presentation</loc>
     <lastmod>2023-10-20T20:0:00+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://jozinho22.github.io/maths/cours/primitives-integration/theoreme-fondamental-de-l-analyse</loc>
+    <loc>https://jozinho22.github.io/maths/#/cours/primitives-integration/theoreme-fondamental-de-l-analyse</loc>
     <lastmod>2023-10-20T20:0:00+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://jozinho22.github.io/maths/cours/primitives-integration/proprietes-de-l-integrale</loc>
+    <loc>https://jozinho22.github.io/maths/#/cours/primitives-integration/proprietes-de-l-integrale</loc>
     <lastmod>2023-10-20T20:0:00+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://jozinho22.github.io/maths/cours/primitives-integration/interpretation-geometrique</loc>
+    <loc>https://jozinho22.github.io/maths/#/cours/primitives-integration/interpretation-geometrique</loc>
     <lastmod>2023-10-20T20:0:00+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://jozinho22.github.io/maths/cours/primitives-integration/interpretation-geometrique-2</loc>
+    <loc>https://jozinho22.github.io/maths/#/cours/primitives-integration/interpretation-geometrique-2</loc>
     <lastmod>2023-10-20T20:0:00+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://jozinho22.github.io/maths/cours/primitives-integration/integration</loc>
+    <loc>https://jozinho22.github.io/maths/#/cours/primitives-integration/integration</loc>
     <lastmod>2023-10-20T20:0:00+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://jozinho22.github.io/maths/cours/primitives-integration/relation-de-chasles</loc>
+    <loc>https://jozinho22.github.io/maths/#/cours/primitives-integration/relation-de-chasles</loc>
     <lastmod>2023-10-20T20:0:00+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://jozinho22.github.io/maths/cours/primitives-integration/linearite</loc>
+    <loc>https://jozinho22.github.io/maths/#/cours/primitives-integration/linearite</loc>
     <lastmod>2023-10-20T20:0:00+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://jozinho22.github.io/maths/cours/primitives-integration/positivite</loc>
+    <loc>https://jozinho22.github.io/maths/#/cours/primitives-integration/positivite</loc>
     <lastmod>2023-10-20T20:0:00+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://jozinho22.github.io/maths/cours/primitives-integration/croissance</loc>
+    <loc>https://jozinho22.github.io/maths/#/cours/primitives-integration/croissance</loc>
     <lastmod>2023-10-20T20:0:00+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://jozinho22.github.io/maths/cours/primitives-integration/valeur-moyenne</loc>
+    <loc>https://jozinho22.github.io/maths/#/cours/primitives-integration/valeur-moyenne</loc>
     <lastmod>2023-10-20T20:0:00+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://jozinho22.github.io/maths/cours/primitives-integration/integration-par-parties</loc>
+    <loc>https://jozinho22.github.io/maths/#/cours/primitives-integration/integration-par-parties</loc>
     <lastmod>2023-10-20T20:0:00+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://jozinho22.github.io/maths/cours/primitives-integration/fonction-definie-par-une-integrale</loc>
+    <loc>https://jozinho22.github.io/maths/#/cours/primitives-integration/fonction-definie-par-une-integrale</loc>
     <lastmod>2023-10-20T20:0:00+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://jozinho22.github.io/maths/cours/primitives-integration/tableau-recap-fonctions-primitives</loc>
+    <loc>https://jozinho22.github.io/maths/#/cours/primitives-integration/tableau-recap-fonctions-primitives</loc>
     <lastmod>2023-10-20T20:0:00+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://jozinho22.github.io/maths/cours/primitives-integration/calcul-de-la-surface-du-cercle</loc>
+    <loc>https://jozinho22.github.io/maths/#/cours/primitives-integration/calcul-de-la-surface-du-cercle</loc>
     <lastmod>2023-10-20T20:0:00+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://jozinho22.github.io/maths/cours/primitives-integration/calcul-de-la-surface-de-la-sphere</loc>
+    <loc>https://jozinho22.github.io/maths/#/cours/primitives-integration/calcul-de-la-surface-de-la-sphere</loc>
     <lastmod>2023-10-20T20:0:00+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://jozinho22.github.io/maths/cours/primitives-integration/calcul-du-volume-de-la-sphere</loc>
+    <loc>https://jozinho22.github.io/maths/#/cours/primitives-integration/calcul-du-volume-de-la-sphere</loc>
     <lastmod>2023-10-20T20:0:00+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://jozinho22.github.io/maths/cours/primitives-integration/calcul-de-la-surface-du-cone</loc>
+    <loc>https://jozinho22.github.io/maths/#/cours/primitives-integration/calcul-de-la-surface-du-cone</loc>
     <lastmod>2023-10-20T20:0:00+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://jozinho22.github.io/maths/cours/primitives-integration/calcul-du-volume-du-cone</loc>
+    <loc>https://jozinho22.github.io/maths/#/cours/primitives-integration/calcul-du-volume-du-cone</loc>
     <lastmod>2023-10-20T20:0:00+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <!-- Cours : pi -->
   <url>
-    <loc>https://jozinho22.github.io/maths/cours/le-nombre-pi</loc>
+    <loc>https://jozinho22.github.io/maths/#/cours/le-nombre-pi</loc>
     <lastmod>2023-01-23T18:44:36+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://jozinho22.github.io/maths/cours/le-nombre-pi/presentation</loc>
+    <loc>https://jozinho22.github.io/maths/#/cours/le-nombre-pi/presentation</loc>
     <lastmod>2023-01-23T18:44:36+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://jozinho22.github.io/maths/cours/le-nombre-pi/calcul</loc>
+    <loc>https://jozinho22.github.io/maths/#/cours/le-nombre-pi/calcul</loc>
     <lastmod>2023-01-23T18:44:36+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://jozinho22.github.io/maths/cours/le-nombre-pi/autres-formules-generales</loc>
+    <loc>https://jozinho22.github.io/maths/#/cours/le-nombre-pi/autres-formules-generales</loc>
     <lastmod>2023-01-23T18:44:36+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <!-- Cours : nombre d'or -->
   <url>
-    <loc>https://jozinho22.github.io/maths/cours/le-nombre-d-or</loc>
+    <loc>https://jozinho22.github.io/maths/#/cours/le-nombre-d-or</loc>
     <lastmod>2023-01-23T18:44:36+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://jozinho22.github.io/maths/cours/le-nombre-d-or/evolutions-de-lapins</loc>
+    <loc>https://jozinho22.github.io/maths/#/cours/le-nombre-d-or/evolutions-de-lapins</loc>
     <lastmod>2023-01-23T18:44:36+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://jozinho22.github.io/maths/cours/le-nombre-d-or/caracteristiques</loc>
+    <loc>https://jozinho22.github.io/maths/#/cours/le-nombre-d-or/caracteristiques</loc>
     <lastmod>2023-01-23T18:44:36+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://jozinho22.github.io/maths/cours/le-nombre-d-or/caracteristiques-en-sens-contraire</loc>
+    <loc>https://jozinho22.github.io/maths/#/cours/le-nombre-d-or/caracteristiques-en-sens-contraire</loc>
     <lastmod>2023-01-23T18:44:36+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://jozinho22.github.io/maths/cours/le-nombre-d-or/formule-de-la-suite-de-fibonacci</loc>
+    <loc>https://jozinho22.github.io/maths/#/cours/le-nombre-d-or/formule-de-la-suite-de-fibonacci</loc>
     <lastmod>2023-01-23T18:44:36+00:00</lastmod>
     <priority>0.64</priority>
   </url>
     <url>
-    <loc>https://jozinho22.github.io/maths/cours/le-nombre-d-or/formule-de-phi-puissance-n-1</loc>
+    <loc>https://jozinho22.github.io/maths/#/cours/le-nombre-d-or/formule-de-phi-puissance-n-1</loc>
     <lastmod>2023-01-23T18:44:36+00:00</lastmod>
     <priority>0.64</priority>
   </url>
     <url>
-    <loc>https://jozinho22.github.io/maths/cours/le-nombre-d-or/formule-de-phi-puissance-n-2</loc>
+    <loc>https://jozinho22.github.io/maths/#/cours/le-nombre-d-or/formule-de-phi-puissance-n-2</loc>
     <lastmod>2023-01-23T18:44:36+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://jozinho22.github.io/maths/cours/le-nombre-d-or/autres-formules-generales</loc>
+    <loc>https://jozinho22.github.io/maths/#/cours/le-nombre-d-or/autres-formules-generales</loc>
     <lastmod>2023-01-23T18:44:36+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   
   <!-- Bds de JPP -->
   <url>
-    <loc>https://jozinho22.github.io/maths/bds-de-jpp</loc>
+    <loc>https://jozinho22.github.io/maths/#/bds-de-jpp</loc>
     <lastmod>2023-01-23T18:44:36+00:00</lastmod>
     <priority>1.00</priority>
   </url>
   <url>
-    <loc>https://jozinho22.github.io/maths/bds-de-jpp/l-aspirisouffle</loc>
+    <loc>https://jozinho22.github.io/maths/#/bds-de-jpp/l-aspirisouffle</loc>
     <lastmod>2022-10-09T16:34:11+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://jozinho22.github.io/maths/bds-de-jpp/le-big-bang</loc>
+    <loc>https://jozinho22.github.io/maths/#/bds-de-jpp/le-big-bang</loc>
     <lastmod>2022-10-09T16:34:11+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://jozinho22.github.io/maths/bds-de-jpp/le-chronologicon</loc>
+    <loc>https://jozinho22.github.io/maths/#/bds-de-jpp/le-chronologicon</loc>
     <lastmod>2022-10-09T16:34:11+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://jozinho22.github.io/maths/bds-de-jpp/l-economicon</loc>
+    <loc>https://jozinho22.github.io/maths/#/bds-de-jpp/l-economicon</loc>
     <lastmod>2022-10-09T16:34:11+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://jozinho22.github.io/maths/bds-de-jpp/energetiquement-votre</loc>
+    <loc>https://jozinho22.github.io/maths/#/bds-de-jpp/energetiquement-votre</loc>
     <lastmod>2022-10-09T16:34:11+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://jozinho22.github.io/maths/bds-de-jpp/le-geometricon</loc>
+    <loc>https://jozinho22.github.io/maths/#/bds-de-jpp/le-geometricon</loc>
     <lastmod>2022-10-09T16:34:11+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://jozinho22.github.io/maths/bds-de-jpp/joyeuse-apocalypse</loc>
+    <loc>https://jozinho22.github.io/maths/#/bds-de-jpp/joyeuse-apocalypse</loc>
     <lastmod>2022-10-09T16:34:11+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://jozinho22.github.io/maths/bds-de-jpp/mecavol</loc>
+    <loc>https://jozinho22.github.io/maths/#/bds-de-jpp/mecavol</loc>
     <lastmod>2022-10-09T16:34:11+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://jozinho22.github.io/maths/bds-de-jpp/les-mille-et-une-nuits-scientifiques</loc>
+    <loc>https://jozinho22.github.io/maths/#/bds-de-jpp/les-mille-et-une-nuits-scientifiques</loc>
     <lastmod>2022-10-09T16:34:11+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://jozinho22.github.io/maths/bds-de-jpp/le-mur-du-silence</loc>
+    <loc>https://jozinho22.github.io/maths/#/bds-de-jpp/le-mur-du-silence</loc>
     <lastmod>2022-10-09T16:34:11+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://jozinho22.github.io/maths/bds-de-jpp/pour-quelques-amperes-de-plus</loc>
+    <loc>https://jozinho22.github.io/maths/#/bds-de-jpp/pour-quelques-amperes-de-plus</loc>
     <lastmod>2022-10-09T16:34:11+00:00</lastmod>
     <priority>0.64</priority>
   </url>
     <url>
-    <loc>https://jozinho22.github.io/maths/bds-de-jpp/le-spondyloscope </loc>
+    <loc>https://jozinho22.github.io/maths/#/bds-de-jpp/le-spondyloscope </loc>
     <lastmod>2022-10-09T16:34:11+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://jozinho22.github.io/maths/bds-de-jpp/le-topologicon</loc>
+    <loc>https://jozinho22.github.io/maths/#/bds-de-jpp/le-topologicon</loc>
     <lastmod>2022-10-09T16:34:11+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://jozinho22.github.io/maths/bds-de-jpp/le-tour-du-monde-en-80-jours</loc>
+    <loc>https://jozinho22.github.io/maths/#/bds-de-jpp/le-tour-du-monde-en-80-jours</loc>
     <lastmod>2022-10-09T16:34:11+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://jozinho22.github.io/maths/bds-de-jpp/tout-est-relatif</loc>
+    <loc>https://jozinho22.github.io/maths/#/bds-de-jpp/tout-est-relatif</loc>
     <lastmod>2022-10-09T16:34:11+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://jozinho22.github.io/maths/bds-de-jpp/le-trou-noir</loc>
+    <loc>https://jozinho22.github.io/maths/#/bds-de-jpp/le-trou-noir</loc>
     <lastmod>2022-10-09T16:34:11+00:00</lastmod>
     <priority>0.64</priority>
   </url>
 
   <!-- Jeux -->
   <url>
-    <loc>https://jozinho22.github.io/maths/jeux</loc>
+    <loc>https://jozinho22.github.io/maths/#/jeux</loc>
     <lastmod>2022-10-09T16:34:11+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://jozinho22.github.io/maths/jeux/reviser-ses-tables</loc>
+    <loc>https://jozinho22.github.io/maths/#/jeux/reviser-ses-tables</loc>
     <lastmod>2022-10-09T16:34:11+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://jozinho22.github.io/maths/jeux/additionner</loc>
+    <loc>https://jozinho22.github.io/maths/#/jeux/additionner</loc>
     <lastmod>2022-01-23T14:40:11+00:00</lastmod>
     <priority>0.64</priority>
   </url>
 
   <!-- Liens -->
   <url>
-    <loc>https://jozinho22.github.io/maths/liens</loc>
+    <loc>https://jozinho22.github.io/maths/#/liens</loc>
     <lastmod>2022-10-09T16:34:11+00:00</lastmod>
     <priority>0.64</priority>
   </url>
 
   <!-- Contact -->
   <!-- <url>
-    <loc>https://jozinho22.github.io/maths/contact</loc>
+    <loc>https://jozinho22.github.io/maths/#/contact</loc>
     <lastmod>2022-10-09T16:34:11+00:00</lastmod>
     <priority>0.64</priority>
   </url> -->
