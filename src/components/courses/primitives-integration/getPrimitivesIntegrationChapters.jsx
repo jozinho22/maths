@@ -1,5 +1,9 @@
 import Presentation from "./chapters/Presentation";
+import TheoremeFondamentalDeLAnalyse from "./chapters/TheoremeFondamentalDeLAnalyse";
+
 import InterpretationGeometriqueDeLaPrimitive from "./chapters/InterpretationGeometriqueDeLaPrimitive";
+import InterpretationGeometriqueDeLaPrimitive2 from "./chapters/InterpretationGeometriqueDeLaPrimitive2";
+
 import TableauRecapFonctionsPrimitives from "./chapters/TableauRecapFonctionsPrimitives";
 import LIntegration from "./chapters/LIntegration";
 import ProprietesDeLIntegrale from "./chapters/ProprietesDeLIntegrale";
@@ -30,10 +34,31 @@ const getPrimitivesIntegrationChapters = () => {
         },
         {
             id: k++,
+            component: <TheoremeFondamentalDeLAnalyse />,
+            title: 'Théorème fondamental de l\'analyse',
+            metaContent: 'Théorème fondamental de l\'analyse.',
+            relativePath: '/theoreme-fondamental-de-l-analyse'
+        },
+        {
+            id: k++,
+            component: <FonctionDefinieParUneIntegrale />,
+            title: 'Fonction définie par une intégrale',
+            metaContent: 'Fonction définie par une intégrale.',
+            relativePath: '/fonction-definie-par-une-integrale'
+        },
+        {
+            id: k++,
             component: <InterpretationGeometriqueDeLaPrimitive />,
             title: 'Interprétation géométrique de la primitive',
             metaContent: 'Interprétation géométrique de la primitive.',
             relativePath: '/interpretation-geometrique'
+        },
+        {
+            id: k++,
+            component: <InterpretationGeometriqueDeLaPrimitive2 />,
+            title: 'Interprétation géométrique de la primitive (suite)',
+            metaContent: 'Interprétation géométrique de la primitive(suite).',
+            relativePath: '/interpretation-geometrique-2'
         },
         {
             id: k++,
@@ -91,13 +116,6 @@ const getPrimitivesIntegrationChapters = () => {
             metaContent: 'Intégration par parties.',
             relativePath: '/integration-par-parties'
         }, 
-        {
-            id: k++,
-            component: <FonctionDefinieParUneIntegrale />,
-            title: 'Fonction définie par une intégrale',
-            metaContent: 'Fonction définie par une intégrale.',
-            relativePath: '/fonction-definie-par-une-integrale'
-        },
         {
             id: k++,
             component: <TableauRecapFonctionsPrimitives />,

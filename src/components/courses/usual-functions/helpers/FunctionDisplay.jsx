@@ -14,6 +14,8 @@ const FunctionDisplay = ( {f, fData} ) => {
         return "\\(f(x) = " + exp + " \\)";
     }
 
+    var width = document.body.offsetWidth;
+
     return <>
             <Container className={`GraphTitle Focus${f.themeColor ? f.themeColor :"Green"}`}>
                 <MathJaxDisplay 
@@ -36,16 +38,24 @@ const FunctionDisplay = ( {f, fData} ) => {
                     <XAxis 
                         dataKey="x" 
                         interval={f.xInterval} 
-                        domain={f.xDomain} />
+                        domain={f.xDomain} 
+                        style={{
+                            fontSize: `${width < 450 ? '1rem': '1rem'}`,
+                            fontFamily: 'Times New Roman',
+                        }} />
                     <YAxis 
                         dataKey="y" 
                         type="number"
                         domain={f.yDomain}
                         allowDecimals={false} 
-                        allowDataOverflow={false} />
+                        allowDataOverflow={false} 
+                        style={{
+                            fontSize: `${width < 450 ? '1rem': '1rem'}`,
+                            fontFamily: 'Times New Roman',
+                        }} />
                     <Tooltip labelStyle={{backgroundColor: "silver"}} contentStyle={{backgroundColor: "silver"}} itemStyle={{backgroundColor: "silver"}} wrapperStyle={{backgroundColor: "dimgray"}}/> 
-                    <ReferenceLine x={0} stroke={Constants.RED_COLOR} />
-                    <ReferenceLine y={0} stroke={Constants.RED_COLOR} />
+                    <ReferenceLine x={0} stroke={Constants.BLACK_COLOR} />
+                    <ReferenceLine y={0} stroke={Constants.BLACK_COLOR} />
                 </LineChart>
             </ResponsiveContainer>
             </>

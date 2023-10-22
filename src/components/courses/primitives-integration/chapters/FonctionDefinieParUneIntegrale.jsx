@@ -7,7 +7,6 @@ import Title1 from '../../helpers/Title1';
 const FonctionDefinieParUneIntegrale = () => {
 
     var F = "\\(  F(x) = \\int_a^x f(t)dt  \\)";
-    var intAA = "\\(  F(a) = \\int_a^a f(t)dt = 0 \\)";
     var intf = "\\(   F(x) = \\int_a^x f(t)dt = \\Bigl[G(t)\\Bigr]_a^x \\)";
     var intf2 = "\\(  F(x) = \\int_a^x f(t)dt = G(x) - G(a) \\)";
     var intf3 = "\\(  F'(x) = \\int_a^x f(t)dt = G'(x) - \\underbrace { G'(a) } _\\text{= 0}  \\)";
@@ -23,8 +22,7 @@ const FonctionDefinieParUneIntegrale = () => {
                 <Container className="Focus">
                      <MathJaxDisplay toShow={F} />  
                 </Container>
-                <p>De fait, </p>
-                <MathJaxDisplay toShow={intAA} demo />    
+          
                 <p>Soit <MathJaxInline toShow={"$ G $"} /> la primitive de <MathJaxInline toShow={"$ f $"} /> sur <MathJaxInline toShow={"$ I $"} />. </p>
                 <MathJaxDisplay toShow={intf} demo />  
                 <MathJaxDisplay toShow={intf2} demo />  

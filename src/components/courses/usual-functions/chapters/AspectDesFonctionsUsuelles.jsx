@@ -36,13 +36,26 @@ const AspectDesFonctionsUsuelles = () => {
 
             var datas = []
             for(var k = -it; k <= it; k++) {
+                /* console.log("x", x) */
                 if(f.type === 'trigo') {
+                    // bidouille car il ne trouve pas le 0...
+                    if(f.mathJaxTitle ==="tan(x)" && (k === 0 || k === 16)) {
+                        if(k === 0 ) x = 0;
+                        else x = Math.PI/2;
+                    } 
+                    
                     var num = new Fractionnal.Fraction(x / Math.PI).numerator
                     var den = new Fractionnal.Fraction(x / Math.PI).denominator
+
+         /*            console.log("num", num)
+                    console.log("den", den)
+                    console.log("num % 2 !==0 && den ===2", num % 2 !==0 && den ===2) */
                     let d = {
                         x: (num === 0 ? 0 : (num === -1 ? '-π' : num === 1 ? 'π' : num + 'π') + (den !== 1 ? "/" + den : "")),
-                        y: f.formula(x)
+                        y: f.mathJaxTitle !=="tan(x)" || (f.mathJaxTitle ==="tan(x)" && (num % 2 === 0 || den !== 2)) ? Math.round(f.formula(x) * 100) : undefined
                     }
+                    /* console.log("y", d.y)
+                    console.log("--------") */
                     datas.push(d);
                     x = x + step;
                 } else {
@@ -54,6 +67,7 @@ const AspectDesFonctionsUsuelles = () => {
                     x = Math.round((x + step)* 100) / 100;
                 }
             } 
+            /* console.log(datas) */
             setFData(datas);
         }
     }, [f]);
@@ -67,7 +81,7 @@ const AspectDesFonctionsUsuelles = () => {
     }
 
     const getPrimitiveExp = (primitive) => {
-        return "\\(\\int f(x) . \\mathrm{d}x = " + primitive + " \\)";
+        return "\\(\\int^x f(x) . \\mathrm{d}x = " + primitive + " \\)";
     }
 
     const getLimitExp = (where, value) => {
@@ -80,6 +94,7 @@ const AspectDesFonctionsUsuelles = () => {
 
     return(
         <Container className="UsualFunctionsContainer">
+            { !isEmpty(f) ? <></> : <p className="Title">Choisissez une fonction à afficher</p>}
             <Container className="UsualFunctionsButtonsContainer Left">
                 {
                     ufLeft.map(f => (
@@ -152,7 +167,7 @@ const AspectDesFonctionsUsuelles = () => {
                    
                     </Container>
                 </>
-                : <p className="Title">Choisissez une fonction à afficher</p>
+                : <></>
             }
         </Container>
     );
