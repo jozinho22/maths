@@ -8,7 +8,7 @@ const CoursesConstants = {
     PI: '/le-nombre-pi',
     NB_OR: '/le-nombre-d-or',
     TRIGO: '/la-trigonometrie',
-    DERIVEE: '/la-derivee',
+    DERIVATION: '/la-derivation',
     PRIMITIVES_INTEGRATION: '/primitives-integration',
     SEQUENCES: '/les-suites-numériques',
    /*  GEOMETRY: '/la-geometrie', */

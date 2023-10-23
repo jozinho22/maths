@@ -8,6 +8,7 @@ import tangente from '../assets/tangente.png';
 import circleTrigo2 from '../assets/circleTrigo2.png';
 import tangenteApplication from '../assets/tangenteApplication.png';
 import Title2 from '../../helpers/Title2';
+import Title1 from '../../helpers/Title1';
 
 const LaTangente = () => {
 
@@ -27,7 +28,7 @@ const LaTangente = () => {
             <ImageZoom src={tangente} name="La tangente de manière générale" n={4} />
 
             <p>En trigonométrie, la tangente est la longueur du segment créée par la tangente au cercle au point <MathJaxInline toShow={"$\\alpha = 0$" } /> et le prolongement de la droite créée par l'angle <MathJaxInline toShow={"$\\alpha$" } />.</p>
-            <ImageZoom src={circleTrigo2} name="La tangente en trigonométrie" n={5} />
+            <ImageZoom src={circleTrigo2} name="La tangente sur le cercle trigonométrique" n={5} />
       
             <p>En appliquant le théorème de Thalès, on voit que :</p>
             <MathJaxDisplay toShow={thales} demo />
@@ -38,7 +39,7 @@ const LaTangente = () => {
                 <MathJaxDisplay toShow={tan}  />
             </Container>
 
-            <Title2 title={"Applications"} />
+            <Title1 title={"Applications"} />
             <p>En utilisant la tangente, on peut mesurer la longueur d'un côté d'un triangle, en connaissant l'angle opposé au côté que l'on cherche.</p>
             <ImageZoom src={tangenteApplication} name="La tangente de manière générale" n={6} />
             <p>Avec la formule vue précédemment : </p>

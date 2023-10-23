@@ -22,7 +22,7 @@ import PointDInflexion from "./chapters/PointDInflexion";
 import MethodeDeNewton from "./chapters/MethodeDeNewton";
 import MethodeDeNewtonExemple from "./chapters/MethodeDeNewtonExemple";
 
-const getDerivativesChapters = () => {
+const getDerivationChapters = () => {
 
     var k = 0;
 
@@ -184,11 +184,11 @@ const getDerivativesChapters = () => {
         {
             id: k++,
             component: <MethodeDeNewtonExemple />,
-            title: 'Méthode de Newton : approximer la valeur la racine de 2',
-            metaContent: 'Méthode de Newton : approximer la valeur la racine de 2.',
+            title: 'Méthode de Newton : approximer la valeur de la racine de 2',
+            metaContent: 'Méthode de Newton : approximer la valeur de la racine de 2.',
             relativePath: '/methode-de-newton-exemple'
         },
     ];
 }
 
-export default getDerivativesChapters;
+export default getDerivationChapters;

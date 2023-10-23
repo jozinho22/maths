@@ -4,7 +4,7 @@ import getEquationsFirstDegreeChapters from './equations-first-degree/getEquatio
 import getEquationsSecondDegreeChapters from './equations-second-degree/getEquationsSecondDegreeChapters';
 import getThalesChapters from './thales/getThalesChapters';
 import getPythagoreChapters from './pythagore/getPythagoreChapters';
-import getDerivativesChapters from './derivatives/getDerivativesChapters';
+import getDerivationChapters from './derivatives/getDerivationChapters';
 import getPrimitivesIntegrationChapters from './primitives-integration/getPrimitivesIntegrationChapters';
 import getPiChapters from './pi/getChapters';
 import getGoldenRatioChapters from './nbOr/getGoldenRatioChapters';
@@ -76,12 +76,12 @@ function coursesResourceBuilder() {
       relativePath: CoursesConstants.TRIGO,
       chapters: getTrigoChapters()
     }
-    var derivee = {
+    var derivation = {
       id: i++,
-      title: 'La dérivée',
-      metaContent: "La dérivée : construction pas-à-pas, exemples, démonstrations et formules",
-      relativePath: CoursesConstants.DERIVEE,
-      chapters: getDerivativesChapters()
+      title: 'La dérivation',
+      metaContent: "La dérivation : définition, construction pas-à-pas, exemples, démonstrations et formules",
+      relativePath: CoursesConstants.DERIVATION,
+      chapters: getDerivationChapters()
     }
     var primInt = {
       id: i++,
@@ -130,7 +130,7 @@ function coursesResourceBuilder() {
         thales,
         usualFunctions,
         trigo,
-        derivee,
+        derivation,
         primInt,
         pi, 
         nbOr

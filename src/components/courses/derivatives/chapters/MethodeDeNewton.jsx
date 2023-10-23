@@ -30,9 +30,9 @@ const MethodeDeNewton = () => {
                 <p>
                     Cette méthode consiste à calculer une certaine valeur plus ou moins connue, mais que l'on souhaiterait approximer plus précisément. La méthode se fait par itération successive.
                 </p>
-                <p>Soit une fonction <MathJaxInline toShow={"$ f $"} /> convexe et strictement croissante sur un intervalle <MathJaxInline toShow={"$ I \\in \\mathbb{R} $"} /> et <MathJaxInline toShow={"$ a_0 \\in I $"} />.</p>
+                <p>Soit une fonction <MathJaxInline toShow={"$ f $"} /> convexe et strictement croissante sur un intervalle <MathJaxInline toShow={"$ I \\in \\mathbb{R} $"} /> et <MathJaxInline toShow={"$ a_0 $"} /> un réel appartenant à <MathJaxInline toShow={"$ I $"} /> tel que <MathJaxInline toShow={"$ f(a_0) > 0 $"} />.</p>
                 <ImageZoom src={newtonMethod} name="Une fonction convexe sur un intervalle et sa tangente en un point arbitraire" n={++n} />
-                <p>Nous savons que cette fonction va s'annuler à un moment donné, mais nous ne savons pas quand.</p>
+                <p>Nous savons que cette fonction va s'annuler à un moment donné, mais nous ne savons pas exactement pour quelle valeur.</p>
                 <p>Nous allons alors prendre le réel <MathJaxInline toShow={"$ a_0 $"} /> volontairement grand pour que l'on soit sûr que <MathJaxInline toShow={"$ f(a_0) > 0 $"} />.</p>
                 <p>Nous avons représenté <Link url={`${PagesConstants.COURS}${CoursesConstants.DERIVEE}/equation-de-la-tangente`} external >la tangente de cette courbe</Link> au point <MathJaxInline toShow={"$ x = a_0 $"} />, et répondant à l'équation :</p>
                 <MathJaxDisplay toShow={Tao} demo /> 
@@ -48,7 +48,7 @@ const MethodeDeNewton = () => {
                 <p>Si l'on continue et que l'on fait la même chose ne partant cette fois-ci de <MathJaxInline toShow={"$ a_1 $"} />, nous obtiendrons :</p>
                 <MathJaxDisplay toShow={Ta1Equals0} demo />
                 <ImageZoom src={newtonMethod2} name="Projection de la deuxième tangente sur l'axe des abscisses" n={++n} />
-                <p>Nous obtenons par conséquence une suite récurrente, à savoir une suite numérique <MathJaxInline toShow={"$ (a_n) $"} /> exprimée en fonction de <MathJaxInline toShow={"$ (a_{n+1}) $"} />, <MathJaxInline toShow={"$ f(a_{n}) $"} /> et <MathJaxInline toShow={"$ f'(a_{n}) $"} />.</p>
+                <p>Nous obtenons par conséquence une suite récurrente, à savoir une suite numérique <MathJaxInline toShow={"$ (a_n)_{n \\in \\mathbb{N} $"} /> exprimée en fonction de <MathJaxInline toShow={"$ a_{n+1} $"} />, <MathJaxInline toShow={"$ f(a_{n}) $"} /> et <MathJaxInline toShow={"$ f'(a_{n}) $"} />.</p>
                 <Container className="Focus">
                     <MathJaxDisplay toShow={newtonSequence} />  
                 </Container>
@@ -60,7 +60,7 @@ const MethodeDeNewton = () => {
                 <Title1 title={"Généralisation"} />
                 <p>De manière générale, il faut que la fonction d'étude soit convexe ou concave, mais aussi strictement monotone sur son intervalle d'étude.</p>
                 <p>On pourra alors tenter de trouver une valeur <MathJaxInline toShow={"$ x = x_{k} $"} /> étant une solution de l'équation <MathJaxInline toShow={"$ f(x) = k$"} />, avec <MathJaxInline toShow={"$ k \\in \\mathbb{R}$"} />.</p>
-                <p>La valeur de départ <MathJaxInline toShow={"$a_0 $"} /> importe peu tant qu'il convient aux exigences d'étude, car de toute manière la suite <MathJaxInline toShow={"$ (a_n)$"} /> va converger assez vite vers la valeur cherchée. </p>
+                <p>La valeur de départ <MathJaxInline toShow={"$a_0 $"} /> importe peu tant qu'il convient aux exigences d'étude et que <MathJaxInline toShow={"$ f(a_0) \\geq 0 $"} />, car de toute manière la suite <MathJaxInline toShow={"$ (a_n)$"} /> va converger assez vite vers la valeur cherchée. </p>
             </>
 }
 

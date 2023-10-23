@@ -5,12 +5,13 @@ const useNewtonSMethodComputation = () => {
     var nbIt = 10;
     var accuracy = 6;
 
+    var a0_2 = 2;
     var a0_5 = 5;
     var a0_10 = 10;
     var a0_20 = 20;
     var a0_30 = 30;
 
-    var a0s = [a0_5, a0_10, a0_20, a0_30];
+    var a0s = [a0_2, a0_5, a0_10, a0_20, a0_30];
 
     var listResults = [];
 

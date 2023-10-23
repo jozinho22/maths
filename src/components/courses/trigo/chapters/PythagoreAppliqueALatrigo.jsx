@@ -9,6 +9,7 @@ import ImageZoom from '../../helpers/ImageZoom';
 import circleTrigo from '../assets/circleTrigo.png';
 import pythagoreReciproqueDemo from '../../pythagore/assets/pythagoreReciproqueDemo.png';
 import Title2 from '../../helpers/Title2';
+import Title1 from '../../helpers/Title1';
 
 const PythagoreAppliqueALatrigo = () => {
 
@@ -16,9 +17,9 @@ const PythagoreAppliqueALatrigo = () => {
     var pyth2 = "\\((cos(\\alpha))^2 + (sin(\\alpha))^2 = 1\\)";
     var pyth3 = "\\(cos^2(\\alpha)+ sin^2(\\alpha) = 1\\)";
 
-    var sinAlpha = "\\( sin(\\alpha) = \\frac{a}{c}\\)";
-    var cosAlpha = "\\( cos(\\alpha) = \\frac{b}{c}\\)";
-    var sinCarrePlusCosCarre = "\\( (sin(\\alpha))^2 + (cos(\\alpha))^2 = \\left(\\frac{a}{c}\\right)^2 + \\left(\\frac{a}{c}\\right)^2\\)";
+    var sinCos = "\\( \\Biggl\\{ \\begin{align*} sin(\\alpha) = \\frac{a}{c} \\\\ cos(\\alpha) = \\frac{b}{c} \\end{align*} \\)";
+
+    var sinCarrePlusCosCarre = "\\( (sin(\\alpha))^2 + (cos(\\alpha))^2 = \\left(\\frac{a}{c}\\right)^2 + \\left(\\frac{b}{c}\\right)^2\\)";
     var sinCarrePlusCosCarre2 = "\\( (sin(\\alpha))^2 + (cos(\\alpha))^2 = \\frac{a^2}{c^2} + \\frac{b^2}{c^2} \\)";
     var sinCarrePlusCosCarre3 = "\\( (sin(\\alpha))^2 + (cos(\\alpha))^2 = \\frac{a^2 + b^2}{c^2} \\)";
     
@@ -26,15 +27,14 @@ const PythagoreAppliqueALatrigo = () => {
             <>
                 <p>Sur la figure 1 du <Link url={`${PagesConstants.COURS}${CoursesConstants.TRIGO}/presentation`} external>premier chapitre sur la trigonométrie</Link> ci-dessous, on voit que nous sommes dans le cas d'un triangle rectangle formé par <MathJaxInline toShow={"$cos(\\alpha)$"} />, <MathJaxInline toShow={"$sin(\\alpha)$"} /> et son hypoténuse <MathJaxInline toShow={"$R$"} />.</p>
                 <ImageZoom src={circleTrigo} name="Cosinus et sinus" n={1} />
-                <p>Grâce au théorème de Pythagore, on sait que :</p>
+                <p>Grâce au <Link url={`${PagesConstants.COURS}${CoursesConstants.PYTHAGORE}/presentation`} external>théorème de Pythagore</Link>, on sait que :</p>
                 <MathJaxDisplay toShow={pyth} demo />
                 <p>Et comme dans le contexte du cercle trigonométrique, le rayon <MathJaxInline toShow={"$ R = 1$"} />, on a alors :</p>
                 <MathJaxDisplay toShow={pyth2} demo />
 
-                <Title2 title={"Démonstration dans un triangle rectangle"} />
+                <Title1 title={"Démonstration dans un triangle rectangle"} />
                 <p>Dans un triangle rectangle, on sait que l'on peut appliquer les régles de trigonométrie. On a : </p>
-                <MathJaxDisplay toShow={sinAlpha} demo />
-                <MathJaxDisplay toShow={cosAlpha} demo />
+                <MathJaxDisplay toShow={sinCos} demo />
                 <ImageZoom src={pythagoreReciproqueDemo} name="Le triangle rectangle dans lequel s'applique la trigonométrie" n={2} />
                 <MathJaxDisplay toShow={sinCarrePlusCosCarre} demo />
                 <MathJaxDisplay toShow={sinCarrePlusCosCarre2} demo />
@@ -44,7 +44,7 @@ const PythagoreAppliqueALatrigo = () => {
 
                 <p>On note cette formule en général plutôt comme ceci :</p>
                 <Container className="Focus">
-                    <MathJaxDisplay toShow={pyth3} fRef={1} />
+                    <MathJaxDisplay toShow={pyth3} />
                 </Container>
             </>
     )
