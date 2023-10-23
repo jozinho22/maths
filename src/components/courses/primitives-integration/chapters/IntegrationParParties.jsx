@@ -9,26 +9,26 @@ import CoursesConstants from '../../helpers/CoursesConstants';
 
 const IntegrationParParties = () => {
 
-    var intParParties = "\\( \\int_a^b (fg')dt = \\Bigl[fg\\Bigr]_a^b - \\int_a^b (f'g)dt \\)";
+    var intParParties = "\\( \\int_a^b (uv')dt = \\Bigl[uv\\Bigr]_a^b - \\int_a^b (u'v)dt \\)";
     
-    var intParPartiesDemo = "\\( (fg)' = f'g + g'f \\)";
-    var intParPartiesDemo2 = "\\( fg' = (fg)' -  f'g \\)";
-    var intParPartiesDemo3 = "\\( \\int_a^b (fg')dt = \\int_a^b (fg)'dt -  \\int_a^b (f'g) dt \\)";
+    var intParPartiesDemo = "\\( (uv)' = u'v + v'u \\)";
+    var intParPartiesDemo2 = "\\( uv' = (uv)' -  u'v \\)";
+    var intParPartiesDemo3 = "\\( \\int_a^b (uv')dt = \\int_a^b (uv)'dt -  \\int_a^b (u'v) dt \\)";
 
     var intSinX = "\\( \\int_0^{\\frac{\\pi}{2}} t.sin(t)dt \\)";
-    var intSinXfgPrim = "\\( \\Biggl\\{\\begin{gather*} f = t \\\\ \\enspace \\enspace \\enspace g' = sin(t) \\end{gather*}  \\)";
-    var intSinXfPrimg = "\\( \\Biggl\\{\\begin{gather*} f' = 1 \\\\ \\enspace \\enspace \\enspace g = -cos(t) \\end{gather*}  \\)";
+    var intSinXuvPrim = "\\( \\Biggl\\{\\begin{gather*} u = t \\\\ \\enspace \\enspace \\enspace v' = sin(t) \\end{gather*}  \\)";
+    var intSinXfPrimg = "\\( \\Biggl\\{\\begin{gather*} u' = 1 \\\\ \\enspace \\enspace \\enspace v = -cos(t) \\end{gather*}  \\)";
     var intSinX2 = "\\( \\int_0^{\\frac{\\pi}{2}} t.sin(t)dt = \\Bigl[-t.cos(t)\\Bigr]_a^b - \\int_a^b -cos(t)dt   \\)";
     var intSinX3 = "\\( \\int_0^{\\frac{\\pi}{2}} t.sin(t)dt = \\Bigl[-t.cos(t)\\Bigr]_a^b + [sin(t)]_a^b   \\)";
     var intSinX4 = "\\( \\int_0^{\\frac{\\pi}{2}} t.sin(t)dt = \\Bigl[-t.cos(t) + sin(t)\\Bigr]_a^b = 1   \\)";
     
     var intLnX = "\\( \\int_1^e ln(t)dt \\)";
-    var intLnXfgPrim = "\\( \\Biggl\\{\\begin{gather*} \\enspace \\enspace f = ln(t) \\\\ g' = 1 \\end{gather*}  \\)";
-    var intLnXfPrimg = "\\( \\Biggl\\{\\begin{gather*} \\enspace \\enspace f' = \\frac{1}{t} \\\\ g = t \\end{gather*}  \\)";
+    var intLnXuvPrim = "\\( \\Biggl\\{\\begin{gather*} \\enspace \\enspace u = ln(t) \\\\ v' = 1 \\end{gather*}  \\)";
+    var intLnXfPrimg = "\\( \\Biggl\\{\\begin{gather*} \\enspace \\enspace u' = \\frac{1}{t} \\\\ v = t \\end{gather*}  \\)";
     var intLnX2 = "\\( \\int_0^{\\frac{\\pi}{2}} t.ln(t)dt = \\Bigl[t.ln(t)\\Bigr]_1^e - \\int_1^e dt  = 1  \\)";
 
     return  <>
-                <p>Soit <MathJaxInline toShow={"$ f, g $"} /> deux fonctions continues et dérivables sur un intervalle <MathJaxInline toShow={"$ I = [a, b] $"} />, <MathJaxInline toShow={"$ a $"} /> et <MathJaxInline toShow={"$ b $"} /> deux réels et <MathJaxInline toShow={"$ f', g' $"} /> de même continue sur <MathJaxInline toShow={"$ I$"} />. </p>
+                <p>Soit <MathJaxInline toShow={"$ u, v $"} /> deux fonctions continues et dérivables sur un intervalle <MathJaxInline toShow={"$ I = [a, b] $"} />, <MathJaxInline toShow={"$ a $"} /> et <MathJaxInline toShow={"$ b $"} /> deux réels et leur dérivée respective <MathJaxInline toShow={"$ u', v' $"} /> de même continue sur <MathJaxInline toShow={"$ I$"} />. </p>
                 <p>On a alors l'égalité : </p>
                 <Container className="Focus">
                      <MathJaxDisplay toShow={intParParties} />  
@@ -49,7 +49,7 @@ const IntegrationParParties = () => {
                 <p>Calculer :</p>
                 <MathJaxDisplay toShow={intSinX} demo />  
                 <p>On prend <MathJaxInline toShow={"$ f $"} /> et <MathJaxInline toShow={"$ g' $"} /> tels que : </p>
-                <MathJaxDisplay toShow={intSinXfgPrim} demo />  
+                <MathJaxDisplay toShow={intSinXuvPrim} demo />  
                 <MathJaxDisplay toShow={intSinXfPrimg} demo /> 
                 <MathJaxDisplay toShow={intSinX2} demo />  
                 <MathJaxDisplay toShow={intSinX3} demo />   
@@ -57,7 +57,7 @@ const IntegrationParParties = () => {
 
                 <Title1 title="Autre exemple" />
                 <MathJaxDisplay toShow={intLnX} demo />  
-                <MathJaxDisplay toShow={intLnXfgPrim} demo /> 
+                <MathJaxDisplay toShow={intLnXuvPrim} demo /> 
                 <MathJaxDisplay toShow={intLnXfPrimg} demo /> 
                 <MathJaxDisplay toShow={intLnX2} demo /> 
             </>

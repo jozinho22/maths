@@ -4,7 +4,7 @@ import getEquationsFirstDegreeChapters from './equations-first-degree/getEquatio
 import getEquationsSecondDegreeChapters from './equations-second-degree/getEquationsSecondDegreeChapters';
 import getThalesChapters from './thales/getThalesChapters';
 import getPythagoreChapters from './pythagore/getPythagoreChapters';
-import getDerivationChapters from './derivatives/getDerivationChapters';
+import getDerivationChapters from './derivation/getDerivationChapters';
 import getPrimitivesIntegrationChapters from './primitives-integration/getPrimitivesIntegrationChapters';
 import getPiChapters from './pi/getChapters';
 import getGoldenRatioChapters from './nbOr/getGoldenRatioChapters';
@@ -133,7 +133,8 @@ function coursesResourceBuilder() {
         derivation,
         primInt,
         pi, 
-        nbOr
+        nbOr,
+        process.env.NODE_ENV === 'development' ? seq : <></>
         /* geo */
     );
 

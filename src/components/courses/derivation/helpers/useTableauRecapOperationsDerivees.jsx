@@ -14,40 +14,40 @@ const useTableauRecapOperationsDerivees = () => {
     tableauRecapOperationsDerivees.push(
          {
             id: k++,
-            title: "kf",
-            values: ["kf'"]
+            title: "ku",
+            values: ["ku'"]
         }
     )
 
     tableauRecapOperationsDerivees.push(
          {
             id: k++,
-            title: "f + g",
-            values: ["f' + g'"]
+            title: "u + v",
+            values: ["u' + v'"]
         }
     )
 
     tableauRecapOperationsDerivees.push(
          {
             id: k++,
-            title: "f \\times g",
-            values: ["f'.g + g'.f"]
+            title: "u \\times v",
+            values: ["u'.v + v'.u"]
         }
     )
 
     tableauRecapOperationsDerivees.push(
          {
             id: k++,
-            title: "\\frac{f}{g}",
-            values: ["\\frac{f'.g - g'.f}{g^2} "]
+            title: "\\frac{u}{v}",
+            values: ["\\frac{u'.v - v'.u}{v^2} "]
         }
     )
 
     tableauRecapOperationsDerivees.push(
          {
             id: k++,
-            title: "f^{-1}",
-            values: ["\\frac{1}{f'(f^{-1})} "]
+            title: "u^{-1}",
+            values: ["\\frac{1}{u'(u^{-1})} "]
         }
     )
 

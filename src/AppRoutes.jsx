@@ -54,10 +54,7 @@ const AppRoutes = ( {courseItems, pdfItems, gameItems} ) => {
                             })
                         })
                     }
-                }
-                                
-                )}
-                
+                })}
                     
                 <Route path={pathBuilder(PagesConstants.BDS_DE_JPP)} element={<PdfTableOfContents pdfItems={pdfItems} />} />
                 {pdfItems.map(pdfItem => (
