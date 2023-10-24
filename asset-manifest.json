@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/maths/static/css/main.3161653f.css",
-    "main.js": "/maths/static/js/main.eaa3a877.js",
+    "main.js": "/maths/static/js/main.abaea14a.js",
     "static/js/27.035b7279.chunk.js": "/maths/static/js/27.035b7279.chunk.js",
     "static/media/energetiquementVotre.pdf": "/maths/static/media/energetiquementVotre.ae46a881d6240ff7c375.pdf",
     "static/media/bigBang.pdf": "/maths/static/media/bigBang.9a7278fe34a3a9cbd1fe.pdf",
@@ -82,6 +82,6 @@
   },
   "entrypoints": [
     "static/css/main.3161653f.css",
-    "static/js/main.eaa3a877.js"
+    "static/js/main.abaea14a.js"
   ]
 }
