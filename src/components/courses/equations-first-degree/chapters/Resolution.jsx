@@ -28,7 +28,7 @@ const Resolution = () => {
                 <MathJaxDisplay toShow={equPremierDeg} demo />
                 <p>Avec <MathJaxInline toShow={"$a$"} /> et <MathJaxInline toShow={"$b$"} /> des nombres réels.</p>
                 <p>Elles sont définies sur <MathJaxInline toShow={"$\\mathbb{R}$"} />, l'ensemble des réels.</p>
-                <p>Pour plus de détails, voir <Link url={`${PagesConstants.COURS}${PagesConstants.PREFIX}${CoursesConstants.EQ_1_DEG}/aspect`} external>le chapitre suivant.</Link></p>
+                <p>Pour plus de détails, voir <Link url={`${PagesConstants.PREFIX}${PagesConstants.COURS}${CoursesConstants.EQ_1_DEG}/aspect`} external>le chapitre suivant.</Link></p>
 
                 <Title1 title={"Résolution d'équations du premier degré"} />
                 <p>Nous allons prendre par exemple cette fonction :</p>

@@ -75,7 +75,7 @@ const TableauxDeSignesEtDeVariations = () => {
                 <Title2 title={"Tableau de signes"} />
                 <GenericMathsNiceTable tableValues={useTableauDeSignesDuSecondDegreExempleValues()} />
                 
-                <p>De plus, on a vu dans <Link url={`${PagesConstants.COURS}${PagesConstants.PREFIX}${CoursesConstants.DERIVATION}/sens-de-variations`} external>le chapitre sur le calcul des variations d'une fonction</Link> qu'on peut trouver ses variations grâce à la dérivée.</p>
+                <p>De plus, on a vu dans <Link url={`${PagesConstants.PREFIX}${PagesConstants.COURS}${CoursesConstants.DERIVATION}/sens-de-variations`} external>le chapitre sur le calcul des variations d'une fonction</Link> qu'on peut trouver ses variations grâce à la dérivée.</p>
                 <MathJaxDisplay toShow={deriveeF} demo/> 
                 <MathJaxDisplay toShow={deriveeF2} demo/> 
                 <p>Voici à quel moment la dérivée s'annule :</p>

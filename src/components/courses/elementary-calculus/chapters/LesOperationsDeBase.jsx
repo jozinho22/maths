@@ -90,7 +90,7 @@ const LesOperationsDeBase = () => {
                 <MathJaxDisplay toShow={prioExample2}/>
                 <p>On additionne l'intérieur de la petite parenthèse pour rendre le calcul possible de la grande parenthèse</p>
                 <MathJaxDisplay toShow={prioExample3}/>
-                <p>On additionne l'intérieur de la parenthèse restante en mettant au même dénominateur (voir <Link url={`${PagesConstants.COURS}${PagesConstants.PREFIX}${CoursesConstants.ELEM_CALCULUS}/les-fractions`} external>le chapitre sur les fractions</Link>) </p>
+                <p>On additionne l'intérieur de la parenthèse restante en mettant au même dénominateur (voir <Link url={`${PagesConstants.PREFIX}${PagesConstants.COURS}${CoursesConstants.ELEM_CALCULUS}/les-fractions`} external>le chapitre sur les fractions</Link>) </p>
                 <MathJaxDisplay toShow={prioExample4}/>
                 <MathJaxDisplay toShow={prioExample5}/>
                 <p>On effectue la dernière multiplication</p>

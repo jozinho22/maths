@@ -35,7 +35,7 @@ const MethodeDeNewtonExemple = () => {
                 <MathJaxDisplay toShow={f} demo />
                 <p>Et ainsi tenter de voir lorsque celle-ci s'annule.</p> 
                 <p>Nous sommes bien dans le cas d'une fonction convexe et strictement croissante, nous pouvons alors appliquer la méthode.</p>
-                <p>Au chapitre précédent sur <Link url={`${PagesConstants.COURS}${PagesConstants.PREFIX}${CoursesConstants.DERIVATION}/methode-de-newton`} external >la présentation de la méthode</Link>, nous avons vu que ce nombre peut être calculé sous la forme d'une suite récurrente telle que : </p>
+                <p>Au chapitre précédent sur <Link url={`${PagesConstants.PREFIX}${PagesConstants.COURS}${CoursesConstants.DERIVATION}/methode-de-newton`} external >la présentation de la méthode</Link>, nous avons vu que ce nombre peut être calculé sous la forme d'une suite récurrente telle que : </p>
                 <MathJaxDisplay toShow={newtonSequence} demo /> 
                 <p>On a pour hypothèse que : </p>
                 <MathJaxDisplay toShow={xSquareRoot2Functions} demo />

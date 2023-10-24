@@ -49,7 +49,7 @@ const DeriveeDeFonctionComposee = () => {
                 
                 <p>Supposons que <MathJaxInline toShow={"$ g $"} /> est continue pour tout <MathJaxInline toShow={"$ x$"} /> .</p>
                 <p>Tentons de calculer une formule de la dérivée <MathJaxInline toShow={"$ (f \\circ g)(x) $"} /> :</p>
-                <p>On a vu dans <Link url={`${PagesConstants.COURS}${PagesConstants.PREFIX}${CoursesConstants.DERIVATION}/presentation`} external>la présentation</Link> la définition de la dérivée : </p>
+                <p>On a vu dans <Link url={`${PagesConstants.PREFIX}${PagesConstants.COURS}${CoursesConstants.DERIVATION}/presentation`} external>la présentation</Link> la définition de la dérivée : </p>
                 <Container className="Focus">
                      <MathJaxDisplay toShow={derivability} />  
                 </Container>

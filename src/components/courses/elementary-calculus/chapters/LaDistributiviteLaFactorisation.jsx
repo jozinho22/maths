@@ -89,7 +89,7 @@ const LaDistributiviteLaFactorisation = () => {
                 <MathJaxDisplay toShow={idRem1Example2} demo />
                 <p>Soit : </p>
                 <MathJaxDisplay toShow={idRemCanonExample3} demo />
-                <p>Cette façon de factoriser va notamment nous servir pour <Link url={`${PagesConstants.COURS}${PagesConstants.PREFIX}${CoursesConstants.EQ_2_DEG}/resolution`} external>les équations du second degré</Link>.</p>
+                <p>Cette façon de factoriser va notamment nous servir pour <Link url={`${PagesConstants.PREFIX}${PagesConstants.COURS}${CoursesConstants.EQ_2_DEG}/resolution`} external>les équations du second degré</Link>.</p>
             </>
 }
 

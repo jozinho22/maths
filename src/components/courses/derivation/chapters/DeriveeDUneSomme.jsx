@@ -30,7 +30,7 @@ const DeriveeDUneSomme = () => {
                
                <Title1 title={"Démonstration"} />
                <p>On souhaite calculer la dérivée d'une somme de deux fonctions <MathJaxInline toShow={"$ f $"} /> et <MathJaxInline toShow={"$ g $"} />.</p>
-               <p>Dans <Link url={`${PagesConstants.COURS}${PagesConstants.PREFIX}${CoursesConstants.DERIVATION}/presentation`} external>le premier chapitre sur la dérivée</Link> , on a vu que : </p>
+               <p>Dans <Link url={`${PagesConstants.PREFIX}${PagesConstants.COURS}${CoursesConstants.DERIVATION}/presentation`} external>le premier chapitre sur la dérivée</Link> , on a vu que : </p>
                <Container className="Focus">
                     <MathJaxDisplay toShow={deriveeRappel} />  
                </Container> 
