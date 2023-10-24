@@ -52,7 +52,7 @@ const CalculSurfaceSphere = () => {
             <ImageZoom src={sphereAreaCalculus} name="Calcul de la surface par intégration" n={++n}/>
             
             <MathJaxDisplay toShow={circlePerimX} demo />
-            <p>Sur la figure ci-dessous, nous voyons avec <Link url={`${PagesConstants.COURS}${CoursesConstants.PYTHAGORE}/presentation`} external>le théorème de Pythagore</Link> que : </p>
+            <p>Sur la figure ci-dessous, nous voyons avec <Link url={`${PagesConstants.PREFIX}${PagesConstants.COURS}${CoursesConstants.PYTHAGORE}/presentation`} external>le théorème de Pythagore</Link> que : </p>
             <MathJaxDisplay toShow={pyth} demo />
             <MathJaxDisplay toShow={rfH} demo />
             <p>Soit</p>

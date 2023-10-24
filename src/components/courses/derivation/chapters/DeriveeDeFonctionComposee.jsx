@@ -7,6 +7,7 @@ import Link from '../../../immutable/nav/Link';
 import PagesConstants from '../../../immutable/nav/PagesConstants';
 import CoursesConstants from '../../helpers/CoursesConstants';
 import Title1 from '../../helpers/Title1';
+import pathBuilder from '../../../helpers/pathBuilder';
 
 const DeriveeDeFonctionComposee = () => {
     
@@ -48,7 +49,7 @@ const DeriveeDeFonctionComposee = () => {
                 
                 <p>Supposons que <MathJaxInline toShow={"$ g $"} /> est continue pour tout <MathJaxInline toShow={"$ x$"} /> .</p>
                 <p>Tentons de calculer une formule de la dérivée <MathJaxInline toShow={"$ (f \\circ g)(x) $"} /> :</p>
-                <p>On a vu dans <Link url={`${PagesConstants.COURS}${CoursesConstants.DERIVEE}/presentation`} external>la présentation</Link> la définition de la dérivée : </p>
+                <p>On a vu dans <Link url={`${PagesConstants.COURS}${PagesConstants.PREFIX}${CoursesConstants.DERIVATION}/presentation`} external>la présentation</Link> la définition de la dérivée : </p>
                 <Container className="Focus">
                      <MathJaxDisplay toShow={derivability} />  
                 </Container>

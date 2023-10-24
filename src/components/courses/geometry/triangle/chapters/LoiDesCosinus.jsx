@@ -25,7 +25,7 @@ const LoiDesCosinus = () => {
     return (
         <>
             <p>
-                La loi des cosinus, ou théorème d'Al-Kashi est la généralisation du <Link url={`${PagesConstants.COURS}${CoursesConstants.PYTHAGORE}`} external>théorème de Pythagore</Link>.
+                La loi des cosinus, ou théorème d'Al-Kashi est la généralisation du <Link url={`${PagesConstants.PREFIX}${PagesConstants.COURS}${CoursesConstants.PYTHAGORE}`} external>théorème de Pythagore</Link>.
                 Là où dans un triangle <MathJaxInline toShow={"$\\{a, \\; b, \\; c\\}$"} /> rectangle entre <MathJaxInline toShow={"$a$"} /> et <MathJaxInline toShow={"$b$"} /> :
             </p>
             <Container className="Focus">
@@ -40,7 +40,7 @@ const LoiDesCosinus = () => {
                 <MathJaxDisplay toShow={alKashiC}/>
             </Container>
             <ImageZoom src={alKashi} name="Théorème d'Al-Kashi" n={++n}/>
-            <p>La démonstration de ce deux théorèmes se trouve dans le chapitre sur <Link url={`${PagesConstants.COURS}${CoursesConstants.PYTHAGORE}`} external>théorème de Pythagore</Link>.</p>
+            <p>La démonstration de ce deux théorèmes se trouve dans le chapitre sur <Link url={`${PagesConstants.PREFIX}${PagesConstants.COURS}${CoursesConstants.PYTHAGORE}`} external>théorème de Pythagore</Link>.</p>
         </>
     )
 }

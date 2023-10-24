@@ -37,7 +37,7 @@ const Definition = () => {
                 <p>Nous verrons la tangente par la suite. </p>
                 <ImageZoom src={circleTrigo} name="Cosinus et sinus" n={1} />
                 <p>
-                    Dans le cercle trigonométrique, on utilisera <MathJaxInline toShow="$\\pi$" /> comme une mesure d'angle (voir le chapitre sur <Link url={`${PagesConstants.COURS}${CoursesConstants.PI}`} external>le nombre π</Link>), qui vaut <MathJaxInline toShow={"$180°$"} />.
+                    Dans le cercle trigonométrique, on utilisera <MathJaxInline toShow="$\\pi$" /> comme une mesure d'angle (voir le chapitre sur <Link url={`${PagesConstants.PREFIX}${PagesConstants.COURS}${CoursesConstants.PI}`} external>le nombre π</Link>), qui vaut <MathJaxInline toShow={"$180°$"} />.
                     {"\n"}
                     L'unité employéeest le radian, où un tour complet vaut <MathJaxInline toShow={"$2 \\pi$"} /> radians.
                     {"\n"}{"\n"}

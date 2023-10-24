@@ -32,7 +32,7 @@ const EquationDeLaTangente = () => {
 
     return  <>
                 <p>
-                    Prenons l'exemple de <Link url={`${PagesConstants.COURS}${CoursesConstants.DERIVEE}/derivee-de-x-au-carre`} external>la fonction carrée</Link>, définie pour tout <MathJaxInline toShow={"$x \\in \\mathbb{R}$"} />.
+                    Prenons l'exemple de <Link url={`${PagesConstants.COURS}${PagesConstants.PREFIX}${CoursesConstants.DERIVATION}/derivee-de-x-au-carre`} external>la fonction carrée</Link>, définie pour tout <MathJaxInline toShow={"$x \\in \\mathbb{R}$"} />.
                 </p>
                 <MathJaxDisplay toShow={xCarreeAndDeriv} demo /> 
                 <p>Au point <MathJaxInline toShow={"$ x= 1 $"} />, </p>
@@ -42,7 +42,7 @@ const EquationDeLaTangente = () => {
                    {"\n"} Nous pouvons calculer son équation.
                 </p>
                 <p>
-                    Puisque c'est une droite, nous savons que son équation est de type (voir chapitre sur <Link url={`${PagesConstants.COURS}${CoursesConstants.EQ_1_DEG}`} external>les équations du premier degré</Link>) :
+                    Puisque c'est une droite, nous savons que son équation est de type (voir chapitre sur <Link url={`${PagesConstants.COURS}${PagesConstants.PREFIX}${CoursesConstants.EQ_1_DEG}`} external>les équations du premier degré</Link>) :
                 </p>
                 <MathJaxDisplay toShow={g} demo /> 
                 <p>
@@ -66,7 +66,7 @@ const EquationDeLaTangente = () => {
                 </Container>
 
                 <Title1 title={"Inégalité des tangentes"} />
-                <p>Nous avons vu au chapitre sur <Link url={`${PagesConstants.COURS}${CoursesConstants.DERIVEE}/convexite-d-une-fonction`} external>la convexité</Link> qu'une fonction convexe a toujours ses tangentes situées en dessous de sa courbe représentative.</p>
+                <p>Nous avons vu au chapitre sur <Link url={`${PagesConstants.COURS}${PagesConstants.PREFIX}${CoursesConstants.DERIVATION}/convexite-d-une-fonction`} external>la convexité</Link> qu'une fonction convexe a toujours ses tangentes situées en dessous de sa courbe représentative.</p>
                 <p>Soit une fonction <MathJaxInline toShow={"$ f $"} /> convexe sur <MathJaxInline toShow={"$ I = [a, b] $"} />, <MathJaxInline toShow={"$ a $"} /> et <MathJaxInline toShow={"$ b $"} /> deux réels.</p>
                 <p><MathJaxInline toShow={"$ \\forall x \\in I $"} />, </p>
                 <Container className="Focus">

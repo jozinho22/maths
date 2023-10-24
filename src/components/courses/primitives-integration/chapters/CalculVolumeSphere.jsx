@@ -57,7 +57,7 @@ const CalculVolumeSphere = () => {
             <p>
                 Exprimons tout d'abord <MathJaxInline toShow="$x$" /> en fonction de <MathJaxInline toShow="$y$" />.
                 {"\n"}
-                On a avec <Link url={`${PagesConstants.COURS}${CoursesConstants.PYTHAGORE}/presentation`} external>le théorème de Pythagore</Link> :
+                On a avec <Link url={`${PagesConstants.PREFIX}${PagesConstants.COURS}${CoursesConstants.PYTHAGORE}/presentation`} external>le théorème de Pythagore</Link> :
             </p>
             <MathJaxDisplay toShow={pyth} demo />
             <p>Soit</p>

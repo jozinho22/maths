@@ -30,7 +30,7 @@ const PdfTableOfContents = ( {pdfItems} ) => {
                 </NavLink>
             </div> 
             <GenericTableOfContents items={pdfItems} prefix={prefix} title={title} action={action} />
-            <p className="AuthorCopyRight">Avec l'accord de Mr Petit - <Link link={Constants.SAVOIR_SANS_FRONTIERES} external>toutes ses BDs</Link></p>     
+            <p className="AuthorCopyRight">Avec l'accord de Mr Petit - <Link url={Constants.SAVOIR_SANS_FRONTIERES} external>toutes ses BDs</Link></p>     
         </>
     )
 

@@ -24,9 +24,9 @@ const PythagoreAppliqueALatrigo = () => {
     
     return (
             <>
-                <p>Sur la figure 1 du <Link url={`${PagesConstants.COURS}${CoursesConstants.TRIGO}/presentation`} external>premier chapitre sur la trigonométrie</Link> ci-dessous, on voit que nous sommes dans le cas d'un triangle rectangle formé par <MathJaxInline toShow={"$cos(\\alpha)$"} />, <MathJaxInline toShow={"$sin(\\alpha)$"} /> et son hypoténuse <MathJaxInline toShow={"$R$"} />.</p>
+                <p>Sur la figure 1 du <Link url={`${PagesConstants.PREFIX}${PagesConstants.COURS}${CoursesConstants.TRIGO}/presentation`} external>premier chapitre sur la trigonométrie</Link> ci-dessous, on voit que nous sommes dans le cas d'un triangle rectangle formé par <MathJaxInline toShow={"$cos(\\alpha)$"} />, <MathJaxInline toShow={"$sin(\\alpha)$"} /> et son hypoténuse <MathJaxInline toShow={"$R$"} />.</p>
                 <ImageZoom src={circleTrigo} name="Cosinus et sinus" n={1} />
-                <p>Grâce au <Link url={`${PagesConstants.COURS}${CoursesConstants.PYTHAGORE}/presentation`} external>théorème de Pythagore</Link>, on sait que :</p>
+                <p>Grâce au <Link url={`${PagesConstants.PREFIX}${PagesConstants.COURS}${CoursesConstants.PYTHAGORE}/presentation`} external>théorème de Pythagore</Link>, on sait que :</p>
                 <MathJaxDisplay toShow={pyth} demo />
                 <p>Et comme dans le contexte du cercle trigonométrique, le rayon <MathJaxInline toShow={"$ R = 1$"} />, on a alors :</p>
                 <MathJaxDisplay toShow={pyth2} demo />
@@ -38,7 +38,7 @@ const PythagoreAppliqueALatrigo = () => {
                 <MathJaxDisplay toShow={sinCarrePlusCosCarre} demo />
                 <MathJaxDisplay toShow={sinCarrePlusCosCarre2} demo />
                 <MathJaxDisplay toShow={sinCarrePlusCosCarre3} demo />
-                <p>Et on sait que dans un triangle rectangle, grâce au <Link url={`${PagesConstants.COURS}${CoursesConstants.PYTHAGORE}`} external>théorème de Pythagore</Link>, <MathJaxInline toShow={"$ a^2 + b^2 = c^2$"} />, soit : </p>
+                <p>Et on sait que dans un triangle rectangle, grâce au <Link url={`${PagesConstants.PREFIX}${PagesConstants.COURS}${CoursesConstants.PYTHAGORE}`} external>théorème de Pythagore</Link>, <MathJaxInline toShow={"$ a^2 + b^2 = c^2$"} />, soit : </p>
                 <MathJaxDisplay toShow={pyth2} demo />
 
                 <p>On note cette formule en général plutôt comme ceci :</p>

@@ -22,7 +22,7 @@ const LePerimetre = () => {
     return (
         <>
             <p>
-                Le cercle est caractérisé par sa relation avec <Link url={`${PagesConstants.COURS}${CoursesConstants.PI}`} external>le nombre π (Pi)</Link>.
+                Le cercle est caractérisé par sa relation avec <Link url={`${PagesConstants.PREFIX}${PagesConstants.COURS}${CoursesConstants.PI}`} external>le nombre π (Pi)</Link>.
                 π n'est autre que la rapport de la circonférence (périmètre) sur le diamètre.
                 {"\n"}Cette valeur vaut environ 3,14. Mais c'est une valeur approchée...
             </p>

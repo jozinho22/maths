@@ -35,7 +35,7 @@ const DeriveeDeLaReciproque = () => {
                      <MathJaxDisplay toShow={reciproque} />
                      <MathJaxDisplay toShow={reciproque2} />   
                 </Container>
-                <p>On note indifferement <MathJaxInline toShow={"$ f(f^{-1}) $"} /> ou <MathJaxInline toShow={"$ (f \\circ f^{-1}) $"} />, c'est strictement la même chose, <Link url={`${PagesConstants.COURS}${CoursesConstants.DERIVEE}/derivee-de-fonction-composee`} external>une fonction composée</Link>.</p>
+                <p>On note indifferement <MathJaxInline toShow={"$ f(f^{-1}) $"} /> ou <MathJaxInline toShow={"$ (f \\circ f^{-1}) $"} />, c'est strictement la même chose, <Link url={`${PagesConstants.COURS}${PagesConstants.PREFIX}${CoursesConstants.DERIVATION}/derivee-de-fonction-composee`} external>une fonction composée</Link>.</p>
                
                 <p>On peut décortiquer le procédé de la manière suivante :</p>
                 <MathJaxDisplay toShow={reciproqueDecortX} demo/> 

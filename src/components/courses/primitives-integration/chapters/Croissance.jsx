@@ -30,15 +30,14 @@ const Croissance = () => {
                 <p><MathJaxInline toShow={"$ \\forall t \\in [a, b] $"} />, on a : </p>
                 <MathJaxDisplay toShow={ineqfg} demo /> 
                 <MathJaxDisplay toShow={ineqfgDemo} demo /> 
-                <p>Avec <Link url={`${PagesConstants.COURS}${CoursesConstants.PRIMITIVES_INTEGRATION}/positivite`} external>la positivité de l'intégrale</Link> : </p>
+                <p>Avec <Link url={`${PagesConstants.PREFIX}${PagesConstants.COURS}${CoursesConstants.PRIMITIVES_INTEGRATION}/positivite`} external>la positivité de l'intégrale</Link> : </p>
                 <MathJaxDisplay toShow={ineqfgDemo2} demo /> 
-                <p>Avec <Link url={`${PagesConstants.COURS}${CoursesConstants.PRIMITIVES_INTEGRATION}/linearite`} external>la linéarité de l'intégrale</Link> : </p>
+                <p>Avec <Link url={`${PagesConstants.PREFIX}${PagesConstants.COURS}${CoursesConstants.PRIMITIVES_INTEGRATION}/linearite`} external>la linéarité de l'intégrale</Link> : </p>
                 <MathJaxDisplay toShow={ineqfgDemo3} demo /> 
                 <p>Et donc : </p>
                 <Container className="Focus">
                      <MathJaxDisplay toShow={intIneqfg} />  
                 </Container>
-            
             </>
 }
 

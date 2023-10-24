@@ -48,7 +48,7 @@ const CalculVolumeCone = () => {
                 <MathJaxInline toShow={"$y$"}/> sera la hauteur variable jusque <MathJaxInline toShow={"$h$"}/>.
                 {"\n"}{"\n"}La variable <MathJaxInline toShow={"$x$"}/> est alors dépendant du mouvement de <MathJaxInline toShow={"$y$"}/>. C'est cette dernière qui mène la danse.
             </p>
-            <p>Appliquons <Link url={`${PagesConstants.COURS}${CoursesConstants.THALES}/presentation`} external>le théorème de Thalès</Link> dans les deux triangles formés par ces variables.</p>
+            <p>Appliquons <Link url={`${PagesConstants.PREFIX}${PagesConstants.COURS}${CoursesConstants.THALES}/presentation`} external>le théorème de Thalès</Link> dans les deux triangles formés par ces variables.</p>
             <p>On a : </p>
             <MathJaxDisplay toShow={thales} demo />
             <p>Soit :</p>

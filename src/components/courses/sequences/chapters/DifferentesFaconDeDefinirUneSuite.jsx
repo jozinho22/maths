@@ -17,24 +17,24 @@ const DifferentesFaconDeDefinirUneSuite = () => {
     var n = 0;
     var sequencesGen = "\\( \\forall n \\in \\mathbb{N}, \\enspace u_n = f(n)\\)";
    
-    var sequencesExplicite = "\\( \\forall n \\in \\mathbb{N}, \\enspace (u_n = \\frac{(-1)^n}{n+1}) \\)";
-    var sequencesRecur = "\\( \\Biggl\\{ \\begin{gather*} u_0 = -2 \\\\ u_{n + 1} = \\sqrt{u_n + 2}  + 1\\end{gather*} \\)";
-    var sequencesRecur2 = "\\( u_{n+1} = f(u_n) \\enspace avec \\enspace f(x) = \\sqrt{x + 6} \\)";
+    var sequencesExplicite = "\\( \\forall n \\in \\mathbb{N}, \\enspace u_n = \\frac{(-1)^n}{n+1} \\)";
+    var sequencesRecur = "\\( \\Biggl\\{ \\begin{gather*} u_0 = -2 \\\\  \\enspace \\enspace \\enspace u_{n + 1} = \\sqrt{u_n + 2} \\end{gather*} \\)";
+    var sequencesRecur2 = "\\( u_{n+1} = f(u_n) \\enspace avec \\enspace f(x) = \\sqrt{x + 2 } \\)";
 
     return  <>
-                <Title1 title={"Définition explicite"} />
+                <Title1 title={"1) Définition explicite"} />
                 <p>On calcule le terme de rang <MathJaxInline toShow={"$n$"} />, à partir de l'entier <MathJaxInline toShow={"$n$"} />.</p>
                 <p>La suite va se comporter comme la fonction <MathJaxInline toShow={"$f$"} /> correspondante.</p>
                 <Container className="Focus">
                      <MathJaxDisplay toShow={sequencesGen} />  
                 </Container>
-                <p>On peut alors établir <Link url={`${PagesConstants.COURS}${CoursesConstants.DERIVEE}/variations-d-une-fonction`} external>les variations grâce à la dérivée</Link>.</p>
+                <p>On peut alors établir <Link url={`${PagesConstants.PREFIX}${PagesConstants.COURS}${CoursesConstants.DERIVATION}/variations-d-une-fonction`} external>les variations grâce à la dérivée</Link>.</p>
             
                 <Title2 title={"Exemple"} />
                 <MathJaxDisplay toShow={sequencesExplicite} demo /> 
                 <p>On peut calculer les différents termes <MathJaxInline toShow={"$ u_0, u_1,...,u_k$"} />. </p>
 
-                <Title1 title={"Suites récurrentes"} />
+                <Title1 title={"2) Suites récurrentes"} />
                 <p>- on connaît le premier de terme <MathJaxInline toShow={"$u_{n_0}$"} /> de la suite</p>
                 <p>- le terme <MathJaxInline toShow={"$u_{n+1}$"} /> est exprimé en fonction de <MathJaxInline toShow={"$u_{n}$"} />.</p>
                 <Title2 title={"Exemple"} />
@@ -43,9 +43,9 @@ const DifferentesFaconDeDefinirUneSuite = () => {
                 <MathJaxDisplay toShow={sequencesRecur2} demo /> 
                 <p><MathJaxInline toShow={"$ (u_n) $"} /> est la suite récurrente associée à la fonction <MathJaxInline toShow={"$f$"} />.</p>
                 
-                <Title1 title={"Graphiquement"} />
-                <p>On trace la droite d'équation <MathJaxInline toShow={"$  f(x)= x$"} />.</p>
-                <p>Elle va nous server à reporter chaque terme du rang d'après, qui lui-même va devenir l'antécédent du terme de rang suivant, et ainsi de suite.</p>
+                <Title2 title={"Graphiquement"} />
+                <p>On trace la droite d'équation <MathJaxInline toShow={"$  g(x)= x$"} />.</p>
+                <p>Elle va nous servir à reporter chaque terme du rang d'après, qui lui-même va devenir l'antécédent du terme de rang suivant, et ainsi de suite.</p>
                 <ImageZoom src={recurrentSequences} name="Suite récurrente convergente" n={++n} />
                 <p>On aura alors la suite <MathJaxInline toShow={"$ (u_n) $"} /> représenté sur l'axe des abscisses.</p>
                 <p>On pose les deux premiers termes <MathJaxInline toShow={"$ u_{n_0} $"} /> et <MathJaxInline toShow={"$ u_{n_0 + 1} $"} />.</p>

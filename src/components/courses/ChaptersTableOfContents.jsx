@@ -11,7 +11,7 @@ const ChaptersTableOfContents = ( {courseItem} ) => {
 
     return (
         <>
-            <CustomHelmet title={courseItem.title} metaContent={courseItem.metaContent} canonicalUrl={`${Constants.WEB_APP_URL}${PagesConstants.COURS}${courseItem.relativePath}`}/>
+            <CustomHelmet title={courseItem.title} metaContent={courseItem.metaContent} canonicalUrl={`${Constants.WEB_APP_URL}${PagesConstants.PREFIX}${PagesConstants.COURS}${courseItem.relativePath}`}/>
             <div className="FlexButton">
                 <NavLink to={pathBuilder(PagesConstants.COURS)} >
                     <Button className="DefaultButton GreenButton" >

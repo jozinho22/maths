@@ -50,7 +50,7 @@ const DemonstrationDuTheoremeDePythagore = () => {
             <p>Pour prouver la véracité du thèorème, reprenons le triangle précédent, et ajoutons-y la hauteur coupant <MathJaxInline toShow={"$BC$"} /> et <MathJaxInline toShow={"$DE$"} />. </p>
             <ImageZoom src={thalesWithHeight} name="Démonstration du thèorème de Thalès" n={++n} />
             <p>
-               Cela va nous permettre d'y appliquer les lois de <Link url={`${PagesConstants.COURS}${CoursesConstants.TRIGO}`} external>la trigonométrie</Link>.
+               Cela va nous permettre d'y appliquer les lois de <Link url={`${PagesConstants.PREFIX}${PagesConstants.COURS}${CoursesConstants.TRIGO}`} external>la trigonométrie</Link>.
             </p>
 
             <Title2 title={"Trigonométrie dans les triangles de gauche"} />

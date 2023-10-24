@@ -71,7 +71,7 @@ const DemonstrationDeLaReciproque = () => {
             <MathJaxDisplay toShow={gen} demo />
             <MathJaxDisplay toShow={gen2} fRef={1} demo />
             <Aside>
-                <p>On sait grâce au <Link url={`${PagesConstants.COURS}${CoursesConstants.PYTHAGORE}`} external>théorème de Pythagore</Link> que : </p>
+                <p>On sait grâce au <Link url={`${PagesConstants.PREFIX}${PagesConstants.COURS}${CoursesConstants.PYTHAGORE}`} external>théorème de Pythagore</Link> que : </p>
                 <MathJaxDisplay toShow={pythA} demo />
                 <p>Soit</p>
                 <MathJaxDisplay toShow={pythA2} demo />

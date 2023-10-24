@@ -5,9 +5,9 @@ import Title1 from '../../helpers/Title1';
 
 const SuitesBornees = () => {
 
-    var majoration = "\\( \\forall n \\in \\mathbb{N}, u_n \\leq M \\)";
-    var minoration = "\\( \\forall n \\in \\mathbb{N}, u_n \\geq m \\)";
-    var bornee = "\\( \\forall n \\in \\mathbb{N}, m \\leq u_n \\leq M \\)";
+    var majoration = "\\( \\forall n \\in \\mathbb{N}, \\enspace u_n \\leq M \\)";
+    var minoration = "\\( \\forall n \\in \\mathbb{N}, \\enspace u_n \\geq m \\)";
+    var bornee = "\\( \\forall n \\in \\mathbb{N},  \\enspace m \\leq u_n \\leq M \\)";
 
     return  <>
                 <Title1 title={"Définitions"} />
@@ -18,7 +18,7 @@ const SuitesBornees = () => {
                 <p>Une suite est <MathJaxInline toShow={"$ (u_n) $"} /> dite bornée si elle est à la fois majorée et minorée :</p>
                 <MathJaxDisplay toShow={bornee} demo />
 
-                <p>Il peut exister une infinité de majorants (resp. de minorants), on appelle borne supérieure le plus petit de majorants (resp. des minorants). </p>
+                <p>Il peut exister une infinité de majorants (resp. de minorants), on appelle borne supérieure le plus petit de majorants (resp. borne inférieure le plus grand des minorants). </p>
                 <p>On dit que c'est le meilleur majorant (resp. minorant).</p>
 
                 <Title1 title={"Conséquences"} />

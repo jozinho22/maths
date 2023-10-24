@@ -36,7 +36,7 @@ const IntegrationParParties = () => {
                 <p>Cette formule est utile pour calculer diverses intégrales, en choisissant judicieusement <MathJaxInline toShow={"$ f $"} /> et <MathJaxInline toShow={"$ g' $"} />.</p>
 
                 <Title1 title="Démonstration" />
-                <p>Par <Link url={`${PagesConstants.COURS}${CoursesConstants.DERIVEE}/derivee-d-un-produit-de-fonctions`} external>la dérivée d'un produit</Link>, on a :</p>
+                <p>Par <Link url={`${PagesConstants.PREFIX}${PagesConstants.COURS}${CoursesConstants.DERIVATION}/derivee-d-un-produit-de-fonctions`} external>la dérivée d'un produit</Link>, on a :</p>
                 <MathJaxDisplay toShow={intParPartiesDemo} demo />  
                 <MathJaxDisplay toShow={intParPartiesDemo2} demo />  
                 <p>Grâce à la linéarité,</p>

@@ -1,4 +1,5 @@
 const PagesConstants = {
+    PREFIX: '/#',
     HOME: '/',
     COURS: '/cours',
     BDS_DE_JPP: '/bds-de-jpp',

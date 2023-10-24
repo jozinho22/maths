@@ -13,7 +13,7 @@ const ALapuissanceZero = () => {
 
     return (
             <>
-                <p>Avec <Link url={`${PagesConstants.COURS}${CoursesConstants.PUISSANCES}/multiplication-de-puissances`}> cette formule </Link>, on peut dire que : </p>
+                <p>Avec <Link url={`${PagesConstants.PREFIX}${PagesConstants.COURS}${CoursesConstants.PUISSANCES}/multiplication-de-puissances`}> cette formule </Link>, on peut dire que : </p>
                 <MathJaxDisplay toShow={xPow0} demo />
                 <p>Soit </p>
                 <MathJaxDisplay toShow={xPow02} demo />

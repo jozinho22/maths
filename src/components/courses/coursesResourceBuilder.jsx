@@ -108,7 +108,7 @@ function coursesResourceBuilder() {
     var seq = {
       id: i++,
       title: 'Les suites numériques',
-      metaContent: "Les suites numériques : variations, suites arithmétiques, suites géométriques.",
+      metaContent: "Les suites numériques : variations, suites arithmétiques, suites géométriques, sommes de termes.",
       relativePath: CoursesConstants.SEQUENCES,
       chapters: getSequencesChapters()
     }
@@ -132,6 +132,7 @@ function coursesResourceBuilder() {
         trigo,
         derivation,
         primInt,
+        seq,
         pi, 
         nbOr
     );

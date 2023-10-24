@@ -32,7 +32,7 @@ const LoiDesSinus = () => {
                 <MathJaxDisplay toShow={sinusRelation}/> 
             </Container>
             <ImageZoom src={triangleSinusRelation} name="Loi des sinus" n={++n}/>
-            <p>Au cas où vous ne seriez pas familier avec les sinus et cosinus, se référer au chapitre sur <Link url={`${PagesConstants.COURS}${CoursesConstants.TRIGO}`} external>la trigonométrie</Link>.</p>
+            <p>Au cas où vous ne seriez pas familier avec les sinus et cosinus, se référer au chapitre sur <Link url={`${PagesConstants.PREFIX}${PagesConstants.COURS}${CoursesConstants.TRIGO}`} external>la trigonométrie</Link>.</p>
             <p>
                 Ce théorème se démontre simplement.
                 {"\n"}Prenons le même triangle et projetons une hauteur <MathJaxInline toShow={"$h_b$"}/> sur une des longueurs, la longueur <MathJaxInline toShow={"$b$"}/>.

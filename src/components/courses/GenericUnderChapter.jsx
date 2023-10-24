@@ -27,7 +27,7 @@ const GenericUnderChapter = ( {underChapter, chapter, courseItem} ) => {
 
     return (
         <>
-            <CustomHelmet title={underChapter.title} metaContent={underChapter.metaContent} canonicalUrl={`${Constants.WEB_APP_URL}${PagesConstants.COURS}${courseItem.relativePath}${chapter.relativePath}${underChapter.relativePath}`}/>
+            <CustomHelmet title={underChapter.title} metaContent={underChapter.metaContent} canonicalUrl={`${Constants.WEB_APP_URL}${PagesConstants.PREFIX}${PagesConstants.COURS}${courseItem.relativePath}${chapter.relativePath}${underChapter.relativePath}`}/>
             
             <div className="FlexButton">
                 <NavLink to={pathBuilder(`${PagesConstants.COURS}${courseItem.relativePath}${chapter.relativePath}`)}>

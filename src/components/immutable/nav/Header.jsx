@@ -79,7 +79,7 @@ const Header = ( {courseItems, pdfItems, gameItems} ) => {
                             </NavDropdown.Item>
                         </NavDropdown> 
                         <Nav.Item title="Liens" id="nav-item-liens" onClick={() => {retractToggleOnMobile()}} >
-                            <NavLink to={pathBuilder(PagesConstants.LIENS)} >
+                            <NavLink to={pathBuilder(`${PagesConstants.LIENS}`)} >
                                 Liens
                             </NavLink>  
                         </Nav.Item>

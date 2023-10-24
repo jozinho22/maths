@@ -69,7 +69,7 @@ const CalculSurfaceCone = () => {
             <ImageZoom src={coneAreaCalculus} name="Calcul de la surface du cône" n={++n}/>
             <p>Notons <MathJaxInline toShow="$P(x)$" /> le périmètre du cercle en fonction du rayon variable <MathJaxInline toShow="$x$" /></p>
             <MathJaxDisplay toShow={circlePerimX} fRef={1} demo />
-            <p>On a avec <Link url={`${PagesConstants.COURS}${CoursesConstants.THALES}/presentation`} external>le théorème de Thalès</Link> : </p>
+            <p>On a avec <Link url={`${PagesConstants.PREFIX}${PagesConstants.COURS}${CoursesConstants.THALES}/presentation`} external>le théorème de Thalès</Link> : </p>
             <MathJaxDisplay toShow={thales} demo />
             <MathJaxDisplay toShow={thales2} fRef={2} demo />
             <p>Soit en injectant <MathJaxInline toShow={"$(2)$"}/> dans <MathJaxInline toShow={"$(1)$"}/>, on obtient le périmètre en fonction de <MathJaxInline toShow={"$y$"}/> : </p>
@@ -83,7 +83,7 @@ const CalculSurfaceCone = () => {
             <MathJaxDisplay toShow={coneArea} demo />
             <p>On sort les constantes :</p>
             <MathJaxDisplay toShow={coneArea2} fRef={3} demo />
-            <p>Or on voit sur la figure ci-dessous qu'avec <Link url={`${PagesConstants.COURS}${CoursesConstants.PYTHAGORE}/presentation`} external>le théorème de Pythagore</Link> :</p>
+            <p>Or on voit sur la figure ci-dessous qu'avec <Link url={`${PagesConstants.PREFIX}${PagesConstants.COURS}${CoursesConstants.PYTHAGORE}/presentation`} external>le théorème de Pythagore</Link> :</p>
             <MathJaxDisplay toShow={l} demo />
             <MathJaxDisplay toShow={dl} fRef={4} demo />
             <ImageZoom src={coneAreaCalculus2} name="Calcul de la surface du cône (2)" n={++n}/>

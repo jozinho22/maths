@@ -38,7 +38,7 @@ const DeriveeDeLN = () => {
                 <p>Avec la définition formelle de la dérivée, nous avons :</p>
                 <MathJaxDisplay toShow={lnXPrimDemo} demo /> 
                 <p>On ne peut rien faire de spécial avec une formule de cette forme.</p> 
-                <p>Nous allons alors procéder d'une autre manière, en utilisant <Link url={`${PagesConstants.COURS}${CoursesConstants.DERIVEE}/derivee-de-fonction-reciproque`} external>la formule des dérivées de fonctions réciproques</Link>.</p>
+                <p>Nous allons alors procéder d'une autre manière, en utilisant <Link url={`${PagesConstants.COURS}${PagesConstants.PREFIX}${CoursesConstants.DERIVATION}/derivee-de-fonction-reciproque`} external>la formule des dérivées de fonctions réciproques</Link>.</p>
                 
                 <p>Soit <MathJaxInline toShow={"$ g(x) = e^x $"} /> une fonction, et de fait <MathJaxInline toShow={"$ g^{-1}(x) = ln(x) $"} /> sa réciproque.</p>
                 <MathJaxDisplay toShow={reciproqueDerivee} demo /> 

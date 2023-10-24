@@ -34,7 +34,7 @@ const MethodeDeNewton = () => {
                 <ImageZoom src={newtonMethod} name="Une fonction convexe sur un intervalle et sa tangente en un point arbitraire" n={++n} />
                 <p>Nous savons que cette fonction va s'annuler à un moment donné, mais nous ne savons pas exactement pour quelle valeur.</p>
                 <p>Nous allons alors prendre le réel <MathJaxInline toShow={"$ a_0 $"} /> volontairement grand pour que l'on soit sûr que <MathJaxInline toShow={"$ f(a_0) > 0 $"} />.</p>
-                <p>Nous avons représenté <Link url={`${PagesConstants.COURS}${CoursesConstants.DERIVEE}/equation-de-la-tangente`} external >la tangente de cette courbe</Link> au point <MathJaxInline toShow={"$ x = a_0 $"} />, et répondant à l'équation :</p>
+                <p>Nous avons représenté <Link url={`${PagesConstants.COURS}${PagesConstants.PREFIX}${CoursesConstants.DERIVATION}/equation-de-la-tangente`} external >la tangente de cette courbe</Link> au point <MathJaxInline toShow={"$ x = a_0 $"} />, et répondant à l'équation :</p>
                 <MathJaxDisplay toShow={Tao} demo /> 
 
                 <p>On essayer de déterminer lorsque cette fonction s'annule, c'est-à-dire lorsque <MathJaxInline toShow={"$ T_{a_0}(x) = 0 $"} />.</p>

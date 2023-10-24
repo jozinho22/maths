@@ -29,7 +29,7 @@ const SuitesMonotones = () => {
                 <p>Une suite <MathJaxInline toShow={"$(u_n)$"} /> est décroissante si et seulement si <MathJaxInline toShow={"$ u_n \\geq u_{n+1} $"} />.</p>
                 <p>Une suite est monotone lorsqu'elle est croissante ou décroissante.</p>
 
-                <Title1 title={"Différentes méthodes"} />
+                <Title1 title={"Différentes méthodes pour étudier les variations"} />
                 <Title2 title={"1) Différence des termes"} />
                 <p>On étudie le signe de <MathJaxInline toShow={"$ u_{n+1} - u_n$"} />.</p>
                 <p><MathJaxInline toShow={"$ - \\enspace \\underline{cas \\enspace 1 :} \\enspace  u_{n+1} - u_n \\geq 0 $"} />, </p>
@@ -47,10 +47,10 @@ const SuitesMonotones = () => {
                 <p>la suite est décroissante.</p>
                 <p><MathJaxInline toShow={"$ - \\enspace \\underline{cas \\enspace 3 :} \\enspace \\frac{u_{n+1}}{u_n} = 1 $"} />,</p>
                 <p> la suite est dite stationnaire.</p>
-                <p>Cette méthode peut être utile dans le cas de suite géométriques.</p>
+                <p>Cette méthode peut être utile dans le cas de <Link url={`${PagesConstants.PREFIX}${PagesConstants.COURS}${CoursesConstants.SEQUENCES}/suites-geometriques`} external>suites géométriques</Link>.</p>
 
                 <Title2 title={"3) Étude des variations de la fonction"} />
-                <p>Si <MathJaxInline toShow={"$ u_n = f(n) $"} />, on étudie <Link url={`${PagesConstants.COURS}${CoursesConstants.DERIVEE}/variations-d-une-fonction`} external>les variations de la fonction</Link> <MathJaxInline toShow={"$ f $"} /> qui nous indiquera ses variations. </p>
+                <p>Si <MathJaxInline toShow={"$ u_n = f(n) $"} />, on pourra étudier <Link url={`${PagesConstants.PREFIX}${PagesConstants.COURS}${PagesConstants.PREFIX}${CoursesConstants.DERIVATION}/variations-d-une-fonction`} external>les variations de la fonction</Link> <MathJaxInline toShow={"$ f $"} />. </p>
                 
                 <Title1 title={"Exemple"} />
                 <MathJaxDisplay toShow={example1} demo /> 

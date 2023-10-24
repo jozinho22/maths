@@ -6,8 +6,8 @@ import Title2 from '../../helpers/Title2';
 
 const Presentation = () => {
 
-    var sequencesExample = "\\( \\forall n \\in \\mathbb{N}, \\enspace (u_n = 3n+ 2) \\)";
-    var sequencesExample2 = "\\( \\forall n \\in \\mathbb{N}, \\enspace (u_n = \\sqrt{n - 3}), \\enspace avec \\enspace n \\geq 3 \\)";
+    var sequencesExample = "\\( \\forall n \\in \\mathbb{N}, \\enspace u_n = 3n+ 2 \\)";
+    var sequencesExample2 = "\\( \\forall n \\in \\mathbb{N}, \\enspace u_n = \\sqrt{n - 3}, \\enspace avec \\enspace n \\geq 3 \\)";
     
     return  <>
                 <p>
@@ -29,7 +29,7 @@ const Presentation = () => {
                 
                 <Title2 title={"Exemple 2"} />
                 <MathJaxDisplay toShow={sequencesExample2} demo /> 
-                <p>La suite ne peut être déinie qu'à partir d'un certain rang <MathJaxInline toShow={"$ n_0 $"} />.</p>
+                <p>La suite ne peut être déinie qu'à partir d'un certain rang <MathJaxInline toShow={"$ n_0 = 3$"} />.</p>
             </>
 }
 
