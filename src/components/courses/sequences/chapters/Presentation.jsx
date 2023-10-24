@@ -18,7 +18,7 @@ const Presentation = () => {
                 <Title1 title={"Notation"} />
                 <p>Soit une suite numérique.</p>
                 <p>Cette suite se note <MathJaxInline toShow={"$ (u_n) $"} /> ou encore <MathJaxInline toShow={"$ (u_n)_{n \\in \\mathbb{R}} $"} />.</p>
-                <p>On note <MathJaxInline toShow={"$ u_{n_0} $"} /> le premier terme de cette suite. </p>
+                <p>On note <MathJaxInline toShow={"$ u_{n_0} $"} /> le premier terme de cette suite. Sans contraintes particulières, <MathJaxInline toShow={"$ u_{n_0} = 0 $"} /> mais il peut commencer à un autre indice supérieur à <MathJaxInline toShow={"$ 0 $"} />.</p>
 
                 <Title1 title={"Exemple"} />
                 <Title2 title={"Exemple 1"} />

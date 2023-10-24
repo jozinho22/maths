@@ -8,7 +8,6 @@ import CoursesConstants from '../../helpers/CoursesConstants';
 import ImageZoom from '../../helpers/ImageZoom';
 import circleTrigo from '../assets/circleTrigo.png';
 import pythagoreReciproqueDemo from '../../pythagore/assets/pythagoreReciproqueDemo.png';
-import Title2 from '../../helpers/Title2';
 import Title1 from '../../helpers/Title1';
 
 const PythagoreAppliqueALatrigo = () => {

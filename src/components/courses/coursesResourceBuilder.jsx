@@ -133,9 +133,7 @@ function coursesResourceBuilder() {
         derivation,
         primInt,
         pi, 
-        nbOr,
-        process.env.NODE_ENV === 'development' ? seq : <></>
-        /* geo */
+        nbOr
     );
 
     return coursesItems;

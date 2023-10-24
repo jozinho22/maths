@@ -7,7 +7,6 @@ import MathJaxDisplay from '../../../mathjax-display/MathJaxDisplay';
 import tangente from '../assets/tangente.png';
 import circleTrigo2 from '../assets/circleTrigo2.png';
 import tangenteApplication from '../assets/tangenteApplication.png';
-import Title2 from '../../helpers/Title2';
 import Title1 from '../../helpers/Title1';
 
 const LaTangente = () => {

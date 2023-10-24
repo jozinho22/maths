@@ -37,7 +37,7 @@ const SuitesMonotones = () => {
                 <p><MathJaxInline toShow={"$ - \\enspace \\underline{cas \\enspace 2 :} \\enspace  u_{n+1} - u_n \\leq 0 $"} />, </p>
                 <p>la suite est décroissante.</p>
                 <p><MathJaxInline toShow={"$ - \\enspace \\underline{cas \\enspace 3 :} \\enspace  u_{n+1} - u_n = 0 $"} />, </p>
-                <p>la suite est constante.</p>
+                <p>la suite est dite stationnaire.</p>
 
                 <Title2 title={"2) Rapport des termes"} />
                 <p>Si les termes de la suite sont positifs, on étudie le rapport <MathJaxInline toShow={"$ \\frac{u_{n+1}}{u_n} $"} />.</p>
@@ -46,7 +46,7 @@ const SuitesMonotones = () => {
                 <p><MathJaxInline toShow={"$ - \\enspace \\underline{cas \\enspace 2 :} \\enspace \\frac{u_{n+1}}{u_n} \\leq 1 $"} />, </p>
                 <p>la suite est décroissante.</p>
                 <p><MathJaxInline toShow={"$ - \\enspace \\underline{cas \\enspace 3 :} \\enspace \\frac{u_{n+1}}{u_n} = 1 $"} />,</p>
-                <p> la suite est constante.</p>
+                <p> la suite est dite stationnaire.</p>
                 <p>Cette méthode peut être utile dans le cas de suite géométriques.</p>
 
                 <Title2 title={"3) Étude des variations de la fonction"} />
