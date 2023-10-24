@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/maths/static/css/main.3161653f.css",
-    "main.js": "/maths/static/js/main.0fa7af1d.js",
+    "main.js": "/maths/static/js/main.7bc16cf6.js",
     "static/js/27.035b7279.chunk.js": "/maths/static/js/27.035b7279.chunk.js",
     "static/media/energetiquementVotre.pdf": "/maths/static/media/energetiquementVotre.ae46a881d6240ff7c375.pdf",
     "static/media/bigBang.pdf": "/maths/static/media/bigBang.9a7278fe34a3a9cbd1fe.pdf",
@@ -41,7 +41,7 @@
     "static/media/sphereVolCalculus.png": "/maths/static/media/sphereVolCalculus.801808ebc0ce771699ab.png",
     "static/media/integration.png": "/maths/static/media/integration.2ac3b789f5155e800fb3.png",
     "static/media/pythagoreDemo2.png": "/maths/static/media/pythagoreDemo2.d32329243efba6f9043c.png",
-    "static/media/recurrentSequences.png": "/maths/static/media/recurrentSequences.4234f416647c5f888f10.png",
+    "static/media/recurrentSequences.png": "/maths/static/media/recurrentSequences.07a53b851ccaeecdb196.png",
     "static/media/derivativeBetterApprox.png": "/maths/static/media/derivativeBetterApprox.6d439efae4403b496b79.png",
     "static/media/circleAreaCalculus.png": "/maths/static/media/circleAreaCalculus.22c94f07dec374819cde.png",
     "static/media/pythagoreDemo1.png": "/maths/static/media/pythagoreDemo1.6acd81d463369ac1bf19.png",
@@ -82,6 +82,6 @@
   },
   "entrypoints": [
     "static/css/main.3161653f.css",
-    "static/js/main.0fa7af1d.js"
+    "static/js/main.7bc16cf6.js"
   ]
 }
