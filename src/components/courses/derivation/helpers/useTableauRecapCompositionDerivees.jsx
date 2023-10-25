@@ -95,7 +95,7 @@ const useTableauRecapCompositionDerivees = () => {
          {
             id: k++,
             title: "tan(u)",
-            values: ["u'.(1 + tan(u))}"]
+            values: ["u'.(1 + tan^2(u))"]
         }
     )
 

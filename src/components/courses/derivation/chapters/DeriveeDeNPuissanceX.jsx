@@ -40,7 +40,7 @@ const DeriveeDeNPuissanceX = () => {
                 <p>De même, on sait que <MathJaxInline toShow={"$ (e^u)' = u'.e^u $"} /> avec les formules de <Link url={`${PagesConstants.PREFIX}${PagesConstants.COURS}${CoursesConstants.DERIVATION}/tableau-recap-operations-compositions-sur-les-derivees`} external>dérivées composées </Link> :</p>
                 <p><MathJaxInline toShow={"$ n $"} /> étant une constante par rapport à <MathJaxInline toShow={"$ x $"} />, on a </p>
                 <MathJaxDisplay toShow={nPuissanceXPrimDemo4} demo /> 
-                <p>On sait que la fonction <MathJaxInline toShow={"$ e^x $"} /> se comporte comme <Link url={`${PagesConstants.PREFIX}${PagesConstants.COURS}${CoursesConstants.PUISSANCES}`} external>une puissance de x </Link>, nous allons alors utiliser <Link url={`${PagesConstants.PREFIX}${PagesConstants.COURS}${CoursesConstants.PUISSANCES}/puissance-de-puissances`} external>une des formules</Link>:</p>
+                <p>On sait que la fonction <MathJaxInline toShow={"$ e^x $"} /> se comporte comme <Link url={`${PagesConstants.PREFIX}${PagesConstants.COURS}${CoursesConstants.PUISSANCES}`} external>une puissance de x </Link>, nous allons alors utiliser <Link url={`${PagesConstants.PREFIX}${PagesConstants.COURS}${CoursesConstants.PUISSANCES}/puissance-de-puissances-de-x`} external>une des formules</Link>:</p>
                 <MathJaxDisplay toShow={nPuissanceXPrimDemo5} demo /> 
                 <Container className="Focus">
                      <MathJaxDisplay toShow={nPuissanceXPrim} />  

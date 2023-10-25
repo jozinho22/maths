@@ -25,7 +25,7 @@ const SuitesBornees = () => {
                 <p>Une suite croissante est minorée par <MathJaxInline toShow={"$ (u_{n_0}) $"} />.</p>
                 <p>Une suite décroissante est majorée par <MathJaxInline toShow={"$ (u_{n_0}) $"} />.</p>
                 
-                <Title1 title={"Théorème de la convergence"} />
+                <Title1 title={"Théorème de la convergence uniforme"} />
                 <p>Toute suite croissante et majorée converge.</p>
                 <p>De même, toute suite décroissante et minorée converge.</p>
                 

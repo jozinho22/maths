@@ -1,5 +1,9 @@
 import DifferentesFaconDeDefinirUneSuite from "./chapters/DifferentesFaconDeDefinirUneSuite";
+import LimitesDeSuites from "./chapters/LimitesDeSuites";
+import LimitesDeSuitesExtraites from "./chapters/LimitesDeSuitesExtraites";
+import OperationsSurLesLimites from "./chapters/OperationsSurLesLimites";
 import Presentation from "./chapters/Presentation";
+import RaisonnementParRecurrence from "./chapters/RaisonnementParRecurrence";
 import SommeDesNPlus1PremieresPuissanceDeN from "./chapters/SommeDesNPlus1PremieresPuissanceDeN";
 import SommeDesNPlus1PremiersEntiers from "./chapters/SommeDesNPlus1PremiersEntiers";
 import SommeDesNPlus1TermesSuiteArithmetique from "./chapters/SommeDesNPlus1TermesSuiteArithmetique";
@@ -8,6 +12,7 @@ import SuitesArithmetiques from "./chapters/SuitesArithmetiques";
 import SuitesBornees from "./chapters/SuitesBornees";
 import SuitesGeometriques from "./chapters/SuitesGeometriques";
 import SuitesMonotones from "./chapters/SuitesMonotones";
+import TheoremeDeLaConvergenceUniforme from "./chapters/TheoremeDeLaConvergenceUniforme";
 
 const getSequencesChapters = () => {
 
@@ -42,6 +47,13 @@ const getSequencesChapters = () => {
             metaContent: 'Suites bornées : majorants et minorants.',
             relativePath: '/suites-bornees'
         },
+       /*  {
+            id: k++,
+            component: <RaisonnementParRecurrence />,
+            title: 'Raisonnement par récurrence',
+            metaContent: 'Raisonnement par récurrence : exemple avec la dérivée.',
+            relativePath: '/raisonnement-par-récurrence'
+        }, */
         {
             id: k++,
             component: <SuitesArithmetiques />,
@@ -83,7 +95,35 @@ const getSequencesChapters = () => {
             title: 'Somme des (n+1) premiers termes d\'une suite géométrique',
             metaContent: 'Somme des (n+1) premiers termes d\'une suite géométrique.',
             relativePath: '/somme-des-n-plus-1-premiers-termes-d-une-suite-geometrique'
-        }
+        },
+        /* {
+            id: k++,
+            component: <LimitesDeSuites />,
+            title: 'Limites de suites',
+            metaContent: 'Limites de suites : convergence, théorème lié à l\'ordre, étude de fonction.',
+            relativePath: '/limites-de-suites'
+        },
+        {
+            id: k++,
+            component: <TheoremeDeLaConvergenceUniforme />,
+            title: 'Théorème de la convergence uniforme',
+            metaContent: 'Théorème de la convergence uniforme : exemple de calcul de la convergence d\'une suite.',
+            relativePath: '/theoreme-de-la-convergence-uniforme'
+        },
+        {
+            id: k++,
+            component: <LimitesDeSuitesExtraites />,
+            title: 'Limites de suites extraites',
+            metaContent: 'Limites de suites extraites : suites extraites, convergence par complémentarité.',
+            relativePath: '/limites-de-suites-extraites'
+        },
+        {
+            id: k++,
+            component: <OperationsSurLesLimites />,
+            title: 'Opérations sur les limites',
+            metaContent: 'Opérations sur les limites : addition, mulitplication, quotient..etc.',
+            relativePath: '/opérations-sur-les-limites'
+        } */
     ];
 }
 

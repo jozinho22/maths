@@ -7,7 +7,7 @@ const Link = ( {url, external, children} ) => {
             external ?
                 <a 
                     className="Link" 
-                    href={pathBuilder(url)} 
+                    href={url} 
                     target={"_blank"} rel="noreferrer">
                     {children}
                 </a> : 

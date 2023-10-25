@@ -1,19 +1,25 @@
 .App {
     --blue-color: #4365ad;
-    --dark-blue-color: rgb(71, 97, 153);
+    --dark-blue-color: rgb(65, 86, 133);
     --dark-color: rgb(47, 49, 53);
     --green-color: #54854d;
+    --dark-green-color: #4f744b;
     --grey-light-color: rgb(179, 178, 177);
     --grey-lighter-color: rgb(218, 218, 218);
     --grey-lighter-transparent-color: rgba(218, 218, 218, 0.459);
     --grey-light-transparent-color: rgba(138, 137, 137, 0.432);
-    --grey-color: rgb(77, 77, 77);
+    --dark-light-transparent-color: rgba(63, 62, 62, 0.432);
+    --grey-color: rgb(90, 90, 90);
     --grey-dark-color: rgb(77, 78, 78);
     --grey-dark-transparent-color: rgba(77, 78, 78, 0.452);
     --orange-color: #a75a1b;
+    --dark-orange-color: #8f5221;
     --purple-color: rgb(179, 94, 187);
+    --dark-purple-color: rgb(141, 82, 146);
     --red-color: #a34040;
+    --dark-red-color: #a34040;
     --yellow-color: #c9c155;
+    --dark-yellow-color: #c9c155;
     
     --blue-hover-color: rgb(54, 78, 131);
     --green-hover-color: rgb(60, 100, 55);

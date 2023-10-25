@@ -4,6 +4,8 @@ import MathJaxDisplay from '../../../mathjax-display/MathJaxDisplay';
 import MathJaxInline from '../../../mathjax-display/MathJaxInline';
 import Title1 from '../../helpers/Title1';
 import Link from '../../../immutable/nav/Link';
+import PagesConstants from '../../../immutable/nav/PagesConstants';
+import CoursesConstants from '../../helpers/CoursesConstants';
 
 const MultiplicationDePuissances = () => {
 
@@ -22,6 +24,7 @@ const MultiplicationDePuissances = () => {
  */
     var xPowAB = "\\(x^a. x^b = x^{a+b} \\)";
 
+    var xPowAOnXPowBDemo = "\\( \\frac{x^a}{x^b} = x^a.x^{-b} = x^{a - b} \\)";
     var xPowAOnXPowB = "\\( \\frac{x^a}{x^b} = x^{a - b} \\)";
 
     return (
@@ -35,7 +38,7 @@ const MultiplicationDePuissances = () => {
                 </p>
                 
                 <MathJaxDisplay toShow={powTimesPow} demo /* fRef={1} */ />
-                <p>Avec <MathJaxInline toShow={"$a$"} /> et <MathJaxInline toShow={"$b$"} /> des entiers naturels (l'ensemble <MathJaxInline toShow={"$\\mathbb{N}$"} />) .</p>
+                <p>Ici avec <MathJaxInline toShow={"$a$"} /> et <MathJaxInline toShow={"$b$"} /> des entiers naturels (l'ensemble <MathJaxInline toShow={"$\\mathbb{N}$"} />) .</p>
                 
                {/*  <p>Pour vérifier cette formule pour tout <MathJaxInline toShow={"$a$"} /> et <MathJaxInline toShow={"$b$"} /> dans <MathJaxInline toShow={"$\\mathbb{R}$"} />, c'est-à-dire n'importe quel nombre réel, il faut passer par une petite astuce.</p> */}
                 
@@ -56,8 +59,9 @@ const MultiplicationDePuissances = () => {
                     <MathJaxDisplay toShow={"\\( avec \\enspace a \\enspace et \\enspace b \\in \\mathbb{R} \\)"} demo />
                 </Container> 
 
-                <p>On déduit alors de cette formule une formule pour les quotients.</p>
                 <Title1 title={"Quotient de puissances"} />
+                <p>On déduit alors de cette formule et <Link url={`${PagesConstants.PREFIX}${PagesConstants.COURS}${CoursesConstants.PUISSANCES}/inverse-de-puissances-de-x`} external>cette formule</Link>, une formule pour les quotients.</p>
+                <MathJaxDisplay toShow={xPowAOnXPowBDemo} demo />
                 <Container className="Focus"> 
                     <MathJaxDisplay toShow={xPowAOnXPowB}/>
                     <MathJaxDisplay toShow={"\\( avec \\enspace a \\enspace et \\enspace b \\in \\mathbb{R}, \\enspace x \\neq 0 \\)"} demo />

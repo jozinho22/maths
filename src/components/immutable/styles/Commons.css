@@ -127,7 +127,7 @@ a:hover {
 .Darcula .DefaultButton {
     background-color: var(--dark-blue-color);
     border-color: var(--grey-color);
-    color: var(--back-color);
+    color: var(--grey-light-color);
 }
 
 @media (max-width: 450px) {
@@ -151,27 +151,24 @@ a:hover {
     }
 }
 
-.DefaultButton:hover {
+.DefaultButton:hover, .DefaultButton:focus, .DefaultButton:active, .DefaultButton:disabled {
     background-color: var(--blue-hover-color);
     border-color: var(--grey-color);
-}
-
-.Darcula .DefaultButton:hover {
-    background-color: var(--blue-color);
 }
 
 .DefaultButton:focus {
-    background-color: var(--blue-hover-color);
-    border-color: var(--grey-color);
     border-width: 0px;
 }
 
-.Darcula .DefaultButton:focus {
+.DefaultButton:disabled {
+    border-color: var(--grey-color);
+}
+
+.Darcula .DefaultButton:hover, .Darcula .DefaultButton:focus, .Darcula .DefaultButton:active, .Darcula .DefaultButton:disabled {
     background-color: var(--blue-color);
 }
 
-.DefaultButton:disabled {
-    background-color: var(--blue-hover-color);
+.Darcula .DefaultButton:disabled {
     border-color: var(--grey-color);
 }
 
@@ -245,15 +242,35 @@ a:hover {
     background-color: var(--green-color) !important;
 }
 
-.GreenButton:hover, .GreenButton:focus, .GreenButton:active  {
+.GreenButton:hover, .GreenButton:focus, .GreenButton:active, .GreenButton:disabled  {
     background-color: var(--green-hover-color) !important;
+}
+
+.Darcula .GreenButton {
+    background-color: var(--dark-green-color) !important;
+}
+
+.Darcula .GreenButton:hover, .GreenButton:focus, .GreenButton:active, .GreenButton:disabled  {
+    background-color: var(--green-hover-color) !important;
+}
+
+.Darcula .DefaultButton:focus {
+    background-color: var(--blue-color);
 }
 
 .OrangeButton {
     background-color: var(--orange-color) !important;
 }
 
-.OrangeButton:hover, .OrangeButton:focus, .OrangeButton:active {
+.Darcula .OrangeButton {
+    background-color: var(--dark-orange-color) !important;
+}
+
+.OrangeButton:hover, .OrangeButton:focus, .OrangeButton:active, .OrangeButton:disabled {
+    background-color: var(--orange-hover-color) !important;
+}
+
+.Darcula .OrangeButton:hover, .OrangeButton:focus, .OrangeButton:active, .OrangeButton:disabled  {
     background-color: var(--orange-hover-color) !important;
 }
 
@@ -261,7 +278,11 @@ a:hover {
     background-color: var(--red-color) !important;
 }
 
-.RedButton:hover, .RedButton:focus, .RedButton:active {
+.RedButton:hover, .RedButton:focus, .RedButton:active, .RedButton:disabled { 
+    background-color: var(--red-hover-color) !important;
+}
+
+.Darcula .RedButton:hover, .RedButton:focus, .RedButton:active, .RedButton:disabled  {
     background-color: var(--red-hover-color) !important;
 }
 
@@ -389,7 +410,8 @@ a:-webkit-any-link {
 .Darcula .table {
     --bs-table-bg: var(--front-color) !important;
     --bs-table-border-color: var(--simple-text-color) !important;
-    --bs-table-striped-color: var(--simple-text-color);
+    --bs-table-striped-bg: var(--dark-light-transparent-color) !important;
+    --bs-table-striped-color: var(--simple-text-color) !important;
 }
 
 .NiceTableContainer {

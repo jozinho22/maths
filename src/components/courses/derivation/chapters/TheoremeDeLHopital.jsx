@@ -7,9 +7,9 @@ import Title1 from '../../helpers/Title1';
 
 const TheoremeDeLHopital = () => {
 
-    var limFoverG = "\\(lim_{x \\to a} \\enspace \\left( \\frac{f}{g} \\right) \\enspace (avec \\enspace a \\in \\mathbb{R} \\enspace ou \\enspace a = \\pm \\infty) \\)";
+    var limFoverG = "\\(lim_{x \\to a} \\enspace \\frac{f}{g}  \\enspace (avec \\enspace a \\in \\mathbb{R} \\enspace ou \\enspace a = \\pm \\infty) \\)";
 
-    var theoreme = "\\( lim_{x \\to a} \\enspace \\left(\\frac{f}{g} \\right) = lim_{x \\to a} \\enspace \\left(\\frac{f'}{g'}\\right) = l \\enspace\\)";
+    var theoreme = "\\( lim_{x \\to a} \\enspace \\frac{f}{g}  = lim_{x \\to a} \\enspace \\frac{f'}{g'} = l \\enspace\\)";
     var theoremeConditions = "\\( avec \\enspace a \\in \\mathbb{R} \\cup \\left\\{ \\pm \\infty \\right\\}, \\enspace l \\in \\mathbb{R} \\)";
 
     var precaution1 = "\\( a) \\enspace lim_{x \\to a} \\enspace f = lim_{x \\to a} \\enspace g = 0 \\)";
