@@ -1,25 +1,22 @@
 import NiceTable from '../../../immutable/NiceTable';
+import usePhiPuissanceNPlus1Formulas from './usePhiPuissanceNPlus1Formulas';
 
 import MathJaxDisplay from '../../../mathjax-display/MathJaxDisplay';
-import useFibonacciSequenceFormula from './useFibonacciSequenceFormula';
 
-const FibonacciSequenceFormulaTable = () => {
+const PhiPuissanceNPlus1Table = () => {
 
-    var values = useFibonacciSequenceFormula();
-    var phiMain = "\\(F_{n+2} = F_{n+1} + F_{n} \\)";
+    var values = usePhiPuissanceNPlus1Formulas();    
+    var phiGen =  "\\(\\phi^{n+1} =  F_{n+1}.\\phi +  F_{n} \\)";
 
     return (
             <NiceTable>
-                <thead>
+                <thead id="FibonacciFormulasTable">
                     <tr>
                         <th>
                             <MathJaxDisplay toShow={"\\( n \\)"} />
                         </th>
                         <td>
-                            <MathJaxDisplay toShow={phiMain} />
-                        </td>
-                        <td>
-                            <MathJaxDisplay toShow={"\\( Résultat \\)"} />
+                            <MathJaxDisplay toShow={phiGen} />
                         </td>
                     </tr>
                 </thead>
@@ -31,10 +28,7 @@ const FibonacciSequenceFormulaTable = () => {
                             </td>
                             <td>
                                 <MathJaxDisplay toShow={value.formula} /> 
-                            </td> 
-                            <td>
-                                <MathJaxDisplay toShow={`\\( ${value.result} \\)`} /> 
-                            </td> 
+                            </td>  
                         </tr>
                     ))}  
                 </tbody>
@@ -42,4 +36,4 @@ const FibonacciSequenceFormulaTable = () => {
     ); 
 }
 
-export default FibonacciSequenceFormulaTable;
+export default PhiPuissanceNPlus1Table;

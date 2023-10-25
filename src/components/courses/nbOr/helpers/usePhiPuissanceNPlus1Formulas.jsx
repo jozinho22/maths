@@ -1,10 +1,10 @@
 import useFibonacciInBothSenses from './useFibonacciInBothSenses';
 
-const usePhiFormula2 = () => {
+const usePhiPuissanceNPlus1Formulas = () => {
 
     var fibo = useFibonacciInBothSenses();
 
-    var phiFormula2Values = []
+    var phiPuissanceNPlus1Values = []
 
     for(var k = 0; k < fibo.length - 2; k++) {
 
@@ -12,24 +12,24 @@ const usePhiFormula2 = () => {
             continue;
         }
 
-        var fiboFormula2 = "\\("
+        var formula = "\\("
             .concat("\\phi^{" + (fibo[k+ 1].id) + "}")
             .concat(" = ")
             .concat(fibo[k + 1].nb === 1 ? "\\phi" : fibo[k + 1].nb === -1 ? "-\\phi" : fibo[k + 1].nb === 0 ? "" : fibo[k + 1].nb + "\\phi")
             .concat(fibo[k + 1].nb !== 0 && fibo[k].nb > 0 ? " + " + fibo[k].nb : fibo[k].nb === 0 ? "" : fibo[k].nb)
             .concat("\\)")
       
-        phiFormula2Values.push(
+        phiPuissanceNPlus1Values.push(
             {
                 id: fibo[k].id,
-                formula: fiboFormula2,
+                formula: formula,
             }
         );
     
     }
     
-    return phiFormula2Values;
+    return phiPuissanceNPlus1Values;
    
 }
 
-export default usePhiFormula2;
+export default usePhiPuissanceNPlus1Formulas;

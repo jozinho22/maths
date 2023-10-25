@@ -22,7 +22,6 @@ const InterpretationGeometriqueDeLaPrimitive2 = () => {
     var limitsTauxVarResult = "\\(  f(x_0) \\leq A'(x_0) \\leq f(x_0) \\)";
     var gendarmesEquiv = "\\(  f(x_0) = A'(x_0)\\)";
     var gendarmesEquivGen = "\\(  f(x) = A'(x)\\)";
-    var fEquiv = "\\(  F(x) =  A(x) \\)";
 
     var A3bis = "\\(  A_3(x_0) = A(x_0 + h) - A(x_0) \\)";
     var A3bis2 = "\\(  A_3(x_0) = F(x_0 + h) - F(x_0) \\)";

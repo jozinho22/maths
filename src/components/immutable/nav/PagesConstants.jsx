@@ -1,5 +1,5 @@
 const PagesConstants = {
-    PREFIX: '/maths/#',
+    PREFIX: process.env.NODE_ENV === 'production' ? '/maths/#' : '/#',
     HOME: '/',
     COURS: '/cours',
     BDS_DE_JPP: '/bds-de-jpp',

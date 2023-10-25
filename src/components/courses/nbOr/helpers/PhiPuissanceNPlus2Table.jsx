@@ -1,11 +1,11 @@
 import NiceTable from '../../../immutable/NiceTable';
 
 import MathJaxDisplay from '../../../mathjax-display/MathJaxDisplay';
-import usePhiFormula1 from './usePhiFormula1';
+import usePhiPuissanceNPlus2Formulas from './usePhiPuissanceNPlus2Formulas';
 
-const PhiFormula1Table = () => {
+const PhiPuissanceNPlus2Table = () => {
 
-    var values = usePhiFormula1();
+    var values = usePhiPuissanceNPlus2Formulas();
     var phiGen2 =  "\\(\\phi^{n+2} =  \\phi^{n+1} +  \\phi^{n} \\)";
 
     return (
@@ -36,4 +36,4 @@ const PhiFormula1Table = () => {
     ); 
 }
 
-export default PhiFormula1Table;
+export default PhiPuissanceNPlus2Table;

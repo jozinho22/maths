@@ -563,7 +563,12 @@
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://jozinho22.github.io/maths/#/cours/le-nombre-pi/calcul</loc>
+    <loc>https://jozinho22.github.io/maths/#/cours/le-nombre-pi/calcul-par-methode-geometrique</loc>
+    <lastmod>2023-10-22T22:12:00+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://jozinho22.github.io/maths/#/cours/le-nombre-pi/calcul-par-methode-geometrique-2</loc>
     <lastmod>2023-10-22T22:12:00+00:00</lastmod>
     <priority>0.64</priority>
   </url>
@@ -594,17 +599,17 @@
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://jozinho22.github.io/maths/#/cours/le-nombre-d-or/formule-de-la-suite-de-fibonacci</loc>
+    <loc>https://jozinho22.github.io/maths/#/cours/le-nombre-d-or/formules-de-la-suite-de-fibonacci</loc>
     <lastmod>2023-10-22T22:12:00+00:00</lastmod>
     <priority>0.64</priority>
   </url>
     <url>
-    <loc>https://jozinho22.github.io/maths/#/cours/le-nombre-d-or/formule-de-phi-puissance-n-1</loc>
+    <loc>https://jozinho22.github.io/maths/#/cours/le-nombre-d-or/formules-de-phi-puissance-n-plus-1</loc>
     <lastmod>2023-10-22T22:12:00+00:00</lastmod>
     <priority>0.64</priority>
   </url>
     <url>
-    <loc>https://jozinho22.github.io/maths/#/cours/le-nombre-d-or/formule-de-phi-puissance-n-2</loc>
+    <loc>https://jozinho22.github.io/maths/#/cours/le-nombre-d-or/formules-de-phi-puissance-n-plus-2</loc>
     <lastmod>2023-10-22T22:12:00+00:00</lastmod>
     <priority>0.64</priority>
   </url>

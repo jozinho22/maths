@@ -14,6 +14,7 @@ import FibonacciTable from '../helpers/FibonacciTable';
 import Link from '../../../immutable/nav/Link';
 import CoursesConstants from '../../helpers/CoursesConstants';
 import Title1 from '../../helpers/Title1';
+import PagesConstants from '../../../immutable/nav/PagesConstants';
 
 
 const EvolutionDeLapins = () => {
@@ -33,9 +34,9 @@ const EvolutionDeLapins = () => {
                  </p>
                  <ImageZoom src={rabbits} name="Couples de lapins" n={++n} />
                  <p>
-                    {"\n"}Le 1 er mois, un jeune couple de lapins est réuni
-                    {"\n"}Le 2 ème mois, ce couple donne naissance à un couple de lapereaux
-                    {"\n"}{"\n"}Ensuite, les naissances répondent à la règle est la suivante :
+                    {"\n"}Le 1 er mois, un jeune couple de lapins est réuni.
+                    {"\n"}Le 2 ème mois, ce couple donne naissance à un couple de lapereaux.
+                    {"\n"}{"\n"}Ensuite, les naissances répondent à la règle suivante :
                     {"\n"}- Un couple de lapereaux doit attendre un mois avant d’être mature et de pouvoir
                     donner naissance à un couple de lapereaux
                     {"\n"}- Un couple de lapins adultes donne naissance à un couple de lapereaux tous les mois
@@ -73,7 +74,7 @@ const EvolutionDeLapins = () => {
                 <p>
                     Ce nombre est le nombre d’or, autrement appelée la divine proportion, désignée par la
                     lettre grecque <MathJaxInline toShow={"$\\phi$"} /> . 
-                    {"\n"}Un des plus célèbres nombres utilisés dans les mathématiques, notamment avec  <Link url={`${CoursesConstants.NB_OR}/evolutions-de-lapins`} external> le chapitre sur les évolutions de lapins</Link> et <Link url={`${CoursesConstants.PI}`} external>le nombre <MathJaxInline toShow={"$\\pi$"} /></Link> . 
+                    {"\n"}Un des plus célèbres nombres utilisés dans les mathématiques, notamment avec <Link url={`${PagesConstants.PREFIX}${PagesConstants.COURS}${CoursesConstants.PI}/presentation`} external>le nombre <MathJaxInline toShow={"$\\pi$"} /></Link> . 
                     {"\n"}Il est célèbre pour ces fascinantes caractéristiques mais aussi sa présence dans la nature.
                 </p>
                 <UnsplashCopyRight item="Images de lapins" />
