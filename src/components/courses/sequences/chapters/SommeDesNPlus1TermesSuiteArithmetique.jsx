@@ -6,7 +6,7 @@ import Title1 from '../../helpers/Title1';
 
 const SommeDesNPlus1TermesSuiteArithmetique = () => {
 
-     var snGenResult = "\\( \\sum_{k=0}^n \\enspace u_n  = (n+1) \\left( \\frac{u_0 + u_n}{2}\\right) \\)";
+     var snGenResult = "\\( \\sum_{k=0}^n \\enspace u_k  = \\sum_{k=0}^n \\enspace (u_0 + kr)  = (n+1) \\left( \\frac{u_0 + u_n}{2}\\right) \\)";
 
     var sn = "\\( A_n = u_0 + u_1 + u_2 + ...+ u_k + ...+ u_{n-1} + u_n \\)";
     var sn2 = "\\( A_n = u_0 + u_0 + r + u_0 + 2r \\enspace + \\enspace ... \\enspace + \\enspace u_0 + kr \\enspace + \\enspace ... \\enspace + u_0 + (n-1)r + u_0 + nr \\)";

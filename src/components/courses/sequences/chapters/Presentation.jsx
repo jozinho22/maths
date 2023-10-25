@@ -17,10 +17,10 @@ const Presentation = () => {
  
                 <Title1 title={"Notation"} />
                 <p>Soit une suite numérique.</p>
-                <p>Cette suite se note <MathJaxInline toShow={"$ (u_n) $"} /> ou encore <MathJaxInline toShow={"$ (u_n)_{n \\in \\mathbb{R}} $"} />.</p>
-                <p>On note <MathJaxInline toShow={"$ u_{n_0} $"} /> le premier terme de cette suite. Sans contraintes particulières, <MathJaxInline toShow={"$ u_{n_0} = 0 $"} /> mais il peut commencer à un autre indice supérieur à <MathJaxInline toShow={"$ 0 $"} />.</p>
+                <p>Cette suite se note <MathJaxInline toShow={"$ (u_n) $"} /> ou encore <MathJaxInline toShow={"$ (u_n)_{n \\in \\mathbb{N}} $"} />.</p>
+                <p>On note <MathJaxInline toShow={"$ u_{n_0} $"} /> le premier terme de cette suite. Sans contraintes particulières, <MathJaxInline toShow={"$ n_0 = 0 $"} /> mais il peut commencer à un autre indice supérieur à <MathJaxInline toShow={"$ 0 $"} />.</p>
 
-                <Title1 title={"Exemple"} />
+                <Title1 title={"Exemples"} />
                 <Title2 title={"Exemple 1"} />
                 <MathJaxDisplay toShow={sequencesExample} demo /> 
                 <p>On a les premiers termes de la suite suivants : </p>

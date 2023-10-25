@@ -6,16 +6,16 @@ import Title1 from '../../helpers/Title1';
 
 const SommeDesNPlus1TermesSuiteGeometrique = () => {
 
-    var gnGenResult = "\\( \\sum_{k=0}^n \\enspace v_n = v_0.\\frac{q^{n+1} - 1}{q-1} \\)";
+    var gnGenResult = "\\( \\sum_{k=0}^n \\enspace v_k = \\sum_{k=0}^n \\enspace (v_0.q^k) = v_0.\\frac{q^{n+1} - 1}{q-1} \\)";
 
     var gn = "\\( G_n = v_0 + v_1 + v_2 + ...+ v_{n-1} + v_n \\)";
     var gn2 = "\\( G_n = v_0 + v_0.q +  v_0.q^2 + ... + v_0.q^{n-1} + v_0.q^{n}\\)";
     var gn3 = "\\( G_n = v_0 (1 + q + q^2 + ... +q^{n-1} + q^{n}) \\)";
-    var gn4 = "\\( G_n = v_0 .\\left(\\sum_{k=0}^n q^n \\right) \\)";
+    var gn4 = "\\( G_n = v_0 .\\left(\\sum_{k=0}^n q^k \\right) \\)";
     var gn5 = "\\( G_n = v_0 .\\frac{q^{n+1} - 1}{q-1} \\)";
 
     return  <>
-                <p>La somme des <MathJaxInline toShow={"$ (n + 1) $"} /> termes d'une suite géométrique (à savoir de <MathJaxInline toShow={"$ 0$"} /> à <MathJaxInline toShow={"$ n $"} />).</p>
+                <p>La somme des <MathJaxInline toShow={"$ (n + 1) $"} /> termes d'une suite géométrique (à savoir de <MathJaxInline toShow={"$ 0$"} /> à <MathJaxInline toShow={"$ n $"} />) vaut : </p>
                 <Container className="Focus">
                      <MathJaxDisplay toShow={gnGenResult} />  
                 </Container>

@@ -8,8 +8,8 @@ const SommeDesNPlus1PremiersEntiers = () => {
 
     var snGenResult = "\\( \\sum_{k=0}^n \\enspace k = \\frac{n(n+1) }{2} \\)";
 
-    var sn = "\\( S_n = 0 + 1 + 2 + \\enspace ... \\enspace +  (n-1) + n \\)";
-    var sn2 = "\\( S_n = n + (n-1) + \\enspace ... \\enspace + 2 + 1  + 0\\)";
+    var sn = "\\( S_n = \\underbrace{0 + 1 + 2 + \\enspace ... \\enspace +  (n-1) + n} _\\text{(n+1) termes} \\)";
+    var sn2 = "\\( S_n = \\underbrace{n + (n-1) + \\enspace ... \\enspace + 2 + 1  + 0} _\\text{(n+1) termes} \\)";
 
     var sumSn = "\\( 2S_n = n(n+1)  \\)";
     var sumSn2 = "\\( S_n =  \\frac{n(n+1)}{2} \\)";

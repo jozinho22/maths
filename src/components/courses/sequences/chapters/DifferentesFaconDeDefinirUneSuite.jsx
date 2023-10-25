@@ -18,7 +18,7 @@ const DifferentesFaconDeDefinirUneSuite = () => {
     var sequencesGen = "\\( \\forall n \\in \\mathbb{N}, \\enspace u_n = f(n)\\)";
    
     var sequencesExplicite = "\\( \\forall n \\in \\mathbb{N}, \\enspace u_n = \\frac{(-1)^n}{n+1} \\)";
-    var sequencesRecur = "\\( \\Biggl\\{ \\begin{gather*} u_0 = 0 \\\\  \\enspace \\enspace \\enspace u_{n + 1} = \\sqrt{u_n + 2} \\end{gather*} \\)";
+    var sequencesRecur = "\\( \\Biggl\\{ \\begin{gather*} u_0 = 0 \\\\  \\enspace \\enspace \\enspace \\enspace \\enspace u_{n + 1} = \\sqrt{u_n + 2} \\end{gather*} \\)";
     var sequencesRecur2 = "\\( u_{n+1} = f(u_n) \\enspace avec \\enspace f(x) = \\sqrt{x + 2 } \\)";
 
     return  <>
@@ -47,10 +47,11 @@ const DifferentesFaconDeDefinirUneSuite = () => {
                 <p>On trace la droite d'équation <MathJaxInline toShow={"$  g(x)= x$"} />.</p>
                 <p>Elle va nous servir à reporter chaque terme du rang d'après, qui lui-même va devenir l'antécédent du terme de rang suivant, et ainsi de suite.</p>
                 <ImageZoom src={recurrentSequences} name="Suite récurrente convergente" n={++n} />
-                <p>On aura alors la suite <MathJaxInline toShow={"$ (u_n) $"} /> représenté sur l'axe des abscisses.</p>
+                <p>On aura alors la suite <MathJaxInline toShow={"$ (u_n) $"} /> représentée sur l'axe des abscisses.</p>
                 <p>On pose le premier terme <MathJaxInline toShow={"$ u_{n_0} $"} />.</p>
                 <p>Dans notre cas la suite commence à <MathJaxInline toShow={"$ 0 $"} />, ce sera donc le terme <MathJaxInline toShow={"$ u_0 $"} />.</p>
                 <p>Et on reporte tous les autres termes sur l'axe des abscisses pour obtenir le terme suivant de proche en proche.</p>
+                <p>Cette suite est dite convergente car à partir d'un certain rang, tous les termes vont s'agglomérer autour d'une certaine valeur.</p>
             </>
 }
 

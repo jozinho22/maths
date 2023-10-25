@@ -16,12 +16,13 @@ const SommeDesNPlus1PremieresPuissanceDeN = () => {
 
     var qnTelesc = "\\( q.Q_n - Q_n = Q_{n+1} - Q_n = \\sum_{k=0}^{n+1} \\enspace (q^{k + 1} - q^{k}) \\)";
 
-    var qn5 = "\\( q.Q_n - Q_n = \\underline{q + q^2 + q^3 + ... + q^{n}} + q^{n+1} - (q^0 + \\underline{q + q^2 + ... + q^{n-1} + q^{n}}) \\)";
+    var qn5 = "\\( q.Q_n - Q_n =  \\sum_{k=0}^{n+1} \\enspace (q^{k + 1} - q^{k})  \\)";
     var qn6 = "\\( q.Q_n - Q_n = q^{n+1} - q^0 \\)";
     var qn7 = "\\( Q_n = \\frac{q^{n+1} - 1}{q-1}  \\)";
 
-    var telescopage = "\\( (u_n) = \\sum_0^n (a_{n+1} - a_n), (avec \\enspace (a_n) une \\enspace suite)  \\)";
-    var telescopage2 = "\\( \\sum_0^n (a_{n+1} - a_n) = a^{n+1} - a_0\\)";
+    var telescopage = "\\( u_n = \\sum_{k=0}^n (a_{k+1} - a_k), \\enspace (avec \\enspace (a_n) \\enspace une \\enspace suite)  \\)";
+    var telescopage2 = "\\( \\sum_{k=0}^n (a_{k+1} - a_k) = \\underline{a_1 + a_2 + a_3  + ... + ...+ a_n} + a_{n+1} - (a_0 + \\underline{a_1 + a_2  + ... + ...+ a_n}) \\)";
+    var telescopage3 = "\\( \\sum_{k=0}^n (a_{k+1} - a_k) = a^{n+1} - a_0\\)";
 
     return  <>
                 <p>La somme des <MathJaxInline toShow={"$ (n+1) $"} /> premières puissances de <MathJaxInline toShow={"$ n $"} /> (à savoir de <MathJaxInline toShow={"$ 0$"} /> à <MathJaxInline toShow={"$ n $"} />) vaut : </p>
@@ -46,10 +47,11 @@ const SommeDesNPlus1PremieresPuissanceDeN = () => {
                     <MathJaxDisplay toShow={telescopage} demo />
                     <p>Les termes vont un à un s'annihiler et il ne restera que :</p>
                     <MathJaxDisplay toShow={telescopage2} demo />
+                    <MathJaxDisplay toShow={telescopage3} demo />
                 </Aside>
-                <p>Nous allons alors effectuer ce téléscopage.</p>
-
+               
                 <MathJaxDisplay toShow={qn5} demo />
+                 <p>On effectue le téléscopage avec <MathJaxInline toShow={"$ (a_k = q^k) $"} />.</p>
                 <MathJaxDisplay toShow={qn6} demo />
                 <MathJaxDisplay toShow={qn7} demo />
             </>

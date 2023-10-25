@@ -162,6 +162,10 @@
     margin-bottom: 20px;
 }
 
+.Darcula .Aside {
+    background-color: var(--grey-transparent-color);
+}
+
 .CenterTitle {
     margin : 0px auto !important;
     text-decoration: none;

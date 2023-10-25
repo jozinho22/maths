@@ -14,11 +14,11 @@ const LienEntrePuissancesEtRacines = () => {
     var sqrt22 = "\\( x^{n} \\times x^{n} = x^1 \\)";
     var sqrt23 = "\\( x^{n + n} = x^1 \\)";
     var sqrt24 = "\\( x^{2n} = x^1 \\)";
-    var sqrt25 = "\\( 2n = 1 \\Leftrightarrow  n = \\frac{1}{2} \\)";
+    var sqrt25 = "\\( 2n = 1 \\Longleftrightarrow  n = \\frac{1}{2} \\)";
     var sqrt26 = "\\( \\sqrt{x} = x^{\\frac{1}{2}} \\)";
 
     var sqrt3 = "\\( \\sqrt[3]{x} \\times \\sqrt[3]{x} \\times \\sqrt[3]{x} = x \\)";
-    var sqrt32 = "\\( 3n = 1 \\Leftrightarrow  n = \\frac{1}{3} \\)";
+    var sqrt32 = "\\( 3n = 1 \\Longleftrightarrow  n = \\frac{1}{3} \\)";
     var sqrt33 = "\\( \\sqrt[3]{x} = x^{\\frac{1}{3}} \\)";
 
     var sqrtn = "\\( \\sqrt[n]{x} = x^{\\frac{1}{n}} \\)";

@@ -1,7 +1,6 @@
 import DifferentesFaconDeDefinirUneSuite from "./chapters/DifferentesFaconDeDefinirUneSuite";
 import LimitesDeSuites from "./chapters/LimitesDeSuites";
 import LimitesDeSuitesExtraites from "./chapters/LimitesDeSuitesExtraites";
-import OperationsSurLesLimites from "./chapters/OperationsSurLesLimites";
 import Presentation from "./chapters/Presentation";
 import RaisonnementParRecurrence from "./chapters/RaisonnementParRecurrence";
 import SommeDesNPlus1PremieresPuissanceDeN from "./chapters/SommeDesNPlus1PremieresPuissanceDeN";
@@ -13,6 +12,7 @@ import SuitesBornees from "./chapters/SuitesBornees";
 import SuitesGeometriques from "./chapters/SuitesGeometriques";
 import SuitesMonotones from "./chapters/SuitesMonotones";
 import TheoremeDeLaConvergenceUniforme from "./chapters/TheoremeDeLaConvergenceUniforme";
+import TableauRecapOperationsLimitesDeSuites from "./chapters/TableauRecapOperationsLimitesDeSuites";
 
 const getSequencesChapters = () => {
 
@@ -47,13 +47,13 @@ const getSequencesChapters = () => {
             metaContent: 'Suites bornées : majorants et minorants.',
             relativePath: '/suites-bornees'
         },
-       /*  {
+        {
             id: k++,
             component: <RaisonnementParRecurrence />,
             title: 'Raisonnement par récurrence',
             metaContent: 'Raisonnement par récurrence : exemple avec la dérivée.',
             relativePath: '/raisonnement-par-récurrence'
-        }, */
+        },
         {
             id: k++,
             component: <SuitesArithmetiques />,
@@ -96,7 +96,7 @@ const getSequencesChapters = () => {
             metaContent: 'Somme des (n+1) premiers termes d\'une suite géométrique.',
             relativePath: '/somme-des-n-plus-1-premiers-termes-d-une-suite-geometrique'
         },
-        /* {
+        {
             id: k++,
             component: <LimitesDeSuites />,
             title: 'Limites de suites',
@@ -119,11 +119,11 @@ const getSequencesChapters = () => {
         },
         {
             id: k++,
-            component: <OperationsSurLesLimites />,
-            title: 'Opérations sur les limites',
+            component: <TableauRecapOperationsLimitesDeSuites />,
+            title: 'Opérations sur les limites de suites',
             metaContent: 'Opérations sur les limites : addition, mulitplication, quotient..etc.',
             relativePath: '/opérations-sur-les-limites'
-        } */
+        }
     ];
 }
 

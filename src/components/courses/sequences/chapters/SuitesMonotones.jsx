@@ -50,7 +50,7 @@ const SuitesMonotones = () => {
                 <p>Cette méthode peut être utile dans le cas de <Link url={`${PagesConstants.PREFIX}${PagesConstants.COURS}${CoursesConstants.SEQUENCES}/suites-geometriques`} external>suites géométriques</Link>.</p>
 
                 <Title2 title={"3) Étude des variations de la fonction"} />
-                <p>Si <MathJaxInline toShow={"$ u_n = f(n) $"} />, on pourra étudier <Link url={`${PagesConstants.PREFIX}${PagesConstants.COURS}${CoursesConstants.DERIVATION}/variations-d-une-fonction`} external>les variations de la fonction</Link> <MathJaxInline toShow={"$ f $"} />. </p>
+                <p>Si <MathJaxInline toShow={"$ u_n = f(n) $"} />, on pourra étudier <Link url={`${PagesConstants.PREFIX}${PagesConstants.COURS}${CoursesConstants.DERIVATION}/variations-d-une-fonction`} external>les variations de la fonction</Link> <MathJaxInline toShow={"$ f $"} />, et travailler avec un encadrement des termes. </p>
                 
                 <Title1 title={"Exemple"} />
                 <MathJaxDisplay toShow={example1} demo /> 
