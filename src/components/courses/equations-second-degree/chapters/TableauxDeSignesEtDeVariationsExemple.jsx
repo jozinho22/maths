@@ -9,12 +9,9 @@ import CoursesConstants from '../../helpers/CoursesConstants';
 import GenericMathsNiceTable from '../../helpers/GenericMathsNiceTable';
 import useTableauDeSignesDuSecondDegreExempleValues from '../helpers/useTableauDeSignesDuSecondDegreExempleValues';
 import useTableauDeVariationsDuSecondDegreExempleValues from '../helpers/useTableauDeVariationsDuSecondDegreExempleValues';
-import useTableauDeSignesDuSecondDegreGeneriqueValues from '../helpers/useTableauDeSignesDuSecondDegreGeneriqueValues';
 import Title1 from '../../helpers/Title1';
-import Title2 from '../../helpers/Title2';
-import useTableauDeVariationsDuSecondDegreGeneriqueValues from '../helpers/useTableauDeVariationsDuSecondDegreGeneriqueValues';
 
-const TableauxDeSignesEtDeVariations = () => {
+const TableauxDeSignesEtDeVariationsExemple = () => {
 
      var equSecondDeg = "\\(f(x) = 2x^2 -3x + 1 \\)";
      var det = "\\( \\Delta = b^2 - 4c\\)";
@@ -38,14 +35,13 @@ const TableauxDeSignesEtDeVariations = () => {
 
 
     return  <>
-                <Title1 title={"a) Exemple de fonction"} />
-                <p>Prenons une fonction au hasard du second degré avec <MathJaxInline toShow={"$ a, b, c \\neq 0 $"} />. </p>
+                <p>Prenons une fonction au hasard du second degré avec <MathJaxInline toShow={"$ a, b, c \\neq 0, \\enspace (avec \\enspace a, b, c \\in \\mathbb{R}, \\enspace a \\neq 0)$"} />. </p>
                 <MathJaxDisplay toShow={equSecondDeg} demo/>
                 <p>
                     Tentons de résoudre <MathJaxInline toShow={"$ f(x) = 0 $"} /> pour trouver ses racines.
                 </p>
 
-                <Title2 title={"Calcul du déterminant"} />
+                <Title1 title={"Calcul du déterminant"} />
                 <MathJaxDisplay toShow={det} demo/>
                 <MathJaxDisplay toShow={det2} demo/>
                 <MathJaxDisplay toShow={det3} demo/>
@@ -57,14 +53,14 @@ const TableauxDeSignesEtDeVariations = () => {
                 <MathJaxDisplay toShow={x2} demo/>
                 <MathJaxDisplay toShow={x2_2} demo/>           
 
-                <Title2 title={"Écriture sous forme factorisée"} />
+                <Title1 title={"Écriture sous forme factorisée"} />
                 <p>On peut alors écrire notre équation sous la forme factorisée : </p> 
                 <MathJaxDisplay toShow={fact} demo/> 
                 <MathJaxDisplay toShow={fact2} demo/>   
 
                 <p>C'est cette forme qui va nous servir pour faire le tableau de signe :</p>         
                 
-                <Title2 title={"Tableau de signes"} />
+                <Title1 title={"Tableau de signes"} />
                 <GenericMathsNiceTable tableValues={useTableauDeSignesDuSecondDegreExempleValues()} />
                 
                 <p>De plus, on a vu dans <Link url={`${PagesConstants.PREFIX}${PagesConstants.COURS}${CoursesConstants.DERIVATION}/variations-d-une-fonction`} external>le chapitre sur le calcul des variations d'une fonction</Link> qu'on peut trouver ses variations grâce à la dérivée.</p>
@@ -76,18 +72,9 @@ const TableauxDeSignesEtDeVariations = () => {
 
                 <p>Étudions le signe de cette dérivée, puis trouvons les variations de la fonction.</p> 
                 
-                <Title2 title={"Tableau de variations"} />
-                <GenericMathsNiceTable tableValues={useTableauDeVariationsDuSecondDegreExempleValues()} />
-
-                <Title1 title={"b) Cas générique"} />
-                
-                <Title2 title={"Tableau de signes"} />
-                <GenericMathsNiceTable tableValues={useTableauDeSignesDuSecondDegreGeneriqueValues()} />
-
-                <Title2 title={"Tableau de variations"} />
-                <GenericMathsNiceTable tableValues={useTableauDeVariationsDuSecondDegreGeneriqueValues()} />
-                    
+                <Title1 title={"Tableau de variations"} />
+                <GenericMathsNiceTable tableValues={useTableauDeVariationsDuSecondDegreExempleValues()} />             
             </>
 }
 
-export default TableauxDeSignesEtDeVariations;
+export default TableauxDeSignesEtDeVariationsExemple;

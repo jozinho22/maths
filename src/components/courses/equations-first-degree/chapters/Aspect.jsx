@@ -65,7 +65,7 @@ const Aspect = () => {
 
     return  <>
                 <p>
-                    Les fonctions qui sont de type <MathJaxInline toShow={"$f(x) = ax + b$"} /> sont appelées fonctions affines, et forment des droites.
+                    Les fonctions qui sont de type <MathJaxInline toShow={"$f(x) = ax + b \\enspace (avec \\enspace (a,b) \\in \\mathbb{R}, \\enspace a \\neq 0)$"} /> sont appelées fonctions affines, et forment des droites.
                     {"\n"}{"\n"}
                     Dans le cas où <MathJaxInline toShow={"$b = 0$"} />, elles sont alors appelées fonctions linéaires.
                     {"\n"}

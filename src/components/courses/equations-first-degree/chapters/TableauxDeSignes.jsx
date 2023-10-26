@@ -11,6 +11,7 @@ import useTableauDeSignesDuPremierDegreGeneriqueValues from '../helpers/useTable
 const TableauxDeSignes = () => {
 
     return  <>
+                <p>Soit une équation du premier degré : <MathJaxInline toShow={"$f(x) = ax+ b \\enspace (avec \\enspace a, b \\in \\mathbb{R},  \\enspace a \\neq 0)$"} />.</p>              
                 <p>
                     En résolvant l'équation <MathJaxInline toShow={"$ f(x) = 0$"} />, nous obtenons une unique valeur pour <MathJaxInline toShow={"$x$"} />, appellons là <MathJaxInline toShow={"$x_0$"} />.
                 </p>

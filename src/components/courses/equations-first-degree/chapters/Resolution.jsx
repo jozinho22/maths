@@ -10,7 +10,7 @@ import Title1 from '../../helpers/Title1';
 
 const Resolution = () => {
 
-    var equPremierDeg = "\\(f(x) = ax + b = 0, \\enspace avec \\enspace (a,b) \\in \\mathbb{R}\\)";
+    var equPremierDeg = "\\(f(x) = ax + b = 0, \\enspace avec \\enspace (a,b) \\in \\mathbb{R}, \\enspace a \\neq 0\\)";
     var equBase = "\\(f(x) = 2x + 3\\)";
     var equBaseEquals0 = "\\(2x + 3 = 0\\)";
     var equBaseMinus3 = `\\(2x + 3 - 3 = 0 -3 \\)`;

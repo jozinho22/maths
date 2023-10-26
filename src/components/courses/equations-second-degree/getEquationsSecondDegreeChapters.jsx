@@ -1,7 +1,8 @@
 import Resolution from './chapters/Resolution';
 import RelationEntreCoefficientsEtRacines from './chapters/RelationEntreCoefficientsEtRacines';
 import Aspect from './chapters/Aspect';
-import TableauxDeSignesEtDeVariations from './chapters/TableauxDeSignesEtDeVariations';
+import TableauxDeSignesEtDeVariationsExemple from './chapters/TableauxDeSignesEtDeVariationsExemple';
+import TableauxDeSignesEtDeVariationsCasGeneral from './chapters/TableauxDeSignesEtDeVariationsCasGeneral';
 
 const getEquationsSecondDegreeChapters = () => {
 
@@ -31,10 +32,17 @@ const getEquationsSecondDegreeChapters = () => {
         },
         {
             id: k++,
-            component: <TableauxDeSignesEtDeVariations />,
-            title: 'Tableaux de signes et de variations',
-            metaContent: 'Tableaux de signes et de variations.',
-            relativePath: '/tableaux-de-signes-et-de-variations'
+            component: <TableauxDeSignesEtDeVariationsExemple />,
+            title: 'Tableaux de signes et de variations : exemple',
+            metaContent: 'Tableaux de signes et de variations : exemple.',
+            relativePath: '/tableaux-de-signes-et-de-variations-exemple'
+        },
+        {
+            id: k++,
+            component: <TableauxDeSignesEtDeVariationsCasGeneral />,
+            title: 'Tableaux de signes et de variations : cas général',
+            metaContent: 'Tableaux de signes et de variations : cas général.',
+            relativePath: '/tableaux-de-signes-et-de-variations-cas-general'
         }
     ];
 }
