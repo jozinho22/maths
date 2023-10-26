@@ -7,11 +7,15 @@ import CoursesConstants from '../../helpers/CoursesConstants';
 import GenericMathsNiceTable from '../../helpers/GenericMathsNiceTable';
 import useTableauDeSignesDuPremierDegreExempleValues from '../helpers/useTableauDeSignesDuPremierDegreExempleValues';
 import useTableauDeSignesDuPremierDegreGeneriqueValues from '../helpers/useTableauDeSignesDuPremierDegreGeneriqueValues';
+import MathJaxDisplay from '../../../mathjax-display/MathJaxDisplay';
 
 const TableauxDeSignes = () => {
 
+    var equ ="\\(f(x) = ax+ b \\enspace (avec \\enspace a, b \\in \\mathbb{R},  \\enspace a \\neq 0) \\)"
+
     return  <>
-                <p>Soit une équation du premier degré : <MathJaxInline toShow={"$f(x) = ax+ b \\enspace (avec \\enspace a, b \\in \\mathbb{R},  \\enspace a \\neq 0)$"} />.</p>              
+                <p>Soit une équation du premier degré.</p>    
+                <MathJaxDisplay toShow={equ} demo />          
                 <p>
                     En résolvant l'équation <MathJaxInline toShow={"$ f(x) = 0$"} />, nous obtenons une unique valeur pour <MathJaxInline toShow={"$x$"} />, appellons là <MathJaxInline toShow={"$x_0$"} />.
                 </p>

@@ -18,6 +18,8 @@ const Aspect = () => {
 
     var n = 0;
 
+    var equ = "\\(f(x) = ax + b \\enspace (avec \\enspace (a,b) \\in \\mathbb{R}, \\enspace a \\neq 0) \\)";
+
     var tauxVar = "\\(a = \\frac{\\Delta y}{\\Delta x}\\)";
     var tauxVar2 = "\\(a = \\frac{y_b - y_a}{x_b - x_a}\\)";
     var ordAtOrigin = "\\(f(0) = a \\times 0 + b\\)";
@@ -64,8 +66,9 @@ const Aspect = () => {
     }, [a, b, f]); */
 
     return  <>
-                <p>
-                    Les fonctions qui sont de type <MathJaxInline toShow={"$f(x) = ax + b \\enspace (avec \\enspace (a,b) \\in \\mathbb{R}, \\enspace a \\neq 0)$"} /> sont appelées fonctions affines, et forment des droites.
+                <p> Les fonctions qui sont de type: </p>
+                <MathJaxDisplay toShow={equ}  /> 
+                <p>Elles sont appelées fonctions affines, et forment des droites.
                     {"\n"}{"\n"}
                     Dans le cas où <MathJaxInline toShow={"$b = 0$"} />, elles sont alors appelées fonctions linéaires.
                     {"\n"}

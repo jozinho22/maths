@@ -1,3 +1,5 @@
+import getSymbolsChapters from './symbols/getSymbolsChapters';
+
 import getElementaryCalculusChapters from './elementary-calculus/getElementaryCalculusChapters';
 import getPowersChapters from './powers/getPowersChapters';
 import getEquationsFirstDegreeChapters from './equations-first-degree/getEquationsFirstDegreeChapters';
@@ -19,6 +21,14 @@ function coursesResourceBuilder() {
 
     var coursesItems = [];
     var i = 0;
+
+    var symbols = {
+      id: i++,
+      title: 'Les symboles mathématiques',
+      metaContent: "Les symboles mathématiques usuelles.",
+      relativePath: CoursesConstants.SYMBOLS,
+      chapters: getSymbolsChapters()
+    }
 
     var elementaryCalculus = {
       id: i++,
@@ -122,6 +132,7 @@ function coursesResourceBuilder() {
     }
 
     coursesItems.push(
+        symbols,
         elementaryCalculus,
         equationsFirstDegree,
         equationsSecondDegree,

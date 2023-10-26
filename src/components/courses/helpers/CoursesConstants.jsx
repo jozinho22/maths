@@ -1,4 +1,5 @@
 const CoursesConstants = {
+    SYMBOLS: '/les-symboles-mathematiques',
     ELEM_CALCULUS: '/le-calcul-elementaire',
     EQ_1_DEG: '/les-equations-du-premier-degre',
     EQ_2_DEG: '/les-equations-du-second-degre',
