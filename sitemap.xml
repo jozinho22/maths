@@ -14,6 +14,27 @@
     <lastmod>2023-10-22T22:12:00+00:00</lastmod>
     <priority>1.00</priority>
   </url>
+  <!-- Cours : index symboles -->
+  <url>
+    <loc>https://jozinho22.github.io/maths/#/cours/les-symboles-mathematiques</loc>
+    <lastmod>2023-10-22T22:12:00+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://jozinho22.github.io/maths/#/cours/les-symboles-mathematiques/index</loc>
+    <lastmod>2023-10-22T22:12:00+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://jozinho22.github.io/maths/#/cours/les-symboles-mathematiques/index-2</loc>
+    <lastmod>2023-10-22T22:12:00+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://jozinho22.github.io/maths/#/cours/les-symboles-mathematiques/alphabet-grec</loc>
+    <lastmod>2023-10-22T22:12:00+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
   <!-- Cours : calcul élémentaire -->
   <url>
     <loc>https://jozinho22.github.io/maths/#/cours/le-calcul-elementaire</loc>
