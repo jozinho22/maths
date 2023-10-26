@@ -7,7 +7,7 @@ import Title2 from '../../helpers/Title2';
 const Presentation = () => {
 
     var sequencesExample = "\\( \\forall n \\in \\mathbb{N}, \\enspace u_n = 3n+ 2 \\)";
-    var sequencesExample2 = "\\( \\forall n \\in \\mathbb{N}, \\enspace u_n = \\sqrt{n - 3}, \\enspace avec \\enspace n \\geq 3 \\)";
+    var sequencesExample2 = "\\( \\forall n \\in \\mathbb{N}, \\enspace u_n = \\sqrt{n - 3}, \\enspace avec \\enspace n \\geqslant 3 \\)";
     
     return  <>
                 <p>

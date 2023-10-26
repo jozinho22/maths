@@ -11,13 +11,13 @@ const ValeurMoyenne = () => {
 
     var n = 0;
 
-    var mMinequ = "\\(  m \\leq f(x) \\leq M \\)";
-    var mMinequ2 = "\\( \\int_a^b m.dt \\leq \\int_a^b f(t).dt \\leq \\int_a^b M.dt \\)";
-    var mMinequ3 = "\\( [mt]_a^b \\leq \\int_a^b f(t).dt \\leq [Mt]_a^b \\)";
-    var mMinequ4 = "\\( m(b-a) \\leq \\int_a^b f(t).dt \\leq M(b-a) \\)";
+    var mMinequ = "\\(  m \\leqslant f(x) \\leqslant M \\)";
+    var mMinequ2 = "\\( \\int_a^b m.dt \\leqslant \\int_a^b f(t).dt \\leqslant \\int_a^b M.dt \\)";
+    var mMinequ3 = "\\( [mt]_a^b \\leqslant \\int_a^b f(t).dt \\leqslant [Mt]_a^b \\)";
+    var mMinequ4 = "\\( m(b-a) \\leqslant \\int_a^b f(t).dt \\leqslant M(b-a) \\)";
 
     var meanValue = "\\( \\mu = \\frac{1}{b-a}\\int_a^b f(t).dt \\)";
-    var meanValueInequ = "\\( m \\leq \\mu \\leq M\\)";
+    var meanValueInequ = "\\( m \\leqslant \\mu \\leqslant M\\)";
 
     return  <>
                 <p>Soit <MathJaxInline toShow={"$ f $"} /> une fonction continue sur un intervalle <MathJaxInline toShow={"$ I = [a, b] $"} /> et <MathJaxInline toShow={"$ a, b $"} /> deux réels tels que  <MathJaxInline toShow={"$ a < b $"} />.</p>

@@ -27,8 +27,8 @@ const EquationDeLaTangente = () => {
     var eqDroiteA = "\\(f'(a) = \\frac{g(x) - f(a)}{x - a }\\)";
     var eqDroiteGen = "\\(g(x) = f'(a)(x -a ) + f(a)\\)";
 
-    var convexe = "\\( f \\enspace convexe \\Longleftrightarrow f(x) \\geq f'(a)(x -a ) + f(a) \\)";
-    var concave = "\\( f \\enspace concave \\Longleftrightarrow f(x) \\leq f'(a)(x -a ) + f(a) \\)";
+    var convexe = "\\( f \\enspace convexe \\Longleftrightarrow f(x) \\geqslant f'(a)(x -a ) + f(a) \\)";
+    var concave = "\\( f \\enspace concave \\Longleftrightarrow f(x) \\leqslant f'(a)(x -a ) + f(a) \\)";
 
     return  <>
                 <p>

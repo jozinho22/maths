@@ -13,8 +13,8 @@ import ImageZoom from '../../helpers/ImageZoom';
 const TheoremeDeLaConvergenceUniforme = () => {
 
     var n = 0;
-    var convergenceU = "\\( (u_n) \\ croissante \\enspace et \\enspace \\forall n \\in \\mathbb{N}, \\enspace u_n \\leq M \\Longrightarrow (u_n) \\enspace converge \\)";
-    var convergenceUNeg = "\\( (u_n) \\ d \\acute{e} croissante \\enspace et \\enspace \\forall n \\in \\mathbb{N}, \\enspace u_n \\geq m \\Longrightarrow (u_n) \\enspace converge \\)";
+    var convergenceU = "\\( (u_n) \\ croissante \\enspace et \\enspace \\forall n \\in \\mathbb{N}, \\enspace u_n \\leqslant M \\Longrightarrow (u_n) \\enspace converge \\)";
+    var convergenceUNeg = "\\( (u_n) \\ d \\acute{e} croissante \\enspace et \\enspace \\forall n \\in \\mathbb{N}, \\enspace u_n \\geqslant m \\Longrightarrow (u_n) \\enspace converge \\)";
 
     var sequencesRecur = "\\( \\Biggl\\{ \\begin{gather*} u_0 = 0 \\\\  \\enspace \\enspace \\enspace u_{n + 1} = \\sqrt{u_n + 2} \\end{gather*} \\)";
 
@@ -25,7 +25,7 @@ const TheoremeDeLaConvergenceUniforme = () => {
     var enc3 =   "\\( f(u_{n-1}) < f(u_n) \\)";
     var enc4 =   "\\(  u_n < u_{n+1} \\)";
 
-    var hypRecurr = "\\( \\forall n \\geq 0, \\enspace u_k \\leq 2 \\)";
+    var hypRecurr = "\\( \\forall n \\geqslant 0, \\enspace u_k \\leqslant 2 \\)";
 
     var limUnRecurr4 = "\\( l  = f(l) \\)";
 
@@ -74,10 +74,10 @@ const TheoremeDeLaConvergenceUniforme = () => {
                 <Title2 title={"2) Montrer qu'elle est majorée par 2"} />
                 <p>Par <Link url={`${PagesConstants.PREFIX}${PagesConstants.COURS}${CoursesConstants.SEQUENCES}/raisonnement-par-recurrence`} external>récurrence</Link>, on montre que cette proposition <MathJaxInline toShow={"$ P(k) $"} /> est vraie :</p>
                 <MathJaxDisplay toShow={hypRecurr} fRef={"P(k)"} demo />  
-                <p>a) Pour son premier terme : <MathJaxInline toShow={"$ u_0 = 0 \\leq 2  $"} />. <MathJaxInline toShow={"$ P(0) $"} /> est vraie.</p>
+                <p>a) Pour son premier terme : <MathJaxInline toShow={"$ u_0 = 0 \\leqslant 2  $"} />. <MathJaxInline toShow={"$ P(0) $"} /> est vraie.</p>
                 <p>b) On suppose que la proposition <MathJaxInline toShow={"$ P(k) $"} /> est vraie pour son terme de rang <MathJaxInline toShow={"$ k $"} />.</p>
-                <p>c) On montre que <MathJaxInline toShow={"$ P(k) $"} /> est vraie pour son terme de rang <MathJaxInline toShow={"$ (k + 1) $"} />, soit que :  <MathJaxInline toShow={"$ u_{k+1} = f(u_k) \\leq 2 $"} />. </p>
-                <p><MathJaxInline toShow={"$ f $"} /> est croissante donc <MathJaxInline toShow={"$ f(u_k) \\leq f(2) = 2 $"} />.</p>
+                <p>c) On montre que <MathJaxInline toShow={"$ P(k) $"} /> est vraie pour son terme de rang <MathJaxInline toShow={"$ (k + 1) $"} />, soit que :  <MathJaxInline toShow={"$ u_{k+1} = f(u_k) \\leqslant 2 $"} />. </p>
+                <p><MathJaxInline toShow={"$ f $"} /> est croissante donc <MathJaxInline toShow={"$ f(u_k) \\leqslant f(2) = 2 $"} />.</p>
                 <p>Dans l'hypothèse où <MathJaxInline toShow={"$ P(k) $"} /> est vraie au rang <MathJaxInline toShow={"$ k $"} />, elle l'est aussi au rang <MathJaxInline toShow={"$ (k+1) $"} />.</p>
                 <p>Comme <MathJaxInline toShow={"$ P(k) $"} /> est vraie pour son premier terme <MathJaxInline toShow={"$ u_0$"} />, et que si elle est vraie pour son terme de rang <MathJaxInline toShow={"$ k $"} />, elle l'est également pour son terme de rang <MathJaxInline toShow={"$(k+1) $"} />, alors elle est vraie de proche en proche et pour tout <MathJaxInline toShow={"$ k $"} />.</p>
                 <p>Nous venons de montrer par récurrence que <MathJaxInline toShow={"$ (u_n) $"} /> est majorée par <MathJaxInline toShow={"$ m = 2 $"} />.</p>

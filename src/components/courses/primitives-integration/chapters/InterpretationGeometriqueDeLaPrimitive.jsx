@@ -9,7 +9,7 @@ const InterpretationGeometriqueDeLaPrimitive = () => {
 
     var n = 0;
 
-    var fSupO = "\\( \\forall x \\in I, f(x) \\geq 0 \\)";
+    var fSupO = "\\( \\forall x \\in I, f(x) \\geqslant 0 \\)";
 
     var A1 = "\\( A_1 = A(x_0) \\)";
     var A2 = "\\( A_2 = A(x_0 + h) \\)";
@@ -21,8 +21,8 @@ const InterpretationGeometriqueDeLaPrimitive = () => {
                 </p>
                 <MathJaxDisplay toShow={fSupO} demo /> 
                 <ImageZoom src={integration} name="Deux surfaces au dessous de la courbe d'une fonction positive" n={++n} />
-                <p><MathJaxInline toShow={"$ A_1 $"} /> est la surface balayée par tous les points entre l'axe des abscisses et la courbe <MathJaxInline toShow={"$ \\mathcal{C}_f $"} /> pour tout <MathJaxInline toShow={"$ 0 \\leq x \\leq x_0 $"} />.</p>
-                <p><MathJaxInline toShow={"$ A_2 $"} /> est la surface balayée par tous les points entre l'axe des abscisses et la courbe <MathJaxInline toShow={"$ \\mathcal{C}_f $"} /> pour tout <MathJaxInline toShow={"$ 0 \\leq x \\leq x_0 + h $"} />.</p>
+                <p><MathJaxInline toShow={"$ A_1 $"} /> est la surface balayée par tous les points entre l'axe des abscisses et la courbe <MathJaxInline toShow={"$ \\mathcal{C}_f $"} /> pour tout <MathJaxInline toShow={"$ 0 \\leqslant x \\leqslant x_0 $"} />.</p>
+                <p><MathJaxInline toShow={"$ A_2 $"} /> est la surface balayée par tous les points entre l'axe des abscisses et la courbe <MathJaxInline toShow={"$ \\mathcal{C}_f $"} /> pour tout <MathJaxInline toShow={"$ 0 \\leqslant x \\leqslant x_0 + h $"} />.</p>
                 <p>Nous allons exprimer <MathJaxInline toShow={"$ A_1 $"} /> et <MathJaxInline toShow={"$ A_2 $"} /> comme des fonctions surface, dépendantes de <MathJaxInline toShow={"$ x $"} />.</p>
                 <p>On a alors les relations suivantes :</p>
                 <MathJaxDisplay toShow={A1} demo /> 

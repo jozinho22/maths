@@ -10,7 +10,7 @@ import CoursesConstants from '../../helpers/CoursesConstants';
 
 const RaisonnementParRecurrence = () => {
 
-    var proposition = "\\( \\forall n \\geq 1, \\enspace (x^n)' = n.x^{n-1} \\)";
+    var proposition = "\\( \\forall n \\geqslant 1, \\enspace (x^n)' = n.x^{n-1} \\)";
     
     var propositionRang1 = "\\( (x^1)' = (x)' = 1 \\)";
     var propositionRang1Calc = "\\( (x^1)' = 1.x^{1-1} = 1 \\)";

@@ -10,13 +10,13 @@ const Positivite = () => {
 
     var n = 0;
 
-    var intABpos = "\\( f \\enspace continue \\enspace et \\enspace positive \\enspace  sur \\enspace [a, b] \\Longrightarrow \\int_a^b f(t)dt \\geq 0 \\)";
+    var intABpos = "\\( f \\enspace continue \\enspace et \\enspace positive \\enspace  sur \\enspace [a, b] \\Longrightarrow \\int_a^b f(t)dt \\geqslant 0 \\)";
     var FPrim = "\\(F'(t) = f(t) \\)";
-    var FaFb = "\\(  F(a) \\leq F(b)  \\)";
-    var FaFb2 = "\\(  F(b) - F(a) \\geq 0  \\)";
-    var FaFb3 = "\\(  \\Longleftrightarrow \\int_a^b f(t)dt \\geq 0  \\)";
+    var FaFb = "\\(  F(a) \\leqslant F(b)  \\)";
+    var FaFb2 = "\\(  F(b) - F(a) \\geqslant 0  \\)";
+    var FaFb3 = "\\(  \\Longleftrightarrow \\int_a^b f(t)dt \\geqslant 0  \\)";
 
-    var intABneg = "\\( f \\enspace continue \\enspace et \\enspace n \\acute{e} gative \\enspace  sur \\enspace [a, b] \\Longrightarrow \\int_a^b f(t)dt \\leq 0 \\)";
+    var intABneg = "\\( f \\enspace continue \\enspace et \\enspace n \\acute{e} gative \\enspace  sur \\enspace [a, b] \\Longrightarrow \\int_a^b f(t)dt \\leqslant 0 \\)";
 
     var aPlusB = "\\(  A_{totale} = A  + B  \\)";
     var aPlusBInt = "\\(  A_{totale} = \\underbrace { \\int_0^b f(t)dt  } _\\text{partie positive} - \\underbrace {  \\int_a^0 f(t)dt } _\\text{partie négative} \\)";
@@ -30,7 +30,7 @@ const Positivite = () => {
                 </Container>
 
                 <Title1 title={"Démonstration"} />
-                <p><MathJaxInline toShow={"$ f $"} /> continue et <MathJaxInline toShow={"$ \\forall t \\in [a,b], \\enspace f(t) \\geq 0 $"} />.</p>
+                <p><MathJaxInline toShow={"$ f $"} /> continue et <MathJaxInline toShow={"$ \\forall t \\in [a,b], \\enspace f(t) \\geqslant 0 $"} />.</p>
                 <p>Si <MathJaxInline toShow={"$ F $"} /> est une primitive de <MathJaxInline toShow={"$ f $"} /> sur <MathJaxInline toShow={"$ [a,b] $"} />, alors :</p>
                 <p><MathJaxInline toShow={"$ \\forall t \\in [a, b] $"} />,</p>
                 <MathJaxDisplay toShow={FPrim} demo/> 

@@ -15,7 +15,7 @@ const useTableauDeSignesDuPremierDegreGeneriqueValues = () => {
          {
             id: k++,
             title: "f(x) = ax + b",
-            values: ["-\\left[signe \\enspace de \\enspace a \\right]\\infty", "- \\left[signe \\enspace de \\enspace a \\right]", "0", "\\left[signe \\enspace de \\enspace a \\right]", "\\left[signe \\enspace de \\enspace a \\right]\\infty"]
+            values: ["\\left[-(signe \\enspace de \\enspace a) \\right]\\infty", "\\left[-(signe \\enspace de \\enspace a) \\right]", "0", "\\left[signe \\enspace de \\enspace a \\right]", "\\left[signe \\enspace de \\enspace a \\right]\\infty"]
         }
     )
 

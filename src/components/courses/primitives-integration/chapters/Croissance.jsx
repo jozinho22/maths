@@ -9,12 +9,12 @@ import Link from '../../../immutable/nav/Link';
 
 const Croissance = () => {
 
-    var ineqfg = "\\(  f(t) \\leq g(t) \\)";
-    var intIneqfg = "\\(  \\int_a^b f(t)dt \\leq \\int_a^b g(t)dt \\)";
+    var ineqfg = "\\(  f(t) \\leqslant g(t) \\)";
+    var intIneqfg = "\\(  \\int_a^b f(t)dt \\leqslant \\int_a^b g(t)dt \\)";
 
-    var ineqfgDemo = "\\( \\Longleftrightarrow f(t) - g(t) \\leq 0 \\)";
-    var ineqfgDemo2 = "\\( \\Longleftrightarrow  \\int_a^b \\Bigl(f(t) - g(t)\\Bigr) dt \\leq 0 \\)";
-    var ineqfgDemo3 = "\\( \\Longleftrightarrow  \\int_a^b f(t)dt - \\int_a^b g(t) dt \\leq 0 \\)";
+    var ineqfgDemo = "\\( \\Longleftrightarrow f(t) - g(t) \\leqslant 0 \\)";
+    var ineqfgDemo2 = "\\( \\Longleftrightarrow  \\int_a^b \\Bigl(f(t) - g(t)\\Bigr) dt \\leqslant 0 \\)";
+    var ineqfgDemo3 = "\\( \\Longleftrightarrow  \\int_a^b f(t)dt - \\int_a^b g(t) dt \\leqslant 0 \\)";
 
     return  <>
                 <p>Soit <MathJaxInline toShow={"$ f, g $"} /> deux fonctions continues sur un intervalle <MathJaxInline toShow={"$ I = [a, b] $"} /> et <MathJaxInline toShow={"$ a, b $"} /> deux réels.</p>

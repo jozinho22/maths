@@ -11,15 +11,15 @@ const InterpretationGeometriqueDeLaPrimitive2 = () => {
 
     var n = 0;
 
-    var mM = "\\(  \\forall x \\in [x_0, x_0 + h], \\enspace m \\leq f(x) \\leq M\\)";
+    var mM = "\\(  \\forall x \\in [x_0, x_0 + h], \\enspace m \\leqslant f(x) \\leqslant M\\)";
     var mfh = "\\(   m = min[f(x_0), f(x_0 + h)] \\)";
     var Mfh = "\\(  M = max[f(x_0), f(x_0 + h)] \\)";
 
-    var reactA2Relation = "\\(  m.h \\leq A_3 \\leq M.h \\)";
-    var mMtauxVar = "\\(  m \\leq \\frac{A(x_0 + h) - A(x_0)}{h} \\leq M \\)";
-    var mMtauxVar2 = "\\( min[f(x_0), f(x_0 + h)] \\leq \\frac{A(x_0 + h) - A(x_0)}{h} \\leq max[f(x_0), f(x_0 + h)]  \\)";
-    var limitsTauxVar = "\\(  lim_{h \\to 0} \\enspace  min[f(x_0), f(x_0 + h)] \\leq lim_{h \\to 0} \\enspace  \\left( \\frac{A(x_0 + h) - A(x_0)}{h} \\right) \\leq lim_{h \\to 0} \\enspace  max[f(x_0), f(x_0 + h)] \\)";
-    var limitsTauxVarResult = "\\(  f(x_0) \\leq A'(x_0) \\leq f(x_0) \\)";
+    var reactA2Relation = "\\(  m.h \\leqslant A_3 \\leqslant M.h \\)";
+    var mMtauxVar = "\\(  m \\leqslant \\frac{A(x_0 + h) - A(x_0)}{h} \\leqslant M \\)";
+    var mMtauxVar2 = "\\( min[f(x_0), f(x_0 + h)] \\leqslant \\frac{A(x_0 + h) - A(x_0)}{h} \\leqslant max[f(x_0), f(x_0 + h)]  \\)";
+    var limitsTauxVar = "\\(  lim_{h \\to 0} \\enspace  min[f(x_0), f(x_0 + h)] \\leqslant lim_{h \\to 0} \\enspace  \\left( \\frac{A(x_0 + h) - A(x_0)}{h} \\right) \\leqslant lim_{h \\to 0} \\enspace  max[f(x_0), f(x_0 + h)] \\)";
+    var limitsTauxVarResult = "\\(  f(x_0) \\leqslant A'(x_0) \\leqslant f(x_0) \\)";
     var gendarmesEquiv = "\\(  f(x_0) = A'(x_0)\\)";
     var gendarmesEquivGen = "\\(  f(x) = A'(x)\\)";
 

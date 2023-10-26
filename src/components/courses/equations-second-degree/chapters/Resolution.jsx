@@ -2,7 +2,7 @@ import { Container } from 'react-bootstrap';
 import MathJaxDisplay from '../../../mathjax-display/MathJaxDisplay';
 import MathJaxInline from '../../../mathjax-display/MathJaxInline';
 import Aside from '../../helpers/Aside';
-import Title2 from '../../helpers/Title2';
+import Title1 from '../../helpers/Title1';
 
 const Resolution = () => {
 
@@ -53,12 +53,11 @@ const Resolution = () => {
                 <MathJaxDisplay toShow={equSecondDeg} demo />
                 <p>Elles sont définies sur <MathJaxInline toShow={"$\\mathbb{R}$"} />, l'ensemble des réels.</p>
 
-                <p>La résolution d'une équation du second degré va d'abord consister à chercher les racines du pôlynome, à savoir les valeurs de <MathJaxInline toShow={"$x$"} /> pour lesquelles : </p>
+                <p>La résolution d'une équation du second degré va d'abord consister à chercher les racines du pôlynome, à savoir les valeurs de <MathJaxInline toShow={"$x$"} /> pour lesquelles <MathJaxInline toShow={"$f(x) = 0$"} />. </p>
                 <p>On aura alors une forme factorisée qui nous permettra de connaître ses variations.</p>
                 <MathJaxDisplay toShow={equSecondDegEquals0} fRef={1} demo />
                 <p>On factorise l'expression par <MathJaxInline toShow={"$a$"} /> : </p>
                 <MathJaxDisplay toShow={equSecondDegEquals0Fact} fRef={2} demo />
-                <p>On appelle <MathJaxInline toShow={"$(2)$"} /> la forme canonique.</p>
                 
                 <Aside>
                     <p>Or on sait que : </p>
@@ -69,11 +68,12 @@ const Resolution = () => {
                     <MathJaxDisplay toShow={equToFact3} fRef={3} demo />
                 </Aside>
                 
-                <p>On peut alors transformer <MathJaxInline toShow={"$(2)$"} /> en y injectant <MathJaxInline toShow={"$(3)$"} /> : </p>
+                <p>On peut alors transformer <MathJaxInline toShow={"$(3)$"} /> en y injectant <MathJaxInline toShow={"$(2)$"} /> : </p>
                 <MathJaxDisplay toShow={equSecondDegEquals0Fact2} demo />
                 <MathJaxDisplay toShow={equSecondDegEquals0Fact3} demo />
                 <p>Ici, <MathJaxInline toShow={"$a$"} /> est une constante donc elle ne change rien à l'équation, on l'enlève : </p>
-                <MathJaxDisplay toShow={equSecondDegEquals0Fact3WithoutA} demo />
+                <MathJaxDisplay toShow={equSecondDegEquals0Fact3WithoutA} fRef={4} demo />
+                <p>L'équation <MathJaxInline toShow={"$(4)$"} /> est la forme dite canonique.</p>
                 <MathJaxDisplay toShow={equSecondDegEquals0Fact3WithoutA2} demo />
                 
                 <Aside>
@@ -94,17 +94,18 @@ const Resolution = () => {
                 <MathJaxDisplay toShow={delta} demo />
                 <p>On obtient alors notre couple de solutions : </p>
                 <Container className="Focus">
-                    <MathJaxDisplay toShow={x1Calculus3} fRef={4} />
-                    <MathJaxDisplay toShow={x2Calculus3} fRef={5} />
+                    <MathJaxDisplay toShow={x1Calculus3}/>
+                    <MathJaxDisplay toShow={x2Calculus3} />
                 </Container>
                 <p><MathJaxInline toShow={"$x_1$"} /> et <MathJaxInline toShow={"$x_2$"} /> sont alors deux solutions possibles vérifiant <MathJaxInline toShow={"$f(x) = 0$"} />.</p>
                 
-                <Title2 title={"Trois cas possibles :"} />
+                <Title1 title={"Les trois cas possibles"} />
+                <p>Pour que <MathJaxInline toShow={"$ \\sqrt{\\Delta}$"} /> existe, il faut que <MathJaxInline toShow={"$ \\Delta \\geqslant 0$"} />.</p>
                 <p><MathJaxInline toShow={"$\\underline{cas \\enspace 1 : \\Delta > 0}$"} /></p>
                 <p>Dans le cas où <MathJaxInline toShow={"$\\Delta > 0$"} />, l'équation admet bien deux solutions distinctes. </p>
                 <p>On alors peut écrire l'équation <MathJaxInline toShow={"$(1)$"} /> sous la forme : </p>
                 <Container className="Focus">
-                    <MathJaxDisplay toShow={factX1X2} fRef={6} />
+                    <MathJaxDisplay toShow={factX1X2} />
                 </Container>
 
                 <p><MathJaxInline toShow={"$\\underline{cas \\enspace 2 : \\Delta = 0}$"} /></p>
@@ -119,9 +120,9 @@ const Resolution = () => {
                 </Container>
 
                 <p><MathJaxInline toShow={"$\\underline{cas \\enspace 3 : \\Delta < 0}$"} /></p>
-                <p>Dans le cas où <MathJaxInline toShow={"$\\Delta < 0$"} />, l'équation n'a pas de solutions dans <MathJaxInline toShow={"$\\mathbb{R}$"} /> car la fonction <MathJaxInline toShow={"$\\sqrt{x}$"} /> n'est définie que sur <MathJaxInline toShow={"$ [ 0 ; +\\infty[ (\\mathbb{R^+})$"} />. </p>
+                <p>Dans le cas où <MathJaxInline toShow={"$\\Delta < 0$"} />, l'équation n'a pas de solutions dans <MathJaxInline toShow={"$\\mathbb{R}$"} />. </p>
     
-                <Title2 title={"Vérification de la forme factorisée"} />
+                <Title1 title={"Vérification de la forme factorisée"} />
                 <p>Nous allons maintenant redévelopper notre expression pour voir si notre hypothèse s'avère être juste.</p>
                 <p>On injecte <MathJaxInline toShow={"$(4)$"} /> et <MathJaxInline toShow={"$(5)$"} /> dans <MathJaxInline toShow={"$(6)$"} />  : </p>
                 <MathJaxDisplay toShow={factEntirely} demo />

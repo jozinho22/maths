@@ -1,12 +1,16 @@
 import React from 'react';
-import { Button } from 'react-bootstrap';
+/* import { Button } from 'react-bootstrap'; */
 import MathJaxInline from '../../../mathjax-display/MathJaxInline';
-import Title1 from '../../helpers/Title1';
-import FunctionDisplay from '../../usual-functions/helpers/FunctionDisplay';
+/* import Title1 from '../../helpers/Title1';
+import FunctionDisplay from '../../usual-functions/helpers/FunctionDisplay'; */
+import equ2degAspect from '../assets/equ2degAspect.png';
+import ImageZoom from '../../helpers/ImageZoom';
 
 const Aspect = () => {
 
-    const [a, setA] = React.useState(2);
+    var n = 0;
+
+   /*  const [a, setA] = React.useState(2);
     const [b, setB] = React.useState(-3);
     const [c, setC] = React.useState(1);
     const [scale, setScale] = React.useState(12);
@@ -51,14 +55,15 @@ const Aspect = () => {
             x = x + step;
         } 
         setFData(datas);
-    }, [a, b, c, zoomed]);
+    }, [a, b, c, zoomed]); */
 
     return  <>
                 <p>
                     Les fonctions qui sont de type <MathJaxInline toShow={"$f(x) = ax^2 + bx + c $"} /> sont appelées fonctions polynômes, et forment des hyperboles dont <MathJaxInline toShow={"$a$"} /> va déterminer le sens.
                 </p>
+                <ImageZoom src={equ2degAspect} name="Aspect des équations du second degré" n={++n} />
 
-                <Title1 title={"a) Aspect dans un repère"} />
+                {/* <Title1 title={"a) Aspect dans un repère"} />
 
                 <FunctionDisplay f={f} fData={fData} reduced />
 
@@ -82,7 +87,7 @@ const Aspect = () => {
                     <Button className="DefaultButton MiniButton" onClick={() => setC(c - 1)} >-</Button>
                     <MathJaxInline toShow={`$c= ${c}$`} />
                     <Button className="DefaultButton MiniButton" onClick={() => setC(c + 1)} >+</Button>
-                </div>
+                </div> */}
             </>
 }
 

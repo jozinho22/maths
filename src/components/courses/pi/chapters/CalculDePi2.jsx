@@ -6,7 +6,13 @@ import MathJaxInline from '../../../mathjax-display/MathJaxInline';
 import Title1 from '../../helpers/Title1';
 import Title2 from '../../helpers/Title2';
 
+import circlePiCalculus from '../assets/circlePiCalculus.png';
+import ImageZoom from '../../helpers/ImageZoom';
+
+
 const CalculDePi2 = () => {
+
+    var n = 0;
 
     var pi8c = "\\( \\pi \\approx 8c \\)"
     var c = "\\( c^2 = \\left(\\frac{b}{2}\\right)^2 + c_0^2  \\)"
@@ -43,6 +49,8 @@ const CalculDePi2 = () => {
     return (
 
         <>
+            <p>Reprenons la figure précédente, et continuons sur <MathJaxInline toShow="$c$" />.</p>
+            <ImageZoom src={circlePiCalculus} name="Calcul de Pi" n={++n} />
             <Title2 title={"Troisième approximation : par la base du triangle isocèle suivant"} />
             <MathJaxDisplay toShow={pi8c} demo />
             <MathJaxDisplay toShow={c} demo />

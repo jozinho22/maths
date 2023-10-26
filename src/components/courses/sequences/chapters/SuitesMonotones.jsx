@@ -15,35 +15,35 @@ const SuitesMonotones = () => {
     var example13 = "\\( u_{n+1} - u_n = 2^{n+1} + n+1 - (2^n + n) \\)";
     var example14 = "\\( u_{n+1} - u_n = 2^{n+1} - 2^n + 1 \\)";
     var example15 = "\\( u_{n+1} - u_n = 2^n + 1 \\)";
-    var example16 = "\\( u_{n+1} - u_n \\geq 0 \\)";
+    var example16 = "\\( u_{n+1} - u_n \\geqslant 0 \\)";
 
     var example2 = "\\( v_n = \\frac{1}{2^n}\\)";
     var example22 = "\\( v_{n+1} = \\frac{1}{2^{n+1}} \\)";
     var example23 = "\\( \\frac{v_{n+1}}{v_n} = \\frac{\\frac{1}{2^{n+1}}}{ \\frac{1}{2^n}} \\)";
     var example25 = "\\( \\frac{v_{n+1}}{v_n} = \\frac{2^n}{2^{n+1}}    \\)";
     var example26 = "\\( \\frac{v_{n+1}}{v_n} = \\frac{1}{2}    \\)";
-    var example27 = "\\( \\frac{v_{n+1}}{v_n} \\leq 1    \\)";
+    var example27 = "\\( \\frac{v_{n+1}}{v_n} \\leqslant 1    \\)";
 
     return  <>
-                <p>Une suite <MathJaxInline toShow={"$(u_n)$"} /> est croissante si et seulement si <MathJaxInline toShow={"$ u_n \\leq u_{n+1} $"} />.</p>
-                <p>Une suite <MathJaxInline toShow={"$(u_n)$"} /> est décroissante si et seulement si <MathJaxInline toShow={"$ u_n \\geq u_{n+1} $"} />.</p>
+                <p>Une suite <MathJaxInline toShow={"$(u_n)$"} /> est croissante si et seulement si <MathJaxInline toShow={"$ u_n \\leqslant u_{n+1} $"} />.</p>
+                <p>Une suite <MathJaxInline toShow={"$(u_n)$"} /> est décroissante si et seulement si <MathJaxInline toShow={"$ u_n \\geqslant u_{n+1} $"} />.</p>
                 <p>Une suite est monotone lorsqu'elle est croissante ou décroissante.</p>
 
                 <Title1 title={"Différentes méthodes pour étudier les variations"} />
                 <Title2 title={"1) Différence des termes"} />
                 <p>On étudie le signe de <MathJaxInline toShow={"$ u_{n+1} - u_n$"} />.</p>
-                <p><MathJaxInline toShow={"$ - \\enspace \\underline{cas \\enspace 1 :} \\enspace  u_{n+1} - u_n \\geq 0 $"} />, </p>
+                <p><MathJaxInline toShow={"$ - \\enspace \\underline{cas \\enspace 1 :} \\enspace  u_{n+1} - u_n \\geqslant 0 $"} />, </p>
                 <p>la suite est croissante.</p>
-                <p><MathJaxInline toShow={"$ - \\enspace \\underline{cas \\enspace 2 :} \\enspace  u_{n+1} - u_n \\leq 0 $"} />, </p>
+                <p><MathJaxInline toShow={"$ - \\enspace \\underline{cas \\enspace 2 :} \\enspace  u_{n+1} - u_n \\leqslant 0 $"} />, </p>
                 <p>la suite est décroissante.</p>
                 <p><MathJaxInline toShow={"$ - \\enspace \\underline{cas \\enspace 3 :} \\enspace  u_{n+1} - u_n = 0 $"} />, </p>
                 <p>la suite est dite stationnaire.</p>
 
                 <Title2 title={"2) Rapport des termes"} />
                 <p>Si les termes de la suite sont positifs, on étudie le rapport <MathJaxInline toShow={"$ \\frac{u_{n+1}}{u_n} $"} />.</p>
-                <p><MathJaxInline toShow={"$ - \\enspace  \\underline{cas \\enspace 1 :} \\enspace \\frac{u_{n+1}}{u_n} \\geq 1 $"} />,</p>
+                <p><MathJaxInline toShow={"$ - \\enspace  \\underline{cas \\enspace 1 :} \\enspace \\frac{u_{n+1}}{u_n} \\geqslant 1 $"} />,</p>
                 <p> la suite est croissante.</p>
-                <p><MathJaxInline toShow={"$ - \\enspace \\underline{cas \\enspace 2 :} \\enspace \\frac{u_{n+1}}{u_n} \\leq 1 $"} />, </p>
+                <p><MathJaxInline toShow={"$ - \\enspace \\underline{cas \\enspace 2 :} \\enspace \\frac{u_{n+1}}{u_n} \\leqslant 1 $"} />, </p>
                 <p>la suite est décroissante.</p>
                 <p><MathJaxInline toShow={"$ - \\enspace \\underline{cas \\enspace 3 :} \\enspace \\frac{u_{n+1}}{u_n} = 1 $"} />,</p>
                 <p> la suite est dite stationnaire.</p>

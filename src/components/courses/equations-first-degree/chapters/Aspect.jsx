@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Button } from 'react-bootstrap';
+import { Container /*, Button */ } from 'react-bootstrap';
 import MathJaxDisplay from '../../../mathjax-display/MathJaxDisplay';
 import MathJaxInline from '../../../mathjax-display/MathJaxInline';
 import ImageZoom from '../../helpers/ImageZoom';
@@ -9,12 +9,12 @@ import differentsCoefDirecteurs from '../assets/differentsCoefDirecteurs.png';
 import ordonneeAtOrigin from '../assets/ordonneeAtOrigin.png';
 import Title1 from '../../helpers/Title1';
 import Title2 from '../../helpers/Title2';
-import FunctionDisplay from '../../usual-functions/helpers/FunctionDisplay';
+/* import FunctionDisplay from '../../usual-functions/helpers/FunctionDisplay'; */
 
 const Aspect = () => {
 
-    const [a, setA] = React.useState(1);
-    const [b, setB] = React.useState(1);
+    /* const [a, setA] = React.useState(1);
+    const [b, setB] = React.useState(1); */
 
     var n = 0;
 
@@ -29,7 +29,7 @@ const Aspect = () => {
 
     var equForB = "\\(f(x_B) = a.x_B + b \\)";
 
-    var f = 
+    /* const f = React.useMemo(() =>  (
         {
             mathJaxTitle: `${a === 0 || a === 1 || a === -1 ? "" : a} ${a === 0 ? "" : a === -1 ? "-x" : "x"} ${b > 0 && a !== 0 ? "+" : "" } ${b === 0 ? "" : b}`,
             formula: (x) => {return a*x + b},
@@ -38,6 +38,7 @@ const Aspect = () => {
             xInterval: 1,
             aspect: 2
         }
+    ), [a, b]);
 
     const [fData, setFData] = React.useState({});
 
@@ -60,7 +61,7 @@ const Aspect = () => {
             x = x + step;
         } 
         setFData(datas);
-    }, [a, b]);
+    }, [a, b, f]); */
 
     return  <>
                 <p>
@@ -71,9 +72,9 @@ const Aspect = () => {
                     Elles forment aussi des droites et sont de type <MathJaxInline toShow={"$f(x) = ax$"} />.
                 </p>
 
-                <Title1 title={"a) Aspect dans un repère"} />
+                {/* <Title1 title={"a) Aspect dans un repère"} />
 
-                <FunctionDisplay f={f} fData={fData} reduced />
+               <FunctionDisplay f={f} fData={fData} reduced /> 
                 
                 <p>Tentez-vous même de changer les valeurs pour voir comment la droite se comporte dans un repère :</p>
 
@@ -85,17 +86,17 @@ const Aspect = () => {
                     <Button className="DefaultButton MiniButton" onClick={() => setB(b - 1)} >-</Button>
                     <MathJaxInline toShow={`$b= ${b}$`} />
                     <Button className="DefaultButton MiniButton" onClick={() => setB(b + 1)} >+</Button>
-                    {/* <Button className="DefaultButton" >Retracer la courbe</Button> */}
                 </div>
+                */}
 
-                <Title1 title={"b) Explications des nombres a et b"} />
-                <p><MathJaxInline toShow={"$a$"} /> est appelé coefficient directeur, il donnera l'aspect de la droite.</p>
+                <Title1 title={"Explications des nombres a et b"} />
+                <p><MathJaxInline toShow={"$a$"} /> est appelé coefficient directeur, il donnera la direction de la droite.</p>
                 <p><MathJaxInline toShow={"$b$"} /> est appelé l'ordonnée à l'origine, il sera le résultat de <MathJaxInline toShow={"$f(0)$"} />.</p>
                 
                 <Title2 title={"Le coefficient directeur a"} />
                 <p>Le coefficient directeur détermine le taux de variation de la droite, il est aussi appelé pente car comme une pente sur une route, on observe de combien on monte comparé à ce que l'on avance horizontalement.</p>
                 <p>Il se détermine de la manière suivante : </p>
-                <p>Il suffit de prendre deux points <MathJaxInline toShow={"$A(x_a; y_a)$"} /> et <MathJaxInline toShow={"$B(x_b; y_b)$"} /> de la droite, et de calculer le ratio de leur différence.</p>
+                <p>Il suffit de prendre deux points <MathJaxInline toShow={"$A(x_a; y_a)$"} /> et <MathJaxInline toShow={"$B(x_b; y_b)$"} /> de la droite, et de calculer le ratio suivant :</p>
                 <Container className="Focus">
                     <MathJaxDisplay toShow={tauxVar}  /> 
                 </Container>
@@ -104,7 +105,7 @@ const Aspect = () => {
                     <MathJaxDisplay toShow={tauxVar2}  /> 
                 </Container>
                 <ImageZoom src={coefficientDirecteurCalculus} name="Calcul du coefficient directeur" n={++n} />
-                <p>Il n'y pas d'importance ici dans l'ordre des points car si l'on inverse l'ordre, les signes <MathJaxInline toShow={"$-$"} /> s'annuleront au dénominateur et au numérateur.</p>
+                <p>Il n'y pas d'importance ici dans l'ordre des points car si l'on inverse l'ordre, les signes <MathJaxInline toShow={"$(-)$"} /> s'annuleront au dénominateur et au numérateur.</p>
                 
                 <p><MathJaxInline toShow={"$\\underline{cas \\enspace 1 : a > 0}$"} /></p>
                 <p>La droite sera croissante.</p>

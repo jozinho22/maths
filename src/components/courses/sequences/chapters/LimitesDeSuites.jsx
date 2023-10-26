@@ -16,23 +16,23 @@ const LimitesDeSuites = () => {
     var limUnRecurr2 = "\\( lim_{n \\to +\\infty} \\enspace (u_n)  = l = f(l) \\)";
     var limUnRecurr4 = "\\( l  = f(l) \\)";
 
-    var pos = "\\( u_n > 0 \\enspace et \\enspace (u_n) \\enspace converge \\enspace vers \\enspace l \\Longrightarrow l \\geq 0 \\)";
+    var pos = "\\( u_n > 0 \\enspace et \\enspace (u_n) \\enspace converge \\enspace vers \\enspace l \\Longrightarrow l \\geqslant 0 \\)";
     var comp = "\\( lim_{n \\to +\\infty} \\enspace (u_n) = +\\infty \\enspace et \\enspace \\underbrace{v_n > u_n} _\\text{ à partir d'un certain rang},  \\enspace alors \\enspace lim_{h \\to +\\infty} \\enspace (v_n) = +\\infty \\)";
     var comp2 = "\\( lim_{n \\to +\\infty} \\enspace (u_n) = -\\infty \\enspace et \\enspace \\underbrace{v_n < u_n} _\\text{ à partir d'un certain rang},  \\enspace alors \\enspace lim_{h \\to +\\infty} \\enspace (v_n) = -\\infty \\)";
-    var gendarmes = "\\(  (u_n) \\enspace et \\enspace  (v_n) \\enspace convergent \\enspace vers \\enspace l \\enspace et \\enspace  \\underbrace{u_n \\leq w_n \\leq v_n} _\\text{ à partir d'un certain rang},  \\enspace alors \\enspace w_n \\enspace converge \\enspace vers \\enspace l \\)";
+    var gendarmes = "\\(  (u_n) \\enspace et \\enspace  (v_n) \\enspace convergent \\enspace vers \\enspace l \\enspace et \\enspace  \\underbrace{u_n \\leqslant w_n \\leqslant v_n} _\\text{ à partir d'un certain rang},  \\enspace alors \\enspace w_n \\enspace converge \\enspace vers \\enspace l \\)";
 
     var exemple = "\\( u_n = \\sum_1^n \\enspace \\frac{1}{n^2 + k} \\)";
     var exemple2 = "\\( u_n = \\underbrace{\\frac{1}{n^2 + 1} + \\frac{1}{n^2 + 2} + ... + \\frac{1}{n^2 + n}} _\\text{n termes} \\)";
     
-    var exemple3 = "\\( 1 \\leq k \\leq n \\)";
-    var exemple4 = "\\( \\Longleftrightarrow n^2 + 1 \\leq n^2 + k \\leq n^2 + n \\)";
-    var exemple5 = "\\( \\Longleftrightarrow \\frac{1}{n^2 + 1} \\geq \\frac{1}{n^2 + k} \\geq \\frac{1}{n^2 + 1} \\)";
+    var exemple3 = "\\( 1 \\leqslant k \\leqslant n \\)";
+    var exemple4 = "\\( \\Longleftrightarrow n^2 + 1 \\leqslant n^2 + k \\leqslant n^2 + n \\)";
+    var exemple5 = "\\( \\Longleftrightarrow \\frac{1}{n^2 + 1} \\geqslant \\frac{1}{n^2 + k} \\geqslant \\frac{1}{n^2 + 1} \\)";
 
-    var exemple7 = "\\( (k = 1) \\enspace \\frac{1}{n^2 + 1} \\geq \\frac{1}{n^2 + 1} \\geq \\frac{1}{n^2 + 1} \\)";
-    var exemple8 = "\\( (k = 2) \\enspace \\frac{1}{n^2 + 1} \\geq \\frac{1}{n^2 + 2} \\geq \\frac{1}{n^2 + 1} \\)";
-    var exemple9 = "\\( (k = n) \\enspace \\frac{1}{n^2 + 1} \\geq \\frac{1}{n^2 + n} \\geq \\frac{1}{n^2 + 1} \\)";
-    var exemple10 = "\\( \\frac{n}{n^2 + 1} \\geq \\sum_1^n \\enspace \\frac{1}{n^2 + k} \\geq \\frac{n}{n^2 + 1} \\)";
-    var exemple11 = "\\( \\Longleftrightarrow \\frac{n}{n^2 + 1} \\geq u_n \\geq \\frac{n}{n^2 + 1} \\)";
+    var exemple7 = "\\( (k = 1) \\enspace \\frac{1}{n^2 + 1} \\geqslant \\frac{1}{n^2 + 1} \\geqslant \\frac{1}{n^2 + 1} \\)";
+    var exemple8 = "\\( (k = 2) \\enspace \\frac{1}{n^2 + 1} \\geqslant \\frac{1}{n^2 + 2} \\geqslant \\frac{1}{n^2 + 1} \\)";
+    var exemple9 = "\\( (k = n) \\enspace \\frac{1}{n^2 + 1} \\geqslant \\frac{1}{n^2 + n} \\geqslant \\frac{1}{n^2 + 1} \\)";
+    var exemple10 = "\\( \\frac{n}{n^2 + 1} \\geqslant \\sum_1^n \\enspace \\frac{1}{n^2 + k} \\geqslant \\frac{n}{n^2 + 1} \\)";
+    var exemple11 = "\\( \\Longleftrightarrow \\frac{n}{n^2 + 1} \\geqslant u_n \\geqslant \\frac{n}{n^2 + 1} \\)";
 
     var exemple12 = "\\( \\Biggl\\{ \\begin{gather*} \\enspace \\enspace \\enspace \\enspace \\enspace \\enspace \\enspace lim_{n \\to +\\infty} \\enspace \\frac{n}{n^2 + n} = lim_{n \\to +\\infty} \\enspace \\frac{1}{n}  = 0 \\\\ lim_{n \\to +\\infty} \\enspace \\frac{n}{n^2 + 1} = 0 \\end{gather*} \\)";
     var exemple13 = "\\( lim_{n \\to +\\infty} \\enspace \\frac{n}{n^2 + 1} = 0 \\)";

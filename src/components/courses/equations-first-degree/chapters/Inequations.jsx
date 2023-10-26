@@ -13,6 +13,9 @@ const Inequations = () => {
     var equBase = "\\(f(x) = 2x + 3\\)";
     var equBaseWithMinus = "\\(f(x) = -2x + 3\\)";
 
+    var equResultGen = `\\(ax + b \\leqslant 0 \\Longrightarrow x  \\leqslant -\\frac{b}{a} \\)`; 
+    var equResultGen2 = `\\(ax + b \\geqslant 0 \\Longrightarrow x  \\geqslant -\\frac{b}{a} \\)`;
+
     var equBaseLessThanOrEquals0 = "\\(2x + 3 \\leqslant 0\\)";
     var equBaseLessThanOrEquals0WithMinus = "\\(-2x + 3 \\leqslant 0\\)";
 
@@ -26,7 +29,7 @@ const Inequations = () => {
     var equBaseMinus32divBy2WithMinus = `\\(\\frac{-2x}{-2} \\leqslant \\frac{-3}{-2} \\)`;
 
     var equBaseMinus32divBy22 = "\\(x \\leqslant -\\frac{3}{2} \\)";
-    var equBaseMinus32divBy22WithMinus = "\\(x \\geqslant -\\frac{3}{2} \\)";
+    var equBaseMinus32divBy22WithMinus = "\\(x \\geqslant \\frac{3}{2} \\)";
 
     var exampleWithReels = "\\(3 \\leqslant 6\\)";
     var exampleWithReelsMultByNegativeNumber = `\\(3 \\times (-4) \\leqslant 6 \\times (-4)\\)`;
@@ -60,12 +63,12 @@ const Inequations = () => {
                 <MathJaxDisplay toShow={equBaseMinus32divBy2} demo />
                 <p>Soit :</p>
                 <MathJaxDisplay toShow={equBaseMinus32divBy22} demo />
-                <p>En conclusion :</p>
-            
+                <p>En conclusion, <MathJaxInline toShow={"$2x + 3 \\leqslant 0$"} /> lorsque  <MathJaxInline toShow={"$x \\leqslant -\\frac{3}{2}$"} />. </p>
+                <p>Et plus généralement : </p>
+
                 <Container className="Focus">
-                    <MathJaxDisplay toShow={equBaseLessThanOrEquals0} />
-                    <MathJaxDisplay toShow={"$Lorsque$"} />
-                    <MathJaxDisplay toShow={equBaseMinus32divBy22} />
+                    <MathJaxDisplay toShow={equResultGen} />
+                    <MathJaxDisplay toShow={equResultGen2} />
                 </Container>
 
                 <Title1 title={"b) Subtilité par rapport aux équations"} />
@@ -79,18 +82,12 @@ const Inequations = () => {
                 
                 <p>Reprenons le calcul, nous avons comme hypothèse :</p>
                 <MathJaxDisplay toShow={equBaseLessThanOrEquals0WithMinus} demo />
-                <p>En retirant <MathJaxInline toShow={"$3$"} /> ça ne change rien.</p>
                 <MathJaxDisplay toShow={equBaseMinus3WithMinus} demo />
                 <MathJaxDisplay toShow={equBaseMinus32WithMinus} demo />
                 <MathJaxDisplay toShow={equBaseMinus32divBy2WithMinus} demo />
                 <p>Ici le signe va changer.</p>
                 <MathJaxDisplay toShow={equBaseMinus32divBy22WithMinus} demo />
-                <Container className="Focus">
-                    <MathJaxDisplay toShow={equBaseLessThanOrEquals0WithMinus} />
-                    <MathJaxDisplay toShow={"$Lorsque$"} />
-                    <MathJaxDisplay toShow={equBaseMinus32divBy22WithMinus} />
-                </Container>
-
+                <p>En conclusion, lorsque l'on multiplie ou divise par un nombre négatif, on doit changer les sens de l'inéquation.</p>
                 <Title2 title={"Explications"} />
                 <p>Supposons une situation avec des nombres réels, par exemple :</p>
                 <MathJaxDisplay toShow={exampleWithReels} demo />

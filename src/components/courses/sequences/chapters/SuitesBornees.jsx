@@ -5,9 +5,9 @@ import Title1 from '../../helpers/Title1';
 
 const SuitesBornees = () => {
 
-    var majoration = "\\( \\forall n \\in \\mathbb{N}, \\enspace u_n \\leq M \\)";
-    var minoration = "\\( \\forall n \\in \\mathbb{N}, \\enspace u_n \\geq m \\)";
-    var bornee = "\\( \\forall n \\in \\mathbb{N},  \\enspace m \\leq u_n \\leq M \\)";
+    var majoration = "\\( \\forall n \\in \\mathbb{N}, \\enspace u_n \\leqslant M \\)";
+    var minoration = "\\( \\forall n \\in \\mathbb{N}, \\enspace u_n \\geqslant m \\)";
+    var bornee = "\\( \\forall n \\in \\mathbb{N},  \\enspace m \\leqslant u_n \\leqslant M \\)";
 
     return  <>
                 <Title1 title={"Définitions"} />

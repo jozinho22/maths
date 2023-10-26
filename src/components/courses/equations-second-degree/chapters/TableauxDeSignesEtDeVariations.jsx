@@ -22,14 +22,10 @@ const TableauxDeSignesEtDeVariations = () => {
      var det3 = "\\( \\Delta = 1 \\)";
 
      var x1 = "\\( x_1 = \\frac{ -b - \\sqrt{\\Delta}}{2a} \\)";
-     var x1_2 = "\\( x_1 = \\frac{ 3 - \\sqrt{1}} {4} \\)";
-     var x1_3 = "\\( x_1 = \\frac{2}{4} \\)";
-     var x1_4 = "\\( x_1 = \\frac{1}{2}  \\)";
+     var x1_2 = "\\( x_1 = \\frac{ 3 - \\sqrt{1}} {4} = \\frac{2}{4} = \\frac{1}{2} \\)";
 
      var x2 = "\\( x_2 = \\frac{ -b + \\sqrt{\\Delta}} {2a} \\)";
-     var x2_2 = "\\( x_2 = \\frac{ 3 + \\sqrt{1}}{4} \\)";
-     var x2_3 = "\\( x_2 = \\frac{4}{4}\\)";
-     var x2_4 = "\\( x_2 = 1\\)";
+     var x2_2 = "\\( x_2 = \\frac{ 3 + \\sqrt{1}}{4} = \\frac{4}{4} = 1\\)";
 
      var fact = "\\(f(x) = a (x - x_1)(x - x_2) \\)";
      var fact2 = "\\(f(x) = 2 \\left(x - \\frac{1}{2}\\right)(x - 1 ) \\)";
@@ -57,13 +53,9 @@ const TableauxDeSignesEtDeVariations = () => {
                 <p>Pour <MathJaxInline toShow={"$ x_1 $"} /> :</p>
                 <MathJaxDisplay toShow={x1} demo/>
                 <MathJaxDisplay toShow={x1_2} demo/>
-                <MathJaxDisplay toShow={x1_3} demo/>
-                <MathJaxDisplay toShow={x1_4} demo/>
                 <p>Pour <MathJaxInline toShow={"$ x_2 $"} /> :</p>
                 <MathJaxDisplay toShow={x2} demo/>
-                <MathJaxDisplay toShow={x2_2} demo/>
-                <MathJaxDisplay toShow={x2_3} demo/>    
-                <MathJaxDisplay toShow={x2_4} demo/>            
+                <MathJaxDisplay toShow={x2_2} demo/>           
 
                 <Title2 title={"Écriture sous forme factorisée"} />
                 <p>On peut alors écrire notre équation sous la forme factorisée : </p> 
@@ -75,7 +67,7 @@ const TableauxDeSignesEtDeVariations = () => {
                 <Title2 title={"Tableau de signes"} />
                 <GenericMathsNiceTable tableValues={useTableauDeSignesDuSecondDegreExempleValues()} />
                 
-                <p>De plus, on a vu dans <Link url={`${PagesConstants.PREFIX}${PagesConstants.COURS}${CoursesConstants.DERIVATION}/sens-de-variations`} external>le chapitre sur le calcul des variations d'une fonction</Link> qu'on peut trouver ses variations grâce à la dérivée.</p>
+                <p>De plus, on a vu dans <Link url={`${PagesConstants.PREFIX}${PagesConstants.COURS}${CoursesConstants.DERIVATION}/variations-d-une-fonction`} external>le chapitre sur le calcul des variations d'une fonction</Link> qu'on peut trouver ses variations grâce à la dérivée.</p>
                 <MathJaxDisplay toShow={deriveeF} demo/> 
                 <MathJaxDisplay toShow={deriveeF2} demo/> 
                 <p>Voici à quel moment la dérivée s'annule :</p>

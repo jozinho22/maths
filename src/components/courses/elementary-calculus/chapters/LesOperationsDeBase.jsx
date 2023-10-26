@@ -8,6 +8,7 @@ import Constants from '../../../immutable/Constants';
 import PagesConstants from '../../../immutable/nav/PagesConstants';
 import CoursesConstants from '../../helpers/CoursesConstants';
 import Link from '../../../immutable/nav/Link';
+import Title2 from '../../helpers/Title2';
 
 const LesOperationsDeBase = () => {
    
@@ -76,15 +77,11 @@ const LesOperationsDeBase = () => {
             
                 <Title1 title={"4) Priorités de calcul"} />
                 <p>On se demande à chaque fois si un calcul direct est possible. S'il ne l'est pas, on passe à l'étape suivante pour y revenir une fois que ce sera possible.</p>
-                <Container className="Focus">
-                    <p>
-                        Ordre de priorité :
-                        {"\n"} 1) L'intérieur des parenthèses
-                        {"\n"} 2) Multiplication / division
-                        {"\n"} 3) Addition / soustraction
-                    </p>
-                </Container>
-                <p>Exemple: </p>
+                <Title2 title={"a) L'intérieur des parenthèses"} />
+                <Title2 title={"b) Multiplication / division"} />
+                <Title2 title={"c) Addition / soustraction"} />
+
+                <Title1 title={"5) Exemple"} />
                 <MathJaxDisplay toShow={prioExample}/>
                 <p>On s'intéresse à ce qui se trouve dans les deux parenthèses, on y effectue les multiplications</p>
                 <MathJaxDisplay toShow={prioExample2}/>

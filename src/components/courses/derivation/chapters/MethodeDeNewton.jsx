@@ -60,7 +60,7 @@ const MethodeDeNewton = () => {
                 <Title1 title={"Généralisation"} />
                 <p>De manière générale, il faut que la fonction d'étude soit convexe ou concave, mais aussi strictement monotone sur son intervalle d'étude.</p>
                 <p>On pourra alors tenter de trouver une valeur <MathJaxInline toShow={"$ x = x_{k} $"} /> étant une solution de l'équation <MathJaxInline toShow={"$ f(x) = k$"} />, avec <MathJaxInline toShow={"$ k \\in \\mathbb{R}$"} />.</p>
-                <p>La valeur de départ <MathJaxInline toShow={"$a_0 $"} /> importe peu tant qu'il convient aux exigences d'étude et que <MathJaxInline toShow={"$ f(a_0) \\geq 0 $"} />, car de toute manière la suite <MathJaxInline toShow={"$ (a_n)$"} /> va converger assez vite vers la valeur cherchée. </p>
+                <p>La valeur de départ <MathJaxInline toShow={"$a_0 $"} /> importe peu tant qu'il convient aux exigences d'étude et que <MathJaxInline toShow={"$ f(a_0) \\geqslant 0 $"} />, car de toute manière la suite <MathJaxInline toShow={"$ (a_n)$"} /> va converger assez vite vers la valeur cherchée. </p>
             </>
 }
 
