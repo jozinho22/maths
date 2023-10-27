@@ -17,6 +17,8 @@ import AppContext from '../context/AppContext';
 
 const GenericChapter = ( {chapter, courseItem} ) => {
 
+    var ogType = "Maths course";
+
     const [count, setCount] = React.useState(chapter.id);
 
     React.useEffect(() => {
@@ -28,7 +30,7 @@ const GenericChapter = ( {chapter, courseItem} ) => {
 
     return (
         <>
-            <CustomHelmet title={chapter.title} metaContent={chapter.metaContent} canonicalUrl={`${Constants.WEB_APP_PREFIX}${PagesConstants.PREFIX}${PagesConstants.COURS}${courseItem.relativePath}${chapter.relativePath}`}/>
+            <CustomHelmet title={chapter.title} metaContent={chapter.metaContent} canonicalUrl={`${Constants.WEB_APP_PREFIX}${PagesConstants.PREFIX}${PagesConstants.COURS}${courseItem.relativePath}${chapter.relativePath}`} ogType={ogType}/>
             
             <div className="FlexButton">
                 <NavLink to={pathBuilder(`${PagesConstants.COURS}${courseItem.relativePath}`)}>

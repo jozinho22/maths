@@ -11,14 +11,15 @@ import { NavLink } from 'react-router-dom';
 
 const CoursesTableOfContents = ( {courseItems} ) => {
 
-    var prefix = 'cours';
+    var prefix = PagesConstants.COURS;
     var title = 'Tous les cours du site';
+    var ogType = "Table of contents"
 
     var metaContent = "Tous les cours du site (calcul élémentaire, équations, le théorème de Pythagore, dérivées, primitives/intégration, le nombre d'or...etc)";
 
     return (
         <>
-            <CustomHelmet title={title} metaContent={metaContent} canonicalUrl={`${Constants.WEB_APP_PREFIX}${PagesConstants.PREFIX}${PagesConstants.COURS}`} />
+            <CustomHelmet title={title} metaContent={metaContent} canonicalUrl={`${Constants.WEB_APP_PREFIX}${PagesConstants.PREFIX}${PagesConstants.COURS}`} ogType={ogType} />
 
             <div className="FlexButton">
                 <NavLink to={pathBuilder(PagesConstants.HOME)}>

@@ -17,9 +17,11 @@ const Home = () => {
     var metaTitle = 'Page d\'accueil';
     var metaContent = 'Des cours de mathématiques du collège au lycée, des bandes dessinées de Jean-Pierre Petit et des jeux pour s\'entraîner.';
     
+    var ogType='Home';
+
     return  <>         
                 <Container className="HomeContainer">
-                    <CustomHelmet title={metaTitle} metaContent={metaContent} canonicalUrl={`${Constants.WEB_APP_PREFIX}${Constants.GH_PAGES_PREFIX}`}/>
+                    <CustomHelmet title={metaTitle} metaContent={metaContent} canonicalUrl={`${Constants.WEB_APP_PREFIX}${Constants.GH_PAGES_PREFIX}`} ogType={ogType}/>
                     <Container className="HomeTitleContainer">
                         Ma thématique
                     </Container>

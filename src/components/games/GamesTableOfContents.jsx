@@ -8,14 +8,15 @@ import { Button } from 'react-bootstrap';
 
 const GamesTableOfContents = ( {gameItems} ) => {
 
-    var prefix = 'jeux';
-    var title = 'Tous les jeux du site';
-    var metaTitle = 'Tous les jeux du site : additions, multiplications';
+    var prefix = PagesConstants.JEUX;
+    var title = 'Index des jeux du site : additions, multiplications';
     var metaContent = 'Tous les jeux : des jeux créés pour permettre aux élèves de s\'entraîner, notamment pour les tables de multiplications.';
+
+    var ogType = "Table of contents";
 
     return (
         <>
-            <CustomHelmet title={metaTitle} metaContent={metaContent} canonicalUrl={`${Constants.WEB_APP_PREFIX}${PagesConstants.PREFIX}${PagesConstants.JEUX}`}/>
+            <CustomHelmet title={title} metaContent={metaContent} canonicalUrl={`${Constants.WEB_APP_PREFIX}${PagesConstants.PREFIX}${PagesConstants.JEUX}`} ogType={ogType}/>
             <div className="FlexButton">
                 <NavLink to={pathBuilder(PagesConstants.HOME)}>
                     <Button className="DefaultButton GreenButton" >

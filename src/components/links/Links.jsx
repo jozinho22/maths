@@ -14,10 +14,11 @@ const Links = () => {
     var title = 'Liens';
     var metaContent = 'Liens externes : de nombreux liens en rapport avec les mathématiques et autres liens divers.';
     
+    var ogType = "Links related to maths"
     var links = linksResourceBuilder();
 
     return  <>
-                <CustomHelmet title={title} metaContent={metaContent} canonicalUrl={`${Constants.WEB_APP_PREFIX}${PagesConstants.PREFIX}${PagesConstants.LIENS}`}/>
+                <CustomHelmet title={title} metaContent={metaContent} canonicalUrl={`${Constants.WEB_APP_PREFIX}${PagesConstants.PREFIX}${PagesConstants.LIENS}`} ogType={ogType}/>
                 <div className="Links">
                     <MainTitle title={"Liens"} />
                     <Container className="Links">

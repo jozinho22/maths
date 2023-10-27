@@ -10,8 +10,10 @@ const Multiplication = () => {
     var metaContent = 'Jeux des multiplications : un jeu pour réviser ses tables.';
     var canonicalUrl = `${Constants.WEB_APP_PREFIX}${PagesConstants.PREFIX}${PagesConstants.JEUX}/reviser-ses-tables/`;
 
+    var ogType = 'Game'; 
+
     return  <>
-                <CustomHelmet title={title} metaContent={metaContent} canonicalUrl={canonicalUrl}/>
+                <CustomHelmet title={title} metaContent={metaContent} canonicalUrl={canonicalUrl} ogType={ogType}/>
                 <OperationsTest operationType={"x"} />
             </>
 }

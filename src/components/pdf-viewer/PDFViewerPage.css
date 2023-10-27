@@ -73,8 +73,16 @@
     background-color: var(--orange-color);
 }
 
+.Darcula .ReturnHomeButton {
+    background-color: var(--dark-orange-color);
+}
+
 .UnPlayModeButton {
     background-color: var(--green-color); 
+}
+
+.Darcula .UnPlayModeButton {
+    background-color: var(--dark-green-color);
 }
 
 @media (min-width: 450px) {
@@ -85,11 +93,11 @@
     }
 
     .ReturnHomeButton {
-        left: 4%;
+        left: 0%;
     }
 
     .UnPlayModeButton {
-        right: 4%;
+        right: 0%;
     }
 }
 
@@ -97,7 +105,15 @@
     background-color: var(--orange-hover-color);
 }
 
+.Darcula .ReturnHomeButton:hover, .Darcula .ReturnHomeButton:focus {
+    background-color: var(--orange-hover-color);
+}
+
 .UnPlayModeButton:hover, .UnPlayModeButton:focus {
+    background-color: var(--green-hover-color);
+}
+
+.Darcula .UnPlayModeButton:hover, .Darcula .UnPlayModeButton:focus {
     background-color: var(--green-hover-color);
 }
 

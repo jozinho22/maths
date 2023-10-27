@@ -8,14 +8,13 @@ import PdfTableOfContents from './components/pdf-viewer/PdfTableOfContents';
 import PDFViewerPage from './components/pdf-viewer/PDFViewerPage';
 import GamesTableOfContents from './components/games/GamesTableOfContents';
 import Links from './components/links/Links';
-import VCard from './components/contact/VCard';
+/* import VCard from './components/contact/VCard'; */
 import Error from './components/immutable/Error';
 
 import PagesConstants from './components/immutable/nav/PagesConstants';
 import pathBuilder from './components/helpers/pathBuilder';
-import Presentation from './components/courses/sequences/chapters/Presentation';
 import UnderChaptersTableOfContents from './components/courses/UnderChaptersTableOfContents';
-import GenericUnderChapter from './components/courses/GenericUnderChapter';
+/* import GenericUnderChapter from './components/courses/GenericUnderChapter'; */
 
 const AppRoutes = ( {courseItems, pdfItems, gameItems} ) => {
     
@@ -43,7 +42,7 @@ const AppRoutes = ( {courseItems, pdfItems, gameItems} ) => {
                     })
                 })}
                 {/* Index sous-chapitres */}
-                {courseItems.map(courseItem => {
+                {/* {courseItems.map(courseItem => {
                     if(courseItem.underChapters) {
                         return courseItem.chapters.map(chapter => {
                             return chapter.underChapters.map(underChapter => {
@@ -54,7 +53,7 @@ const AppRoutes = ( {courseItems, pdfItems, gameItems} ) => {
                             })
                         })
                     }
-                })}
+                })} */}
                     
                 <Route path={pathBuilder(PagesConstants.BDS_DE_JPP)} element={<PdfTableOfContents pdfItems={pdfItems} />} />
                 {pdfItems.map(pdfItem => (

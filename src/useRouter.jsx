@@ -12,7 +12,7 @@ import Error from './components/immutable/Error';
 import PagesConstants from './components/immutable/nav/PagesConstants';
 import Presentation from './components/courses/sequences/chapters/Presentation';
 import UnderChaptersTableOfContents from './components/courses/UnderChaptersTableOfContents';
-import GenericUnderChapter from './components/courses/GenericUnderChapter';
+/* import GenericUnderChapter from './components/courses/GenericUnderChapter'; */
 
 import { createHashRouter } from 'react-router-dom';
 
@@ -52,7 +52,7 @@ const useRouter = (courseItems, pdfItems, gameItems) => {
                         })
                     }),
                     /* Index des sous-chapitres */
-                    courseItems.map(courseItem => {
+                    /* courseItems.map(courseItem => {
                         if(courseItem.underChapters) {
                             return courseItem.chapters.map(chapter => {
                                 return chapter.underChapters.map(underChapter => {
@@ -63,7 +63,7 @@ const useRouter = (courseItems, pdfItems, gameItems) => {
                                 })
                             })
                         }
-                    }),
+                    }), */
                     /* Index de toutes les bds */
                     {
                         path: PagesConstants.BDS_DE_JPP,

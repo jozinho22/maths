@@ -16,6 +16,8 @@ import AppContext from '../context/AppContext';
 
 const GenericUnderChapter = ( {underChapter, chapter, courseItem} ) => {
 
+    var ogType = "Maths course";
+
     const [count, setCount] = React.useState(underChapter.id);
 
     React.useEffect(() => {
@@ -27,7 +29,7 @@ const GenericUnderChapter = ( {underChapter, chapter, courseItem} ) => {
 
     return (
         <>
-            <CustomHelmet title={underChapter.title} metaContent={underChapter.metaContent} canonicalUrl={`${Constants.WEB_APP_URL}${PagesConstants.PREFIX}${PagesConstants.COURS}${courseItem.relativePath}${chapter.relativePath}${underChapter.relativePath}`}/>
+            <CustomHelmet title={underChapter.title} metaContent={underChapter.metaContent} canonicalUrl={`${Constants.WEB_APP_URL}${PagesConstants.PREFIX}${PagesConstants.COURS}${courseItem.relativePath}${chapter.relativePath}${underChapter.relativePath}`} ogType={ogType} />
             
             <div className="FlexButton">
                 <NavLink to={pathBuilder(`${PagesConstants.COURS}${courseItem.relativePath}${chapter.relativePath}`)}>

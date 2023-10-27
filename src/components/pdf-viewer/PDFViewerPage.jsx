@@ -22,6 +22,7 @@ import MainTitle from '../immutable/MainTitle';
 const PDFViewerPage = ({ pdfItem }) => {
 
     var titlePrefix = "BD de Jean-Pierre Petit : "
+    var ogType = 'Science comics of Mr Petit'
 
     const PDFViewer = () => {
 
@@ -94,7 +95,7 @@ const PDFViewerPage = ({ pdfItem }) => {
 
         return (
           <Container className="PdfViewerContainer"> 
-            <CustomHelmet title={`${titlePrefix}${pdfItem.title}`} metaContent={pdfItem.metaContent} canonicalUrl={`${Constants.WEB_APP_PREFIX}${PagesConstants.PREFIX}${PagesConstants.BDS_DE_JPP}${pdfItem.relativePath}`}/>
+            <CustomHelmet title={`${titlePrefix}${pdfItem.title}`} metaContent={pdfItem.metaContent} canonicalUrl={`${Constants.WEB_APP_PREFIX}${PagesConstants.PREFIX}${PagesConstants.BDS_DE_JPP}${pdfItem.relativePath}`} ogType={ogType} />
                    
             {
                 !mobile ?
@@ -184,7 +185,8 @@ const PDFViewerPage = ({ pdfItem }) => {
                         </>
                 }
 
-                <MainTitle title={pdfItem.title} />
+                <MainTitle title={`${titlePrefix}${pdfItem.title}`} />
+                <p>{pdfItem.metaContent}</p>
                 <NavLink to={"/"}>
                     <Button className="ReturnHomeButton DefaultButton" onClick={() => updatePlayMode(false)}>
                         Home

@@ -10,8 +10,10 @@ const Addition = () => {
     var metaContent = 'Jeux des additions, un jeu pour s\'entraîner à calculer';
     var canonicalUrl = `${Constants.WEB_APP_PREFIX}${PagesConstants.PREFIX}${PagesConstants.JEUX}/additionner/`;
 
+    var ogType = 'Game';
+
     return  <>
-                <CustomHelmet title={title} metaContent={metaContent} canonicalUrl={canonicalUrl}/>
+                <CustomHelmet title={title} metaContent={metaContent} canonicalUrl={canonicalUrl} ogType={ogType}/>
                 <OperationsTest operationType={"+"} />
             </>
 }

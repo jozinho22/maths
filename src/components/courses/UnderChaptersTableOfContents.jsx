@@ -9,9 +9,12 @@ import MainTitle from '../immutable/MainTitle';
 
 const UnderChaptersTableOfContents = ( {courseItem, chapter} ) => {
 
+    var ogType = "Table of contents";
+    var titlePrefix = "Index : ";
+
     return (
         <>
-            <CustomHelmet title={courseItem.title} metaContent={courseItem.metaContent} canonicalUrl={`${Constants.WEB_APP_PREFIX}${PagesConstants.PREFIX}${PagesConstants.COURS}${courseItem.relativePath}${chapter.relativePath}`}/>
+            <CustomHelmet title={`${titlePrefix}${courseItem.title}`} metaContent={courseItem.metaContent} canonicalUrl={`${Constants.WEB_APP_PREFIX}${PagesConstants.PREFIX}${PagesConstants.COURS}${courseItem.relativePath}${chapter.relativePath}`} ogType={ogType}/>
             <div className="FlexButton">
                 <NavLink to={pathBuilder(`${PagesConstants.COURS}${courseItem.relativePath}`)} >
                     <Button className="DefaultButton GreenButton" >

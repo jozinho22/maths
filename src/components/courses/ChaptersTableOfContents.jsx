@@ -10,7 +10,8 @@ import { NavLink } from 'react-router-dom';
 
 const ChaptersTableOfContents = ( {courseItem} ) => {
 
-    var titlePrefix = "Cours : "
+    var title = `${courseItem.title} : Index des chapitres`;
+    var ogType = "Table of contents";
 
     React.useEffect(() => {
         setTimeout(function(){
@@ -21,7 +22,7 @@ const ChaptersTableOfContents = ( {courseItem} ) => {
 
     return (
         <>
-            <CustomHelmet title={`${titlePrefix}${courseItem.title}`} metaContent={courseItem.metaContent} canonicalUrl={`${Constants.WEB_APP_PREFIX}${PagesConstants.PREFIX}${PagesConstants.COURS}${courseItem.relativePath}`}/>
+            <CustomHelmet title={title} metaContent={courseItem.metaContent} canonicalUrl={`${Constants.WEB_APP_PREFIX}${PagesConstants.PREFIX}${PagesConstants.COURS}${courseItem.relativePath}`} ogType={ogType} />
             <div className="FlexButton">
                 <NavLink to={pathBuilder(PagesConstants.COURS)} >
                     <Button className="DefaultButton GreenButton" >
