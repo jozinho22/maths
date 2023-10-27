@@ -19,6 +19,7 @@ import CalculSurfaceSphere from "./chapters/CalculSurfaceSphere";
 import CalculVolumeSphere from "./chapters/CalculVolumeSphere";
 import CalculVolumeCone from "./chapters/CalculVolumeCone";
 import CalculSurfaceCone from "./chapters/CalculSurfaceCone";
+import ChangementDeVariable from "./chapters/ChangementDeVariable";
 
 const getPrimitivesIntegrationChapters = () => {
 
@@ -115,6 +116,13 @@ const getPrimitivesIntegrationChapters = () => {
             title: 'Intégration par parties',
             metaContent: 'Intégration par parties.',
             relativePath: '/integration-par-parties'
+        }, 
+        {
+            id: k++,
+            component: <ChangementDeVariable />,
+            title: 'Intégration par changement de variable',
+            metaContent: 'Intégration par changement de variable : explication et exemples.',
+            relativePath: '/changement-de-variable'
         }, 
         {
             id: k++,

@@ -2,7 +2,6 @@ import React from 'react';
 import MathJaxDisplay from '../../../mathjax-display/MathJaxDisplay';
 import MathJaxInline from '../../../mathjax-display/MathJaxInline';
 import ImageZoom from '../../helpers/ImageZoom';
-import Title1 from '../../helpers/Title1';
 import derivativeInflexionPoint from '../assets/derivativeInflexionPoint.png';
 
 const PointDInflexion = () => {

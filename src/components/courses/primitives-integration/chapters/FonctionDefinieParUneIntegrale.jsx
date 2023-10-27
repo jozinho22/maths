@@ -13,7 +13,10 @@ const FonctionDefinieParUneIntegrale = () => {
     var intfPrim = "\\( \\Biggl\\{\\begin{gather*}  \\enspace F'(x)= G'(x) \\\\ F'(x)= f(x) \\end{gather*}  \\)";
     var FPrimAndFa = "\\( \\Biggl\\{\\begin{gather*} \\enspace \\enspace \\enspace  F'(x)= f(x) \\\\ F(a)= 0 \\end{gather*} \\)";
 
-    var int1overT = "\\(  \\int_a^x \\frac{dt}{t} = ln(x)  \\)";
+    var int1overT = "\\(  \\int_1^x \\frac{dt}{t} = ln(x)  \\)";
+
+     var Fsup = "\\(  F(x) = \\int^x f(t)dt  \\)";
+
 
     return  <>
                 <p>Soit <MathJaxInline toShow={"$ f $"} /> une fonction continue sur un intervalle <MathJaxInline toShow={"$ I $"} />.</p>
@@ -37,6 +40,12 @@ const FonctionDefinieParUneIntegrale = () => {
                 <Title1 title="Exemple" />
                 <Container className="Focus">
                      <MathJaxDisplay toShow={int1overT} />  
+                </Container>
+
+                <Title1 title="Notation générale d'une primitive" />
+                <p>De manière plus générale, on sera amené à écrire une primitive unqiuement en fonction de sa borne supérieure.</p>
+                <Container className="Focus">
+                     <MathJaxDisplay toShow={Fsup} />  
                 </Container>
             </>
 }

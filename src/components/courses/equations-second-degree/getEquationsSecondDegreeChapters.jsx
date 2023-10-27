@@ -3,6 +3,7 @@ import RelationEntreCoefficientsEtRacines from './chapters/RelationEntreCoeffici
 import Aspect from './chapters/Aspect';
 import TableauxDeSignesEtDeVariationsExemple from './chapters/TableauxDeSignesEtDeVariationsExemple';
 import TableauxDeSignesEtDeVariationsCasGeneral from './chapters/TableauxDeSignesEtDeVariationsCasGeneral';
+import DecompositionDUnInverseDePolynomeEnElementsSimples from './chapters/DecompositionDUnInverseDePolynomeEnElementsSimples';
 
 const getEquationsSecondDegreeChapters = () => {
 
@@ -43,6 +44,13 @@ const getEquationsSecondDegreeChapters = () => {
             title: 'Tableaux de signes et de variations : cas général',
             metaContent: 'Tableaux de signes et de variations : cas général.',
             relativePath: '/tableaux-de-signes-et-de-variations-cas-general'
+        },
+        {
+            id: k++,
+            component: <DecompositionDUnInverseDePolynomeEnElementsSimples />,
+            title: 'Décomposition d\'un inverse de polynôme en éléments simples',
+            metaContent: 'Décomposition d\'un inverse de polynôme en éléments simples.',
+            relativePath: '/decomposition-d-un-inverse-de-polynome-en-elements-simples'
         }
     ];
 }

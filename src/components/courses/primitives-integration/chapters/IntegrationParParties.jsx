@@ -10,7 +10,8 @@ import CoursesConstants from '../../helpers/CoursesConstants';
 const IntegrationParParties = () => {
 
     var intParParties = "\\( \\int_a^b (uv')dt = \\Bigl[uv\\Bigr]_a^b - \\int_a^b (u'v)dt \\)";
-    
+     var intParPartiesSup = "\\( \\int^x (uv')dt = \\Bigl[uv\\Bigr]^x - \\int^x (u'v)dt \\)";
+
     var intParPartiesDemo = "\\( (uv)' = u'v + v'u \\)";
     var intParPartiesDemo2 = "\\( uv' = (uv)' -  u'v \\)";
     var intParPartiesDemo3 = "\\( \\int_a^b (uv')dt = \\int_a^b (uv)'dt -  \\int_a^b (u'v) dt \\)";
@@ -33,7 +34,11 @@ const IntegrationParParties = () => {
                 <Container className="Focus">
                      <MathJaxDisplay toShow={intParParties} />  
                 </Container>
-                <p>Cette formule est utile pour calculer diverses intégrales, en choisissant judicieusement <MathJaxInline toShow={"$ f $"} /> et <MathJaxInline toShow={"$ g' $"} />.</p>
+                <p>Cette formule est utile pour calculer diverses intégrales, en choisissant judicieusement <MathJaxInline toShow={"$ u $"} /> et <MathJaxInline toShow={"$ v' $"} />.</p>
+                <p>De manière générale, on peut aussi l'écrire sous forme d'une primitive dont on ne connaîtpas les bornes :</p>
+                <MathJaxDisplay toShow={intParPartiesSup} />  
+
+                <p>Pour le choix de <MathJaxInline toShow={"$ u $"} /> et <MathJaxInline toShow={"$ v $"} />, il faut bien vérifier qu'elles sont toutes les deux de classe <MathJaxInline toShow={"$\\mathcal{C}^1 $"} /> (continue et dérivable une fois) sur l'intervalle d'étude. </p>
 
                 <Title1 title="Démonstration" />
                 <p>Par <Link url={`${PagesConstants.PREFIX}${PagesConstants.COURS}${CoursesConstants.DERIVATION}/derivee-d-un-produit-de-fonctions`} external>la dérivée d'un produit</Link>, on a :</p>
@@ -48,7 +53,7 @@ const IntegrationParParties = () => {
                 <Title1 title="Exemple" />
                 <p>Calculer :</p>
                 <MathJaxDisplay toShow={intSinX} demo />  
-                <p>On prend <MathJaxInline toShow={"$ f $"} /> et <MathJaxInline toShow={"$ g' $"} /> tels que : </p>
+                <p>On prend <MathJaxInline toShow={"$ u $"} /> et <MathJaxInline toShow={"$ v' $"} /> tels que : </p>
                 <MathJaxDisplay toShow={intSinXuvPrim} demo />  
                 <MathJaxDisplay toShow={intSinXfPrimg} demo /> 
                 <MathJaxDisplay toShow={intSinX2} demo />  
