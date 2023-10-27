@@ -24,7 +24,7 @@ const VCard = () => {
     }
 
     return  <>            
-                <CustomHelmet title={title} metaContent={metaContent} canonicalUrl={`${Constants.WEB_APP_URL}${PagesConstants.CONTACT}`}/>
+                <CustomHelmet title={title} metaContent={metaContent} canonicalUrl={`${Constants.WEB_APP_PREFIX}${PagesConstants.CONTACT}`}/>
                 <Container className="VCardContainer">
                     <MainTitle title={title} />
                     <Container className={`VCardRecto ${active ? "Active" : ""}`} onClick={rotateY} >

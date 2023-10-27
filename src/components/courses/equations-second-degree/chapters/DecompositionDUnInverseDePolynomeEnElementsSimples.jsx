@@ -28,7 +28,7 @@ const DecompositionDUnInverseDePolynomeEnElementsSimples = () => {
     var bXEqualsMinus3 = "\\( (x =-3) \\Longrightarrow f(x)(x+3) = b = \\frac{1}{x-2} \\)";
     var bXEqualsMinus32 = "\\( (x =-3) \\Longrightarrow  f(x)(x+3) = b = \\frac{1}{-3 - 2} = -\\frac{1}{5} \\)";
     
-    var exempleSimp = "\\(f(x) = \\frac{1}{5} .\\frac{1}{x-2}-\\frac{1}{5}.\\frac{1}{x+3} \\)";
+    var exempleSimp = "\\(f(x) = \\frac{1}{5} .\\frac{1}{(x-2)}-\\frac{1}{5}.\\frac{1}{(x+3)} \\)";
 
     var inversePolynomeDeg3 = "\\(f(x) = \\frac{1}{(x-\\lambda)(x-\\mu)(x-\\nu)} \\enspace \\enspace \\enspace (avec \\enspace \\lambda, \\enspace \\mu, \\enspace \\nu \\in \\mathbb{R})\\)";
     var fGenDegre3 = "\\(f(x) = \\frac{1}{(x-\\lambda)(x-\\mu)(x-\\nu)} = \\frac{1}{(\\lambda-\\mu)(\\lambda-\\nu)}.\\frac{1}{(x-\\lambda)} + \\frac{1}{(\\mu-\\lambda)(\\mu-\\nu)}\\frac{1}{(x-\\mu)}   + \\frac{1}{(\\nu-\\lambda)(\\nu-\\mu)}\\frac{1}{(x-\\nu)} \\)";

@@ -1,3 +1,4 @@
+import React from 'react';
 import { Container } from 'react-bootstrap';
 /* import Link from '../immutable/nav/Link'; */
 import { NavLink } from 'react-router-dom';
@@ -5,6 +6,13 @@ import pathBuilder from '../helpers/pathBuilder';
 import MainTitle from './MainTitle';
 
 const GenericTableOfContents = ( {items, prefix, title, action} ) => {
+
+    React.useEffect(() => {
+        setTimeout(function(){
+            window.scrollTo(0, 0)
+        }, 2000);
+
+    }, [prefix]); 
 
     return (
         <>

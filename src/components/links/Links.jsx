@@ -17,7 +17,7 @@ const Links = () => {
     var links = linksResourceBuilder();
 
     return  <>
-                <CustomHelmet title={title} metaContent={metaContent} canonicalUrl={`${Constants.WEB_APP_URL}${PagesConstants.LIENS}`}/>
+                <CustomHelmet title={title} metaContent={metaContent} canonicalUrl={`${Constants.WEB_APP_PREFIX}${PagesConstants.PREFIX}${PagesConstants.LIENS}`}/>
                 <div className="Links">
                     <MainTitle title={"Liens"} />
                     <Container className="Links">

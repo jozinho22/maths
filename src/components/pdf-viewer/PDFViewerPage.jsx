@@ -92,7 +92,7 @@ const PDFViewerPage = ({ pdfItem }) => {
 
         return (
           <Container className="PdfViewerContainer"> 
-            <CustomHelmet title={pdfItem.title} metaContent={pdfItem.metaContent} canonicalUrl={`${Constants.WEB_APP_URL}${PagesConstants.BDS_DE_JPP}${pdfItem.relativePath}`}/>
+            <CustomHelmet title={pdfItem.title} metaContent={pdfItem.metaContent} canonicalUrl={`${Constants.WEB_APP_PREFIX}${PagesConstants.PREFIX}${PagesConstants.BDS_DE_JPP}${pdfItem.relativePath}`}/>
                    
             {
                 !mobile ?
@@ -184,12 +184,12 @@ const PDFViewerPage = ({ pdfItem }) => {
 
                 <MainTitle title={pdfItem.title} />
                 <NavLink to={"/"}>
-                    <Button className="DefaultButton ReturnHomeButton" onClick={() => updatePlayMode(false)}>
+                    <Button className="ReturnHomeButton DefaultButton" onClick={() => updatePlayMode(false)}>
                         Home
                     </Button>
                 </NavLink>
                 <NavLink to={PagesConstants.BDS_DE_JPP} onClick={() => updatePlayMode(false)}>
-                    <Button className="DefaultButton UnPlayModeButton" >
+                    <Button className="UnPlayModeButton DefaultButton" >
                         Toutes les BDs
                     </Button>
                 </NavLink>

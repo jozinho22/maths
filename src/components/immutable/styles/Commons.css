@@ -3,7 +3,7 @@
     padding-top: calc(100px + 20px);
     padding-bottom: calc(100px + 40px); 
     min-height: 100vh;
-    max-width: fit-content !important;
+    max-width: 90vw !important;
     color: var(--simple-text-color);
     /* display: flex;
     flex-direction: column;

@@ -21,7 +21,7 @@ const PdfTableOfContents = ( {pdfItems} ) => {
 
     return (
         <>
-            <CustomHelmet title={title} metaContent={metaContent} canonicalUrl={`${Constants.WEB_APP_URL}${PagesConstants}`}/>
+            <CustomHelmet title={title} metaContent={metaContent} canonicalUrl={`${Constants.WEB_APP_PREFIX}${PagesConstants.PREFIX}${PagesConstants.BDS_DE_JPP}`}/>
             <div className="FlexButton">
                 <NavLink to={pathBuilder(PagesConstants.HOME)} >
                     <Button className="DefaultButton GreenButton" >

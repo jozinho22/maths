@@ -8,7 +8,7 @@ const Multiplication = () => {
 
     var title = 'Jeu : réviser ses tables de multiplication';
     var metaContent = 'Jeux des multiplications';
-    var canonicalUrl = `${Constants.WEB_APP_URL}${PagesConstants.JEUX}/reviser-ses-tables/`;
+    var canonicalUrl = `${Constants.WEB_APP_PREFIX}${PagesConstants.PREFIX}${PagesConstants.JEUX}/reviser-ses-tables/`;
 
     return  <>
                 <CustomHelmet title={title} metaContent={metaContent} canonicalUrl={canonicalUrl}/>

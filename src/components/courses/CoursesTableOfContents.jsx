@@ -1,3 +1,4 @@
+import React from 'react';
 import GenericTableOfContents from '../immutable/GenericTableOfContents';
 import { Button } from 'react-bootstrap';
 import CustomHelmet from '../immutable/seo/CustomHelmet';
@@ -17,7 +18,7 @@ const CoursesTableOfContents = ( {courseItems} ) => {
 
     return (
         <>
-            <CustomHelmet title={title} metaContent={metaContent} canonicalUrl={`${Constants.WEB_APP_URL}${PagesConstants.PREFIX}${PagesConstants.COURS}`} />
+            <CustomHelmet title={title} metaContent={metaContent} canonicalUrl={`${Constants.WEB_APP_PREFIX}${PagesConstants.PREFIX}${PagesConstants.COURS}`} />
 
             <div className="FlexButton">
                 <NavLink to={pathBuilder(PagesConstants.HOME)}>

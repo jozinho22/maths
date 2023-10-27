@@ -15,7 +15,7 @@ const GamesTableOfContents = ( {gameItems} ) => {
 
     return (
         <>
-            <CustomHelmet title={metaTitle} metaContent={metaContent} canonicalUrl={`${Constants.WEB_APP_URL}${PagesConstants.JEUX}`}/>
+            <CustomHelmet title={metaTitle} metaContent={metaContent} canonicalUrl={`${Constants.WEB_APP_PREFIX}${PagesConstants.PREFIX}${PagesConstants.JEUX}`}/>
             <div className="FlexButton">
                 <NavLink to={pathBuilder(PagesConstants.HOME)}>
                     <Button className="DefaultButton GreenButton" >

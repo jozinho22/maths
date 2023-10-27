@@ -3,6 +3,7 @@
     margin-bottom: 20px;
     margin: 0 auto;
     width: fit-content;
+    max-width: 90vw;
 }
 
 @media (max-width: 1267px) {
