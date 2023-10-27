@@ -15,7 +15,7 @@ import MainSubTitle from "../immutable/MainSubTitle";
 const Home = () => {
 
     var metaTitle = 'Page d\'accueil';
-    var metaContent = 'Des cours de mathématiques du primaire au lycée, des bandes dessinées de Jean-Pierre Petit, des jeux pour s\'entraîner et la possibilité de cours particuliers.';
+    var metaContent = 'Des cours de mathématiques du collège au lycée, des bandes dessinées de Jean-Pierre Petit et des jeux pour s\'entraîner.';
     
     return  <>         
                 <Container className="HomeContainer">

@@ -1,11 +1,11 @@
 /* Home */
 .GamesContainer button {
-    width: 70%;
+    max-width: 30vw;
 }
 
 @media (width < 450px) {
    .GamesContainer button {
-        width: 70%;
+         max-width: 70vw;
     } 
 }
 /* Question display */

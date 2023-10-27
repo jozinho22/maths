@@ -6,8 +6,8 @@ import Constants from "../../../immutable/Constants";
 
 const Multiplication = () => {
 
-    var title = 'Jeu : réviser ses tables de multiplication';
-    var metaContent = 'Jeux des multiplications';
+    var title = 'Jeu : réviser ses tables de multiplications';
+    var metaContent = 'Jeux des multiplications : un jeu pour réviser ses tables.';
     var canonicalUrl = `${Constants.WEB_APP_PREFIX}${PagesConstants.PREFIX}${PagesConstants.JEUX}/reviser-ses-tables/`;
 
     return  <>

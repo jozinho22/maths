@@ -13,6 +13,7 @@
 @media(width < 450px) {
     .RelativeContainer {
         padding-top: calc(100px);
+        max-width: 100vw !important;
     }
 }
 

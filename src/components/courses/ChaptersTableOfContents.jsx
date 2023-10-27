@@ -10,6 +10,8 @@ import { NavLink } from 'react-router-dom';
 
 const ChaptersTableOfContents = ( {courseItem} ) => {
 
+    var titlePrefix = "Cours : "
+
     React.useEffect(() => {
         setTimeout(function(){
             window.scrollTo(0, 0)
@@ -19,7 +21,7 @@ const ChaptersTableOfContents = ( {courseItem} ) => {
 
     return (
         <>
-            <CustomHelmet title={courseItem.title} metaContent={courseItem.metaContent} canonicalUrl={`${Constants.WEB_APP_PREFIX}${PagesConstants.PREFIX}${PagesConstants.COURS}${courseItem.relativePath}`}/>
+            <CustomHelmet title={`${titlePrefix}${courseItem.title}`} metaContent={courseItem.metaContent} canonicalUrl={`${Constants.WEB_APP_PREFIX}${PagesConstants.PREFIX}${PagesConstants.COURS}${courseItem.relativePath}`}/>
             <div className="FlexButton">
                 <NavLink to={pathBuilder(PagesConstants.COURS)} >
                     <Button className="DefaultButton GreenButton" >

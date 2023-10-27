@@ -21,6 +21,8 @@ import MainTitle from '../immutable/MainTitle';
 
 const PDFViewerPage = ({ pdfItem }) => {
 
+    var titlePrefix = "BD de Jean-Pierre Petit : "
+
     const PDFViewer = () => {
 
         const [page, setPage] = React.useState(1);
@@ -92,7 +94,7 @@ const PDFViewerPage = ({ pdfItem }) => {
 
         return (
           <Container className="PdfViewerContainer"> 
-            <CustomHelmet title={pdfItem.title} metaContent={pdfItem.metaContent} canonicalUrl={`${Constants.WEB_APP_PREFIX}${PagesConstants.PREFIX}${PagesConstants.BDS_DE_JPP}${pdfItem.relativePath}`}/>
+            <CustomHelmet title={`${titlePrefix}${pdfItem.title}`} metaContent={pdfItem.metaContent} canonicalUrl={`${Constants.WEB_APP_PREFIX}${PagesConstants.PREFIX}${PagesConstants.BDS_DE_JPP}${pdfItem.relativePath}`}/>
                    
             {
                 !mobile ?
