@@ -14,10 +14,10 @@ const ChangementDeVariable = () => {
     var FRondPhiPrim2 = "\\( \\phi'(t).(F' \\circ \\phi)(t) =  \\phi'(t).(f \\circ \\phi)(t) \\)";
 
     var exemple = "\\( A(x) = \\int^x \\frac{ln(t)}{t + t.ln^2(t)}.dt\\)";
-    var exemple2 = "\\( A(x) =\\int^x \\frac{u}{t(1 + u^2)}.du\\)";
-    var exemple3 = "\\( A(x) =\\frac{1}{2} \\int^x \\frac{2u}{(1 + u^2)}.du\\)";
+    var exemple2 = "\\( A(x) =\\int^{ln(x)} \\frac{u}{1 + u^2}.du\\)";
+    var exemple3 = "\\( A(x) =\\frac{1}{2} \\int^{ln(x)} \\frac{2u}{(1 + u^2)}.du\\)";
     var exemple4 = "\\( A(x) = \\frac{1}{2} \\Biggl[ ln(1 + u^2) \\Biggr]^{ln(x)} \\)";
-    var exemple5 = "\\( A(x) = \\frac{1}{2} ln (1 + ln^2(x)) \\)";
+    var exemple5 = "\\( A(x) = \\frac{1}{2} ln\\left(1 + ln^2(x)\\right) \\)";
 
     return  <>
                 <p>Un technique pour calculer des primitives qui semblent compliquées de prime abord est le changement de variable. </p>

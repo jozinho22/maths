@@ -122,7 +122,7 @@ const getSequencesChapters = () => {
             component: <TableauRecapOperationsLimitesDeSuites />,
             title: 'Opérations sur les limites de suites',
             metaContent: 'Opérations sur les limites : addition, mulitplication, quotient..etc.',
-            relativePath: '/opérations-sur-les-limites'
+            relativePath: '/operations-sur-les-limites'
         }
     ];
 }
