@@ -48,7 +48,7 @@ const useTableauRecapOperationsLimitesSuites = () => {
         tableauRecapOpLimSuites.push(
          {
             id: k++,
-            title: "si \\enspace lim_{n \\to +\\infty} \\enspace u_n =  0^+ , \\enspace lim_{n \\to +\\infty} \\enspace \\frac{1}{u_n} =  +\\infty "
+            title: "si \\enspace lim_{n \\to +\\infty} \\enspace (u_n) =  0^+ , \\enspace lim_{n \\to +\\infty} \\enspace \\frac{1}{u_n} =  +\\infty "
         }
     )
 

@@ -11,7 +11,7 @@ const CoursesConstants = {
     TRIGO: '/la-trigonometrie',
     DERIVATION: '/la-derivation',
     PRIMITIVES_INTEGRATION: '/primitives-integration',
-    SEQUENCES: '/les-suites-numériques',
+    SEQUENCES: '/les-suites-numeriques',
    /*  GEOMETRY: '/la-geometrie', */
     FONCTIONS_USUELLES:  '/les-fonctions-usuelles',
 

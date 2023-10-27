@@ -52,7 +52,7 @@ const getSequencesChapters = () => {
             component: <RaisonnementParRecurrence />,
             title: 'Raisonnement par récurrence',
             metaContent: 'Raisonnement par récurrence : exemple avec la dérivée.',
-            relativePath: '/raisonnement-par-récurrence'
+            relativePath: '/raisonnement-par-recurrence'
         },
         {
             id: k++,

@@ -100,20 +100,6 @@ function coursesResourceBuilder() {
       relativePath: CoursesConstants.PRIMITIVES_INTEGRATION,
       chapters: getPrimitivesIntegrationChapters()
     }
-    var pi = {
-      id: i++,
-      title: 'Le nombre Pi',
-      metaContent: "Le nombre Pi : ses mystères et une manière de le calculer géométriquement",
-      relativePath: CoursesConstants.PI,
-      chapters: getPiChapters()
-    }
-    var nbOr = {
-      id: i++,
-      title: 'Le nombre d\'or (Phi)',
-      metaContent: "Le nombre Phi : son histoire, son calcul et son lien avec la suite de Fibonacci",
-      relativePath: CoursesConstants.NB_OR,
-      chapters: getGoldenRatioChapters()
-    }
 
     var seq = {
       id: i++,
@@ -122,6 +108,23 @@ function coursesResourceBuilder() {
       relativePath: CoursesConstants.SEQUENCES,
       chapters: getSequencesChapters()
     }
+
+    var pi = {
+      id: i++,
+      title: 'Le nombre Pi',
+      metaContent: "Le nombre Pi : ses mystères et une manière de le calculer géométriquement",
+      relativePath: CoursesConstants.PI,
+      chapters: getPiChapters()
+    }
+
+    var nbOr = {
+      id: i++,
+      title: 'Le nombre d\'or (Phi)',
+      metaContent: "Le nombre Phi : son histoire, son calcul et son lien avec la suite de Fibonacci",
+      relativePath: CoursesConstants.NB_OR,
+      chapters: getGoldenRatioChapters()
+    }
+
     var geo = {
       id: i++,
       title: 'La géométrie',
