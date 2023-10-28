@@ -13,7 +13,7 @@ import Fraction from "fractions";
 
 const LesFractions = () => {
 
-    var oneHalf = new Fraction("1/2");
+    /* var oneHalf = new Fraction("1/2"); */
 
     var ratioNumDen = "\\( si \\enspace d\\acute{e}n > num, \\enspace alors \\enspace \\frac{d\\acute{e}n}{num} > 1, \\enspace effectivement \\enspace \\frac{5}{4} = 1.25 > 1 \\)";
     var ratioNumDen2 = "\\( si \\enspace d\\acute{e}n < num \\enspace alors \\enspace \\frac{d\\acute{e}n}{num} < 1, \\enspace effectivement \\enspace \\frac{3}{4} = 0.75 < 1 \\)";
