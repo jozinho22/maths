@@ -7,7 +7,7 @@ import Title1 from '../../helpers/Title1';
 import Title2 from '../../helpers/Title2';
 
 
-const ReglesDeDivisibilite = () => {
+const LesReglesDeDivisibilite = () => {
 
     var div = "\\( a = bq \\)";
     var div2 = "\\( \\Longleftrightarrow \\frac{a}{b} = q \\)";
@@ -82,4 +82,4 @@ const ReglesDeDivisibilite = () => {
             </>
 }
 
-export default ReglesDeDivisibilite; 
+export default LesReglesDeDivisibilite; 

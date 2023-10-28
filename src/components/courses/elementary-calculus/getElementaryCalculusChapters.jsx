@@ -3,7 +3,10 @@ import LesOperationsDeBase from './chapters/LesOperationsDeBase';
 import LaDistributiviteLaFactorisation from './chapters/LaDistributiviteLaFactorisation';
 
 import LesFractions from './chapters/LesFractions';
-import ReglesDeDivisibilite from './chapters/ReglesDeDivisibilite';
+import LesReglesDeDivisibilite from './chapters/LesReglesDeDivisibilite';
+import Les from './chapters/LesReglesDeDivisibilite';
+import LesIdentitesRemarquables from './chapters/LesIdentitesRemarquables';
+import LeTriangleDePascal from './chapters/LeTriangleDePascal';
 
 const getElementaryCalculusChapters = () => {
 
@@ -17,6 +20,13 @@ const getElementaryCalculusChapters = () => {
             metaContent: 'Les opérations de base : addition, soustraction, multiplication, division et priorités.',
             relativePath: '/les-operations-de-base'
         }, 
+        {
+            id: k++,
+            component: <LeProduitEnCroix />,
+            title: 'Le produit en croix',
+            metaContent: 'Le produit en croix : présentation, démonstration et exercices.',
+            relativePath: '/le-produit-en-croix'
+        },
         {
             id: k++,
             component: <LaDistributiviteLaFactorisation />,
@@ -33,17 +43,24 @@ const getElementaryCalculusChapters = () => {
         },
         {
             id: k++,
-            component: <ReglesDeDivisibilite />,
+            component: <LesReglesDeDivisibilite />,
             title: 'Les règles de divisibilité',
             metaContent: 'Les règles de divisibilité : par 2, 3, 4, 5, 9',
             relativePath: '/les-regles-de-divisibilite'
         },
         {
             id: k++,
-            component: <LeProduitEnCroix />,
-            title: 'Le produit en croix',
-            metaContent: 'Le produit en croix : présentation, démonstration et exercices.',
-            relativePath: '/le-produit-en-croix'
+            component: <LesIdentitesRemarquables />,
+            title: 'Les identités remarquables',
+            metaContent: 'Les identités remarquables',
+            relativePath: '/les-identites-remarquables'
+        },
+        {
+            id: k++,
+            component: <LeTriangleDePascal />,
+            title: 'Le triangle de Pascal',
+            metaContent: 'Le triangle de Pascal : détermination des coefficient binomiaux',
+            relativePath: '/le-triangle-de-pascal'
         }
     ];
 }
