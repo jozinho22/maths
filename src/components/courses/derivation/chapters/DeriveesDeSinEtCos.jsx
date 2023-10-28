@@ -11,8 +11,8 @@ import Title2 from '../../helpers/Title2';
 
 const DeriveesDeSinEtCos = () => {
 
-    var sinX = "\\( \\forall x \\in [0; 2\\pi] \\enspace (modulo \\enspace 2\\pi), f(x)= sin(x) \\)";
-    var cosX = "\\( \\forall x \\in [0; 2\\pi] \\enspace (modulo \\enspace 2\\pi), f(x)= cos(x) \\)";
+    var sinX = "\\( \\forall x \\in [0; 2\\pi] \\enspace (modulo \\enspace 2\\pi), \\enspace f(x)= sin(x) \\)";
+    var cosX = "\\( \\forall x \\in [0; 2\\pi] \\enspace (modulo \\enspace 2\\pi), \\enspace f(x)= cos(x) \\)";
 
     var dSinX = "\\( d(sin(x)) = sin(x + dx) - sin(x) \\)";
     var dCosX = "\\( d(cos(x)) = cos(x + dx) - cos(x) \\)";

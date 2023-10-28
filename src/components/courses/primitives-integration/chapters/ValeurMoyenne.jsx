@@ -20,7 +20,7 @@ const ValeurMoyenne = () => {
     var meanValueInequ = "\\( m \\leqslant \\mu \\leqslant M\\)";
 
     return  <>
-                <p>Soit <MathJaxInline toShow={"$ f $"} /> une fonction continue sur un intervalle <MathJaxInline toShow={"$ I = [a, b] $"} /> et <MathJaxInline toShow={"$ a, b $"} /> deux réels tels que  <MathJaxInline toShow={"$ a < b $"} />.</p>
+                <p>Soit <MathJaxInline toShow={"$ f, g $"} /> deux fonctions continues sur un intervalle <MathJaxInline toShow={"$ I = [a, b] \\subset \\mathbb{R} $"} /> et <MathJaxInline toShow={"$ (a, b) \\in I^2 $"} /> deux réels tels que  <MathJaxInline toShow={"$ a < b $"} />.</p>
                 <p>Sur la figure ci-dessous, on a noté <MathJaxInline toShow={"$ m $"} /> et <MathJaxInline toShow={"$ M $"} /> les valeurs minimales et maximales de <MathJaxInline toShow={"$ f $"} /> sur <MathJaxInline toShow={"$ [a, b] $"} />.</p>
                 <ImageZoom src={integrationPositivite} name="Calcul d'intégrale sur une fonction à valeurs négatives et positives" n={++n} />
                 <p><MathJaxInline toShow={"$ \\forall x \\in [a,b] $"} />,</p>

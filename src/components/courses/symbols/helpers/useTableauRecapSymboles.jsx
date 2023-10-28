@@ -107,6 +107,16 @@ const useTableauRecapSymboles = () => {
         }
     )
 
+    tableauRecapSymboles.push(
+         {
+            id: k++,
+            title: " (\\enspace a, \\enspace b) \\in \\mathbb{R}^2) ",
+            values: ["a \\enspace et \\enspace b \\enspace appartiennent \\enspace à \\enspace l'ensemble \\enspace \\mathbb{R} "]
+        }
+    )
+
+   
+
     return tableauRecapSymboles;
 
 };

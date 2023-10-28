@@ -12,6 +12,7 @@ import Title1 from '../../helpers/Title1';
 
 const PythagoreAppliqueALatrigo = () => {
 
+    var n = 0;
     var pyth = "\\((cos(\\alpha))^2 + (sin(\\alpha))^2 = R^2\\)";
     var pyth2 = "\\((cos(\\alpha))^2 + (sin(\\alpha))^2 = 1\\)";
     var pyth3 = "\\(cos^2(\\alpha)+ sin^2(\\alpha) = 1\\)";
@@ -25,7 +26,7 @@ const PythagoreAppliqueALatrigo = () => {
     return (
             <>
                 <p>Sur la figure 1 du <Link url={`${PagesConstants.PREFIX}${PagesConstants.COURS}${CoursesConstants.TRIGO}/presentation`} external>premier chapitre sur la trigonométrie</Link> ci-dessous, on voit que nous sommes dans le cas d'un triangle rectangle formé par <MathJaxInline toShow={"$cos(\\alpha)$"} />, <MathJaxInline toShow={"$sin(\\alpha)$"} /> et son hypoténuse <MathJaxInline toShow={"$R$"} />.</p>
-                <ImageZoom src={circleTrigo} name="Cosinus et sinus" n={1} />
+                <ImageZoom src={circleTrigo} name="Cosinus et sinus" n={++n} />
                 <p>Grâce au <Link url={`${PagesConstants.PREFIX}${PagesConstants.COURS}${CoursesConstants.PYTHAGORE}/presentation`} external>théorème de Pythagore</Link>, on sait que :</p>
                 <MathJaxDisplay toShow={pyth} demo />
                 <p>Et comme dans le contexte du cercle trigonométrique, le rayon <MathJaxInline toShow={"$ R = 1$"} />, on a alors :</p>

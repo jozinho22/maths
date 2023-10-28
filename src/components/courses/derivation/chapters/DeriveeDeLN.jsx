@@ -9,7 +9,7 @@ import Link from '../../../immutable/nav/Link';
 
 const DeriveeDeLN = () => {
 
-    var lnX = "\\( \\forall x \\in \\mathbb{R}_+, \\enspace f(x) = ln(x) \\)";
+    var lnX = "\\( \\forall x \\in \\mathbb{R}^+, \\enspace f(x) = ln(x) \\)";
 
     var reciprocalRelation = "\\( \\Biggl\\{\\begin{align*} \\forall x \\in \\mathbb{R}_+, \\enspace e^{ln(x)} =  x \\\\ \\forall x \\in \\mathbb{R}, \\enspace ln(e^x) =  x \\end{align*} \\)";
 
@@ -31,7 +31,8 @@ const DeriveeDeLN = () => {
 
                 <p>Elle admet pour dérivée :</p> 
                 <Container className="Focus">
-                     <MathJaxDisplay toShow={lnXPrim} />  
+                     <MathJaxDisplay toShow={lnXPrim} />
+                     <MathJaxInline toShow={"$  \\forall x \\in \\mathbb{R^*_+}  $"} />  
                 </Container>
 
                 <Title1 title={"Démonstration"} />

@@ -11,7 +11,7 @@ import MathJaxDisplay from '../../../mathjax-display/MathJaxDisplay';
 
 const TableauxDeSignes = () => {
 
-    var equ ="\\(f(x) = ax+ b \\enspace (avec \\enspace a, b \\in \\mathbb{R},  \\enspace a \\neq 0) \\)"
+    var equ ="\\(f(x) = ax+ b \\enspace (avec \\enspace a \\in \\mathbb{R^*}, \\enspace b \\in \\mathbb{R}) \\)"
 
     return  <>
                 <p>Soit une équation du premier degré.</p>    

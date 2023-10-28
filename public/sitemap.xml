@@ -283,6 +283,11 @@
     <lastmod>2023-10-22T22:12:00+00:00</lastmod>
     <priority>0.64</priority>
   </url>
+  <url>
+    <loc>https://jozinho22.github.io/maths/#/cours/la-trigonometrie/resolution-d-equations</loc>
+    <lastmod>2023-10-28T20:00:00+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
     <!-- Cours : dérivée -->
   <url>
     <loc>https://jozinho22.github.io/maths/#/cours/la-derivee</loc>
@@ -476,7 +481,7 @@
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://jozinho22.github.io/maths/#/cours/primitives-integration/changement-de-variable</loc>
+    <loc>https://jozinho22.github.io/maths/#/cours/primitives-integration/integration-par-changement-de-variable</loc>
     <lastmod>2023-10-27T15:00:00+00:00</lastmod>
     <priority>0.64</priority>
   </url>

@@ -5,7 +5,7 @@ import InterpretationGeometriqueDeLaPrimitive from "./chapters/InterpretationGeo
 import InterpretationGeometriqueDeLaPrimitive2 from "./chapters/InterpretationGeometriqueDeLaPrimitive2";
 
 import TableauRecapFonctionsPrimitives from "./chapters/TableauRecapFonctionsPrimitives";
-import LIntegration from "./chapters/LIntegration";
+import IntegrationEntreDeuxBornes from "./chapters/IntegrationEntreDeuxBornes";
 import ProprietesDeLIntegrale from "./chapters/ProprietesDeLIntegrale";
 import RelationDeChasles from "./chapters/RelationDeChasles";
 import Linearite from "./chapters/Linearite";
@@ -19,7 +19,7 @@ import CalculSurfaceSphere from "./chapters/CalculSurfaceSphere";
 import CalculVolumeSphere from "./chapters/CalculVolumeSphere";
 import CalculVolumeCone from "./chapters/CalculVolumeCone";
 import CalculSurfaceCone from "./chapters/CalculSurfaceCone";
-import ChangementDeVariable from "./chapters/ChangementDeVariable";
+import IntegrationParChangementDeVariable from "./chapters/IntegrationParChangementDeVariable";
 
 const getPrimitivesIntegrationChapters = () => {
 
@@ -63,7 +63,7 @@ const getPrimitivesIntegrationChapters = () => {
         },
         {
             id: k++,
-            component: <LIntegration />,
+            component: <IntegrationEntreDeuxBornes />,
             title: 'Intégration d\'une fonction entre deux bornes',
             metaContent: 'Intégration d\'une fonction entre deux bornes.',
             relativePath: '/integration'
@@ -119,10 +119,10 @@ const getPrimitivesIntegrationChapters = () => {
         }, 
         {
             id: k++,
-            component: <ChangementDeVariable />,
+            component: <IntegrationParChangementDeVariable />,
             title: 'Intégration par changement de variable',
             metaContent: 'Intégration par changement de variable : explication et exemples.',
-            relativePath: '/changement-de-variable'
+            relativePath: '/integration-par-changement-de-variable'
         }, 
         {
             id: k++,

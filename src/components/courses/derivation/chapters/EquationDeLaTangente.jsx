@@ -14,7 +14,7 @@ const EquationDeLaTangente = () => {
     var n = 0;
     var xCarreeAndDeriv = "\\( \\Biggl\\{ \\begin{gather*} f(x) = x^2 \\\\ f'(x) = 2x \\end{gather*} \\)";
     var xCarreeAndDerivValueIn1 = "\\( \\Biggl\\{ \\begin{gather*} f(1) = 1 \\\\ f'(1) = 2 \\end{gather*} \\)";
-    var g = "\\(g(x) = ax + b\\)";
+    var g = "\\(g(x) = ax + b, \\enspace (avec \\enspace a \\in \\mathbb{R^*}, \\enspace b \\in \\mathbb{R})\\)";
 
     var eqDroite = "\\(f'(1) = \\frac{g(x) - f(1)}{x - 1 }\\)";
     var eqDroite2 = "\\(g(x) - f(1) = f'(1)(x - 1 )\\)";

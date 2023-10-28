@@ -13,6 +13,8 @@ import Link from '../../../immutable/nav/Link';
 
 const Definition = () => {
 
+    var n = 0;
+
     var sinDef = "\\(y =sin(\\alpha) \\)";
     var cosDef = "\\( x =cos(\\alpha) \\)";
     var sin = "\\(sin(\\alpha) = \\frac{oppos \\acute{e} }{hypot \\acute{e} nuse} \\)";
@@ -35,7 +37,7 @@ const Definition = () => {
                 </p>
                 <MathJaxDisplay toShow={cosDef} demo />
                 <p>Nous verrons la tangente par la suite. </p>
-                <ImageZoom src={circleTrigo} name="Cosinus et sinus" n={1} />
+                <ImageZoom src={circleTrigo} name="Cosinus et sinus" n={++n} />
                 <p>
                     Dans le cercle trigonométrique, on utilisera <MathJaxInline toShow="$\\pi$" /> comme une mesure d'angle (voir le chapitre sur <Link url={`${PagesConstants.PREFIX}${PagesConstants.COURS}${CoursesConstants.PI}`} external>le nombre π</Link>), qui vaut <MathJaxInline toShow={"$180°$"} />.
                     {"\n"}

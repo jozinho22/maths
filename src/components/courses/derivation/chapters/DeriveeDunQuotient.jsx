@@ -23,6 +23,7 @@ const DeriveeDunQuotient = () => {
                </p>
                <Container className="Focus">
                     <MathJaxDisplay toShow={deriveeQuotient}  />  
+                    <MathJaxInline toShow={"$ \\enspace (avec g(x) \\neq 0)  $"} demo  />  
                </Container>
 
                <Title1 title={"Démonstration"} />

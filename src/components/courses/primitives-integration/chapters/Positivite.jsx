@@ -23,7 +23,7 @@ const Positivite = () => {
     var aPlusBInt2 = "\\(  A_{totale} =  \\int_0^b f(t)dt + \\int_0^a f(t)dt  \\)";
 
     return  <>
-                <p>Si <MathJaxInline toShow={"$ f $"} /> est une fonction continue et positive sur un intervalle <MathJaxInline toShow={"$ I = [a, b] $"} /> et <MathJaxInline toShow={"$ a, b $"} /> deux réels tels que  <MathJaxInline toShow={"$ a < b $"} />,</p>
+                <p>Si <MathJaxInline toShow={"$ f $"} /> est une fonction continue et positive sur un intervalle <MathJaxInline toShow={"$ I = [a, b] \\subset \\mathbb{R} $"} /> et <MathJaxInline toShow={"$(a, b) \\in I^2 $"} /> deux réels tels que  <MathJaxInline toShow={"$ a < b $"} />,</p>
                 <p>alors <MathJaxInline toShow={"$ \\int_a^b f(t)dt $"} /> est positive.</p>
                 <Container className="Focus">
                      <MathJaxDisplay toShow={intABpos} />  

@@ -9,7 +9,7 @@ import MathJaxDisplay from '../../../mathjax-display/MathJaxDisplay';
 
 const TableauxDeSignesEtDeVariationsCasGeneral = () => {
 
-    var equ = "\\( f(x) = ax^2 + bx + c \\enspace (avec \\enspace a, b, c \\in \\mathbb{R}, \\enspace a \\neq 0) \\)";
+    var equ = "\\( f(x) = ax^2 + bx + c \\enspace (avec \\enspace a \\in \\mathbb{R^*}, \\enspace (b, c) \\in \\mathbb{R}^2) \\)";
 
     var equFact = "\\( f(x) = a(x - x_1)(x-x_2) \\)";
     

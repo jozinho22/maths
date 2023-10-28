@@ -28,7 +28,7 @@ const PuissanceDePuissances = () => {
                 <p>Il est alors possible de <Link url={"https://math.stackexchange.com/questions/3766951/how-to-prove-that-amn-amn-where-a-m-n-are-real-numbers-and-a0"} external>démontrer que c'est le cas pour deux réels</Link> (l'ensemble <MathJaxInline toShow={"$\\mathbb{R}$"} />) : </p>
                 <Container className="Focus">
                     <MathJaxDisplay toShow={powPow}/>
-                     <MathJaxDisplay toShow={"\\( avec \\enspace a \\enspace et \\enspace b \\in \\mathbb{R} \\)"} demo />
+                     <MathJaxDisplay toShow={"\\( avec (\\enspace a, \\enspace b) \\in \\mathbb{R}^2) \\)"} demo />
                 </Container> 
             </>
     );

@@ -6,35 +6,40 @@ const useTableauRecapPuissances = () => {
     tableauRecapPuissances.push(
         {
             id: k++,
-            title: "formules"
+            title: "formules",
+            values: ["restriction"]
         }
     )
     
     tableauRecapPuissances.push(
          {
             id: k++,
-            title: "x^0=1"
+            title: "x^0=1",
+            values: [""]
         }
     )
 
     tableauRecapPuissances.push(
          {
             id: k++,
-            title: "x^a.x^b = x^{a+b}"
+            title: "x^a.x^b = x^{a+b}",
+            values: ["(a, \\enspace b) \\in \\mathbb{R}^2"]
         }
     )
 
     tableauRecapPuissances.push(
          {
             id: k++,
-            title: "\\frac{x^a}{x^b} = x^{a-b}"
+            title: "\\frac{x^a}{x^b} = x^{a-b}",
+            values: ["(a, \\enspace b) \\in \\mathbb{R}^2, \\enspace x \\neq 0"]
         }
     )
 
     tableauRecapPuissances.push(
          {
             id: k++,
-            title: "(x^a)^b = x^{ab}"
+            title: "(x^a)^b = x^{ab}",
+            values: ["(a, \\enspace b) \\in \\mathbb{R}^2"]
         }
     )
 
@@ -42,6 +47,7 @@ const useTableauRecapPuissances = () => {
          {
             id: k++,
             title: "(xy)^a = x^a.y^a",
+            values: ["a\\in \\mathbb{R}"]
         }
     )
 
@@ -49,6 +55,7 @@ const useTableauRecapPuissances = () => {
          {
             id: k++,
             title: "\\Big(\\frac{x}{y}\\Big)^{a} = \\frac{x^a}{y^a}",
+            values: ["a \\in \\mathbb{R}, y \\neq 0"]
         }
     )
 
@@ -56,20 +63,23 @@ const useTableauRecapPuissances = () => {
          {
             id: k++,
             title: "\\frac{1}{x} = x^{-1}",
+            values: ["x \\neq 0"]
         }
     )
 
     tableauRecapPuissances.push(
          {
             id: k++,
-            title: "\\frac{1}{x^n} = x^{-n}",
+            title: "\\frac{1}{x^a} = x^{-a}",
+            values: ["x \\neq 0"]
         }
     )
 
     tableauRecapPuissances.push(
          {
             id: k++,
-            title: "\\frac{1}{x^{-n}} = x^{n}",
+            title: "\\frac{1}{x^{-a}} = x^{a}",
+            values: ["x \\neq 0"]
         }
     )
 
@@ -77,13 +87,15 @@ const useTableauRecapPuissances = () => {
          {
             id: k++,
             title: "x^{\\frac{1}{2}} = \\sqrt{x}",
+             values: ["x \\geqslant 0"]
         }
     )
 
     tableauRecapPuissances.push(
          {
             id: k++,
-            title: "x^{\\frac{1}{n}} = \\sqrt[n]{x}",
+            title: "x^{\\frac{1}{a}} = \\sqrt[a]{x}",
+            values: ["x \\geqslant 0 \\enspace si \\enspace \\frac{a}{2} \\enspace fini \\enspace par \\enspace un \\enspace nombre \\enspace pair"]
         }
     )
     

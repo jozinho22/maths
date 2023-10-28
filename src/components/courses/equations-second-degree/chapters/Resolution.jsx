@@ -6,7 +6,7 @@ import Title1 from '../../helpers/Title1';
 
 const Resolution = () => {
 
-    var equSecondDeg = "\\(f(x) = ax^2 + bx + c \\enspace (avec \\enspace a, b, c \\in \\mathbb{R}, \\enspace a \\neq 0)\\)";
+    var equSecondDeg = "\\(f(x) = ax^2 + bx + c \\enspace (avec \\enspace a \\in \\mathbb{R^*}, \\enspace (b, c) \\in \\mathbb{R}^2) \\)";
     var equSecondDegEquals0 = "\\( ax^2 + bx + c = 0 \\)";
     var equSecondDegEquals0Fact = "\\( a \\left(x^2 + \\frac{b}{a}.x + \\frac{c}{a} \\right) = 0 \\)";
     var equSecondDegEquals0Fact2 = "\\( a \\Biggl( \\biggl(x + \\frac{b}{2a} \\biggr)^2 - \\frac{b^2}{4a^2} +  \\frac{c}{a} \\Biggr) = 0\\)";

@@ -4,7 +4,7 @@ import MathJaxDisplay from '../../../mathjax-display/MathJaxDisplay';
 import MathJaxInline from '../../../mathjax-display/MathJaxInline';
 import Title1 from '../../helpers/Title1';
 
-const LIntegration = () => {
+const IntegrationEntreDeuxBornes = () => {
 
     var intAB = "\\(  \\int_a^b f(t)dt = F(b) - F(a) \\)";
     var intExample = "\\(  \\int_0^1 (2t+3)dt \\)";
@@ -15,7 +15,7 @@ const LIntegration = () => {
     var intExample5 = "\\(  \\int_0^1 (2t+3)dt  = 4 \\)";
 
     return  <>
-                <p>Soit <MathJaxInline toShow={"$ f $"} /> une fonction continue sur un intervalle <MathJaxInline toShow={"$ I = [a, b] $"} /> et <MathJaxInline toShow={"$ a, b $"} /> deux réels tels que  <MathJaxInline toShow={"$ a < b $"} />.</p>
+                <p>Soit <MathJaxInline toShow={"$ f $"} /> une fonction continue sur un intervalle <MathJaxInline toShow={"$ I = [a, b] \\subset \\mathbb{R}$"} /> et <MathJaxInline toShow={"$ (a, b) \\in I $"} /> deux réels tels que <MathJaxInline toShow={"$ a < b $"} />.</p>
                 <p>On note l'intégrale de <MathJaxInline toShow={"$ a $"} /> vers <MathJaxInline toShow={"$ b $"} /> : </p>
                 <Container className="Focus">
                      <MathJaxDisplay toShow={intAB} />  
@@ -38,4 +38,4 @@ const LIntegration = () => {
             </>
 }
 
-export default LIntegration;
+export default IntegrationEntreDeuxBornes;

@@ -7,7 +7,7 @@ import Aside from '../../helpers/Aside';
 
 const DeriveeDeXPuissanceN = () => {
 
-    var xPuissanceN = "\\( \\forall x \\in (\\mathbb{R} \\enspace si \\enspace x \\geqslant 0, \\enspace \\mathbb{R^*} \\enspace si \\enspace x < 0), f(x)= x^n \\)";
+    var xPuissanceN = "\\( \\forall x \\in (\\mathbb{R} \\enspace si \\enspace x \\geqslant 0, \\enspace \\mathbb{R^*} \\enspace si \\enspace x < 0), \\enspace \\forall n \\mathbb{R^*}, \\in f(x)= x^n \\)";
 
     var deriveeXPuissanceN = "\\( (x^n)' = n . x^{n-1} \\)";
     var deriveeXPuissanceN2 = "\\( (x^n)' = lim_{ h \\to 0} \\enspace \\frac{ (x+h)^n - x^n }{h} \\)";

@@ -7,7 +7,7 @@ import Link from '../../../immutable/nav/Link';
 import PagesConstants from '../../../immutable/nav/PagesConstants';
 import CoursesConstants from '../../helpers/CoursesConstants';
 
-const ChangementDeVariable = () => {
+const IntegrationParChangementDeVariable = () => {
 
     var chgtDeVar = "\\( \\int^x (f \\circ \\phi(t)) . \\phi'(t) dt = \\int^{\\phi(x)} f(u). du \\)";
     var FRondPhiPrim = "\\( (F \\circ \\phi)'(t) =  \\phi'(t).(F' \\circ \\phi)(t) \\)";
@@ -24,6 +24,7 @@ const ChangementDeVariable = () => {
                 <p>On note la formule générale :</p>
                 <Container className="Focus">
                      <MathJaxDisplay toShow={chgtDeVar} />  
+                     <MathJaxInline toShow={"$ (avec \\enspace u = \\phi(t), \\enspace du = \\phi'(t)dt) $"} />. 
                 </Container>
                 <p>Où <MathJaxInline toShow={"$ u = \\phi(t) $"} /> et <MathJaxInline toShow={"$ du = \\phi'(t)dt $"} />. </p>
                 <p>À noter que l'on a aussi remplacé les bornes de l'intégrale par l'image de <MathJaxInline toShow={"$ x $"} /> par <MathJaxInline toShow={"$ \\phi(x) $"} />.</p> 
@@ -50,4 +51,4 @@ const ChangementDeVariable = () => {
             </>
 }
 
-export default ChangementDeVariable;
+export default IntegrationParChangementDeVariable;

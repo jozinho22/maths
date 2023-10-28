@@ -11,7 +11,7 @@ const RelationDeChasles = () => {
     var chaslesDemo2 = "\\(  \\int_a^b f(t)dt  + \\int_b^c f(t)dt =  F(c) - F(a)  \\)";
 
     return  <>
-                <p>Soit <MathJaxInline toShow={"$ f $"} /> une fonction continue sur un intervalle <MathJaxInline toShow={"$ I = [a, c] $"} /> et <MathJaxInline toShow={"$ a, b, c $"} /> trois réels de <MathJaxInline toShow={"$ I$"} /> tels que <MathJaxInline toShow={"$ a < b < c $"} />.</p>
+                <p>Soit <MathJaxInline toShow={"$ f $"} /> une fonction continue sur un intervalle <MathJaxInline toShow={"$ I = [a, c] \\subset \\mathbb{R} $"} /> et <MathJaxInline toShow={"$ (a, b, c) \\in I^3 $"} /> tels que <MathJaxInline toShow={"$ a < b < c $"} />.</p>
                 <Container className="Focus">
                      <MathJaxDisplay toShow={chasles} />  
                 </Container>

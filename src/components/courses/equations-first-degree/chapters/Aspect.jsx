@@ -18,7 +18,7 @@ const Aspect = () => {
 
     var n = 0;
 
-    var equ = "\\(f(x) = ax + b \\enspace (avec \\enspace (a,b) \\in \\mathbb{R}, \\enspace a \\neq 0) \\)";
+    var equ = "\\(f(x) = ax + b \\enspace (avec \\enspace a \\in \\mathbb{R^*}, \\enspace b \\in \\mathbb{R}) \\)";
 
     var tauxVar = "\\(a = \\frac{\\Delta y}{\\Delta x}\\)";
     var tauxVar2 = "\\(a = \\frac{y_b - y_a}{x_b - x_a}\\)";

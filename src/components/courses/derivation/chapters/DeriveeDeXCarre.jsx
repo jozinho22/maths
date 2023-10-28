@@ -6,7 +6,7 @@ import Title1 from '../../helpers/Title1';
 
 const DeriveeDeXCarre = () => {
 
-    var fCarree = "\\( \\forall x \\in \\mathbb{R}, f(x)= x^2\\)";
+    var fCarree = "\\( \\forall x \\in \\mathbb{R}, \\enspace f(x)= x^2\\)";
     var fCarreePrim = "\\((x^2)' = lim_{ h \\to 0} \\enspace \\frac{f(x+h) - f(x)}{h }\\)";
     var fCarreePrim2 = "\\(\\Longleftrightarrow  lim_{ h \\to 0} \\enspace \\frac{(x+h)^2 - (x)^2}{h }\\)";
     var fCarreePrim3 = "\\(\\Longleftrightarrow lim_{ h \\to 0} \\enspace \\frac{x^2 + 2xh + h^2 - x^2}{h }\\)";

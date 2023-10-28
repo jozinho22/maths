@@ -59,7 +59,7 @@ const Aspect = () => {
 
     return  <>
                 <p>
-                    Les fonctions qui sont de type <MathJaxInline toShow={"$f(x) = ax^2 + bx + c \\enspace (avec \\enspace a, b, c \\in \\mathbb{R}, \\enspace a \\neq 0)$"} /> sont appelées fonctions polynômes, et forment des hyperboles dont <MathJaxInline toShow={"$a$"} /> va déterminer le sens.
+                    Les fonctions qui sont de type <MathJaxInline toShow={"$f(x) = ax^2 + bx + c \\enspace (avec \\enspace a \\in \\mathbb{R^*}, \\enspace (b, c) \\in \\mathbb{R}^2) $"} /> sont appelées fonctions polynômes, et forment des hyperboles dont <MathJaxInline toShow={"$a$"} /> va déterminer le sens.
                 </p>
                 <ImageZoom src={equ2degAspect} name="Aspect des équations du second degré" n={++n} />
 

@@ -9,7 +9,7 @@ import Link from '../../../immutable/nav/Link';
 
 const DeriveeDeNPuissanceX = () => {
 
-    var nPuissanceX = "\\( \\forall x \\in \\mathbb{R}, \\enspace f(x)= n^x\\)";
+    var nPuissanceX = "\\( \\forall x \\in \\mathbb{R}, \\enspace \\forall n \\in (\\mathbb{R} \\enspace si \\enspace x > 0,\\enspace \\mathbb{R^*} \\enspace si \\enspace x < 0) , \\enspace f(x)= n^x\\)";
     var nPuissanceXPrim = "\\( (n^x)' = ln(n).n^x \\)";
     var nPuissanceXPrimDemo = "\\( (n^x)' = lim_{ h \\to 0} \\enspace \\frac{n^{x+h} - n^{h}}{h}\\)";
     var nPuissanceXPrimDemo2 = "\\( (n^x)' = \\left(e^{ln(n^x)}\\right)' \\)";

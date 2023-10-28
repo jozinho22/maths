@@ -11,6 +11,7 @@ import Title1 from '../../helpers/Title1';
 
 const LaTangente = () => {
 
+    var n = 0;
     var tan = "\\(tan(\\alpha) = \\frac{sin(\\alpha)}{cos(\\alpha)}  \\)";
     var thales = "\\(\\frac{sin(\\alpha)}{tan(\\alpha)} = \\frac{cos(\\alpha)}{1} \\)";
 
@@ -24,10 +25,10 @@ const LaTangente = () => {
                 La définition d'une tangente en maths est la droite qui coupe une portion de cercle à angle droit.
                 {"\n"}Le cercle et sa tangente se coupent alors en un point précis.
             </p>
-            <ImageZoom src={tangente} name="La tangente de manière générale" n={4} />
+            <ImageZoom src={tangente} name="La tangente de manière générale" n={++n} />
 
             <p>En trigonométrie, la tangente est la longueur du segment créée par la tangente au cercle au point <MathJaxInline toShow={"$\\alpha = 0$" } /> et le prolongement de la droite créée par l'angle <MathJaxInline toShow={"$\\alpha$" } />.</p>
-            <ImageZoom src={circleTrigo2} name="La tangente sur le cercle trigonométrique" n={5} />
+            <ImageZoom src={circleTrigo2} name="La tangente sur le cercle trigonométrique" n={++n} />
       
             <p>En appliquant le théorème de Thalès, on voit que :</p>
             <MathJaxDisplay toShow={thales} demo />
@@ -40,10 +41,10 @@ const LaTangente = () => {
 
             <Title1 title={"Applications"} />
             <p>En utilisant la tangente, on peut mesurer la longueur d'un côté d'un triangle, en connaissant l'angle opposé au côté que l'on cherche.</p>
-            <ImageZoom src={tangenteApplication} name="La tangente de manière générale" n={6} />
+            <ImageZoom src={tangenteApplication} name="La tangente de manière générale" n={++n} />
             <p>Avec la formule vue précédemment : </p>
             <MathJaxDisplay toShow={tanAlphaGen} demo />
-            <p>On a par rapport à la figure 6 :</p>
+            <p>On a par rapport à la figure 3 :</p>
             <MathJaxDisplay toShow={tanAlpha} demo />
             <p>Soit </p>
             <MathJaxDisplay toShow={a} demo />

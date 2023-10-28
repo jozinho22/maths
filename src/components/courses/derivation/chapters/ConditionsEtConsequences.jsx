@@ -7,7 +7,7 @@ import Title1 from '../../helpers/Title1';
 
 const ConditionsEtConsequences = () => {
 
-    var derivabilityCondition = "\\(lim_{h \\to 0} \\enspace  \\frac{f(x+h) - f(x)}{h} = a, (avec \\enspace a \\in  \\mathbb{R}) \\)";
+    var derivabilityCondition = "\\(lim_{h \\to 0} \\enspace  \\frac{f(x+h) - f(x)}{h} = a, \\enspace (avec \\enspace a \\in  \\mathbb{R}) \\)";
 
     var derivableImpliesContinue = "\\(f \\enspace d \\acute{e} rivable \\enspace en \\enspace a \\implies f \\enspace continue \\enspace en \\enspace a\\)";
     

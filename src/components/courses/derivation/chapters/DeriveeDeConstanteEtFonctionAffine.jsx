@@ -8,13 +8,13 @@ import Title2 from '../../helpers/Title2';
 
 const DeriveeDeConstanteEtFonctionAffine = () => {
 
-    var fCte = "\\( \\forall x \\in \\mathbb{R}, f(x)= k, \\enspace avec \\enspace k \\in \\mathbb{R}\\)";
+    var fCte = "\\( \\forall x \\in \\mathbb{R}, \\enspace f(x)= k, \\enspace (avec \\enspace k \\in \\mathbb{R})\\)";
     var fCtePrim = "\\((k)' =  lim_{ h \\to 0} \\enspace \\frac{k - k}{h }\\)";
     var fCtePrim2 = "\\( \\Longleftrightarrow lim_{ h \\to 0} \\enspace \\frac{0}{h }\\)";
     var fCtePrim3 = "\\( \\Longleftrightarrow lim_{ h \\to 0} \\enspace 0\\)";
     var fCtePrim4 = "\\( (k)' = 0 \\)";
 
-    var fAff = "\\( \\forall x \\in \\mathbb{R}, f(x)= ax + b, \\enspace avec  \\enspace a, b \\in \\mathbb{R}\\)";
+    var fAff = "\\( \\forall x \\in \\mathbb{R}, \\enspace f(x)= ax + b, \\enspace (avec  \\enspace (a, \\enspace b) \\in \\mathbb{R}^2\\)";
     var fAffPrim = "\\(( ax + b)' =  lim_{ h \\to 0} \\enspace \\frac{a(x + h) + b - (ax + b)}{h }\\)";
     var fAffPrim2 = "\\( \\Longleftrightarrow lim_{ h \\to 0} \\enspace \\frac{ax + ah + b - ax - b}{h }\\)";
     var fAffPrim3 = "\\( \\Longleftrightarrow lim_{ h \\to 0} \\enspace \\frac{ah}{h }\\)";

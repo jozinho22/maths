@@ -29,7 +29,8 @@ const IntegrationParParties = () => {
     var intLnX2 = "\\( \\int_0^{\\frac{\\pi}{2}} t.ln(t)dt = \\Bigl[t.ln(t)\\Bigr]_1^e - \\int_1^e dt  = 1  \\)";
 
     return  <>
-                <p>Soit <MathJaxInline toShow={"$ u, v $"} /> deux fonctions continues et dérivables sur un intervalle <MathJaxInline toShow={"$ I = [a, b] $"} />, <MathJaxInline toShow={"$ a $"} /> et <MathJaxInline toShow={"$ b $"} /> deux réels et leur dérivée respective <MathJaxInline toShow={"$ u', v' $"} /> de même continue sur <MathJaxInline toShow={"$ I$"} />. </p>
+                <p>Soit <MathJaxInline toShow={"$ u, v $"} /> deux fonctions continues et dérivables sur <MathJaxInline toShow={"$ I = [a, b] \\subset \\mathbb{R} $"} /> et <MathJaxInline toShow={"$ (a, b) \\in I^2 $"} /> deux réels tels que  <MathJaxInline toShow={"$ a < b $"} />.</p>
+                <p>Leur dérivée respective <MathJaxInline toShow={"$ u', v' $"} /> sont de même continues sur <MathJaxInline toShow={"$ I$"} />. </p>
                 <p>On a alors l'égalité : </p>
                 <Container className="Focus">
                      <MathJaxDisplay toShow={intParParties} />  

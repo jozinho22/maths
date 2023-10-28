@@ -17,7 +17,7 @@ const Croissance = () => {
     var ineqfgDemo3 = "\\( \\Longleftrightarrow  \\int_a^b f(t)dt - \\int_a^b g(t) dt \\leqslant 0 \\)";
 
     return  <>
-                <p>Soit <MathJaxInline toShow={"$ f, g $"} /> deux fonctions continues sur un intervalle <MathJaxInline toShow={"$ I = [a, b] $"} /> et <MathJaxInline toShow={"$ a, b $"} /> deux réels.</p>
+                <p>Soit <MathJaxInline toShow={"$ f, g $"} /> deux fonctions continues sur un intervalle <MathJaxInline toShow={"$ I = [a, b] \\subset \\mathbb{R} $"} /> et <MathJaxInline toShow={"$ (a, b) \\in I^2 $"} /> deux réels tels que  <MathJaxInline toShow={"$ a < b $"} />.</p>
                 <p>Si : </p>
                 <MathJaxDisplay toShow={ineqfg} demo /> 
                 <p>Alors,</p> 

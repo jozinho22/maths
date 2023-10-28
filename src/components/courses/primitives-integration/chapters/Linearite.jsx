@@ -15,7 +15,7 @@ const Linearite = () => {
     var intfgABGen = "\\( \\int_a^b \\Bigl(\\lambda .f(t) + \\mu. g(t)\\Bigr) dt = \\lambda \\int_a^b f(t) dt + \\mu \\int_a^b g(t) dt \\)";
 
     return  <>
-                <p>Soit <MathJaxInline toShow={"$ F, G $"} /> deux primitives respectives de deux fonctions <MathJaxInline toShow={"$ f, g $"} /> sur un intervalle <MathJaxInline toShow={"$ I $"} />, <MathJaxInline toShow={"$ a, b $"} /> deux réels.</p>
+                <p>Soit <MathJaxInline toShow={"$ F, G $"} /> deux primitives respectives de deux fonctions <MathJaxInline toShow={"$ f, g $"} /> sur un intervalle <MathJaxInline toShow={"$ I = [a, b] \\subset \\mathbb{R} $"} />, <MathJaxInline toShow={"$ (a, b) \\in I^2 $"} /> deux réels tels que  <MathJaxInline toShow={"$ a < b $"} />.</p>
                 
                 <Container className="Focus">
                      <MathJaxDisplay toShow={intfgAB} />  

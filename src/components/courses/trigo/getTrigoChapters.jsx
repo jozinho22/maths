@@ -6,6 +6,7 @@ import FormulesDeDuplication from './chapters/FormulesDeDuplication';
 import FormulesDeLinearisation from './chapters/FormulesDeLinearisation';
 import LaTangente from './chapters/LaTangente';
 import ValeursDeTan from './chapters/ValeursDeTan';
+import ResolutionDEquations from './chapters/ResolutionDEquations';
 
 const getTrigoChapters = () => {
 
@@ -67,6 +68,13 @@ const getTrigoChapters = () => {
             title: 'Valeurs de la tangente sur le cercle',
             metaContent: 'Toutes les valeurs usuelles des tangentes sur le cercle et le schéma répétitif.',
             relativePath: '/valeurs-de-tan'
+        },
+        {
+            id: k++,
+            component: <ResolutionDEquations />,
+            title: 'Résolutions d\'équations trigonométriques',
+            metaContent: 'Résolutions d\'équations trigonométriques.',
+            relativePath: '/resolution-d-equations'
         }
     ];
 }

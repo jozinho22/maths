@@ -6,23 +6,23 @@ import Title2 from '../../helpers/Title2';
 
 const DecompositionDUnInverseDePolynomeEnElementsSimples = () => {
 
-    var inversePolynome = "\\(f(x) = \\frac{1}{(x-\\lambda)(x-\\mu)} \\enspace \\enspace \\enspace (avec \\enspace \\lambda, \\enspace \\mu \\in \\mathbb{R})\\)";
+    var inversePolynome = "\\(f(x) = \\frac{1}{(x-x_1)(x-x_2)} \\enspace \\enspace \\enspace (avec (\\enspace x_1, \\enspace x_2) \\in \\mathbb{R}^2 )\\)";
     
-    var inversePolynomeSimp = "\\(f(x) = \\frac{a}{(x-\\lambda)} + \\frac{b}{(x-\\mu)} \\enspace (avec \\enspace a, \\enspace b \\in \\mathbb{R})\\)";
-    var inversePolynomeSimpMemeDen = "\\(f(x) = \\frac{a(x-\\lambda) + b(x-\\mu) }{(x-\\lambda)(x-\\mu)} \\)";
+    var inversePolynomeSimp = "\\(f(x) = \\frac{a}{(x-x_1)} + \\frac{b}{(x-x_2)} \\enspace (avec (\\enspace x_1, \\enspace x_2) \\in \\mathbb{R}^2 ) \\)";
+    var inversePolynomeSimpMemeDen = "\\(f(x) = \\frac{a(x-x_1) + b(x-x_2) }{(x-x_1)(x-x_2)} \\)";
 
-    var a = "\\( f(x)(x-\\lambda) = a + b.\\frac{x-\\lambda}{x-\\mu} \\)";
-    var aXEqualsLambda = "\\( (x =\\lambda) \\Longrightarrow f(x)(x-\\lambda) = a \\)";
-    var aGen = "\\(f(x)(x-\\lambda) = \\frac{1}{x-\\mu}  \\)";
-    var aGenXEqualsLambda = "\\( (x =\\lambda) \\Longrightarrow a = \\frac{1}{\\lambda-\\mu}  \\)";
-    var bGenXEqualsMu = "\\( (x =\\mu) \\Longrightarrow  b = \\frac{1}{\\mu-\\lambda} \\)";
+    var a = "\\( f(x)(x-x_1) = a + b.\\frac{x-x_1}{x-x_2} \\)";
+    var aXEqualsLambda = "\\( (x =x_1) \\Longrightarrow f(x)(x-x_1) = a \\)";
+    var aGen = "\\(f(x)(x-x_1) = \\frac{1}{x-x_2}  \\)";
+    var aGenXEqualsLambda = "\\( (x =x_1) \\Longrightarrow a = \\frac{1}{x_1-x_2}  \\)";
+    var bGenXEqualsMu = "\\( (x =x_2) \\Longrightarrow  b = \\frac{1}{x_2-x_1} \\)";
 
-    var ab = "\\( \\Biggl\\{ a = \\frac{1}{\\lambda-\\mu}, \\enspace b = \\frac{1}{\\mu-\\lambda} \\Biggr\\}\\)";
-    var fGen = "\\(f(x) = \\frac{1}{(x-\\lambda)(x-\\mu)} = \\frac{1}{\\lambda-\\mu}.\\frac{1}{(x-\\lambda)} + \\frac{1}{\\mu-\\lambda}\\frac{1}{(x-\\mu)} \\)";
+    var ab = "\\( \\Biggl\\{ a = \\frac{1}{x_1-x_2}, \\enspace b = \\frac{1}{x_2-\\l \\Biggr\\}\\)";
+    var fGen = "\\(f(x) = \\frac{1}{(x-x_1)(x-x_2)} = \\frac{1}{x_1-x_2}.\\frac{1}{(x-x_1)} + \\frac{1}{x_2-x_1}\\frac{1}{(x-x_2)} \\)";
 
 
     var exemple = "\\(f(x) = \\frac{1}{(x-2)(x+3)}\\)";
-    var aXEquals2 = "\\( (x =2) \\Longrightarrow f(x)(x-2) = a = \\frac{1}{x+3} \\)";
+    var aXEquals2 = "\\( (ambda}x =2) \\Longrightarrow f(x)(x-2) = a = \\frac{1}{x+3} \\)";
     var aXEquals22 = "\\( (x =2) \\Longrightarrow f(x)(x-2) = a = \\frac{1}{2+3} = \\frac{1}{5} \\)";
 
     var bXEqualsMinus3 = "\\( (x =-3) \\Longrightarrow f(x)(x+3) = b = \\frac{1}{x-2} \\)";
@@ -30,11 +30,11 @@ const DecompositionDUnInverseDePolynomeEnElementsSimples = () => {
     
     var exempleSimp = "\\(f(x) = \\frac{1}{5} .\\frac{1}{(x-2)}-\\frac{1}{5}.\\frac{1}{(x+3)} \\)";
 
-    var inversePolynomeDeg3 = "\\(f(x) = \\frac{1}{(x-\\lambda)(x-\\mu)(x-\\nu)} \\enspace \\enspace \\enspace (avec \\enspace \\lambda, \\enspace \\mu, \\enspace \\nu \\in \\mathbb{R})\\)";
-    var fGenDegre3 = "\\(f(x) = \\frac{1}{(x-\\lambda)(x-\\mu)(x-\\nu)} = \\frac{1}{(\\lambda-\\mu)(\\lambda-\\nu)}.\\frac{1}{(x-\\lambda)} + \\frac{1}{(\\mu-\\lambda)(\\mu-\\nu)}\\frac{1}{(x-\\mu)}   + \\frac{1}{(\\nu-\\lambda)(\\nu-\\mu)}\\frac{1}{(x-\\nu)} \\)";
+    var inversePolynomeDeg3 = "\\(f(x) = \\frac{1}{(x-x_1)(x-x_2)(x-x_3)} \\enspace \\enspace \\enspace (avec \\enspace x_1, \\enspace x_2, \\enspace x_3 \\in \\mathbb{R})\\)";
+    var fGenDegre3 = "\\(f(x) = \\frac{1}{(x-x_1)(x-x_2)(x-x_3)} = \\frac{1}{(x_1-x_2)(x_1-x_3)}.\\frac{1}{(x-x_1)} + \\frac{1}{(x_2-x_1)(x_2-x_3)}\\frac{1}{(x-x_2)}   + \\frac{1}{(x_3-x_1)(x_3-x_2)}\\frac{1}{(x-x_3)} \\)";
     
-    var inversePolynomeDegN = "\\(f(x) = \\prod_{i=1}^n  \\frac{1}{x -\\lambda_{i}} \\)";
-    var fGenDegreN = "\\(f(x) = \\sum_{i=1}^n \\Biggl[ \\prod_\\underset{j \\neq i}{j=1}^n \\frac{1}{\\lambda_{i}-\\lambda_{j}} \\Biggr]. \\frac{1}{x - \\lambda_{i}} \\)";
+    var inversePolynomeDegN = "\\(f(x) = \\prod_{i=1}^n  \\frac{1}{x -x_{i}} \\)";
+    var fGenDegreN = "\\(f(x) = \\sum_{i=1}^n \\Biggl[ \\prod_\\underset{j \\neq i}{j=1}^n \\frac{1}{x_{i}-x_{j}} \\Biggr]. \\frac{1}{x - x_{i}} \\)";
 
     return  <>
                 <p>
@@ -52,13 +52,13 @@ const DecompositionDUnInverseDePolynomeEnElementsSimples = () => {
                 <p>En arrangeant l'expression, on obtient :</p>
                 <MathJaxDisplay toShow={inversePolynomeSimpMemeDen} demo />
 
-                <p>Lorsque l'on observe le comportement de <MathJaxInline toShow={"$f(x)(x-\\lambda)$"} />, on a : </p>
+                <p>Lorsque l'on observe le comportement de <MathJaxInline toShow={"$f(x)(x-x_1)$"} />, on a : </p>
                 <MathJaxDisplay toShow={a} demo />
-                <p>Si on effectue ce calcul pour <MathJaxInline toShow={"$x = \\lambda$"} />, on a :</p>
+                <p>Si on effectue ce calcul pour <MathJaxInline toShow={"$x = x_1$"} />, on a :</p>
                 <MathJaxDisplay toShow={aXEqualsLambda} fRef={2} demo />
                 <p>Or, grâce à <MathJaxInline toShow={"$(1)$"} /> on peut voir que : </p>
                 <MathJaxDisplay toShow={aGen} fRef={3} demo />
-                <p>Soit, si <MathJaxInline toShow={"$x = \\lambda$"} />, avec <MathJaxInline toShow={"$(2)$"} /> et <MathJaxInline toShow={"$(3)$"} />, on a : </p>
+                <p>Soit, si <MathJaxInline toShow={"$x = x_1$"} />, avec <MathJaxInline toShow={"$(2)$"} /> et <MathJaxInline toShow={"$(3)$"} />, on a : </p>
                 <MathJaxDisplay toShow={aGenXEqualsLambda} demo />
 
                 <p>On refait la même chose pour <MathJaxInline toShow={"$b$"} /> :</p>

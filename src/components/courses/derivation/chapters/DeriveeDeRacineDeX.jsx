@@ -6,7 +6,7 @@ import Title1 from '../../helpers/Title1';
 
 const DeriveeDeRacineDeX = () => {
     
-    var fSqr = "\\( \\forall x \\in \\mathbb{R_+^*}, \\enspace f(x)=  \\sqrt{x}\\)";
+    var fSqr = "\\( \\forall x \\in \\mathbb{R^+}, \\enspace f(x)=  \\sqrt{x}\\)";
     var fSqrPrim = "\\( (\\sqrt{x})' = lim_{ h \\to 0} \\enspace  \\frac{ \\sqrt{x + h} - \\sqrt{x } }{h} \\)";
     var fSqrPrim2 = "\\( \\Longleftrightarrow lim_{ h \\to 0} \\enspace  \\frac{ \\left( \\sqrt{x + h} - \\sqrt{x } \\right).\\left( \\sqrt{x + h} + \\sqrt{x } \\right) } {h. \\left(\\sqrt{x + h} + \\sqrt{x} \\right)} \\)";
     var fSqrPrim3 = "\\( \\Longleftrightarrow lim_{ h \\to 0} \\enspace  \\frac{ x + h - x } {h. \\left(\\sqrt{x + h} + \\sqrt{x} \\right)} \\)";
@@ -23,7 +23,8 @@ const DeriveeDeRacineDeX = () => {
                 <MathJaxDisplay toShow={fSqr} demo /> 
                 <p>Elle admet pour dérivée :</p>
                 <Container className="Focus">
-                     <MathJaxDisplay toShow={fSqrPrim7} />  
+                     <MathJaxDisplay toShow={fSqrPrim7} /> 
+                    <MathJaxInline toShow={"$  \\forall x \\in \\mathbb{R^*_+}  $"} />
                 </Container> 
 
                 <Title1 title={"Démonstration"} />

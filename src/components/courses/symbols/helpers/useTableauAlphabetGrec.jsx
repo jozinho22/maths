@@ -71,7 +71,7 @@ const useTableauAlphabetGrec = () => {
          {
             id: k++,
             title: "theta",
-            values: ["\\theta", "\\theta"]
+            values: ["\\theta", "\\Theta"]
         }
     )
 

@@ -56,7 +56,7 @@ const MultiplicationDePuissances = () => {
                 <p>Il est alors possible de <Link url={"https://math.stackexchange.com/questions/3766951/how-to-prove-that-amn-amn-where-a-m-n-are-real-numbers-and-a0"} external>démontrer que c'est le cas pour deux réels</Link> (l'ensemble <MathJaxInline toShow={"$\\mathbb{R}$"} />) : </p>
                 <Container className="Focus">
                     <MathJaxDisplay toShow={xPowAB}/>
-                    <MathJaxDisplay toShow={"\\( avec \\enspace a \\enspace et \\enspace b \\in \\mathbb{R} \\)"} demo />
+                    <MathJaxDisplay toShow={"\\( avec (\\enspace a, \\enspace b) \\in \\mathbb{R}^2) \\)"} demo />
                 </Container> 
 
                 <Title1 title={"Quotient de puissances"} />
@@ -64,7 +64,7 @@ const MultiplicationDePuissances = () => {
                 <MathJaxDisplay toShow={xPowAOnXPowBDemo} demo />
                 <Container className="Focus"> 
                     <MathJaxDisplay toShow={xPowAOnXPowB}/>
-                    <MathJaxDisplay toShow={"\\( avec \\enspace a \\enspace et \\enspace b \\in \\mathbb{R}, \\enspace x \\neq 0 \\)"} demo />
+                    <MathJaxDisplay toShow={"\\( avec (\\enspace a, \\enspace b) \\in \\mathbb{R}^2, \\enspace x \\neq 0 \\)"} demo />
                 </Container>
             </>
     );
