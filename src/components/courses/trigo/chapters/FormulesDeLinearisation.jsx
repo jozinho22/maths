@@ -13,6 +13,9 @@ const FormulesDeLinearisation = () => {
                 <Container className="Focus">
                     <MathJaxDisplay toShow={sinAsinB} />
                     <MathJaxDisplay toShow={sinAcosB} />
+                </Container>
+
+                <Container className="Focus">
                     <MathJaxDisplay toShow={cosAcosB} />
                 </Container>
             </>

@@ -18,6 +18,8 @@ const FormulesDAddition = () => {
     var eiThetaAPlusB3 = "\\( e^{i(\\alpha + \\beta)} = cos(\\alpha).cos(\\beta) + i.cos(\\alpha).sin(\\beta) + i.cos(\\beta).sin(\\alpha) - sin(\\alpha).sin(\\beta) \\)";
     var eiThetaAPlusB4 = "\\( e^{i(\\alpha + \\beta)} = \\underbrace{ \\bigl(cos(\\alpha).cos(\\beta) - sin(\\alpha).sin(\\beta)\\bigl) } _\\text{partie réelle}  + i.\\underbrace{\\bigl(sin(\\alpha).cos(\\beta) + sin(\\beta).cos(\\alpha)\\bigl) } _\\text{ partie imaginaire } \\)";
 
+    var results = `\\( \\Biggl\\{ \\begin{gather*} cos(\\alpha + \\beta) = cos(\\alpha) cos(\\beta) - sin(\\alpha) sin(\\beta) \\\\ sin(\\alpha + \\beta) = sin(\\alpha) cos(\\beta) + sin(\\beta) cos(\\alpha)  \\end{gather*} \\)`;
+
     return (
         <>      
             <Container className="Focus">
@@ -42,11 +44,10 @@ const FormulesDAddition = () => {
                 <MathJaxDisplay toShow={eiThetaAPlusB4} demo />
             </Aside>
             
-            <p>- <MathJaxInline toShow={"$cos(\\alpha).cos(\\beta) - sin(\\alpha).sin(\\beta)$"}/> est la partie réelle de <MathJaxInline toShow={"$e^{i(\\alpha + \\beta)}$"}/>.</p>
-            <p>- <MathJaxInline toShow={"$sin(\\alpha).cos(\\beta) + sin(\\beta).cos(\\alpha)$"}/> est sa partie imaginaire.</p>
+            <p>- <MathJaxInline toShow={"$\\mathcal{Re} \\left(e^{i(\\alpha + \\beta )}\\right) = cos(\\alpha).cos(\\beta) - sin(\\alpha).sin(\\beta)$"}/> est la partie réelle de <MathJaxInline toShow={"$e^{i(\\alpha + \\beta)}$"}/>.</p>
+            <p>- <MathJaxInline toShow={"$\\mathcal{Im} \\left(e^{i(\\alpha + \\beta )}\\right) = sin(\\alpha).cos(\\beta) + sin(\\beta).cos(\\alpha)$"}/> est sa partie imaginaire.</p>
             <p>Soit en identifiant les parties correspondantes entre elles on a : </p>
-            <MathJaxDisplay toShow={cosAplusB} demo />
-            <MathJaxDisplay toShow={sinAplusB} demo />
+            <MathJaxDisplay toShow={results} demo />
 
             <p>On peut de même effectuer la même chose sur le complexe d'argument <MathJaxInline toShow={"$ \\alpha - \\beta$"}/>.</p>
         
