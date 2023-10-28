@@ -1,16 +1,21 @@
 .CoursesContainer {
     position: relative;
     margin-bottom: 20px;
-    /* display: flex;
-    flex-direction: column;
-    align-items: flex-start; */
-    /* width: 80%; */
+    margin: 0 auto;
+    width: fit-content;
+    max-width: 90vw;
+}
+
+@media (max-width: 1267px) {
+    .CoursesContainer {
+        min-width: 80vw;
+    }
 }
 
 @media (min-width: 1268px) {
-   .CoursesContainer p, a {
-        font-size: large;
-    } 
+    .CoursesContainer {
+        max-width:  75vw;
+    }
 }
 
 .ZoomContainer {
@@ -35,12 +40,13 @@
     margin-top: 20px;
     text-decoration: underline;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: medium;
+    font-size: large;
 }
 
 @media (width < 450px) {
     .ZoomContainer figcaption {
         margin-top: 0px;
+        font-size: medium;
     }
 }
 
@@ -52,6 +58,12 @@
 
 .ZoomContainer img {
     width: 40%;
+}
+
+@media (width > 768px) {
+    .ZoomContainer img {
+        width: 50%;
+    }
 }
 
 @media (width < 768px) {
@@ -97,12 +109,12 @@
 }
 
 .Focus, .FocusDefault, .FocusGreen, .FocusRed {
-    border-width: 2px;
+    border-width: 3px;
     border-style: solid;   
     width: fit-content;
     display: table;
     margin: 0 auto;
-    padding: 0px 5px 0px 5px;
+    padding: 10px 10px 10px 10px;
     margin-bottom: 20px;
 }
 
@@ -124,13 +136,7 @@
 
 @media (max-width: 450px) {
     .Focus {
-        border-width: 1.5px;
-    }
-    .FocusHuge {
-        position: relative;
-    }
-    .FocusHuge mjx-math {
-        font-size: 50% !important;
+        border-width: 2px;
     }
 }
 
@@ -157,6 +163,10 @@
     margin-bottom: 20px;
 }
 
+.Darcula .Aside {
+    background-color: var(--grey-transparent-color);
+}
+
 .CenterTitle {
     margin : 0px auto !important;
     text-decoration: none;
@@ -167,9 +177,10 @@
 } */
 
 
-@media (min-width: 450px) {
-    .CoursesContainer .NiceTableContainer {
-        width: 80%;
-    }
+.CoursesContainer .NiceTableContainer {
+    width: fit-content;
+    overflow-x: auto;
+    max-width: 80vw;
+    min-width: 40vw;
 }
 

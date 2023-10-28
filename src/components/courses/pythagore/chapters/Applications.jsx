@@ -34,7 +34,7 @@ const Applications = () => {
             <p>Nous disposons d'un plan à deux dimensions <MathJaxInline toShow={"$\\vec{x}, \\vec{y}$"} /> dans lequel nous avons placé deux points <MathJaxInline toShow={"$A$"} /> et <MathJaxInline toShow={"$B$"} />. </p>
             <p>En prolongeant <MathJaxInline toShow={"$A$"} /> jusque <MathJaxInline toShow={"$x_b$"} /> et <MathJaxInline toShow={"$B$"} /> jusque <MathJaxInline toShow={"$y_a$"} />, on obtient un troisième point <MathJaxInline toShow={"$C$"} />.</p>
             <ImageZoom src={pythagoreApplication2} name="Une longueur AB dans le plan (bis)" n={7} />
-            <p>Sur la figure ci-dessus, nous avons un triangle rectangle formé par <MathJaxInline toShow={"$AC$"} />, <MathJaxInline toShow={"$BC$"} /> et <MathJaxInline toShow={"$AB$"} /> représentant l'hypothénuse.</p>
+            <p>Sur la figure ci-dessus, nous avons un triangle rectangle formé par <MathJaxInline toShow={"$AC$"} />, <MathJaxInline toShow={"$BC$"} /> et <MathJaxInline toShow={"$AB$"} /> représentant l'hypoténuse.</p>
             <p>En appliquant tout simplement le théorème de Pythagore dans ce triangle on a :</p>
             <MathJaxDisplay toShow={ab22d} demo />
             <MathJaxDisplay toShow={ab22d2} demo />

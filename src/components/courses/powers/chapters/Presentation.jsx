@@ -8,9 +8,9 @@ const Definition = () => {
     var million = "\\( 1 \\; 000 \\; 000 =  \\underbrace { 10 \\times 10 \\times 10 \\times 10 \\times 10 \\times 10 }_\\text{" + txtMillion + "} \\)";
     var million2 = "\\(1 \\; 000 \\; 000 = 10^6 \\)";
 
-    var txtPowGen = " a facteurs"
-    var powGen = "\\(x^a = \\underbrace{ a \\times a \\times a \\times a ...}_\\text{" + txtPowGen + "} \\)";
-    var powGen2 = "\\(x^a = \\prod_{n=1}^n a  \\)";
+    var txtPowGen = " n facteurs"
+    var powGen = "\\(x^n = \\underbrace{ x \\times x \\times x \\times x ...}_\\text{" + txtPowGen + "} \\)";
+    var powGen2 = "\\(x^n = \\prod_{n=1}^n x  \\)";
 
     return (
         <>

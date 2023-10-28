@@ -19,16 +19,16 @@ const getPythagoreChapters = () => {
         {
             id: k++,
             component: <DemonstrationDuTheoreme />,
-            title: 'Démonstration du théorème de Pythagore',
+            title: 'Démonstration du théorème ',
             metaContent: 'Démonstration du théorème de Pythagore par décomposition du triangle.',
             relativePath: '/demonstration'
         },
         {
             id: k++,
             component: <DemonstrationDeLaReciproque />,
-            title: 'Démonstration de la réciproque théorème de Pythagore',
+            title: 'Démonstration de la réciproque du théorème',
             metaContent: 'Démonstration de la réciproque du théorème de Pythagore en faisant intervenir Al-Kashi.',
-            relativePath: '/reciproque'
+            relativePath: '/demonstration-de-la-reciproque'
         },
         {
             id: k++,

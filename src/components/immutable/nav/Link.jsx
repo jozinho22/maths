@@ -4,7 +4,6 @@ import { NavLink } from "react-router-dom";
 const Link = ( {url, external, children} ) => {
 
     return (
-        
             external ?
                 <a 
                     className="Link" 

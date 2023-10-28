@@ -39,7 +39,7 @@ const useTableauDeSignesDuSecondDegreGeneriqueValues = () => {
          {
             id: k++,
             title: "f(x) =f_1(x).f_2(x).f_3(x)",
-            values: ["\\left[signe \\enspace de \\enspace a \\right]\\infty", "\\left[signe \\enspace de \\enspace a \\right]", "0", "-\\left[signe \\enspace de \\enspace a \\right]", "0", "\\left[signe \\enspace de \\enspace a \\right]", "\\left[signe \\enspace de \\enspace a \\right]\\infty"]
+            values: ["\\left[signe \\enspace de \\enspace a \\right]\\infty", "\\left[signe \\enspace de \\enspace a \\right]", "0", "\\left[-signe \\enspace de \\enspace a \\right]", "0", "\\left[signe \\enspace de \\enspace a \\right]", "\\left[signe \\enspace de \\enspace a \\right]\\infty"]
         }
     )
 

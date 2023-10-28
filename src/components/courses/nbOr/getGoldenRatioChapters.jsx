@@ -1,9 +1,9 @@
 import EvolutionDeLapins from './chapters/EvolutionDeLapins';
 import Caracteristiques from './chapters/Caracteristiques';
 import CaracteristiquesEnSensContraire from './chapters/CaracteristiquesEnSensContraire';
-import FormuleDeLaSuiteDeFibonacci from './chapters/FormuleDeLaSuiteDeFibonacci';
-import FormuleDePhi1 from './chapters/FormuleDePhi2';
-import FormuleDePhi2 from './chapters/FormuleDePhi1';
+import FormulesDeLaSuiteDeFibonacci from './chapters/FormulesDeLaSuiteDeFibonacci';
+import FormulesDePhiPuissanceNPlus1 from './chapters/FormulesDePhiPuissanceNPlus1';
+import FormulesDePhiPuissanceNPlus2 from './chapters/FormulesDePhiPuissanceNPlus2';
 import AutresFormulesGenerales from './chapters/AutresFormulesGenerales';
 
 const getGoldenRatioChapters = () => {
@@ -34,24 +34,24 @@ const getGoldenRatioChapters = () => {
         },
         {
             id: k++,
-            component: <FormuleDeLaSuiteDeFibonacci />,
+            component: <FormulesDeLaSuiteDeFibonacci />,
             title: 'Formules de la suite de Fibonacci',
             metaContent: 'Un tableau récapitulatif du pattern de la suite de Fibonacci.',
-            relativePath: '/formule-de-la-suite-de-fibonacci'
+            relativePath: '/formules-de-la-suite-de-fibonacci'
         }, 
         {
             id: k++,
-            component: <FormuleDePhi1 />,
-            title: 'Formule de Phi en fonction de n (1)',
-            metaContent: 'Un tableau récapitulatif d\'une formule du nombre d\'or.',
-            relativePath: '/formule-de-phi-puissance-n-1'
+            component: <FormulesDePhiPuissanceNPlus1 />,
+            title: 'Formules de Phi puissance (n+1)',
+            metaContent: 'Un tableau récapitulatif de Phi puissance (n+1) pour différentes valeurs.',
+            relativePath: '/formules-de-phi-puissance-n-plus-1'
         },   
         {
             id: k++,
-            component: <FormuleDePhi2 />,
-            title: 'Formule de Phi en fonction de n (2)',
-            metaContent: 'Un tableau récapitulatif d\'une formule du nombre d\'or.',
-            relativePath: '/formule-de-phi-puissance-n-2'
+            component: <FormulesDePhiPuissanceNPlus2 />,
+            title: 'Formules de Phi puissance (n+2)',
+            metaContent: 'Un tableau récapitulatif de Phi puissance (n+2) pour différentes valeurs.',
+            relativePath: '/formules-de-phi-puissance-n-plus-2'
         },   
         {
             id: k++,

@@ -10,7 +10,6 @@ import euclideStuff from '../assets/euclideStuff.png';
 import Link from '../../../immutable/nav/Link';
 import PagesConstants from '../../../immutable/nav/PagesConstants';
 import CoursesConstants from '../../helpers/CoursesConstants';
-import pathBuilder from '../../../helpers/pathBuilder';
 import Title1 from '../../helpers/Title1';
 import Title2 from '../../helpers/Title2';
 
@@ -26,17 +25,8 @@ const Caracteristiques = () => {
 
     /* var euclideStuff4 =  "\\(\\begin{equation} \\label{eq:1} {x^2 - x - 1 = 0}  \\end{equation} \\)"; */
 
-    var idRem = "\\( \\left(x - \\frac{1}{2}\\right)^2 = x^2 - x + \\frac{1}{4} \\)";
-    var idRem2 = "\\( x^2 - x - 1 =   x^2 - x + \\frac{1}{4} -  \\frac{5}{4}\\)";
-    var idRem3 = "\\( x^2 - x - 1 =  \\left(x - \\frac{1}{2}\\right)^2 -  \\frac{5}{4}\\)";
-
-    var calcNbOr = "\\( \\left(x - \\frac{1}{2}\\right)^2 -  \\frac{5}{4} =   0\\)";
-    var calcNbOr2 = "\\( \\left(x - \\frac{1}{2}\\right)^2   =  \\frac{5}{4} \\)";
-    var calcNbOr3 = "\\( \\sqrt{\\left(x - \\frac{1}{2}\\right)^2}   =  \\sqrt{\\frac{5}{4}} \\)";
-    var calcNbOr4 = "\\( x - \\frac{1}{2}   =  \\sqrt{\\frac{5}{4}} \\)";
-    var calcNbOr5 = "\\( x = \\frac{ \\sqrt{5} }{\\sqrt{4}} + \\frac{1}{2} \\)";
-    var calcNbOr6 = "\\( x = \\frac{ \\sqrt{5} }{2} + \\frac{1}{2} \\)";
-    var calcNbOrR = "\\( x = \\frac{ 1 + \\sqrt{5} }{2} \\)";
+    var equSecondDegResults = "\\( S = \\Biggl \\{x_1 = \\frac{ 1 - \\sqrt{5} }{2}, \\enspace x_2 = \\frac{ 1 + \\sqrt{5} }{2} \\Biggr \\} \\)";
+    var nbOr = "\\( x_2 = \\frac{ 1 + \\sqrt{5} }{2} \\)";
     var calcNbOrRwithPhi = "\\( \\phi= \\frac{ 1 + \\sqrt{5} }{2} \\)";
 
     var phi22 =  "\\(\\phi^2 = \\phi + 1  \\)";
@@ -73,29 +63,17 @@ const Caracteristiques = () => {
                 <MathJaxDisplay toShow={euclideStuff1} demo/>
                 <p>Autrement dit que : </p>
                 <MathJaxDisplay toShow={euclideStuff2} demo/>
-                <p>Avec <Link url={pathBuilder(`${PagesConstants.COURS}${CoursesConstants.PRODUIT_EN_CROIX}`)} external>le produit en croix</Link>, on sait que cela peut s'écrire :</p>
+                <p>Avec <Link url={`${PagesConstants.PREFIX}${PagesConstants.COURS}${CoursesConstants.ELEM_CALCULUS}/le-produit-en-croix`} external>le produit en croix</Link>, on sait que cela peut s'écrire :</p>
                 <MathJaxDisplay toShow={euclideStuff3} demo/>
                 <p>Soit :</p>
                 <Container className="Focus">
                     <MathJaxDisplay toShow={euclideStuff4} />
                 </Container>
                 
-                <p>On sait grâce aux identités remarquables que :</p>
-                <MathJaxDisplay toShow={idRem} demo />
-                <p>On peut voir de même que : </p>
-                <MathJaxDisplay toShow={idRem2} demo />
-                <p>Avec les deux expressions précédentes, on conclut que :</p>
-                <MathJaxDisplay toShow={idRem3} demo />
-                <p>Si l'on combine cette dernière expression avec celle que nous avons encadrée plus haut, on peut en déduire :</p>
-                <MathJaxDisplay toShow={calcNbOr} demo />
-                <MathJaxDisplay toShow={calcNbOr2} demo />
-                <MathJaxDisplay toShow={calcNbOr3} demo />
-                <p>On obtient alors :</p>
-                <MathJaxDisplay toShow={calcNbOr4} demo />
-                <p>Soit</p>
-                <MathJaxDisplay toShow={calcNbOr5} demo />
-                <MathJaxDisplay toShow={calcNbOr6} demo />
-                 <MathJaxDisplay toShow={calcNbOrR} demo />
+                <p>En résolvant cette <Link url={`${PagesConstants.PREFIX}${PagesConstants.COURS}${CoursesConstants.EQ_2_DEG}/resolution`} external>équation du second degré</Link>, on obtient </p>
+                 <MathJaxDisplay toShow={equSecondDegResults} demo />
+                 <p>On ne gardera uniquement la solution positive, étant donné que nous travaillons sur des distances.</p>
+                 <MathJaxDisplay toShow={nbOr} demo />
                 <Container className="Focus">
                     <MathJaxDisplay toShow={calcNbOrRwithPhi} />
                 </Container>            
@@ -114,15 +92,16 @@ const Caracteristiques = () => {
                     <MathJaxDisplay toShow={phi221} />
                 </Container>
 
-                <Title2 title={`Calcul de ${<MathJaxInline toShow={"$\\phi^3$"} />}`} />
+                <Title1 title={"c) Calculs de ϕ à la puissance n"} />
+                <Title2 title={`Calcul de ϕ au cube`} />
                 <MathJaxDisplay toShow={phi33} demo />
-                <p>On remplace <MathJaxInline toShow={"$\\phi^2$"} /> par <MathJaxInline toShow={"$\\phi + 1$"} /> </p>
+                <p>On remplace <MathJaxInline toShow={"$\\phi^2$"} /> par <MathJaxInline toShow={"$(\\phi + 1)$"} /> </p>
                 <MathJaxDisplay toShow={phi331} demo />
-                <p>On applique la distributivité et on obtient</p>
+                <p>On applique la distributivité et on obtient :</p>
                 <Container className="Focus LittleFocus">
                     <MathJaxDisplay toShow={phi332} />
                 </Container>
-                <p>On remplace maintenant  <MathJaxInline toShow={"$\\phi + 1$"} />  par <MathJaxInline toShow={"$\\phi^2$"} /></p>
+                <p>On remplace maintenant  <MathJaxInline toShow={"$(\\phi + 1)$"} />  par <MathJaxInline toShow={"$\\phi^2$"} /></p>
                 <MathJaxDisplay toShow={phi333} demo />
                 <Container className="Focus LittleFocus">
                     <MathJaxDisplay toShow={phi334} />
@@ -140,7 +119,7 @@ const Caracteristiques = () => {
                     <MathJaxDisplay toShow={phi335} />
                 </Container>
 
-                <Title2 title={`Calcul de ${<MathJaxInline toShow={"$\\phi^4$"} />}`} />
+                <Title2 title={`Calcul de ϕ à la puissance 4`} />
                 <MathJaxDisplay toShow={phi44} demo />
                 <p>On remplace par ce qu'on connait de <MathJaxInline toShow={"$\\phi^3$"} /> </p>
                 <MathJaxDisplay toShow={phi441} demo />

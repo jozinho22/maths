@@ -4,6 +4,7 @@ import MathJaxDisplay from '../../../mathjax-display/MathJaxDisplay';
 import MathJaxInline from '../../../mathjax-display/MathJaxInline';
 import Title2 from '../../helpers/Title2';
 import FibonacciTableInBothSenses from '../helpers/FibonacciTableInBothSenses';
+import Title1 from '../../helpers/Title1';
 
 const CaracteristiquesEnSensContraire = () => {
 
@@ -30,19 +31,28 @@ const CaracteristiquesEnSensContraire = () => {
 
     var phiPowMinus1 = "\\(\\phi = 1 + \\frac{1}{\\phi} \\)";
     var phiPowMinus11 = "\\(\\frac{1}{\\phi} = \\phi - 1 \\)";
-    var phiPowMinus12 = "\\(\\phi^{-1} = \\phi - 1 \\)";
+    var phiPowMinus12 = "\\(\\phi^{-1} = F_{-1}.\\phi - F_{-2} \\)";
+    var phiPowMinus12bis = "\\(\\phi^{-1} = \\phi - 1 \\)";
 
     var phiPowMinus2 = "\\(\\phi^{-1} = \\phi - 1 \\)";
     var phiPowMinus21 = "\\(\\frac{1}{\\phi} = \\phi - 1 \\)";
     var phiPowMinus22 = "\\(\\frac{1}{\\phi^2} = 1 - \\frac{1}{\\phi}  \\)";
     var phiPowMinus23 = "\\(\\phi^{-2} = 1 - (\\phi - 1)  \\)";
-    var phiPowMinus24 = "\\(\\phi^{-2} = 2 - \\phi  \\)";
+    var phiPowMinus24 = "\\(\\phi^{-2} =  F_{-2}.\\phi  - F_{-3} \\)";
+    var phiPowMinus24bis = "\\(\\phi^{-2} = 2 - \\phi  \\)";
 
     var phiPowMinus3 = "\\(\\phi^{-2} = 2 - \\phi\\)";
     var phiPowMinus31 = "\\(\\phi^{-3} = \\frac{2}{\\phi} - 1\\)";
     var phiPowMinus32 = "\\(\\phi^{-3} = 2{\\phi}^{-1} - 1\\)";
     var phiPowMinus33 = "\\(\\phi^{-3} = 2  (\\phi - 1) - 1\\)";
-    var phiPowMinus34 = "\\(\\phi^{-3} = 2\\phi - 3\\)";
+    var phiPowMinus34 = "\\(\\phi^{-3} = F_{-3}.\\phi  - F_{-4}  \\)";
+    var phiPowMinus34bis = "\\(\\phi^{-3} = 2\\phi - 3\\)";
+
+    var phiGen =  "\\(\\phi^{n+1} =  F_{n+1}.\\phi +  F_{n} \\)";
+    var phiGen2 =  "\\(\\phi^{n+2} =  \\phi^{n+1} +  \\phi^{n} \\)";
+
+    var phiGen0 =  "\\((n = -1) \\enspace \\enspace \\enspace \\phi^{0} =  F_{0}.\\phi +  F_{-1} = 1 \\)";
+    var phiGen02 =  "\\( (n = -2) \\enspace \\enspace \\enspace \\phi^{0} =  \\phi^{-1} +  \\phi^{-2} = \\phi - 1 + 2 - \\phi = 1 \\)";
 
     return (
             <>             
@@ -50,7 +60,7 @@ const CaracteristiquesEnSensContraire = () => {
                 <Container className="Focus">
                     <MathJaxDisplay toShow={phiMain} />
                 </Container>
-                <p>On peut l'arranger pour aller en sens contraire</p>
+                <p>On peut l'arranger pour aller en sens contraire :</p>
                 <MathJaxDisplay toShow={phiMainReverse} demo/>
                 <p>À ce moment là, on peut calculer par exemple <MathJaxInline toShow={"$F_{0}$"} />, puis  <MathJaxInline toShow={"$F_{-1}$"} />,  <MathJaxInline toShow={"$F_{-2}$"} /> ...etc.</p>
                 <MathJaxDisplay toShow={f0} demo/>
@@ -76,7 +86,8 @@ const CaracteristiquesEnSensContraire = () => {
                 <p>Voici les éléments de la suite ajoutée de leur mirroir</p>
                 <FibonacciTableInBothSenses />
                 
-                <Title2 title={`Calcul de ${<MathJaxInline toShow={"$\\phi^{-1}$"} />}`} />
+                <Title1 title={"Calculs de ϕ à la puissance n (en sens contraire)"} />
+                <Title2 title={`Calcul de ϕ à la puissance (-1)`} />
                 <p>On sait que : </p>
                 <MathJaxDisplay toShow={phi22} demo/>
                 <p>Divisons tout par <MathJaxInline toShow={"$\\phi$"} /> pour transformer <MathJaxInline toShow={"$1$"} /> en <MathJaxInline toShow={"$\\frac{1}{\\phi}$"} /></p>
@@ -86,11 +97,14 @@ const CaracteristiquesEnSensContraire = () => {
                 <Container className="Focus LittleFocus">
                     <MathJaxDisplay toShow={phiPowMinus12} />
                 </Container>
+                <Container className="Focus LittleFocus">
+                    <MathJaxDisplay toShow={phiPowMinus12bis} />
+                </Container>
               
-                <Title2 title={`Calcul de ${<MathJaxInline toShow={"$\\phi^{-2}$"} />}`} />
+                <Title2 title={`Calcul de ϕ à la puissance (-2)`} />
                 <p>On sait que : </p>
                 <MathJaxDisplay toShow={phiPowMinus2} demo/>
-                <p>Soit que </p>
+                <p>Soit que : </p>
                 <MathJaxDisplay toShow={phiPowMinus21} demo/>
                 <p>On divise encore tout par <MathJaxInline toShow={"$\\phi$"} /></p>
                 <MathJaxDisplay toShow={phiPowMinus22} demo/>
@@ -98,8 +112,11 @@ const CaracteristiquesEnSensContraire = () => {
                 <Container className="Focus LittleFocus">
                     <MathJaxDisplay toShow={phiPowMinus24} />
                 </Container>
+                <Container className="Focus LittleFocus">
+                    <MathJaxDisplay toShow={phiPowMinus24bis} />
+                </Container>
 
-                <Title2 title={`Calcul de ${<MathJaxInline toShow={"$\\phi^{-3}$"} />}`} />
+                <Title2 title={`Calcul de ϕ à la puissance (-3)`} />
                 <p>On sait que : </p>
                 <MathJaxDisplay toShow={phiPowMinus3} demo/>
                 <p>Soit que </p>
@@ -109,6 +126,25 @@ const CaracteristiquesEnSensContraire = () => {
                 <MathJaxDisplay toShow={phiPowMinus33} demo/>
                 <Container className="Focus LittleFocus">
                     <MathJaxDisplay toShow={phiPowMinus34} />
+                </Container>
+                <Container className="Focus LittleFocus">
+                    <MathJaxDisplay toShow={phiPowMinus34bis} />
+                </Container>
+
+                <p>On retrouve toujours, même en sens contraire, nos formules précédentes :</p>
+                <Container className="Focus">
+                    <MathJaxDisplay toShow={phiGen} />
+                </Container>
+                <Container className="Focus">
+                    <MathJaxDisplay toShow={phiGen2} />
+                </Container>
+
+                <p>Et notamment que <MathJaxInline toShow={"$\\phi^{0} = 1$"} />: </p>
+                <Container className="Focus LittleFocus">
+                    <MathJaxDisplay toShow={phiGen0} />
+                </Container>
+                <Container className="Focus LittleFocus">
+                    <MathJaxDisplay toShow={phiGen02} />
                 </Container>
             </>
 

@@ -6,7 +6,8 @@ import FormulesDeDuplication from './chapters/FormulesDeDuplication';
 import FormulesDeLinearisation from './chapters/FormulesDeLinearisation';
 import LaTangente from './chapters/LaTangente';
 import ValeursDeTan from './chapters/ValeursDeTan';
-import DeriveesDeSinEtCos from './chapters/DeriveesDeSinEtCos';
+import ResolutionDEquations from './chapters/ResolutionDEquations';
+import FormulesDEuler from './chapters/FormulesDEuler';
 
 const getTrigoChapters = () => {
 
@@ -57,10 +58,10 @@ const getTrigoChapters = () => {
         },
         {
             id: k++,
-            component: <DeriveesDeSinEtCos />,
-            title: 'Dérivées de sinus et cosinus',
-            metaContent: 'Les dérivées des sinus et cosinus et le détail du calcul.',
-            relativePath: '/derivees'
+            component: <FormulesDEuler />,
+            title: 'Formules trigonométriques d\'Euler',
+            metaContent: 'Formules trigonométriques d\'Euler.',
+            relativePath: '/formules-d-euler'
         },
         {
             id: k++,
@@ -75,6 +76,13 @@ const getTrigoChapters = () => {
             title: 'Valeurs de la tangente sur le cercle',
             metaContent: 'Toutes les valeurs usuelles des tangentes sur le cercle et le schéma répétitif.',
             relativePath: '/valeurs-de-tan'
+        },
+        {
+            id: k++,
+            component: <ResolutionDEquations />,
+            title: 'Résolutions d\'équations trigonométriques',
+            metaContent: 'Résolutions d\'équations trigonométriques.',
+            relativePath: '/resolution-d-equations'
         }
     ];
 }

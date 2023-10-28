@@ -7,7 +7,7 @@ import pathBuilder from '../../helpers/pathBuilder';
 
 import PagesConstants from '../../immutable/nav/PagesConstants';
 
-const NavigationButtons = ( {chapter, chapters, courseRelativePath} ) => {
+const NavigationButtons = ( {setCount, chapter, chapters, courseRelativePath} ) => {
 
     var width = document.body.offsetWidth;
     var mobile = width < 450; 
@@ -19,7 +19,8 @@ const NavigationButtons = ( {chapter, chapters, courseRelativePath} ) => {
                     chapter.id > 0 ?  
                         <NavLink to={pathBuilder(`${PagesConstants.COURS}${courseRelativePath}${chapters[chapter.id - 1].relativePath}`)} >
                             <Button 
-                                className="DefaultButton" >
+                                className="DefaultButton" 
+                                onClick={() => setCount(prevState => prevState - 1)} >
                                 { !mobile ? <ChevronLeft className="NavigationIcon" /> : <></> }
                                 {
                                     mobile ? 
@@ -32,7 +33,7 @@ const NavigationButtons = ( {chapter, chapters, courseRelativePath} ) => {
                             : <></> 
                 } 
             </Col>
-            <Col className="CenterTitle TextBetweenNavigationsButtons">
+            <Col className="CenterTitle">
                 {chapter.id + 1} / {chapters.length} 
             </Col>
             <Col style={{textAlign:"left"}}>
@@ -40,6 +41,7 @@ const NavigationButtons = ( {chapter, chapters, courseRelativePath} ) => {
                     chapter.id < chapters.length - 1 ?
                         <NavLink to={pathBuilder(`${PagesConstants.COURS}${courseRelativePath}${chapters[chapter.id + 1].relativePath}`)} >
                             <Button 
+                                onClick={() => setCount(prevState => prevState + 1)}
                                 className="DefaultButton" >
                                 {
                                     mobile ? 

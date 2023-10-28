@@ -1,12 +1,12 @@
 import React from 'react';
 import { Navbar, Nav, NavDropdown} from 'react-bootstrap';
-import { NavLink } from 'react-router-dom';
-import { Envelope } from 'react-bootstrap-icons';
+/* import { NavLink } from 'react-router-dom';
+import { Envelope } from 'react-bootstrap-icons'; */
 import AppContext from '../../context/AppContext'
 
 import Themes from '../styles/Themes';
-import pathBuilder from '../../helpers/pathBuilder';
-import PagesConstants from './PagesConstants';
+/* import pathBuilder from '../../helpers/pathBuilder';
+import PagesConstants from './PagesConstants'; */
 
 import './Nav.css';
 import './Footer.css';
@@ -69,12 +69,9 @@ const Footer = () => {
                         </NavDropdown>
                     </Nav>
                 </Navbar.Collapse>        
-                <p className="CopyRight" > 
-                    Copyright &copy; Jozinho {(new Date().getFullYear())}
-                </p>
-                <NavLink to={pathBuilder(PagesConstants.CONTACT)}>
+                {/* <NavLink to={pathBuilder(PagesConstants.CONTACT)}>
                     <Envelope className="ContactIcon" />
-                </NavLink>
+                </NavLink> */}
             </Navbar>
     );
 }

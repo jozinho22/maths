@@ -1,28 +1,20 @@
-/* .UsualFunctionsButtonContainer {
+.UsualFunctionsButtonsContainer {
     display: flex;
-} */
-
-@media (min-width: 450px) {
-    .UsualFunctionsButtonsContainer {
-        position: fixed;
-        width: 20%;
-/*         align-items: center;
-        flex-direction: column; */
-        top: 30%;
-    }
-    .UsualFunctionsButtonsContainer.Left {
-        left: 0%;
-    }
-    .UsualFunctionsButtonsContainer.Right {
-        right: 0%;
-    }
-}
+    flex-wrap: wrap;
+} 
 
 .UsualFunctionsButton {
     margin-top: 0px;
     padding: 0px;
-    width: 100px;
-    height: 60px;
+    width: 120px;
+    height: 80px;
+    flex: 1 1 10%; 
+}
+
+@media (max-width: 450px) {
+    .UsualFunctionsButton {
+        flex: 1 1 35%; 
+    }
 }
 
 @media (min-width: 450px) {
@@ -72,24 +64,31 @@
 
 .Graph {
     /* position: relative; */
-    padding-bottom: 10px;
     font-family: 'Times New Roman', Times, serif;
+    font-size: large;
+    padding-bottom: 20px;
+
 }
+/* 
+.CoursesContainer .UsualFunctionsContainer .Graph {
+    width: 500px !important;
+    height: 500px !important;
+} */
 
 @media (min-width: 450px) {
-    .Graph {
-        font-size: large;
-        width: 65% !important;
-        padding-bottom: 20px;
+    .CoursesContainer .Graph .recharts-surface, .CoursesContainer .Graph .recharts-wrapper {
+        width: 50% !important;
+        max-height: 500px !important;
+        left: 25%;
+        width: 500px !important;
     }
+    
 }
 
-@media (min-width: 450px) {
-    .Graph {
-        width: 65% !important;
-        height: 80% !important;
-        padding-bottom: 20px;
-        font-size: large;
+@media (max-width: 450px) {
+    .CoursesContainer .UsualFunctionsContainer .Graph .recharts-wrapper {
+        width: 250px !important;
+         left: -5%;
     }
 }
 
@@ -99,26 +98,12 @@
     }
 }
 
-@media (min-width: 1000px) {
-    .recharts-wrapper {
-        left: 25%;
-    }
-}
-
 .GraphTitle {
     margin-top: 40px !important;
     margin-bottom: 40px !important;
 }
 
-.CoursesContainer .recharts-wrapper {
-    left: 25%;
-}
 
-@media (width < 450px) {
-    .CoursesContainer .recharts-wrapper {
-        left: -5%;
-    }
-}
 
 
 

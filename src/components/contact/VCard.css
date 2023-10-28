@@ -6,22 +6,14 @@
     position: relative; 
 }
 
-@media (min-width : 450px) {
-    .VCardContainer {
-        top: 10px;
-    }
-}
-
 .VCardRecto, .VCardVerso  {
-    margin-top: 30px;
+    margin-top: 10px;
     border-radius: 10px;
     background-color: var(--front-color);
-    color: var(--simple-text-color);
     padding: 30px;
     text-align: justify;
-    hyphens: auto;
-    transition: transform 2s linear, visibility 0s linear 1s;
     cursor: pointer;
+    transition: linear 2s transform, 0s 1s visibility;
 }
 
 .VCardRecto img {
@@ -36,6 +28,18 @@
     width: 50%;
     position: relative;
     visibility: visible;
+    color: #F5DEB3;
+}
+
+.VCardRecto.Active {
+    transform:
+      rotateY(180deg);
+    visibility: hidden;
+}
+
+
+.Darcula .VCardRecto {
+    color: var(--simple-text-color);
 }
 
 @media (width < 1000px) {
@@ -46,14 +50,21 @@
 
 @media (width < 450px) {
     .VCardRecto {
-        width: 90%;
+        width: 100%;
     }
 }
 
-.VCardRecto.Active {
-    transform:
-      rotateY(180deg);
-    visibility: hidden;
+.VCardRecto a {
+    color: var(--back-color);
+}
+
+.Darcula .VCardRecto a {
+    color: var(--links-color);
+}
+
+
+.VCardContainer p {
+    margin: 0 auto;
 }
 
 .VCardVerso {
@@ -62,12 +73,16 @@
     right: 0;
     left: 0;
     visibility: hidden;
+    color: var(--simple-text-color);
     background-color: var(--back-color);
     transform:
       rotateY(180deg);
-    display: flex;
-    align-items: center;
     border: 1px solid var(--front-color);
+}
+
+
+.Darcula .VCardVerso {
+    color: var(--simple-text-color);
 }
 
 .VCardVerso.Active {

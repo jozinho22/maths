@@ -1,6 +1,9 @@
-import EquationsDuSecondDegre from './chapters/EquationsDuSecondDegre';
+import Resolution from './chapters/Resolution';
 import RelationEntreCoefficientsEtRacines from './chapters/RelationEntreCoefficientsEtRacines';
-import TableauxDeSigneEtDeVariationsDuSecondDegre from './chapters/TableauxDeSignesEtDeVariationsDuSecondDegre';
+import Aspect from './chapters/Aspect';
+import TableauxDeSignesEtDeVariationsExemple from './chapters/TableauxDeSignesEtDeVariationsExemple';
+import TableauxDeSignesEtDeVariationsCasGeneral from './chapters/TableauxDeSignesEtDeVariationsCasGeneral';
+import DecompositionDUnInverseDePolynomeEnElementsSimples from './chapters/DecompositionDUnInverseDePolynomeEnElementsSimples';
 
 const getEquationsSecondDegreeChapters = () => {
 
@@ -9,7 +12,7 @@ const getEquationsSecondDegreeChapters = () => {
     return [      
         {
             id: k++,
-            component: <EquationsDuSecondDegre />,
+            component: <Resolution />,
             title: 'Résolution d\'équations',
             metaContent: 'Résolution d\'équations du second degré : explications.',
             relativePath: '/resolution'
@@ -23,10 +26,31 @@ const getEquationsSecondDegreeChapters = () => {
         },
         {
             id: k++,
-            component: <TableauxDeSigneEtDeVariationsDuSecondDegre />,
-            title: 'Tableaux de signes et de variations',
-            metaContent: 'Tableaux de signes et de variations.',
-            relativePath: '/tableaux-de-signes-et-de-variations'
+            component: <Aspect />,
+            title: 'Aspect des équations',
+            metaContent: 'Aspect des équations du second degré.',
+            relativePath: '/aspect'
+        },
+        {
+            id: k++,
+            component: <TableauxDeSignesEtDeVariationsExemple />,
+            title: 'Tableaux de signes et de variations : exemple',
+            metaContent: 'Tableaux de signes et de variations : exemple.',
+            relativePath: '/tableaux-de-signes-et-de-variations-exemple'
+        },
+        {
+            id: k++,
+            component: <TableauxDeSignesEtDeVariationsCasGeneral />,
+            title: 'Tableaux de signes et de variations : cas général',
+            metaContent: 'Tableaux de signes et de variations : cas général.',
+            relativePath: '/tableaux-de-signes-et-de-variations-cas-general'
+        },
+        {
+            id: k++,
+            component: <DecompositionDUnInverseDePolynomeEnElementsSimples />,
+            title: 'Décomposition d\'un inverse de polynôme en éléments simples',
+            metaContent: 'Décomposition d\'un inverse de polynôme en éléments simples.',
+            relativePath: '/decomposition-d-un-inverse-de-polynome-en-elements-simples'
         }
     ];
 }

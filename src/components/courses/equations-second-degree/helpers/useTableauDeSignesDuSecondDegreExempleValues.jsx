@@ -15,7 +15,7 @@ const useTableauDeSignesDuSecondDegreExempleValues = () => {
          {
             id: k++,
             title: "f_1(x) = 2",
-            values: ["-\\infty", "+", "+", "+", "+", "+", "+\\infty"] 
+            values: ["2", "+", "+", "+", "+", "+", "2"] 
         }
     )
 

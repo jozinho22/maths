@@ -1,6 +1,7 @@
 import Presentation from './chapters/Presentation';
 import CalculDePi from './chapters/CalculDePi';
 import AutresFormulesGenerales from './chapters/AutresFormulesGenerales';
+import CalculDePi2 from './chapters/CalculDePi2';
 
 const getPiChapters = () => {
 
@@ -19,7 +20,14 @@ const getPiChapters = () => {
             component: <CalculDePi />,
             title: 'Calcul de Pi par méthode géométrique',
             metaContent: 'Calcul historique du nombre Pi effectué par Archimède par approximations successives.', 
-            relativePath: '/calcul'
+            relativePath: '/calcul-par-methode-geometrique'
+        },
+        {
+            id: k++,
+            component: <CalculDePi2 />,
+            title: 'Calcul de Pi par méthode géométrique (suite)',
+            metaContent: 'Calcul historique du nombre Pi effectué par Archimède par approximations successives (suite).', 
+            relativePath: '/calcul-par-methode-geometrique-2'
         },
         {
             id: k++,

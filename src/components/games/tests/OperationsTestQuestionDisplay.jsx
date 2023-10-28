@@ -1,11 +1,16 @@
 import React from 'react';
 import { Container, Button, Row, Col } from 'react-bootstrap';
-import Timer from './Timer';
+import Timer from '../helpers/Timer';
 import Alert from '../../alert/Alert';
 import { updateAlert, reInitAlert } from '../../alert/alertFunctions';
 import { OperationsTestContext } from './OperationsTest';
 /* import CiferKeyboard from './CiferKeyboard';
  */
+
+import AppContext from '../../context/AppContext';
+import { NavLink } from 'react-router-dom';
+import PagesConstants from '../../immutable/nav/PagesConstants';
+import pathBuilder from '../../helpers/pathBuilder';
 
 const OperationsTestQuestionDisplay = () => {
 
@@ -23,6 +28,12 @@ const OperationsTestQuestionDisplay = () => {
             message : ''
         }
     );
+
+    const {updatePlayMode} = React.useContext(AppContext);
+
+    React.useEffect(() => {
+        updatePlayMode(true);
+    });
 
     const doNext = () => {
 
@@ -210,6 +221,11 @@ const OperationsTestQuestionDisplay = () => {
                         Valider
                 </Button>   
             </Container>
+            <NavLink to={pathBuilder(PagesConstants.JEUX)} onClick={() => updatePlayMode(false)}>
+                <Button className="DefaultButton GreenButton" >
+                    Retour au menu des jeux
+                </Button> 
+            </NavLink>
         </>
     );
 }

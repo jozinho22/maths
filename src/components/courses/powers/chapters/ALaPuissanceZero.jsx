@@ -1,7 +1,9 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
 import MathJaxDisplay from '../../../mathjax-display/MathJaxDisplay';
-import MathJaxInline from '../../../mathjax-display/MathJaxInline';
+import Link from '../../../immutable/nav/Link';
+import PagesConstants from '../../../immutable/nav/PagesConstants';
+import CoursesConstants from '../../helpers/CoursesConstants';
 
 const ALapuissanceZero = () => {
     
@@ -11,13 +13,13 @@ const ALapuissanceZero = () => {
 
     return (
             <>
-                <p>Avec la formule <MathJaxInline toShow={"$(1)$"} />, on peut dire que : </p>
+                <p>Avec <Link url={`${PagesConstants.PREFIX}${PagesConstants.COURS}${CoursesConstants.PUISSANCES}/multiplication-de-puissances-de-x`} external> cette formule </Link>, on peut dire que : </p>
                 <MathJaxDisplay toShow={xPow0} demo />
                 <p>Soit </p>
                 <MathJaxDisplay toShow={xPow02} demo />
                 <p>On en conclue que dans tous les cas : </p>
                 <Container className="Focus"> 
-                    <MathJaxDisplay toShow={xPow03} fRef={2} />
+                    <MathJaxDisplay toShow={xPow03} />
                 </Container>
             </>
     );

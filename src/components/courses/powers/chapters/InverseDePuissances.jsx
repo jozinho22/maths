@@ -3,6 +3,10 @@ import { Container } from 'react-bootstrap';
 import MathJaxDisplay from '../../../mathjax-display/MathJaxDisplay';
 import MathJaxInline from '../../../mathjax-display/MathJaxInline';
 
+import Link from '../../../immutable/nav/Link';
+import PagesConstants from '../../../immutable/nav/PagesConstants';
+import CoursesConstants from '../../helpers/CoursesConstants';
+
 const InverseDePuissances = () => {
 
     var xPow03 = "\\( x^0  = 1 \\)";
@@ -18,7 +22,7 @@ const InverseDePuissances = () => {
             <>
                 <p>La multiplication d'un nombre par son inverse donne toujours l'identité, à savoir <MathJaxInline toShow={"$1$"} />.</p>
                 <MathJaxDisplay toShow={xTimesInvX} demo />
-                <p>Mais on sait, grâce à la formule <MathJaxInline toShow={"$(2)$"} /> que :</p>
+                <p>Mais on sait, grâce à <Link url={`${PagesConstants.PREFIX}${PagesConstants.COURS}${CoursesConstants.PUISSANCES}/a-la-puissance-zero`} external>cette formule</Link> que :</p>
                 <MathJaxDisplay toShow={xPow03} demo />
                 <p>Soit alors :</p>
                 <MathJaxDisplay toShow={xTimesInvX2} demo />
@@ -27,13 +31,14 @@ const InverseDePuissances = () => {
                     {"\n"}Cet exposant sera appelé <MathJaxInline toShow={"$n$"} /> .
                 </p>
                 <MathJaxDisplay toShow={xTimesInvX3} demo />
-                <p>Avec la première formule <MathJaxInline toShow={"$(1)$"} />, cela nous donne tout simplement</p>
+                <p>Avec <Link url={`${PagesConstants.PREFIX}${PagesConstants.COURS}${CoursesConstants.PUISSANCES}/multiplication-de-puissances-de-x`} external>la formule de multiplication de puissances</Link>, cela nous donne tout simplement</p>
                 <MathJaxDisplay toShow={xTimesInvX4} demo />
                 <p>Soit l'équation suivante :</p>
                 <MathJaxDisplay toShow={xTimesInvX5} demo />
                 <p>on en conclue que :</p>
                 <Container className="Focus"> 
-                    <MathJaxDisplay toShow={xTimesInvX7} fRef={3}/>
+                    <MathJaxDisplay toShow={xTimesInvX7}/>
+                    <MathJaxDisplay toShow={"\\( avec x \\neq 0 \\)"} demo />
                 </Container>
             </>
     );

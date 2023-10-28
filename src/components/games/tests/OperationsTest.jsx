@@ -30,7 +30,7 @@ const OperationsTest = ( {operationType} ) => {
         var easyLevel = {
             id: 0,
             title: "newb",
-            maxInt: 9,
+            maxInt: 10,
             bStyle: "Green"
         }
         var mediumLevel = {
@@ -42,7 +42,7 @@ const OperationsTest = ( {operationType} ) => {
         var warriorLevel = {
             id: 2,
             title: "math warrior",
-            maxInt: 99,
+            maxInt: 100,
             bStyle: "Red"
         }
         

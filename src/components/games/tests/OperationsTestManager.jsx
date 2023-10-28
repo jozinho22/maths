@@ -7,7 +7,7 @@ import OperationsTestHome from './OperationsTestHome';
 const OperationsTestManager = ({children}) => {
 
     const {count, questions, gameStarted, operationType} = React.useContext(OperationsTestContext);
-
+    
     return (
 
         !gameStarted ?

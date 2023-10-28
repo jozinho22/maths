@@ -5,7 +5,7 @@ import { OperationsTestContext } from './OperationsTest';
 const OperationsTestHome = ({operationType}) => {
 
     const {levels, launchGame} = React.useContext(OperationsTestContext);
-    var title = `Effectuer des ${operationType === '+' ? "additions" : operationType === 'x' ? "multiplications" : ""}`;
+    var title = `Jeu : Effectuer des ${operationType === '+' ? "additions" : operationType === 'x' ? "multiplications" : ""}`;
 
     return  <LevelsTableOfContents title={title} levels={levels} operationType={operationType} launchGame={launchGame} />;
 }

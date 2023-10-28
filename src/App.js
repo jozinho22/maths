@@ -1,6 +1,5 @@
 import React, { Suspense } from 'react';
 
-import { BrowserRouter } from 'react-router-dom';
 import { Container } from 'react-bootstrap';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -16,21 +15,25 @@ import BlurryingSpinner from './components/immutable/spinners/BlurryingSpinner';
 import Header from './components/immutable/nav/Header';
 import Footer from './components/immutable/nav/Footer';
 
-import coursesResourceBuilder from './components/courses/helpers/coursesResourceBuilder';
-import pdfResourceBuilder from './components/pdf-viewer/helpers/pdfResourceBuilder';
-import gamesResourceBuilder from './components/games/helpers/gamesResourceBuilder';
+import coursesResourceBuilder from './components/courses/coursesResourceBuilder';
+import pdfResourceBuilder from './components/pdf-viewer/pdfResourceBuilder';
+import gamesResourceBuilder from './components/games/gamesResourceBuilder';
 
 import { getThemeIfStoredThemeExists } from './components/immutable/styles/getThemes';
-import AppRoutes from './AppRoutes';
+import { HashRouter, /* RouterProvider */ } from 'react-router-dom';
+import AppRoutes from './AppRoutes'
+/* import useRouter from './useRouter'; */
 import Fonts from './components/immutable/styles/Fonts';
 import Themes from './components/immutable/styles/Themes';
+import verifyUrlCountInApp from './components/helpers/verifyUrlCountInApp';
 
 function App() {
 
     const [font, setFont] = React.useState(Fonts.BLACK_CHANCELRY);
     const [playMode, setPlayMode] = React.useState(false);
-    const [theme, setTheme] = React.useState(getThemeIfStoredThemeExists(JSON.parse(sessionStorage.getItem('ma-thematique-theme'))) ? JSON.parse(sessionStorage.getItem('ma-thematique-theme')) : Themes.BRAZIL);
- 
+    const [theme, setTheme] = React.useState(getThemeIfStoredThemeExists(sessionStorage.getItem('ma-thematique-theme')) ? sessionStorage.getItem('ma-thematique-theme') : process.env.NODE_ENV === 'development' ?  Themes.DARCULA : Themes.BRAZIL);
+
+
     const appContext = {
         font: font,
         updateFont: setFont, 
@@ -43,21 +46,29 @@ function App() {
     var courseItems = coursesResourceBuilder();
     var pdfItems = pdfResourceBuilder();
     var gameItems = gamesResourceBuilder();
-    
+
+    /* if(process.env.NODE_ENV === 'development') {
+        verifyUrlCountInApp();
+    }  */
+
+/*     <Link url={pathBuilder(`${PagesConstants.COURS}${CoursesConstants.DERIVEE}/presentation`)} external>le premier chapitre sur la dérivée</Link>
+ */    
+ 
     return ( 
         <>
             <div className="App" id="capture">     
                 <AppContext.Provider value={appContext} >                     
                     <div className={`${theme} ${font} CopyBook`}>
-                        <BrowserRouter>
+                        <HashRouter>
                             <Header courseItems={courseItems} pdfItems ={pdfItems} gameItems={gameItems} /> 
                                 <Suspense fallback={<BlurryingSpinner />}>
                                     <Container className={`RelativeContainer ${playMode ? "PlayMode" : ''} `} >                           
-                                        <AppRoutes courseItems={courseItems} pdfItems={pdfItems} gameItems={gameItems} />
+                                        {/* <RouterProvider router={useRouter(courseItems, pdfItems, gameItems)} /> */}
+                                        {<AppRoutes courseItems={courseItems} pdfItems={pdfItems} gameItems={gameItems} />}
                                     </Container> 
                                 </Suspense>
                             <Footer /> 
-                        </BrowserRouter>
+                       </HashRouter>
                     </div> 
                 </AppContext.Provider> 
             </div>

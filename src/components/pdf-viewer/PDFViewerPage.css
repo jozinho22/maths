@@ -1,9 +1,4 @@
-.PdfViewerContainer h1 {
-    padding-top: 30px;
-}
-
 .PdfViewerContainer .SwitchButton {
-    padding-top: 30px;
     font-family: 'Times New Roman', Times, serif !important;
 }
 
@@ -71,26 +66,54 @@
 }
 
 .ReturnHomeButton, .UnPlayModeButton {
-    position: absolute;
-    top: 0;
-    margin-top: 10px;
+    position: relative;
 }
 
 .ReturnHomeButton {
     background-color: var(--orange-color);
-    left: 0px;
+}
+
+.Darcula .ReturnHomeButton {
+    background-color: var(--dark-orange-color);
+}
+
+.UnPlayModeButton {
+    background-color: var(--green-color); 
+}
+
+.Darcula .UnPlayModeButton {
+    background-color: var(--dark-green-color);
+}
+
+@media (min-width: 450px) {
+    .ReturnHomeButton, .UnPlayModeButton {
+        position: fixed;
+        top: 50%;
+        margin-top: 10px;
+    }
+
+    .ReturnHomeButton {
+        left: 0%;
+    }
+
+    .UnPlayModeButton {
+        right: 0%;
+    }
 }
 
 .ReturnHomeButton:hover, .ReturnHomeButton:focus {
     background-color: var(--orange-hover-color);
 }
 
-.UnPlayModeButton {
-    background-color: var(--green-color); 
-    right: 0px;
+.Darcula .ReturnHomeButton:hover, .Darcula .ReturnHomeButton:focus {
+    background-color: var(--orange-hover-color);
 }
 
 .UnPlayModeButton:hover, .UnPlayModeButton:focus {
+    background-color: var(--green-hover-color);
+}
+
+.Darcula .UnPlayModeButton:hover, .Darcula .UnPlayModeButton:focus {
     background-color: var(--green-hover-color);
 }
 

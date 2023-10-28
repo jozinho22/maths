@@ -16,7 +16,7 @@ const VCard = () => {
     const [active, setActive] = React.useState(false);
 
     var gdsLink = 'https://www.bretagne-grainedesens.bzh/';
-    var title = 'Ma carte de visite';
+    var title = 'Ma carte de visite - cours à domicile';
     var metaContent = 'Ma carte de visite : professeur de mathématiques et développeur.';
 
     const rotateY = () => {
@@ -24,7 +24,7 @@ const VCard = () => {
     }
 
     return  <>            
-                <CustomHelmet title={title} metaContent={metaContent} canonicalUrl={`${Constants.WEB_APP_URL}${PagesConstants.CONTACT}`}/>
+                <CustomHelmet title={title} metaContent={metaContent} canonicalUrl={`${Constants.WEB_APP_PREFIX}${PagesConstants.CONTACT}`}/>
                 <Container className="VCardContainer">
                     <MainTitle title={title} />
                     <Container className={`VCardRecto ${active ? "Active" : ""}`} onClick={rotateY} >
@@ -32,7 +32,7 @@ const VCard = () => {
                         <p>
                             Professeur de mathématiques à domicile depuis dix ans, j'ai décidé de créer ce site pour apporter un support documentaire aux élèves.
                             <br /><br />
-                            J'ai de même eu l'opportunité de dispenser des cours aux élèves de <Link link={gdsLink} >l'école démocratique de Brocéliande</Link>.
+                            J'ai de même eu l'opportunité de dispenser des cours aux élèves de <Link url={gdsLink} external>l'école démocratique de Brocéliande</Link>.
                             <br /><br />
                             Développeur de métier par ailleurs, il est possible d'apporter une introduction à la programmation durant les cours.
                             <br /><br/>

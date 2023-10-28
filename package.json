@@ -14,6 +14,7 @@
     "buffer": "^6.0.3",
     "emailjs-com": "^3.2.0",
     "fractional": "^1.0.0",
+    "fractions": "^1.0.2",
     "gh-pages": "^5.0.0",
     "react": "^18.2.0",
     "react-bootstrap": "^2.7.0",
@@ -23,7 +24,6 @@
     "react-pdf-js": "^5.1.0",
     "react-router-dom": "^6.2.1",
     "react-scripts": "^5.0.0",
-    "react-spa-prerender": "^1.0.14",
     "react-swipeable": "^6.2.0",
     "react-to-print": "^2.14.12",
     "recharts": "^2.1.8",
@@ -33,9 +33,7 @@
   },
   "scripts": {
     "start": "BROWSER=none react-scripts start",
-    "prebuild": "node transferSitemapIntoRsp.js",
-    "build": "CI=false react-scripts build",
-    "postbuild": "react-spa-prerender",
+    "build": "CI=false GENERATE_SOURCEMAP=false react-scripts build",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "test": "react-scripts test",
@@ -62,15 +60,23 @@
   "overrides": {
     "mini-css-extract-plugin": "2.4.5",
     "@svgr/webpack": "$@svgr/webpack",
-    "node-fetch": "$node-fetch"
+    "node-fetch": "$node-fetch",
+    "@adobe/css-tools": "$@adobe/css-tools",
+    "postcss": "$postcss",
+    "wordwrap": "$wordwrap",
+    "semver": "$semver"
   },
   "devDependencies": {
+    "@adobe/css-tools": "^4.3.1",
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@netlify/plugin-sitemap": "^0.8.1",
     "@svgr/webpack": "^8.0.1",
     "mini-css-extract-plugin": "2.4.5",
     "netlify-plugin-submit-sitemap": "^0.4.0",
     "node-fetch": "^3.3.1",
+    "postcss": "^8.4.31",
+    "semver": "^7.5.4",
+    "wordwrap": "^1.0.0",
     "xml-parser": "^1.2.1"
   }
 }

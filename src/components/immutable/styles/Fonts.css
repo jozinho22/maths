@@ -44,6 +44,6 @@
     font-family: 'scholar';
     font-style: normal;
     font-weight: normal;
-    size-adjust: 180%;
+    size-adjust: 160%;
     src: local('Scholar'), url('./fonts/scholar.otf') format('opentype');
 }

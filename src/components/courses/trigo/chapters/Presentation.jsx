@@ -9,23 +9,26 @@ import CoursesConstants from '../../helpers/CoursesConstants';
 import circleTrigo from '../assets/circleTrigo.png';
 import sohcahtoa from '../assets/sohcahtoa.png';
 
-import pathBuilder from '../../../helpers/pathBuilder';
 import Link from '../../../immutable/nav/Link';
 
 const Definition = () => {
 
+    var n = 0;
+
     var sinDef = "\\(y =sin(\\alpha) \\)";
     var cosDef = "\\( x =cos(\\alpha) \\)";
-    var sin = "\\(sin(\\alpha) = \\frac{oppose}{hypothenuse} \\)";
-    var cos = "\\(cos(\\alpha) = \\frac{adjacent}{hypothenuse} \\)";
-    var tan = "\\(tan(\\alpha) = \\frac{oppose}{adjacent} \\)";
+    var sin = "\\(sin(\\alpha) = \\frac{oppos \\acute{e} }{hypot \\acute{e} nuse} \\)";
+    var cos = "\\(cos(\\alpha) = \\frac{adjacent}{hypot \\acute{e} nuse} \\)";
+    var tan = "\\(tan\\alpha = \\frac{oppos \\acute{e} }{adjacent} \\)";
 
     return (
             <>
                 <p>
-                    C'est dans le cercle que se définissent les notions de cosinus et de sinus.
+                    Les notions de sinus et de cosinus se définissent dans le cercle trigonométrique.
+                     {"\n"}{"\n"}
+                     C'est un cercle de rayon <MathJaxInline toShow="$R = 1$" />.
                     {"\n"}{"\n"}
-                    Le sinus est le projeté orthogonal de l'interception entre un cercle de rayon <MathJaxInline toShow="$R = 1$" /> et son rayon, sur l'axe vertical <MathJaxInline toShow="$y$" />.
+                    Le sinus est le projeté orthogonal de l'intersection entre le cercle et son rayon, sur l'axe vertical <MathJaxInline toShow="$y$" />.
                     {"\n"}
                 </p>
                 <MathJaxDisplay toShow={sinDef} demo />
@@ -34,13 +37,13 @@ const Definition = () => {
                 </p>
                 <MathJaxDisplay toShow={cosDef} demo />
                 <p>Nous verrons la tangente par la suite. </p>
-                <ImageZoom src={circleTrigo} name="Cosinus et sinus" n={1} />
+                <ImageZoom src={circleTrigo} name="Cosinus et sinus" n={++n} />
                 <p>
-                    Dans le cercle trigonométrique, on utilisera π comme une mesure d'angle (voir le chapitre sur <Link url={pathBuilder(`${PagesConstants.COURS}${CoursesConstants.PI}`)} external>le nombre π</Link>)
+                    Dans le cercle trigonométrique, on utilisera <MathJaxInline toShow="$\\pi$" /> comme une mesure d'angle (voir le chapitre sur <Link url={`${PagesConstants.PREFIX}${PagesConstants.COURS}${CoursesConstants.PI}`} external>le nombre π</Link>), qui vaut <MathJaxInline toShow={"$180°$"} />.
                     {"\n"}
-                    L'unité est le radian, où un tour complet vaut <MathJaxInline toShow={"$2 \\pi$"} />  radians (équivalent à 360°)
-                    {"\n"}
-                    Après un tour complet du cercle, les valeurs se répètent. C'est pour cela que les valeurs sont tous à  <MathJaxInline toShow={"$2 k\\pi$"} /> près.
+                    L'unité employéeest le radian, où un tour complet vaut <MathJaxInline toShow={"$2 \\pi$"} /> radians.
+                    {"\n"}{"\n"}
+                    Après un tour complet du cercle, les valeurs d'angle se répètent. C'est la raison pour laquelle ces valeurs sont exprimées <MathJaxInline toShow={"$2 k\\pi$"} /> près (ou modulo <MathJaxInline toShow={"$2\\pi$"} />).
                     {"\n"}
                     <MathJaxInline toShow={"$k$"} /> étant un entier naturel commençant à 0.
                 </p>
@@ -53,9 +56,9 @@ const Definition = () => {
                 <MathJaxDisplay toShow={cos} demo />
                 <MathJaxDisplay toShow={tan} demo />
                 <p>
-                    {"\n"} "opposé" signifie le côté opposé à l'angle α.
-                    {"\n"} "adjacent" signifie le côté collé à l'angle α.
-                    {"\n"} L'hypothénuse est le plus grand côté.
+                    {"\n"} - "opposé" signifie le côté opposé à l'angle <MathJaxInline toShow={"$180°$"} />.
+                    {"\n"} - "adjacent" signifie le côté collé à l'angle <MathJaxInline toShow={"$180°$"} />.
+                    {"\n"} - L'hypothénuse est le plus grand côté.
                 </p>
                 
             </>

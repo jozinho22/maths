@@ -3,13 +3,8 @@
   "name": "Ma Thématique",
   "icons": [
     {
-      "src": "favicon-brasil-mini.png",
+      "src": "mt.png",
       "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/png"
-    },
-    {
-      "src": "favicon-brasil-512.png",
-      "sizes": "512x512",
       "type": "image/png"
     }
   ],
