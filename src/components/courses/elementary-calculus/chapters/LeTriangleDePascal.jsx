@@ -6,6 +6,8 @@ import MathJaxInline from '../../../mathjax-display/MathJaxInline';
 import PagesConstants from '../../../immutable/nav/PagesConstants';
 import CoursesConstants from '../../helpers/CoursesConstants';
 import Link from '../../../immutable/nav/Link';
+import Title2 from '../../helpers/Title2';
+import Title1 from '../../helpers/Title1';
 
 const LeTriangleDePascal = () => {
    
@@ -26,6 +28,9 @@ const LeTriangleDePascal = () => {
     var pascal6bis = "\\( (n = 5) \\enspace \\enspace \\binom{5}{0}  \\rightarrow \\binom{5}{1}  \\rightarrow \\binom{5}{2}  \\rightarrow \\binom{5}{3}  \\rightarrow \\binom{5}{4}  \\rightarrow \\binom{5}{5} \\)";
 
     var sumKParmisN = "\\( \\sum_{k=0}^n \\binom{n}{k} = \\binom{n}{0} + \\binom{n}{1} + ... + \\binom{n}{n} = 2^n \\)";
+    
+    var onePlusOnePuissanceN = "\\( (1 +1)^n = 2^n = \\sum_{k=0}^n \\binom{n}{k} \\)";
+    var onePlusOnePuissanceN2 = "\\( 2^n = \\sum_{k=0}^n \\binom{n}{k} = \\binom{n}{0} + \\binom{n}{1} + ... + \\binom{n}{n} \\)";
 
     return  <>
                 <p>On a cette suite de résultat les puissances de <MathJaxInline toShow={"$(a+b)$"} />:</p>
@@ -51,10 +56,16 @@ const LeTriangleDePascal = () => {
                 <p>Chaque coefficient du binome <MathJaxInline toShow={"$(a+b)^n$"} /> est en réalité de le résultat <MathJaxInline toShow={"$\\binom{n}{k}$"} /> pour l'élément <MathJaxInline toShow={"$k$"} />.</p>
                 <MathJaxDisplay toShow={pascal6bis} demo />
 
+                <Title1 title={"Somme des k parmis n"} />
                 <p>Il est possible de <Link url={`${PagesConstants.PREFIX}${PagesConstants.COURS}${CoursesConstants.SEQUENCES}/raisonnement-par-recurrence`} external>démontrer par récurrence</Link> que :</p>
                 <Container className="Focus">
                     <MathJaxDisplay toShow={sumKParmisN}/>
                 </Container>  
+               
+                <Title2 title={"Démonstration directe avec le binôme de Newton"} />
+                 <p>De même, il est possible de le prouver directement avec la formule du binôme, en sommant deux fois <MathJaxInline toShow={"$1$"} /> :</p>
+                <MathJaxDisplay toShow={onePlusOnePuissanceN} demo />
+                <MathJaxDisplay toShow={onePlusOnePuissanceN2} demo />
             </>
 }
 

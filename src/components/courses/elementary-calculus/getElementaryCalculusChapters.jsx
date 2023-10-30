@@ -4,9 +4,10 @@ import LaDistributiviteLaFactorisation from './chapters/LaDistributiviteLaFactor
 
 import LesFractions from './chapters/LesFractions';
 import LesReglesDeDivisibilite from './chapters/LesReglesDeDivisibilite';
-import Les from './chapters/LesReglesDeDivisibilite';
 import LesIdentitesRemarquables from './chapters/LesIdentitesRemarquables';
 import LeTriangleDePascal from './chapters/LeTriangleDePascal';
+import LesTablesDeMultiplication from './chapters/LesTablesDeMultiplication';
+import LesTablesDeMultiplication2 from './chapters/LesTablesDeMultiplication2';
 
 const getElementaryCalculusChapters = () => {
 
@@ -19,6 +20,20 @@ const getElementaryCalculusChapters = () => {
             title: 'Les opérations de base',
             metaContent: 'Les opérations de base : addition, soustraction, multiplication, division et priorités.',
             relativePath: '/les-operations-de-base'
+        }, 
+        {
+            id: k++,
+            component: <LesTablesDeMultiplication />,
+            title: 'Les tables de multiplication',
+            metaContent: 'Les tables de multiplication de 0 à 9.',
+            relativePath: '/les-tables-de-multiplication'
+        }, 
+        {
+            id: k++,
+            component: <LesTablesDeMultiplication2 />,
+            title: 'Les tables de multiplication (suite)',
+            metaContent: 'Les tables de multiplication de 10 à 19.',
+            relativePath: '/les-tables-de-multiplication-suite'
         }, 
         {
             id: k++,

@@ -5,7 +5,6 @@ import MathJaxInline from '../../../mathjax-display/MathJaxInline';
 
 import Title1 from '../../helpers/Title1';
 import Title2 from '../../helpers/Title2';
-import Constants from '../../../immutable/Constants';
 import PagesConstants from '../../../immutable/nav/PagesConstants';
 import CoursesConstants from '../../helpers/CoursesConstants';
 import Link from '../../../immutable/nav/Link';
@@ -22,6 +21,8 @@ const LesIdentitesRemarquables = () => {
     var aPlusBCube = "\\( (a+b)^3 = a^3 + 3a^2b + 3ab^2 + b^3 \\)";
     var aMinusBCube = "\\( (a-b)^3 = a^2 - 3a^2b + 3ab^2 - b^3 \\)";
     var aCubeMinusBCube = "\\( a^3 - b^3 = (a-b) (a^2 + ab + b^2) \\)";
+
+    var aPlusBPlusCCube = "\\( (a+b+c)^3 = a^3 + b^3 + c^3 + 3a^2b + 3ab^2 + 3a^2c + 3ac^2 + 3b^2c + 3bc^2 + 6abc \\)";
 
     var aCubePlusBCube = "\\(  a^3 + b^3 = (a+b)(a^2 - ab + b^2) \\)";
 
@@ -42,6 +43,8 @@ const LesIdentitesRemarquables = () => {
                 <Container className="Focus">
                     <MathJaxDisplay toShow={aPlusBCarre}/>
                     <MathJaxDisplay toShow={aMinusBCarre}/>
+                </Container>
+                <Container className="Focus">
                     <MathJaxDisplay toShow={aCarreMinusBCarre}/>
                 </Container>
                 <Container className="Focus">
@@ -52,10 +55,13 @@ const LesIdentitesRemarquables = () => {
                 <Container className="Focus">
                     <MathJaxDisplay toShow={aPlusBCube}/>
                     <MathJaxDisplay toShow={aMinusBCube}/>
-                    <MathJaxDisplay toShow={aCubeMinusBCube}/>
                 </Container>
                 <Container className="Focus">
+                    <MathJaxDisplay toShow={aCubeMinusBCube}/>
                     <MathJaxDisplay toShow={aCubePlusBCube}/>
+                </Container>
+                <Container className="Focus">
+                    <MathJaxDisplay toShow={aPlusBPlusCCube}/>
                 </Container>
 
                 <Title1 title={"À la puissance n"} />
@@ -68,7 +74,7 @@ const LesIdentitesRemarquables = () => {
                 <MathJaxDisplay toShow={aPlusBPuissance4} demo />
                 <MathJaxDisplay toShow={aPlusBPuissance42} demo />
                 <Aside>
-                    <p>On utilise la formule du dénombrement "k parmis n".</p>
+                    <p>On utilise la formule de dénombrement "k parmis n".</p>
                     <MathJaxDisplay toShow={binom} demo />
                     <p>Par convention, <MathJaxInline toShow={"$0! = 1$"} />.</p>
                 </Aside>
