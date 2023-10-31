@@ -9,38 +9,44 @@
   margin-left: 0px;
 }
 
-@media (min-width: 1268px) {
+@media (min-width: 450px) {
   .CustomFooter {
     height: 60px;
+  }
+  .CustomFooter .navbar-toggler {
+    position: fixed;
+    left: 0px;
+  }
+  .CustomFooter .navbar-collapse {
+    position: fixed;
   }
 }
 
 .CustomFooter .navbar-toggler {
-  margin-left: 20px;
-}
-
-.CustomFooter .navbar-collapse {
   position: fixed;
-  bottom: 100px;
+  left: 30px;
 }
 
-@media (min-width: 1000px) {
-  .CustomFooter .navbar-collapse {
-    position: relative;
-    bottom: 0px;
-  }
-}
+.CustomFooter .navbar-collapse.collapse.show {
+  position: fixed;
+  z-index : 2;
+  bottom: 80px;
+} 
 
-.CustomFooter #theme-dropdown-item {
+.CustomFooter .dropdown-toggle.show {
+    width: fit-content;
+}  
+
+/* .CustomFooter #theme-dropdown-item {
       background: linear-gradient(
           0.25turn, 
           var(--navbar-color), 
           var(--back-color),
           var(--front-color)
       );
-}
+} */
 
-.CopyRight {
+/* .CopyRight {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -54,7 +60,6 @@
   color: var(--links-color);
 }
 
-
 .ContactIcon {
   position : relative;
   right: 0;
@@ -67,7 +72,7 @@
 
 .Darcula .ContactIcon {
   color: var(--links-color);
-}
+} */
 
 #font-dropdown-item {
     width : 100%;
@@ -78,3 +83,62 @@
     width : 100%;
     color: var(--simple-text-color) !important;
 } 
+
+.CustomFooter .SwitchButton .btn-lg  {
+  font-size: 8px !important;
+} 
+
+.w-50 {
+  width: 100% !important;
+}
+
+@media (min-width: 450px) {
+  .w-50 {
+    width: 30% !important;
+  }
+  .CustomFooter .SwitchButton .btn-lg {
+    font-size: 10px !important;
+  } 
+}
+
+.CustomFooter .SwitchButton {
+  width: 60%;
+  align-items: flex-start;
+  right: 20px;
+  position: fixed;
+}
+
+@media (min-width: 450px) {
+ .CustomFooter .SwitchButton {
+    align-items: flex-end;
+    flex-direction: column;
+  }
+}
+
+.CustomFooter .SwitchButton .btn {
+    height: 40px;
+}
+
+@media (min-width: 450px) {
+  .CustomFooter .SwitchButton .btn {
+      height: inherit;
+  }
+}
+
+.CustomFooter .SwitchButton .btn-primary {
+  background-color: var(--dark-color) !important;
+}
+
+.CustomFooter .SwitchButton .btn-btn-primary:hover {
+  background-color: var(--dark-color) !important;
+}
+
+.CustomFooter .SwitchButton .btn-warning {
+  background-color: var(--blue-color) !important;
+}
+
+.CustomFooter .SwitchButton .btn-warning:hover {
+  background-color: var(--dark-blue-color) !important;
+}
+
+

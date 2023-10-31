@@ -76,7 +76,7 @@ const CalculDePi = () => {
             <p>Ce qui donne</p>
             <MathJaxDisplay toShow={pi4b2} demo />
             <MathJaxDisplay toShow={pi4bR} demo />
-            <p>Nous commençons à nous approcher de 3,14. Continuons maintenant sur <MathJaxInline toShow="$c$" />, obtenue de la même façon que <MathJaxInline toShow="$b$" /> par rapport à <MathJaxInline toShow="$a$" />.</p>
+            <p>Nous commençons à nous approcher de <MathJaxInline toShow="$3.14$" />. Continuons maintenant sur <MathJaxInline toShow="$c$" />, obtenue de la même façon que <MathJaxInline toShow="$b$" /> par rapport à <MathJaxInline toShow="$a$" />.</p>
         </>
 
 

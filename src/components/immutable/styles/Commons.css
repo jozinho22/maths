@@ -43,8 +43,15 @@ h1, h2 {
 
 h1, h2, .CenterTitle {
     margin: 0 auto;
-    padding-top: 20px;
-    padding-bottom: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+@media(min-width : 450px) {
+    h1, h2, .CenterTitle {
+        padding-top: 20px;
+        padding-bottom: 30px;
+    }
 }
 
 h3, h4 {

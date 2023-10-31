@@ -6,9 +6,8 @@ import MathJaxInline from '../../../mathjax-display/MathJaxInline';
 import Title1 from '../../helpers/Title1';
 import Title2 from '../../helpers/Title2';
 
-import circlePiCalculus from '../assets/circlePiCalculus.png';
+import circlePiCalculus2 from '../assets/circlePiCalculus2.png';
 import ImageZoom from '../../helpers/ImageZoom';
-
 
 const CalculDePi2 = () => {
 
@@ -47,10 +46,9 @@ const CalculDePi2 = () => {
     var piG = "\\( \\pi = lim_{n \\to +\\infty} \\enspace 2^{n+1} \\sqrt{2 - \\underbrace { \\sqrt{ 2 + \\sqrt{2 + \\sqrt{2  {...}}}} }_\\text{n} }  \\)"
 
     return (
-
         <>
             <p>Reprenons la figure précédente, et continuons sur <MathJaxInline toShow="$c$" />.</p>
-            <ImageZoom src={circlePiCalculus} name="Calcul de Pi" n={++n} />
+            <ImageZoom src={circlePiCalculus2} name="Calcul de Pi" n={++n} />
             <Title2 title={"Troisième approximation : par la base du triangle isocèle suivant"} />
             <MathJaxDisplay toShow={pi8c} demo />
             <MathJaxDisplay toShow={c} demo />

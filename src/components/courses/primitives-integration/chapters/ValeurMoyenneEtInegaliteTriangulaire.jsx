@@ -7,7 +7,7 @@ import Title1 from '../../helpers/Title1';
 
 import integrationPositivite from '../assets/integration-positivite.png';
 
-const ValeurMoyenne = () => {
+const ValeurMoyenneEtInegaliteTriangulaire = () => {
 
     var n = 0;
 
@@ -18,6 +18,8 @@ const ValeurMoyenne = () => {
 
     var meanValue = "\\( \\mu = \\frac{1}{b-a}\\int_a^b f(t).dt \\)";
     var meanValueInequ = "\\( m \\leqslant \\mu \\leqslant M\\)";
+
+    var inequTriang = "\\( | \\int_a^b f(t).dt | \\leqslant \\int_a^b |f(t)|.dt   \\)";
 
     return  <>
                 <p>Soit <MathJaxInline toShow={"$ f, g $"} /> deux fonctions continues sur un intervalle <MathJaxInline toShow={"$ I = [a, b] \\subset \\mathbb{R} $"} /> et <MathJaxInline toShow={"$ (a, b) \\in I^2 $"} /> deux réels tels que  <MathJaxInline toShow={"$ a < b $"} />.</p>
@@ -41,7 +43,14 @@ const ValeurMoyenne = () => {
                 <Container className="Focus">
                      <MathJaxDisplay toShow={meanValueInequ} />  
                 </Container> 
+
+               <Title1 title={"Inégalité triangulaire"} />
+               <p>On appelle inégalité triangulaire, l'inégalité suivante :</p>
+                <Container className="Focus">
+                     <MathJaxDisplay toShow={inequTriang} />  
+                </Container> 
+               
             </>
 }
 
-export default ValeurMoyenne;
+export default ValeurMoyenneEtInegaliteTriangulaire;

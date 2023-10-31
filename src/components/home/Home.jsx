@@ -8,9 +8,8 @@ import PagesConstants from "../immutable/nav/PagesConstants";
 import CoursesConstants from "../courses/helpers/CoursesConstants";
 import Link from "../immutable/nav/Link";
 import MainTitle from "../immutable/MainTitle";
-import Title1 from "../courses/helpers/Title1";
-import './Home.css';
 import MainSubTitle from "../immutable/MainSubTitle";
+import './Home.css';
 
 const Home = () => {
 
@@ -35,13 +34,12 @@ const Home = () => {
                         
                         <MainSubTitle title={"Contenu"} />
                         <p>
-                            Ce site <Link url={`${PagesConstants.PREFIX}${PagesConstants.COURS}`} external> aborde de nombreuses notions</Link> allant du collège à la terminale.
+                            Ce site aborde <Link url={`${PagesConstants.PREFIX}${PagesConstants.COURS}`} external> de nombreuses notions</Link> allant du collège à la terminale.
                             {"\n"}
                             Il comprend notamment certaines démonstrations de formules, ainsi que des récapitulatifs de cours.
                             {"\n"}
                             Enfin, est proposé aussi certaines thématiques comme les nombres <Link url={`${PagesConstants.PREFIX}${PagesConstants.COURS}${CoursesConstants.PI}`} external><MathJaxInline toShow={"$\\pi$"} /> (Pi)</Link> et <Link url={`${PagesConstants.PREFIX}${PagesConstants.COURS}${CoursesConstants.NB_OR}`} external><MathJaxInline toShow={"$\\phi$"} /> (Phi, le nombre d'or)</Link>.
                         </p>
-                        <p>Je dédie ce site à un grand homme de la science, Jean-Pierre Petit, et je vous partage <Link url={`${PagesConstants.PREFIX}${PagesConstants.BDS_DE_JPP}`} external>ses bandes dessinées pédagogiques</Link> sur le thème de la science avec son accord.</p>
                     </Container>
                 </Container>  
             </>;

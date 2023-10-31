@@ -60,14 +60,14 @@ function App() {
                 <AppContext.Provider value={appContext} >                     
                     <div className={`${theme} ${font} CopyBook`}>
                         <HashRouter>
-                            <Header courseItems={courseItems} pdfItems ={pdfItems} gameItems={gameItems} /> 
+                            <Header courseItems={courseItems} gameItems={gameItems} /> 
                                 <Suspense fallback={<BlurryingSpinner />}>
                                     <Container className={`RelativeContainer ${playMode ? "PlayMode" : ''} `} >                           
                                         {/* <RouterProvider router={useRouter(courseItems, pdfItems, gameItems)} /> */}
                                         {<AppRoutes courseItems={courseItems} pdfItems={pdfItems} gameItems={gameItems} />}
                                     </Container> 
                                 </Suspense>
-                            <Footer /> 
+                            <Footer pdfItems ={pdfItems} /> 
                        </HashRouter>
                     </div> 
                 </AppContext.Provider> 

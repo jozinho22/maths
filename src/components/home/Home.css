@@ -6,10 +6,15 @@
 } 
 
 .HomeContainer {
-    margin-top: 20px;
-    margin-bottom: 80px;
+    margin-bottom: 20px;
 }
 
+@media (min-width : 450px) {
+    .HomeContainer {
+        margin-bottom: 80px;
+    }
+}
+ 
 .HomeTitleContainer {
     position: relative;
     top: 30px;

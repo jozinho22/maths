@@ -16,6 +16,7 @@ import getUsualFunctionsChapters from './usual-functions/getUsualFunctionsChapte
 
 import CoursesConstants from './helpers/CoursesConstants';
 import geometryCoursesResourceBuilder from './geometry/geometryCoursesResourceBuilder';
+import getInfiniteSeriesChapters from './infinite-series/getInfiniteSeriesChapters';
 
 function coursesResourceBuilder() {
 
@@ -101,6 +102,14 @@ function coursesResourceBuilder() {
       chapters: getPrimitivesIntegrationChapters()
     }
 
+    var infSeries = {
+      id: i++,
+      title: 'Les développements limités',
+      metaContent: "Les développements limités : définitions, démonstrations et formules",
+      relativePath: CoursesConstants.DEVELOPPEMENTS_LIMITES,
+      chapters: getInfiniteSeriesChapters()
+    }
+
     var seq = {
       id: i++,
       title: 'Les suites numériques',
@@ -147,6 +156,7 @@ function coursesResourceBuilder() {
         derivation,
         primInt,
         seq,
+        /* infSeries, */
         pi, 
         nbOr
     );

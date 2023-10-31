@@ -3,38 +3,28 @@ import { Container } from 'react-bootstrap';
 import ImageZoom from '../../helpers/ImageZoom';
 import MathJaxDisplay from '../../../mathjax-display/MathJaxDisplay';
 import MathJaxInline from '../../../mathjax-display/MathJaxInline';
-
+import Title1 from '../../helpers/Title1';
 import circlePi from '../assets/circlePi.png';
 
 const Presentation = () => {
 
     var n = 0;
-    var pCercle = "\\( P_{cercle} = 2\\pi R_{cercle} \\)"
     var p = "\\( P = 2\\pi R \\)"
-    var piP = "\\(\\pi = \\frac{P} {2R} \\)"
-
-    var sCercle = "\\( S_{cercle} = \\pi R_{cercle}^2 \\)"
-    var piS = "\\(\\pi = \\frac{S} {R^2} \\)"
     var piS2 = "\\(S = \\pi {R^2} \\)"
 
     return (
         <>
             <p>Le nombre <MathJaxInline toShow={"$ \\pi $"} /> (pi), aussi appelée constante d'Archimède, est un nombre qui permet de mesurer le périmètre ou l'aire d'un cercle.</p>  
-            <p>Pour le périmètre : </p>
-            <MathJaxDisplay toShow={pCercle} demo />
+            <p>Appellons <MathJaxInline toShow={"$ P $"} /> le périmètre et <MathJaxInline toShow={"$ S $"} /> l'aire du cercle.</p>
+            <Title1 title={"Périmètre du cercle"} />
             <Container className="Focus">
                 <MathJaxDisplay toShow={p} />
             </Container>
-            <p>Soit</p>
-            <MathJaxDisplay toShow={piP} demo />
-
-            <p>Et pour la surface : </p>
-            <MathJaxDisplay toShow={sCercle} demo/>
+            
+            <Title1 title={"Surface du cercle"} />
             <Container className="Focus">
                 <MathJaxDisplay toShow={piS2} />
-                </Container>
-                <p>Soit</p>
-            <MathJaxDisplay toShow={piS} demo />
+            </Container>
             
             <p>C'est l'une des constantes les plus importantes des mathématiques, car on la retrouve impliquée dans de nombreuses formules.</p>
             <p>

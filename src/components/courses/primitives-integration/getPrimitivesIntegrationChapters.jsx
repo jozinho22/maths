@@ -11,7 +11,6 @@ import RelationDeChasles from "./chapters/RelationDeChasles";
 import Linearite from "./chapters/Linearite";
 import Positivite from "./chapters/Positivite";
 import Croissance from "./chapters/Croissance";
-import ValeurMoyenne from "./chapters/ValeurMoyenne";
 import IntegrationParParties from "./chapters/IntegrationParParties";
 import FonctionDefinieParUneIntegrale from "./chapters/FonctionDefinieParUneIntegrale";
 import CalculSurfaceCercle from "./chapters/CalculSurfaceCercle";
@@ -20,6 +19,7 @@ import CalculVolumeSphere from "./chapters/CalculVolumeSphere";
 import CalculVolumeCone from "./chapters/CalculVolumeCone";
 import CalculSurfaceCone from "./chapters/CalculSurfaceCone";
 import IntegrationParChangementDeVariable from "./chapters/IntegrationParChangementDeVariable";
+import ValeurMoyenneEtInegaliteTriangulaire from "./chapters/ValeurMoyenneEtInegaliteTriangulaire";
 
 const getPrimitivesIntegrationChapters = () => {
 
@@ -105,9 +105,9 @@ const getPrimitivesIntegrationChapters = () => {
         },
         {
             id: k++,
-            component: <ValeurMoyenne />,
-            title: 'Valeur moyenne d\'une intégrale',
-            metaContent: 'Valeur moyenne d\'une intégrale.',
+            component: <ValeurMoyenneEtInegaliteTriangulaire />,
+            title: 'Valeur moyenne d\'une intégrale, inégalité triangulaire',
+            metaContent: 'Valeur moyenne d\'une intégrale, inégalité triangulaire.',
             relativePath: '/valeur-moyenne'
         },
         {

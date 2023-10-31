@@ -33,7 +33,6 @@ const PDFViewerPage = ({ pdfItem }) => {
         const [pageByPageDocument, setPageByPageDocument] = React.useState(true);
         const [beginIndex, setBeginIndex] = React.useState(0);
 
-        const [withAnswers, setWithAnswers] = React.useState(false);
         const step = 5;
 
         const {updatePlayMode} = React.useContext(AppContext);
@@ -111,21 +110,6 @@ const PDFViewerPage = ({ pdfItem }) => {
                     </Container>
                         : <></>
 
-            }
-
-            {
-                pdfItem.type === 'courses' ?
-                    <Container className="SwitchButton">
-                        <BootstrapSwitchButton 
-                            size="lg" 
-                            onlabel={`Masquer les réponses`}
-                            onstyle='success'
-                            offlabel={`Afficher les réponses`}
-                            offstyle='danger'
-                            style={'w-50 mx-3'}
-                            onChange={() => setWithAnswers(!withAnswers)} />  
-                    </Container>
-                        : <></>
             }
 
             {
