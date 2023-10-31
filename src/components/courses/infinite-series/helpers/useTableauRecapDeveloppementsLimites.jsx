@@ -86,7 +86,7 @@ const useTableauRecapDeveloppementsLimites = () => {
          {
             id: k++,
             title: "(1 + x)^{\\alpha}",
-            values: ["1 + \\alpha x + \\frac{\\alpha(\\alpha -1)}{2!}x^2+ ... + \\binom{\\alpha}{n}x^{n} +  o(x^{n}) ", "\\sum_{k=0}^n \\binom{\\alpha}{n}  x^{n} +  o(x^{n}) "]
+            values: ["1 + \\alpha x + \\frac{\\alpha(\\alpha -1)}{2!}x^2+ ... + \\frac{\\alpha(\\alpha -1)...(\\alpha - n +1)}{n!}x^n +  o(x^{n}) ", "\\sum_{k=0}^n \\frac{\\alpha(\\alpha -1)...(\\alpha - n +1)}{n!}x^n +  o(x^{n}) "]
         }
     )
 
