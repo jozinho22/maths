@@ -626,6 +626,27 @@
     <lastmod>2023-10-25T20:20:00+00:00</lastmod>
     <priority>0.64</priority>
   </url>
+  <!-- Cours : développement limités -->
+  <url>
+    <loc>https://jozinho22.github.io/maths/#/cours/les-developpements-limites</loc>
+    <lastmod>2023-10-31T20:20:00+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://jozinho22.github.io/maths/#/cours/les-developpements-limites/presentation</loc>
+    <lastmod>2023-10-31T20:20:00+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://jozinho22.github.io/maths/#/cours/les-developpements-limites/exemple</loc>
+    <lastmod>2023-10-31T20:20:00+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://jozinho22.github.io/maths/#/cours/les-developpements-limites/tableau-recap-developpements-limités</loc>
+    <lastmod>2023-10-31T20:20:00+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
   <!-- Cours : pi -->
   <url>
     <loc>https://jozinho22.github.io/maths/#/cours/le-nombre-pi</loc>

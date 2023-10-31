@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/maths/static/css/main.f9a82e4d.css",
-    "main.js": "/maths/static/js/main.15e90374.js",
+    "main.css": "/maths/static/css/main.58f62fde.css",
+    "main.js": "/maths/static/js/main.a14b6cda.js",
     "static/js/27.035b7279.chunk.js": "/maths/static/js/27.035b7279.chunk.js",
     "static/media/energetiquementVotre.pdf": "/maths/static/media/energetiquementVotre.ae46a881d6240ff7c375.pdf",
     "static/media/bigBang.pdf": "/maths/static/media/bigBang.9a7278fe34a3a9cbd1fe.pdf",
@@ -33,9 +33,10 @@
     "static/media/derivativeInflexionPoint.png": "/maths/static/media/derivativeInflexionPoint.c773dc69af6dcc3f777b.png",
     "static/media/equ2degAspect.png": "/maths/static/media/equ2degAspect.7e404a2ed7ee341fe234.png",
     "static/media/coneAreaCalculus2.png": "/maths/static/media/coneAreaCalculus2.34504176b88452286a78.png",
-    "static/media/circlePiCalculus.png": "/maths/static/media/circlePiCalculus.f497ceab2de2b73cf493.png",
+    "static/media/circlePiCalculus2.png": "/maths/static/media/circlePiCalculus2.f497ceab2de2b73cf493.png",
     "static/media/derivativeSquareFunction.png": "/maths/static/media/derivativeSquareFunction.821578ec9a2263c4f4df.png",
     "static/media/newtonMethod.png": "/maths/static/media/newtonMethod.3e70569ce67668c6e072.png",
+    "static/media/circlePiCalculus.png": "/maths/static/media/circlePiCalculus.cb0bbe6ad41edf4113b3.png",
     "static/media/sphereAreaCalculus.png": "/maths/static/media/sphereAreaCalculus.92767ad62e38f94d7a99.png",
     "static/media/derivative2XSensVar.png": "/maths/static/media/derivative2XSensVar.6fec6919027c76ae1458.png",
     "static/media/circleTrigoValues.png": "/maths/static/media/circleTrigoValues.55196b1b99267412d12d.png",
@@ -65,7 +66,6 @@
     "static/media/thalesWithHeight.png": "/maths/static/media/thalesWithHeight.346900853d58192e1318.png",
     "static/media/integration3.png": "/maths/static/media/integration3.fd6c3e662f4c9f881443.png",
     "static/media/heights2.png": "/maths/static/media/heights2.444d385da33e5d1d17ad.png",
-    "static/media/circleTurnAround.png": "/maths/static/media/circleTurnAround.c19c2efeb002ea30e70e.png",
     "static/media/circlePi.png": "/maths/static/media/circlePi.eb2f06e8e2af3110d305.png",
     "static/media/triangleSinusRelation.png": "/maths/static/media/triangleSinusRelation.a1e7d72576c1563ffbb5.png",
     "static/media/distribFact.png": "/maths/static/media/distribFact.fcf1ea6d965f3abfc893.png",
@@ -82,7 +82,7 @@
     "index.html": "/maths/index.html"
   },
   "entrypoints": [
-    "static/css/main.f9a82e4d.css",
-    "static/js/main.15e90374.js"
+    "static/css/main.58f62fde.css",
+    "static/js/main.a14b6cda.js"
   ]
 }
