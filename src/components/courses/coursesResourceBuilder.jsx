@@ -156,7 +156,7 @@ function coursesResourceBuilder() {
         derivation,
         primInt,
         seq,
-        /* infSeries, */
+        infSeries,
         pi, 
         nbOr
     );

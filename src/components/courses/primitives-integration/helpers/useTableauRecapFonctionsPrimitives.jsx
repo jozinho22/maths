@@ -1,9 +1,9 @@
 const useTableauRecapFonctionsPrimitives = () => {
    
-    var tableauRecapFonctionsDerivees = [];
+    var tableauRecapFonctionsPrimitives = [];
     var k = 0;
 
-    tableauRecapFonctionsDerivees.push(
+    tableauRecapFonctionsPrimitives.push(
         {
             id: k++,
             title: "fonction",
@@ -11,7 +11,7 @@ const useTableauRecapFonctionsPrimitives = () => {
         }
     )
 
-    tableauRecapFonctionsDerivees.push(
+    tableauRecapFonctionsPrimitives.push(
          {
             id: k++,
             title: "0",
@@ -19,7 +19,7 @@ const useTableauRecapFonctionsPrimitives = () => {
         }
     )
 
-    tableauRecapFonctionsDerivees.push(
+    tableauRecapFonctionsPrimitives.push(
          {
             id: k++,
             title: "a",
@@ -27,7 +27,7 @@ const useTableauRecapFonctionsPrimitives = () => {
         }
     )
 
-    tableauRecapFonctionsDerivees.push(
+    tableauRecapFonctionsPrimitives.push(
          {
             id: k++,
             title: "x",
@@ -35,7 +35,7 @@ const useTableauRecapFonctionsPrimitives = () => {
         }
     )
 
-    tableauRecapFonctionsDerivees.push(
+    tableauRecapFonctionsPrimitives.push(
          {
             id: k++,
             title: "x^2",
@@ -43,23 +43,23 @@ const useTableauRecapFonctionsPrimitives = () => {
         }
     )
 
-    tableauRecapFonctionsDerivees.push(
+    tableauRecapFonctionsPrimitives.push(
          {
             id: k++,
             title: "x^n",
-            values: ["\\frac{1}{n}.x^n + k"]
+            values: ["\\frac{1}{n+1}.x^{n+1} + k"]
         }
     )
 
-    tableauRecapFonctionsDerivees.push(
+    tableauRecapFonctionsPrimitives.push(
          {
             id: k++,
             title: "n^x",
-            values: ["ln(n).n^x"]
+            values: ["\\frac{1}{ln(n)}.n^x"]
         }
     )
 
-    tableauRecapFonctionsDerivees.push(
+    tableauRecapFonctionsPrimitives.push(
          {
             id: k++,
             title: "\\frac{1}{x}",
@@ -67,7 +67,7 @@ const useTableauRecapFonctionsPrimitives = () => {
         }
     )
 
-    tableauRecapFonctionsDerivees.push(
+    tableauRecapFonctionsPrimitives.push(
          {
             id: k++,
             title: "\\sqrt{x}",
@@ -75,7 +75,7 @@ const useTableauRecapFonctionsPrimitives = () => {
         }
     )
 
-    tableauRecapFonctionsDerivees.push(
+    tableauRecapFonctionsPrimitives.push(
          {
             id: k++,
             title: "\\sqrt[n]{x}",
@@ -83,7 +83,7 @@ const useTableauRecapFonctionsPrimitives = () => {
         }
     )
 
-    tableauRecapFonctionsDerivees.push(
+    tableauRecapFonctionsPrimitives.push(
          {
             id: k++,
             title: "e^x",
@@ -91,24 +91,7 @@ const useTableauRecapFonctionsPrimitives = () => {
         }
     )
 
-    tableauRecapFonctionsDerivees.push(
-         {
-            id: k++,
-            title: "e^{-x}",
-            values: ["-e^{-x} + k"]
-        }
-    )
-
-    tableauRecapFonctionsDerivees.push(
-         {
-            id: k++,
-            title: "e^{ax+b}",
-            values: ["\\frac{1}{a}.e^{ax+b} + k"]
-        }
-    )
-
-
-    tableauRecapFonctionsDerivees.push(
+    tableauRecapFonctionsPrimitives.push(
          {
             id: k++,
             title: "ln(x)",
@@ -116,7 +99,7 @@ const useTableauRecapFonctionsPrimitives = () => {
         }
     )
 
-    tableauRecapFonctionsDerivees.push(
+    tableauRecapFonctionsPrimitives.push(
          {
             id: k++,
             title: "sin{x}",
@@ -124,7 +107,7 @@ const useTableauRecapFonctionsPrimitives = () => {
         }
     )
 
-    tableauRecapFonctionsDerivees.push(
+    tableauRecapFonctionsPrimitives.push(
          {
             id: k++,
             title: "cos{x}",
@@ -132,7 +115,15 @@ const useTableauRecapFonctionsPrimitives = () => {
         }
     )
 
-    tableauRecapFonctionsDerivees.push(
+    tableauRecapFonctionsPrimitives.push(
+        {
+            id: k++,
+            title: "1 + tan^2(x)",
+            values: ["tan(x) + k"]
+        }
+    )
+
+    tableauRecapFonctionsPrimitives.push(
          {
             id: k++,
             title: "tan(x)",
@@ -140,31 +131,31 @@ const useTableauRecapFonctionsPrimitives = () => {
         }
     )
 
-    tableauRecapFonctionsDerivees.push(
+    tableauRecapFonctionsPrimitives.push(
          {
             id: k++,
-            title: "sh(x)",
-            values: ["ch(x) + k"]
+            title: "sinh(x)",
+            values: ["cosh(x) + k"]
         }
     )
 
-    tableauRecapFonctionsDerivees.push(
+    tableauRecapFonctionsPrimitives.push(
          {
             id: k++,
-            title: "ch(x)",
-            values: ["sh(x) + k"]
+            title: "cosh(x)",
+            values: ["sinh(x) + k"]
         }
     )
 
-    tableauRecapFonctionsDerivees.push(
+    tableauRecapFonctionsPrimitives.push(
          {
             id: k++,
-            title: "th(x)",
-            values: ["ln(ch(x)) + k"]
+            title: "tanh(x)",
+            values: ["ln(cosh(x)) + k"]
         }
     )
 
-    return tableauRecapFonctionsDerivees;
+    return tableauRecapFonctionsPrimitives;
 
 };
 

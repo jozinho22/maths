@@ -20,6 +20,7 @@ import CalculVolumeCone from "./chapters/CalculVolumeCone";
 import CalculSurfaceCone from "./chapters/CalculSurfaceCone";
 import IntegrationParChangementDeVariable from "./chapters/IntegrationParChangementDeVariable";
 import ValeurMoyenneEtInegaliteTriangulaire from "./chapters/ValeurMoyenneEtInegaliteTriangulaire";
+import TableauRecapFonctionsPrimitivesComposees from "./chapters/TableauRecapFonctionsPrimitivesComposees";
 
 const getPrimitivesIntegrationChapters = () => {
 
@@ -127,9 +128,16 @@ const getPrimitivesIntegrationChapters = () => {
         {
             id: k++,
             component: <TableauRecapFonctionsPrimitives />,
-            title: 'Tableau récapitulatif des fonctions primitives',
-            metaContent: 'Tableau récapitulatif des fonctions primitives.',
-            relativePath: '/tableau-recap-fonctions-primitives'
+            title: 'Tableau récapitulatif des primitives de fonctions usuelles',
+            metaContent: 'Tableau récapitulatif des primitives de fonctions usuelles.',
+            relativePath: '/tableau-recap-primitives-fonctions-usuelles'
+        },
+        {
+            id: k++,
+            component: <TableauRecapFonctionsPrimitivesComposees />,
+            title: 'Tableau récapitulatif des primitives de fonctions composées usuelles',
+            metaContent: 'Tableau récapitulatif des primitives de fonctions composées usuelles.',
+            relativePath: '/tableau-recap-primitives-fonctions-composees-usuelles'
         },
         {
             id: k++,

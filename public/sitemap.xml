@@ -425,6 +425,11 @@
     <priority>0.64</priority>
   </url>
   <url>
+    <loc>https://jozinho22.github.io/maths/#/cours/la-derivation/fonctions-de-classe-cn</loc>
+    <lastmod>2023-10-22T22:12:00+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
     <loc>https://jozinho22.github.io/maths/#/cours/la-derivation/theoreme-de-l-hopital</loc>
     <lastmod>2023-10-22T22:12:00+00:00</lastmod>
     <priority>0.64</priority>
@@ -516,7 +521,12 @@
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://jozinho22.github.io/maths/#/cours/primitives-integration/tableau-recap-fonctions-primitives</loc>
+    <loc>https://jozinho22.github.io/maths/#/cours/primitives-integration/tableau-recap-primitives-fonctions-usuelles</loc>
+    <lastmod>2023-10-22T22:12:00+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://jozinho22.github.io/maths/#/cours/primitives-integration/tableau-recap-primitives-fonctions-composees-usuelles</loc>
     <lastmod>2023-10-22T22:12:00+00:00</lastmod>
     <priority>0.64</priority>
   </url>

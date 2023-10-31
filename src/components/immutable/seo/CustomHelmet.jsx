@@ -3,7 +3,7 @@ import Constants from "../Constants";
 
 const CustomHelmet = ( {title, metaContent, canonicalUrl, ogType} ) => {
 
-    var title = `${Constants.APP_NAME} - ${title}`;
+    title = `${Constants.APP_NAME} - ${title}`;
     
     return  <Helmet>
                 <title>{title}</title>

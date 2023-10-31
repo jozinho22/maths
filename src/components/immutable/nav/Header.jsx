@@ -11,7 +11,7 @@ import './Header.css';
 
 const Header = ( {courseItems, gameItems} ) => {
 
-    const {playMode, updatePlayMode} = React.useContext(AppContext);
+    const {playMode} = React.useContext(AppContext);
     
     const [showToggle, setShowToggle] = React.useState(false);
 

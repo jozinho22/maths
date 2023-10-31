@@ -397,6 +397,10 @@ a:-webkit-any-link {
     cursor: pointer;
 }
 
+.Unclickable {
+    cursor: default !important;
+}
+
 .Inline {
     display: inline;
 }

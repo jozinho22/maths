@@ -21,6 +21,7 @@ import ConvexiteDUneFonction from "./chapters/ConvexiteDUneFonction";
 import PointDInflexion from "./chapters/PointDInflexion";
 import MethodeDeNewton from "./chapters/MethodeDeNewton";
 import MethodeDeNewtonExemple from "./chapters/MethodeDeNewtonExemple";
+import FonctionsDeClasseCn from "./chapters/FonctionsDeClasseCn";
 
 const getDerivationChapters = () => {
 
@@ -166,6 +167,13 @@ const getDerivationChapters = () => {
             title: 'Tableau récapitulatif des opérations/compositions sur les dérivées',
             metaContent: 'Tableau récapitulatif des opérations/compositions sur les dérivées.',
             relativePath: '/tableau-recap-operations-compositions-sur-les-derivees'
+        },
+        {
+            id: k++,
+            component: <FonctionsDeClasseCn />,
+            title: 'Fonctions de classe Cn',
+            metaContent: 'Fonctions de classe Cn : lois et formule de Leibniz.',
+            relativePath: '/fonctions-de-classe-cn'
         },
         {
             id: k++,

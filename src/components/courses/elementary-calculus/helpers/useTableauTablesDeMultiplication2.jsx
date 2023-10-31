@@ -1,11 +1,11 @@
-const useTableauTablesDeMultiplication2 = () => {
+const useTableauTablesDeMultiplication2 = (a) => {
    
     var listI = []
-    for(var i = 10; i < 20; i++) {
+    for(var i = a; i < a + 10; i++) {
         listI.push(i)
     }
     var tableauTimesTable = [];
-    var k = 0;
+    var k = a + 10 ;
 
     tableauTimesTable.push(
         {
@@ -21,7 +21,7 @@ const useTableauTablesDeMultiplication2 = () => {
                 id: k++,
                 title: listI[j],
                 values: listI.map(i => {
-                    if(i <= j + 9) {
+                    if(i <= j + a - 1) {
                         return "";
                     } else {
                         return  (i * listI[j]).toString()

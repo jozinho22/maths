@@ -24,8 +24,8 @@ const getInfiniteSeriesChapters = () => {
         {
             id: k++,
             component: <TableauRecapDeveloppementsLimites />,
-            title: 'Tableau récapitulatif des développements limités usuelles',
-            metaContent: 'Tableau récapitulatif des développements limités usuelles.',
+            title: 'Tableau récapitulatif des développements limités usuels',
+            metaContent: 'Tableau récapitulatif des développements limités usuels.',
             relativePath: '/tableau-recap-developpements-limités'
         }
 
