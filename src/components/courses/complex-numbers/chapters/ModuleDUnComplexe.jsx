@@ -35,6 +35,9 @@ const ModuleDUnComplexe = () => {
     var zCarre = "\\( |z|^2 = x^2 + y^2 \\)";
     var zCarre2 = "\\( z^2 = x^2 - y^2 + 2ixy \\)";
 
+    var prop6 = "\\( |z + z'| \\leqslant |z | + |z'| \\)";
+
+
     return  <>
                 <p>Soit un nombre commplexe <MathJaxInline toShow={"$ z = x +iy \\enspace (avec \\enspace  (x, y) \\in  \\mathbb{R}) $"} />.</p>
                 <p>On appelle <MathJaxInline toShow={"$ |z| $"} /> le module de <MathJaxInline toShow={"$ z $"} /> et on note : </p>
@@ -92,6 +95,12 @@ const ModuleDUnComplexe = () => {
                 <p>C'est faux dans <MathJaxInline toShow={"$ \\mathbb{C} $"} /> ! </p>
                 <MathJaxDisplay toShow={zCarre} demo />
                 <MathJaxDisplay toShow={zCarre2} demo />
+
+                <Title2 title={"Propriété 6 : inégalité triangulaire"} />
+                <Container className="Focus">
+                    <MathJaxDisplay toShow={prop6} />
+                </Container>
+                <p>C'est la même formule que pour les valeurs absolues</p>
             </>
 }
 

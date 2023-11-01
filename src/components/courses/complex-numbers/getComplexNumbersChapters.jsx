@@ -1,7 +1,10 @@
+import ArgumentDUnComplexe from "./chapters/ArgumentDUnComplexe";
 import CalculsDansC from "./chapters/CalculsDansC";
 import ConjugueDUnComplexe from "./chapters/ConjugueDUnComplexe";
 import EquationsDuSecondDegre from "./chapters/EquationsDuSecondDegre";
+import FormeTrigonometrique from "./chapters/FormeTrigonometrique";
 import InterpretationGeometrique from "./chapters/InterpretationGeometrique";
+import LienEntreFormeAlgebriqueEtTrigonometrique from "./chapters/LienEntreFormeAlgebriqueEtTrigonometrique";
 import ModuleDUnComplexe from "./chapters/ModuleDUnComplexe";
 import Presentation from "./chapters/Presentation";
 
@@ -51,10 +54,28 @@ const getComplexNumbersChapters = () => {
             title: 'Interprétation géométrique des nombres complexes',
             metaContent: 'Interprétation géométrique des nombres complexes.',
             relativePath: '/interpretation-geometrique'
-        }
-
-
-       
+        },
+        {
+            id: k++,
+            component: <FormeTrigonometrique />,
+            title: 'Forme trigonométrique d\'un complexe',
+            metaContent: 'Forme trigonométrique d\'un complexe.',
+            relativePath: '/forme-trigonometrique'
+        },
+        {
+            id: k++,
+            component: <LienEntreFormeAlgebriqueEtTrigonometrique />,
+            title: 'Lien entre forme algébrique et trigonométrique',
+            metaContent: 'Lien entre forme algébrique et trigonométrique.',
+            relativePath: '/lien-entre-forme-algebrique-et-trigonometrique'
+        },
+        {
+            id: k++,
+            component: <ArgumentDUnComplexe />,
+            title: 'Argument d\'un complexe',
+            metaContent: 'Argument d\'un complexe : définition, formules et démonstrations.',
+            relativePath: '/argument-d-un-complexe'
+        } 
     ];
 }
 

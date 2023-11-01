@@ -105,14 +105,10 @@ const ConjugueDUnComplexe = () => {
                 <MathJaxDisplay toShow={zDivZPrimBar} demo />
 
                 <Title2 title={"Propriété 7 : Puissances d'un conjugué"} />
-                <Container className="Focus">
-                    <MathJaxDisplay toShow={zCarreBar} />
-                </Container>
-                <Container className="Focus">
+                <MathJaxDisplay toShow={zCarreBar} demo />
+                <MathJaxDisplay toShow={zInv} demo />
+                 <Container className="Focus">
                     <MathJaxDisplay toShow={zPowerNBar} />
-                </Container>
-                <Container className="Focus">
-                    <MathJaxDisplay toShow={zInv} />
                 </Container>
 
                 <Title2 title={"Propriété 8 : Multiplication d'un nombre avec son conjugué"} />

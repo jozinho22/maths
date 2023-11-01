@@ -6,8 +6,6 @@ import Title1 from '../../helpers/Title1';
 import Title2 from '../../helpers/Title2';
 import ImageZoom from '../../helpers/ImageZoom';
 import complexNumbersPlan from '../assets/complexNumbersPlan.png';
-import complexNumbersPlanTrigo from '../assets/complexNumbersPlanTrigo.png';
-import complexNumbersPlanTrigo2 from '../assets/complexNumbersPlanTrigo2.png';
 
 const InterpretationGeometrique = () => {
 

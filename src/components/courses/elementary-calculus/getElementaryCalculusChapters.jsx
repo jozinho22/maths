@@ -31,8 +31,8 @@ const getElementaryCalculusChapters = () => {
         {
             id: k++,
             component: <LesTablesDeMultiplication2 />,
-            title: 'Les tables de multiplication (suite)',
-            metaContent: 'Les tables de multiplication de 10 à 19.',
+            title: 'Les tables de multiplication (de 10 à 100)',
+            metaContent: 'Les tables de multiplication de 10 à 100.',
             relativePath: '/les-tables-de-multiplication-suite'
         }, 
         {
