@@ -9,9 +9,9 @@ import PagesConstants from './PagesConstants';
 import './Nav.css';
 import './Header.css';
 
-const Header = ( {courseItems, gameItems} ) => {
+const Header = ( {courseItems, gameItems, pdfItems} ) => {
 
-    const {playMode} = React.useContext(AppContext);
+    const {playMode, updatePlayMode} = React.useContext(AppContext);
     
     const [showToggle, setShowToggle] = React.useState(false);
 
@@ -72,6 +72,17 @@ const Header = ( {courseItems, gameItems} ) => {
                                 Liens
                             </NavLink>  
                         </Nav.Item>
+                        <NavDropdown id="scrollable" title="BDs scientifiques">
+                            {pdfItems.map(pdfItem => 
+                                <NavDropdown.Item key={`pdf-${pdfItem.id}`} eventkey={pdfItem.id} as={NavLink} to={pathBuilder(`${PagesConstants.BDS_DE_JPP}${pdfItem.relativePath}`)} onClick={() => {retractToggleOnMobile(); updatePlayMode(true)}} >
+                                    {pdfItem.title}
+                                </NavDropdown.Item>
+                            )}
+                            < hr/>
+                            <NavDropdown.Item key={"pdf-home"} as={NavLink} to={pathBuilder(`${PagesConstants.BDS_DE_JPP}`)} onClick={() => {retractToggleOnMobile()}} >
+                                Toutes les BDs
+                            </NavDropdown.Item>
+                        </NavDropdown> 
                         {/* <Nav.Item title="Cours à domicile" id="nav-item-contact" onClick={() => {retractToggleOnMobile()}} >
                             <NavLink to={pathBuilder(PagesConstants.CONTACT)} >
                                 Cours à domicile

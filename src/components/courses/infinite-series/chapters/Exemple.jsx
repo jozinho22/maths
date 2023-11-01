@@ -16,7 +16,7 @@ const Exemple = () => {
     var a4 = "\\( a_ 4 = f^{(4)}(0) = sin(0) = 0 \\)";
     var a5 = "\\( a_ 5 = f^{(5)}(0) = ...etc \\)";
 
-    var limDevSin = "\\( sin(x) =  x - \\frac{x^3}{3!} + \\frac{x^5}{5!} - \\frac{x^7}{7} + ... + (-1)^n . \\frac{x^{2n+1}}{(2n+1)!}+ o(x^{2n+1})\\)";
+    var limDevSin = "\\( sin(x) =  x - \\frac{x^3}{3!} + \\frac{x^5}{5!} - \\frac{x^7}{7!} + ... + (-1)^n . \\frac{x^{2n+1}}{(2n+1)!}+ o(x^{2n+2})\\)";
 
     return  <>
                 <p>Tentons de calculer un <MathJaxInline toShow={"$DL_n(0) $"} /> se <MathJaxInline toShow={"$sin(x)$"} />.</p>

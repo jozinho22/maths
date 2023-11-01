@@ -330,6 +330,59 @@ a:-webkit-any-link {
     text-decoration: none !important;
 }
 
+/* switch button */
+.SwitchButton {
+    font-family: 'Times New Roman', Times, serif !important;
+}
+
+.SwitchButton {
+    position: relative;
+}
+
+.SwitchButton .btn-lg {
+    border-color: var(--grey-light-color);
+    font-size: medium !important;
+}
+
+@media (min-width: 768px) {
+    .SwitchButton {
+        width: 60%;
+    }
+}
+
+.SwitchButton .btn-primary {
+    background-color: var(--blue-color);
+}
+
+.SwitchButton .btn-primary:hover {
+    background-color: var(--blue-hover-color);
+}
+
+.SwitchButton .btn-warning {
+    background-color: var(--orange-color);
+}
+
+.SwitchButton .btn-warning:hover {
+    background-color: var(--orange-hover-color);
+}
+
+.SwitchButton .btn-success {
+    background-color: var(--green-color);
+}
+
+.SwitchButton .btn-success:hover {
+    background-color: var(--green-hover-color);
+}
+
+.SwitchButton .btn-danger {
+    background-color: var(--green-hover-color);
+}
+
+.SwitchButton .switch-handle {
+    background-color: var(--grey-light-color);
+}
+
+
 /* Icons */
 .Icon {
     text-align: center;

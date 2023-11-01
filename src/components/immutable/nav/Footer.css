@@ -85,7 +85,7 @@
 } 
 
 .CustomFooter .SwitchButton .btn-lg  {
-  font-size: 8px !important;
+  font-family: 'Times New Roman', Times, serif !important;
 } 
 
 .w-50 {
@@ -96,23 +96,10 @@
   .w-50 {
     width: 30% !important;
   }
-  .CustomFooter .SwitchButton .btn-lg {
-    font-size: 10px !important;
-  } 
 }
 
 .CustomFooter .SwitchButton {
-  width: 60%;
-  align-items: flex-start;
-  right: 20px;
-  position: fixed;
-}
-
-@media (min-width: 450px) {
- .CustomFooter .SwitchButton {
-    align-items: flex-end;
-    flex-direction: column;
-  }
+  width: 80%;
 }
 
 .CustomFooter .SwitchButton .btn {
