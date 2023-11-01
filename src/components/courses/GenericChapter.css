@@ -62,13 +62,13 @@
 
 @media (width > 768px) {
     .ZoomContainer img {
-        width: 50%;
+        width: 80%;
     }
 }
 
 @media (width < 768px) {
     .ZoomContainer img {
-        width: 50%;
+        width: 60%;
     }
 }
 

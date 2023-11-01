@@ -7,41 +7,44 @@ import Title2 from '../../helpers/Title2';
 
 const ConjugueDUnComplexe = () => {
 
-    var conjugue = "\\( \\bar{z} = x - iy, \\enspace (avec \\enspace  (x, y) \\in  \\mathbb{R}) \\)";
-    var exemple1 = "\\( \\bar{2 + 3i} = 2 - 3i \\)";
-    var exemple2 = "\\( \\bar{i} = -i \\)";
-    var exemple3 = "\\( \\bar{-3} = -3 \\)";
+    var conjugue = "\\( \\overline{z} = x - iy, \\enspace (avec \\enspace  (x, y) \\in  \\mathbb{R}) \\)";
+    var exemple1 = "\\( \\overline{2 + 3i} = 2 - 3i \\)";
+    var exemple2 = "\\( \\overline{i} = -i \\)";
+    var exemple3 = "\\( \\overline{-3} = -3 \\)";
 
-    var zEqZbar = "\\( z \\in \\mathbb{R} \\Longleftrightarrow z = \\bar{z} \\)";
-    var zPlusZbar = "\\( z + \\bar{z} = 2x \\)";
-    var zMinusZbar = "\\( z - \\bar{z} = 2iy \\)";
-    var zBarbar = "\\( \\bar{\\bar{z}} = z \\)";
+    var zEqZbar = "\\( z \\in \\mathbb{R} \\Longleftrightarrow z = \\overline{z} \\)";
+    var zPlusZbar = "\\( z + \\overline{z} = 2x \\)";
+    var zMinusZbar = "\\( z - \\overline{z} = 2iy \\)";
+    var zBarbar = "\\( \\overline{\\overline{z}} = z \\)";
 
-    var zPlusZPrimBar = "\\( \\bar{z + z'} = \\bar{z} + \\bar{z'}  \\)";
+    var zPlusZPrimBar = "\\( \\overline{z + z'} = \\overline{z} + \\overline{z'}  \\)";
     var zPlusZPrimBarDemo = "\\( z = x +iy, z' = x' + iy' \\)";
     var zPlusZPrimBarDemo2 = "\\( z + z' = (x + x') + i(y +y') \\)";
-    var zPlusZPrimBarDemo3 = "\\( \\bar{z + z'} = (x + x') - i(y +y') \\)";
-    var zPlusZPrimBarDemo4 = "\\( \\bar{z + z'} = (x - iy) + (x' - iy') = \\bar{z} + \\bar{z'} \\)";
+    var zPlusZPrimBarDemo3 = "\\( \\overline{z + z'} = (x + x') - i(y +y') \\)";
+    var zPlusZPrimBarDemo4 = "\\( \\overline{z + z'} = (x - iy) + (x' - iy') = \\overline{z} + \\overline{z'} \\)";
     
-    var zMinusZPrimBar = "\\( \\bar{z - z'} = \\bar{z} - \\bar{z'}  \\)";
+    var zMinusZPrimBar = "\\( \\overline{z - z'} = \\overline{z} - \\overline{z'}  \\)";
 
-    var zTimesZPrimBar = "\\( \\bar{z z'} = \\bar{z}  \\bar{z'}  \\)";
+    var zTimesZPrimBar = "\\( \\overline{z z'} = \\overline{z}  \\overline{z'}  \\)";
     var zTimesZPrimBarDemo = "\\( z = x +iy, \\enspace  z' = x' + iy' \\)";
     var zTimesZPrimBarDemo2 = "\\( z z' = (x + iy) (x' + iy') \\)";
     var zTimesZPrimBarDemo3 = "\\(  z z' = (xx' - yy') + i(xy' + x'y) \\)";
-    var zTimesZPrimBarDemo4 = "\\( \\bar{z z'} = (xx' - yy') - i(xy' + x'y) \\)";
+    var zTimesZPrimBarDemo4 = "\\( \\overline{z z'} = (xx' - yy') - i(xy' + x'y) \\)";
 
-    var zTimesZPrimBarDemo5 = "\\( \\bar{z} \\bar{z'}= (x - iy) (x' - iy') \\)";
-    var zTimesZPrimBarDemo6 = "\\( \\bar{z} \\bar{z'}= xx' - yy' - i(xy' + x'y) = \\bar{z z'}\\)";
+    var zTimesZPrimBarDemo5 = "\\( \\overline{z} \\overline{z'}= (x - iy) (x' - iy') \\)";
+    var zTimesZPrimBarDemo6 = "\\( \\overline{z} \\overline{z'}= xx' - yy' - i(xy' + x'y) = \\overline{z z'}\\)";
 
-    var zDivZPrimBar = "\\( \\bar{ \\frac{z}{z'}  } = \\frac{ \\bar{z} }{\\bar{z'}}  \\)";
+    var zDivZPrimBar = "\\( \\overline{ \\left(\\frac{z}{z'}\\right)  } = \\frac{ \\overline{z} }{\\overline{z'}}  \\)";
 
-    var zCarreBar = "\\( \\bar{ z^2  } = (\\bar{ z  })^2 \\)";
-    var zPowerNBar = "\\( \\bar{ z^n  } = (\\bar{ z  })^n \\)";
-    var zInv = "\\( \\bar{ \\frac{1}{z}  } = \\frac{1}{\\bar{z}} \\)";
+    var zCarreBar = "\\( \\overline{ z^2  } = (\\overline{ z  })^2 \\)";
+    var zPowerNBar = "\\( \\overline{ z^n  } = (\\overline{ z  })^n \\)";
+    var zInv = "\\( \\overline{ \\left(\\frac{1}{z}\\right)  } = \\frac{1}{\\overline{z}} \\)";
+
+    var zzBar = "\\( z \\overline{z } = x^2 + y^2 \\)";
 
     return  <>
-                <p>On appelle conjugué d'un nombre complexe <MathJaxInline toShow={"$ z = x +iy \\enspace (avec \\enspace  (x, y) \\in  \\mathbb{R}) $"} />, le complexe : </p>
+                <p>Soit un nombre commplexe <MathJaxInline toShow={"$ z = x +iy \\enspace (avec \\enspace  (x, y) \\in  \\mathbb{R}) $"} />.</p>
+                <p>On appelle <MathJaxInline toShow={"$ \\overline{z}$"} /> le conjugué de <MathJaxInline toShow={"$ z $"} /> et on note : </p>
                  <Container className="Focus">
                     <MathJaxDisplay toShow={conjugue} />
                 </Container>
@@ -52,21 +55,27 @@ const ConjugueDUnComplexe = () => {
                 <MathJaxDisplay toShow={exemple3} demo />
 
                 <Title1 title={"Propriétés"} />
+                <Title2 title={"Propriété 1"} />
                 <Container className="Focus">
                     <MathJaxDisplay toShow={zEqZbar} />
                 </Container>
+
+                <Title2 title={"Propriété 2"} />
                 <Container className="Focus">
                     <MathJaxDisplay toShow={zPlusZbar} />
                 </Container>
+
+                <Title2 title={"Propriété 3"} />
                 <Container className="Focus">
                     <MathJaxDisplay toShow={zMinusZbar} />
                 </Container>
 
+                <Title2 title={"Propriété 4"} />
                 <Container className="Focus">
                     <MathJaxDisplay toShow={zBarbar} />
                 </Container>
 
-                <Title2 title={"Conjugué d'une somme"} />
+                <Title2 title={"Propriété 5 : Conjugué d'une somme"} />
                 <Container className="Focus">
                     <MathJaxDisplay toShow={zPlusZPrimBar} />
                 </Container>
@@ -79,7 +88,7 @@ const ConjugueDUnComplexe = () => {
                 <p>De même :</p>
                 <MathJaxDisplay toShow={zMinusZPrimBar} demo />
 
-                <Title2 title={"Conjugué d'un produit"} />
+                <Title2 title={"Propriété 6 : Conjugué d'un produit"} />
                 <Container className="Focus">
                     <MathJaxDisplay toShow={zTimesZPrimBar} />
                 </Container>
@@ -95,7 +104,7 @@ const ConjugueDUnComplexe = () => {
                 <p>De même :</p>
                 <MathJaxDisplay toShow={zDivZPrimBar} demo />
 
-                <Title2 title={"Puissances d'un conjugué"} />
+                <Title2 title={"Propriété 7 : Puissances d'un conjugué"} />
                 <Container className="Focus">
                     <MathJaxDisplay toShow={zCarreBar} />
                 </Container>
@@ -104,6 +113,11 @@ const ConjugueDUnComplexe = () => {
                 </Container>
                 <Container className="Focus">
                     <MathJaxDisplay toShow={zInv} />
+                </Container>
+
+                <Title2 title={"Propriété 8 : Multiplication d'un nombre avec son conjugué"} />
+                 <Container className="Focus">
+                    <MathJaxDisplay toShow={zzBar} />
                 </Container>
             </>
 }

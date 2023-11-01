@@ -4,6 +4,9 @@ import MathJaxDisplay from '../../../mathjax-display/MathJaxDisplay';
 import Title1 from '../../helpers/Title1';
 import MathJaxInline from '../../../mathjax-display/MathJaxInline';
 import Aside from '../../helpers/Aside';
+import PagesConstants from '../../../immutable/nav/PagesConstants';
+import CoursesConstants from '../../helpers/CoursesConstants';
+import Link from '../../../immutable/nav/Link';
 
 const FormulesDeDuplication = () => {
 
@@ -32,7 +35,7 @@ const FormulesDeDuplication = () => {
             </Container>
 
             <Title1 title="Démonstration" />
-            <p>En écrivant le complexe d'argument <MathJaxInline toShow={"$ 2\\alpha$"}/> sous sa forme complexe exponentielle, on obtient : </p>
+            <p>En écrivant le <Link url={`${PagesConstants.PREFIX}${PagesConstants.COURS}${CoursesConstants.COMPLEXES}/presentation`} external>complexe</Link> d'argument <MathJaxInline toShow={"$ 2\\alpha$"}/> sous sa forme complexe exponentielle, on obtient : </p>
             <MathJaxDisplay toShow={eiTheta2Agen} demo />
             <Aside>
                 <p>Mais,</p>

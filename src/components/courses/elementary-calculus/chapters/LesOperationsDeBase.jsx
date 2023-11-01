@@ -80,7 +80,7 @@ const LesOperationsDeBase = () => {
                 <Title2 title={"b) Multiplication / division"} />
                 <Title2 title={"c) Addition / soustraction"} /> */}
                 <Container className="Focus">
-                    <MathJaxDisplay toShow={"\\( a) \\enspace L'int\\acute{e}rieur \\enspace des  \\enspace parenth\\grave{e}ses \\)"} />
+                    <MathJaxDisplay toShow={"\\( a) \\enspace L'int\\acute{e}rieur \\enspace des  \\enspace parenth \\overset{‘}{e} ses \\)"} />
                     <MathJaxDisplay toShow={"\\( b) \\times / \\div \\)"} />
                     <MathJaxDisplay toShow={"\\( c) + / - \\)"} />
                 </Container>

@@ -1,5 +1,6 @@
 .CustomNav {
     background-color : var(--navbar-color);
+    z-index: 2;
 }
 
 .CustomNav a {

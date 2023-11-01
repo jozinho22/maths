@@ -170,7 +170,9 @@ function coursesResourceBuilder() {
         nbOr
     );
 
-    process.env.NODE_ENV === 'development' ? coursesItems.push(complexes) : coursesItems.push()
+    if(process.env.NODE_ENV === 'development') {
+      coursesItems.push(complexes) 
+    }
 
     return coursesItems;
 
