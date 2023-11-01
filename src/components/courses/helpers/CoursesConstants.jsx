@@ -11,9 +11,10 @@ const CoursesConstants = {
     TRIGO: '/la-trigonometrie',
     DERIVATION: '/la-derivation',
     PRIMITIVES_INTEGRATION: '/primitives-integration',
-    DEVELOPPEMENTS_LIMITES: '/les-developpements-limites',
     SEQUENCES: '/les-suites-numeriques',
+    DEVELOPPEMENTS_LIMITES: '/les-developpements-limites',
    /*  GEOMETRY: '/la-geometrie', */
+    COMPLEXES: '/les-nombres-complexes',
     FONCTIONS_USUELLES:  '/les-fonctions-usuelles',
 
     UNSPLASH: "https://unsplash.com/",

@@ -21,16 +21,16 @@ const Footer = () => {
 
     return (
             <Navbar 
-                className={`CustomFooter CustomNav  ${playMode ? "Hidden" : ''}`}
+                className={`CustomFooter CustomNav ${playMode ? "Hidden" : ''}`}
                 fixed="bottom"  
                 variant="dark" 
                 expand="lg">   
                 <Container className="SwitchButton">
                     <BootstrapSwitchButton 
                         size="lg" 
-                        onlabel={`Switch to dark`}
+                        onlabel={`Switch to normal`}
                         onstyle='primary'
-                        offlabel={`Switch to normal`}
+                        offlabel={`Switch to dark`}
                         offstyle='warning'
                         style={'w-50 mx-3'}
                         onChange={() => switchView()} />  

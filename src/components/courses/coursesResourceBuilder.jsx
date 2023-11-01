@@ -17,6 +17,7 @@ import getUsualFunctionsChapters from './usual-functions/getUsualFunctionsChapte
 import CoursesConstants from './helpers/CoursesConstants';
 import geometryCoursesResourceBuilder from './geometry/geometryCoursesResourceBuilder';
 import getInfiniteSeriesChapters from './infinite-series/getInfiniteSeriesChapters';
+import getComplexNumbersChapters from './complex-numbers/getComplexNumbersChapters';
 
 function coursesResourceBuilder() {
 
@@ -102,6 +103,14 @@ function coursesResourceBuilder() {
       chapters: getPrimitivesIntegrationChapters()
     }
 
+    var seq = {
+      id: i++,
+      title: 'Les suites numériques',
+      metaContent: "Les suites numériques : variations, suites arithmétiques, suites géométriques, sommes de termes.",
+      relativePath: CoursesConstants.SEQUENCES,
+      chapters: getSequencesChapters()
+    }
+
     var infSeries = {
       id: i++,
       title: 'Les développements limités',
@@ -110,12 +119,12 @@ function coursesResourceBuilder() {
       chapters: getInfiniteSeriesChapters()
     }
 
-    var seq = {
+    var complexes = {
       id: i++,
-      title: 'Les suites numériques',
-      metaContent: "Les suites numériques : variations, suites arithmétiques, suites géométriques, sommes de termes.",
-      relativePath: CoursesConstants.SEQUENCES,
-      chapters: getSequencesChapters()
+      title: 'Les nombres complexes',
+      metaContent: "Les nombres complexes : définitions, démonstrations et formules",
+      relativePath: CoursesConstants.COMPLEXES,
+      chapters: getComplexNumbersChapters()
     }
 
     var pi = {
@@ -160,6 +169,8 @@ function coursesResourceBuilder() {
         pi, 
         nbOr
     );
+
+    process.env.NODE_ENV === 'development' ? coursesItems.push(complexes) : coursesItems.push()
 
     return coursesItems;
 

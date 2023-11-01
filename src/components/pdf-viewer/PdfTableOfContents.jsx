@@ -12,8 +12,7 @@ import pathBuilder from '../helpers/pathBuilder';
 const PdfTableOfContents = ( {pdfItems} ) => {
 
     var prefix =  PagesConstants.BDS_DE_JPP;
-    var titlePrefix = "Index : "
-    var title = 'Toutes les BDs de Jean-Pierre Petit';
+    var title = 'Index : Les BDs de Jean-Pierre Petit';
     var metaContent = 'Les bandes dessinées de Jean-Pierre Petit : une approche de nombreux thèmes scientifiques amenés par approche ludique.'
 
     var ogType = 'Table of contents';
@@ -32,7 +31,7 @@ const PdfTableOfContents = ( {pdfItems} ) => {
                     </Button> 
                 </NavLink>
             </div> 
-            <GenericTableOfContents items={pdfItems} prefix={prefix} title={`${titlePrefix}${title}`} action={action} />
+            <GenericTableOfContents items={pdfItems} prefix={prefix} title={title} action={action} />
             <p className="AuthorCopyRight">Avec l'accord de Mr Petit - <Link url={Constants.SAVOIR_SANS_FRONTIERES} external>toutes ses BDs</Link></p>     
         </>
     )

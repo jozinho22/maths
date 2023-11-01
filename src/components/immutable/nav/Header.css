@@ -18,7 +18,6 @@
     margin-right: 20px;
 } 
 
-
 @media (width > 1000px) {
   #nav-item-liens, #nav-item-contact {
     margin-top: -5px

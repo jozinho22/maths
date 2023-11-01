@@ -110,6 +110,7 @@
 
 .Darcula .CustomNav .nav-item a.dropdown-item {
   color: var(--links-color) !important;
+  margin-top: 7px; margin-bottom: 7px;
 }
 
 .dropdown-item.active {
