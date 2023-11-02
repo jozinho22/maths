@@ -3,10 +3,13 @@ import CalculsDansC from "./chapters/CalculsDansC";
 import ConjugueDUnComplexe from "./chapters/ConjugueDUnComplexe";
 import EquationsDuSecondDegre from "./chapters/EquationsDuSecondDegre";
 import FormeTrigonometrique from "./chapters/FormeTrigonometrique";
+import FormuleDeMoivre from "./chapters/FormuleDeMoivre";
 import InterpretationGeometrique from "./chapters/InterpretationGeometrique";
 import LienEntreFormeAlgebriqueEtTrigonometrique from "./chapters/LienEntreFormeAlgebriqueEtTrigonometrique";
 import ModuleDUnComplexe from "./chapters/ModuleDUnComplexe";
 import Presentation from "./chapters/Presentation";
+import FormeExponentielle from "./chapters/FormeExponentielle";
+import FormulesDEuler from "./chapters/FormuleDEuler";
 
 const getComplexNumbersChapters = () => {
 
@@ -75,7 +78,28 @@ const getComplexNumbersChapters = () => {
             title: 'Argument d\'un complexe',
             metaContent: 'Argument d\'un complexe : définition, formules et démonstrations.',
             relativePath: '/argument-d-un-complexe'
-        } 
+        },      
+        {
+            id: k++,
+            component: <FormuleDeMoivre />,
+            title: 'Formule de Moivre',
+            metaContent: 'Formule de Moivre : définition, formule et démonstration.',
+            relativePath: '/formule-de-moivre'
+        },
+        {
+            id: k++,
+            component: <FormeExponentielle />,
+            title: 'Forme exponentielle d\'un nombre complexe',
+            metaContent: 'Forme exponentielle d\'un nombre complexe.',
+            relativePath: '/forme-exponentielle'
+        },
+        {
+            id: k++,
+            component: <FormulesDEuler />,
+            title: 'Formules d\'Euler',
+            metaContent: 'Formules d\'Euler.',
+            relativePath: '/formule-d-euler'
+        }  
     ];
 }
 

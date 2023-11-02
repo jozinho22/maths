@@ -35,7 +35,7 @@ const FormulesDeDuplication = () => {
             </Container>
 
             <Title1 title="Démonstration" />
-            <p>En écrivant le <Link url={`${PagesConstants.PREFIX}${PagesConstants.COURS}${CoursesConstants.COMPLEXES}/presentation`} external>complexe</Link> d'argument <MathJaxInline toShow={"$ 2\\alpha$"}/> sous sa forme complexe exponentielle, on obtient : </p>
+            <p>En écrivant le <Link url={`${PagesConstants.PREFIX}${PagesConstants.COURS}${CoursesConstants.COMPLEXES}/presentation`} external>complexe</Link> d'argument <MathJaxInline toShow={"$ 2\\alpha$"}/> sous sa <Link url={`${PagesConstants.PREFIX}${PagesConstants.COURS}${CoursesConstants.COMPLEXES}/forme-exponentielle`} external>forme complexe exponentielle</Link>, on obtient : </p>
             <MathJaxDisplay toShow={eiTheta2Agen} demo />
             <Aside>
                 <p>Mais,</p>

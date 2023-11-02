@@ -21,9 +21,9 @@ const ArgumentDUnComplexe = () => {
     var prop5 = "\\( zz' = |zz'| \\left[ cos(\\theta + \\theta') +  isin(\\theta + \\theta') \\right] \\)"; 
     var prop5bis = "\\( arg(zz') = arg(z) + arg(z') \\)"; 
     var prop5Demo = "\\(  \\Biggl\\{ \\begin{gather*} z = |z|.\\bigl[ cos(\\theta) +  isin(\\theta) \\bigr] \\\\ z' = |z'|.\\bigl[ cos(\\theta') +  isin(\\theta') \\big] \\end{gather*} \\)"; 
-    var prop5Demo2 = "\\(  zz' = |z||z'| \\left[ cos(\\theta) + isin(\\theta)\\right]\\left[ cos( \\theta') + isin(\\theta') \\right] \\)"; 
-    var prop5Demo3 = "\\(  zz' = |zz'| \\left[ cos(\\theta)cos(\\theta') -sin(\\theta)sin(\\theta') \\right] + i \\left[ cos(\\theta)sin(\\theta') + sin(\\theta)cos(\\theta') \\right]  \\)"; 
-    var prop5Demo4 = "\\(  zz' = |zz'| \\left[ cos(\\theta + \\theta') + i sin(\\theta + \\theta') \\right]  \\)"; 
+    var prop5Demo2 = "\\(  zz' = |z||z'| \\bigl[ cos(\\theta) + isin(\\theta) \\bigr] \\left[ cos( \\theta') + isin(\\theta') \\right] \\)"; 
+    var prop5Demo3 = "\\(  zz' = |zz'| \\Bigl[ \\left(cos(\\theta)cos(\\theta') -sin(\\theta)sin(\\theta') \\right) + i \\left( cos(\\theta)sin(\\theta') + sin(\\theta)cos(\\theta') \\right) \\Bigr]  \\)"; 
+    var prop5Demo4 = "\\(  zz' = |zz'| \\left[ cos(\\theta + \\theta') + i. sin(\\theta + \\theta') \\right]  \\)"; 
 
 
     var prop6 = "\\( arg\\left(\\frac{1}{z}\\right) = -arg(z) \\)"; 
@@ -36,7 +36,7 @@ const ArgumentDUnComplexe = () => {
     var prop7Demo = "\\( arg\\left(z.\\frac{1}{z}\\right) = arg(z) + arg\\left(\\frac{1}{z}\\right) \\)"; 
     var prop7Demo2 = "\\( arg\\left(z.\\frac{1}{z}\\right) = arg(z) -arg(z) \\)"; 
 
-    var prop8 = "\\( arg(z^n) = n.arg(z) \\)"; 
+    var prop8 = "\\( arg(z^n) = n.arg(z), \\enspace avec \\enspace(n \\in \\mathbb{Z}) \\)"; 
 
     return  <>
                 <p>Soit un nombre complexe <MathJaxInline toShow={"$  z = |z| . \\left[cos(\\theta) + i sin(\\theta ) \\right] $"} />.</p>

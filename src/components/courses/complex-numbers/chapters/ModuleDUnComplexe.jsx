@@ -29,7 +29,7 @@ const ModuleDUnComplexe = () => {
     var prop4Bis = "\\( \\left| \\frac{z}{z'} \\right| = \\frac{|z|}{|z'|}, \\enspace (avec \\enspace z' \\neq 0) \\)";
     var prop4Ter = "\\( \\left| \\frac{1}{z} \\right| = \\frac{1}{|z|}, \\enspace (avec \\enspace z \\neq 0) \\)";
 
-    var prop5 = "\\( |z^n| = |z|^n \\)";
+    var prop5 = "\\( |z^n| = |z|^n \\enspace avec \\enspace(n \\in \\mathbb{Z})\\)";
 
     var aCarre = "\\( |a|^2 = a^2 \\enspace (si \\enspace a \\in \\mathbb{R}) \\)";
     var zCarre = "\\( |z|^2 = x^2 + y^2 \\)";

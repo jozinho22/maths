@@ -165,14 +165,11 @@ function coursesResourceBuilder() {
         derivation,
         primInt,
         seq,
+        complexes,
         infSeries,
         pi, 
         nbOr
     );
-
-    if(process.env.NODE_ENV === 'development') {
-      coursesItems.push(complexes) 
-    }
 
     return coursesItems;
 
