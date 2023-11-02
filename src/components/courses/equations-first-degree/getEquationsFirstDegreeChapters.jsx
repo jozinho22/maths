@@ -7,7 +7,10 @@ const getEquationsFirstDegreeChapters = () => {
 
     var k = 0;
 
-    return [      
+    return [    
+        {
+            title: 'Équations'
+        },    
         {
             id: k++,
             component: <Resolution />,
@@ -23,12 +26,18 @@ const getEquationsFirstDegreeChapters = () => {
             relativePath: '/aspect'
         },
         {
+            title: 'Inéquations'
+        }, 
+        {
             id: k++,
             component: <Inequations />,
             title: 'Résolution d\'inéquations',
             metaContent: 'Résolution d\'inéquations du premier degré : explications.',
             relativePath: '/resolution-d-inequations'
         },
+        {
+            title: 'Tableaux de signes'
+        }, 
         {
             id: k++,
             component: <TableauxDeSignes />,

@@ -9,7 +9,10 @@ const getEquationsSecondDegreeChapters = () => {
 
     var k = 0;
 
-    return [      
+    return [    
+        {
+            title: 'Équations'
+        },   
         {
             id: k++,
             component: <Resolution />,
@@ -32,6 +35,9 @@ const getEquationsSecondDegreeChapters = () => {
             relativePath: '/aspect'
         },
         {
+            title: 'Tableaux de signes et de variations'
+        }, 
+        {
             id: k++,
             component: <TableauxDeSignesEtDeVariationsExemple />,
             title: 'Tableaux de signes et de variations : exemple',
@@ -45,6 +51,9 @@ const getEquationsSecondDegreeChapters = () => {
             metaContent: 'Tableaux de signes et de variations : cas général.',
             relativePath: '/tableaux-de-signes-et-de-variations-cas-general'
         },
+        {
+            title: 'Décomposition en éléments simples'
+        }, 
         {
             id: k++,
             component: <DecompositionDUnInverseDePolynomeEnElementsSimples />,

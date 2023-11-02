@@ -4,7 +4,6 @@ import { Container } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 import pathBuilder from '../helpers/pathBuilder';
 import MainTitle from './MainTitle';
-import Title2 from '../courses/helpers/Title2';
 import MainSubTitle from './MainSubTitle';
 
 const GenericTableOfContents = ( {items, prefix, title, action} ) => {

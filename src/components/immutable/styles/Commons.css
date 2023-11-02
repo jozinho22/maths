@@ -304,6 +304,9 @@ a:hover {
 /* Table Of Contents */
 .TableOfContents {
     padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 @media (width < 450px) {
@@ -323,6 +326,7 @@ a:hover {
     font-size: large;
     cursor: pointer;
     text-decoration: none !important;
+    left: 40px;
 }
 
 .TableOfContentsLink p {

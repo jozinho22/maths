@@ -9,12 +9,18 @@ const getPiChapters = () => {
 
     return [
         {
+            title: 'Tableaux de signes et de variations'
+        }, 
+        {
             id: k++,
             component: <Presentation />,
             title: 'Présentation',
             metaContent: 'Présentation des caractéristiques du nombre Pi et notamment sa relation avec le cercle.', 
             relativePath: '/presentation'
         },
+        {
+            title: 'Calcul de Pi'
+        }, 
         {
             id: k++,
             component: <CalculDePi />,
@@ -29,6 +35,9 @@ const getPiChapters = () => {
             metaContent: 'Calcul historique du nombre Pi effectué par Archimède par approximations successives (suite).', 
             relativePath: '/calcul-par-methode-geometrique-2'
         },
+        {
+            title: 'Formules'
+        }, 
         {
             id: k++,
             component: <AutresFormulesGenerales />,

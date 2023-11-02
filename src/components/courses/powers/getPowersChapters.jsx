@@ -14,6 +14,9 @@ const getPowersChapters = () => {
 
     return [
         {
+            title: 'Présentation'
+        }, 
+        {
             id: k++,
             component: <Presentation />,
             title: 'Présentation',
@@ -66,7 +69,7 @@ const getPowersChapters = () => {
             relativePath: '/liens-entre-puissances-de-x-et-racines'
         },
         {
-            title: 'Utilisation'
+            title: 'Utilité'
         },
         {
             id: k++,
