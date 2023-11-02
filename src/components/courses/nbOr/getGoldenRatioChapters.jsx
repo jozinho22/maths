@@ -10,7 +10,10 @@ const getGoldenRatioChapters = () => {
 
     var k = 0;
 
-    return [      
+    return [  
+        {
+            title: 'Présentation'
+        },     
         {
             id: k++,
             component: <EvolutionDeLapins />,
@@ -32,6 +35,9 @@ const getGoldenRatioChapters = () => {
             metaContent: 'L\'évolution de la suite de Fibonacci, mais cette fois-ci, en sons contraire.',
             relativePath: '/caracteristiques-en-sens-contraire'
         },
+        {
+            title: 'Formules'
+        },  
         {
             id: k++,
             component: <FormulesDeLaSuiteDeFibonacci />,

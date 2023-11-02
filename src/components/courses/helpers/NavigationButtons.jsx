@@ -12,12 +12,14 @@ const NavigationButtons = ( {setCount, chapter, chapters, courseRelativePath} ) 
     var width = document.body.offsetWidth;
     var mobile = width < 450; 
 
+    var chaptersLength = chapters.filter(ch => ch.relativePath).length
+
     return (
         <Row>
             <Col style={{textAlign:"right"}}>
                 {
                     chapter.id > 0 ?  
-                        <NavLink to={pathBuilder(`${PagesConstants.COURS}${courseRelativePath}${chapters[chapter.id - 1].relativePath}`)} >
+                        <NavLink to={pathBuilder(`${PagesConstants.COURS}${courseRelativePath}${chapters.find(ch => ch.id === (chapter.id - 1)).relativePath}`)} >
                             <Button 
                                 className="DefaultButton" 
                                 onClick={() => setCount(prevState => prevState - 1)} >
@@ -25,7 +27,7 @@ const NavigationButtons = ( {setCount, chapter, chapters, courseRelativePath} ) 
                                 {
                                     mobile ? 
                                         'Précédent' 
-                                            : chapters[chapter.id -1].title 
+                                            : chapters.find(ch => ch.id === (chapter.id - 1)).title
                                 }
                             
                             </Button> 
@@ -34,19 +36,19 @@ const NavigationButtons = ( {setCount, chapter, chapters, courseRelativePath} ) 
                 } 
             </Col>
             <Col className="CenterTitle">
-                {chapter.id + 1} / {chapters.length} 
+                {chapter.id + 1} / {chaptersLength} 
             </Col>
             <Col style={{textAlign:"left"}}>
                 {
-                    chapter.id < chapters.length - 1 ?
-                        <NavLink to={pathBuilder(`${PagesConstants.COURS}${courseRelativePath}${chapters[chapter.id + 1].relativePath}`)} >
+                    chapter.id < chaptersLength - 1 ?
+                        <NavLink to={pathBuilder(`${PagesConstants.COURS}${courseRelativePath}${chapters.find(ch => ch.id === (chapter.id + 1)).relativePath}`)} >
                             <Button 
                                 onClick={() => setCount(prevState => prevState + 1)}
                                 className="DefaultButton" >
                                 {
                                     mobile ? 
                                         'Suivant' :
-                                            chapters[chapter.id + 1].title
+                                            chapters.find(ch => ch.id === (chapter.id + 1)).title
                                 }
                                 { !mobile ? <ChevronRight className="NavigationIcon" /> : <></> }
                             </Button>

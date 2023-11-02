@@ -28,9 +28,9 @@ const Footer = () => {
                 <Container className="SwitchButton">
                     <BootstrapSwitchButton 
                         size="lg" 
-                        onlabel={theme === Themes.BRAZIL ? `Switch to dark` : `Switch to normal`}
+                        offlabel={`Switch to dark`}
+                        onlabel={`Switch to normal`}
                         onstyle='primary'
-                        offlabel={theme === Themes.BRAZIL ? `Switch to normal` : `Switch to dark`}
                         offstyle='warning'
                         style={'w-50 mx-3'}
                         onChange={() => switchView()} />  

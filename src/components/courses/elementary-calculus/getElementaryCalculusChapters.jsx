@@ -13,8 +13,11 @@ const getElementaryCalculusChapters = () => {
 
     var k = 0;
 
-    return [      
-         {
+    return [     
+        {
+            title: 'Bases du calcul'
+        }, 
+        {
             id: k++,
             component: <LesOperationsDeBase />,
             title: 'Les opérations de base',
@@ -62,6 +65,9 @@ const getElementaryCalculusChapters = () => {
             title: 'Les règles de divisibilité',
             metaContent: 'Les règles de divisibilité : par 2, 3, 4, 5, 9',
             relativePath: '/les-regles-de-divisibilite'
+        },
+        {
+            title: 'Identités remarquables'
         },
         {
             id: k++,

@@ -15,6 +15,9 @@ const getTrigoChapters = () => {
 
     return [
         {
+            title: 'Présentation des fonctions sin et cos'
+        }, 
+        {
             id: k++,
             component: <Presentation />,
             title: 'Présentation',
@@ -35,6 +38,9 @@ const getTrigoChapters = () => {
             metaContent: 'L\'application du théorème de Pythagore dans le cercle trigonométrique.',
             relativePath: '/pythagore-et-trigonometrie'
         },
+        {
+            title: 'Formules'
+        }, 
         {
             id: k++,
             component: <FormulesDAddition />,
@@ -64,6 +70,9 @@ const getTrigoChapters = () => {
             relativePath: '/formules-d-euler'
         },
         {
+            title: 'La tangente'
+        }, 
+        {
             id: k++,
             component: <LaTangente />,
             title: 'La tangente',
@@ -76,6 +85,9 @@ const getTrigoChapters = () => {
             title: 'Valeurs de la tangente sur le cercle',
             metaContent: 'Toutes les valeurs usuelles des tangentes sur le cercle et le schéma répétitif.',
             relativePath: '/valeurs-de-tan'
+        },
+        {
+            title: 'Résolution'
         },
         {
             id: k++,

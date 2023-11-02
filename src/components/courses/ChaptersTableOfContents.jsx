@@ -6,6 +6,7 @@ import pathBuilder from '../helpers/pathBuilder';
 
 import PagesConstants from '../immutable/nav/PagesConstants';
 import MainTitle from '../immutable/MainTitle';
+import MainSubTitle from '../immutable/MainSubTitle';
 import { NavLink } from 'react-router-dom';
 
 const ChaptersTableOfContents = ( {courseItem} ) => {
@@ -13,11 +14,12 @@ const ChaptersTableOfContents = ( {courseItem} ) => {
     var title = `${courseItem.title} : Index des chapitres`;
     var ogType = "Table of contents";
 
+    var n = 0;
+
     React.useEffect(() => {
         setTimeout(function(){
             window.scrollTo(0, 0)
         }, 2000);
-
     }, [courseItem]); 
 
     return (
@@ -34,14 +36,17 @@ const ChaptersTableOfContents = ( {courseItem} ) => {
             <MainTitle title={courseItem.title} />
             <Container className="TableOfContents">
                 {
-                    courseItem.chapters.map(chapter => (
-                        <NavLink  
-                            key={chapter.id} 
-                            to={pathBuilder(`${PagesConstants.COURS}${courseItem.relativePath}${courseItem.chapters[chapter.id].relativePath}`)} 
-                            className="TableOfContentsLink" >
-                                <p><u>chapitre {chapter.id + 1}</u> - {chapter.title}</p>
-                        </NavLink>
-                    ))
+                    courseItem.chapters.map(chapter => {
+                        if(!chapter.relativePath) {
+                            return <div key={`chapter-st-${n++}`} ><MainSubTitle title={chapter.title} /></div>;
+                        }   
+                        return  <NavLink  
+                                    key={`chapter-${chapter.id}`} 
+                                    to={pathBuilder(`${PagesConstants.COURS}${courseItem.relativePath}${courseItem.chapters.find(ch => ch.id === chapter.id).relativePath}`)} 
+                                    className="TableOfContentsLink" >
+                                        <p><u>chapitre {chapter.id + 1}</u> - {chapter.title}</p>
+                                </NavLink>
+                    })
                 }
             </Container>
         </>

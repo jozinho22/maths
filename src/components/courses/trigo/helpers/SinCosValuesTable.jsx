@@ -1,5 +1,5 @@
-import MathJaxInline from '../../mathjax-display/MathJaxInline';
-import NiceTable from '../../immutable/NiceTable';
+import MathJaxInline from '../../../mathjax-display/MathJaxInline';
+import NiceTable from '../../../immutable/NiceTable';
 
 const SinCosValuesTable = () => {
 

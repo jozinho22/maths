@@ -85,11 +85,11 @@
 }
 
 .CustomFooter .SwitchButton .btn-primary {
-  background-color: var(--dark-color) !important;
+  background-color: var(--grey-color) !important;
 }
 
 .CustomFooter .SwitchButton .btn-btn-primary:hover {
-  background-color: var(--dark-color) !important;
+  background-color: var(--grey-color) !important;
 }
 
 .CustomFooter .SwitchButton .btn-warning {

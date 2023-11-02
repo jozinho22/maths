@@ -10,6 +10,9 @@ const getPythagoreChapters = () => {
 
     return [
         {
+            title: 'Présentation'
+        },  
+        {
             id: k++,
             component: <Presentation />,
             title: 'Présentation',
@@ -31,12 +34,18 @@ const getPythagoreChapters = () => {
             relativePath: '/demonstration-de-la-reciproque'
         },
         {
+            title: 'Applications'
+        },  
+        {
             id: k++,
             component: <Applications />,
             title: 'Applications',
             metaContent: 'Applications possibles du théorème de Pythagore (notamment des mesures de longueurs).',
             relativePath: '/applications'
         },
+        {
+            title: 'Généralisation'
+        },  
         {
             id: k++,
             component: <TheoremeDAlKashi />,

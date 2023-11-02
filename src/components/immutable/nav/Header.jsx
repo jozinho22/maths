@@ -27,6 +27,14 @@ const Header = ( {courseItems, gameItems, pdfItems} ) => {
         }  
     }
 
+   var filteredCourseItems = courseItems.filter(c => c.relativePath)
+
+    filteredCourseItems.chapters = filteredCourseItems.map(c => {
+        c.chapters.filter(ch => ch.relativePath)
+    })
+    
+    var filteredPdfItems = pdfItems.filter(p => p.relativePath)
+
     return (
             <Navbar 
                 className={`CustomNav CustomHeader ${playMode ? "Hidden" : ''}`}
@@ -46,7 +54,7 @@ const Header = ( {courseItems, gameItems, pdfItems} ) => {
                 <Navbar.Collapse id="responsive-navbar-nav" >
                     <Nav /* onSelect={handleSelect} */>
                         <NavDropdown id="scrollable" title="Cours de maths">
-                            {courseItems.map(courseItem => 
+                            {filteredCourseItems.map(courseItem => 
                                 <NavDropdown.Item key={`course-${courseItem.id}`} eventkey={courseItem.id} as={NavLink} to={pathBuilder(`${PagesConstants.COURS}${courseItem.relativePath}`)} onClick={() => {retractToggleOnMobile()}} >
                                     {courseItem.title}
                                 </NavDropdown.Item>
@@ -73,7 +81,7 @@ const Header = ( {courseItems, gameItems, pdfItems} ) => {
                             </NavLink>  
                         </Nav.Item>
                         <NavDropdown id="scrollable" title="BDs scientifiques">
-                            {pdfItems.map(pdfItem => 
+                            {filteredPdfItems.map(pdfItem => 
                                 <NavDropdown.Item key={`pdf-${pdfItem.id}`} eventkey={pdfItem.id} as={NavLink} to={pathBuilder(`${PagesConstants.BDS_DE_JPP}${pdfItem.relativePath}`)} onClick={() => {retractToggleOnMobile(); updatePlayMode(true)}} >
                                     {pdfItem.title}
                                 </NavDropdown.Item>

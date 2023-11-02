@@ -18,7 +18,10 @@ const getSequencesChapters = () => {
 
     var k = 0;
 
-    return [      
+    return [   
+        {
+            title: 'Présentation'
+        },     
         {
             id: k++,
             component: <Presentation />,
@@ -55,6 +58,9 @@ const getSequencesChapters = () => {
             relativePath: '/raisonnement-par-recurrence'
         },
         {
+            title: 'Suites arithmétiques'
+        },  
+        {
             id: k++,
             component: <SuitesArithmetiques />,
             title: 'Suites arithmétiques',
@@ -75,6 +81,9 @@ const getSequencesChapters = () => {
             metaContent: 'Somme des (n+1) premiers termes d\'une suite arithmétique : démonstration.',
             relativePath: '/somme-des-n-plus-1-premiers-termes-d-une-suite-arithmetique'
         },
+        {
+            title: 'Suites géométriques'
+        },  
         {
             id: k++,
             component: <SuitesGeometriques />,
@@ -97,6 +106,9 @@ const getSequencesChapters = () => {
             relativePath: '/somme-des-n-plus-1-premiers-termes-d-une-suite-geometrique'
         },
         {
+            title: 'Limites et convergences'
+        }, 
+        {
             id: k++,
             component: <LimitesDeSuites />,
             title: 'Limites de suites',
@@ -117,6 +129,9 @@ const getSequencesChapters = () => {
             metaContent: 'Limites de suites extraites : suites extraites, convergence par complémentarité.',
             relativePath: '/limites-de-suites-extraites'
         },
+        {
+            title: 'Récapitulatif'
+        }, 
         {
             id: k++,
             component: <TableauRecapOperationsLimitesDeSuites />,

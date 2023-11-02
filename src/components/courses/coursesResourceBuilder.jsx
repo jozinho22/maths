@@ -24,6 +24,11 @@ function coursesResourceBuilder() {
     var coursesItems = [];
     var i = 0;
 
+    var delimBases = {
+      id: i++,
+      title: 'Bases du calcul'
+    }
+
     var symbols = {
       id: i++,
       title: 'Les symboles mathématiques',
@@ -31,27 +36,12 @@ function coursesResourceBuilder() {
       relativePath: CoursesConstants.SYMBOLS,
       chapters: getSymbolsChapters()
     }
-
     var elementaryCalculus = {
       id: i++,
       title: 'Calcul élémentaire',
       metaContent: "Calcul élémentaire : les opérations de base, le produit en croix, les fractions.",
       relativePath: CoursesConstants.ELEM_CALCULUS,
       chapters: getElementaryCalculusChapters()
-    }
-    var equationsFirstDegree = {
-      id: i++,
-      title: 'Les équations du premier degré',
-      metaContent: "Cours sur les équations du premier degré : apprendre à résoudre les équations et inéquations de base et voir l'aspect de ses fonctions dans un repère",
-      relativePath: CoursesConstants.EQ_1_DEG,
-      chapters: getEquationsFirstDegreeChapters()
-    }
-    var equationsSecondDegree = {
-      id: i++,
-      title: 'Les équations du deuxième degré',
-      metaContent: "Cours sur les équations du deuxième degré : apprendre à résoudre les équations et voir l'aspect de ses fonctions dans un repère",
-      relativePath: CoursesConstants.EQ_2_DEG,
-      chapters: getEquationsSecondDegreeChapters()
     }
     var powers = {
       id: i++,
@@ -60,6 +50,12 @@ function coursesResourceBuilder() {
       relativePath: CoursesConstants.PUISSANCES,
       chapters: getPowersChapters()
     }
+
+    var delimTheorems = {
+      id: i++,
+      title: 'Théorèmes célèbres'
+    }
+
     var pythagore = {
       id: i++,
       title: 'Le théorème de Pythagore',
@@ -74,6 +70,32 @@ function coursesResourceBuilder() {
       relativePath: CoursesConstants.THALES,
       chapters: getThalesChapters()
     }
+
+    var delimEqu = {
+      id: i++,
+      title: 'Équations'
+    }
+
+    var equationsFirstDegree = {
+      id: i++,
+      title: 'Les équations du premier degré',
+      metaContent: "Cours sur les équations du premier degré : apprendre à résoudre les équations et inéquations de base et voir l'aspect de ses fonctions dans un repère",
+      relativePath: CoursesConstants.EQ_1_DEG,
+      chapters: getEquationsFirstDegreeChapters()
+    }
+    var equationsSecondDegree = {
+      id: i++,
+      title: 'Les équations du deuxième degré',
+      metaContent: "Cours sur les équations du deuxième degré : apprendre à résoudre les équations et voir l'aspect de ses fonctions dans un repère",
+      relativePath: CoursesConstants.EQ_2_DEG,
+      chapters: getEquationsSecondDegreeChapters()
+    }
+
+    var delimAnalyseFunctions = {
+      id: i++,
+      title: 'Analyse-fonctions'
+    }
+    
     var usualFunctions = {
       id: i++,
       title: 'Les fonctions usuelles',
@@ -95,20 +117,13 @@ function coursesResourceBuilder() {
       relativePath: CoursesConstants.DERIVATION,
       chapters: getDerivationChapters()
     }
+
     var primInt = {
       id: i++,
       title: 'Les primitives et l\'intégration',
       metaContent: "Les primitives et l\'intégration : définitions, démonstrations et formules",
       relativePath: CoursesConstants.PRIMITIVES_INTEGRATION,
       chapters: getPrimitivesIntegrationChapters()
-    }
-
-    var seq = {
-      id: i++,
-      title: 'Les suites numériques',
-      metaContent: "Les suites numériques : variations, suites arithmétiques, suites géométriques, sommes de termes.",
-      relativePath: CoursesConstants.SEQUENCES,
-      chapters: getSequencesChapters()
     }
 
     var infSeries = {
@@ -127,6 +142,24 @@ function coursesResourceBuilder() {
       chapters: getComplexNumbersChapters()
     }
 
+    var delimSeq = {
+      id: i++,
+      title: 'Suites et séries'
+    }
+
+    var seq = {
+      id: i++,
+      title: 'Les suites numériques',
+      metaContent: "Les suites numériques : variations, suites arithmétiques, suites géométriques, sommes de termes.",
+      relativePath: CoursesConstants.SEQUENCES,
+      chapters: getSequencesChapters()
+    }
+
+    var delimThematiques = {
+      id: i++,
+      title: 'Thématiques'
+    }
+   
     var pi = {
       id: i++,
       title: 'Le nombre Pi',
@@ -143,31 +176,52 @@ function coursesResourceBuilder() {
       chapters: getGoldenRatioChapters()
     }
 
-    var geo = {
+    /* var geo = {
       id: i++,
       title: 'La géométrie',
       metaContent: "Les géométrie : les formes usuelles (carré, cube, cercle, triangle...etc) et le calcul des aires et volumes",
       relativePath: CoursesConstants.GEOMETRY,
       underChapters: true,
       chapters: geometryCoursesResourceBuilder()
-    }
+    } */
 
     coursesItems.push(
+        delimBases,
         symbols,
         elementaryCalculus,
-        equationsFirstDegree,
-        equationsSecondDegree,
-        powers,
+        powers
+    );
+
+    coursesItems.push(
+        delimTheorems,
         pythagore,
-        thales,
+        thales
+    );
+
+    coursesItems.push(
+        delimEqu,
+        equationsFirstDegree,
+        equationsSecondDegree
+    );
+
+    coursesItems.push(
+        delimAnalyseFunctions,
         usualFunctions,
         trigo,
         derivation,
         primInt,
-        seq,
-        complexes,
         infSeries,
-        pi, 
+        complexes
+    );
+
+    coursesItems.push(
+        delimSeq,
+        seq
+    );
+
+    coursesItems.push(
+        delimThematiques,
+        pi,
         nbOr
     );
 

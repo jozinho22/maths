@@ -17,7 +17,6 @@ const FonctionDefinieParUneIntegrale = () => {
 
      var Fsup = "\\(  F(x) = \\int^x f(t)dt  \\)";
 
-
     return  <>
                 <p>Soit <MathJaxInline toShow={"$ f $"} /> une fonction continue sur un intervalle <MathJaxInline toShow={"$ I $"} />.</p>
                 <p><MathJaxInline toShow={"$ a $"} /> est constant, <MathJaxInline toShow={"$ x $"} /> une variable et <MathJaxInline toShow={"$ a, x \\in I $"} />.</p>

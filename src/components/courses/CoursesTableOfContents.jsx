@@ -12,10 +12,10 @@ import { NavLink } from 'react-router-dom';
 const CoursesTableOfContents = ( {courseItems} ) => {
 
     var prefix = PagesConstants.COURS;
-    var title = 'Tous les cours du site';
+    var title = 'Les cours de mathématiques';
     var ogType = "Table of contents"
 
-    var metaContent = "Tous les cours du site (calcul élémentaire, équations, le théorème de Pythagore, dérivées, primitives/intégration, le nombre d'or...etc)";
+    var metaContent = "Les cours de mathématiques : calcul élémentaire, équations, le théorème de Pythagore, dérivées, primitives/intégration, le nombre d'or...etc)";
 
     return (
         <>

@@ -20,6 +20,11 @@ function pdfResourceBuilder() {
     var pdfItems = [];
     var i = 0;
 
+    var delimAerodynamics = {
+      id: i++,
+      title: 'Aérodynamique'
+    }
+
     var pdfAspi = {
       id: i++,
       filePath: './albums/aspirisouffle.pdf',
@@ -28,14 +33,25 @@ function pdfResourceBuilder() {
       pdfFile : aspirisouffle,
       relativePath: '/l-aspirisouffle'
     }
-    var pdfBigBang = {
+
+    var pdfMecaVol = {
       id: i++,
-      filePath: './albums/bigBang.pdf',
-      title: 'Le big bang',
-      metaContent: 'Le Big Bang: une bande dessinée pour comprendre les conditions (température, pression, volume) présentes au commencement des temps.',
-      pdfFile : bigBang,
-      relativePath: '/le-big-bang'
+      filePath: './albums/mecavol.pdf',
+      title: 'Mécavol',
+      metaContent: 'Mécavol : une bande dessinée pour appréhender les principes du vol plané et de la portance par une initiation au deltaplane et au parapente.',
+      pdfFile : mecavol,
+      relativePath: '/mecavol'
     }
+
+    var pdfTourDuMondeEn80jours = {
+      id: i++,
+      filePath: './albums/tourDuMondeEn80jours.pdf',
+      title: 'Le tour du monde en 80 jours',
+      metaContent: 'Le tour du monde en 80 jours : une bande dessinée avec une introduction aux montages de fusées et aux principes physiques de lancement et navigation (mise en orbite, rentrée atmosphérique, vitesse de libération...etc.).',
+      pdfFile : tourDuMondeEn80jours,
+      relativePath: '/le-tour-du-monde-en-80-jours'
+    }
+
     var pdfChrono = {
       id: i++,
       filePath: './albums/chronologicon.pdf',
@@ -44,6 +60,12 @@ function pdfResourceBuilder() {
       pdfFile : chronologicon,
       relativePath: '/le-chronologicon'
     }
+
+    var delimEcoEnergie = {
+      id: i++,
+      title: 'Économie-Énergie'
+    }
+
     var pdfEco = {
       id: i++,
       filePath: './albums/economicon.pdf',
@@ -60,30 +82,12 @@ function pdfResourceBuilder() {
       pdfFile : energetiquementVotre,
       relativePath: '/energetiquement-votre'
     }
-    var pdfGeo = {
+
+    var delimGeomTopo = {
       id: i++,
-      filePath: './albums/geometricon.pdf',
-      title: 'Le géometricon',
-      metaContent: 'Le géometricon : une bande dessinée avec une approche historique et expérimentale de la géométrie, avec un plongeon dans l\'époque d\'Euclide.',
-      pdfFile : geometricon,
-      relativePath: '/le-geometricon'
+      title: 'Géométrie-topologie'
     }
-    var pdfJoyeuseApo = {
-      id: i++,
-      filePath: './albums/joyeuseApo.pdf',
-      title: 'Joyeuse apocalypse',
-      metaContent: 'Joyeuse apocalypse : une bande dessinée avec une approche historique de l\'arrivée progressive de la technologie militaire et des ses conséquences sur le monde.',
-      pdfFile : joyeuseApo,
-      relativePath: '/joyeuse-apocalypse'
-    }
-    var pdfMecaVol = {
-      id: i++,
-      filePath: './albums/mecavol.pdf',
-      title: 'Mécavol',
-      metaContent: 'Mécavol : une bande dessinée pour appréhender les principes du vol plané et de la portance par une initiation au deltaplane et au parapente.',
-      pdfFile : mecavol,
-      relativePath: '/mecavol'
-    }
+   
     var pdfMilleEtUneNuits = {
       id: i++,
       filePath: './albums/milleEtUnenuits.pdf',
@@ -93,6 +97,21 @@ function pdfResourceBuilder() {
       pdfFile : milleEtUnenuits,
       relativePath: '/les-mille-et-une-nuits-scientifiques'
     }
+
+    var pdfGeo = {
+      id: i++,
+      filePath: './albums/geometricon.pdf',
+      title: 'Le géometricon',
+      metaContent: 'Le géometricon : une bande dessinée avec une approche historique et expérimentale de la géométrie, avec un plongeon dans l\'époque d\'Euclide.',
+      pdfFile : geometricon,
+      relativePath: '/le-geometricon'
+    }
+
+    var delimPhysique = {
+      id: i++,
+      title: 'Physique'
+    }
+
     var pdfMurSilence = {
       id: i++,
       filePath: './albums/murDuSilence.pdf',
@@ -101,6 +120,7 @@ function pdfResourceBuilder() {
       pdfFile : murDuSilence,
       relativePath: '/le-mur-du-silence'
     }
+
     var pdfPourQqesAmperes = {
       id: i++,
       filePath: './albums/pourQqesAmperesDePlus.pdf',
@@ -110,14 +130,7 @@ function pdfResourceBuilder() {
       pdfFile : pourQqesAmperesDePlus,
       relativePath: '/pour-quelques-amperes-de-plus'
     }
-    var pdfSpondyloscope = {
-      id: i++,
-      filePath: './albums/spondyloscope.pdf',
-      title: 'Le spondyloscope',
-      metaContent: 'Le spondyloscope : une bande dessinée nous amenant à comprendre l\'anotomie du corps humain de manière ludique.',
-      pdfFile : spondyloscope,
-      relativePath: '/le-spondyloscope'
-    }
+
     var pdfTopo = {
       id: i++,
       filePath: './albums/topologicon.pdf',
@@ -126,14 +139,21 @@ function pdfResourceBuilder() {
       pdfFile : topologicon,
       relativePath: '/le-topologicon'
     }
-    var pdfTourDuMondeEn80jours = {
+
+    var pdfJoyeuseApo = {
       id: i++,
-      filePath: './albums/tourDuMondeEn80jours.pdf',
-      title: 'Le tour du monde en 80 jours',
-      metaContent: 'Le tour du monde en 80 jours : une bande dessinée avec une introduction aux montages de fusées et aux principes physiques de lancement et navigation (mise en orbite, rentrée atmosphérique, vitesse de libération...etc.).',
-      pdfFile : tourDuMondeEn80jours,
-      relativePath: '/le-tour-du-monde-en-80-jours'
+      filePath: './albums/joyeuseApo.pdf',
+      title: 'Joyeuse apocalypse',
+      metaContent: 'Joyeuse apocalypse : une bande dessinée avec une approche historique de l\'arrivée progressive de la technologie militaire et des ses conséquences sur le monde.',
+      pdfFile : joyeuseApo,
+      relativePath: '/joyeuse-apocalypse'
     }
+
+    var delimCosmo = {
+      id: i++,
+      title: 'Cosmologie'
+    }
+    
     var pdfToutEstRelatif = {
       id: i++,
       filePath: './albums/toutEstRelatif.pdf',
@@ -150,25 +170,69 @@ function pdfResourceBuilder() {
       pdfFile : trouNoir,
       relativePath: '/le-trou-noir'
     }
+
+    var pdfBigBang = {
+      id: i++,
+      filePath: './albums/bigBang.pdf',
+      title: 'Le big bang',
+      metaContent: 'Le Big Bang: une bande dessinée pour comprendre les conditions (température, pression, volume) présentes au commencement des temps.',
+      pdfFile : bigBang,
+      relativePath: '/le-big-bang'
+    }
+
+    var delimAnatomy = {
+      id: i++,
+      title: 'Anatomie'
+    }
+
+    var pdfSpondyloscope = {
+      id: i++,
+      filePath: './albums/spondyloscope.pdf',
+      title: 'Le spondyloscope',
+      metaContent: 'Le spondyloscope : une bande dessinée nous amenant à comprendre l\'anotomie du corps humain de manière ludique.',
+      pdfFile : spondyloscope,
+      relativePath: '/le-spondyloscope'
+    }
+
+    pdfItems.push(
+        delimAerodynamics,
+        pdfAspi,
+        pdfMecaVol,
+        pdfTourDuMondeEn80jours
+    );
     
     pdfItems.push(
-        pdfAspi,
-        pdfBigBang,
-        pdfChrono,
-        pdfEco, 
-        pdfEnerg,
-        pdfGeo,
-        pdfJoyeuseApo,
-        pdfMecaVol,
-        pdfMilleEtUneNuits,
-        pdfMurSilence,
-        pdfPourQqesAmperes,
-        pdfSpondyloscope,
-        pdfTopo,
-        pdfTourDuMondeEn80jours,
+        delimCosmo,
         pdfToutEstRelatif,
-        pdfTrouNoir
-      );
+        pdfTrouNoir,
+        pdfBigBang
+    );
+
+    pdfItems.push(
+        delimEcoEnergie,
+        pdfEco,
+        pdfEnerg
+    );
+
+    pdfItems.push(
+        delimGeomTopo,
+        pdfMurSilence,
+        pdfPourQqesAmperes
+    );
+
+    pdfItems.push(
+        delimPhysique,
+        pdfMilleEtUneNuits,
+        pdfChrono,
+        pdfTopo,
+        pdfGeo,
+        pdfJoyeuseApo
+    );
+
+    pdfItems.push(
+        delimAnatomy,
+        pdfSpondyloscope
+    );
 
     return pdfItems;
 

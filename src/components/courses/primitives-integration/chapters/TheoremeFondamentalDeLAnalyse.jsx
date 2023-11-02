@@ -15,7 +15,7 @@ const TheoremeFondamentalDeLAnalyse = () => {
     return  <>
                 <Title1 title="Premier théorème" />
                 <p>
-                   Soit <MathJaxInline toShow={"$ f $"} /> une fonction continue sur un intervalle  <MathJaxInline toShow={"$ I = [a, b],  \\enspac I \\in \\mathbb{R} $"} />.
+                   Soit <MathJaxInline toShow={"$ f $"} /> une fonction continue sur un intervalle  <MathJaxInline toShow={"$ I = [a, b],  \\enspace I \\in \\mathbb{R} $"} />.
                 </p>
                 <p>Alors la fonction</p>
                 <MathJaxDisplay toShow={F} demo />   

@@ -26,7 +26,10 @@ const getPrimitivesIntegrationChapters = () => {
 
     var k = 0;
 
-    return [      
+    return [ 
+        {
+            title: 'Présentation'
+        },       
         {
             id: k++,
             component: <Presentation />,
@@ -41,6 +44,9 @@ const getPrimitivesIntegrationChapters = () => {
             metaContent: 'Théorème fondamental de l\'analyse.',
             relativePath: '/theoreme-fondamental-de-l-analyse'
         },
+        {
+            title: 'Intégration'
+        },  
         {
             id: k++,
             component: <FonctionDefinieParUneIntegrale />,
@@ -124,7 +130,10 @@ const getPrimitivesIntegrationChapters = () => {
             title: 'Intégration par changement de variable',
             metaContent: 'Intégration par changement de variable : explication et exemples.',
             relativePath: '/integration-par-changement-de-variable'
-        }, 
+        },
+        {
+            title: 'Récapitulatif'
+        },  
         {
             id: k++,
             component: <TableauRecapFonctionsPrimitives />,
@@ -139,6 +148,9 @@ const getPrimitivesIntegrationChapters = () => {
             metaContent: 'Tableau récapitulatif des primitives de fonctions composées usuelles.',
             relativePath: '/tableau-recap-primitives-fonctions-composees-usuelles'
         },
+        {
+            title: 'Calcul d\'intégration sur des figures géométriques'
+        },  
         {
             id: k++,
             component: <CalculSurfaceCercle />,

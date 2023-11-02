@@ -17,19 +17,28 @@ import UnderChaptersTableOfContents from './components/courses/UnderChaptersTabl
 /* import GenericUnderChapter from './components/courses/GenericUnderChapter'; */
 
 const AppRoutes = ( {courseItems, pdfItems, gameItems} ) => {
+
+    var filteredCourseItems = courseItems.filter(c => c.relativePath)
+
+    filteredCourseItems.chapters = filteredCourseItems.map(c => {
+        c.chapters.filter(ch => ch.relativePath)
+    })
+    
+    var filteredPdfItems = pdfItems.filter(p => p.relativePath)
     
     return  <Routes>
                 <Route exact path={pathBuilder("/")} element={process.env.NODE_ENV === 'development' ?  <Home /> : <Home />} />
                 <Route path={pathBuilder(PagesConstants.COURS)} element={<CoursesTableOfContents courseItems={courseItems} />} />
                 {/* Index cours */}
-                {courseItems.map(courseItem => {
+                {filteredCourseItems.map(courseItem => {
                     return  <Route 
                                 key={`course-${courseItem.id}`}
                                 path={pathBuilder(`${PagesConstants.COURS}${courseItem.relativePath}`)} 
                                 element={<ChaptersTableOfContents courseItem={courseItem} />} /> 
+                    
                 })}
                 {/* Index chapitres */}
-                {courseItems.map(courseItem => {
+                {filteredCourseItems.map(courseItem => {
                     return courseItem.chapters.map(chapter => {
                         return <Route 
                                     key={`course-${courseItem.id}-chapter-${chapter.id}`}
@@ -39,7 +48,7 @@ const AppRoutes = ( {courseItems, pdfItems, gameItems} ) => {
                                                     :  <UnderChaptersTableOfContents chapter={chapter} courseItem={courseItem} />
                                             } 
                                 />
-                    })
+                    }) 
                 })}
                 {/* Index sous-chapitres */}
                 {/* {courseItems.map(courseItem => {
@@ -56,7 +65,7 @@ const AppRoutes = ( {courseItems, pdfItems, gameItems} ) => {
                 })} */}
                     
                 <Route path={pathBuilder(PagesConstants.BDS_DE_JPP)} element={<PdfTableOfContents pdfItems={pdfItems} />} />
-                {pdfItems.map(pdfItem => (
+                {filteredPdfItems.map(pdfItem => (
                     <Route 
                         key={pdfItem.id}
                         path={pathBuilder(`${PagesConstants.BDS_DE_JPP}${pdfItem.relativePath}`)}

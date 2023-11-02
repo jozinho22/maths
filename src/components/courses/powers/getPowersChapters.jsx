@@ -21,6 +21,9 @@ const getPowersChapters = () => {
             relativePath: '/presentation'
         },
         {
+            title: 'Formules'
+        },  
+        {
             id: k++,
             component: <MultiplicationDePuissances />,
             title: 'Multiplication de puissances de x',
@@ -63,12 +66,18 @@ const getPowersChapters = () => {
             relativePath: '/liens-entre-puissances-de-x-et-racines'
         },
         {
+            title: 'Utilisation'
+        },
+        {
             id: k++,
             component: <EcritureScientifique />,
             title: 'L\'écriture scientifique',
             metaContent: 'Introduction à l\'écriture scientifique et l\'utilité des puissances.',
             relativePath: '/ecriture-scientifique'
         },
+        {
+            title: 'Récapitulatif'
+        },  
         {
             id: k++,
             component: <TableauRecapDesPuissances />,

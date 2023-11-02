@@ -27,7 +27,10 @@ const getDerivationChapters = () => {
 
     var k = 0;
 
-    return [      
+    return [   
+        {
+            title: 'Bases'
+        },   
         {
             id: k++,
             component: <Presentation />,
@@ -64,6 +67,9 @@ const getDerivationChapters = () => {
             relativePath: '/point-d-inflexion'
         },
         {
+            title: 'Opérations sur les dérivées'
+        },
+        {
             id: k++,
             component: <DeriveeDUneSomme />,
             title: 'Dérivée d\'une somme de fonctions',
@@ -83,6 +89,9 @@ const getDerivationChapters = () => {
             title: 'Dérivée d\'un quotient de fonctions',
             metaContent: 'Dérivée d\'un quotient de fonctions : formule et démonstration.',
             relativePath: '/derivee-d-un-quotient-de-fonctions'
+        },
+        {
+            title: 'Dérivées de fonctions usuelles'
         },
         {
             id: k++,
@@ -141,6 +150,9 @@ const getDerivationChapters = () => {
             relativePath: '/equation-de-la-tangente'
         },
         {
+            title: 'Composition-réciprocité'
+        },
+        {
             id: k++,
             component: <DeriveeDeFonctionComposee />,
             title: 'Dérivée de fonction composée',
@@ -155,6 +167,9 @@ const getDerivationChapters = () => {
             relativePath: '/derivee-de-fonction-reciproque'
         },
         {
+            title: 'Récapitulatif'
+        },
+        {
             id: k++,
             component: <TableauRecapFonctionsDerivees />,
             title: 'Tableau récapitulatif des fonctions dérivées',
@@ -167,6 +182,10 @@ const getDerivationChapters = () => {
             title: 'Tableau récapitulatif des opérations/compositions sur les dérivées',
             metaContent: 'Tableau récapitulatif des opérations/compositions sur les dérivées.',
             relativePath: '/tableau-recap-operations-compositions-sur-les-derivees'
+        },
+        {
+            id: k++,
+            title: 'Thèmes divers'
         },
         {
             id: k++,

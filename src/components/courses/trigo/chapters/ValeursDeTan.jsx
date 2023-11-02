@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
-import TanValuesTable from '../TanValuesTable';
-import TanFormulasTable from '../TanFormulasTable';
+import TanValuesTable from '../helpers/TanValuesTable';
+import TanFormulasTable from '../helpers/TanFormulasTable';
 import MathJaxDisplay from '../../../mathjax-display/MathJaxDisplay';
 import Title1 from '../../helpers/Title1';
 

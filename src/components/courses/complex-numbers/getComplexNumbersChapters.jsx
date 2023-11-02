@@ -15,7 +15,10 @@ const getComplexNumbersChapters = () => {
 
     var k = 0;
 
-    return [      
+    return [   
+        {
+            title: 'Bases'
+        },   
         {
             id: k++,
             component: <Presentation />,
@@ -78,7 +81,10 @@ const getComplexNumbersChapters = () => {
             title: 'Argument d\'un complexe',
             metaContent: 'Argument d\'un complexe : définition, formules et démonstrations.',
             relativePath: '/argument-d-un-complexe'
-        },      
+        },  
+        {
+            title: 'Formules'
+        },   
         {
             id: k++,
             component: <FormuleDeMoivre />,

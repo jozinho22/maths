@@ -7,13 +7,14 @@ import Constants from '../immutable/Constants';
 import { NavLink } from 'react-router-dom';
 import MainTitle from '../immutable/MainTitle';
 
-import './GenericChapter.css';
 import pathBuilder from '../helpers/pathBuilder';
 import PagesConstants from '../immutable/nav/PagesConstants';
 import MainSubTitle from '../immutable/MainSubTitle';
 import BlurryingSpinner from '../immutable/spinners/BlurryingSpinner';
 import AppContext from '../context/AppContext';
 /* import printCourse from './helpers/printCourse'; */
+
+import './GenericChapter.css';
 
 const GenericChapter = ( {chapter, courseItem} ) => {
 
@@ -40,7 +41,6 @@ const GenericChapter = ( {chapter, courseItem} ) => {
                 </NavLink>
             </div> 
 
-
             {/* <Button variant="warning" className="printer-button" onClick={printCourse}>
                 PDF
             </Button> */}
@@ -64,6 +64,14 @@ const GenericChapter = ( {chapter, courseItem} ) => {
                 chapter={chapter}
                 chapters={courseItem.chapters} 
                 courseRelativePath={courseItem.relativePath} /> 
+                
+            <div className="FlexButton">
+                <NavLink to={pathBuilder(`${PagesConstants.COURS}${courseItem.relativePath}`)}>
+                    <Button className="DefaultButton GreenButton" >
+                        Retour au sommaire des chapitres
+                    </Button> 
+                </NavLink>
+            </div> 
         </>
     );
 }
