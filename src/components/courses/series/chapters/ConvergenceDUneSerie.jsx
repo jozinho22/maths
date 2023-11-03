@@ -21,7 +21,7 @@ const ConvergenceDUneSerie = () => {
                 <p>Dans le cas contraire, on dira qu'elle diverge grossièrement.</p>
 
                 <Title1 title={"Théorème de convergence"} />
-                <p>La série associée <MathJaxInline toShow={"$ \\sum u_n$"} /> est dite convergente si la somme partielle <MathJaxInline toShow={"$S_n $"} /> l'est.</p>
+                <p>La série associée <MathJaxInline toShow={"$ \\sum u_n$"} /> est dite convergente si la suite de somme partielle <MathJaxInline toShow={"$(S_n) $"} /> l'est.</p>
                 <p>Dans ce cas seulement, la somme de la série est la limite des sommes partielles :</p>
                 <Container className="Focus">
                      <MathJaxDisplay toShow={conv} />  
@@ -29,7 +29,7 @@ const ConvergenceDUneSerie = () => {
 
                 <p>Si cette série ne converge pas, on dit qu'elle est divergente.</p>
                 <p>On appelle la nature d'une série le fait qu'elle diverge ou non.</p>
-                <p>La convergence d'une suite ne dépend pas de ses premiers termes, mais bien à partir de termes d'une certain rang <MathJaxInline toShow={"$ n_0 $"} />.</p>
+                <p>La convergence d'une série ne dépend pas de ses premiers termes, mais bien d'un terme d'une certain rang <MathJaxInline toShow={"$ n_0 $"} />, il est donc d'usage de prendre un <MathJaxInline toShow={"$n $"} /> assez élevé pour commencer à voir converger une série.</p>
             </>
 }
 

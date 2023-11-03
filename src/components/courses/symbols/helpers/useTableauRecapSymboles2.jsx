@@ -14,8 +14,8 @@ const useTableauRecapSymboles2 = () => {
     tableauRecapSymboles.push(
          {
             id: k++,
-            title: "f(x): x \\longmapsto x^2",
-            values: ["définition  \\enspace d'une  \\enspace fonction \\enspace f"]
+            title: "f: x \\longmapsto x^2",
+            values: ["d\\acute{e}finition  \\enspace d'une  \\enspace fonction \\enspace f"]
         }
     )
 
@@ -30,8 +30,40 @@ const useTableauRecapSymboles2 = () => {
     tableauRecapSymboles.push(
          {
             id: k++,
+            title: "f^{(n)}",
+            values: ["d\\acute{e}riv\\acute{e}e n-i\\overset{‘}{e}me \\enspace de \\enspace f"]
+        }
+    )
+
+    tableauRecapSymboles.push(
+         {
+            id: k++,
+            title: "\\frac{df}{dx}",
+            values: ["d\\acute{e}riv\\acute{e}e \\enspace de \\enspace f \\enspace par \\enspace rapport \\enspace \\overset{‘}{a} \\enspace x"]
+        }
+    )
+
+    tableauRecapSymboles.push(
+         {
+            id: k++,
+            title: "fonction \\enspace de \\enspace classe \\enspace \\mathcal{C}^n \\enspace sur \\enspace I",
+            values: ["fonction \\enspace continue \\enspace et \\enspace d\\acute{e}rivable \\enspace n \\enspace  fois \\enspace  sur \\enspace I"]
+        }
+    )
+
+    tableauRecapSymboles.push(
+         {
+            id: k++,
+            title: "DL_n(a)",
+            values: ["développement \\enspace limit\\acute{e} \\enspace d'ordre \\enspace n \\enspace au \\enspace point \\enspace a"]
+        }
+    )
+
+    tableauRecapSymboles.push(
+         {
+            id: k++,
             title: "\\int^x f(t)dt",
-            values: ["primitive \\enspace de \\enspace f(x)"]
+            values: ["une \\enspace primitive \\enspace de \\enspace f(x)"]
         }
     )
 
@@ -48,6 +80,22 @@ const useTableauRecapSymboles2 = () => {
             id: k++,
             title: "\\sum_{k=0}^n \\enspace f(k)",
             values: ["somme \\enspace des \\enspace images \\enspace d'une \\enspace fonction \\enspace f, \\enspace de \\enspace 0 \\enspace à \\enspace n : f(0) + f(1) + ... + f(n)"]
+        }
+    )
+
+    tableauRecapSymboles.push(
+         {
+            id: k++,
+            title: "\\sum u_n",
+            values: ["s\\acute{e}rie \\enspace num\\acute{e}rique \\enspace associ\\acute{e}e  \\enspace à \\enspace une \\enspace suite \\enspace (u_n)"]
+        }
+    )
+
+    tableauRecapSymboles.push(
+         {
+            id: k++,
+            title: "S_n = \\sum_{k=0}^n u_n",
+            values: ["somme \\enspace partielle \\enspace de \\enspace la \\enspace s\\acute{e}rie \\enspace \\sum u_n"]
         }
     )
 
@@ -79,7 +127,7 @@ const useTableauRecapSymboles2 = () => {
          {
             id: k++,
             title: "n!",
-            values: ["factorielle \\enspace n : n\\times(n-1)\\times...\\times 3 \\times 2 \\times 1"]
+            values: ["factorielle(n) = n\\times(n-1)\\times...\\times 3 \\times 2 \\times 1"]
         }
     )
 

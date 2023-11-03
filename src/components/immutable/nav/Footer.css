@@ -89,12 +89,12 @@
   background-color: var(--grey-color) !important;
 }
 
-.CustomFooter .SwitchButton .btn-btn-primary:hover {
-  background-color: var(--grey-color) !important;
+.CustomFooter .SwitchButton .btn-primary:hover {
+  background-color: var(--dark-color) !important;
 }
 
 .CustomFooter .SwitchButton .btn-warning {
-  background-color: var(--dark-blue-color) !important;
+  background-color: var(--blue-color) !important;
 }
 
 .CustomFooter .SwitchButton .btn-warning:hover {

@@ -16,14 +16,16 @@ const ResteDUneSerieConvergente = () => {
     return  <>
                 <p>Nous avons définie plus tôt une série comme, </p>
                 <MathJaxDisplay toShow={serie} demo />  
-                <p>or lors de l'étude de la convergence, on voit apparaître :</p>
+                <p>or lors de l'étude de la convergence, on voit apparaître la série snumérique sous la forme :</p>
                 <MathJaxDisplay toShow={SerieInf} demo />  
                 <p>Donnons un sens à cette différence et considérons un reste <MathJaxInline toShow={"$R_n$"} /> de la série convergente <MathJaxInline toShow={"$\\sum u_n$"} />.</p>
   
-               <MathJaxDisplay toShow={seriesGenShort} demo />  
-               <Container className="Focus">
-                     <MathJaxDisplay toShow={seriesGen} />  
+                <MathJaxDisplay toShow={seriesGenShort} demo />  
+                <p>Soit :</p>
+                <Container className="Focus">
+                    <MathJaxDisplay toShow={seriesGen} />  
                 </Container>
+                <p>On considère que </p>
     
             </>
 }

@@ -54,7 +54,7 @@ function urlsResourceBuilder() {
     var mathStackExchange = {
       id: i++,
       url: 'https://math.stackexchange.com/',
-      title: 'Un site de questions réponses',
+      title: 'Un site de questions/réponses sur les mathématiques',
       desc: 'Ce site est affilé à la plate-forme Stack Overflow, initialement un site de questions réponses dans le domaine de l\'informatique.'
     }
     var gerardVillemin = {
@@ -73,7 +73,7 @@ function urlsResourceBuilder() {
       id: i++,
       url: "https://www.overleaf.com/learn",
       title: 'Documentation du langage Latex',
-      desc: 'Latex : écriture de documents avec les symboles mathématiques.'
+      desc: 'Latex : écriture de documents mathématiques ou scientifiques.'
     }
     
     pdfItems.push(

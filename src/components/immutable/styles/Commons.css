@@ -169,6 +169,7 @@ a:hover {
 .DefaultButton:hover, .DefaultButton:focus, .DefaultButton:active, .DefaultButton:disabled {
     background-color: var(--blue-hover-color);
     border-color: var(--grey-color);
+    color: var(--back-color);
 }
 
 .DefaultButton:focus {
