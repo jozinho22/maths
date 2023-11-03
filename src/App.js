@@ -31,8 +31,7 @@ function App() {
 
     const [font, setFont] = React.useState(Fonts.BLACK_CHANCELRY);
     const [playMode, setPlayMode] = React.useState(false);
-    const [theme, setTheme] = React.useState(getThemeIfStoredThemeExists(sessionStorage.getItem('ma-thematique-theme')) ? sessionStorage.getItem('ma-thematique-theme') : process.env.NODE_ENV === 'development' ?  Themes.DARCULA : Themes.BRAZIL);
-
+    const [theme, setTheme] = React.useState(process.env.NODE_ENV === 'development' ?  Themes.DARCULA : Themes.BRAZIL);
 
     const appContext = {
         font: font,

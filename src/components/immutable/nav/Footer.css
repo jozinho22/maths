@@ -76,6 +76,7 @@
 
 .CustomFooter .SwitchButton .btn {
     height: 40px;
+    color: var(--grey-light-color) !important;
 }
 
 @media (min-width: 450px) {
@@ -93,12 +94,36 @@
 }
 
 .CustomFooter .SwitchButton .btn-warning {
-  background-color: var(--blue-color) !important;
+  background-color: var(--dark-blue-color) !important;
 }
 
 .CustomFooter .SwitchButton .btn-warning:hover {
   background-color: var(--dark-blue-color) !important;
 }
+
+.LawLinks {
+    display: flex;
+    font-family: 'Times New Roman', Times, serif;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.LawLinks a {
+    color:  var(--grey-light-color) !important;
+}
+
+.Darcula .LawLinks a {
+    color:  var(--grey-light-color) !important;
+}
+
+@media(min-width: 450px) {
+    .LawLinks {
+        justify-content: space-evenly;
+    }
+} 
+
+
+
 
 /* .CustomFooter #theme-dropdown-item {
       background: linear-gradient(

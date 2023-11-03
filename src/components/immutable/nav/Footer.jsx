@@ -6,7 +6,10 @@ import AppContext from '../../context/AppContext'
 
 import Themes from '../styles/Themes';
 
-import BootstrapSwitchButton from 'bootstrap-switch-button-react'
+import BootstrapSwitchButton from 'bootstrap-switch-button-react';
+import PagesConstants from './PagesConstants';
+import { NavLink } from 'react-router-dom';
+import pathBuilder from '../../helpers/pathBuilder';
 
 import './Nav.css';
 import './Footer.css';
@@ -35,6 +38,14 @@ const Footer = () => {
                         style={'w-50 mx-3'}
                         onChange={() => switchView()} />  
                 </Container>
+                <div className="LawLinks">
+                    <NavLink to={pathBuilder(PagesConstants.COOKIES_POLITICS)}>
+                        Politique de cookies
+                    </NavLink>
+                    <NavLink to={pathBuilder(PagesConstants.MENTIONS_LEGALES)}>
+                        Mentions légales
+                    </NavLink>
+                </div>
             </Navbar>
     );
 }

@@ -147,8 +147,8 @@
 
 .Aside {
     background-color: var(--grey-lighter-transparent-color);
-    border-radius: 5px;
-    padding: 10px;
+    border-radius: 10px;
+    padding: 20px;
     margin-top: 20px;
     margin-bottom: 20px;
 }

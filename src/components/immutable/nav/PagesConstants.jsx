@@ -4,7 +4,10 @@ const PagesConstants = {
     COURS: '/cours',
     BDS_DE_JPP: '/bds-de-jpp',
     JEUX: '/jeux', 
-    LIENS: '/liens'
+    LIENS: '/liens',
+    COOKIES_POLITICS: '/politique-de-cookies',
+    MENTIONS_LEGALES: '/mentions-legales'
+
     /* CONTACT: '/contact' */
 }
 

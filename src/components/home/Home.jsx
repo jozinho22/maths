@@ -33,13 +33,9 @@ const Home = () => {
                         <p>Il est simplement conçu pour présenter certaines notions, notamment de niveau collège/lycée et pour encourager l'apprentissage de la matière.</p>
                         
                         <MainSubTitle title={"Contenu"} />
-                        <p>
-                            Ce site aborde <Link url={`${PagesConstants.PREFIX}${PagesConstants.COURS}`} external> de nombreuses notions</Link> allant du collège à la terminale.
-                            {"\n"}
-                            Il comprend notamment certaines démonstrations de formules, ainsi que des récapitulatifs de cours.
-                            {"\n"}
-                            Enfin, est proposé aussi certaines thématiques comme les nombres <Link url={`${PagesConstants.PREFIX}${PagesConstants.COURS}${CoursesConstants.PI}`} external><MathJaxInline toShow={"$\\pi$"} /> (Pi)</Link> et <Link url={`${PagesConstants.PREFIX}${PagesConstants.COURS}${CoursesConstants.NB_OR}`} external><MathJaxInline toShow={"$\\phi$"} /> (Phi, le nombre d'or)</Link>.
-                        </p>
+                        <p>Ce site aborde <Link url={`${PagesConstants.PREFIX}${PagesConstants.COURS}`} external> de nombreuses notions</Link> allant du collège à la terminale.</p>
+                        <p>Il comprend notamment certaines démonstrations de formules, ainsi que des récapitulatifs de cours.</p>
+                        <p>Enfin, est proposé aussi certaines thématiques comme les nombres <Link url={`${PagesConstants.PREFIX}${PagesConstants.COURS}${CoursesConstants.PI}`} external><MathJaxInline toShow={"$\\pi$"} /> (Pi)</Link> et <Link url={`${PagesConstants.PREFIX}${PagesConstants.COURS}${CoursesConstants.NB_OR}`} external><MathJaxInline toShow={"$\\phi$"} /> (Phi, le nombre d'or)</Link>.</p>
                     </Container>
                 </Container>  
             </>;

@@ -14,6 +14,8 @@ import Error from './components/immutable/Error';
 import PagesConstants from './components/immutable/nav/PagesConstants';
 import pathBuilder from './components/helpers/pathBuilder';
 import UnderChaptersTableOfContents from './components/courses/UnderChaptersTableOfContents';
+import Cookies from './components/law/Cookies';
+import MentionsLegales from './components/law/MentionsLegales';
 /* import GenericUnderChapter from './components/courses/GenericUnderChapter'; */
 
 const AppRoutes = ( {courseItems, pdfItems, gameItems} ) => {
@@ -79,6 +81,8 @@ const AppRoutes = ( {courseItems, pdfItems, gameItems} ) => {
                         element={gameItem.component} />
                 ))}
                 <Route path={pathBuilder(PagesConstants.LIENS)} element={<Links />} />
+                <Route path={pathBuilder(PagesConstants.COOKIES_POLITICS)} element={<Cookies />} />
+                <Route path={pathBuilder(PagesConstants.MENTIONS_LEGALES)} element={<MentionsLegales />} />
                 {/* <Route path={pathBuilder(PagesConstants.CONTACT)} element={<VCard />} /> */}
                 <Route path={pathBuilder("*")} element={<Error />} status={404} />
             </Routes>
