@@ -10,7 +10,7 @@ const getPythagoreChapters = () => {
 
     return [
         {
-            title: 'Présentation'
+            title: 'Théorème et réciproque'
         },  
         {
             id: k++,

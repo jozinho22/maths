@@ -29,7 +29,7 @@ const getDerivationChapters = () => {
 
     return [   
         {
-            title: 'Bases'
+            title: 'Généralités'
         },   
         {
             id: k++,

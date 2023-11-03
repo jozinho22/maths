@@ -9,7 +9,7 @@ import { Button } from 'react-bootstrap';
 const GamesTableOfContents = ( {gameItems} ) => {
 
     var prefix = PagesConstants.JEUX;
-    var title = 'Index des jeux du site : additions, multiplications';
+    var title = 'Jeux';
     var metaContent = 'Tous les jeux : des jeux créés pour permettre aux élèves de s\'entraîner, notamment pour les tables de multiplications.';
 
     var ogType = "Table of contents";

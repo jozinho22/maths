@@ -12,7 +12,7 @@ import pathBuilder from '../helpers/pathBuilder';
 const PdfTableOfContents = ( {pdfItems} ) => {
 
     var prefix =  PagesConstants.BDS_DE_JPP;
-    var title = 'Index : Les BDs de Jean-Pierre Petit';
+    var title = 'Les BDs scientifiques de Jean-Pierre Petit';
     var metaContent = 'Les bandes dessinées de Jean-Pierre Petit : une approche de nombreux thèmes scientifiques amenés par approche ludique.'
 
     var ogType = 'Table of contents';

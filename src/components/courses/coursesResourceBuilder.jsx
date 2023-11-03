@@ -18,6 +18,7 @@ import CoursesConstants from './helpers/CoursesConstants';
 import geometryCoursesResourceBuilder from './geometry/geometryCoursesResourceBuilder';
 import getInfiniteSeriesChapters from './infinite-series/getInfiniteSeriesChapters';
 import getComplexNumbersChapters from './complex-numbers/getComplexNumbersChapters';
+import getSeriesChapters from './series/getSeriesChapters';
 
 function coursesResourceBuilder() {
 
@@ -144,7 +145,7 @@ function coursesResourceBuilder() {
 
     var delimSeq = {
       id: i++,
-      title: 'Suites et séries'
+      title: 'Suites et séries numériques'
     }
 
     var seq = {
@@ -153,6 +154,14 @@ function coursesResourceBuilder() {
       metaContent: "Les suites numériques : variations, suites arithmétiques, suites géométriques, sommes de termes.",
       relativePath: CoursesConstants.SEQUENCES,
       chapters: getSequencesChapters()
+    }
+
+    var series = {
+      id: i++,
+      title: 'Les séries numériques',
+      metaContent: "Les séries numériques : définition, convergence, séries de références.",
+      relativePath: CoursesConstants.SERIES,
+      chapters: getSeriesChapters()
     }
 
     var delimThematiques = {
@@ -225,6 +234,10 @@ function coursesResourceBuilder() {
         nbOr
     );
 
+    if(process.env.NODE_ENV === 'development') {
+      coursesItems.push(series)
+    }
+    
     return coursesItems;
 
 }

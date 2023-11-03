@@ -15,7 +15,7 @@ const getTrigoChapters = () => {
 
     return [
         {
-            title: 'Présentation des fonctions sin et cos'
+            title: 'Généralités sur les fonctions sin et cos'
         }, 
         {
             id: k++,

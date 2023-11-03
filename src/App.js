@@ -51,8 +51,12 @@ function App() {
         verifyUrlCountInApp();
     }  */
 
-/*     <Link url={pathBuilder(`${PagesConstants.COURS}${CoursesConstants.DERIVEE}/presentation`)} external>le premier chapitre sur la dérivée</Link>
+/*     <Link url={`${PagesConstants.PREFIX}${PagesConstants.COURS}${CoursesConstants.COMPLEXES}/interpretation-geometrique`} external>
  */    
+
+/* import PagesConstants from '../../../immutable/nav/PagesConstants';
+import CoursesConstants from '../../helpers/CoursesConstants';
+import Link from '../../../immutable/nav/Link'; */
  
     return ( 
         <>

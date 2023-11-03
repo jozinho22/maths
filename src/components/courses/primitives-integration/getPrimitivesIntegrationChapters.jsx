@@ -28,7 +28,7 @@ const getPrimitivesIntegrationChapters = () => {
 
     return [ 
         {
-            title: 'Présentation'
+            title: 'Généralités'
         },       
         {
             id: k++,

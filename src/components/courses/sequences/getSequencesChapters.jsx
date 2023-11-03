@@ -20,7 +20,7 @@ const getSequencesChapters = () => {
 
     return [   
         {
-            title: 'Présentation'
+            title: 'Généralités'
         },     
         {
             id: k++,
@@ -129,9 +129,6 @@ const getSequencesChapters = () => {
             metaContent: 'Limites de suites extraites : suites extraites, convergence par complémentarité.',
             relativePath: '/limites-de-suites-extraites'
         },
-        {
-            title: 'Récapitulatif'
-        }, 
         {
             id: k++,
             component: <TableauRecapOperationsLimitesDeSuites />,

@@ -10,6 +10,7 @@ import ModuleDUnComplexe from "./chapters/ModuleDUnComplexe";
 import Presentation from "./chapters/Presentation";
 import FormeExponentielle from "./chapters/FormeExponentielle";
 import FormulesDEuler from "./chapters/FormuleDEuler";
+import RacinesDUnComplexe from "./chapters/RacinesDUnComplexe";
 
 const getComplexNumbersChapters = () => {
 
@@ -17,7 +18,7 @@ const getComplexNumbersChapters = () => {
 
     return [   
         {
-            title: 'Bases'
+            title: 'Généralités'
         },   
         {
             id: k++,
@@ -105,7 +106,17 @@ const getComplexNumbersChapters = () => {
             title: 'Formules d\'Euler',
             metaContent: 'Formules d\'Euler.',
             relativePath: '/formule-d-euler'
-        }  
+        },
+        {
+            title: 'Équations'
+        }, 
+        {
+            id: k++,
+            component: <RacinesDUnComplexe />,
+            title: 'Racines d\'un complexe',
+            metaContent: 'Racines d\'un complexe : racine de l\'unité et cas général.',
+            relativePath: '/racines-d-un-complexe'
+        } 
     ];
 }
 

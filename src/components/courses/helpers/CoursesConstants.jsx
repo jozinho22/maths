@@ -6,16 +6,20 @@ const CoursesConstants = {
     PUISSANCES: '/les-puissances',
     PYTHAGORE: '/le-theoreme-de-pythagore',
     THALES: '/le-theoreme-de-thales',
-    PI: '/le-nombre-pi',
-    NB_OR: '/le-nombre-d-or',
+    
+    FONCTIONS_USUELLES:  '/les-fonctions-usuelles',
     TRIGO: '/la-trigonometrie',
     DERIVATION: '/la-derivation',
     PRIMITIVES_INTEGRATION: '/primitives-integration',
-    SEQUENCES: '/les-suites-numeriques',
     DEVELOPPEMENTS_LIMITES: '/les-developpements-limites',
    /*  GEOMETRY: '/la-geometrie', */
     COMPLEXES: '/les-nombres-complexes',
-    FONCTIONS_USUELLES:  '/les-fonctions-usuelles',
+    SEQUENCES: '/les-suites-numeriques',
+    SERIES: '/les-series-numeriques',
+
+    PI: '/le-nombre-pi',
+    NB_OR: '/le-nombre-d-or',
+
 
     UNSPLASH: "https://unsplash.com/",
     SAVOIR_SANS_FRONTIERES: "http://www.savoir-sans-frontieres.com/"

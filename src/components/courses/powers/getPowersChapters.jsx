@@ -14,7 +14,7 @@ const getPowersChapters = () => {
 
     return [
         {
-            title: 'Présentation'
+            title: 'Généralités'
         }, 
         {
             id: k++,

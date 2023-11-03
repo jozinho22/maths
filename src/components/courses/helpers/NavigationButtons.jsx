@@ -4,7 +4,6 @@ import { NavLink } from 'react-router-dom';
 import {ChevronLeft, ChevronRight} from 'react-bootstrap-icons'
 
 import pathBuilder from '../../helpers/pathBuilder';
-
 import PagesConstants from '../../immutable/nav/PagesConstants';
 
 const NavigationButtons = ( {setCount, chapter, chapters, courseRelativePath} ) => {
