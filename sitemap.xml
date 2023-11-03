@@ -14,6 +14,7 @@
     <lastmod>2023-10-22T22:12:00+00:00</lastmod>
     <priority>1.00</priority>
   </url>
+  
   <!-- Cours : index symboles -->
   <url>
     <loc>https://jozinho22.github.io/maths/#/cours/les-symboles-mathematiques</loc>
@@ -35,6 +36,7 @@
     <lastmod>2023-10-22T22:12:00+00:00</lastmod>
     <priority>0.64</priority>
   </url>
+
   <!-- Cours : calcul élémentaire -->
   <url>
     <loc>https://jozinho22.github.io/maths/#/cours/le-calcul-elementaire</loc>
@@ -86,6 +88,7 @@
     <lastmod>2023-10-29T10:10:00+00:00</lastmod>
     <priority>0.64</priority>
   </url>
+
   <!-- Cours : équations du premier degré -->
   <url>
     <loc>https://jozinho22.github.io/maths/#/cours/les-equations-du-premier-degre</loc>
@@ -112,6 +115,7 @@
     <lastmod>2023-10-22T22:12:00+00:00</lastmod>
     <priority>0.64</priority>
   </url>
+
   <!-- Cours : équations du second degré -->
   <url>
     <loc>https://jozinho22.github.io/maths/#/cours/les-equations-du-second-degre</loc>
@@ -153,6 +157,7 @@
     <lastmod>2023-10-27T15:00:00+00:00</lastmod>
     <priority>0.64</priority>
   </url>
+
   <!-- Cours : puissances -->
   <url>
     <loc>https://jozinho22.github.io/maths/#/cours/les-puissances</loc>
@@ -204,6 +209,7 @@
     <lastmod>2023-10-22T22:12:00+00:00</lastmod>
     <priority>0.64</priority>
   </url>
+
   <!-- Cours : pythagore -->
   <url>
     <loc>https://jozinho22.github.io/maths/#/cours/le-theoreme-de-pythagore</loc>
@@ -235,6 +241,7 @@
     <lastmod>2023-10-22T22:12:00+00:00</lastmod>
     <priority>0.64</priority>
   </url>
+
   <!-- Cours : thalès -->
   <url>
     <loc>https://jozinho22.github.io/maths/#/cours/le-theoreme-de-thales</loc>
@@ -251,6 +258,7 @@
     <lastmod>2023-10-22T22:12:00+00:00</lastmod>
     <priority>0.64</priority>
   </url>
+
   <!-- Cours : fonctions usuelles -->
   <url>
     <loc>https://jozinho22.github.io/maths/#/cours/les-fonctions-usuelles</loc>
@@ -262,6 +270,7 @@
     <lastmod>2023-10-22T22:12:00+00:00</lastmod>
     <priority>0.64</priority>
   </url>
+
   <!-- Cours : trigonométrie -->
   <url>
     <loc>https://jozinho22.github.io/maths/#/cours/la-trigonometrie</loc>
@@ -318,7 +327,8 @@
     <lastmod>2023-10-28T20:00:00+00:00</lastmod>
     <priority>0.64</priority>
   </url>
-    <!-- Cours : dérivée -->
+
+    <!-- Cours : dérivation -->
   <url>
     <loc>https://jozinho22.github.io/maths/#/cours/la-derivee</loc>
     <lastmod>2023-10-22T22:12:00+00:00</lastmod>
@@ -444,6 +454,7 @@
     <lastmod>2023-10-22T22:12:00+00:00</lastmod>
     <priority>0.64</priority>
   </url>
+
   <!-- Cours : primitives-intégration -->
   <url>
     <loc>https://jozinho22.github.io/maths/#/cours/primitives-integration</loc>
@@ -555,87 +566,7 @@
     <lastmod>2023-10-22T22:12:00+00:00</lastmod>
     <priority>0.64</priority>
   </url>
-  <!-- Cours : suites -->
-  <url>
-    <loc>https://jozinho22.github.io/maths/#/cours/les-suites-numeriques</loc>
-    <lastmod>2023-10-25T20:20:00+00:00</lastmod>
-    <priority>0.64</priority>
-  </url>
-  <url>
-    <loc>https://jozinho22.github.io/maths/#/cours/les-suites-numeriques/presentation</loc>
-    <lastmod>2023-10-25T20:20:00+00:00</lastmod>
-    <priority>0.64</priority>
-  </url>
-  <url>
-    <loc>https://jozinho22.github.io/maths/#/cours/les-suites-numeriques/differentes-facons-de-definir-une-suite</loc>
-    <lastmod>2023-10-25T20:20:00+00:00</lastmod>
-    <priority>0.64</priority>
-  </url>
-  <url>
-    <loc>https://jozinho22.github.io/maths/#/cours/les-suites-numeriques/suites-monotones</loc>
-    <lastmod>2023-10-25T20:20:00+00:00</lastmod>
-    <priority>0.64</priority>
-  </url>
-  <url>
-    <loc>https://jozinho22.github.io/maths/#/cours/les-suites-numeriques/suites-bornees</loc>
-    <lastmod>2023-10-25T20:20:00+00:00</lastmod>
-    <priority>0.64</priority>
-  </url>
-  <url>
-    <loc>https://jozinho22.github.io/maths/#/cours/les-suites-numeriques/raisonnement-par-recurrence</loc>
-    <lastmod>2023-10-25T20:20:00+00:00</lastmod>
-    <priority>0.64</priority>
-  </url>
-  <url>
-    <loc>https://jozinho22.github.io/maths/#/cours/les-suites-numeriques/suites-arithmetiques</loc>
-    <lastmod>2023-10-25T20:20:00+00:00</lastmod>
-    <priority>0.64</priority>
-  </url>
-  <url>
-    <loc>https://jozinho22.github.io/maths/#/cours/les-suites-numeriques/somme-des-n-plus-1-premiers-entiers</loc>
-    <lastmod>2023-10-25T20:20:00+00:00</lastmod>
-    <priority>0.64</priority>
-  </url>
-  <url>
-    <loc>https://jozinho22.github.io/maths/#/cours/les-suites-numeriques/somme-des-n-plus-1-premiers-termes-d-une-suite-arithmetique</loc>
-    <lastmod>2023-10-25T20:20:00+00:00</lastmod>
-    <priority>0.64</priority>
-  </url>
-  <url>
-    <loc>https://jozinho22.github.io/maths/#/cours/les-suites-numeriques/suites-geometriques</loc>
-    <lastmod>2023-10-25T20:20:00+00:00</lastmod>
-    <priority>0.64</priority>
-  </url>
-  <url>
-    <loc>https://jozinho22.github.io/maths/#/cours/les-suites-numeriques/somme-des-n-plus-1-premieres-puissances-de-n</loc>
-    <lastmod>2023-10-25T20:20:00+00:00</lastmod>
-    <priority>0.64</priority>
-  </url>
-  <url>
-    <loc>https://jozinho22.github.io/maths/#/cours/les-suites-numeriques/somme-des-n-plus-1-premiers-termes-d-une-suite-geometrique</loc>
-    <lastmod>2023-10-25T20:20:00+00:00</lastmod>
-    <priority>0.64</priority>
-  </url>
-  <url>
-    <loc>https://jozinho22.github.io/maths/#/cours/les-suites-numeriques/limites-de-suites</loc>
-    <lastmod>2023-10-25T20:20:00+00:00</lastmod>
-    <priority>0.64</priority>
-  </url>
-  <url>
-    <loc>https://jozinho22.github.io/maths/#/cours/les-suites-numeriques/theoreme-de-la-convergence-uniforme</loc>
-    <lastmod>2023-10-25T20:20:00+00:00</lastmod>
-    <priority>0.64</priority>
-  </url>
-  <url>
-    <loc>https://jozinho22.github.io/maths/#/cours/les-suites-numeriques/limites-de-suites-extraites</loc>
-    <lastmod>2023-10-25T20:20:00+00:00</lastmod>
-    <priority>0.64</priority>
-  </url>
-  <url>
-    <loc>https://jozinho22.github.io/maths/#/cours/les-suites-numeriques/operations-sur-les-limites</loc>
-    <lastmod>2023-10-25T20:20:00+00:00</lastmod>
-    <priority>0.64</priority>
-  </url>
+ 
   <!-- Cours : développement limités -->
   <url>
     <loc>https://jozinho22.github.io/maths/#/cours/les-developpements-limites</loc>
@@ -657,6 +588,7 @@
     <lastmod>2023-10-31T20:20:00+00:00</lastmod>
     <priority>0.64</priority>
   </url>
+
   <!-- Cours : nombres complexes -->
   <url>
     <loc>https://jozinho22.github.io/maths/#/cours/les-nombres-complexes</loc>
@@ -723,6 +655,29 @@
     <lastmod>2023-11-01T10:10:00+00:00</lastmod>
     <priority>0.64</priority>
   </url>
+  <url>
+    <loc>https://jozinho22.github.io/maths/#/cours/les-nombres-complexes/racines-d-un-complexe</loc>
+    <lastmod>2023-11-01T10:10:00+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+
+   <!-- Cours : suites -->
+  <url>
+    <loc>https://jozinho22.github.io/maths/#/cours/les-series-numeriques</loc>
+    <lastmod>2023-10-25T20:20:00+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://jozinho22.github.io/maths/#/cours/les-series-numeriques/presentation</loc>
+    <lastmod>2023-11-03T20:20:00+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://jozinho22.github.io/maths/#/cours/les-series-numeriques/convergence</loc>
+    <lastmod>2023-11-03T20:20:00+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+
   <!-- Cours : pi -->
   <url>
     <loc>https://jozinho22.github.io/maths/#/cours/le-nombre-pi</loc>
