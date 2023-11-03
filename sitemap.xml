@@ -857,6 +857,12 @@
     <priority>0.64</priority>
   </url>
 
+  <!-- Cookies -->
+  <url>
+    <loc>https://jozinho22.github.io/maths/#/politique-de-cookie</loc>
+    <lastmod>2023-10-22T22:12:00+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
   <!-- Contact -->
   <!-- <url>
     <loc>https://jozinho22.github.io/maths/#/contact</loc>
