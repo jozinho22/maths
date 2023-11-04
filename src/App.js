@@ -50,13 +50,14 @@ function App() {
         verifyUrlCountInApp();
     }  */
 
-/*     <Link url={`${PagesConstants.PREFIX}${PagesConstants.COURS}${CoursesConstants.COMPLEXES}/interpretation-geometrique`} external>
- */    
+/* 
 
-/* import PagesConstants from '../../../immutable/nav/PagesConstants';
+import PagesConstants from '../../../immutable/nav/PagesConstants';
 import CoursesConstants from '../../helpers/CoursesConstants';
-import Link from '../../../immutable/nav/Link'; */
- 
+import Link from '../../../immutable/nav/Link';
+<Link url={`${PagesConstants.PREFIX}${PagesConstants.COURS}${CoursesConstants.COMPLEXES}/interpretation-geometrique`} external></Link>
+  
+*/
     return ( 
         <>
             <div className="App" id="capture">     

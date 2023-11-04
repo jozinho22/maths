@@ -95,7 +95,31 @@ const useTableauRecapCompositionDerivees = () => {
          {
             id: k++,
             title: "tan(u)",
-            values: ["u'.(1 + tan^2(u))"]
+            values: ["u'(1 + tan^2(u))"]
+        }
+    )
+
+    tableauRecapCompositionsDerivees.push(
+         {
+            id: k++,
+            title: "Arcsin \\left(\\frac{u}{a}\\right)",
+            values: ["u'. \\frac{1}{\\sqrt{a^2 - u^2}}"]
+        }
+    )
+
+    tableauRecapCompositionsDerivees.push(
+         {
+            id: k++,
+            title: "Arccos \\left(\\frac{u}{a}\\right)",
+            values: ["-u' .\\frac{1}{\\sqrt{a^2 - u^2}}"]
+        }
+    )
+
+    tableauRecapCompositionsDerivees.push(
+         {
+            id: k++,
+            title: "Arctan \\left(\\frac{u}{a} \\right)",
+            values: ["u'. \\frac{a^2}{\\sqrt{a^2 - u^2}}"]
         }
     )
 

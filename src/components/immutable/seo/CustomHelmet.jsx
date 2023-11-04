@@ -1,9 +1,9 @@
 import { Helmet } from "react-helmet-async";
 import Constants from "../Constants";
 
-const CustomHelmet = ( {title, metaContent, canonicalUrl, ogType} ) => {
+const CustomHelmet = ( {title, courseItem, metaContent, canonicalUrl, ogType} ) => {
 
-    title = `${Constants.APP_NAME} - ${title}`;
+    title = `${Constants.APP_NAME}${courseItem ? ` - ${courseItem.title}` : ''} - ${title}`;
     
     return  <Helmet>
                 <title>{title}</title>

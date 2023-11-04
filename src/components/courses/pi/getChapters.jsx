@@ -24,14 +24,14 @@ const getPiChapters = () => {
         {
             id: k++,
             component: <CalculDePi />,
-            title: 'Calcul de Pi par méthode géométrique',
+            title: 'Calcul par méthode géométrique',
             metaContent: 'Calcul historique du nombre Pi effectué par Archimède par approximations successives.', 
             relativePath: '/calcul-par-methode-geometrique'
         },
         {
             id: k++,
             component: <CalculDePi2 />,
-            title: 'Calcul de Pi par méthode géométrique (suite)',
+            title: 'Calcul par méthode géométrique (suite)',
             metaContent: 'Calcul historique du nombre Pi effectué par Archimède par approximations successives (suite).', 
             relativePath: '/calcul-par-methode-geometrique-2'
         },

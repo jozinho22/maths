@@ -15,14 +15,14 @@ const getSeriesChapters = () => {
         {
             id: k++,
             component: <Presentation />,
-            title: 'Présentation des séries numériques',
+            title: 'Présentation',
             metaContent: 'Présentation des séries numériques.',
             relativePath: '/presentation'
         },
         {
             id: k++,
             component: <ConvergenceDUneSerie />,
-            title: 'Convergence d\'une série',
+            title: 'Convergence',
             metaContent: 'Convergence d\'une série : conditions et conséquences.',
             relativePath: '/convergence'
         },

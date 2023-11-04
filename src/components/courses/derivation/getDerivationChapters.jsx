@@ -13,7 +13,6 @@ import DeriveesDeSinEtCos from "./chapters/DeriveesDeSinEtCos";
 import DeriveeDeFonctionComposee from "./chapters/DeriveeDeFonctionComposee";
 import DeriveeDeLaReciproque from "./chapters/DeriveeDeLaReciproque";
 import TableauRecapFonctionsDerivees from "./chapters/TableauRecapFonctionsDerivees";
-import TableauRecapOperationsCompositionsDerivees from "./chapters/TableauRecapOperationsCompositionsDerivees";
 import TheoremeDeLHopital from "./chapters/TheoremeDeLHopital";
 import DeriveeDeNPuissanceX from "./chapters/DeriveeDeNPuissanceX";
 import DeriveeDeLN from "./chapters/DeriveeDeLN";
@@ -22,6 +21,10 @@ import PointDInflexion from "./chapters/PointDInflexion";
 import MethodeDeNewton from "./chapters/MethodeDeNewton";
 import MethodeDeNewtonExemple from "./chapters/MethodeDeNewtonExemple";
 import FonctionsDeClasseCn from "./chapters/FonctionsDeClasseCn";
+import TableauRecapFonctionsDeriveesTrigo from "./chapters/TableauRecapFonctionsDeriveesTrigo";
+import TableauRecapCompositionsDerivees from "./chapters/TableauRecapCompositionsDerivees";
+import TableauRecapOperationsDerivees from "./chapters/TableauRecapOperationsDerivees";
+import DeriveeDUneFonctionMulitplieeParUneConstante from "./chapters/DeriveeDUneFonctionMulitplieeParUneConstante";
 
 const getDerivationChapters = () => {
 
@@ -34,7 +37,7 @@ const getDerivationChapters = () => {
         {
             id: k++,
             component: <Presentation />,
-            title: 'Présentation de la dérivée',
+            title: 'Présentation',
             metaContent: 'Présentation de la dérivée et construction.',
             relativePath: '/presentation'
         },
@@ -71,6 +74,13 @@ const getDerivationChapters = () => {
         },
         {
             id: k++,
+            component: <DeriveeDUneFonctionMulitplieeParUneConstante />,
+            title: 'Dérivée d\'une fonction multipliée par une constante',
+            metaContent: 'Dérivée d\'une fonction multipliée par une constante : formule et démonstration.',
+            relativePath: '/derivee-d-une-fonction-multipliee-par-une-constante'
+        },
+        {
+            id: k++,
             component: <DeriveeDUneSomme />,
             title: 'Dérivée d\'une somme de fonctions',
             metaContent: 'Dérivée d\'une somme de fonctions : formule et démonstration.',
@@ -96,7 +106,7 @@ const getDerivationChapters = () => {
         {
             id: k++,
             component: <DeriveeDeConstanteEtFonctionAffine />,
-            title: 'Dérivée \'une fonction constante et d\'une fonction affine',
+            title: 'Dérivée d\'une fonction constante et d\'une fonction affine',
             metaContent: 'Dérivée d\'une fonction constante et d\'une fonction affine : démonstration.',
             relativePath: '/derivee-de-constante-et-fonction-affine'
         },
@@ -167,7 +177,7 @@ const getDerivationChapters = () => {
             relativePath: '/derivee-de-fonction-reciproque'
         },
         {
-            title: 'Récapitulatif'
+            title: 'Récapitulatif de toutes les dérivées'
         },
         {
             id: k++,
@@ -178,10 +188,24 @@ const getDerivationChapters = () => {
         },
         {
             id: k++,
-            component: <TableauRecapOperationsCompositionsDerivees />,
-            title: 'Tableau récapitulatif des opérations/compositions sur les dérivées',
-            metaContent: 'Tableau récapitulatif des opérations/compositions sur les dérivées.',
-            relativePath: '/tableau-recap-operations-compositions-sur-les-derivees'
+            component: <TableauRecapFonctionsDeriveesTrigo />,
+            title: 'Tableau récapitulatif des fonctions trigonométriques dérivées',
+            metaContent: 'Tableau récapitulatif des fonctions trigonométriques dérivées.',
+            relativePath: '/tableau-recap-des-fonctions-trigonometriques-derivees'
+        },
+        {
+            id: k++,
+            component: <TableauRecapOperationsDerivees />,
+            title: 'Tableau récapitulatif des opérations sur les dérivées',
+            metaContent: 'Tableau récapitulatif des opérations sur les dérivées.',
+            relativePath: '/tableau-recap-operations-sur-les-derivees'
+        },
+        {
+            id: k++,
+            component: <TableauRecapCompositionsDerivees />,
+            title: 'Tableau récapitulatif des compositions sur les dérivées',
+            metaContent: 'Tableau récapitulatif des compositions sur les dérivées.',
+            relativePath: '/tableau-recap-compositions-sur-les-derivees'
         },
         {
             id: k++,

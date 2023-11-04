@@ -24,14 +24,14 @@ const getGoldenRatioChapters = () => {
         {
             id: k++,
             component: <Caracteristiques />,
-            title: 'Caractéristiques du nombre d\'or',
+            title: 'Caractéristiques',
             metaContent: 'Les particularités du nombre d\'or et le détail historique de son calcul.',
             relativePath: '/caracteristiques'
         },
         {
             id: k++,
             component: <CaracteristiquesEnSensContraire />,
-            title: 'Caractéristiques du nombre d\'or en sens contraire',
+            title: 'Caractéristiques en sens contraire',
             metaContent: 'L\'évolution de la suite de Fibonacci, mais cette fois-ci, en sons contraire.',
             relativePath: '/caracteristiques-en-sens-contraire'
         },

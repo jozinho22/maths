@@ -16,7 +16,7 @@ const getEquationsSecondDegreeChapters = () => {
         {
             id: k++,
             component: <Resolution />,
-            title: 'Résolution d\'équations',
+            title: 'Résolution',
             metaContent: 'Résolution d\'équations du second degré : explications.',
             relativePath: '/resolution'
         },
@@ -30,7 +30,7 @@ const getEquationsSecondDegreeChapters = () => {
         {
             id: k++,
             component: <Aspect />,
-            title: 'Aspect des équations',
+            title: 'Aspect',
             metaContent: 'Aspect des équations du second degré.',
             relativePath: '/aspect'
         },

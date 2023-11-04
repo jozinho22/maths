@@ -23,28 +23,28 @@ const getComplexNumbersChapters = () => {
         {
             id: k++,
             component: <Presentation />,
-            title: 'Présentation des nombres complexes',
+            title: 'Présentation',
             metaContent: 'Présentation des nombres complexes : définition.',
             relativePath: '/presentation'
         },
         {
             id: k++,
             component: <CalculsDansC />,
-            title: 'Calculs dans l\'ensemble des complexes',
+            title: 'Calculs dans C',
             metaContent: 'Calculs dans l\'ensemble des complexes.',
             relativePath: '/calculs-dans-c'
         },
         {
             id: k++,
             component: <ConjugueDUnComplexe />,
-            title: 'Conjugué d\'un nombre complexe',
+            title: 'Conjugué',
             metaContent: 'Conjugué d\'un nombre complexe : définition, formules et démonstrations.',
             relativePath: '/conjugue-d-un-complexe'
         },
         {
             id: k++,
             component: <ModuleDUnComplexe />,
-            title: 'Module d\'un complexe',
+            title: 'Module',
             metaContent: 'Module d\'un complexe : définition, formules et démonstrations.',
             relativePath: '/module-d-un-complexe'
         },
@@ -58,14 +58,14 @@ const getComplexNumbersChapters = () => {
         {
             id: k++,
             component: <InterpretationGeometrique />,
-            title: 'Interprétation géométrique des nombres complexes',
+            title: 'Interprétation géométrique',
             metaContent: 'Interprétation géométrique des nombres complexes.',
             relativePath: '/interpretation-geometrique'
         },
         {
             id: k++,
             component: <FormeTrigonometrique />,
-            title: 'Forme trigonométrique d\'un complexe',
+            title: 'Forme trigonométrique',
             metaContent: 'Forme trigonométrique d\'un complexe.',
             relativePath: '/forme-trigonometrique'
         },
@@ -79,7 +79,7 @@ const getComplexNumbersChapters = () => {
         {
             id: k++,
             component: <ArgumentDUnComplexe />,
-            title: 'Argument d\'un complexe',
+            title: 'Argument',
             metaContent: 'Argument d\'un complexe : définition, formules et démonstrations.',
             relativePath: '/argument-d-un-complexe'
         },  
@@ -96,7 +96,7 @@ const getComplexNumbersChapters = () => {
         {
             id: k++,
             component: <FormeExponentielle />,
-            title: 'Forme exponentielle d\'un nombre complexe',
+            title: 'Forme exponentielle',
             metaContent: 'Forme exponentielle d\'un nombre complexe.',
             relativePath: '/forme-exponentielle'
         },
@@ -113,7 +113,7 @@ const getComplexNumbersChapters = () => {
         {
             id: k++,
             component: <RacinesDUnComplexe />,
-            title: 'Racines d\'un complexe',
+            title: 'Racines',
             metaContent: 'Racines d\'un complexe : racine de l\'unité et cas général.',
             relativePath: '/racines-d-un-complexe'
         } 

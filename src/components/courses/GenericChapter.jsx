@@ -31,7 +31,7 @@ const GenericChapter = ( {chapter, courseItem} ) => {
 
     return (
         <>
-            <CustomHelmet title={chapter.title} metaContent={chapter.metaContent} canonicalUrl={`${Constants.WEB_APP_PREFIX}${PagesConstants.PREFIX}${PagesConstants.COURS}${courseItem.relativePath}${chapter.relativePath}`} ogType={ogType}/>
+            <CustomHelmet title={chapter.title} courseItem={courseItem} metaContent={chapter.metaContent} canonicalUrl={`${Constants.WEB_APP_PREFIX}${PagesConstants.PREFIX}${PagesConstants.COURS}${courseItem.relativePath}${chapter.relativePath}`} ogType={ogType}/>
             
             <div className="FlexButton">
                 <NavLink to={pathBuilder(`${PagesConstants.COURS}${courseItem.relativePath}`)}>

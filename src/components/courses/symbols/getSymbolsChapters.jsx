@@ -10,14 +10,14 @@ const getSymbolsChapters = () => {
         {
             id: k++,
             component: <IndexDesSymboles />,
-            title: 'Index des symboles mathématiques',
+            title: 'Index',
             metaContent: 'Index des symboles mathématiques : la plupart des symboles utilisés.',
             relativePath: '/index'
         },
         {
             id: k++,
             component: <IndexDesSymboles2 />,
-            title: 'Index des symboles mathématiques (2)',
+            title: 'Index (2)',
             metaContent: 'Index des symboles mathématiques : la plupart des symboles utilisés (2).',
             relativePath: '/index-2'
         },

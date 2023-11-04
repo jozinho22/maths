@@ -25,7 +25,7 @@ const getSequencesChapters = () => {
         {
             id: k++,
             component: <Presentation />,
-            title: 'Présentation des suites numériques',
+            title: 'Présentation',
             metaContent: 'Présentation des suites numériques.',
             relativePath: '/presentation'
         },

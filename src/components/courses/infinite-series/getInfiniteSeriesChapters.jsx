@@ -10,14 +10,14 @@ const getInfiniteSeriesChapters = () => {
         {
             id: k++,
             component: <Presentation />,
-            title: 'Présentation des développement limités',
+            title: 'Présentation',
             metaContent: 'Présentation des développement limités, démonstration.',
             relativePath: '/presentation'
         },
         {
             id: k++,
             component: <Exemple />,
-            title: 'Exemple de développement limité : la fonction sin(x)',
+            title: 'Exemple : la fonction sin(x)',
             metaContent: 'Exemple de développement limité : la fonction sin(x).',
             relativePath: '/exemple'
         },

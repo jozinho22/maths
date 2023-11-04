@@ -15,10 +15,10 @@ import getSequencesChapters from './sequences/getSequencesChapters';
 import getUsualFunctionsChapters from './usual-functions/getUsualFunctionsChapters';
 
 import CoursesConstants from './helpers/CoursesConstants';
-import geometryCoursesResourceBuilder from './geometry/geometryCoursesResourceBuilder';
 import getInfiniteSeriesChapters from './infinite-series/getInfiniteSeriesChapters';
 import getComplexNumbersChapters from './complex-numbers/getComplexNumbersChapters';
 import getSeriesChapters from './series/getSeriesChapters';
+import getEquaDiffLinFirstOrderChapters from './equa-diff-lin-first-order/getEquaDiffLinFirstOrderChapters';
 
 function coursesResourceBuilder() {
 
@@ -84,12 +84,21 @@ function coursesResourceBuilder() {
       relativePath: CoursesConstants.EQ_1_DEG,
       chapters: getEquationsFirstDegreeChapters()
     }
+
     var equationsSecondDegree = {
       id: i++,
       title: 'Les équations du deuxième degré',
       metaContent: "Cours sur les équations du deuxième degré : apprendre à résoudre les équations et voir l'aspect de ses fonctions dans un repère",
       relativePath: CoursesConstants.EQ_2_DEG,
       chapters: getEquationsSecondDegreeChapters()
+    }
+
+    var equaDiffLinOrder1 = {
+      id: i++,
+      title: 'Les équations différentielles linéaires du premier ordre',
+      metaContent: "Les équations différentielles linéaires du premier ordre : résolution avec coefficients constants et coefficients fonction de x",
+      relativePath: CoursesConstants.EQ_DIFF_LIN_ORDRE_1,
+      chapters: getEquaDiffLinFirstOrderChapters()
     }
 
     var delimAnalyseFunctions = {
@@ -235,7 +244,7 @@ function coursesResourceBuilder() {
     );
 
     if(process.env.NODE_ENV === 'development') {
-      coursesItems.push(series)
+      coursesItems.push(equaDiffLinOrder1)
     }
     
     return coursesItems;

@@ -21,8 +21,8 @@ const getEquationsFirstDegreeChapters = () => {
         {
             id: k++,
             component: <Aspect />,
-            title: 'Aspect des équations',
-            metaContent: 'L\'aspect des equations du premier degré dans un repère.',
+            title: 'Aspect des fonctions affines',
+            metaContent: 'L\'aspect des fonctions affines dans un repère.',
             relativePath: '/aspect'
         },
         {

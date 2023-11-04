@@ -14,7 +14,7 @@ const useTableauRecapOperationsDerivees = () => {
     tableauRecapOperationsDerivees.push(
          {
             id: k++,
-            title: "ku",
+            title: "\\lambda u \\enspace (avec \\enspace \\lambda \\in \\mathbb{R})",
             values: ["ku'"]
         }
     )
@@ -30,7 +30,7 @@ const useTableauRecapOperationsDerivees = () => {
     tableauRecapOperationsDerivees.push(
          {
             id: k++,
-            title: "u \\times v",
+            title: "u v",
             values: ["u'.v + v'.u"]
         }
     )

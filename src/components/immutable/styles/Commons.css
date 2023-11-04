@@ -68,13 +68,13 @@ h3, h4 {
 
 h3 {
     font-weight: bold;
-    padding-top: 20px;
+    padding-top: 30px;
     padding-bottom: 10px;
 }
 
 h4 {
     font-style: italic;
-    padding-top: 5px;
+    padding-top: 15px;
     padding-bottom: 5px;
 }
 
@@ -182,10 +182,12 @@ a:hover {
 
 .Darcula .DefaultButton:hover, .Darcula .DefaultButton:focus, .Darcula .DefaultButton:active, .Darcula .DefaultButton:disabled {
     background-color: var(--blue-color);
+    color: var(--grey-light-color);
 }
 
 .Darcula .DefaultButton:disabled {
     border-color: var(--grey-color);
+    color: var(--grey-light-color);
 }
 
 .DefaultButton mjx-math {

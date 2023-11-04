@@ -70,6 +70,14 @@ const useTableauRecapFonctionsPrimitivesComposees = () => {
     tableauRecapFonctionsPrimitives.push(
         {
             id: k++,
+            title: "-\\frac{1}{\\sqrt{a^2 - x^2}}",
+            values: [" Arccos \\left(\\frac{x}{a}\\right) + k"]
+        }
+    )
+
+    tableauRecapFonctionsPrimitives.push(
+        {
+            id: k++,
             title: "\\frac{1}{\\sqrt{a^2 - x^2}}",
             values: [" Arcsin \\left(\\frac{x}{a}\\right) + k"]
         }

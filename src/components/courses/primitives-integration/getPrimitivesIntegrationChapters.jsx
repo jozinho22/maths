@@ -33,7 +33,7 @@ const getPrimitivesIntegrationChapters = () => {
         {
             id: k++,
             component: <Presentation />,
-            title: 'Présentation de la primitive',
+            title: 'Présentation',
             metaContent: 'Présentation de la primitive et quelques exemples.',
             relativePath: '/presentation'
         },
@@ -57,14 +57,14 @@ const getPrimitivesIntegrationChapters = () => {
         {
             id: k++,
             component: <InterpretationGeometriqueDeLaPrimitive />,
-            title: 'Interprétation géométrique de la primitive',
+            title: 'Interprétation géométrique',
             metaContent: 'Interprétation géométrique de la primitive.',
             relativePath: '/interpretation-geometrique'
         },
         {
             id: k++,
             component: <InterpretationGeometriqueDeLaPrimitive2 />,
-            title: 'Interprétation géométrique de la primitive (suite)',
+            title: 'Interprétation géométrique (suite)',
             metaContent: 'Interprétation géométrique de la primitive(suite).',
             relativePath: '/interpretation-geometrique-2'
         },

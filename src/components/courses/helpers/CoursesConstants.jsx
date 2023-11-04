@@ -3,6 +3,7 @@ const CoursesConstants = {
     ELEM_CALCULUS: '/le-calcul-elementaire',
     EQ_1_DEG: '/les-equations-du-premier-degre',
     EQ_2_DEG: '/les-equations-du-second-degre',
+    EQ_DIFF_LIN_ORDRE_1 : '/les-equations-differentielles-lineaires-d-ordre-1',
     PUISSANCES: '/les-puissances',
     PYTHAGORE: '/le-theoreme-de-pythagore',
     THALES: '/le-theoreme-de-thales',

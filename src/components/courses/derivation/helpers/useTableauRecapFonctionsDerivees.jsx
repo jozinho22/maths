@@ -14,7 +14,7 @@ const useTableauRecapFonctionsDerivees = () => {
     tableauRecapFonctionsDerivees.push(
          {
             id: k++,
-            title: "k",
+            title: "\\lambda, \\enspace (avec \\enspace \\lambda \\in \\mathbb{R})",
             values: ["0"]
         }
     )
@@ -22,7 +22,7 @@ const useTableauRecapFonctionsDerivees = () => {
     tableauRecapFonctionsDerivees.push(
          {
             id: k++,
-            title: "ax + b",
+            title: "ax + b, \\enspace  (avec \\enspace (a, b) \\in \\mathbb{R}^2) ",
             values: ["a"]
         }
     )
@@ -96,78 +96,6 @@ const useTableauRecapFonctionsDerivees = () => {
             id: k++,
             title: "ln(x)",
             values: ["\\frac{1}{x}"]
-        }
-    )
-
-    tableauRecapFonctionsDerivees.push(
-         {
-            id: k++,
-            title: "sin{x}",
-            values: ["cos{x}"]
-        }
-    )
-
-    tableauRecapFonctionsDerivees.push(
-         {
-            id: k++,
-            title: "cos{x}",
-            values: ["-sin{x}"]
-        }
-    )
-
-    tableauRecapFonctionsDerivees.push(
-         {
-            id: k++,
-            title: "tan(x)",
-            values: ["1 + tan^2(x)"]
-        }
-    )
-
-    tableauRecapFonctionsDerivees.push(
-         {
-            id: k++,
-            title: "sin^{-1}(x)",
-            values: [" \\frac{1}{\\sqrt{1 - x^2}}"]
-        }
-    )
-
-    tableauRecapFonctionsDerivees.push(
-         {
-            id: k++,
-            title: "cos^{-1}(x)",
-            values: ["- \\frac{1}{\\sqrt{1 - x^2}}"]
-        }
-    )
-
-    tableauRecapFonctionsDerivees.push(
-         {
-            id: k++,
-            title: "tan^{-1}(x)",
-            values: ["\\frac{1}{1 + x^2}"]
-        }
-    )
-
-    tableauRecapFonctionsDerivees.push(
-         {
-            id: k++,
-            title: "sh(x)",
-            values: ["ch(x)"]
-        }
-    )
-
-    tableauRecapFonctionsDerivees.push(
-         {
-            id: k++,
-            title: "ch(x)",
-            values: ["sh(x)"]
-        }
-    )
-
-    tableauRecapFonctionsDerivees.push(
-         {
-            id: k++,
-            title: "th(x)",
-            values: ["1 - tan^2(x)"]
         }
     )
 
