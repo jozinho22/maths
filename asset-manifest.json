@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/maths/static/css/main.bbfb3e6c.css",
-    "main.js": "/maths/static/js/main.f6885ad0.js",
+    "main.css": "/maths/static/css/main.0c759a65.css",
+    "main.js": "/maths/static/js/main.28f27c65.js",
     "static/js/27.035b7279.chunk.js": "/maths/static/js/27.035b7279.chunk.js",
     "static/media/energetiquementVotre.pdf": "/maths/static/media/energetiquementVotre.ae46a881d6240ff7c375.pdf",
     "static/media/bigBang.pdf": "/maths/static/media/bigBang.9a7278fe34a3a9cbd1fe.pdf",
@@ -50,13 +50,11 @@
     "static/media/recurrentSequences.png": "/maths/static/media/recurrentSequences.9eff98f26114f59039c9.png",
     "static/media/pythagoreDemo1.png": "/maths/static/media/pythagoreDemo1.6acd81d463369ac1bf19.png",
     "static/media/circleTrigo.png": "/maths/static/media/circleTrigo.2f073218bfbda5e3454a.png",
-    "static/media/mediatrices.png": "/maths/static/media/mediatrices.6d3caa7e43e586983ea3.png",
     "static/media/circleAreaCalculus2.png": "/maths/static/media/circleAreaCalculus2.f1aa6d9a1b68e3193d38.png",
     "static/media/circleTrigo2.png": "/maths/static/media/circleTrigo2.2636c24bb895b59d8100.png",
     "static/media/pythagoreApplication3d2.png": "/maths/static/media/pythagoreApplication3d2.0aa58b4251b0aff1d75a.png",
     "static/media/differentsCoefDirecteurs.png": "/maths/static/media/differentsCoefDirecteurs.21f6a7f125e6e1a63cfb.png",
     "static/media/derivativeFirstApprox.png": "/maths/static/media/derivativeFirstApprox.25ef746d84da0c12cc68.png",
-    "static/media/bissectrices.png": "/maths/static/media/bissectrices.97c4bb4f25925a65e1a2.png",
     "static/media/coneAreaCalculus.png": "/maths/static/media/coneAreaCalculus.7db9c6129013838b8959.png",
     "static/media/pythagoreApplication3d.png": "/maths/static/media/pythagoreApplication3d.68c2703b04a6cb1d211b.png",
     "static/media/alKashiDemo3.png": "/maths/static/media/alKashiDemo3.c2fd205edc36e292d18e.png",
@@ -68,24 +66,19 @@
     "static/media/complexNumbersPlan.png": "/maths/static/media/complexNumbersPlan.3f3b6102c5a62f18b223.png",
     "static/media/thalesWithHeight.png": "/maths/static/media/thalesWithHeight.346900853d58192e1318.png",
     "static/media/integration3.png": "/maths/static/media/integration3.fd6c3e662f4c9f881443.png",
-    "static/media/heights2.png": "/maths/static/media/heights2.444d385da33e5d1d17ad.png",
     "static/media/circlePi.png": "/maths/static/media/circlePi.eb2f06e8e2af3110d305.png",
-    "static/media/triangleSinusRelation.png": "/maths/static/media/triangleSinusRelation.a1e7d72576c1563ffbb5.png",
     "static/media/distribFact.png": "/maths/static/media/distribFact.fcf1ea6d965f3abfc893.png",
     "static/media/sohcahtoa.png": "/maths/static/media/sohcahtoa.d7a0277ec992de0aa58e.png",
-    "static/media/triangleSinusRelationDemo.png": "/maths/static/media/triangleSinusRelationDemo.cbe836ef02052fbdd6d9.png",
     "static/media/integration2.png": "/maths/static/media/integration2.b1c9b3a9ad1b940146ee.png",
     "static/media/integration-positivite.png": "/maths/static/media/integration-positivite.1e18c040e064a2dfdfe0.png",
     "static/media/coneVolCalculus.png": "/maths/static/media/coneVolCalculus.8aedfc481f3305f6029d.png",
     "static/media/cone.png": "/maths/static/media/cone.932f2d629b76bceb7075.png",
     "static/media/ordonneeAtOrigin.png": "/maths/static/media/ordonneeAtOrigin.2ce7a6739aa96ece5798.png",
-    "static/media/triangles.png": "/maths/static/media/triangles.fdd26930039530a6e929.png",
     "static/media/thales.png": "/maths/static/media/thales.e9d5ab4625a8eb03374d.png",
-    "static/media/medianes.png": "/maths/static/media/medianes.f43b5dfe908b3022a3cb.png",
     "index.html": "/maths/index.html"
   },
   "entrypoints": [
-    "static/css/main.bbfb3e6c.css",
-    "static/js/main.f6885ad0.js"
+    "static/css/main.0c759a65.css",
+    "static/js/main.28f27c65.js"
   ]
 }

@@ -158,6 +158,23 @@
     <priority>0.64</priority>
   </url>
 
+  <!-- Cours : équations diff linéaires d'ordre 1 -->
+  <url>
+    <loc>https://jozinho22.github.io/maths/#/cours/les-equations-differentielles-lineaires-d-ordre-1</loc>
+    <lastmod>2023-11-04T20:00:00+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+    <url>
+    <loc>https://jozinho22.github.io/maths/#/cours/les-equations-differentielles-lineaires-d-ordre-1/presentation</loc>
+    <lastmod>2023-11-04T20:00:00+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+    <url>
+    <loc>https://jozinho22.github.io/maths/#/cours/les-equations-differentielles-lineaires-d-ordre-1/linearite</loc>
+    <lastmod>2023-11-04T20:00:00+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+
   <!-- Cours : puissances -->
   <url>
     <loc>https://jozinho22.github.io/maths/#/cours/les-puissances</loc>
@@ -360,6 +377,11 @@
     <priority>0.64</priority>
   </url>
   <url>
+    <loc>https://jozinho22.github.io/maths/#/cours/la-derivation/derivee-d-une-fonction-multipliee-par-une-constante</loc>
+    <lastmod>2023-10-22T22:12:00+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
     <loc>https://jozinho22.github.io/maths/#/cours/la-derivation/derivee-d-une-somme-de-fonctions</loc>
     <lastmod>2023-10-22T22:12:00+00:00</lastmod>
     <priority>0.64</priority>
@@ -430,7 +452,17 @@
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://jozinho22.github.io/maths/#/cours/la-derivation/tableau-recap-operations-compositions-sur-les-derivees</loc>
+    <loc>https://jozinho22.github.io/maths/#/cours/la-derivation/tableau-recap-des-fonctions-trigonometriques-derivees</loc>
+    <lastmod>2023-10-22T22:12:00+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://jozinho22.github.io/maths/#/cours/la-derivation/tableau-recap-operations-sur-les-derivees</loc>
+    <lastmod>2023-10-22T22:12:00+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://jozinho22.github.io/maths/#/cours/la-derivation/tableau-recap-compositions-sur-les-derivees</loc>
     <lastmod>2023-10-22T22:12:00+00:00</lastmod>
     <priority>0.64</priority>
   </url>
@@ -663,17 +695,82 @@
 
    <!-- Cours : suites -->
   <url>
-    <loc>https://jozinho22.github.io/maths/#/cours/les-series-numeriques</loc>
+    <loc>https://jozinho22.github.io/maths/#/cours/les-suites-numeriques</loc>
     <lastmod>2023-10-25T20:20:00+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://jozinho22.github.io/maths/#/cours/les-series-numeriques/presentation</loc>
+    <loc>https://jozinho22.github.io/maths/#/cours/les-suites-numeriques/presentation</loc>
     <lastmod>2023-11-03T20:20:00+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://jozinho22.github.io/maths/#/cours/les-series-numeriques/convergence</loc>
+    <loc>https://jozinho22.github.io/maths/#/cours/les-suites-numeriques/differentes-facons-de-definir-une-suite</loc>
+    <lastmod>2023-11-03T20:20:00+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://jozinho22.github.io/maths/#/cours/les-suites-numeriques/suites-monotones</loc>
+    <lastmod>2023-11-03T20:20:00+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://jozinho22.github.io/maths/#/cours/les-suites-numeriques/suites-bornees</loc>
+    <lastmod>2023-11-03T20:20:00+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://jozinho22.github.io/maths/#/cours/les-suites-numeriques/raisonnement-par-recurrence</loc>
+    <lastmod>2023-11-03T20:20:00+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://jozinho22.github.io/maths/#/cours/les-suites-numeriques/suites-arithmetiques</loc>
+    <lastmod>2023-11-03T20:20:00+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://jozinho22.github.io/maths/#/cours/les-suites-numeriques/somme-des-n-plus-1-premiers-entiers</loc>
+    <lastmod>2023-11-03T20:20:00+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://jozinho22.github.io/maths/#/cours/les-suites-numeriques/somme-des-n-plus-1-premiers-termes-d-une-suite-arithmetique</loc>
+    <lastmod>2023-11-03T20:20:00+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://jozinho22.github.io/maths/#/cours/les-suites-numeriques/suites-geometriques</loc>
+    <lastmod>2023-11-03T20:20:00+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://jozinho22.github.io/maths/#/cours/les-suites-numeriques/somme-des-n-plus-1-premieres-puissances-de-n</loc>
+    <lastmod>2023-11-03T20:20:00+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://jozinho22.github.io/maths/#/cours/les-suites-numeriques/somme-des-n-plus-1-premiers-termes-d-une-suite-geometrique</loc>
+    <lastmod>2023-11-03T20:20:00+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://jozinho22.github.io/maths/#/cours/les-suites-numeriques/limites-de-suites</loc>
+    <lastmod>2023-11-03T20:20:00+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://jozinho22.github.io/maths/#/cours/les-suites-numeriques/theoreme-de-la-convergence-uniforme</loc>
+    <lastmod>2023-11-03T20:20:00+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://jozinho22.github.io/maths/#/cours/les-suites-numeriques/limites-de-suites-extraites</loc>
+    <lastmod>2023-11-03T20:20:00+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://jozinho22.github.io/maths/#/cours/les-suites-numeriques/operations-sur-les-limites</loc>
     <lastmod>2023-11-03T20:20:00+00:00</lastmod>
     <priority>0.64</priority>
   </url>
