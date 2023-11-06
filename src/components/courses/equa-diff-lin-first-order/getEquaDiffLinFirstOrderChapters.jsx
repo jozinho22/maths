@@ -1,5 +1,7 @@
-import EDL1CoefficientContinu from "./chapters/EDL1CoefficientContinu";
-import EDL1CoefficientContinuExemple from "./chapters/EDL1CoefficientContinuExemple";
+import EDL1CoefficientContinuEquGenerale from "./chapters/EDL1CoefficientContinuEquGenerale";
+import EDL1CoefficientContinuEquHomogene from "./chapters/EDL1CoefficientContinuEquHomogene";
+import EDL1CoefficientContinuExempleEquGenerale from "./chapters/EDL1CoefficientContinuExempleEquGenerale";
+import EDL1CoefficientContinuExempleEquHomogene from "./chapters/EDL1CoefficientContinuExempleEquHomogene";
 import EDL1CoefficientContinuExempleVerification from "./chapters/EDL1CoefficientContinuExempleVerification";
 import Presentation from "./chapters/Presentation";
 import PrincipeDeSuperposition from "./chapters/PrincipeDeSuperposition";
@@ -39,18 +41,32 @@ const getEquaDiffLinFirstOrderChapters = () => {
         }, 
         {
             id: k++,
-            component: <EDL1CoefficientContinu />,
-            title: 'Résolution d\'une EDL1 à coefficient continu',
-            metaContent: 'Résolution d\'une équation différentielle linéaire d\'ordre 1 à coefficient continu.',
-            relativePath: '/resolution-edl1-a-coefficient-continu'
+            component: <EDL1CoefficientContinuEquHomogene />,
+            title: 'Résolution d\'une EDL1 à coefficient continu (équation homogène)',
+            metaContent: 'Résolution d\'une équation différentielle linéaire d\'ordre 1 à coefficient continu (équation homogène).',
+            relativePath: '/resolution-edl1-a-coefficient-continu-equ-homogene'
         },
         {
             id: k++,
-            component: <EDL1CoefficientContinuExemple />,
-            title: 'Résolution d\'une EDL1 à coefficient continu : exemple',
-            metaContent: 'Résolution d\'une équation différentielle linéaire d\'ordre 1 à coefficient continu : exemple.',
-            relativePath: '/resolution-edl1-a-coefficient-continu-exemple'
-        },   
+            component: <EDL1CoefficientContinuEquGenerale />,
+            title: 'Résolution d\'une EDL1 à coefficient continu (équation générale)',
+            metaContent: 'Résolution d\'une équation différentielle linéaire d\'ordre 1 à coefficient continu (équation générale).',
+            relativePath: '/resolution-edl1-a-coefficient-continu-equ-generale'
+        },
+        {
+            id: k++,
+            component: <EDL1CoefficientContinuExempleEquHomogene />,
+            title: 'Résolution d\'une EDL1 à coefficient continu : exemple (équation homogène)',
+            metaContent: 'Résolution d\'une équation différentielle linéaire d\'ordre 1 à coefficient continu : exemple (équation homogène).',
+            relativePath: '/resolution-edl1-a-coefficient-continu-exemple-equ-homogene'
+        },  
+        {
+            id: k++,
+            component: <EDL1CoefficientContinuExempleEquGenerale />,
+            title: 'Résolution d\'une EDL1 à coefficient continu : exemple (équation générale)',
+            metaContent: 'Résolution d\'une équation différentielle linéaire d\'ordre 1 à coefficient continu : exemple (équation générale).',
+            relativePath: '/resolution-edl1-a-coefficient-continu-exemple-equ-generale'
+        },    
         {
             id: k++,
             component: <EDL1CoefficientContinuExempleVerification />,
@@ -58,8 +74,6 @@ const getEquaDiffLinFirstOrderChapters = () => {
             metaContent: 'Résolution d\'une équation différentielle linéaire d\'ordre 1 à coefficient continu : vérification de l\'exemple.',
             relativePath: '/resolution-edl1-a-coefficient-continu-exemple-verif'
         }
-
-
     ];
 }
 

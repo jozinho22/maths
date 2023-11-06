@@ -54,7 +54,7 @@ function coursesResourceBuilder() {
 
     var delimTheorems = {
       id: i++,
-      title: 'Théorèmes célèbres'
+      title: 'Théorèmes de géométrie'
     }
 
     var pythagore = {
@@ -72,12 +72,12 @@ function coursesResourceBuilder() {
       chapters: getThalesChapters()
     }
 
-    var delimEqu = {
+    var delimAnalyseFunctions = {
       id: i++,
-      title: 'Équations'
+      title: 'Analyse'
     }
 
-    var equationsFirstDegree = {
+     var equationsFirstDegree = {
       id: i++,
       title: 'Les équations du premier degré',
       metaContent: "Cours sur les équations du premier degré : apprendre à résoudre les équations et inéquations de base et voir l'aspect de ses fonctions dans un repère",
@@ -91,19 +91,6 @@ function coursesResourceBuilder() {
       metaContent: "Cours sur les équations du deuxième degré : apprendre à résoudre les équations et voir l'aspect de ses fonctions dans un repère",
       relativePath: CoursesConstants.EQ_2_DEG,
       chapters: getEquationsSecondDegreeChapters()
-    }
-
-    var equaDiffLinOrder1 = {
-      id: i++,
-      title: 'Les équations différentielles linéaires du premier ordre',
-      metaContent: "Les équations différentielles linéaires du premier ordre : résolution avec coefficients constants et coefficients fonction de x",
-      relativePath: CoursesConstants.EQ_DIFF_LIN_ORDRE_1,
-      chapters: getEquaDiffLinFirstOrderChapters()
-    }
-
-    var delimAnalyseFunctions = {
-      id: i++,
-      title: 'Analyse-fonctions'
     }
     
     var usualFunctions = {
@@ -134,6 +121,14 @@ function coursesResourceBuilder() {
       metaContent: "Les primitives et l\'intégration : définitions, démonstrations et formules",
       relativePath: CoursesConstants.PRIMITIVES_INTEGRATION,
       chapters: getPrimitivesIntegrationChapters()
+    }
+
+    var equaDiffLinOrder1 = {
+      id: i++,
+      title: 'Les équa. diff. linéaires d\'ordre 1',
+      metaContent: "Les équations différentielles linéaires du premier ordre : résolution avec coefficients constants et coefficients fonction de x",
+      relativePath: CoursesConstants.EQ_DIFF_LIN_ORDRE_1,
+      chapters: getEquaDiffLinFirstOrderChapters()
     }
 
     var infSeries = {
@@ -217,18 +212,14 @@ function coursesResourceBuilder() {
     );
 
     coursesItems.push(
-        delimEqu,
+        delimAnalyseFunctions,
         equationsFirstDegree,
         equationsSecondDegree,
-        equaDiffLinOrder1
-    );
-
-    coursesItems.push(
-        delimAnalyseFunctions,
         usualFunctions,
         trigo,
         derivation,
         primInt,
+        equaDiffLinOrder1,
         infSeries,
         complexes
     );
