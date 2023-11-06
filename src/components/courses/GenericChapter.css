@@ -103,9 +103,9 @@
     border-style: solid;   
     width: fit-content;
     display: table;
-    margin: 0 auto;
     padding: 10px 10px 10px 10px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    margin-top: 30px;
 }
 
 .Darcula .Focus {

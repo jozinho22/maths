@@ -15,7 +15,7 @@ const useTableauRecapOperationsDerivees = () => {
          {
             id: k++,
             title: "\\lambda u \\enspace (avec \\enspace \\lambda \\in \\mathbb{R})",
-            values: ["ku'"]
+            values: ["\\lambda u'"]
         }
     )
 
@@ -46,8 +46,16 @@ const useTableauRecapOperationsDerivees = () => {
     tableauRecapOperationsDerivees.push(
          {
             id: k++,
-            title: "u^{-1}",
-            values: ["\\frac{1}{u'(u^{-1})} "]
+            title: "(f \\circ u) = f(u) \\enspace",
+            values: ["u'.(f' \\circ u) = u'.(f'(u))"]
+        }
+    )
+
+    tableauRecapOperationsDerivees.push(
+         {
+            id: k++,
+            title: "u^{-1} \\enspace (fonction \\enspace r\\acute{e}ciproque)",
+            values: ["\\frac{1}{u' \\circ u^{-1}} = \\frac{1}{u'(u^{-1})} "]
         }
     )
 

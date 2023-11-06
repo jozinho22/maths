@@ -219,7 +219,8 @@ function coursesResourceBuilder() {
     coursesItems.push(
         delimEqu,
         equationsFirstDegree,
-        equationsSecondDegree
+        equationsSecondDegree,
+        equaDiffLinOrder1
     );
 
     coursesItems.push(
@@ -243,9 +244,9 @@ function coursesResourceBuilder() {
         nbOr
     );
 
-    if(process.env.NODE_ENV === 'development') {
+/*     if(process.env.NODE_ENV === 'development') {
       coursesItems.push(equaDiffLinOrder1)
-    }
+    } */
     
     return coursesItems;
 

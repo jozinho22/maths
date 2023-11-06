@@ -7,12 +7,12 @@ import Title1 from '../../helpers/Title1';
 const IntegrationEntreDeuxBornes = () => {
 
     var intAB = "\\(  \\int_a^b f(t)dt = F(b) - F(a) \\)";
-    var intExample = "\\(  \\int_0^1 (2t+3)dt \\)";
-    var fFExample = "\\( \\Biggl\\{ \\begin{gather*} f(t) = 2t +3 \\\\ \\enspace \\enspace \\enspace  F(t) = t^2 + 3t + K \\end{gather*} \\)";
-    var intExample2 = "\\(  \\int_0^1 (2t+3)dt  = [t^2 + 3t]_0^1 \\)";
-    var intExample3 = "\\(  \\int_0^1 (2t+3)dt  = F(1)  - F(0) \\)";
-    var intExample4 = "\\(  \\int_0^1 (2t+3)dt  = 1 + 3 + K - (0 + 0 + K) \\)";
-    var intExample5 = "\\(  \\int_0^1 (2t+3)dt  = 4 \\)";
+    var intExample = "\\(  \\int_0^1 f(t)dt = \\int_0^1 (2t+3)dt \\)";
+    var fFExample = "\\( \\Biggl\\{ \\begin{gather*} \\enspace \\enspace f(t) = 2t +3 \\\\  \\enspace  F(t) = t^2 + 3t + K \\end{gather*} \\)";
+    var intExample2 = "\\(  \\int_0^1 f(t)dt  = [t^2 + 3t]_0^1 \\)";
+    var intExample3 = "\\(  \\int_0^1 f(t)dt  = F(1)  - F(0) \\)";
+    var intExample4 = "\\(  \\int_0^1 f(t)dt  = 1 + 3 + K - (0 + 0 + K) \\)";
+    var intExample5 = "\\(  \\int_0^1 f(t)dt  = 4 \\)";
 
     return  <>
                 <p>Soit <MathJaxInline toShow={"$ f $"} /> une fonction continue sur un intervalle <MathJaxInline toShow={"$ I = [a, b] \\subset \\mathbb{R}$"} /> et <MathJaxInline toShow={"$ (a, b) \\in I $"} /> deux réels tels que <MathJaxInline toShow={"$ a < b $"} />.</p>

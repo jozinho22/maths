@@ -1,5 +1,9 @@
-import Linearite from "./chapters/Linearite";
+import EDL1CoefficientContinu from "./chapters/EDL1CoefficientContinu";
+import EDL1CoefficientContinuExemple from "./chapters/EDL1CoefficientContinuExemple";
+import EDL1CoefficientContinuExempleVerification from "./chapters/EDL1CoefficientContinuExempleVerification";
 import Presentation from "./chapters/Presentation";
+import PrincipeDeSuperposition from "./chapters/PrincipeDeSuperposition";
+import PrincipeDeSuperpositionDemo from "./chapters/PrincipeDeSuperpositionDemo";
 
 const getEquaDiffLinFirstOrderChapters = () => {
 
@@ -18,14 +22,43 @@ const getEquaDiffLinFirstOrderChapters = () => {
         },
         {
             id: k++,
-            component: <Linearite />,
-            title: 'Linéarité',
-            metaContent: 'Linéarité des équations différentielles linéaires : définition et démonstration.',
-            relativePath: '/linearite'
+            component: <PrincipeDeSuperposition />,
+            title: 'Principe de superposition',
+            metaContent: 'Principe de superposition : définition et lien avec la linéarité.',
+            relativePath: '/principe-de-superposition'
         },
         {
-            title: 'Résolution'
+            id: k++,
+            component: <PrincipeDeSuperpositionDemo />,
+            title: 'Principe de superposition (démonstration)',
+            metaContent: 'Principe de superposition : démonstration.',
+            relativePath: '/principe-de-superposition-demo'
+        },
+        {
+            title: 'Résolution des équa. diff. lin. d\'ordre 1 à coefficient continu'
         }, 
+        {
+            id: k++,
+            component: <EDL1CoefficientContinu />,
+            title: 'Résolution d\'une EDL1 à coefficient continu',
+            metaContent: 'Résolution d\'une équation différentielle linéaire d\'ordre 1 à coefficient continu.',
+            relativePath: '/resolution-edl1-a-coefficient-continu'
+        },
+        {
+            id: k++,
+            component: <EDL1CoefficientContinuExemple />,
+            title: 'Résolution d\'une EDL1 à coefficient continu : exemple',
+            metaContent: 'Résolution d\'une équation différentielle linéaire d\'ordre 1 à coefficient continu : exemple.',
+            relativePath: '/resolution-edl1-a-coefficient-continu-exemple'
+        },   
+        {
+            id: k++,
+            component: <EDL1CoefficientContinuExempleVerification />,
+            title: 'Résolution d\'une EDL1 à coefficient continu : vérification de l\'exemple',
+            metaContent: 'Résolution d\'une équation différentielle linéaire d\'ordre 1 à coefficient continu : vérification de l\'exemple.',
+            relativePath: '/resolution-edl1-a-coefficient-continu-exemple-verif'
+        }
+
 
     ];
 }

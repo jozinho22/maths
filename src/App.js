@@ -3,9 +3,9 @@ import React, { Suspense } from 'react';
 import { Container } from 'react-bootstrap';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './components/immutable/styles/Fonts.css';
-import './components/immutable/styles/Themes.css';
-import './components/immutable/styles/Commons.css';
+import './styles/Fonts.css';
+import './styles/Themes.css';
+import './styles/Commons.css';
 import './components/alert/Alert.css';
 import './App.css';
 
@@ -19,12 +19,11 @@ import coursesResourceBuilder from './components/courses/coursesResourceBuilder'
 import pdfResourceBuilder from './components/pdf-viewer/pdfResourceBuilder';
 import gamesResourceBuilder from './components/games/gamesResourceBuilder';
 
-import { getThemeIfStoredThemeExists } from './components/immutable/styles/getThemes';
 import { HashRouter, /* RouterProvider */ } from 'react-router-dom';
 import AppRoutes from './AppRoutes'
 /* import useRouter from './useRouter'; */
-import Fonts from './components/immutable/styles/Fonts';
-import Themes from './components/immutable/styles/Themes';
+import Fonts from './styles/Fonts';
+import Themes from './styles/Themes';
 import verifyUrlCountInApp from './components/helpers/verifyUrlCountInApp';
 
 function App() {

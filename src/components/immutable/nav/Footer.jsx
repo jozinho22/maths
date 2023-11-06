@@ -4,7 +4,7 @@ import { Container, Navbar} from 'react-bootstrap';
 import { Envelope } from 'react-bootstrap-icons'; */
 import AppContext from '../../context/AppContext'
 
-import Themes from '../styles/Themes';
+import Themes from '../../../styles/Themes';
 
 import BootstrapSwitchButton from 'bootstrap-switch-button-react';
 import PagesConstants from './PagesConstants';

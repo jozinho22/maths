@@ -14,8 +14,8 @@ const useTableauRecapCompositionDerivees = () => {
     tableauRecapCompositionsDerivees.push(
          {
             id: k++,
-            title: "(f \\circ u) \\enspace (g \\acute{e} n \\acute{e} rale)",
-            values: ["u'.(f'(u))"]
+            title: "(f \\circ u) = f(u) \\enspace",
+            values: ["u'.(f' \\circ u) = u'.(f'(u))"]
         }
     )
 
