@@ -180,12 +180,22 @@
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://jozinho22.github.io/maths/#/cours/les-equations-differentielles-lineaires-d-ordre-1/resolution-edl1-a-coefficient-continu</loc>
+    <loc>https://jozinho22.github.io/maths/#/cours/les-equations-differentielles-lineaires-d-ordre-1/resolution-edl1-a-coefficient-continu-equ-homogene</loc>
     <lastmod>2023-11-04T20:00:00+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://jozinho22.github.io/maths/#/cours/les-equations-differentielles-lineaires-d-ordre-1/resolution-edl1-a-coefficient-continu-exemple</loc>
+    <loc>https://jozinho22.github.io/maths/#/cours/les-equations-differentielles-lineaires-d-ordre-1/resolution-edl1-a-coefficient-continu-equ-generale</loc>
+    <lastmod>2023-11-04T20:00:00+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://jozinho22.github.io/maths/#/cours/les-equations-differentielles-lineaires-d-ordre-1/resolution-edl1-a-coefficient-continu-exemple-equ-homogene</loc>
+    <lastmod>2023-11-04T20:00:00+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://jozinho22.github.io/maths/#/cours/les-equations-differentielles-lineaires-d-ordre-1/resolution-edl1-a-coefficient-continu-exemple-equ-generale</loc>
     <lastmod>2023-11-04T20:00:00+00:00</lastmod>
     <priority>0.64</priority>
   </url>
