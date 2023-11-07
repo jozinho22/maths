@@ -2,7 +2,7 @@ import React from 'react';
 
 import ImageZoom from '../../../helpers/ImageZoom';
 
-import bissectrices from '../assets/bissectrices.png'
+import bissectrices from './assets/bissectrices.png'
 
 const LaBissectrice = () => {
 

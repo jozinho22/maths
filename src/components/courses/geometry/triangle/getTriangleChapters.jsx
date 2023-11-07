@@ -1,10 +1,10 @@
-import Presentation from './chapters/Presentation';
-import LaHauteur from './chapters/LaHauteur';
-import LaMediane from './chapters/LaMediane';
-import LaMediatrice from './chapters/LaMediatrice';
-import LaBissectrice from './chapters/LaBissectrice';
-import LoiDesSinus from './chapters/LoiDesSinus';
-import LoiDesCosinus from './chapters/LoiDesCosinus';
+import Presentation from '../../elementary-calculus/chapters/triangle/Presentation';
+import LaHauteur from '../../elementary-calculus/chapters/triangle/LaHauteur';
+import LaMediane from '../../elementary-calculus/chapters/triangle/LaMediane';
+import LaMediatrice from '../../elementary-calculus/chapters/triangle/LaMediatrice';
+import LaBissectrice from '../../elementary-calculus/chapters/triangle/LaBissectrice';
+import LoiDesSinus from '../../elementary-calculus/chapters/triangle/LoiDesSinus';
+import LoiDesCosinus from '../../elementary-calculus/chapters/triangle/LoiDesCosinus';
 
 const getTriangleChapters = () => {
 

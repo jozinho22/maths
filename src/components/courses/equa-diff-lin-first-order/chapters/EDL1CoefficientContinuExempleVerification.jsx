@@ -19,9 +19,9 @@ const EDL1CoefficientContinuExempleVerification = () => {
     var EDL1EVerif3 = "\\(  y_g'(x) -5x.y_g(x)  = \\frac{\\sqrt{\\pi}}{\\sqrt{3}\\sqrt{2}}.e^{\\frac{5}{2}x^2} . \\Biggl( \\frac{2}{\\sqrt{\\pi}} \\int_0^{\\frac{\\sqrt{3}}{\\sqrt{2}}x} e^{-t^2} dt \\Biggr)' \\)";
     var EDL1EVerif3bis = "\\(  y_g'(x) -5x.y_g(x)  = \\frac{\\sqrt{\\pi}\\sqrt{2}\\sqrt{2}}{\\sqrt{\\pi}\\sqrt{3}\\sqrt{2}}.e^{\\frac{5}{2}x^2} . \\Biggl( \\int_0^{\\frac{\\sqrt{3}}{\\sqrt{2}}x} e^{-t^2} dt \\Biggr)' \\)";
 
-    var leibniz = "\\( \\Biggl( \\int_{a(x)}^{b(x)} f(x, t)dt \\Biggr)' = f(x, b(x)).b'(x) - f(x, a(x)).a'(x) + \\int_{a(x)}^{b(x)} \\frac{\\partial f(x, t).dt}{\\partial x} \\)";
-    var leibniz2 = "\\( \\Biggl( \\int_{0}^{\\frac{\\sqrt{3}}{\\sqrt{2}}x} e^{-t^2} dt \\Biggr)' = f \\left(x, \\frac{\\sqrt{3}}{\\sqrt{2}}x \\right).\\frac{\\sqrt{3}}{\\sqrt{2}} - \\underbrace { f(x, 0) \\times 0  } _\\text{= 0} +  \\underbrace { \\int_{0}^{\\frac{\\sqrt{3}}{\\sqrt{2}}x} \\frac{\\partial f(x, t)}{\\partial x} dt } _\\text {= 0} \\)";
-    var leibniz3 = "\\( \\Biggl( \\int_{0}^{\\frac{\\sqrt{3}}{\\sqrt{2}}x} e^{-t^2} dt \\Biggr)' = \\frac{\\sqrt{3}}{\\sqrt{2}} e^{-\\frac{3}{2}x^2 } \\)";
+    var leibniz = "\\( \\frac{d}{dx} \\Biggl( \\int_{a(x)}^{b(x)} f(x, t)dt \\Biggr)= f(x, b(x)).b'(x) - f(x, a(x)).a'(x) + \\int_{a(x)}^{b(x)} \\frac{\\partial f(x, t).dt}{\\partial x} \\)";
+    var leibniz2 = "\\( \\frac{d}{dx} \\Biggl( \\int_{0}^{\\frac{\\sqrt{3}}{\\sqrt{2}}x} e^{-t^2} dt \\Biggr) = f \\left(x, \\frac{\\sqrt{3}}{\\sqrt{2}}x \\right).\\frac{\\sqrt{3}}{\\sqrt{2}} - \\underbrace { f(x, 0) \\times 0  } _\\text{= 0} +  \\underbrace { \\int_{0}^{\\frac{\\sqrt{3}}{\\sqrt{2}}x} \\frac{\\partial f(x, t)}{\\partial x} dt } _\\text {= 0} \\)";
+    var leibniz3 = "\\(  \\frac{d}{dx} \\Biggl( \\int_{0}^{\\frac{\\sqrt{3}}{\\sqrt{2}}x} e^{-t^2} dt \\Biggr) = \\frac{\\sqrt{3}}{\\sqrt{2}} e^{-\\frac{3}{2}x^2 } \\)";
 
     var EDL1EVerif4 = "\\(  y_g'(x) -5x.y_g(x)  = \\frac{\\sqrt{\\pi}}{\\sqrt{3}\\sqrt{2}}.\\frac{\\sqrt{2}\\sqrt{2}}{\\sqrt{\\pi}}.e^{\\frac{5}{2}x^2} . \\frac{\\sqrt{3}}{\\sqrt{2}} e^{-\\frac{3}{2}x^2} \\)";
     var EDL1EVerif5 = "\\(  y_g'(x) -5x.y_g(x)  = e^{x^2}  \\)";

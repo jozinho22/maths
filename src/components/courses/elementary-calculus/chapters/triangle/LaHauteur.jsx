@@ -3,8 +3,8 @@ import React from 'react';
 import MathJaxInline from '../../../../mathjax-display/MathJaxInline';
 import ImageZoom from '../../../helpers/ImageZoom';
 
-import heights from '../assets/heights.png'
-import heights2 from '../assets/heights2.png'
+import heights from './assets/heights.png'
+import heights2 from './assets/heights2.png'
 
 const LaHauteur = () => {
 

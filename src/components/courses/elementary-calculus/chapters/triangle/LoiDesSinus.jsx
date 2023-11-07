@@ -4,8 +4,8 @@ import MathJaxDisplay from '../../../../mathjax-display/MathJaxDisplay';
 import MathJaxInline from '../../../../mathjax-display/MathJaxInline';
 import ImageZoom from '../../../helpers/ImageZoom';
 
-import triangleSinusRelation from '../assets/triangleSinusRelation.png'
-import triangleSinusRelationDemo from '../assets/triangleSinusRelationDemo.png'
+import triangleSinusRelation from './assets/triangleSinusRelation.png'
+import triangleSinusRelationDemo from './assets/triangleSinusRelationDemo.png'
 
 import PagesConstants from '../../../../immutable/nav/PagesConstants';
 import CoursesConstants from '../../../helpers/CoursesConstants';

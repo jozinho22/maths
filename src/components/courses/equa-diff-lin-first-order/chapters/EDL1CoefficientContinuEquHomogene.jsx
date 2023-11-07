@@ -13,7 +13,7 @@ const EDL1CoefficientContinuEquHomogene = () => {
     var EDL1HDemo2 = "\\( \\frac{y'(x)}{y(x)} = - a(x) \\)";
     var EDL1HDemo3 = "\\( \\int^x \\frac{y'(t)}{y(t)}dt = \\int^x - a(t)dt \\)";
 
-    var EDL1HDemo4 = "\\( ln|y(x)| = - A(x) + C, \\enspace (avec \\enspace C \\in \\mathbb{R}) \\)";
+    var EDL1HDemo4 = "\\( ln|y(x)| = - A(x) + C, \\enspace (avec \\enspace C \\in \\mathbb{R}, A(x) \\enspace une \\enspace primitive \\enspace de \\enspace a(x)) \\)";
     var EDL1HDemo5 = "\\( y(x) = \\pm \\enspace e^{- A(x) + C} \\)";
     var EDL1HDemo6 = "\\( y_h(x) = \\pm \\enspace e^{C} e^{- A(x)} \\)";
 
@@ -41,7 +41,6 @@ const EDL1CoefficientContinuEquHomogene = () => {
                 <p>On intègre des deux côtés :</p>
                 <MathJaxDisplay toShow={EDL1HDemo3} demo />
                 <MathJaxDisplay toShow={EDL1HDemo4} demo />
-                <p>Avec <MathJaxInline toShow={"$ A(x) + C $"} /> une primitive de <MathJaxInline toShow={"$ a(x) + C $"} />.</p>
                 <MathJaxDisplay toShow={EDL1HDemo5} demo />
                 <MathJaxDisplay toShow={EDL1HDemo6} demo />
                 <p>On distingue alors deux possibilités pour <MathJaxInline toShow={"$ y_h $"} /> : </p>
@@ -51,7 +50,7 @@ const EDL1CoefficientContinuEquHomogene = () => {
                     <MathJaxDisplay toShow={EDL1HDemo7bis}  />
                 </Container>
 
-                <p>Car en effet, que <MathJaxInline toShow={"$ K $"} /> soit positif ou négatif, les deux conviennts car on aura dans tous les cas <MathJaxInline toShow={"$ y_h $"} /> sera solution de <MathJaxInline toShow={"$ (H) $"} /> :</p>
+                <p>Car en effet, que <MathJaxInline toShow={"$ K $"} /> soit positif ou négatif, les deux conviennent car on aura dans tous les cas <MathJaxInline toShow={"$ y_h $"} /> sera solution de <MathJaxInline toShow={"$ (H) $"} /> :</p>
                 <MathJaxDisplay toShow={EDL1HDemo8yKplusOrMinus} demo />
             </>
 }

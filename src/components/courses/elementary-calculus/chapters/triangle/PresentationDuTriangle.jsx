@@ -2,11 +2,11 @@ import React from 'react';
 import MathJaxInline from '../../../../mathjax-display/MathJaxInline';
 import ImageZoom from '../../../helpers/ImageZoom';
 
-import triangles from '../assets/triangles.png'
+import triangles from './assets/triangles.png'
 
 import Title1 from '../../../helpers/Title1';
 
-const Presentation = () => {
+const PresentationDuTriangle = () => {
 
     var n = 0;
 
@@ -31,4 +31,4 @@ const Presentation = () => {
     )
 }
 
-export default Presentation;
+export default PresentationDuTriangle;

@@ -4,7 +4,7 @@ import MathJaxDisplay from '../../../../mathjax-display/MathJaxDisplay';
 import MathJaxInline from '../../../../mathjax-display/MathJaxInline';
 import ImageZoom from '../../../helpers/ImageZoom';
 
-import medianes from '../assets/medianes.png'
+import medianes from './assets/medianes.png'
 
 const LaMediane = () => {
 

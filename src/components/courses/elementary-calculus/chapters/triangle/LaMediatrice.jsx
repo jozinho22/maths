@@ -2,7 +2,7 @@ import React from 'react';
 
 import ImageZoom from '../../../helpers/ImageZoom';
 
-import mediatrices from '../assets/mediatrices.png'
+import mediatrices from './assets/mediatrices.png'
 
 const LaMediatrice = () => {
 

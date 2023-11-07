@@ -4,6 +4,9 @@ import MathJaxDisplay from '../../../mathjax-display/MathJaxDisplay';
 import MathJaxInline from '../../../mathjax-display/MathJaxInline';
 import Title1 from '../../helpers/Title1';
 import Title2 from '../../helpers/Title2';
+import PagesConstants from '../../../immutable/nav/PagesConstants';
+import CoursesConstants from '../../helpers/CoursesConstants';
+import Link from '../../../immutable/nav/Link';
 
 const EDL1CoefficientContinuEquGenerale = () => {
 
@@ -68,6 +71,7 @@ const EDL1CoefficientContinuEquGenerale = () => {
                     <MathJaxDisplay toShow={EDL1EYg2} />
                 </Container>
                 <p>La constante <MathJaxInline toShow={"$ K$"} /> pourra alors être déterminée à l'aide d'une condition initiale pour <MathJaxInline toShow={"$ y_g $"} />, par exemple <MathJaxInline toShow={"$ y_g(0) = 0 $"} />.  </p>
+                <p>Comme nous l'avons vu au chapitre sur <Link url={`${PagesConstants.PREFIX}${PagesConstants.COURS}${CoursesConstants.EQ_DIFF_LIN_ORDRE_1}/principe-de-superposition`} external>le principe de superposition</Link>, la solution <MathJaxInline toShow={"$ y_0$"} /> elle-même peut être la somme de plusieurs solutions.</p>
             </>
 }
 

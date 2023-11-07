@@ -71,7 +71,7 @@ const PrincipeDeSuperpositionDemo = () => {
                 <MathJaxDisplay toShow={verifEnwithLambda} fRef={"\\lambda_n \\tilde{E_k}"} demo />
 
                 <Title2 title={"Solution particulière totale yt"} />
-                <p>On additionne alors toutes les équations <MathJaxInline toShow={"$ (\\lambda_k \\tilde{E_k}) $"} /> pour <MathJaxInline toShow={"$ k =  0$"} /> jusque <MathJaxInline toShow={"$ n $"} />, et cela donne :</p>
+                <p>On additionne alors toutes les équations <MathJaxInline toShow={"$ (\\lambda_k \\tilde{E_k}) $"} /> pour <MathJaxInline toShow={"$ k =  1$"} /> jusque <MathJaxInline toShow={"$ n $"} />, et cela donne :</p>
                 <MathJaxDisplay toShow={verifEnY} demo />
                 <MathJaxDisplay toShow={verifEnYBis} demo />
                 <p>On aura alors comme solution totale particulière de <MathJaxInline toShow={"$ (\\tilde{E}) $"} />, soit aussi de <MathJaxInline toShow={"$ (E) $"} />, la fonction :</p>
