@@ -88,122 +88,41 @@
     <lastmod>2023-10-29T10:10:00+00:00</lastmod>
     <priority>0.64</priority>
   </url>
-
-  <!-- Cours : équations du premier degré -->
   <url>
-    <loc>https://jozinho22.github.io/maths/#/cours/les-equations-du-premier-degre</loc>
-    <lastmod>2023-10-22T22:12:00+00:00</lastmod>
+    <loc>https://jozinho22.github.io/maths/#/cours/le-calcul-elementaire/presentation-du-triangle</loc>
+    <lastmod>2023-10-29T10:10:00+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://jozinho22.github.io/maths/#/cours/les-equations-du-premier-degre/resolution</loc>
-    <lastmod>2023-10-22T22:12:00+00:00</lastmod>
+    <loc>https://jozinho22.github.io/maths/#/cours/le-calcul-elementaire/la-hauteur-du-triangle</loc>
+    <lastmod>2023-10-29T10:10:00+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://jozinho22.github.io/maths/#/cours/les-equations-du-premier-degre/aspect</loc>
-    <lastmod>2023-10-22T22:12:00+00:00</lastmod>
+    <loc>https://jozinho22.github.io/maths/#/cours/le-calcul-elementaire/la-mediane-du-triangle</loc>
+    <lastmod>2023-10-29T10:10:00+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://jozinho22.github.io/maths/#/cours/les-equations-du-premier-degre/resolution-d-inequations</loc>
-    <lastmod>2023-10-22T22:12:00+00:00</lastmod>
+    <loc>https://jozinho22.github.io/maths/#/cours/le-calcul-elementaire/la-mediatrice-du-triangle</loc>
+    <lastmod>2023-10-29T10:10:00+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://jozinho22.github.io/maths/#/cours/les-equations-du-premier-degre/tableaux-de-signes</loc>
-    <lastmod>2023-10-22T22:12:00+00:00</lastmod>
-    <priority>0.64</priority>
-  </url>
-
-  <!-- Cours : équations du second degré -->
-  <url>
-    <loc>https://jozinho22.github.io/maths/#/cours/les-equations-du-second-degre</loc>
-    <lastmod>2023-10-22T22:12:00+00:00</lastmod>
+    <loc>https://jozinho22.github.io/maths/#/cours/le-calcul-elementaire/la-bissectrice-du-triangle</loc>
+    <lastmod>2023-10-29T10:10:00+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://jozinho22.github.io/maths/#/cours/les-equations-du-second-degre/resolution</loc>
-    <lastmod>2023-10-22T22:12:00+00:00</lastmod>
+    <loc>https://jozinho22.github.io/maths/#/cours/le-calcul-elementaire/loi-des-sinus</loc>
+    <lastmod>2023-10-29T10:10:00+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://jozinho22.github.io/maths/#/cours/les-equations-du-second-degre/relation-entre-coefficients-et-racines</loc>
-    <lastmod>2023-10-22T22:12:00+00:00</lastmod>
+    <loc>https://jozinho22.github.io/maths/#/cours/le-calcul-elementaire/loi-des-cosinus</loc>
+    <lastmod>2023-10-29T10:10:00+00:00</lastmod>
     <priority>0.64</priority>
   </url>
-  <url>
-    <loc>https://jozinho22.github.io/maths/#/cours/les-equations-du-second-degre/tableaux-de-signes-et-de-variations</loc>
-    <lastmod>2023-10-22T22:12:00+00:00</lastmod>
-    <priority>0.64</priority>
-  </url>
-  <url>
-    <loc>https://jozinho22.github.io/maths/#/cours/les-equations-du-second-degre/aspect</loc>
-    <lastmod>2023-10-22T22:12:00+00:00</lastmod>
-    <priority>0.64</priority>
-  </url>
-  <url>
-    <loc>https://jozinho22.github.io/maths/#/cours/les-equations-du-second-degre/tableaux-de-signes-et-de-variations-exemple</loc>
-    <lastmod>2023-10-22T22:12:00+00:00</lastmod>
-    <priority>0.64</priority>
-  </url>
-  <url>
-    <loc>https://jozinho22.github.io/maths/#/cours/les-equations-du-second-degre/tableaux-de-signes-et-de-variations-cas-general</loc>
-    <lastmod>2023-10-22T22:12:00+00:00</lastmod>
-    <priority>0.64</priority>
-  </url>
-  <url>
-    <loc>https://jozinho22.github.io/maths/#/cours/les-equations-du-second-degre/decomposition-d-un-inverse-de-polynome-en-elements-simples</loc>
-    <lastmod>2023-10-27T15:00:00+00:00</lastmod>
-    <priority>0.64</priority>
-  </url>
-
-  <!-- Cours : équations diff linéaires d'ordre 1 -->
-  <url>
-    <loc>https://jozinho22.github.io/maths/#/cours/les-equations-differentielles-lineaires-d-ordre-1</loc>
-    <lastmod>2023-11-04T20:00:00+00:00</lastmod>
-    <priority>0.64</priority>
-  </url>
-  <url>
-    <loc>https://jozinho22.github.io/maths/#/cours/les-equations-differentielles-lineaires-d-ordre-1/presentation</loc>
-    <lastmod>2023-11-04T20:00:00+00:00</lastmod>
-    <priority>0.64</priority>
-  </url>
-  <url>
-    <loc>https://jozinho22.github.io/maths/#/cours/les-equations-differentielles-lineaires-d-ordre-1/principe-de-superposition</loc>
-    <lastmod>2023-11-04T20:00:00+00:00</lastmod>
-    <priority>0.64</priority>
-  </url>
-  <url>
-    <loc>https://jozinho22.github.io/maths/#/cours/les-equations-differentielles-lineaires-d-ordre-1/principe-de-superposition-demo</loc>
-    <lastmod>2023-11-04T20:00:00+00:00</lastmod>
-    <priority>0.64</priority>
-  </url>
-  <url>
-    <loc>https://jozinho22.github.io/maths/#/cours/les-equations-differentielles-lineaires-d-ordre-1/resolution-edl1-a-coefficient-continu-equ-homogene</loc>
-    <lastmod>2023-11-04T20:00:00+00:00</lastmod>
-    <priority>0.64</priority>
-  </url>
-  <url>
-    <loc>https://jozinho22.github.io/maths/#/cours/les-equations-differentielles-lineaires-d-ordre-1/resolution-edl1-a-coefficient-continu-equ-generale</loc>
-    <lastmod>2023-11-04T20:00:00+00:00</lastmod>
-    <priority>0.64</priority>
-  </url>
-  <url>
-    <loc>https://jozinho22.github.io/maths/#/cours/les-equations-differentielles-lineaires-d-ordre-1/resolution-edl1-a-coefficient-continu-exemple-equ-homogene</loc>
-    <lastmod>2023-11-04T20:00:00+00:00</lastmod>
-    <priority>0.64</priority>
-  </url>
-  <url>
-    <loc>https://jozinho22.github.io/maths/#/cours/les-equations-differentielles-lineaires-d-ordre-1/resolution-edl1-a-coefficient-continu-exemple-equ-generale</loc>
-    <lastmod>2023-11-04T20:00:00+00:00</lastmod>
-    <priority>0.64</priority>
-  </url>
-  <url>
-    <loc>https://jozinho22.github.io/maths/#/cours/les-equations-differentielles-lineaires-d-ordre-1/resolution-edl1-a-coefficient-continu-exemple-verif</loc>
-    <lastmod>2023-11-04T20:00:00+00:00</lastmod>
-    <priority>0.64</priority>
-  </url> 
 
   <!-- Cours : puissances -->
   <url>
@@ -303,6 +222,75 @@
   <url>
     <loc>https://jozinho22.github.io/maths/#/cours/le-theoreme-de-thales/demonstration</loc>
     <lastmod>2023-10-22T22:12:00+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+
+ <!-- Cours : équations du premier degré -->
+  <url>
+    <loc>https://jozinho22.github.io/maths/#/cours/les-equations-du-premier-degre</loc>
+    <lastmod>2023-10-22T22:12:00+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://jozinho22.github.io/maths/#/cours/les-equations-du-premier-degre/resolution</loc>
+    <lastmod>2023-10-22T22:12:00+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://jozinho22.github.io/maths/#/cours/les-equations-du-premier-degre/aspect</loc>
+    <lastmod>2023-10-22T22:12:00+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://jozinho22.github.io/maths/#/cours/les-equations-du-premier-degre/resolution-d-inequations</loc>
+    <lastmod>2023-10-22T22:12:00+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://jozinho22.github.io/maths/#/cours/les-equations-du-premier-degre/tableaux-de-signes</loc>
+    <lastmod>2023-10-22T22:12:00+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+
+  <!-- Cours : équations du second degré -->
+  <url>
+    <loc>https://jozinho22.github.io/maths/#/cours/les-equations-du-second-degre</loc>
+    <lastmod>2023-10-22T22:12:00+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://jozinho22.github.io/maths/#/cours/les-equations-du-second-degre/resolution</loc>
+    <lastmod>2023-10-22T22:12:00+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://jozinho22.github.io/maths/#/cours/les-equations-du-second-degre/relation-entre-coefficients-et-racines</loc>
+    <lastmod>2023-10-22T22:12:00+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://jozinho22.github.io/maths/#/cours/les-equations-du-second-degre/tableaux-de-signes-et-de-variations</loc>
+    <lastmod>2023-10-22T22:12:00+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://jozinho22.github.io/maths/#/cours/les-equations-du-second-degre/aspect</loc>
+    <lastmod>2023-10-22T22:12:00+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://jozinho22.github.io/maths/#/cours/les-equations-du-second-degre/tableaux-de-signes-et-de-variations-exemple</loc>
+    <lastmod>2023-10-22T22:12:00+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://jozinho22.github.io/maths/#/cours/les-equations-du-second-degre/tableaux-de-signes-et-de-variations-cas-general</loc>
+    <lastmod>2023-10-22T22:12:00+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://jozinho22.github.io/maths/#/cours/les-equations-du-second-degre/decomposition-d-un-inverse-de-polynome-en-elements-simples</loc>
+    <lastmod>2023-10-27T15:00:00+00:00</lastmod>
     <priority>0.64</priority>
   </url>
 
@@ -629,6 +617,53 @@
     <priority>0.64</priority>
   </url>
  
+  <!-- Cours : équations diff linéaires d'ordre 1 -->
+  <url>
+    <loc>https://jozinho22.github.io/maths/#/cours/les-equations-differentielles-lineaires-d-ordre-1</loc>
+    <lastmod>2023-11-04T20:00:00+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://jozinho22.github.io/maths/#/cours/les-equations-differentielles-lineaires-d-ordre-1/presentation</loc>
+    <lastmod>2023-11-04T20:00:00+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://jozinho22.github.io/maths/#/cours/les-equations-differentielles-lineaires-d-ordre-1/principe-de-superposition</loc>
+    <lastmod>2023-11-04T20:00:00+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://jozinho22.github.io/maths/#/cours/les-equations-differentielles-lineaires-d-ordre-1/principe-de-superposition-demo</loc>
+    <lastmod>2023-11-04T20:00:00+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://jozinho22.github.io/maths/#/cours/les-equations-differentielles-lineaires-d-ordre-1/resolution-edl1-a-coefficient-continu-equ-homogene</loc>
+    <lastmod>2023-11-04T20:00:00+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://jozinho22.github.io/maths/#/cours/les-equations-differentielles-lineaires-d-ordre-1/resolution-edl1-a-coefficient-continu-equ-generale</loc>
+    <lastmod>2023-11-04T20:00:00+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://jozinho22.github.io/maths/#/cours/les-equations-differentielles-lineaires-d-ordre-1/resolution-edl1-a-coefficient-continu-exemple-equ-homogene</loc>
+    <lastmod>2023-11-04T20:00:00+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://jozinho22.github.io/maths/#/cours/les-equations-differentielles-lineaires-d-ordre-1/resolution-edl1-a-coefficient-continu-exemple-equ-generale</loc>
+    <lastmod>2023-11-04T20:00:00+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://jozinho22.github.io/maths/#/cours/les-equations-differentielles-lineaires-d-ordre-1/resolution-edl1-a-coefficient-continu-exemple-verif</loc>
+    <lastmod>2023-11-04T20:00:00+00:00</lastmod>
+    <priority>0.64</priority>
+  </url> 
+
   <!-- Cours : développement limités -->
   <url>
     <loc>https://jozinho22.github.io/maths/#/cours/les-developpements-limites</loc>
