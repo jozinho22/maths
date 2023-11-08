@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/maths/static/css/main.a64b9cbd.css",
-    "main.js": "/maths/static/js/main.07ba40dc.js",
+    "main.css": "/maths/static/css/main.8a907b42.css",
+    "main.js": "/maths/static/js/main.534d4bd1.js",
     "static/js/27.035b7279.chunk.js": "/maths/static/js/27.035b7279.chunk.js",
     "static/media/energetiquementVotre.pdf": "/maths/static/media/energetiquementVotre.ae46a881d6240ff7c375.pdf",
     "static/media/bigBang.pdf": "/maths/static/media/bigBang.9a7278fe34a3a9cbd1fe.pdf",
@@ -43,6 +43,7 @@
     "static/media/derivative2XSensVar.png": "/maths/static/media/derivative2XSensVar.6fec6919027c76ae1458.png",
     "static/media/circleTrigoValues.png": "/maths/static/media/circleTrigoValues.55196b1b99267412d12d.png",
     "static/media/sphereVolCalculus.png": "/maths/static/media/sphereVolCalculus.801808ebc0ce771699ab.png",
+    "static/media/bissectrices.png": "/maths/static/media/bissectrices.2bf2e7a2270fae395174.png",
     "static/media/integration.png": "/maths/static/media/integration.2ac3b789f5155e800fb3.png",
     "static/media/pythagoreDemo2.png": "/maths/static/media/pythagoreDemo2.d32329243efba6f9043c.png",
     "static/media/derivativeBetterApprox.png": "/maths/static/media/derivativeBetterApprox.6d439efae4403b496b79.png",
@@ -56,7 +57,6 @@
     "static/media/pythagoreApplication3d2.png": "/maths/static/media/pythagoreApplication3d2.0aa58b4251b0aff1d75a.png",
     "static/media/differentsCoefDirecteurs.png": "/maths/static/media/differentsCoefDirecteurs.21f6a7f125e6e1a63cfb.png",
     "static/media/derivativeFirstApprox.png": "/maths/static/media/derivativeFirstApprox.25ef746d84da0c12cc68.png",
-    "static/media/bissectrices.png": "/maths/static/media/bissectrices.97c4bb4f25925a65e1a2.png",
     "static/media/coneAreaCalculus.png": "/maths/static/media/coneAreaCalculus.7db9c6129013838b8959.png",
     "static/media/pythagoreApplication3d.png": "/maths/static/media/pythagoreApplication3d.68c2703b04a6cb1d211b.png",
     "static/media/alKashiDemo3.png": "/maths/static/media/alKashiDemo3.c2fd205edc36e292d18e.png",
@@ -85,7 +85,7 @@
     "index.html": "/maths/index.html"
   },
   "entrypoints": [
-    "static/css/main.a64b9cbd.css",
-    "static/js/main.07ba40dc.js"
+    "static/css/main.8a907b42.css",
+    "static/js/main.534d4bd1.js"
   ]
 }
