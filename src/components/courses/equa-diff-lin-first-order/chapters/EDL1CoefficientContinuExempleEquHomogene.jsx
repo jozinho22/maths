@@ -18,6 +18,7 @@ const EDL1CoefficientContinuExempleEquHomogene = () => {
     var EDL1HDemo6 = "\\( y_h(x) = K. e^{\\frac{5}{2}x^2} \\)";
 
     return  <>
+                <p>Soit <MathJaxInline toShow={"$ y(x) $"} />, une fonction et <MathJaxInline toShow={"$ y'(x) $"} /> sa dérivée.</p>
                 <p>Tentons de résoudre l'équation <MathJaxInline toShow={"$ (E) $"} /> ci-dessous :</p>
                 <MathJaxDisplay toShow={EDL1} fRef={"E"} demo />
 

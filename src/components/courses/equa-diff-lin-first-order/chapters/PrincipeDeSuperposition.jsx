@@ -16,7 +16,7 @@ const PrincipeDeSuperposition = () => {
     var edl1 = "\\( y'(x) + a(x).y(x) = f(x) \\)";
     var fEqualsFiX = "\\( f(x) = \\lambda_1. f_1(x) + \\lambda_2 .f_2(x) \\enspace + \\enspace ... \\enspace + \\enspace \\lambda_n .f_n(x)  \\enspace (avec  \\enspace n \\in \\mathbb{N}, \\enspace \\{ \\lambda_1,   \\lambda_2, ... ,  \\lambda_n \\} \\in \\mathbb{R} ) \\)";
  
-  var edl1F1X = "\\( y_1'(x) + a(x).y_1(x) = f_1(x) \\)";
+    var edl1F1X = "\\( y_1'(x) + a(x).y_1(x) = f_1(x) \\)";
     var edl1F2X = "\\( y_2'(x) + a(x).y_2(x) = f_2(x) \\)";
     var edl1FKX_ = "\\( .............................. \\)";
     var edl1FKX = "\\( y_k'(x) + a(x).y_k(x) = f_k(x) \\)";

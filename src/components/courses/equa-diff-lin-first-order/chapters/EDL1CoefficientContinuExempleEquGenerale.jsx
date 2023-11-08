@@ -21,7 +21,7 @@ const EDL1CoefficientContinuExempleEquGenerale = () => {
     var EDL1E2bis2 = "\\( K'(x) = e^{x^2}. e^{-\\frac{5}{2}x^2}  \\)";
     var EDL1E2bis3 = "\\( K'(x) = e^{-\\frac{3}{2}x^2}  \\)";
 
-    var EDL1EK = "\\(  K(x) = \\int^x f(t) e^{-\\frac{3}{2}t^2}dt \\)";
+    var EDL1EK = "\\(  K(x) = \\int^x e^{-\\frac{3}{2}t^2}dt \\)";
     var EDL1EK2 = "\\(  K(x) = \\frac{\\sqrt{\\pi}}{\\sqrt{3}\\sqrt{2}}. erf \\left (\\frac{\\sqrt{3}}{\\sqrt{2}}x \\right) \\)";
     
     var erf = "\\(  erf(x) = \\frac{2}{\\pi} \\int_0^x e^{-t^2} dt \\)";
@@ -46,7 +46,7 @@ const EDL1CoefficientContinuExempleEquGenerale = () => {
                 <MathJaxDisplay toShow={EDL1EInj} demo />
                 <MathJaxDisplay toShow={EDL1EInj2} fRef={2} demo />
 
-                <p>Soit en réunissant  les membres de droite de <MathJaxInline toShow={"$ (2) $"} /> et <MathJaxInline toShow={"$ (E) $"} /> : </p>
+                <p>Soit en réunissant les membres de droite de <MathJaxInline toShow={"$ (2) $"} /> et <MathJaxInline toShow={"$ (E) $"} /> : </p>
                 <MathJaxDisplay toShow={EDL1E2} demo />
                 <p>Soit en arrangeant :</p>
                 <MathJaxDisplay toShow={EDL1E2bis} demo />
