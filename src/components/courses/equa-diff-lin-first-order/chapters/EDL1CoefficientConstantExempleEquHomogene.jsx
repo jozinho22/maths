@@ -11,11 +11,11 @@ const EDL1CoefficientConstantExempleEquHomogene = () => {
 
     var EDL1 = "\\( y'(x) + 2y(x) = x^2 - 3 cos(x) -1 \\)";
 
-    var edlHF1X = "\\( y_1'(x) + 2.y_1(x) = 0 \\)";
+    var edlHF1X = "\\( y'(x) + 2.y(x) = 0 \\)";
 
-    var edl1F1X = "\\( y_1'(x) + 2.y_1(x) = x^2 \\)";
-    var edl1F2X = "\\( y_1'(x) + 2.y_1(x) = cos(x) \\)";
-    var edl1F3X = "\\( y_1'(x) + 2.y_1(x) = 1 \\)";
+    var edl1F1X = "\\( y'(x) + 2.y(x) = x^2 \\)";
+    var edl1F2X = "\\( y'(x) + 2.y(x) = cos(x) \\)";
+    var edl1F3X = "\\( y'(x) + 2.y(x) = 1 \\)";
 
     var EDL1H = "\\( y'(x) +2 y(x) = 0 \\)";
     var EDL1HDemo = "\\( y'(x) = -2.y(x) \\)";
@@ -28,11 +28,11 @@ const EDL1CoefficientConstantExempleEquHomogene = () => {
 
     return  <>
                 <p>Dans cette partie, nous allons résoudre une équation différentielle linéaire d'ordre 1, mais cette fois-ci avec un coefficient constant.</p>
-                <p>Cet exemple comprendra l'application de <Link url={`${PagesConstants.PREFIX}${PagesConstants.COURS}${CoursesConstants.EQ_DIFF_LIN_ORDRE_1}/principe-de-superposition`} external>principe de superposition</Link>.</p>
+                <p>Cet exemple comprendra aussi l'application du <Link url={`${PagesConstants.PREFIX}${PagesConstants.COURS}${CoursesConstants.EQ_DIFF_LIN_ORDRE_1}/principe-de-superposition`} external>principe de superposition</Link>.</p>
                 
                 <p>Tentons de résoudre l'équation <MathJaxInline toShow={"$ (\\tilde{E}) $"} /> ci-dessous :</p>
                 <MathJaxDisplay toShow={EDL1} fRef={"\\tilde{E}"} demo />
-                <p>On aura alors quatre équations à résoudre :</p>
+                <p>On aura alors une série de quatre équations à résoudre :</p>
 
                 <MathJaxDisplay toShow={edlHF1X} fRef={"H"} demo />
                 <MathJaxDisplay toShow={edl1F1X} fRef={"\\tilde{E_1}"} demo />
