@@ -48,15 +48,15 @@ const getEquaDiffLinFirstOrderChapters = () => {
         {
             id: k++,
             component: <EDL1CoefficientContinuEquHomogene />,
-            title: 'Résolution d\'une équation différentielle linéaire d\'ordre 1 à coefficient continu (équation homogène)',
-            metaContent: 'Résolution d\'une équation différentielle linéaire d\'ordre 1 à coefficient continu (équation homogène).',
+            title: 'Résolution d\'une EDL1 à coefficient continu (équation homogène)',
+            metaContent: 'Résolution d\'une EDL1 à coefficient continu (équation homogène).',
             relativePath: '/resolution-edl1-a-coefficient-continu-equ-homogene'
         },
         {
             id: k++,
             component: <EDL1CoefficientContinuEquGenerale />,
-            title: 'Résolution d\'une équation différentielle linéaire d\'ordre 1 à coefficient continu (équation générale)',
-            metaContent: 'Résolution d\'une équation différentielle linéaire d\'ordre 1 à coefficient continu (équation générale).',
+            title: 'Résolution d\'une EDL1 à coefficient continu (équation générale)',
+            metaContent: 'Résolution d\'une EDL1 à coefficient continu (équation générale).',
             relativePath: '/resolution-edl1-a-coefficient-continu-equ-generale'
         },
         {
@@ -65,22 +65,22 @@ const getEquaDiffLinFirstOrderChapters = () => {
         {
             id: k++,
             component: <EDL1CoefficientContinuExempleEquHomogene />,
-            title: 'Exemple de résolution d\'une équation différentielle linéaire d\'ordre 1 à coefficient continu (équation homogène)',
-            metaContent: 'Exemple de résolution d\'une équation différentielle linéaire d\'ordre 1 à coefficient continu (équation homogène).',
+            title: 'Exemple de résolution d\'une EDL1 à coefficient continu (équation homogène)',
+            metaContent: 'Exemple de résolution d\'une EDL1 à coefficient continu (équation homogène).',
             relativePath: '/resolution-edl1-a-coefficient-continu-exemple-equ-homogene'
         },  
         {
             id: k++,
             component: <EDL1CoefficientContinuExempleEquGenerale />,
-            title: 'Exemple de résolution d\'une équation différentielle linéaire d\'ordre 1 à coefficient continu (équation générale)',
-            metaContent: 'Exemple de résolution d\'une équation différentielle linéaire d\'ordre 1 à coefficient continu (équation générale).',
+            title: 'Exemple de résolution d\'une EDL1 à coefficient continu (équation générale)',
+            metaContent: 'Exemple de résolution d\'une EDL1 à coefficient continu (équation générale).',
             relativePath: '/resolution-edl1-a-coefficient-continu-exemple-equ-generale'
         },    
         {
             id: k++,
             component: <EDL1CoefficientContinuExempleVerification />,
-            title: 'Exemple de résolution d\'une équation différentielle linéaire d\'ordre 1 à coefficient continu (vérification)',
-            metaContent: 'Exemple de résolution d\'une équation différentielle linéaire d\'ordre 1 à coefficient continu (vérification).',
+            title: 'Exemple de résolution d\'une EDL1 à coefficient continu (vérification)',
+            metaContent: 'Exemple de résolution d\'une EDL1 à coefficient continu (vérification).',
             relativePath: '/resolution-edl1-a-coefficient-continu-exemple-verif'
         },
         {
@@ -89,36 +89,36 @@ const getEquaDiffLinFirstOrderChapters = () => {
         {
             id: k++,
             component: <EDL1CoefficientConstantExempleEquHomogene />,
-            title: 'Exemple de résolution d\'une équation différentielle linéaire d\'ordre 1 à coefficient constant (équation homogène)',
-            metaContent: 'Exemple de résolution d\'une équation différentielle linéaire d\'ordre 1 à coefficient constant (équation homogène).',
+            title: 'Exemple de résolution d\'une EDL1 à coefficient constant (équation homogène)',
+            metaContent: 'Exemple de résolution d\'une EDL1 à coefficient constant (équation homogène).',
             relativePath: '/resolution-edl1-a-coefficient-constant-exemple-equ-homogene'
         }, 
         {
             id: k++,
             component: <EDL1CoefficientConstantExempleEqu1/>,
-            title: 'Exemple de résolution d\'une équation différentielle linéaire d\'ordre 1 à coefficient constant (équation 1)',
-            metaContent: 'Exemple de résolution d\'une équation différentielle linéaire d\'ordre 1 à coefficient constant (équation 1).',
+            title: 'Exemple de résolution d\'une EDL1 à coefficient constant (équation 1)',
+            metaContent: 'Exemple de résolution d\'une EDL1 à coefficient constant (équation 1).',
             relativePath: '/resolution-edl1-a-coefficient-constant-exemple-equ-1'
         }, 
         {
             id: k++,
             component: <EDL1CoefficientConstantExempleEqu2/>,
-            title: 'Exemple de résolution d\'une équation différentielle linéaire d\'ordre 1 à coefficient constant (équation 2)',
-            metaContent: 'Exemple de résolution d\'une équation différentielle linéaire d\'ordre 1 à coefficient constant (équation 2).',
+            title: 'Exemple de résolution d\'une EDL1 à coefficient constant (équation 2)',
+            metaContent: 'Exemple de résolution d\'une EDL1 à coefficient constant (équation 2).',
             relativePath: '/resolution-edl1-a-coefficient-constant-exemple-equ-2'
         }, 
         {
             id: k++,
             component: <EDL1CoefficientConstantExempleEqu3/>,
-            title: 'Exemple de résolution d\'une équation différentielle linéaire d\'ordre 1 à coefficient constant (équation 3)',
-            metaContent: 'Exemple de résolution d\'une équation différentielle linéaire d\'ordre 1 à coefficient constant (équation 3).',
+            title: 'Exemple de résolution d\'une EDL1 à coefficient constant (équation 3)',
+            metaContent: 'Exemple de résolution d\'une EDL1 à coefficient constant (équation 3).',
             relativePath: '/resolution-edl1-a-coefficient-constant-exemple-equ-3'
         }, 
         {
             id: k++,
             component: <EDL1CoefficientConstantExempleVerif/>,
-            title: 'Exemple de résolution d\'une équation différentielle linéaire d\'ordre 1 à coefficient constant (vérification)',
-            metaContent: 'Exemple de résolution d\'une équation différentielle linéaire d\'ordre 1 à coefficient constant (vérification).',
+            title: 'Exemple de résolution d\'une EDL1 à coefficient constant (vérification)',
+            metaContent: 'Exemple de résolution d\'une EDL1 à coefficient constant (vérification).',
             relativePath: '/resolution-edl1-a-coefficient-constant-exemple-verification'
         }
     ];
