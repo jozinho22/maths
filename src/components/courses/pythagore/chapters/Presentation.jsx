@@ -14,16 +14,19 @@ const Presentation = () => {
     var pyth2 = "\\(\\sqrt{c^2} = \\sqrt{a^2 + b^2} \\)";
     var pyth3 = "\\(c = \\sqrt{a^2 + b^2} \\)";
 
+    var pythWarning = "\\(\\sqrt{c^2} = \\sqrt{a^2 + b^2} \\Longrightarrow \\Biggl\\{ \\begin{gather*} c = \\sqrt{a^2 + b^2} \\\\ ou \\\\ c = - \\sqrt{a^2 + b^2}  \\end{gather*} \\)";
+
     return (
         <>
-            <Title1 title={"Le théorème"} />
             <p>Le théorème de Pythagore implique les côtés et les angles d'un triangle rectangle.</p>
             <p>Pour rappel, un triangle rectangle est un triangle avec un angle droit (<MathJaxInline toShow={"$\\frac{\\pi}{2} \\;rad \\; ou \\; 90° $"} /> ).</p>
-            <p>Si un triangle est rectangle tel que la figure ci-dessous :</p>
+            
+            <Title1 title={"Le théorème"} />
+            <p>Si un triangle formé par <MathJaxInline toShow={"$\\{a, \\; b, \\; c\\}$"} /> est rectangle entre <MathJaxInline toShow={"$a $"} /> et <MathJaxInline toShow={"$b$"} /> tel que la figure ci-dessous :</p>
             <ImageZoom src={pythagore} name="Le théorème de Pythagore" n={1} />
             <p>Alors, on a :</p>
             <Container className="Focus">
-                <MathJaxDisplay toShow={pyth} fRef={1} />
+                <MathJaxDisplay toShow={pyth} />
             </Container>
 
             <p>Cela implique alors aussi que : </p>
@@ -32,6 +35,10 @@ const Presentation = () => {
             <Container className="Focus">
                 <MathJaxDisplay toShow={pyth3} />
             </Container>
+
+            <p>Attention, on peut effectuer cette opération uniquement car nous travaillons sur des longueurs, qui sont de manière implicite des valeurs positives.</p>
+            <p>Dans le cas général :</p>
+            <MathJaxDisplay toShow={pythWarning} demo />
 
             <Title1 title={"La réciproque du théorème"} />
             <p>Si :</p>

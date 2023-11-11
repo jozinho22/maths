@@ -2,7 +2,8 @@ import Presentation from './chapters/Presentation';
 import DemonstrationDuTheoreme from './chapters/DemonstrationDuTheoreme';
 import DemonstrationDeLaReciproque from './chapters/DemonstrationDeLaReciproque'; 
 import TheoremeDAlKashi from './chapters/TheoremeDAlKashi';
-import Applications from './chapters/Applications';
+import MesuresDansLePlanEtDansLEspace from './chapters/MesuresDansLePlanEtDansLEspace';
+import DemonstrationDuTriangleRectangleDansLeCercle from './chapters/DemonstrationDuTriangleRectangleDansLeCercle';
 
 const getPythagoreChapters = () => {
 
@@ -38,10 +39,17 @@ const getPythagoreChapters = () => {
         },  
         {
             id: k++,
-            component: <Applications />,
-            title: 'Applications',
-            metaContent: 'Applications possibles du théorème de Pythagore (notamment des mesures de longueurs).',
-            relativePath: '/applications'
+            component: <MesuresDansLePlanEtDansLEspace />,
+            title: 'Mesure d\'une longueur dans le plan dans l\'espace',
+            metaContent: 'Mesure d\'une longueur dans le plan dans l\'espace.',
+            relativePath: '/mesure-de-longueur-dans-le-plan-et-dans-l-espace'
+        },
+        {
+            id: k++,
+            component: <DemonstrationDuTriangleRectangleDansLeCercle />,
+            title: 'Démonstration du triangle rectangle inscrit dans un cercle',
+            metaContent: 'Démonstration du triangle rectangle inscrit dans un cercle.',
+            relativePath: '/demonstration-du-triangle-rectangle-dans-le-cercle'
         },
         {
             title: 'Généralisation'

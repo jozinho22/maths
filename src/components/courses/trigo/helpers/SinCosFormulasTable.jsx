@@ -67,13 +67,13 @@ const SinCosFormulasTable = () => {
                 <thead>
                     <tr>
                         <th>
-                            <MathJaxInline toShow={"$\\alpha$"} />    
+                            <MathJaxInline toShow={"$angle \\enspace A$"} />    
                         </th>
                         <th>
-                            <MathJaxInline toShow={"$sin(\\alpha)$"} />   
+                            <MathJaxInline toShow={"$sin(A)$"} />   
                         </th>
                         <th>
-                            <MathJaxInline toShow={"$cos(\\alpha)$"} />      
+                            <MathJaxInline toShow={"$cos(A)$"} />      
                         </th>
                     </tr>
                 </thead>

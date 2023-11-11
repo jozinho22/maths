@@ -9,12 +9,17 @@ import pythagoreApplication2 from '../assets/pythagoreApplication2.png';
 
 import pythagoreApplication3d from '../assets/pythagoreApplication3d.png';
 import pythagoreApplication3d2 from '../assets/pythagoreApplication3d2.png';
+import PagesConstants from '../../../immutable/nav/PagesConstants';
+import CoursesConstants from '../../helpers/CoursesConstants';
+import Link from '../../../immutable/nav/Link';
 
-const Applications = () => {
+const MesuresDansLePlanEtDansLEspace = () => {
 
+    var n = 0;
     var ab22d = "\\(AB^2 =  AC^2 + BC^2  \\)";
     var ab22d2 = "\\(AB^2 =  (x_b - x_a)^2 + (y_b - y_a)^2  \\)";
     var ab22d3 = "\\(AB = \\sqrt{ (x_b - x_a)^2 + (y_b - y_a)^2 }  \\)";
+    var ab22d4 = "\\(AB = (x_a - x_b)^2 = (-(x_b - x_a))^2 = (x_b - x_a)^2 \\)";
 
     /* var abbaX = "\\( CA = x_a - x_b = -(x_b - x_a) \\)";
     var abbaY = "\\( CB = y_a - y_b = -(y_b - y_a) \\)";
@@ -29,11 +34,14 @@ const Applications = () => {
 
     return (
         <> 
-            <Title1 title={"a) Mesurer une longueur dans le plan"} />
-            <ImageZoom src={pythagoreApplication} name="Une longueur AB dans le plan" n={6} />
+            <p>Le <Link url={`${PagesConstants.PREFIX}${PagesConstants.COURS}${CoursesConstants.PYTHAGORE}/presentation`} external>théorème de Pythagore</Link> nous permet de mesurer des distances à la fois dans le plan mais aussi dans l'espace.</p>
+            
+            <Title1 title={"1) Mesurer une longueur dans le plan"} />
+           
             <p>Nous disposons d'un plan à deux dimensions <MathJaxInline toShow={"$\\vec{x}, \\vec{y}$"} /> dans lequel nous avons placé deux points <MathJaxInline toShow={"$A$"} /> et <MathJaxInline toShow={"$B$"} />. </p>
+            <ImageZoom src={pythagoreApplication} name="Une longueur AB dans le plan" n={++n} />
             <p>En prolongeant <MathJaxInline toShow={"$A$"} /> jusque <MathJaxInline toShow={"$x_b$"} /> et <MathJaxInline toShow={"$B$"} /> jusque <MathJaxInline toShow={"$y_a$"} />, on obtient un troisième point <MathJaxInline toShow={"$C$"} />.</p>
-            <ImageZoom src={pythagoreApplication2} name="Une longueur AB dans le plan (bis)" n={7} />
+            <ImageZoom src={pythagoreApplication2} name="Une longueur AB dans le plan (bis)" n={++n} />
             <p>Sur la figure ci-dessus, nous avons un triangle rectangle formé par <MathJaxInline toShow={"$AC$"} />, <MathJaxInline toShow={"$BC$"} /> et <MathJaxInline toShow={"$AB$"} /> représentant l'hypoténuse.</p>
             <p>En appliquant tout simplement le théorème de Pythagore dans ce triangle on a :</p>
             <MathJaxDisplay toShow={ab22d} demo />
@@ -42,14 +50,15 @@ const Applications = () => {
             <Container className="Focus">
                 <MathJaxDisplay toShow={ab22d3} />
             </Container>
-            <p>Si l'on inverse <MathJaxInline toShow={"$A$"} /> et <MathJaxInline toShow={"$B$"} /> on aura le même résultat puisqu'on aura toujours : </p>
-            <MathJaxDisplay toShow={ab22d} demo />
+            <p>Si l'on inverse <MathJaxInline toShow={"$A$"} /> et <MathJaxInline toShow={"$B$"} /> on aura le même résultat puisqu'un carré est toujours positif et  : </p>
+            <MathJaxDisplay toShow={ab22d4} demo />
 
-            <Title1 title={"b) Mesurer une droite dans l'espace"} />  
-            <ImageZoom src={pythagoreApplication3d} name="Une longueur AB dans l'espace" n={9} />
-            <p>Nous souhaitons à présent calculer la droite AB, mais dans un espace tridimensionnelle.</p>
+            <Title1 title={"2) Mesurer une longueur dans l'espace"} />  
+            <p>Nous souhaitons à présent calculer la longueur AB, mais dans un espace tridimensionnelle.</p>
+            <ImageZoom src={pythagoreApplication3d} name="Une longueur AB dans l'espace" n={++n} />
+            
             <p>Nous avons ajouté la longueur précédemment calculée (reportée pour former à présent <MathJaxInline toShow={"$AC$"} />) afin de former un nouveau triangle <MathJaxInline toShow={"$ABC$"} /> .</p>
-            <ImageZoom src={pythagoreApplication3d2} name="Une longueur AB dans l'espace (bis)" n={10} />
+            <ImageZoom src={pythagoreApplication3d2} name="Une longueur AB dans l'espace (bis)" n={++n} />
             <p>On sait par le calcul précédent que :</p>
             <MathJaxDisplay toShow={ac} demo />
             <p>Ensuite, on applique comme juste avant le théorème dans le triangle <MathJaxInline toShow={"$ABC$"} /> : </p>
@@ -64,4 +73,4 @@ const Applications = () => {
 
 }
 
-export default Applications;
+export default MesuresDansLePlanEtDansLEspace;

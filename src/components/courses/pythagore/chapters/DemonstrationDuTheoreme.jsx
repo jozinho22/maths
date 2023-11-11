@@ -14,11 +14,11 @@ import Link from '../../../immutable/nav/Link';
 
 const DemonstrationDuTheoremeDePythagore = () => {
 
-    var semblables = "\\(\\frac{b}{a} = \\frac{h}{c_1} = \\frac{c_2}{h}\\)";
-    var semblables2 = "\\(\\frac{c}{b} = \\frac{a}{h} = \\frac{b}{c_2} \\)";
-    var semblables3 = "\\(\\frac{c}{a} = \\frac{a}{c_1} = \\frac{b}{h} \\)";
+    var semblables = "\\(\\frac{b}{a} = \\frac{h_c}{c_1} = \\frac{c_2}{h_c}\\)";
+    var semblables2 = "\\(\\frac{c}{b} = \\frac{a}{h_c} = \\frac{b}{c_2} \\)";
+    var semblables3 = "\\(\\frac{c}{a} = \\frac{a}{c_1} = \\frac{b}{h_c} \\)";
 
-    var trianglesSemblables = "\\( \\{a, \\; b, \\; c\\}, \\{c_1, \\; h, \\; a\\}, \\{h, \\; c_2, \\; b\\}  \\)";
+    var trianglesSemblables = "\\( \\{a, \\; b, \\; c\\}, \\{c_1, \\; h_c, \\; a\\}, \\{h_c, \\; c_2, \\; b\\}  \\)";
 
     var ratio1 = "\\(\\frac{c}{a} = \\frac{a}{c_1} \\)";
     var ratio1pc = "\\(a^2 = c.c_1 \\)";
@@ -32,15 +32,15 @@ const DemonstrationDuTheoremeDePythagore = () => {
 
     return (
         <>
-            <p>Pour prouver la véracité du thèorème, reprenons le triangle précédent, et ajoutons-y sa hauteur <MathJaxInline toShow={"$h$"} />. </p>
+            <p>Pour prouver la véracité du thèorème, reprenons le triangle précédent, et ajoutons-y sa hauteur <MathJaxInline toShow={"$h_c$"} />. </p>
             <ImageZoom src={pythagoreDemo1} name="Démonstration du thèorème de Pythagore" n={2} />
             <p>
                 On sait que la somme des angles d'un triangle est égal à <MathJaxInline toShow={"$\\pi$"} /> (180°).
                 {"\n"}{"\n"} Dans le triangle principal <MathJaxInline toShow={"$\\{a, \\; b, \\; c\\}$"} />, on voit que <MathJaxInline toShow={"$\\alpha + \\beta + \\frac{\\pi}{2} = \\pi$"} />.
                 {"\n"} Cette relation générale va nous permettre de déduire d'autres angles.
-                {"\n"}{"\n"}Dans le triangle formé par <MathJaxInline toShow={"$\\{c_1, \\; h, \\; a\\}$"} />, on a un angle droit et l'angle <MathJaxInline toShow={"$\\beta$"} />.
+                {"\n"}{"\n"}Dans le triangle formé par <MathJaxInline toShow={"$\\{c_1, \\; h_c, \\; a\\}$"} />, on a un angle droit et l'angle <MathJaxInline toShow={"$\\beta$"} />.
                 {"\n"} Le troisième angle est donc <MathJaxInline toShow={"$\\alpha$"} />.
-                {"\n"}{"\n"}De même, dans le triangle formé par <MathJaxInline toShow={"$\\{h, \\; c_2, \\; b\\}$"} />, on a un angle droit et l'angle <MathJaxInline toShow={"$\\alpha$"} />.
+                {"\n"}{"\n"}De même, dans le triangle formé par <MathJaxInline toShow={"$\\{h_c, \\; c_2, \\; b\\}$"} />, on a un angle droit et l'angle <MathJaxInline toShow={"$\\alpha$"} />.
                 {"\n"} Le troisième angle est donc <MathJaxInline toShow={"$\\beta$"} />.
                 {"\n"}{"\n"}Nous les avons ajouté à la figure suivante :
             </p>

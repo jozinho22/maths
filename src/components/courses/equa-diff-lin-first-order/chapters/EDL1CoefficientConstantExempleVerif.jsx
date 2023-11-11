@@ -20,7 +20,7 @@ const EDL1CoefficientConstantExempleVerif = () => {
     return  <>
                 <p>Au chapitre précédent,nous avons trouvé comme solution générale : </p>
                 <MathJaxDisplay toShow={EDL1EYg} demo />
-                <p>Nous souhaitons alors savoir si cette celle-ci est bien solution de l'équation <MathJaxInline toShow={"$ \\tilde{E}$"} /> : </p>
+                <p>Nous souhaitons alors savoir si cette celle-ci est bien solution de l'équation <MathJaxInline toShow={"$ (\\tilde{E})$"} /> : </p>
                  <MathJaxDisplay toShow={EDL1E} fRef={"E"} demo />
                 <p>La vérification va consister à calculer <MathJaxInline toShow={"$ y_g'(x) $"} /> et recalculer <MathJaxInline toShow={"$ y_g'(x) +2y_g(x) $"} />.</p>
 

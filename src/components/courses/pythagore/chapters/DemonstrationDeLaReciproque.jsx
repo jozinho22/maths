@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Container } from 'react-bootstrap';
 import ImageZoom from '../../helpers/ImageZoom';
 import MathJaxInline from '../../../mathjax-display/MathJaxInline';
 import MathJaxDisplay from '../../../mathjax-display/MathJaxDisplay';
@@ -30,7 +30,7 @@ const DemonstrationDeLaReciproque = () => {
     var pythA3 = "\\(c_1 = \\sqrt{a^2 - h^2}\\)";
     var pythB3 = "\\(c_2 = \\sqrt{b^2 - h^2}\\)";
 
-    var gen3 = "\\(a^2 + b^2 = (\\sqrt{a^2 - h^2} + \\sqrt{b^2 - h^2})^2\\)";
+    var gen3 = "\\(a^2 + b^2 = \\left(\\sqrt{a^2 - h^2} + \\sqrt{b^2 - h^2} \\right)^2\\)";
     var gen4 = "\\(a^2 + b^2 = a^2 - h^2 + 2 \\sqrt{(a^2 - h^2)(b^2 - h^2)} + b^2 - h^2 \\)";
     var gen5 = "\\(0 = - 2h^2 + 2 \\sqrt{(a^2 - h^2)(b^2 - h^2)} \\)";
     var gen6 = "\\(0 = - 2h^2 + 2 \\sqrt{a^2b^2 - a^2h^2 - h^2b^2 + h^4} \\)";
@@ -67,6 +67,11 @@ const DemonstrationDeLaReciproque = () => {
                 <MathJaxDisplay toShow={areasEqu2} demo />
             </Aside>
 
+            <p>On cherche donc à prouver que :</p>
+            <Container className="Focus LittleFocus">
+                <MathJaxDisplay toShow={areasEqu2}  />
+            </Container>
+
             <p>Tentons de prouver cela en reprenant notre hypothèse de départ.</p>
             <MathJaxDisplay toShow={gen} demo />
             <MathJaxDisplay toShow={gen2} fRef={1} demo />
@@ -102,7 +107,8 @@ const DemonstrationDeLaReciproque = () => {
             <MathJaxDisplay toShow={gen14} demo />
             <p>Soit : </p>
             <MathJaxDisplay toShow={gen15} demo />
-            <p>On a bien prouvé que <MathJaxInline toShow={"$ ch = ab $"} />, soit que <MathJaxInline toShow={"$ b $"} /> est une hauteur du triangle et donc que le triangle est rectangle si <MathJaxInline toShow={"$ a^2 + b^2 = c^2 $"} />.</p>
+            <p>On a bien prouvé que que si on a l'égalité <MathJaxInline toShow={"$ a^2 + b^2 = c^2 $"} />, alors on a aussi <MathJaxInline toShow={"$ ch = ab $"} />, soit que <MathJaxInline toShow={"$ b $"} /> est une hauteur du triangle formé par <MathJaxInline toShow={"$\\{a, \\; b, \\; c\\}$"} />.</p>
+            <p><MathJaxInline toShow={"$ b $"} /> est une hauteur du triangle, alors le triangle formé par <MathJaxInline toShow={"$\\{a, \\; b, \\; c\\}$"} /> est rectangle entre <MathJaxInline toShow={"$ a$"} /> et <MathJaxInline toShow={"$ b $"} /></p>
             
         </>
     );

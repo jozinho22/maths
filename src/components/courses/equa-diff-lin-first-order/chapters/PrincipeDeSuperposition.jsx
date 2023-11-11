@@ -69,15 +69,13 @@ const PrincipeDeSuperposition = () => {
 
                 <Title2 title={"Exemple de superposition"} />
                 <p>SI on se tente de résoudre :</p>
-                <MathJaxDisplay toShow={fEqualsFiXExemple} fRef={"E"} demo />
+                <MathJaxDisplay toShow={fEqualsFiXExemple} fRef={"\\tilde{E}"} demo />
                 <p>Nous devons d'abord étudier les trois différentes solutions particulières <MathJaxInline toShow={"$ y_1, y_2,y_3 $"} /> des équations <MathJaxInline toShow={"$ (\\tilde{E_1}), (\\tilde{E_2}), (\\tilde{E_3}) $"} /> suivantes :</p>
                 <MathJaxDisplay toShow={edl1F1XExemple} fRef={"\\tilde{E_1}"} demo />
                 <MathJaxDisplay toShow={edl1F2XExemple} fRef={"\\tilde{E_2}"} demo />
                 <MathJaxDisplay toShow={edl1F3XExemple} fRef={"\\tilde{E_3}"} demo />
                 <p>On aura alors comme solution particulière la combinaison linéaire :</p>
                 <MathJaxDisplay toShow={edl1FiXSolutionsExemple} demo />
-
-                
             </>
 }
 
