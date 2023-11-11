@@ -198,7 +198,12 @@
     <priority>0.64</priority>
   </url> 
   <url>
-    <loc>https://jozinho22.github.io/maths/#/cours/le-theoreme-de-pythagore/applications</loc>
+    <loc>https://jozinho22.github.io/maths/#/cours/le-theoreme-de-pythagore/mesure-de-longueur-dans-le-plan-et-dans-l-espace</loc>
+    <lastmod>2023-10-22T22:12:00+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://jozinho22.github.io/maths/#/cours/le-theoreme-de-pythagore/demonstration-du-triangle-rectangle-dans-le-cercle</loc>
     <lastmod>2023-10-22T22:12:00+00:00</lastmod>
     <priority>0.64</priority>
   </url>
