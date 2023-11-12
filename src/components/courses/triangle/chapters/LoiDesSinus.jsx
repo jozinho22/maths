@@ -1,15 +1,16 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
-import MathJaxDisplay from '../../../../mathjax-display/MathJaxDisplay';
-import MathJaxInline from '../../../../mathjax-display/MathJaxInline';
-import ImageZoom from '../../../helpers/ImageZoom';
+import MathJaxDisplay from '../../../mathjax-display/MathJaxDisplay';
+import MathJaxInline from '../../../mathjax-display/MathJaxInline';
+import ImageZoom from '../../helpers/ImageZoom';
 
-import triangleSinusRelation from './assets/triangleSinusRelation.png'
-import triangleSinusRelationDemo from './assets/triangleSinusRelationDemo.png'
+import triangleSinusRelation from '../assets/triangleSinusRelation.png'
+import triangleSinusRelationDemo from '../assets/triangleSinusRelationDemo.png'
 
-import PagesConstants from '../../../../immutable/nav/PagesConstants';
-import CoursesConstants from '../../../helpers/CoursesConstants';
-import Link from '../../../../immutable/nav/Link';
+import PagesConstants from '../../../immutable/nav/PagesConstants';
+import CoursesConstants from '../../helpers/CoursesConstants';
+
+import Link from '../../../immutable/nav/Link';
 
 const LoiDesSinus = () => {
 

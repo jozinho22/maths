@@ -2,7 +2,7 @@ import MathJaxInline from '../../../mathjax-display/MathJaxInline';
 import GenericMathsNiceTable from '../../helpers/GenericMathsNiceTable';
 import useTableauRecapSymboles from '../helpers/useTableauRecapSymboles';
 
-const IndexDesSymboles = () => {
+const LesSymbolesUsuels = () => {
 
     return  <>
                 <p>Soit <MathJaxInline toShow={"$A, B$"} /> deux propositions.</p>
@@ -10,4 +10,4 @@ const IndexDesSymboles = () => {
             </>
 }
 
-export default IndexDesSymboles;
+export default LesSymbolesUsuels;

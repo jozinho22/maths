@@ -32,7 +32,7 @@ const DemonstrationDuTheoremeDePythagore = () => {
 
     return (
         <>
-            <p>Pour prouver la véracité du thèorème, reprenons le triangle précédent, et ajoutons-y sa hauteur <MathJaxInline toShow={"$h_c$"} />. </p>
+            <p>Pour prouver la véracité du thèorème, reprenons le triangle précédent, et ajoutons-y sa <Link url={`${PagesConstants.PREFIX}${PagesConstants.COURS}${CoursesConstants.TRIANGLE}/la-hauteur-du-triangle`} external>hauteur</Link> <MathJaxInline toShow={"$h_c$"} />. </p>
             <ImageZoom src={pythagoreDemo1} name="Démonstration du thèorème de Pythagore" n={2} />
             <p>
                 On sait que la somme des angles d'un triangle est égal à <MathJaxInline toShow={"$\\pi$"} /> (180°).

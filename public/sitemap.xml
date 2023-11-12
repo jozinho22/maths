@@ -22,12 +22,12 @@
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://jozinho22.github.io/maths/#/cours/les-symboles-mathematiques/index</loc>
+    <loc>https://jozinho22.github.io/maths/#/cours/les-symboles-mathematiques/les-symboles-usuels</loc>
     <lastmod>2023-10-22T22:12:00+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://jozinho22.github.io/maths/#/cours/les-symboles-mathematiques/index-2</loc>
+    <loc>https://jozinho22.github.io/maths/#/cours/les-symboles-mathematiques/les-symboles-usuels-2</loc>
     <lastmod>2023-10-22T22:12:00+00:00</lastmod>
     <priority>0.64</priority>
   </url>
@@ -44,7 +44,17 @@
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://jozinho22.github.io/maths/#/cours/le-calcul-elementaire/les-operations-de-base</loc>
+    <loc>https://jozinho22.github.io/maths/#/cours/le-calcul-elementaire/l-addition-la-soustraction</loc>
+    <lastmod>2023-10-22T22:12:00+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://jozinho22.github.io/maths/#/cours/le-calcul-elementaire/la-multiplication-la-division</loc>
+    <lastmod>2023-10-22T22:12:00+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://jozinho22.github.io/maths/#/cours/le-calcul-elementaire/les-priorites-de-calcul</loc>
     <lastmod>2023-10-22T22:12:00+00:00</lastmod>
     <priority>0.64</priority>
   </url>
@@ -85,41 +95,6 @@
   </url>
   <url>
     <loc>https://jozinho22.github.io/maths/#/cours/le-calcul-elementaire/le-triangle-de-pascal</loc>
-    <lastmod>2023-10-29T10:10:00+00:00</lastmod>
-    <priority>0.64</priority>
-  </url>
-  <url>
-    <loc>https://jozinho22.github.io/maths/#/cours/le-calcul-elementaire/presentation-du-triangle</loc>
-    <lastmod>2023-10-29T10:10:00+00:00</lastmod>
-    <priority>0.64</priority>
-  </url>
-  <url>
-    <loc>https://jozinho22.github.io/maths/#/cours/le-calcul-elementaire/la-hauteur-du-triangle</loc>
-    <lastmod>2023-10-29T10:10:00+00:00</lastmod>
-    <priority>0.64</priority>
-  </url>
-  <url>
-    <loc>https://jozinho22.github.io/maths/#/cours/le-calcul-elementaire/la-mediane-du-triangle</loc>
-    <lastmod>2023-10-29T10:10:00+00:00</lastmod>
-    <priority>0.64</priority>
-  </url>
-  <url>
-    <loc>https://jozinho22.github.io/maths/#/cours/le-calcul-elementaire/la-mediatrice-du-triangle</loc>
-    <lastmod>2023-10-29T10:10:00+00:00</lastmod>
-    <priority>0.64</priority>
-  </url>
-  <url>
-    <loc>https://jozinho22.github.io/maths/#/cours/le-calcul-elementaire/la-bissectrice-du-triangle</loc>
-    <lastmod>2023-10-29T10:10:00+00:00</lastmod>
-    <priority>0.64</priority>
-  </url>
-  <url>
-    <loc>https://jozinho22.github.io/maths/#/cours/le-calcul-elementaire/loi-des-sinus</loc>
-    <lastmod>2023-10-29T10:10:00+00:00</lastmod>
-    <priority>0.64</priority>
-  </url>
-  <url>
-    <loc>https://jozinho22.github.io/maths/#/cours/le-calcul-elementaire/loi-des-cosinus</loc>
     <lastmod>2023-10-29T10:10:00+00:00</lastmod>
     <priority>0.64</priority>
   </url>
@@ -176,6 +151,43 @@
     <priority>0.64</priority>
   </url>
 
+   <!-- Cours : triangle -->
+  <url>
+    <loc>https://jozinho22.github.io/maths/#/cours/le-triangle/presentation-du-triangle</loc>
+    <lastmod>2023-10-29T10:10:00+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://jozinho22.github.io/maths/#/cours/le-triangle/la-hauteur-du-triangle</loc>
+    <lastmod>2023-10-29T10:10:00+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://jozinho22.github.io/maths/#/cours/le-triangle/la-mediane-du-triangle</loc>
+    <lastmod>2023-10-29T10:10:00+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://jozinho22.github.io/maths/#/cours/le-triangle/la-mediatrice-du-triangle</loc>
+    <lastmod>2023-10-29T10:10:00+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://jozinho22.github.io/maths/#/cours/le-triangle/la-bissectrice-du-triangle</loc>
+    <lastmod>2023-10-29T10:10:00+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://jozinho22.github.io/maths/#/cours/le-triangle/loi-des-sinus</loc>
+    <lastmod>2023-10-29T10:10:00+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://jozinho22.github.io/maths/#/cours/le-triangle/loi-des-cosinus</loc>
+    <lastmod>2023-10-29T10:10:00+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+
   <!-- Cours : pythagore -->
   <url>
     <loc>https://jozinho22.github.io/maths/#/cours/le-theoreme-de-pythagore</loc>
@@ -226,6 +238,16 @@
   </url>
   <url>
     <loc>https://jozinho22.github.io/maths/#/cours/le-theoreme-de-thales/demonstration</loc>
+    <lastmod>2023-10-22T22:12:00+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://jozinho22.github.io/maths/#/cours/le-theoreme-de-thales/corollaire-loi-de-milieux</loc>
+    <lastmod>2023-10-22T22:12:00+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://jozinho22.github.io/maths/#/cours/le-theoreme-de-thales/demonstration-de-la-reciproque</loc>
     <lastmod>2023-10-22T22:12:00+00:00</lastmod>
     <priority>0.64</priority>
   </url>

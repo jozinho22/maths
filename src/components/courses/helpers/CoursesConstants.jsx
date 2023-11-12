@@ -5,6 +5,7 @@ const CoursesConstants = {
     EQ_2_DEG: '/les-equations-du-second-degre',
     EQ_DIFF_LIN_ORDRE_1 : '/les-equations-differentielles-lineaires-d-ordre-1',
     PUISSANCES: '/les-puissances',
+    TRIANGLE: '/le-triangle',
     PYTHAGORE: '/le-theoreme-de-pythagore',
     THALES: '/le-theoreme-de-thales',
     
@@ -13,7 +14,7 @@ const CoursesConstants = {
     DERIVATION: '/la-derivation',
     PRIMITIVES_INTEGRATION: '/primitives-integration',
     DEVELOPPEMENTS_LIMITES: '/les-developpements-limites',
-   /*  GEOMETRY: '/la-geometrie', */
+    /* GEOMETRY: '/la-geometrie', */
     COMPLEXES: '/les-nombres-complexes',
     SEQUENCES: '/les-suites-numeriques',
     SERIES: '/les-series-numeriques',

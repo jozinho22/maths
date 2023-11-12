@@ -2,7 +2,7 @@ import MathJaxInline from '../../../mathjax-display/MathJaxInline';
 import GenericMathsNiceTable from '../../helpers/GenericMathsNiceTable';
 import useTableauRecapSymboles2 from '../helpers/useTableauRecapSymboles2';
 
-const IndexDesSymboles2 = () => {
+const LesSymbolesUsuels2 = () => {
 
     return  <>
                 <p>Soit <MathJaxInline toShow={"$f$"} /> une fonction.</p>
@@ -10,4 +10,4 @@ const IndexDesSymboles2 = () => {
             </>
 }
 
-export default IndexDesSymboles2;
+export default LesSymbolesUsuels2;

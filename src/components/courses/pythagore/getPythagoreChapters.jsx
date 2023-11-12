@@ -52,7 +52,7 @@ const getPythagoreChapters = () => {
             relativePath: '/demonstration-du-triangle-rectangle-dans-le-cercle'
         },
         {
-            title: 'Généralisation'
+            title: 'Généralisation à tous les triangles'
         },  
         {
             id: k++,

@@ -52,7 +52,7 @@ const DemonstrationDeLaReciproque = () => {
             <MathJaxDisplay toShow={gen} demo />
             <p>Voici à quoi ressemble notre figure : </p>
             <ImageZoom src={pythagoreReciproqueDemo} name="Triangle a priori rectangle" n={++n} />
-            <p>Nous allons tracer la hauteur <MathJaxInline toShow={"$ h_c$"} /> qui coupe la longueur <MathJaxInline toShow={"$ c $"} /> à angle droit.</p>
+            <p>Nous allons tracer <Link url={`${PagesConstants.PREFIX}${PagesConstants.COURS}${CoursesConstants.TRIANGLE}/la-hauteur-du-triangle`} external>la hauteur</Link> <MathJaxInline toShow={"$ h_c$"} /> qui coupe la longueur <MathJaxInline toShow={"$ c $"} /> à angle droit.</p>
             <ImageZoom src={pythagoreReciproqueDemo2} name="Triangle a priori rectangle avec la hauteur de c" n={++n} />
             <p>Nous savons que la surface d'un triangle répond à la formule suivante : </p>
             <MathJaxDisplay toShow={triangleArea} demo />
@@ -61,7 +61,7 @@ const DemonstrationDeLaReciproque = () => {
             <p>De plus, s'il existe un angle droit entre <MathJaxInline toShow={"$a$"} /> et <MathJaxInline toShow={"$b$"} />, alors on aura aussi : </p>
             <MathJaxDisplay toShow={triangleArea_ab} demo />
             <Aside>
-                <p>Cela signifira alors que <MathJaxInline toShow={"$b$"} /> est aussi une hauteur du triangle formé par <MathJaxInline toShow={"$\\{a, \\; b, \\; c\\}$"} /> et on aura bien un triangle rectangle.</p>
+                <p>Cela signifira alors que <MathJaxInline toShow={"$b$"} /> est aussi une <Link url={`${PagesConstants.PREFIX}${PagesConstants.COURS}${CoursesConstants.TRIANGLE}/la-hauteur-du-triangle`} external>hauteur</Link> du triangle formé par <MathJaxInline toShow={"$\\{a, \\; b, \\; c\\}$"} /> et on aura bien un triangle rectangle.</p>
                 <p>Si cette relation s'avère vrai, on aura alors l'équivalence suivante :</p>
                 <MathJaxDisplay toShow={areasEqu} demo />
                 <MathJaxDisplay toShow={areasEqu2} demo />
@@ -106,9 +106,11 @@ const DemonstrationDeLaReciproque = () => {
             <p>Et enfin : </p>
             <MathJaxDisplay toShow={gen14} demo />
             <p>Soit : </p>
-            <MathJaxDisplay toShow={gen15} demo />
-            <p>On a bien prouvé que que si on a l'égalité <MathJaxInline toShow={"$ a^2 + b^2 = c^2 $"} />, alors on a aussi <MathJaxInline toShow={"$ ch = ab $"} />, soit que <MathJaxInline toShow={"$ b $"} /> est une hauteur du triangle formé par <MathJaxInline toShow={"$\\{a, \\; b, \\; c\\}$"} />.</p>
-            <p><MathJaxInline toShow={"$ b $"} /> est une hauteur du triangle, alors le triangle formé par <MathJaxInline toShow={"$\\{a, \\; b, \\; c\\}$"} /> est rectangle entre <MathJaxInline toShow={"$ a$"} /> et <MathJaxInline toShow={"$ b $"} /></p>
+            <Container className="Focus LittleFocus">
+                <MathJaxDisplay toShow={gen15}  />
+            </Container>
+            <p>On a bien prouvé que que si on a l'égalité <MathJaxInline toShow={"$ a^2 + b^2 = c^2 $"} />, alors on a aussi <MathJaxInline toShow={"$ ch = ab $"} />, soit que <MathJaxInline toShow={"$ b $"} /> est bien une <Link url={`${PagesConstants.PREFIX}${PagesConstants.COURS}${CoursesConstants.TRIANGLE}/la-hauteur-du-triangle`} external>hauteur</Link> du triangle formé par <MathJaxInline toShow={"$\\{a, \\; b, \\; c\\}$"} />.</p>
+            <p>Si <MathJaxInline toShow={"$ b $"} /> est une <Link url={`${PagesConstants.PREFIX}${PagesConstants.COURS}${CoursesConstants.TRIANGLE}/la-hauteur-du-triangle`} external>hauteur</Link> du triangle, alors le triangle formé par <MathJaxInline toShow={"$\\{a, \\; b, \\; c\\}$"} /> est rectangle entre <MathJaxInline toShow={"$ a$"} /> et <MathJaxInline toShow={"$ b $"} />.</p>
             
         </>
     );

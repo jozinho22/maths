@@ -11,7 +11,7 @@ const Presentation = () => {
     var thalesTheorem = "\\( \\frac{AB}{AD} = \\frac{AC}{AE} = \\frac{BC}{DE} \\)";
     var thalesTheoremInv = "\\( \\frac{AD}{AB} = \\frac{AE}{AC} = \\frac{DE}{BC} \\)";
 
-    var thalesTheoremRecip = "\\(BC // DE \\)";
+    var thalesTheoremRecip = "\\(BC \\parallel DE \\)";
 
     return (
         <>
@@ -24,14 +24,14 @@ const Presentation = () => {
                 <MathJaxDisplay toShow={thalesTheorem} />
             </Container>
             <p>Par extension, on a aussi les relations inversées : </p>
-            <MathJaxDisplay toShow={thalesTheoremInv} />
+            <MathJaxDisplay toShow={thalesTheoremInv} demo />
 
             <Title1 title={"La réciproque du théorème"} />
             <p>Si :</p>
             <MathJaxDisplay toShow={thalesTheorem} demo />
             <p>Cela signifie que : </p>
             <Container className="Focus">
-                <MathJaxDisplay toShow={thalesTheoremRecip} fRef={1} />
+                <MathJaxDisplay toShow={thalesTheoremRecip} />
             </Container>
             <p>Où <MathJaxInline toShow={"$ // $"} /> signifie "est parallèle à".</p>
         </>

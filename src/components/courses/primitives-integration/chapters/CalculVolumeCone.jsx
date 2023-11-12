@@ -31,7 +31,7 @@ const CalculVolumeCone = () => {
 
     return (
         <>
-            <p>Soit un cône de hauteur <MathJaxInline toShow={"$h$"}/> et le rayon de sa base <MathJaxInline toShow={"$r$"}/>.</p>
+            <p>Soit un cône de <Link url={`${PagesConstants.PREFIX}${PagesConstants.COURS}${CoursesConstants.TRIANGLE}/la-hauteur-du-triangle`} external>hauteur</Link> <MathJaxInline toShow={"$h$"}/> et le rayon de sa base <MathJaxInline toShow={"$r$"}/>.</p>
             <p>Son volume vaut : </p>
             <Container className="Focus">
                 <MathJaxDisplay toShow={circleVolYResult} />
@@ -45,7 +45,7 @@ const CalculVolumeCone = () => {
                 {"\n"}
                 <MathJaxInline toShow={"$x$"}/> sera le rayon variable jusque <MathJaxInline toShow={"$r$"}/>.
                 {"\n"}
-                <MathJaxInline toShow={"$y$"}/> sera la hauteur variable jusque <MathJaxInline toShow={"$h$"}/>.
+                <MathJaxInline toShow={"$y$"}/> sera la <Link url={`${PagesConstants.PREFIX}${PagesConstants.COURS}${CoursesConstants.TRIANGLE}/la-hauteur-du-triangle`} external>hauteur</Link> variable jusque <MathJaxInline toShow={"$h$"}/>.
                 {"\n"}{"\n"}La variable <MathJaxInline toShow={"$x$"}/> est alors dépendant du mouvement de <MathJaxInline toShow={"$y$"}/>. C'est cette dernière qui mène la danse.
             </p>
             <p>Appliquons <Link url={`${PagesConstants.PREFIX}${PagesConstants.COURS}${CoursesConstants.THALES}/presentation`} external>le théorème de Thalès</Link> dans les deux triangles formés par ces variables.</p>
@@ -67,7 +67,7 @@ const CalculVolumeCone = () => {
             <MathJaxDisplay toShow={circleVolY3} demo />
             <MathJaxDisplay toShow={circleVolY4} demo />
             <MathJaxDisplay toShow={circleVolY5} demo />
-            <p>Le volume d'un cône de hauteur <MathJaxInline toShow={"$h$"}/> et de rayon <MathJaxInline toShow={"$r$"}/> est :</p>
+            <p>Le volume d'un cône de <Link url={`${PagesConstants.PREFIX}${PagesConstants.COURS}${CoursesConstants.TRIANGLE}/la-hauteur-du-triangle`} external>hauteur</Link> <MathJaxInline toShow={"$h$"}/> et de rayon <MathJaxInline toShow={"$r$"}/> est :</p>
             <Container className="Focus">
                 <MathJaxDisplay toShow={circleVolYResult} />
             </Container>

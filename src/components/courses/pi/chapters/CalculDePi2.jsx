@@ -9,6 +9,10 @@ import Title2 from '../../helpers/Title2';
 import circlePiCalculus2 from '../assets/circlePiCalculus2.png';
 import ImageZoom from '../../helpers/ImageZoom';
 
+import PagesConstants from '../../../immutable/nav/PagesConstants';
+import CoursesConstants from '../../helpers/CoursesConstants';
+import Link from '../../../immutable/nav/Link';
+
 const CalculDePi2 = () => {
 
     var n = 0;
@@ -53,7 +57,7 @@ const CalculDePi2 = () => {
             <MathJaxDisplay toShow={pi8c} demo />
             <MathJaxDisplay toShow={c} demo />
             <MathJaxDisplay toShow={c2} demo />  
-            <p>Ici, il nous faut calculer d'abord la hauteur <MathJaxInline toShow="$h_b$" /></p>  
+            <p>Ici, il nous faut calculer d'abord la <Link url={`${PagesConstants.PREFIX}${PagesConstants.COURS}${CoursesConstants.TRIANGLE}/la-hauteur-du-triangle`} external>hauteur</Link> <MathJaxInline toShow="$h_b$" /></p>  
             <MathJaxDisplay toShow={hb} demo />   
             <MathJaxDisplay toShow={hb2} demo />   
             <MathJaxDisplay toShow={hb3} demo />   
@@ -77,7 +81,7 @@ const CalculDePi2 = () => {
             <MathJaxDisplay toShow={pi16d} demo />
             <MathJaxDisplay toShow={d} demo />
             <MathJaxDisplay toShow={d2} demo />  
-            <p>Ici, il nous faut calculer d'abord la hauteur <MathJaxInline toShow="$h_c$" /></p>  
+            <p>Ici, il nous faut calculer d'abord la <Link url={`${PagesConstants.PREFIX}${PagesConstants.COURS}${CoursesConstants.TRIANGLE}/la-hauteur-du-triangle`} external>hauteur</Link> <MathJaxInline toShow="$h_c$" /></p>  
             <MathJaxDisplay toShow={hc} demo />   
             <MathJaxDisplay toShow={hc2} demo />   
             <MathJaxDisplay toShow={hc3} demo />   

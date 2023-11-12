@@ -1,6 +1,6 @@
 import AlphabetGrec from "./chapters/AlphabetGrec";
-import IndexDesSymboles from "./chapters/IndexDesSymboles";
-import IndexDesSymboles2 from "./chapters/IndexDesSymboles2";
+import LesSymbolesUsuels from "./chapters/LesSymbolesUsuels";
+import LesSymbolesUsuels2 from "./chapters/LesSymbolesUsuels2";
 
 const getSymbolsChapters = () => {
 
@@ -9,17 +9,17 @@ const getSymbolsChapters = () => {
     return [      
         {
             id: k++,
-            component: <IndexDesSymboles />,
-            title: 'Index',
-            metaContent: 'Index des symboles mathématiques : la plupart des symboles utilisés.',
-            relativePath: '/index'
+            component: <LesSymbolesUsuels />,
+            title: 'Les symboles mathématiques usuels',
+            metaContent: 'Les symboles mathématiques usuels : la plupart des symboles utilisés.',
+            relativePath: '/les-symboles-usuels'
         },
         {
             id: k++,
-            component: <IndexDesSymboles2 />,
-            title: 'Index (2)',
-            metaContent: 'Index des symboles mathématiques : la plupart des symboles utilisés (2).',
-            relativePath: '/index-2'
+            component: <LesSymbolesUsuels2 />,
+            title: 'Les symboles mathématiques usuels (2)',
+            metaContent: 'Les symboles mathématiques usuels : la plupart des symboles utilisés (2).',
+            relativePath: '/les-symboles-usuels-2'
         },
         {
             id: k++,

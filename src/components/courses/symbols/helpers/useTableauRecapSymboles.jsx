@@ -79,7 +79,7 @@ const useTableauRecapSymboles = () => {
          {
             id: k++,
             title: "(AB) \\parallel (CD)",
-            values: ["la \\enspace droite \\enspace (AB) \\enspace parallele \\enspace \\overset{‘}{a} \\enspace la \\enspace droite \\enspace (CD)"]
+            values: ["la \\enspace droite \\enspace (AB) \\enspace parall\\overset{‘}{e}le \\enspace \\overset{‘}{a} \\enspace la \\enspace droite \\enspace (CD)"]
         }
     )
 
@@ -103,7 +103,7 @@ const useTableauRecapSymboles = () => {
          {
             id: k++,
             title: "\\mathbb{Q}",
-            values: ["ensemble \\enspace des \\enspace rationnels  \\enspace (qu'on \\enspace peut \\enspace écrire \\enspace sous \\enspace forme \\enspace \\frac{a}{b} \\enspace (a, b \\in \\mathbb{Z}))"]
+            values: ["ensemble \\enspace des \\enspace rationnels  \\enspace (que \\enspace l'on \\enspace peut \\enspace écrire \\enspace sous \\enspace forme \\enspace \\frac{a}{b} \\enspace (a, b \\in \\mathbb{Z}))"]
         }
     )
 
@@ -119,7 +119,7 @@ const useTableauRecapSymboles = () => {
          {
             id: k++,
             title: "\\mathbb{C}",
-            values: ["ensemble \\enspace des \\enspace nombres \\enspace  complexes"]
+            values: ["ensemble \\enspace des \\enspace nombres \\enspace  complexes \\enspace (ou \\enspace imaginaires)"]
         }
     )
 
@@ -151,7 +151,7 @@ const useTableauRecapSymboles = () => {
          {
             id: k++,
             title: " (a, \\enspace b) \\in \\mathbb{R}^2 ",
-            values: ["a \\enspace et \\enspace b \\enspace appartiennent \\enspace à \\enspace l'ensemble \\enspace \\mathbb{R} "]
+            values: ["a \\enspace et \\enspace b \\enspace deux \\enspace nombres \\enspace appartenant \\enspace à \\enspace l'ensemble \\enspace \\mathbb{R} "]
         }
     )
 

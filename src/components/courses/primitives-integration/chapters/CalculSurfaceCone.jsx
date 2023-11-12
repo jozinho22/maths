@@ -50,7 +50,7 @@ const CalculSurfaceCone = () => {
 
     return (
         <>
-            <p>Le cône est une pyramide avec un base circulaire. Il est caractérise par sa hauteur <MathJaxInline toShow={"$h$"}/> et le rayon de sa base <MathJaxInline toShow={"$r$"}/>, qu'on appelle aussi apothème.</p>
+            <p>Le cône est une pyramide avec un base circulaire. Il est caractérise par sa <Link url={`${PagesConstants.PREFIX}${PagesConstants.COURS}${CoursesConstants.TRIANGLE}/la-hauteur-du-triangle`} external>hauteur</Link> <MathJaxInline toShow={"$h$"}/> et le rayon de sa base <MathJaxInline toShow={"$r$"}/>, qu'on appelle aussi apothème.</p>
             <p>Sa base a donc une surface de <MathJaxInline toShow={"$\\pi.r^2$"}/>.</p>
             <ImageZoom src={cone} name="Le cône" n={++n}/>
             <p>Sa surface vaut : </p>

@@ -1,5 +1,4 @@
 import LeProduitEnCroix from './chapters/LeProduitEnCroix';
-import LesOperationsDeBase from './chapters/LesOperationsDeBase';
 import LaDistributiviteLaFactorisation from './chapters/LaDistributiviteLaFactorisation';
 
 import LesFractions from './chapters/LesFractions';
@@ -9,14 +8,9 @@ import LeTriangleDePascal from './chapters/LeTriangleDePascal';
 import LesTablesDeMultiplication from './chapters/LesTablesDeMultiplication';
 import LesTablesDeMultiplication2 from './chapters/LesTablesDeMultiplication2';
 
-import PresentationDuTriangle from './chapters/triangle/PresentationDuTriangle';
-import LaHauteur from './chapters/triangle/LaHauteur';
-import LaMediane from './chapters/triangle/LaMediane';
-import LaMediatrice from './chapters/triangle/LaMediatrice';
-import LaBissectrice from './chapters/triangle/LaBissectrice';
-import LoiDesSinus from './chapters/triangle/LoiDesSinus';
-import LoiDesCosinus from './chapters/triangle/LoiDesCosinus';
-
+import LesPrioritesDeCalcul from './chapters/LesPrioritesDeCalcul';
+import LAdditionLaSoustraction from './chapters/LAdditionLaSoustraction';
+import LaMultiplicationLaDivision from './chapters/LaMultiplicationLaDivision';
 
 const getElementaryCalculusChapters = () => {
 
@@ -28,10 +22,24 @@ const getElementaryCalculusChapters = () => {
         }, 
         {
             id: k++,
-            component: <LesOperationsDeBase />,
-            title: 'Les opérations de base',
-            metaContent: 'Les opérations de base : addition, soustraction, multiplication, division et priorités.',
-            relativePath: '/les-operations-de-base'
+            component: <LAdditionLaSoustraction />,
+            title: 'L\'addition / la soustraction',
+            metaContent: 'L\'addition / la soustraction : addition, soustraction, élément neutre, signe.',
+            relativePath: '/l-addition-la-soustraction'
+        },
+        {
+            id: k++,
+            component: <LaMultiplicationLaDivision />,
+            title: 'La multiplication / la division',
+            metaContent: 'La multiplication / la division : multiplication, division, élément neutre, signe.',
+            relativePath: '/la-multiplication-la-division'
+        },
+        {
+            id: k++,
+            component: <LesPrioritesDeCalcul />,
+            title: 'Les priorités de calcul',
+            metaContent: 'Les priorités de calcul et gestion des parenthèses.',
+            relativePath: '/les-priorites-de-calcul'
         }, 
         {
             id: k++,
@@ -63,17 +71,17 @@ const getElementaryCalculusChapters = () => {
         },
         {
             id: k++,
-            component: <LesFractions />,
-            title: 'Les fractions',
-            metaContent: 'Les fractions : opérations de base et exemples',
-            relativePath: '/les-fractions'
-        },
-        {
-            id: k++,
             component: <LesReglesDeDivisibilite />,
             title: 'Les règles de divisibilité',
             metaContent: 'Les règles de divisibilité : par 2, 3, 4, 5, 9',
             relativePath: '/les-regles-de-divisibilite'
+        },
+        {
+            id: k++,
+            component: <LesFractions />,
+            title: 'Les fractions',
+            metaContent: 'Les fractions : opérations de base et exemples',
+            relativePath: '/les-fractions'
         },
         {
             title: 'Identités remarquables'
@@ -91,58 +99,6 @@ const getElementaryCalculusChapters = () => {
             title: 'Le triangle de Pascal',
             metaContent: 'Le triangle de Pascal : détermination des coefficient binomiaux',
             relativePath: '/le-triangle-de-pascal'
-        },
-        {
-            title: 'La géométrie du triangle'
-        },
-        {
-            id: k++,
-            component: <PresentationDuTriangle />,
-            title: 'Présentation du triangle',
-            metaContent: 'La présentation du triangle (différents types de triangle).',
-            relativePath: '/presentation-du-triangle'
-        },  
-        {
-            id: k++,
-            component: <LaHauteur />,
-            title: 'La hauteur du triangle',
-            metaContent: 'La hauteur du triangle : définition et concourance.',
-            relativePath: '/la-hauteur-du-triangle'
-        },  
-        {
-            id: k++,
-            component: <LaMediane />,
-            title: 'La médiane du triangle',
-            metaContent: 'La médiane du triangle : définition et concourance.',
-            relativePath: '/la-mediane-du-triangle'
-        },
-        {
-            id: k++,
-            component: <LaMediatrice/>,
-            title: 'La mediatrice du triangle',
-            metaContent: 'La mediatrice du triangle : définition et concourance.',
-            relativePath: '/la-mediatrice-du-triangle'
-        },
-        {
-            id: k++,
-            component: <LaBissectrice />,
-            title: 'La bissectrice du triangle',
-            metaContent: 'La mediatrice du triangle : définition et concourance.',
-            relativePath: '/la-bissectrice-du-triangle'
-        },
-        {
-            id: k++,
-            component: <LoiDesSinus />,
-            title: 'La loi des sinus',
-            metaContent: 'La loi des sinus : définition et démonstration.',
-            relativePath: '/loi-des-sinus'
-        },
-        {
-            id: k++,
-            component: <LoiDesCosinus />,
-            title: 'La loi des cosinus',
-            metaContent: 'La loi des cosinus : définition et démonstration.',
-            relativePath: '/loi-des-cosinus'
         }
     ];
 }

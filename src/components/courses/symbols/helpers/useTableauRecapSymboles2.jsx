@@ -30,16 +30,16 @@ const useTableauRecapSymboles2 = () => {
     tableauRecapSymboles.push(
          {
             id: k++,
-            title: "f^{(n)}",
-            values: ["d\\acute{e}riv\\acute{e}e n-i\\overset{‘}{e}me \\enspace de \\enspace f"]
+            title: "\\frac{df}{dx}",
+            values: ["d\\acute{e}riv\\acute{e}e \\enspace de \\enspace f \\enspace par \\enspace rapport \\enspace \\overset{‘}{a} \\enspace x"]
         }
     )
 
     tableauRecapSymboles.push(
          {
             id: k++,
-            title: "\\frac{df}{dx}",
-            values: ["d\\acute{e}riv\\acute{e}e \\enspace de \\enspace f \\enspace par \\enspace rapport \\enspace \\overset{‘}{a} \\enspace x"]
+            title: "f^{(n)}",
+            values: ["d\\acute{e}riv\\acute{e}e \\enspace n-i\\overset{‘}{e}me \\enspace de \\enspace f"]
         }
     )
 
@@ -111,7 +111,7 @@ const useTableauRecapSymboles2 = () => {
          {
             id: k++,
             title: "lim_{x \\to a} \\enspace f(x) = l",
-            values: ["limite \\enspace d'une \\enspace fonction \\enspace lorsque \\enspace x \\enspace tend \\enspace vers \\enspace a"]
+            values: ["limite \\enspace d'une \\enspace fonction \\enspace f \\enspace lorsque \\enspace x \\enspace tend \\enspace vers \\enspace a"]
         }
     )
 
@@ -119,7 +119,7 @@ const useTableauRecapSymboles2 = () => {
          {
             id: k++,
             title: " f(x) \\underset{a}{\\longrightarrow} l",
-            values: ["limite \\enspace d'une \\enspace fonction \\enspace lorsque \\enspace x \\enspace tend \\enspace vers \\enspace a"]
+            values: ["limite \\enspace d'une \\enspace fonction \\enspace f \\enspace lorsque \\enspace x \\enspace tend \\enspace vers \\enspace a"]
         }
     )
 
@@ -127,7 +127,7 @@ const useTableauRecapSymboles2 = () => {
          {
             id: k++,
             title: "n!",
-            values: ["factorielle(n) = n\\times(n-1)\\times...\\times 3 \\times 2 \\times 1"]
+            values: ["factorielle(n) = n\\times(n-1)\\times...\\times \\enspace 3 \\times 2 \\times 1"]
         }
     )
 
@@ -135,7 +135,7 @@ const useTableauRecapSymboles2 = () => {
          {
             id: k++,
             title: "\\binom{n}{k}",
-            values: ["k \\enspace \\acute{e}l\\acute{e}ments \\enspace parmis \\enspace n : \\frac{n!}{k!(n-k)!}"]
+            values: ["k \\enspace \\acute{e}l\\acute{e}ments \\enspace parmis \\enspace n = \\frac{n!}{k!(n-k)!}"]
         }
     )
 

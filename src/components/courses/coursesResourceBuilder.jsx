@@ -19,6 +19,7 @@ import getInfiniteSeriesChapters from './infinite-series/getInfiniteSeriesChapte
 import getComplexNumbersChapters from './complex-numbers/getComplexNumbersChapters';
 import getSeriesChapters from './series/getSeriesChapters';
 import getEquaDiffLinFirstOrderChapters from './equa-diff-lin-first-order/getEquaDiffLinFirstOrderChapters';
+import getTriangleChapters from './triangle/getTriangleChapters';
 
 function coursesResourceBuilder() {
 
@@ -52,9 +53,17 @@ function coursesResourceBuilder() {
       chapters: getPowersChapters()
     }
 
-    var delimTheorems = {
+    var delimGeo = {
       id: i++,
-      title: 'Théorèmes de géométrie'
+      title: 'Géométrie'
+    }
+
+    var triangle = {
+      id: i++,
+      title: 'La géométrie dans le triangle',
+      metaContent: "La géométrie dans le triangle : hauteur, médiane, médiatrice, bissectrice, loi des sinus",
+      relativePath: CoursesConstants.TRIANGLE,
+      chapters: getTriangleChapters()
     }
 
     var pythagore = {
@@ -206,7 +215,8 @@ function coursesResourceBuilder() {
     );
 
     coursesItems.push(
-        delimTheorems,
+        delimGeo,
+        triangle,
         pythagore,
         thales
     );

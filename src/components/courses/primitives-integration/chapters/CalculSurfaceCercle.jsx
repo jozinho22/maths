@@ -8,6 +8,10 @@ import circleAreaCalculus from '../assets/circleAreaCalculus.png'
 import circleAreaCalculus2 from '../assets/circleAreaCalculus2.png';
 import Title1 from '../../helpers/Title1';
 
+import PagesConstants from '../../../immutable/nav/PagesConstants';
+import CoursesConstants from '../../helpers/CoursesConstants';
+import Link from '../../../immutable/nav/Link';
+
 const CalculSurfaceCercle = () => {
 
     var n = 0;
@@ -50,7 +54,7 @@ const CalculSurfaceCercle = () => {
             </p>
             <ImageZoom src={circleAreaCalculus} name="Surface balayée sur le cercle" n={++n} />
             <MathJaxDisplay toShow={aTrg} demo />
-            <p>La base du triangle est <MathJaxInline toShow={"$R.d\\alpha$"} /> et la hauteur est <MathJaxInline toShow="$R$" />, soit :</p>
+            <p>La base du triangle est <MathJaxInline toShow={"$R.d\\alpha$"} /> et la <Link url={`${PagesConstants.PREFIX}${PagesConstants.COURS}${CoursesConstants.TRIANGLE}/la-hauteur-du-triangle`} external>hauteur</Link> est <MathJaxInline toShow="$R$" />, soit :</p>
             <MathJaxDisplay toShow={aCalc} demo />
             <MathJaxDisplay toShow={aCalc2} demo />
             <p>On va intégrer sur la distance à parcourir, à savoir  <MathJaxInline toShow={"$R.\\alpha$"} /> </p>

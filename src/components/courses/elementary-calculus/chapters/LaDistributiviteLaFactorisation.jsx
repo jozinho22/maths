@@ -6,9 +6,6 @@ import MathJaxInline from '../../../mathjax-display/MathJaxInline';
 
 import Title1 from '../../helpers/Title1';
 import Title2 from '../../helpers/Title2';
-import PagesConstants from '../../../immutable/nav/PagesConstants';
-import CoursesConstants from '../../helpers/CoursesConstants';
-import Link from '../../../immutable/nav/Link';
 
 import distribFact from '../assets/distribFact.png';
 
@@ -32,10 +29,6 @@ const LaDistributiviteLaFactorisation = () => {
 
     var idRem3Example = "\\( D = x^2 - 9 \\)";
     var idRem3Example2 = "\\( D = (x + 3)(x - 3) \\)";
-
-    var idRemCanonExample = "\\( E = x^2 + 2x \\)";
-    var idRemCanonExample2 = "\\( E = C - 1\\)";
-    var idRemCanonExample3 = "\\( E = (x+1)^2 - 1\\)";
 
     return  <>
                 <Title1 title={"1) La distributivité"} />
@@ -78,18 +71,6 @@ const LaDistributiviteLaFactorisation = () => {
                 <p>On s'aperçoit que le développement va dans un sens, et la factorisation dans l'autre.</p>
                 <ImageZoom src={distribFact} name="Relation entre développement et factorisation" n={++n} />
                 <p>Ainsi, si on factorise puis on développe, on retombe sur nos pas.</p>
-
-                <Title1 title={"4) Forme canonique"} />
-                <p>La forme canonique d'une expression, c'est presque sa forme factorisée, à un terme près.</p>
-                <p>Si on reprend par exemple l'expression <MathJaxInline toShow={"$C$"} /> à laquelle on a retiré son dernier terme, on alors une nouvelle expression <MathJaxInline toShow={"$E$"} /> :</p>
-                <MathJaxDisplay toShow={idRemCanonExample} demo />
-                <p>On voit que <MathJaxInline toShow={"$C$"} /> est presque <MathJaxInline toShow={"$E$"} />, à <MathJaxInline toShow={"$1$"} /> près. </p>
-                <MathJaxDisplay toShow={idRemCanonExample2} demo />
-                <p>Mais on a vu plus que </p>
-                <MathJaxDisplay toShow={idRem1Example2} demo />
-                <p>Soit : </p>
-                <MathJaxDisplay toShow={idRemCanonExample3} demo />
-                <p>Cette façon de factoriser va notamment nous servir pour <Link url={`${PagesConstants.PREFIX}${PagesConstants.COURS}${CoursesConstants.EQ_2_DEG}/resolution`} external>les équations du second degré</Link>.</p>
             </>
 }
 

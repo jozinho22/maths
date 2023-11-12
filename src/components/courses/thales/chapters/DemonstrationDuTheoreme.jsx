@@ -6,13 +6,15 @@ import MathJaxInline from '../../../mathjax-display/MathJaxInline';
 import MathJaxDisplay from '../../../mathjax-display/MathJaxDisplay';
 import PagesConstants from '../../../immutable/nav/PagesConstants';
 import CoursesConstants from '../../helpers/CoursesConstants';
+
+import thales from '../assets/thales.png';
 import thalesWithHeight from '../assets/thalesWithHeight.png';
 
 import Link from '../../../immutable/nav/Link';
 import Title2 from '../../helpers/Title2';
 import Aside from '../../helpers/Aside';
 
-const DemonstrationDuTheoremeDePythagore = () => {
+const DemonstrationDuTheoreme = () => {
 
     var n = 0;
     var adgCos = "\\(cos(\\alpha) = \\frac{DG}{DA}\\)";
@@ -47,7 +49,8 @@ const DemonstrationDuTheoremeDePythagore = () => {
 
     return (
         <>
-            <p>Pour prouver la véracité du thèorème, reprenons le triangle précédent, et ajoutons-y la hauteur coupant <MathJaxInline toShow={"$BC$"} /> et <MathJaxInline toShow={"$DE$"} />. </p>
+            <p>Nous partons uniquement de l'hypothèse que les segments <MathJaxInline toShow={"$BC$"} /> et <MathJaxInline toShow={"$DE$"} /> sont parallèles entre eux.</p>
+            <p>Pour prouver la véracité du thèorème, reprenons le triangle précédent, et ajoutons-y <Link url={`${PagesConstants.PREFIX}${PagesConstants.COURS}${CoursesConstants.TRIANGLE}/la-hauteur-du-triangle`} external>la hauteur</Link> coupant <MathJaxInline toShow={"$BC$"} /> et <MathJaxInline toShow={"$DE$"} />. </p>
             <ImageZoom src={thalesWithHeight} name="Démonstration du thèorème de Thalès" n={++n} />
             <p>
                Cela va nous permettre d'y appliquer les lois de <Link url={`${PagesConstants.PREFIX}${PagesConstants.COURS}${CoursesConstants.TRIGO}`} external>la trigonométrie</Link>.
@@ -108,9 +111,11 @@ const DemonstrationDuTheoremeDePythagore = () => {
             <Container className="Focus">
                 <MathJaxDisplay toShow={equivGenFinale} />
             </Container>
+            <ImageZoom src={thales} name="Relations d'équivalence avec le théorème de Thalès" n={++n} />
+
         </>
     );
 
 }
 
-export default DemonstrationDuTheoremeDePythagore;
+export default DemonstrationDuTheoreme;
