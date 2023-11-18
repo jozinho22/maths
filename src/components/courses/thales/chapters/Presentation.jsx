@@ -19,7 +19,7 @@ const Presentation = () => {
             <p>Le théorème de Thalès implique des rapports de proportionnalité entre les longeurs dans un triangle.</p>
             <p>Dans un triangle quelconque, on trace une parallèle à un des côtes : </p>
             <ImageZoom src={thales} name="Le théorème de Thalès" n={1} />
-            <p>Avec le théorème de Thalès, on a les relations suivantes :</p>
+            <p>Le théorème de Thalès nous dit que, si nous avons un triangle quelconque avec à l'intérieur une droite parallèle à un des trois côtes, on a les relations suivantes :</p>
             <Container className="Focus">
                 <MathJaxDisplay toShow={thalesTheorem} />
             </Container>
