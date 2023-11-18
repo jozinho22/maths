@@ -2,6 +2,7 @@ import Presentation from './chapters/Presentation';
 import DemonstrationDuTheoreme from './chapters/DemonstrationDuTheoreme';
 import DemonstrationDeLaReciproque from './chapters/DemonstrationDeLaReciproque';
 import CorollaireDuTheoreme from './chapters/CorollaireDuTheoreme';
+import TheoremeTrianglesConcomitants from './chapters/TheoremeTrianglesConcomitants';
 
 const getThalesChapters = () => {
 
@@ -21,6 +22,13 @@ const getThalesChapters = () => {
             title: 'Démonstration du théorème',
             metaContent: 'Démonstration du théorème de Thalès en dessinant une hauteur.',
             relativePath: '/demonstration'
+        },
+        {
+            id: k++,
+            component: <TheoremeTrianglesConcomitants />,
+            title: 'Théorème de Thalès avec deux triangles concomitants',
+            metaContent: 'Théorème de Thalès avec deux triangles concomitants.',
+            relativePath: '/theoreme-avec-deux-triangles-concomitants'
         },
         {
             id: k++,

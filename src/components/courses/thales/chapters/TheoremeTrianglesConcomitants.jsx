@@ -9,7 +9,7 @@ import CoursesConstants from '../../helpers/CoursesConstants';
 import thalesInv from '../assets/thalesInv.png';
 import Link from '../../../immutable/nav/Link';
 
-const TheoremeInverse = () => {
+const TheoremeTrianglesConcomitants = () => {
 
     var n = 0;
     var thalesTheoremConc = "\\( \\frac{AD}{AB} = \\frac{AE}{AC} = \\frac{DE}{BC} \\)";
@@ -21,7 +21,7 @@ const TheoremeInverse = () => {
             <ImageZoom src={thalesInv} name="Le théorème de Thalès avec deux triangles concomitants" n={++n} />
 
             <p>On aura alors de la même manière les relations suivantes :</p>
-            <Container className="Focus LittleFocus">
+            <Container className="Focus">
                 <MathJaxDisplay toShow={thalesTheoremConc} />
             </Container>
         </>
@@ -29,4 +29,4 @@ const TheoremeInverse = () => {
 
 }
 
-export default TheoremeInverse;
+export default TheoremeTrianglesConcomitants;
