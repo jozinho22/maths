@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/maths/static/css/main.8a907b42.css",
-    "main.js": "/maths/static/js/main.c478d04e.js",
+    "main.js": "/maths/static/js/main.46239c4c.js",
     "static/js/27.035b7279.chunk.js": "/maths/static/js/27.035b7279.chunk.js",
     "static/media/energetiquementVotre.pdf": "/maths/static/media/energetiquementVotre.ae46a881d6240ff7c375.pdf",
     "static/media/bigBang.pdf": "/maths/static/media/bigBang.9a7278fe34a3a9cbd1fe.pdf",
@@ -48,10 +48,10 @@
     "static/media/integration.png": "/maths/static/media/integration.2ac3b789f5155e800fb3.png",
     "static/media/demoTriangleRectangleDansCercleFin.png": "/maths/static/media/demoTriangleRectangleDansCercleFin.09e0ea4d92f789f759c7.png",
     "static/media/pythagoreDemo2.png": "/maths/static/media/pythagoreDemo2.d32329243efba6f9043c.png",
+    "static/media/thalesCorollaire.png": "/maths/static/media/thalesCorollaire.736a6d7f150250712d52.png",
     "static/media/derivativeBetterApprox.png": "/maths/static/media/derivativeBetterApprox.6d439efae4403b496b79.png",
     "static/media/circleAreaCalculus.png": "/maths/static/media/circleAreaCalculus.22c94f07dec374819cde.png",
     "static/media/recurrentSequences.png": "/maths/static/media/recurrentSequences.9eff98f26114f59039c9.png",
-    "static/media/thalesCorollaire.png": "/maths/static/media/thalesCorollaire.419decea985fc5d5f7cd.png",
     "static/media/pythagoreDemo1.png": "/maths/static/media/pythagoreDemo1.6acd81d463369ac1bf19.png",
     "static/media/circleTrigo.png": "/maths/static/media/circleTrigo.2f073218bfbda5e3454a.png",
     "static/media/mediatrices.png": "/maths/static/media/mediatrices.6d3caa7e43e586983ea3.png",
@@ -77,6 +77,7 @@
     "static/media/distribFact.png": "/maths/static/media/distribFact.fcf1ea6d965f3abfc893.png",
     "static/media/sohcahtoa.png": "/maths/static/media/sohcahtoa.d7a0277ec992de0aa58e.png",
     "static/media/triangleSinusRelationDemo.png": "/maths/static/media/triangleSinusRelationDemo.cbe836ef02052fbdd6d9.png",
+    "static/media/thalesInv.png": "/maths/static/media/thalesInv.e70791553d7cd7263e74.png",
     "static/media/integration2.png": "/maths/static/media/integration2.b1c9b3a9ad1b940146ee.png",
     "static/media/integration-positivite.png": "/maths/static/media/integration-positivite.1e18c040e064a2dfdfe0.png",
     "static/media/coneVolCalculus.png": "/maths/static/media/coneVolCalculus.8aedfc481f3305f6029d.png",
@@ -90,6 +91,6 @@
   },
   "entrypoints": [
     "static/css/main.8a907b42.css",
-    "static/js/main.c478d04e.js"
+    "static/js/main.46239c4c.js"
   ]
 }
