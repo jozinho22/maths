@@ -5,15 +5,16 @@ import React from 'react';
 import { hydrateRoot, createRoot } from 'react-dom/client';
  
 import reportWebVitals from './reportWebVitals';
-import './index.css';
 import { HelmetProvider } from 'react-helmet-async';
+/* import { PrerenderedControler, ClientSideComponent } from "react-prerendered-component";
+ */
+import './index.css';
 
 const app = <React.StrictMode>
                 <HelmetProvider>
                     <App />
                 </HelmetProvider>
-            </React.StrictMode>;
-
+            </React.StrictMode>
 // v.16
 
 /* const root = document.getElementById('root');
@@ -25,9 +26,12 @@ if(root.hasChildNodes()) {
 
 // v.18
 const domNode = document.getElementById('root');
+
 if(domNode.hasChildNodes()) {
-    hydrateRoot(domNode, app); 
+    console.log('hyd')
+    hydrateRoot(domNode, app);  
 } else {
+    console.log('render')
     const root = createRoot(domNode);
     root.render(app);
 }
