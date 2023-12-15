@@ -26,7 +26,8 @@ if(root.hasChildNodes()) {
 
 // v.18
 const domNode = document.getElementById('root');
-
+/* console.log(domNode.childNodes)
+console.log(domNode.hasChildNodes()) */
 if(domNode.hasChildNodes()) {
     console.log('hyd')
     hydrateRoot(domNode, app);  

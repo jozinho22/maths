@@ -19,16 +19,16 @@ const OperationsSurLesSeriesConvergentes = () => {
                 <Title2 title={"Propriété 1"} />
                 <p>Si <MathJaxInline toShow={"$ \\sum u_n$"} /> converge, alors il existe un entier <MathJaxInline toShow={"$ n_0$"} /> tel que <MathJaxInline toShow={"$ \\underset{n \\geqslant n_0}{ \\sum u_n } $"} /> converge.</p>
                 
-                <Title2 title={"Propriété 2-a"} />
+                <Title2 title={"Propriété 2"} />
                 <p>Si <MathJaxInline toShow={"$ \\sum u_n$"} /> et <MathJaxInline toShow={"$ \\sum v_n$"} /> convergent, alors <MathJaxInline toShow={"$ \\sum (u_n + v_n) $"} /> converge et :</p>
                 <Container className="Focus">
                      <MathJaxDisplay toShow={unPlusvn} />  
                 </Container>
 
-                <Title2 title={"Propriété 2-b"} />
+                <Title2 title={"Propriété 3"} />
                 <p>Si <MathJaxInline toShow={"$ \\sum u_n$"} /> converge et <MathJaxInline toShow={"$ \\sum v_n$"} /> diverge, alors <MathJaxInline toShow={"$ \\sum (u_n + v_n) $"} /> diverge.</p>
        
-                <Title2 title={"Propriété 3"} />
+                <Title2 title={"Propriété 4"} />
                 <p>Si <MathJaxInline toShow={"$ \\sum u_n$"} /> converge, alors <MathJaxInline toShow={"$ \\lambda \\sum u_n$"} /> converge et :</p>
                 <Container className="Focus">
                      <MathJaxDisplay toShow={lambdaUn} />  

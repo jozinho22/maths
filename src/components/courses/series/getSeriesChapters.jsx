@@ -3,6 +3,7 @@ import ConvergenceDUneSerie from "./chapters/ConvergenceDUneSerie";
 import ResteDUneSerieConvergente from "./chapters/ResteDUneSerieConvergente";
 import SeriesDeRiemann from "./chapters/SeriesDeRiemann";
 import OperationsSurLesSeriesConvergentes from "./chapters/OperationsSurLesSeriesConvergentes";
+import TheoremeDeLaLimiteUniforme from "./chapters/TheoremeDeLaLimiteUniforme";
 
 const getSeriesChapters = () => {
 
@@ -39,6 +40,16 @@ const getSeriesChapters = () => {
             title: 'Opérations algébriques sur les séries convergentes',
             metaContent: 'Opérations algébriques sur les séries convergentes.',
             relativePath: '/operations-sur-les-series-convergentes'
+        },
+        {
+            title: 'Séries à termes positifs'
+        },
+        {
+            id: k++,
+            component: <TheoremeDeLaLimiteUniforme />,
+            title: 'Théorème de la convergence uniforme',
+            metaContent: 'Théorème de la convergence uniforme : même cas que pour les suites numériques.',
+            relativePath: '/theoreme-de-la-convergence-uniforme'
         },
         {
             title: 'Séries de référence'

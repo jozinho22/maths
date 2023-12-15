@@ -122,6 +122,13 @@ a:hover {
     font-family: 'Times New Roman', Times, serif !important;
 }
 
+.Brazil hr {
+    color: rgb(68, 65, 65);
+}
+
+.Darcula hr {
+    color: grey;
+}
 
 /* Buttons */
 

@@ -8,7 +8,7 @@ const ConvergenceDUneSerie = () => {
 
     var condConv = "\\( \\sum u_n \\enspace converge \\Longrightarrow lim_{n \\to +\\infty} (u_n) = 0 \\)";
 
-    var conv = "\\( \\sum_{n=0}^{+\\infty}(u_n) = lim_{n \\to +\\infty} (S_n) = lim_{n \\to +\\infty} \\left( \\sum_{k=0}^n uk \\right) \\)";
+    var conv = "\\( \\sum_{n=0}^{+\\infty}(u_n) = lim_{n \\to +\\infty} (S_n) = lim_{n \\to +\\infty} \\left( \\sum_{k=0}^n u_k \\right) \\)";
    
     return  <>
                 <p>Soit <MathJaxInline toShow={"$(u_n) \\in \\mathbb{K}^{\\mathbb{N}} $"} /> une suite à termes réels ou complexes, et <MathJaxInline toShow={"$ \\sum u_n$"} /> sa série numérique associée.</p>   

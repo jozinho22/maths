@@ -20,6 +20,7 @@ import getComplexNumbersChapters from './complex-numbers/getComplexNumbersChapte
 import getSeriesChapters from './series/getSeriesChapters';
 import getEquaDiffLinFirstOrderChapters from './equa-diff-lin-first-order/getEquaDiffLinFirstOrderChapters';
 import getTriangleChapters from './triangle/getTriangleChapters';
+import getEnumChapters from './enumeration/getEnumChapters';
 
 function coursesResourceBuilder() {
 
@@ -79,6 +80,14 @@ function coursesResourceBuilder() {
       metaContent: "Le théorème de Thalès : explications, démonstration.",
       relativePath: CoursesConstants.THALES,
       chapters: getThalesChapters()
+    }
+
+    var complexes = {
+      id: i++,
+      title: 'Les nombres complexes',
+      metaContent: "Les nombres complexes : définitions, démonstrations et formules",
+      relativePath: CoursesConstants.COMPLEXES,
+      chapters: getComplexNumbersChapters()
     }
 
     var delimAnalyseFunctions = {
@@ -148,14 +157,6 @@ function coursesResourceBuilder() {
       chapters: getInfiniteSeriesChapters()
     }
 
-    var complexes = {
-      id: i++,
-      title: 'Les nombres complexes',
-      metaContent: "Les nombres complexes : définitions, démonstrations et formules",
-      relativePath: CoursesConstants.COMPLEXES,
-      chapters: getComplexNumbersChapters()
-    }
-
     var delimSeq = {
       id: i++,
       title: 'Suites et séries numériques'
@@ -175,6 +176,19 @@ function coursesResourceBuilder() {
       metaContent: "Les séries numériques : définition, convergence, séries de références.",
       relativePath: CoursesConstants.SERIES,
       chapters: getSeriesChapters()
+    }
+
+    var delimProba = {
+      id: i++,
+      title: 'Probabilités'
+    }
+
+    var enumeration = {
+      id: i++,
+      title: 'Le dénombrement',
+      metaContent: "Le dénombrement : listes avec répétition, listes sans répétition (permutations), p éléments parmis n.",
+      relativePath: CoursesConstants.ENUMERATION,
+      chapters: getEnumChapters()
     }
 
     var delimThematiques = {
@@ -218,7 +232,8 @@ function coursesResourceBuilder() {
         delimGeo,
         triangle,
         pythagore,
-        thales
+        thales,
+        complexes
     );
 
     coursesItems.push(
@@ -230,8 +245,7 @@ function coursesResourceBuilder() {
         derivation,
         primInt,
         equaDiffLinOrder1,
-        infSeries,
-        complexes
+        infSeries
     );
 
     coursesItems.push(
@@ -240,14 +254,19 @@ function coursesResourceBuilder() {
     );
 
     coursesItems.push(
+        delimProba,
+        enumeration
+    );
+
+    coursesItems.push(
         delimThematiques,
         pi,
         nbOr
     );
 
-/*     if(process.env.NODE_ENV === 'development') {
-      coursesItems.push(equaDiffLinOrder1)
-    } */
+    if(process.env.NODE_ENV === 'development') {
+      coursesItems.push(series)
+    } 
     
     return coursesItems;
 

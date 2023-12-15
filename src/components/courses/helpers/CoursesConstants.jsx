@@ -8,6 +8,7 @@ const CoursesConstants = {
     TRIANGLE: '/le-triangle',
     PYTHAGORE: '/le-theoreme-de-pythagore',
     THALES: '/le-theoreme-de-thales',
+    COMPLEXES: '/les-nombres-complexes',
     
     FONCTIONS_USUELLES:  '/les-fonctions-usuelles',
     TRIGO: '/la-trigonometrie',
@@ -15,9 +16,11 @@ const CoursesConstants = {
     PRIMITIVES_INTEGRATION: '/primitives-integration',
     DEVELOPPEMENTS_LIMITES: '/les-developpements-limites',
     /* GEOMETRY: '/la-geometrie', */
-    COMPLEXES: '/les-nombres-complexes',
     SEQUENCES: '/les-suites-numeriques',
+
     SERIES: '/les-series-numeriques',
+
+    ENUMERATION: '/le-denombrement',
 
     PI: '/le-nombre-pi',
     NB_OR: '/le-nombre-d-or',
