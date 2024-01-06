@@ -20,7 +20,7 @@ const CalculsDansC = () => {
     var idRem2 = "\\( (x - iy)^2 = x^2 - 2ixy -y^2  \\)";
     var idRem3 = "\\( (x + iy)(x - iy) = x^2 + y^2  \\)";
 
-    var equ2deg = "\\(  x^2 = -1 \\Longleftrightarrow  S = \\left\\{x_1 = i\\sqrt{2}, \\enspace x_2 = -i\\sqrt{2} \\right\\} \\)";
+    var equ2deg = "\\(  x^2 = - 2 \\Longleftrightarrow  S = \\left\\{x_1 = i\\sqrt{2}, \\enspace x_2 = -i\\sqrt{2} \\right\\} \\)";
     var fact = "\\(  x^2 + 9 = (x + 3i)(x - 3i) \\)";
 
     var i4k = "\\(  i^{4k} = 1 \\)";

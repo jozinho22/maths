@@ -16,15 +16,15 @@ const Presentation = () => {
     var polynome1 = "\\( P_{n, a}^{(1)}(x) =  a_1 + 2.a_2.(x - a) + 3.a_3.(x - a)^2 + ...+ (n-1) a_{n-1}.(x - a)^{n-2} + n.a_n.(x - a)^{n-1} \\)";
     var polynome2 = "\\( P_{n, a}^{(2)}(x) =  2.a_2 + 6.a_3.(x - a) + 12.a_4.(x - a)^2... + (n-1)(n-2) a_{n-1}.(x - a)^{n-3} + n(n-1).a_n.(x - a)^{n-2} \\)";
     var polynomek = "\\( P_{n, a}^{(k)}(x) =  ....... \\)";
-    var polynomen = "\\( P_{n, a}^{(n)}(x) = n!a_n \\)";
+    var polynomen = "\\( P_{n, a}^{(n)}(x) = n! \\times a_n \\)";
 
     var polynomeXa = "\\( P_{n, a} = a_0 \\)";
-    var polynome1Xa = "\\( P_{n, a}(a) =  a_1 = 1! a_1 \\)";
-    var polynome2Xa = "\\( P_{n, a}(a) =  2.a_2 = 2!a_2 \\)";
-    var polynome3Xa = "\\( P_{n, a}(a) =  6.a_3 = 3!a_3 \\)";
-    var polynome4Xa = "\\( P_{n, a}(a) =  24.a_4 = 4!a_4 \\)";
-    var polynomekXa = "\\( P_{n, a}(a) =  k!a_k \\)";
-    var polynomenXa = "\\( P_{n, a}(a) = n!a_n \\)";
+    var polynome1Xa = "\\( P_{n, a}^{(1)}(a) =  a_1 = 1! \\times a_1 \\)";
+    var polynome2Xa = "\\( P_{n, a}^{(2)}(a) =  2.a_2 = 2! \\times a_2 \\)";
+    var polynome3Xa = "\\( P_{n, a}^{(3)}(a) =  6.a_3 = 3! \\times a_3 \\)";
+    var polynome4Xa = "\\( P_{n, a}^{(4)}(a) =  24.a_4 = 4! \\times a_4 \\)";
+    var polynomekXa = "\\( P_{n, a}^{(k)}(a) =  k! \\times a_k \\)";
+    var polynomenXa = "\\( P_{n, a}^{(n)}(a) = n! \\times a_n \\)";
     var polynomenXaBis = "\\( a_k = \\frac{P_{n, a}^{(k)}(a)}{k!}\\)";
 
     var polynomenXaLink = "\\( P_{n, a}^{(k)}(a) = f_{a}^{(k)}(a) \\)";

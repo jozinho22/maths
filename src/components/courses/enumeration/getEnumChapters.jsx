@@ -1,12 +1,4 @@
 import Presentation from './chapters/Presentation';
-import MultiplicationDePuissances from './chapters/MultiplicationDePuissances';
-import ALaPuissanceZero from './chapters/ALaPuissanceZero';
-import InverseDePuissances from './chapters/InverseDePuissances';
-import PuissanceDePuissances from './chapters/PuissanceDePuissances';
-import AutresFormulesGenerales from './chapters/AutresFormulesGenerales';
-import LienEntrePuissancesEtRacines from './chapters/LienEntrePuissancesEtRacines';
-import EcritureScientifique from './chapters/EcritureScientifique';
-import TableauRecapDesPuissances from './chapters/TableauRecapDesPuissances';
 
 const getEnumChapters = () => {
 
