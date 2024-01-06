@@ -815,7 +815,7 @@
     <priority>0.64</priority>
   </url>
 
-   <!-- Cours : suites -->
+  <!-- Cours : suites -->
   <url>
     <loc>https://jozinho22.github.io/maths/#/cours/les-suites-numeriques</loc>
     <lastmod>2023-10-25T20:20:00+00:00</lastmod>
@@ -894,6 +894,13 @@
   <url>
     <loc>https://jozinho22.github.io/maths/#/cours/les-suites-numeriques/operations-sur-les-limites</loc>
     <lastmod>2023-11-03T20:20:00+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+
+  <!-- Cours : séries -->
+  <url>
+    <loc>https://jozinho22.github.io/maths/#/cours/les-series-numeriques</loc>
+    <lastmod>2023-10-25T20:20:00+00:00</lastmod>
     <priority>0.64</priority>
   </url>
 
