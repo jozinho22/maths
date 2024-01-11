@@ -3,7 +3,8 @@ import App from './App';
 import React from 'react';
 /* import ReactDOM from 'react-dom';  */
 import { hydrateRoot, createRoot } from 'react-dom/client';
- 
+import { renderToString } from 'react-dom/server';
+
 import reportWebVitals from './reportWebVitals';
 import { HelmetProvider } from 'react-helmet-async';
 /* import { PrerenderedControler, ClientSideComponent } from "react-prerendered-component";
@@ -26,16 +27,15 @@ if(root.hasChildNodes()) {
 
 // v.18
 const domNode = document.getElementById('root');
-/* console.log(domNode.childNodes)
-console.log(domNode.hasChildNodes()) */
-if(domNode.hasChildNodes()) {
-    console.log('hyd')
-    hydrateRoot(domNode, app);  
-} else {
-    console.log('render')
-    const root = createRoot(domNode);
-    root.render(app);
-}
+// if(domNode.hasChildNodes()) {
+//     console.log('hyd')
+//     hydrateRoot(domNode, app);  
+// } else {
+//     console.log('render')
+//     const root = createRoot(domNode);
+//     root.render(app);
+// }
+hydrateRoot(domNode, app);  
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
