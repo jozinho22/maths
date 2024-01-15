@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/maths/static/css/main.6cd0a495.css",
-    "main.js": "/maths/static/js/main.0a83b0b1.js",
-    "static/js/27.035b7279.chunk.js": "/maths/static/js/27.035b7279.chunk.js",
+    "main.css": "/maths/static/css/main.f487facd.css",
+    "main.js": "/maths/static/js/main.7f80524b.js",
+    "static/js/945.fb0a0510.chunk.js": "/maths/static/js/945.fb0a0510.chunk.js",
     "static/media/energetiquementVotre.pdf": "/maths/static/media/energetiquementVotre.ae46a881d6240ff7c375.pdf",
     "static/media/bigBang.pdf": "/maths/static/media/bigBang.9a7278fe34a3a9cbd1fe.pdf",
     "static/media/economicon.pdf": "/maths/static/media/economicon.781102ce05e1018fe705.pdf",
@@ -90,7 +90,7 @@
     "index.html": "/maths/index.html"
   },
   "entrypoints": [
-    "static/css/main.6cd0a495.css",
-    "static/js/main.0a83b0b1.js"
+    "static/css/main.f487facd.css",
+    "static/js/main.7f80524b.js"
   ]
 }
