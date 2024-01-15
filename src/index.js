@@ -27,15 +27,15 @@ if(root.hasChildNodes()) {
 
 // v.18
 const domNode = document.getElementById('root');
-// if(domNode.hasChildNodes()) {
-//     console.log('hyd')
-//     hydrateRoot(domNode, app);  
-// } else {
-//     console.log('render')
-//     const root = createRoot(domNode);
-//     root.render(app);
-// }
-hydrateRoot(domNode, app);  
+if(domNode.hasChildNodes()) {
+    console.log('hyd')
+    hydrateRoot(domNode, app);  
+} else {
+    console.log('render')
+    const root = createRoot(domNode);
+    root.render(app);
+}
+// hydrateRoot(domNode, app);  
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

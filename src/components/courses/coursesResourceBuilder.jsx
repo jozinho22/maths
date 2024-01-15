@@ -253,10 +253,10 @@ function coursesResourceBuilder() {
         seq
     );
 
-    coursesItems.push(
-        delimProba,
-        enumeration
-    );
+    // coursesItems.push(
+    //     delimProba,
+    //     enumeration
+    // );
 
     coursesItems.push(
         delimThematiques,

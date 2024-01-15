@@ -6,9 +6,9 @@ import Title2 from '../../helpers/Title2';
 
 const DecompositionDUnInverseDePolynomeEnElementsSimples = () => {
 
-    var inversePolynome = "\\(f(x) = \\frac{1}{(x-x_1)(x-x_2)} \\enspace \\enspace \\enspace (avec (\\enspace x_1, \\enspace x_2) \\in \\mathbb{R}^2 )\\)";
+    var inversePolynome = "\\(f(x) = \\frac{1}{(x-x_1)(x-x_2)} \\enspace \\enspace \\enspace (avec \\enspace ( x_1, \\enspace x_2) \\in \\mathbb{R}^2 )\\)";
     
-    var inversePolynomeSimp = "\\(f(x) = \\frac{a}{(x-x_1)} + \\frac{b}{(x-x_2)} \\enspace (avec (\\enspace x_1, \\enspace x_2) \\in \\mathbb{R}^2 ) \\)";
+    var inversePolynomeSimp = "\\(f(x) = \\frac{a}{(x-x_1)} + \\frac{b}{(x-x_2)} \\enspace (avec \\enspace ( x_1, \\enspace x_2) \\in \\mathbb{R}^2 ) \\)";
     var inversePolynomeSimpMemeDen = "\\(f(x) = \\frac{a(x-x_1) + b(x-x_2) }{(x-x_1)(x-x_2)} \\)";
 
     var a = "\\( f(x)(x-x_1) = a + b.\\frac{x-x_1}{x-x_2} \\)";
@@ -17,24 +17,19 @@ const DecompositionDUnInverseDePolynomeEnElementsSimples = () => {
     var aGenXEqualsLambda = "\\( (x =x_1) \\Longrightarrow a = \\frac{1}{x_1-x_2}  \\)";
     var bGenXEqualsMu = "\\( (x =x_2) \\Longrightarrow  b = \\frac{1}{x_2-x_1} \\)";
 
-    var ab = "\\( \\Biggl\\{ a = \\frac{1}{x_1-x_2}, \\enspace b = \\frac{1}{x_2-\\l \\Biggr\\}\\)";
+    var ab = "\\( \\Biggl \\{ a = \\frac{1}{x_1-x_2}, \\enspace b = \\frac{1}{x_2-x_1} \\Biggr \\} \\)";
     var fGen = "\\(f(x) = \\frac{1}{(x-x_1)(x-x_2)} = \\frac{1}{x_1-x_2}.\\frac{1}{(x-x_1)} + \\frac{1}{x_2-x_1}\\frac{1}{(x-x_2)} \\)";
 
 
+    // a = \\frac{1}{x_1-x_2}, \\enspace b = \\frac{1}{x_2-\\l
     var exemple = "\\(f(x) = \\frac{1}{(x-2)(x+3)}\\)";
-    var aXEquals2 = "\\( (ambda}x =2) \\Longrightarrow f(x)(x-2) = a = \\frac{1}{x+3} \\)";
+    var aXEquals2 = "\\( f(x)(x-2) = a = \\frac{1}{x+3} \\)";
     var aXEquals22 = "\\( (x =2) \\Longrightarrow f(x)(x-2) = a = \\frac{1}{2+3} = \\frac{1}{5} \\)";
 
-    var bXEqualsMinus3 = "\\( (x =-3) \\Longrightarrow f(x)(x+3) = b = \\frac{1}{x-2} \\)";
+    var bXEqualsMinus3 = "\\(  f(x)(x+3) = b = \\frac{1}{x-2} \\)";
     var bXEqualsMinus32 = "\\( (x =-3) \\Longrightarrow  f(x)(x+3) = b = \\frac{1}{-3 - 2} = -\\frac{1}{5} \\)";
     
     var exempleSimp = "\\(f(x) = \\frac{1}{5} .\\frac{1}{(x-2)}-\\frac{1}{5}.\\frac{1}{(x+3)} \\)";
-
-    var inversePolynomeDeg3 = "\\(f(x) = \\frac{1}{(x-x_1)(x-x_2)(x-x_3)} \\enspace \\enspace \\enspace (avec \\enspace x_1, \\enspace x_2, \\enspace x_3 \\in \\mathbb{R})\\)";
-    var fGenDegre3 = "\\(f(x) = \\frac{1}{(x-x_1)(x-x_2)(x-x_3)} = \\frac{1}{(x_1-x_2)(x_1-x_3)}.\\frac{1}{(x-x_1)} + \\frac{1}{(x_2-x_1)(x_2-x_3)}\\frac{1}{(x-x_2)}   + \\frac{1}{(x_3-x_1)(x_3-x_2)}\\frac{1}{(x-x_3)} \\)";
-    
-    var inversePolynomeDegN = "\\(f(x) = \\prod_{i=1}^n  \\frac{1}{x -x_{i}} \\)";
-    var fGenDegreN = "\\(f(x) = \\sum_{i=1}^n \\Biggl[ \\prod_\\underset{j \\neq i}{j=1}^n \\frac{1}{x_{i}-x_{j}} \\Biggr]. \\frac{1}{x - x_{i}} \\)";
 
     return  <>
                 <p>
@@ -74,26 +69,14 @@ const DecompositionDUnInverseDePolynomeEnElementsSimples = () => {
                 <Title1 title={"Exemple"} />
                 <p>Simplifions l'expression :</p>
                 <MathJaxDisplay toShow={exemple} demo />
+                <p>Pour la première :</p>
                 <MathJaxDisplay toShow={aXEquals2} demo />
                 <MathJaxDisplay toShow={aXEquals22} demo />
+                <p>Pour la seconde :</p>
                 <MathJaxDisplay toShow={bXEqualsMinus3} demo />
                 <MathJaxDisplay toShow={bXEqualsMinus32} demo />
+                <p>Soit finalement :</p>
                 <MathJaxDisplay toShow={exempleSimp} demo />
-
-                <Title1 title={"Inverse de polynôme de degré supérieur à 2"} />
-                <Title2 title={"Inverse de polynôme de degré 3"} />
-                <p>Soit un inverse de polynôme de degré 3 tel que :</p>
-                <MathJaxDisplay toShow={inversePolynomeDeg3} demo />
-                <p>En effectuant la même démarche que précédemment, pour un polynôme de degré 3, nous aurons la forme simplifiée suivante :</p>
-                <MathJaxDisplay toShow={fGenDegre3} demo />
-
-                <Title2 title={"Inverse de polynôme de degré n"} />
-                <p>On a alors l'expression suivante pour un inverse de polynôme de degré <MathJaxInline toShow={"$ n \\geqslant 2$"} />.</p>
-                <MathJaxDisplay toShow={inversePolynomeDegN} demo />
-                <p>Soit une forme simplifiée générale suivante :</p>
-                <Container className="Focus">
-                    <MathJaxDisplay toShow={fGenDegreN}/>
-                </Container>
             </>
 
 }
